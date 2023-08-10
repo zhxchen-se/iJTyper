@@ -339,7 +339,7 @@ class DB:
         ]
 
         interface_results = [
-            ['mvn_interface', self.query_interface_exact(str)]
+            ['mvn_interface', self.query_interface_fuzzy(str)]
         ]
 
         method_results = [
@@ -394,74 +394,107 @@ class DB:
             else:
                 res = self.query_four_tables_exact(api) #[['mvn_class', [(attribute,attribute,...),(attribute,attribute,...)...]], ['mvn_field', []], ['mvn_interface', []], ['mvn_method', []]]
             for r in res: 
-                # r[0]是表名,r[1]是查询结果
+                # r[0]:tablename, r[1]:query results
                 if(len(r[1]) > 0):
                     for x in r[1]:
                         results[r[0]].append(x)
         # print(f'debug164:results = {results}')
 
-        #2. save super class entries in mvn_class
-        super_class_name_list = list(set([item[4] for item in results['mvn_class'] if item[4] is not None])) #把super_class也带上,注意判断不为None
-        super_class_entry = []
+        # 2.collect class id of apis from four tables
+        ClassId_list = [item[0] for item in results['mvn_class'] if ('java/lang' not in item[2] and 'java/io' not in item[2])]
+        ClassId_list += [item[1] for item in results['mvn_field'] if ('java/lang' not in item[4] and 'java/io' not in item[4])]
+        ClassId_list += [item[1] for item in results['mvn_interface'] if ('java/lang' not in item[2] and 'java/io' not in item[2])]
+        ClassId_list += [item[1] for item in results['mvn_method'] if ('java/lang' not in item[3] and 'java/io' not in item[3])]
+        ClassId_list = list(set(ClassId_list))
+        # print(f'debug409:ClassId_list = {ClassId_list}')
+
+        # 3.get super class id by class id
+        class_entries = []
+        for class_id in ClassId_list:
+            class_entries.extend(self.query_class_by_class_id(class_id))
+        # print(f'debug415:class_entries = {class_entries}')
+
+        super_class_name_list = list(set([item[4] for item in class_entries if item[4] is not None]))
         for superclass in super_class_name_list:
-            super_class_entry.extend(self.query_class_exact(superclass))
-        results['mvn_class'] = results['mvn_class'] + super_class_entry
+            entry_list = self.query_class_exact(superclass)
+            for entry in entry_list:
+                ClassId_list.append(entry[0])
+        
+        ClassId_list = list(set(ClassId_list))
+        # print(f'debug421:super_class_entry = {super_class_entry}\nClassId_list = {ClassId_list}')
 
-        #3. use class_id to extend other 3 tables 
-        ClassId_list = list(set([item[0] for item in results['mvn_class'] if 'java/lang' not in item[2]]))
+        # 4.extend four tables by class id
         for classid in ClassId_list:
-            res = self.query_three_tables_by_classid(classid)
+            res = self.query_four_tables_by_classid(classid) 
             for r in res:
-                # r[0]是表名,r[1]是查询结果
                 if(len(r[1]) > 0):
                     for x in r[1]:
                         results[r[0]].append(x) 
         
-        #4. save param and return type class of mvn_method
-        Param_list = [item[4] for item in results['mvn_method']]
-        Param_list += [item[5] for item in results['mvn_method']]
-        Param_list = list(set(Param_list))
-        #regular expression
-        param_classes = []
-        for param in Param_list:
-            pattern = r'L(.+?);'
-            types = re.findall(pattern, param)
-            for one_type in types:
-                if 'java/lang' not in one_type:
-                    param_classes.append(one_type) 
-        param_classes = list(set(param_classes))
-        # print(f'debug 205:param_classes = {param_classes}') 
 
-        #query params in mvn_class
-        param_classes_result = []
-        for param in param_classes:
-            param_classes_result += self.query_class_exact(param)
-        param_classes_result = list(set(param_classes_result)) # [(attribute,attribute,attribute,..),(...),(...)]
-        for param in param_classes_result: 
-            results['mvn_class'].append(param)
+        # #2. save super class entries in mvn_class
+        # super_class_name_list = list(set([item[4] for item in results['mvn_class'] if item[4] is not None])) #把super_class也带上,注意判断不为None
+        # super_class_entry = []
+        # for superclass in super_class_name_list:
+        #     super_class_entry.extend(self.query_class_exact(superclass))
+        # results['mvn_class'] = results['mvn_class'] + super_class_entry
 
-        #5. use classid of (params and its super class) to extend other 3 tables  
-        #5.1 get super classes      
-        param_superclass_name_list = list(set([item[4] for item in param_classes_result if item[4] is not None]))
-        param_superclasses_result = []
-        for param in param_superclass_name_list:
-            param_superclasses_result += self.query_class_exact(param)
-        param_superclasses_result = list(set(param_superclasses_result)) # [(attribute,attribute,attribute,..),(...),(...)]
-        for param in param_superclasses_result:
-            results['mvn_class'].append(param)
-        #5.2 get class id
-        param_classid_list = list(set([item[0] for item in param_classes_result if 'java/lang' not in item[2]] ))
-        param_superclassid_list = list(set([item[0] for item in param_superclasses_result if 'java/lang' not in item[2]] ))
-        param_classid_list = list(set(param_classid_list+param_superclassid_list))
-        #5.3 use class id to extend other 3 tables
-        for classid in param_classid_list:
-            res = self.query_three_tables_by_classid(classid)
-            for r in res:
-                # r[0]是表名,r[1]是查询结果
-                if(len(r[1]) > 0):
-                    for x in r[1]:
-                        results[r[0]].append(x) 
+        # #3. use class_id to extend other 3 tables 
+        # ClassId_list = list(set([item[0] for item in results['mvn_class'] if 'java/lang' not in item[2]]))
+        # for classid in ClassId_list:
+        #     res = self.query_three_tables_by_classid(classid)
+        #     for r in res:
+        #         # r[0]是表名,r[1]是查询结果
+        #         if(len(r[1]) > 0):
+        #             for x in r[1]:
+        #                 results[r[0]].append(x) 
         
+        # #4. save param and return type class of mvn_method
+        # Param_list = [item[4] for item in results['mvn_method']]
+        # Param_list += [item[5] for item in results['mvn_method']]
+        # Param_list = list(set(Param_list))
+        # #regular expression
+        # param_classes = []
+        # for param in Param_list:
+        #     pattern = r'L(.+?);'
+        #     types = re.findall(pattern, param)
+        #     for one_type in types:
+        #         if 'java/lang' not in one_type:
+        #             param_classes.append(one_type) 
+        # param_classes = list(set(param_classes))
+        # # print(f'debug 205:param_classes = {param_classes}') 
+
+        # #query params in mvn_class
+        # param_classes_result = []
+        # for param in param_classes:
+        #     param_classes_result += self.query_class_exact(param)
+        # param_classes_result = list(set(param_classes_result)) # [(attribute,attribute,attribute,..),(...),(...)]
+        # for param in param_classes_result: 
+        #     results['mvn_class'].append(param)
+
+        # #5. use classid of (params and its super class) to extend other 3 tables  
+        # #5.1 get super classes      
+        # param_superclass_name_list = list(set([item[4] for item in param_classes_result if item[4] is not None]))
+        # param_superclasses_result = []
+        # for param in param_superclass_name_list:
+        #     param_superclasses_result += self.query_class_exact(param)
+        # param_superclasses_result = list(set(param_superclasses_result)) # [(attribute,attribute,attribute,..),(...),(...)]
+        # for param in param_superclasses_result:
+        #     results['mvn_class'].append(param)
+        # #5.2 get class id
+        # param_classid_list = list(set([item[0] for item in param_classes_result if 'java/lang' not in item[2]] ))
+        # param_superclassid_list = list(set([item[0] for item in param_superclasses_result if 'java/lang' not in item[2]] ))
+        # param_classid_list = list(set(param_classid_list+param_superclassid_list))
+        # #5.3 use class id to extend other 3 tables
+        # for classid in param_classid_list:
+        #     res = self.query_three_tables_by_classid(classid)
+        #     for r in res:
+        #         # r[0]是表名,r[1]是查询结果
+        #         if(len(r[1]) > 0):
+        #             for x in r[1]:
+        #                 results[r[0]].append(x) 
+
+
         results['mvn_class'] = list(set(results['mvn_class']))
         results['mvn_interface'] = list(set(results['mvn_interface']))
         results['mvn_field'] = list(set(results['mvn_field']))
@@ -490,10 +523,17 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_method where class_id = {classid}"
         cur.execute(sql)
-        # 获取查询结果
         results = cur.fetchall()
         cur.close()
         return results 
+
+    def query_class_by_class_id(self,classid):
+        cur = self.conn.cursor()
+        sql = f"select * from mvn_class where id = {classid}"
+        cur.execute(sql)
+        results = cur.fetchall()
+        cur.close()
+        return results
 
     def query_three_tables_by_classid(self,classid):
         results = []
@@ -511,6 +551,30 @@ class DB:
         results.extend(method_results)
         return results
 
+    def query_four_tables_by_classid(self,classid):
+        results = []
+        class_result = [
+            ['mvn_class',self.query_class_by_class_id(classid)]
+        ]
+        field_results = [
+            ['mvn_field', self.query_field_by_classid(classid)]
+        ]
+        interface_results = [
+            ['mvn_interface', self.query_interface_by_classid(classid)]
+        ]
+        method_results = [
+            ['mvn_method', self.query_method_by_classid(classid)] 
+        ]
+        results.extend(field_results)
+        results.extend(interface_results)
+        results.extend(method_results)
+        results.extend(class_result)
+        return results
+
+
+
+
+        
     def check_if_entry_exists_in_four_tables(self,name): #TODO to be test
         name = name.replace('.','/')
         cursor = self.conn.cursor()
@@ -558,8 +622,8 @@ if __name__ == '__main__':
     # end_time = time.time()
     # print(f'重置耗时：{end_time-start_time}')
         
-    # reset_database()
+    reset_database()
 
-    complete_database = DB(isComplete=True)
-    complete_database.query_apipool(['java.lang.system'])
+    # complete_database = DB(isComplete=True)
+    # print(complete_database.query_apipool(['java.util.date','RESULT_OK']))
     # print(complete_database.check_if_entry_exists_in_four_tables('val$core'))

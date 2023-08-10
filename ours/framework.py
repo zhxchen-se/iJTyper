@@ -27,7 +27,7 @@ def Set_GPU(gpu_index):
         print("CUDA is not available.")
 
 
-def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,Maximum_iter_round=15):
+def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
     '''
     returns a Result object and iter_round
     '''
@@ -47,7 +47,7 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFrom
                 reset_database() 
                 rule_node_pred_dict,rule_node_truth_dict = run_baseline.Rule_predict_one_snippet(snippet_file_name,dataset,lib)
             else:
-                rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict)
+                rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag)
 
             dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,3,rule_node_pred_dict)
 
@@ -80,7 +80,7 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFrom
             else:
                 dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,3,rule_node_pred_dict)
 
-            rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict)
+            rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag)
             
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             if last_result:
@@ -153,7 +153,7 @@ def clear_lib_folders(lib):
     pure_extra_info_folder = os.path.abspath(os.path.join(os.getcwd(),'MiddleResults','pure_rule_extra_info',lib))
     run_baseline.clear_folder(pure_extra_info_folder)
 
-def run_lib(dataset,lib,topK=3,StartFromRule=True,Maximum_iter_round=15):
+def run_lib(dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
     '''
     work_dir: ~/ours
     '''
@@ -248,7 +248,7 @@ if __name__ == '__main__':
     # dataset = 'Short-SO'
     snippet_file_name = 'Class_16.java'
     lib = 'jdk'
-    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,Maximum_iter_round = 15)
+    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
     result.show_csv()
 
 
@@ -265,7 +265,7 @@ if __name__ == '__main__':
     # for lib in libs:
     #     try:
     #         reset_database() # run pure baseline combine ans
-    #         run_lib(dataset,lib,topK=1,StartFromRule=True,Maximum_iter_round=15)
+    #         run_lib(dataset,lib,topK=1,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
     #     except Exception as e:
     #         with open(error_log_file, "a") as error_log:
     #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"

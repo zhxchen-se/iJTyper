@@ -112,10 +112,10 @@ class Pred_with_Prompt_Augmented(DL.Itera_Pred):
                 
         error_symbol_list = list(set(error_symbol_list))
         # error_symbol_list = list(set([item.split()[2] for item in error_symbol_list]))
-        print(f"debug109:error_symbol_list = {error_symbol_list}")
-        print(f'debug110:self.rule_node_pred_dict = {self.rule_node_pred_dict}')
+        # print(f"debug109:error_symbol_list = {error_symbol_list}")
+        # print(f'debug110:self.rule_node_pred_dict = {self.rule_node_pred_dict}')
         self.rule_node_pred_dict = {key: value for key, value in self.rule_node_pred_dict.items() if key in error_symbol_list}
-        print(f'debug112:self.rule_node_pred_dict = {self.rule_node_pred_dict}')
+        # print(f'debug112:self.rule_node_pred_dict = {self.rule_node_pred_dict}')
 
 
         # 遍历报错信息，从code-snippet中找打对应的 global context

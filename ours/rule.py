@@ -145,7 +145,7 @@ def add_text_to_file(file_path,text):
     except Exception as e:
         print(f"add text to {file_path} error:", str(e))
 
-def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict): #DL -> Rule
+def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag): #DL -> Rule
     '''
     returns Rule_ans and Rule_truth
     {'node':['fqn']}
@@ -167,9 +167,9 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict): #DL -> R
         p.wait()
 
     # 2.get api_pool 
-    print(f"debug111:dl_node_pred_dict = {dl_node_pred_dict}")
+    # print(f"debug111:dl_node_pred_dict = {dl_node_pred_dict}")
     api_pool = get_api_pool(dl_node_pred_dict)
-    print(f'debug113:api_pool = {api_pool}')
+    # print(f'debug113:api_pool = {api_pool}')
 
     # 3.query entries from complete database
     complete_database = DB(isComplete=True)
@@ -180,48 +180,50 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict): #DL -> R
     simplified_database.clear_four_tables()
     simplified_database.copy_results_to_four_tables(results)
     
-    # 5.execute make benchmark, get feedback log 
     os.chdir("./SnR")
-    benchmark_log_path = execute_make_benchmark(file_name,lib)
-
-    extra_info_folder = os.path.abspath(os.path.join(tmp_dir,'MiddleResults','extra_info',lib))
-    if not os.path.exists(extra_info_folder):
-        os.makedirs(extra_info_folder)
-    # 6.repeat until no more unresolved type
-    for i in range(0,10):
-        # 6.1 extract unresolved type info from log
-        extra_types = extract_typeinfo_from_log(benchmark_log_path)
-        print(f'extra_types={extra_types},len(extra_types)={len(extra_types)}')
-        # save unresolve type ref
-        unresolved_info_path = os.path.abspath(os.path.join(extra_info_folder,'unresolved_typeref_info.txt'))
-        add_text_to_file(unresolved_info_path,f"filename:{file_name}    extra_types:{extra_types}\n")
-        
-        if len(extra_types) == 0:
-            break
-        api_pool += extra_types
-        api_pool = list(set(api_pool))
-
-        # 6.2 rebuild database
-        results = complete_database.query_apipool(api_pool)
-        simplified_database.clear_four_tables()
-        simplified_database.copy_results_to_four_tables(results)
-
-        # 6.3 reexecute make benchmark
+    match_str = ''
+    # 5.execute make benchmark, get feedback log 
+    if log_feed_back_flag:
         benchmark_log_path = execute_make_benchmark(file_name,lib)
-        
+        extra_info_folder = os.path.abspath(os.path.join(tmp_dir,'MiddleResults','extra_info',lib))
+        if not os.path.exists(extra_info_folder):
+            os.makedirs(extra_info_folder)
+        # 6.repeat until no more unresolved type
+        for i in range(0,10):
+            # 6.1 extract unresolved type info from log
+            extra_types = extract_typeinfo_from_log(benchmark_log_path)
+            print(f'extra_types={extra_types},len(extra_types)={len(extra_types)}')
+            # save unresolve type ref
+            unresolved_info_path = os.path.abspath(os.path.join(extra_info_folder,'unresolved_typeref_info.txt'))
+            add_text_to_file(unresolved_info_path,f"filename:{file_name} log_feed_back_flag:{log_feed_back_flag}   extra_types:{extra_types}\n")
+            
+            if len(extra_types) == 0:
+                break
+            api_pool += extra_types
+            api_pool = list(set(api_pool))
+
+            # 6.2 rebuild database
+            results = complete_database.query_apipool(api_pool)
+            simplified_database.clear_four_tables()
+            simplified_database.copy_results_to_four_tables(results)
+
+            # 6.3 reexecute make benchmark
+            benchmark_log_path = execute_make_benchmark(file_name,lib)
+            
     # 7.execute make binding 
     bind_log_path = execute_make_binding(file_name,lib)
-    extra_field,match_str = handle_unsupported_exception(bind_log_path)
 
-    # 8. add and rerun
-    if(len(extra_field)):
-        # rebuild knowledgebase
-        api_pool += extra_field
-        results = complete_database.query_apipool(api_pool)
-        simplified_database.clear_four_tables()
-        simplified_database.copy_results_to_four_tables(results)
-        # rerun
-        bind_log_path = execute_make_binding(file_name,lib)
+    if log_feed_back_flag:
+        extra_field,match_str = handle_unsupported_exception(bind_log_path)
+        # 8. add and rerun
+        if(len(extra_field)):
+            # rebuild knowledgebase
+            api_pool += extra_field
+            results = complete_database.query_apipool(api_pool)
+            simplified_database.clear_four_tables()
+            simplified_database.copy_results_to_four_tables(results)
+            # rerun
+            bind_log_path = execute_make_binding(file_name,lib)
 
     node_pred_dict,node_truth_dict = run_baseline.Extract_binding_logs(bind_log_path)
 
@@ -229,10 +231,11 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict): #DL -> R
     simplified_database.close()
 
     # 9. TODO save unsupported_exception error info
-    os.chdir(tmp_dir)
-    exception_info_path = os.path.abspath(os.path.join(extra_info_folder,'UnsupportedOperationException_info.txt'))
-    add_text_to_file(exception_info_path,f"filename:{file_name}    java.lang.UnsupportedOperationException:{match_str}\n")
+    if log_feed_back_flag:
+        os.chdir(tmp_dir)
+        exception_info_path = os.path.abspath(os.path.join(extra_info_folder,'UnsupportedOperationException_info.txt'))
+        add_text_to_file(exception_info_path,f"filename:{file_name}  log_feed_back_flag:{log_feed_back_flag}  java.lang.UnsupportedOperationException:{match_str}\n")
 
-    # os.chdir(tmp_dir)
+    os.chdir(tmp_dir)
 
     return node_pred_dict,node_truth_dict

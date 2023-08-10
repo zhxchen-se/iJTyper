@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_16.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_16.java
 Expect check=1474
 Cannot find matching typeVariable for: public class Class_16 {
   public static final int HKEY_CURRENT_USER=0x80000001;
@@ -6133,14 +6133,14 @@ Cannot find matching typeVariable for: setAccessible
 For node: setAccessible expected fqn: void with type: Type108 got: void
 For node: true expected fqn: boolean with type: Type105 got: boolean
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type127
-Did not find solution for node: Exception with type Type127
-Did not find solution for node: Exception with type Type127
-Did not find solution for node: e with type Type127
-Did not find solution for node: new RuntimeException(e) with type Type128
-Did not find solution for node: RuntimeException with type Type128
-Did not find solution for node: RuntimeException with type Type128
-Did not find solution for node: e with type Type127
+For node: Exception e expected fqn: java.lang.Exception with type: Type127 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type127 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type127 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type127 got: java.lang.Exception
+For node: new RuntimeException(e) expected fqn: java.lang.RuntimeException with type: Type128 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type128 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type128 got: java.lang.RuntimeException
+For node: e expected fqn: java.lang.Exception with type: Type127 got: java.lang.Exception
 Cannot find matching typeVariable for: Class_16
 Cannot find matching typeVariable for: private Class_16(){
 }
@@ -13722,13 +13722,13 @@ For node: valb != null ? new String(valb).trim() : null expected fqn: java.lang.
 For node: valb != null expected fqn: boolean with type: Type105 got: boolean
 Did not find solution for node: valb with type Type8
 Did not find solution for node: null with type Type169
-Did not find solution for node: new String(valb).trim() with type Type172
+For node: new String(valb).trim() expected fqn: java.lang.String with type: Type172 got: java.lang.String
 Did not find solution for node: new String(valb) with type Type92
 Did not find solution for node: String with type Type92
 Did not find solution for node: String with type Type92
 Did not find solution for node: valb with type Type8
 Cannot find matching typeVariable for: trim
-Did not find solution for node: trim with type Type172
+For node: trim expected fqn: java.lang.String with type: Type172 got: java.lang.String
 Did not find solution for node: null with type Type174
 Did not find solution for node: Map<String,String> with type Type4=Type2<Type3,Type3>
 For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type2 got: java.util.Map
@@ -17143,7 +17143,7 @@ Cannot find matching typeVariable for: length
 Did not find solution for node: length with type Type227
 Did not find solution for node: 0 with type Type7
 Did not find solution for node: result with type Type8
-{Checked=1446, Analyzed=410, Unsolved=1036, Incorrect=58, Correct=352}
+{Checked=1446, Analyzed=420, Unsolved=1026, Incorrect=58, Correct=362}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 boolean=InfixExpression: {Checked=25, Analyzed=25, Unsolved=0, Incorrect=0, Correct=25}
@@ -17179,15 +17179,15 @@ java=ArrayInitializer: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correc
 java=ArrayType: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
 java=Assignment: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=45, Analyzed=0, Unsolved=45, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=45, Analyzed=1, Unsolved=44, Incorrect=0, Correct=1}
 java=ConditionalExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=InfixExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=45, Analyzed=7, Unsolved=38, Incorrect=0, Correct=7}
+java=MethodInvocation: {Checked=45, Analyzed=8, Unsolved=37, Incorrect=0, Correct=8}
 java=ParameterizedType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
 java=ParenthesizedExpression: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=405, Analyzed=186, Unsolved=219, Incorrect=18, Correct=168}
-java=SimpleType: {Checked=186, Analyzed=90, Unsolved=96, Incorrect=8, Correct=82}
-java=SingleVariableDeclaration: {Checked=31, Analyzed=7, Unsolved=24, Incorrect=0, Correct=7}
+java=SimpleName: {Checked=405, Analyzed=191, Unsolved=214, Incorrect=18, Correct=173}
+java=SimpleType: {Checked=186, Analyzed=92, Unsolved=94, Incorrect=8, Correct=84}
+java=SingleVariableDeclaration: {Checked=31, Analyzed=8, Unsolved=23, Incorrect=0, Correct=8}
 java=StringLiteral: {Checked=22, Analyzed=0, Unsolved=22, Incorrect=0, Correct=0}
 java=TypeLiteral: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=22, Correct=0}
 java=VariableDeclarationFragment: {Checked=16, Analyzed=12, Unsolved=4, Incorrect=0, Correct=12}
@@ -17197,7 +17197,7 @@ void=MethodInvocation: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correc
 void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 void=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
 Total stats
-{Checked=1446, Analyzed=410, Unsolved=1036, Incorrect=58, Correct=352}
+{Checked=1446, Analyzed=420, Unsolved=1026, Incorrect=58, Correct=362}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 boolean=InfixExpression: {Checked=25, Analyzed=25, Unsolved=0, Incorrect=0, Correct=25}
@@ -17233,15 +17233,15 @@ java=ArrayInitializer: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correc
 java=ArrayType: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
 java=Assignment: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=45, Analyzed=0, Unsolved=45, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=45, Analyzed=1, Unsolved=44, Incorrect=0, Correct=1}
 java=ConditionalExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=InfixExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=45, Analyzed=7, Unsolved=38, Incorrect=0, Correct=7}
+java=MethodInvocation: {Checked=45, Analyzed=8, Unsolved=37, Incorrect=0, Correct=8}
 java=ParameterizedType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
 java=ParenthesizedExpression: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=405, Analyzed=186, Unsolved=219, Incorrect=18, Correct=168}
-java=SimpleType: {Checked=186, Analyzed=90, Unsolved=96, Incorrect=8, Correct=82}
-java=SingleVariableDeclaration: {Checked=31, Analyzed=7, Unsolved=24, Incorrect=0, Correct=7}
+java=SimpleName: {Checked=405, Analyzed=191, Unsolved=214, Incorrect=18, Correct=173}
+java=SimpleType: {Checked=186, Analyzed=92, Unsolved=94, Incorrect=8, Correct=84}
+java=SingleVariableDeclaration: {Checked=31, Analyzed=8, Unsolved=23, Incorrect=0, Correct=8}
 java=StringLiteral: {Checked=22, Analyzed=0, Unsolved=22, Incorrect=0, Correct=0}
 java=TypeLiteral: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=22, Correct=0}
 java=VariableDeclarationFragment: {Checked=16, Analyzed=12, Unsolved=4, Incorrect=0, Correct=12}
@@ -17285,15 +17285,15 @@ java,ArrayInitializer,0,31,0,0,31
 java,ArrayType,0,31,0,0,31
 java,Assignment,10,10,10,0,0
 java,CastExpression,0,2,0,0,2
-java,ClassInstanceCreation,0,45,0,0,45
+java,ClassInstanceCreation,1,45,1,0,44
 java,ConditionalExpression,1,1,0,1,0
 java,InfixExpression,0,8,0,0,8
-java,MethodInvocation,7,45,7,0,38
+java,MethodInvocation,8,45,8,0,37
 java,ParameterizedType,0,9,0,0,9
 java,ParenthesizedExpression,1,3,0,1,2
-java,SimpleName,186,405,168,18,219
-java,SimpleType,90,186,82,8,96
-java,SingleVariableDeclaration,7,31,7,0,24
+java,SimpleName,191,405,173,18,214
+java,SimpleType,92,186,84,8,94
+java,SingleVariableDeclaration,8,31,8,0,23
 java,StringLiteral,0,22,0,0,22
 java,TypeLiteral,22,22,0,22,0
 java,VariableDeclarationFragment,12,16,12,0,4
