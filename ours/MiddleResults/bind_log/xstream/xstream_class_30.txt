@@ -1,0 +1,2277 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_30.java
+Expect check=198
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_30
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
+For node: @Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: marshal
+Cannot find matching typeVariable for: @Override public void marshal(Object o,HierarchicalStreamWriter hierarchicalStreamWriter,MarshallingContext marshallingContext){
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Object o
+For node: Object o expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+For node: o expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+Cannot find matching typeVariable for: HierarchicalStreamWriter hierarchicalStreamWriter
+For node: HierarchicalStreamWriter hierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type8 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type8 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type8 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: hierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type8 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: MarshallingContext marshallingContext
+For node: MarshallingContext marshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type9 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type9 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type9 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: marshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type9 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: @Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: Object expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type5 got: java.lang.Object
+Cannot find matching typeVariable for: unmarshal
+Cannot find matching typeVariable for: @Override public Object unmarshal(HierarchicalStreamReader hierarchicalStreamReader,UnmarshallingContext unmarshallingContext){
+  Items items=new Items();
+  while (hierarchicalStreamReader.hasMoreChildren()) {
+    hierarchicalStreamReader.moveDown();
+    final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+    if ("id".equals(currentAttribute)) {
+      items.setId(hierarchicalStreamReader.getValue());
+    }
+ else     if ("first-name".equals(currentAttribute)) {
+      items.setFirstName(hierarchicalStreamReader.getValue());
+    }
+ else     if ("last-name".equals(currentAttribute)) {
+      items.setLastName(hierarchicalStreamReader.getValue());
+    }
+ else     if ("address".equals(currentAttribute)) {
+      items.setAddress(hierarchicalStreamReader.getValue());
+    }
+ else     if ("zip".equals(currentAttribute)) {
+      items.setZip(hierarchicalStreamReader.getValue());
+    }
+    hierarchicalStreamReader.moveUp();
+  }
+  return items;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: HierarchicalStreamReader hierarchicalStreamReader
+For node: HierarchicalStreamReader hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: UnmarshallingContext unmarshallingContext
+For node: UnmarshallingContext unmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type11 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type11 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type11 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: unmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type11 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+Did not find solution for node: Items with type Type1
+Did not find solution for node: Items with type Type1
+Cannot find matching typeVariable for: items=new Items()
+Did not find solution for node: items=new Items() with type Type1
+Did not find solution for node: items with type Type1
+Did not find solution for node: new Items() with type Type1
+Did not find solution for node: Items with type Type1
+Did not find solution for node: Items with type Type1
+For node: hierarchicalStreamReader.hasMoreChildren() expected fqn: boolean with type: Type13 got: boolean
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: hasMoreChildren
+For node: hasMoreChildren expected fqn: boolean with type: Type13 got: boolean
+For node: hierarchicalStreamReader.moveDown() expected fqn: void with type: Type15 got: void
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: moveDown
+For node: moveDown expected fqn: void with type: Type15 got: void
+Did not find solution for node: String with type Type17
+Did not find solution for node: String with type Type17
+Cannot find matching typeVariable for: currentAttribute=hierarchicalStreamReader.getAttribute("name")
+Did not find solution for node: currentAttribute=hierarchicalStreamReader.getAttribute("name") with type Type17
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: hierarchicalStreamReader.getAttribute("name") with type Type19
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getAttribute
+Did not find solution for node: getAttribute with type Type19
+Did not find solution for node: "name" with type Type18
+Did not find solution for node: "id".equals(currentAttribute) with type Type22
+Did not find solution for node: "id" with type Type18
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type22
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: items.setId(hierarchicalStreamReader.getValue()) with type Type27
+Did not find solution for node: items with type Type1
+Cannot find matching typeVariable for: setId
+Did not find solution for node: setId with type Type27
+Did not find solution for node: hierarchicalStreamReader.getValue() with type Type25
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type25
+Did not find solution for node: "first-name".equals(currentAttribute) with type Type24
+Did not find solution for node: "first-name" with type Type18
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type24
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: items.setFirstName(hierarchicalStreamReader.getValue()) with type Type30
+Did not find solution for node: items with type Type1
+Cannot find matching typeVariable for: setFirstName
+Did not find solution for node: setFirstName with type Type30
+Did not find solution for node: hierarchicalStreamReader.getValue() with type Type26
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type26
+Did not find solution for node: "last-name".equals(currentAttribute) with type Type24
+Did not find solution for node: "last-name" with type Type18
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type24
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: items.setLastName(hierarchicalStreamReader.getValue()) with type Type33
+Did not find solution for node: items with type Type1
+Cannot find matching typeVariable for: setLastName
+Did not find solution for node: setLastName with type Type33
+Did not find solution for node: hierarchicalStreamReader.getValue() with type Type26
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type26
+Did not find solution for node: "address".equals(currentAttribute) with type Type24
+Did not find solution for node: "address" with type Type18
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type24
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: items.setAddress(hierarchicalStreamReader.getValue()) with type Type36
+Did not find solution for node: items with type Type1
+Cannot find matching typeVariable for: setAddress
+Did not find solution for node: setAddress with type Type36
+Did not find solution for node: hierarchicalStreamReader.getValue() with type Type26
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type26
+Did not find solution for node: "zip".equals(currentAttribute) with type Type24
+Did not find solution for node: "zip" with type Type18
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type24
+Did not find solution for node: currentAttribute with type Type17
+Did not find solution for node: items.setZip(hierarchicalStreamReader.getValue()) with type Type39
+Did not find solution for node: items with type Type1
+Cannot find matching typeVariable for: setZip
+Did not find solution for node: setZip with type Type39
+Did not find solution for node: hierarchicalStreamReader.getValue() with type Type26
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type26
+For node: hierarchicalStreamReader.moveUp() expected fqn: void with type: Type42 got: void
+For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: moveUp
+For node: moveUp expected fqn: void with type: Type42 got: void
+Did not find solution for node: items with type Type1
+For node: @Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type7 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type6 got: boolean
+Cannot find matching typeVariable for: canConvert
+Cannot find matching typeVariable for: @Override public boolean canConvert(Class aClass){
+  return aClass == Items.class;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Class aClass
+For node: Class aClass expected fqn: java.lang.Class with type: Type44 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type44 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type44 got: java.lang.Class
+For node: aClass expected fqn: java.lang.Class with type: Type44 got: java.lang.Class
+For node: aClass == Items.class expected fqn: boolean with type: Type6 got: boolean
+For node: aClass expected fqn: java.lang.Class with type: Type44 got: java.lang.Class
+For node: Items.class expected fqn: java.lang.Class<xstream_class_30.Items> with type: Type45 got: java.lang.Class
+Did not find solution for node: Items with type Type1
+Did not find solution for node: Items with type Type1
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Did not find solution for node: Items with type Type1
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Cannot find matching typeVariable for: id
+Did not find solution for node: id with type Type18
+Cannot find matching typeVariable for: id
+Cannot find matching typeVariable for: private String id;
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Cannot find matching typeVariable for: firstName
+Did not find solution for node: firstName with type Type18
+Cannot find matching typeVariable for: firstName
+Cannot find matching typeVariable for: private String firstName;
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Cannot find matching typeVariable for: lastName
+Did not find solution for node: lastName with type Type18
+Cannot find matching typeVariable for: lastName
+Cannot find matching typeVariable for: private String lastName;
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Cannot find matching typeVariable for: address
+Did not find solution for node: address with type Type18
+Cannot find matching typeVariable for: address
+Cannot find matching typeVariable for: private String address;
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Cannot find matching typeVariable for: zip
+Did not find solution for node: zip with type Type18
+Cannot find matching typeVariable for: zip
+Cannot find matching typeVariable for: private String zip;
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: setId
+Cannot find matching typeVariable for: public void setId(String id){
+  this.id=id;
+}
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String id
+Did not find solution for node: String id with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: id with type Type18
+Did not find solution for node: this.id=id with type Type18
+Did not find solution for node: this.id with type Type18
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: id
+Did not find solution for node: id with type Type18
+Cannot find matching typeVariable for: id
+Did not find solution for node: id with type Type18
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: setFirstName
+Cannot find matching typeVariable for: public void setFirstName(String firstName){
+  this.firstName=firstName;
+}
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String firstName
+Did not find solution for node: String firstName with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: firstName with type Type18
+Did not find solution for node: this.firstName=firstName with type Type18
+Did not find solution for node: this.firstName with type Type18
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: firstName
+Did not find solution for node: firstName with type Type18
+Cannot find matching typeVariable for: firstName
+Did not find solution for node: firstName with type Type18
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: setLastName
+Cannot find matching typeVariable for: public void setLastName(String lastName){
+  this.lastName=lastName;
+}
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String lastName
+Did not find solution for node: String lastName with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: lastName with type Type18
+Did not find solution for node: this.lastName=lastName with type Type18
+Did not find solution for node: this.lastName with type Type18
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: lastName
+Did not find solution for node: lastName with type Type18
+Cannot find matching typeVariable for: lastName
+Did not find solution for node: lastName with type Type18
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: setAddress
+Cannot find matching typeVariable for: public void setAddress(String address){
+  this.address=address;
+}
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String address
+Did not find solution for node: String address with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: address with type Type18
+Did not find solution for node: this.address=address with type Type18
+Did not find solution for node: this.address with type Type18
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: address
+Did not find solution for node: address with type Type18
+Cannot find matching typeVariable for: address
+Did not find solution for node: address with type Type18
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: setZip
+Cannot find matching typeVariable for: public void setZip(String zip){
+  this.zip=zip;
+}
+
+Cannot find matching typeVariable for: public class Items {
+  private String id;
+  private String firstName;
+  private String lastName;
+  private String address;
+  private String zip;
+  public void setId(  String id){
+    this.id=id;
+  }
+  public void setFirstName(  String firstName){
+    this.firstName=firstName;
+  }
+  public void setLastName(  String lastName){
+    this.lastName=lastName;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+  public void setZip(  String zip){
+    this.zip=zip;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_30 implements Converter {
+  @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader hierarchicalStreamReader,  UnmarshallingContext unmarshallingContext){
+    Items items=new Items();
+    while (hierarchicalStreamReader.hasMoreChildren()) {
+      hierarchicalStreamReader.moveDown();
+      final String currentAttribute=hierarchicalStreamReader.getAttribute("name");
+      if ("id".equals(currentAttribute)) {
+        items.setId(hierarchicalStreamReader.getValue());
+      }
+ else       if ("first-name".equals(currentAttribute)) {
+        items.setFirstName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("last-name".equals(currentAttribute)) {
+        items.setLastName(hierarchicalStreamReader.getValue());
+      }
+ else       if ("address".equals(currentAttribute)) {
+        items.setAddress(hierarchicalStreamReader.getValue());
+      }
+ else       if ("zip".equals(currentAttribute)) {
+        items.setZip(hierarchicalStreamReader.getValue());
+      }
+      hierarchicalStreamReader.moveUp();
+    }
+    return items;
+  }
+  @Override public boolean canConvert(  Class aClass){
+    return aClass == Items.class;
+  }
+public class Items {
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String zip;
+    public void setId(    String id){
+      this.id=id;
+    }
+    public void setFirstName(    String firstName){
+      this.firstName=firstName;
+    }
+    public void setLastName(    String lastName){
+      this.lastName=lastName;
+    }
+    public void setAddress(    String address){
+      this.address=address;
+    }
+    public void setZip(    String zip){
+      this.zip=zip;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String zip
+Did not find solution for node: String zip with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: String with type Type18
+Did not find solution for node: zip with type Type18
+Did not find solution for node: this.zip=zip with type Type18
+Did not find solution for node: this.zip with type Type18
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: zip
+Did not find solution for node: zip with type Type18
+Cannot find matching typeVariable for: zip
+Did not find solution for node: zip with type Type18
+{Checked=182, Analyzed=59, Unsolved=123, Incorrect=1, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=47, Analyzed=9, Unsolved=38, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=14, Analyzed=3, Unsolved=11, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=SimpleName: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+Total stats
+{Checked=182, Analyzed=59, Unsolved=123, Incorrect=1, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=47, Analyzed=9, Unsolved=38, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=14, Analyzed=3, Unsolved=11, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=SimpleName: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,11,0,0,11
+,SimpleType,0,3,0,0,3
+,ThisExpression,0,5,0,0,5
+,VariableDeclarationFragment,0,1,0,0,1
+boolean,InfixExpression,1,1,1,0,0
+boolean,MethodInvocation,1,6,1,0,5
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,1,6,1,0,5
+com.thoughtworks.xstream.,SimpleName,18,18,18,0,0
+com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
+java,Assignment,0,5,0,0,5
+java,FieldAccess,0,5,0,0,5
+java,MarkerAnnotation,3,3,3,0,0
+java,MethodInvocation,0,6,0,0,6
+java,SimpleName,9,47,9,0,38
+java,SimpleType,3,14,3,0,11
+java,SingleVariableDeclaration,2,7,2,0,5
+java,StringLiteral,0,6,0,0,6
+java,TypeLiteral,1,1,0,1,0
+java,VariableDeclarationFragment,0,6,0,0,6
+void,MethodInvocation,2,7,2,0,5
+void,PrimitiveType,6,6,6,0,0
+void,SimpleName,2,7,2,0,5

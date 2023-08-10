@@ -1,0 +1,205 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "java",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "jdk",
+                  "type": "Package",
+                  "children": [
+                    {
+                      "label": "jdk3",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "h1",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "void",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "THROWN_TYPES",
+                              "children": [
+                                {
+                                  "label": "java.text.ParseException",
+                                  "type": "THROWN",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "oldDate",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "format",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dtf",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.time.format.DateTimeFormatter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "ofPattern",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.time.format.DateTimeFormatter",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "format",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dt",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.time.LocalDateTime",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "parse",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.time.LocalDateTime",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "oldDate",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "dtf",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "zdtzone",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.time.ZonedDateTime",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "atZone",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "dt",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "of",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "java.time.ZoneId",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "\"America/Los_Angeles\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

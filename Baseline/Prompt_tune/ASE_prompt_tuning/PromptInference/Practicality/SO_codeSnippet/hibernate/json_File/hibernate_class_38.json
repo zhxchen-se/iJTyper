@@ -1,0 +1,200 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_38",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFact",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "buildSessionFactory",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "configure",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.cfg.Configuration()",
+                                  "type": "ConstructorCall",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ses",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sessionFact",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tx",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "ses",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "bean",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "\"\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "save",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ses",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "bean",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "tx",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "close",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ses",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

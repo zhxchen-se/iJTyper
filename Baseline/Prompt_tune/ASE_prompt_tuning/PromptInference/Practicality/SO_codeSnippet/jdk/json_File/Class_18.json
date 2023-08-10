@@ -1,0 +1,1361 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_18",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "dump",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "o",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "callCount",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "POSTINC",
+                          "type": "UnaryOperator",
+                          "children": [
+                            {
+                              "label": "callCount",
+                              "type": "VariableWrite",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "tabs",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.StringBuffer",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.StringBuffer()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "For",
+                          "children": [
+                            {
+                              "label": "k",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "int",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "0",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "LT",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "k",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "callCount",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "POSTINC",
+                              "type": "UnaryOperator",
+                              "children": [
+                                {
+                                  "label": "k",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "append",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "tabs",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"\\t\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "buffer",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.StringBuffer",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.StringBuffer()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "oClass",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Class",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getClass",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "o",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "isArray",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "oClass",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"\\n\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "toString",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "tabs",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"[\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "",
+                                  "type": "For",
+                                  "children": [
+                                    {
+                                      "label": "i",
+                                      "type": "LocalVariable",
+                                      "children": [
+                                        {
+                                          "label": "int",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "0",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "LT",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "i",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "getLength",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "java.lang.reflect.Array",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "o",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "POSTINC",
+                                      "type": "UnaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "i",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "LT",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "i",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "append",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "buffer",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\",\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "value",
+                                      "type": "LocalVariable",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Object",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "get",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "java.lang.reflect.Array",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "o",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "i",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "OR",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "OR",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "OR",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "OR",
+                                                      "type": "BinaryOperator",
+                                                      "children": [
+                                                        {
+                                                          "label": "isPrimitive",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "getClass",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "value",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "EQ",
+                                                          "type": "BinaryOperator",
+                                                          "children": [
+                                                            {
+                                                              "label": "getClass",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "value",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "class",
+                                                              "type": "FieldRead",
+                                                              "children": [
+                                                                {
+                                                                  "label": "java.lang.Long",
+                                                                  "type": "TypeAccess",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "EQ",
+                                                      "type": "BinaryOperator",
+                                                      "children": [
+                                                        {
+                                                          "label": "getClass",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "value",
+                                                              "type": "VariableRead",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "class",
+                                                          "type": "FieldRead",
+                                                          "children": [
+                                                            {
+                                                              "label": "java.lang.String",
+                                                              "type": "TypeAccess",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "EQ",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "getClass",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "value",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "class",
+                                                      "type": "FieldRead",
+                                                      "children": [
+                                                        {
+                                                          "label": "java.lang.Integer",
+                                                          "type": "TypeAccess",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "EQ",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "getClass",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "value",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "class",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "java.lang.Boolean",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "append",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "buffer",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "value",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "ELSE",
+                                          "type": "else",
+                                          "children": [
+                                            {
+                                              "label": "append",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "buffer",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "dump",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "value",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "callCount",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "toString",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "tabs",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"]\\n\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"\\n\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "toString",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "tabs",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"{\\n\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "while",
+                                  "type": "While",
+                                  "children": [
+                                    {
+                                      "label": "NE",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "oClass",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "null",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "fields",
+                                      "type": "LocalVariable",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.reflect.Field[]",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "getDeclaredFields",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "oClass",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "For",
+                                      "children": [
+                                        {
+                                          "label": "i",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "int",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "LT",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "i",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "length",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "fields",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "POSTINC",
+                                          "type": "UnaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "i",
+                                              "type": "VariableWrite",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "append",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "buffer",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "toString",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "tabs",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setAccessible",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "",
+                                              "type": "ArrayRead",
+                                              "children": [
+                                                {
+                                                  "label": "fields",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "i",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "true",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "append",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "buffer",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "getName",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "",
+                                                  "type": "ArrayRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "fields",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "i",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "append",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "buffer",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"\u003d\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Try",
+                                          "children": [
+                                            {
+                                              "label": "value",
+                                              "type": "LocalVariable",
+                                              "children": [
+                                                {
+                                                  "label": "java.lang.Object",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "get",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "",
+                                                      "type": "ArrayRead",
+                                                      "children": [
+                                                        {
+                                                          "label": "fields",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "i",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "o",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "if",
+                                              "type": "If",
+                                              "children": [
+                                                {
+                                                  "label": "NE",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "value",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "null",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "THEN",
+                                                  "type": "then",
+                                                  "children": [
+                                                    {
+                                                      "label": "if",
+                                                      "type": "If",
+                                                      "children": [
+                                                        {
+                                                          "label": "OR",
+                                                          "type": "BinaryOperator",
+                                                          "children": [
+                                                            {
+                                                              "label": "OR",
+                                                              "type": "BinaryOperator",
+                                                              "children": [
+                                                                {
+                                                                  "label": "OR",
+                                                                  "type": "BinaryOperator",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "OR",
+                                                                      "type": "BinaryOperator",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "isPrimitive",
+                                                                          "type": "Invocation",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "getClass",
+                                                                              "type": "Invocation",
+                                                                              "children": [
+                                                                                {
+                                                                                  "label": "value",
+                                                                                  "type": "VariableRead",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "label": "EQ",
+                                                                          "type": "BinaryOperator",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "getClass",
+                                                                              "type": "Invocation",
+                                                                              "children": [
+                                                                                {
+                                                                                  "label": "value",
+                                                                                  "type": "VariableRead",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "label": "class",
+                                                                              "type": "FieldRead",
+                                                                              "children": [
+                                                                                {
+                                                                                  "label": "java.lang.Long",
+                                                                                  "type": "TypeAccess",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "label": "EQ",
+                                                                      "type": "BinaryOperator",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "getClass",
+                                                                          "type": "Invocation",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "value",
+                                                                              "type": "VariableRead",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "label": "class",
+                                                                          "type": "FieldRead",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "java.lang.String",
+                                                                              "type": "TypeAccess",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "label": "EQ",
+                                                                  "type": "BinaryOperator",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "getClass",
+                                                                      "type": "Invocation",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "value",
+                                                                          "type": "VariableRead",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "label": "class",
+                                                                      "type": "FieldRead",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "java.lang.Integer",
+                                                                          "type": "TypeAccess",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "EQ",
+                                                              "type": "BinaryOperator",
+                                                              "children": [
+                                                                {
+                                                                  "label": "getClass",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "value",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "label": "class",
+                                                                  "type": "FieldRead",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "java.lang.Boolean",
+                                                                      "type": "TypeAccess",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "THEN",
+                                                          "type": "then",
+                                                          "children": [
+                                                            {
+                                                              "label": "append",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "buffer",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "value",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "ELSE",
+                                                          "type": "else",
+                                                          "children": [
+                                                            {
+                                                              "label": "append",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "buffer",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "dump",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "value",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "label": "callCount",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "",
+                                              "type": "Catch",
+                                              "children": [
+                                                {
+                                                  "label": "e",
+                                                  "type": "CatchVariable",
+                                                  "children": [
+                                                    {
+                                                      "label": "java.lang.IllegalAccessException",
+                                                      "type": "VARIABLE_TYPE",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "append",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "buffer",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "getMessage",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "e",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "append",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "buffer",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"\\n\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\u003d",
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "label": "oClass",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "getSuperclass",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "oClass",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "toString",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "tabs",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "append",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "buffer",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"}\\n\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "toString",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "buffer",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

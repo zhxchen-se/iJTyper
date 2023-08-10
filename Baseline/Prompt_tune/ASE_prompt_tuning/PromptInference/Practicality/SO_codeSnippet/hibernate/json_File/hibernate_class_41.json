@@ -1,0 +1,518 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_41",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "list",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.mapping.List",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.SuppressWarnings(\"null\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"null\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "className",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.Class",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "?",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "start",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "limit",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "searchFilter",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "HibernateUtil",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "transaction",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "transaction",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "beginTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "criteria",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Criteria",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "createCriteria",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "className",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setFirstResult",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "criteria",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "start",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setMaxResults",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "criteria",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "limit",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "ForEach",
+                          "children": [
+                            {
+                              "label": "sf",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "searchFilter",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "values",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String[]",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "values",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "EQ",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "length",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "values",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "1",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "add",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "criteria",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "eq",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "org.hibernate.criterion.Restrictions",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "sf",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "",
+                                                      "type": "ArrayRead",
+                                                      "children": [
+                                                        {
+                                                          "label": "values",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "0",
+                                                          "type": "Literal",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "ELSE",
+                                          "type": "else",
+                                          "children": [
+                                            {
+                                              "label": "add",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "criteria",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "in",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "org.hibernate.criterion.Restrictions",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "sf",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "values",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "commit",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "transaction",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "List Objects \u003d criteria.list();",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return Objects;",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "rollback",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "transaction",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "close",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

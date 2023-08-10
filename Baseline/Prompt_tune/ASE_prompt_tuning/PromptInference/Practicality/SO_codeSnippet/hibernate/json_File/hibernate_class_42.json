@@ -1,0 +1,1162 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_42",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "log",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.apache.commons.logging.Log",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getLog",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "org.apache.commons.logging.LogFactory",
+                          "type": "TypeAccess",
+                          "children": []
+                        },
+                        {
+                          "label": "class",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_42",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "sessionFactory",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getSessionFactory",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "hibernate_class_42",
+                          "type": "TypeAccess",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getSessionFactory",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "protected",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "lookup",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "javax.naming.InitialContext()",
+                                  "type": "ConstructorCall",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"java:/hibernate/SessionFactory\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Could not locate SessionFactory in JNDI\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "java.lang.IllegalStateException(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"Could not locate SessionFactory in JNDI\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "persist",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "debug",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "log",
+                          "type": "FieldRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"persisting Empleados instance\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "persist",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getCurrentSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_42",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"aa\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "debug",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"persist successful\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "re",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.RuntimeException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"persist failed\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "attachDirty",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "debug",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "log",
+                          "type": "FieldRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"attaching dirty Empleados instance\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "saveOrUpdate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getCurrentSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_42",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"aa\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "debug",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"attach successful\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "re",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.RuntimeException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"attach failed\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "attachClean",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "debug",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "log",
+                          "type": "FieldRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"attaching clean Empleados instance\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "lock",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getCurrentSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_42",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"aa\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_42",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "debug",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"attach successful\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "re",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.RuntimeException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"attach failed\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "delete",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "debug",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "log",
+                          "type": "FieldRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"deleting Empleados instance\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "delete",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getCurrentSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_42",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"aa\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "debug",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"delete successful\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "re",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.RuntimeException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"delete failed\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "findByExample",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.util.List",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "debug",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "log",
+                          "type": "FieldRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"finding Empleados instance by example\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "instance",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "results",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "list",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "add",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "createCriteria",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "getCurrentSession",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "sessionFactory",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "hibernate_class_42",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\"com.hibernate.Empleados\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "create",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "org.hibernate.criterion.Example",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "instance",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "debug",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"find by example successful, result size: \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "size",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "results",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "results",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "re",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.RuntimeException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "error",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"find by example failed\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "re",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "public Empleados merge(Empleados detachedInstance) {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.debug(\"merging Empleados instance\");",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "try {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "Empleados result \u003d (Empleados) sessionFactory.getCurrentSession()",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": ".merge(detachedInstance);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.debug(\"merge successful\");",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "return result;",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "} catch (RuntimeException re) {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.error(\"merge failed\", re);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "throw re;",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "}",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "}",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "public Empleados findById(java.lang.Integer id) {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.debug(\"getting Empleados instance with id: \" + id);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "try {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "Empleados instance \u003d (Empleados) sessionFactory.getCurrentSession()",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": ".get(\"com.hibernate.Empleados\", id);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "if (instance \u003d\u003d null) {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.debug(\"get successful, no instance found\");",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "} else {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.debug(\"get successful, instance found\");",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "}",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "return instance;",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "} catch (RuntimeException re) {",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "log.error(\"get failed\", re);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "throw re;",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "}",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "}",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

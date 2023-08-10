@@ -1,0 +1,244 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_5",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "sessionFactory",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "buildSessionFactory",
+                      "type": "Invocation",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "buildSessionFactory",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "buildSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "configure",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.cfg.Configuration()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Create the SessionFactory from hibernate.cfg.xml",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "ex",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Throwable",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "println",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "err",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.System",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "\"Initial SessionFactory creation failed.\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "ex",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "Make sure you log the exception, as it might be swallowed",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Throw",
+                              "children": [
+                                {
+                                  "label": "java.lang.ExceptionInInitializerError(java.lang.Throwable)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "ex",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getSessionFactory",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "sessionFactory",
+                          "type": "FieldRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

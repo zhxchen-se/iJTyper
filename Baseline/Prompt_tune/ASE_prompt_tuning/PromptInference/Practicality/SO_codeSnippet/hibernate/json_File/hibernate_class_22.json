@@ -1,0 +1,757 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_22",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "check",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.json.JSONObject",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "creates a new session needed to add elements to a database",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "check",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.json.JSONObject",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "org.json.JSONObject()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "holds the result of the check in the database",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "sessionFactory",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.SessionFactory",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "buildSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "configure",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.cfg.Configuration()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "creates a new session needed to add elements to a database",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "username",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "justusername",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "boolean",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "false",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "justusername",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "hquery",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"Select username from User user Where username \u003d ? \"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "query created to select a username from user table",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "query",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.Query",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "createQuery",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "session",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "hquery",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "query created",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setString",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "query",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "0",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "username",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "sets the username of the query the values JSONObject contents",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "user",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "uniqueResult",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "query",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "executes query and adds username string variable",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "if",
+                                  "type": "If",
+                                  "children": [
+                                    {
+                                      "label": "EQ",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "user",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "null",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "THEN",
+                                      "type": "then",
+                                      "children": [
+                                        {
+                                          "label": "put",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "check",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"indatabase\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"false\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "adds false to Jobject if not found",
+                                              "type": "Comment",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "ELSE",
+                                      "type": "else",
+                                      "children": [
+                                        {
+                                          "label": "put",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "check",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"indatabase\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"true\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "checks to see if result is found (null if not found)",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "put",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "check",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"justusername\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "true",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "adds check to Jobject to say just to check username",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "hquery",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"Select username from User user Where username \u003d :user and password \u003d :pass \"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "query created to select a username and password from user table",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "query",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.Query",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "createQuery",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "session",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "hquery",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setString",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "query",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"user\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "username",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "password",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setString",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "query",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"pass\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "password",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "user",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "uniqueResult",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "query",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "if",
+                                  "type": "If",
+                                  "children": [
+                                    {
+                                      "label": "EQ",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "user",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "null",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "THEN",
+                                      "type": "then",
+                                      "children": [
+                                        {
+                                          "label": "put",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "check",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"indatabase\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "false",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "ELSE",
+                                      "type": "else",
+                                      "children": [
+                                        {
+                                          "label": "put",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "check",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"indatabase\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "true",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "put",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "check",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"justusername\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "false",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "println",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "out",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.System",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "getMessage",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "logg.log(Level.WARNING, \" Exception\", e.getMessage());",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "flush",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Actual contact insertion will happen at this step",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "close",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "check",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "returns Jobject",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "import com.google.gwt.json.client.JSONObject;",
+                  "type": "Comment",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

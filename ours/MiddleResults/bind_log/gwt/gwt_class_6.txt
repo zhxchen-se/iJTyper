@@ -1,0 +1,1058 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_6.java
+Expect check=104
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_6
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Did not find solution for node: TitledPanel with type Type1
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: legend
+For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: legend
+Cannot find matching typeVariable for: private Element legend;
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: content=null
+For node: content=null expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: null expected fqn: null with type: Type23 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: TitledPanel
+Cannot find matching typeVariable for: public TitledPanel(){
+  Element fieldset=DOM.createFieldSet();
+  legend=DOM.createLegend();
+  DOM.appendChild(fieldset,legend);
+  setElement(fieldset);
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: fieldset=DOM.createFieldSet()
+For node: fieldset=DOM.createFieldSet() expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: DOM.createFieldSet() expected fqn: com.google.gwt.user.client.Element with type: Type25 got: com.google.gwt.user.client.Element
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: createFieldSet
+For node: createFieldSet expected fqn: com.google.gwt.user.client.Element with type: Type25 got: com.google.gwt.user.client.Element
+For node: legend=DOM.createLegend() expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: DOM.createLegend() expected fqn: com.google.gwt.user.client.Element with type: Type27 got: com.google.gwt.user.client.Element
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: createLegend
+For node: createLegend expected fqn: com.google.gwt.user.client.Element with type: Type27 got: com.google.gwt.user.client.Element
+For node: DOM.appendChild(fieldset,legend) expected fqn: void with type: Type29 got: void
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: appendChild
+For node: appendChild expected fqn: void with type: Type29 got: void
+For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: setElement(fieldset) expected fqn: void with type: Type33 got: void
+Cannot find matching typeVariable for: setElement
+For node: setElement expected fqn: void with type: Type33 got: void
+For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: TitledPanel
+Cannot find matching typeVariable for: public TitledPanel(String title){
+  this();
+  setTitle(title);
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String title
+For node: String title expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: title expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: setTitle(title) expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: setTitle
+For node: setTitle expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: title
+For node: title expected fqn: java.lang.String with type: Type5 got: void
+For node: @Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: getTitle
+Cannot find matching typeVariable for: @Override public String getTitle(){
+  return DOM.getInnerHTML(legend);
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+For node: DOM.getInnerHTML(legend) expected fqn: java.lang.String with type: Type38 got: java.lang.String
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type37 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: getInnerHTML
+For node: getInnerHTML expected fqn: java.lang.String with type: Type38 got: java.lang.String
+For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: @Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
+For node: void expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: setTitle
+Cannot find matching typeVariable for: @Override public void setTitle(String html){
+  DOM.setInnerHTML(legend,html);
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String html
+For node: String html expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: html expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: DOM.setInnerHTML(legend,html) expected fqn: void with type: Type42 got: void
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type41 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: setInnerHTML
+For node: setInnerHTML expected fqn: void with type: Type42 got: void
+For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+For node: html expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: getContent
+Cannot find matching typeVariable for: public Widget getContent(){
+  return content;
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: void expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: setContent
+Cannot find matching typeVariable for: public void setContent(Widget content){
+  if (this.content != null) {
+    DOM.removeChild(getElement(),this.content.getElement());
+  }
+  this.content=content;
+  DOM.appendChild(getElement(),content.getElement());
+}
+
+Cannot find matching typeVariable for: public class TitledPanel extends Widget {
+  private Element legend;
+  private Widget content=null;
+  public TitledPanel(){
+    Element fieldset=DOM.createFieldSet();
+    legend=DOM.createLegend();
+    DOM.appendChild(fieldset,legend);
+    setElement(fieldset);
+  }
+  public TitledPanel(  String title){
+    this();
+    setTitle(title);
+  }
+  @Override public String getTitle(){
+    return DOM.getInnerHTML(legend);
+  }
+  @Override public void setTitle(  String html){
+    DOM.setInnerHTML(legend,html);
+  }
+  public Widget getContent(){
+    return content;
+  }
+  public void setContent(  Widget content){
+    if (this.content != null) {
+      DOM.removeChild(getElement(),this.content.getElement());
+    }
+    this.content=content;
+    DOM.appendChild(getElement(),content.getElement());
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_6 {
+public class TitledPanel extends Widget {
+    private Element legend;
+    private Widget content=null;
+    public TitledPanel(){
+      Element fieldset=DOM.createFieldSet();
+      legend=DOM.createLegend();
+      DOM.appendChild(fieldset,legend);
+      setElement(fieldset);
+    }
+    public TitledPanel(    String title){
+      this();
+      setTitle(title);
+    }
+    @Override public String getTitle(){
+      return DOM.getInnerHTML(legend);
+    }
+    @Override public void setTitle(    String html){
+      DOM.setInnerHTML(legend,html);
+    }
+    public Widget getContent(){
+      return content;
+    }
+    public void setContent(    Widget content){
+      if (this.content != null) {
+        DOM.removeChild(getElement(),this.content.getElement());
+      }
+      this.content=content;
+      DOM.appendChild(getElement(),content.getElement());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Widget content
+For node: Widget content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: this.content != null expected fqn: boolean with type: Type47 got: boolean
+For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: content
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: null with type Type46
+For node: DOM.removeChild(getElement(),this.content.getElement()) expected fqn: void with type: Type51 got: void
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type50 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: removeChild
+For node: removeChild expected fqn: void with type: Type51 got: void
+For node: getElement() expected fqn: com.google.gwt.user.client.Element with type: Type48 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type48 got: com.google.gwt.user.client.Element
+For node: this.content.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: content
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+For node: this.content=content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: content
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: content
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+For node: DOM.appendChild(getElement(),content.getElement()) expected fqn: void with type: Type55 got: void
+For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type50 got: com.google.gwt.user.client.DOM
+Cannot find matching typeVariable for: appendChild
+For node: appendChild expected fqn: void with type: Type55 got: void
+For node: getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+For node: content.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+{Checked=94, Analyzed=89, Unsolved=5, Incorrect=2, Correct=87}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=0, Correct=34}
+gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+Total stats
+{Checked=94, Analyzed=89, Unsolved=5, Incorrect=2, Correct=87}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=0, Correct=34}
+gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,3,0,0,3
+boolean,InfixExpression,1,1,1,0,0
+gwt.,Assignment,2,2,2,0,0
+gwt.,FieldAccess,3,3,3,0,0
+gwt.,MethodInvocation,6,6,6,0,0
+gwt.,SimpleName,34,34,34,0,0
+gwt.,SimpleType,6,6,6,0,0
+gwt.,SingleVariableDeclaration,1,1,1,0,0
+gwt.,VariableDeclarationFragment,3,3,3,0,0
+java,MarkerAnnotation,2,2,2,0,0
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,10,10,9,1,0
+java,SimpleType,3,3,3,0,0
+java,SingleVariableDeclaration,2,2,2,0,0
+null,NullLiteral,1,2,0,1,1
+void,MethodInvocation,6,6,6,0,0
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,6,6,6,0,0

@@ -1,0 +1,4222 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_19.java
+Expect check=327
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Test
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String args[]){
+  int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+  shuffleArray(solutionArray);
+  for (int i=0; i < solutionArray.length; i++) {
+    System.out.print(solutionArray[i] + " ");
+  }
+  System.out.println();
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String args[]
+For node: String args[] expected fqn: java.lang.String[] with type: Type49 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type49 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type49 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type50 got: java.lang.String[]
+For node: int[] expected fqn: int[] with type: Type52 got: int[]
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: solutionArray={1,2,3,4,5,6,16,15,14,13,12,11}
+For node: solutionArray={1,2,3,4,5,6,16,15,14,13,12,11} expected fqn: int[] with type: Type52 got: int[]
+For node: solutionArray expected fqn: int[] with type: Type52 got: int[]
+For node: {1,2,3,4,5,6,16,15,14,13,12,11} expected fqn: int[] with type: Type54 got: int[]
+Did not find solution for node: 1 with type Type53
+Did not find solution for node: 2 with type Type53
+Did not find solution for node: 3 with type Type53
+Did not find solution for node: 4 with type Type53
+Did not find solution for node: 5 with type Type53
+Did not find solution for node: 6 with type Type53
+Did not find solution for node: 16 with type Type53
+Did not find solution for node: 15 with type Type53
+Did not find solution for node: 14 with type Type53
+Did not find solution for node: 13 with type Type53
+Did not find solution for node: 12 with type Type53
+Did not find solution for node: 11 with type Type53
+For node: shuffleArray(solutionArray) expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: shuffleArray
+For node: shuffleArray expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: solutionArray
+For node: solutionArray expected fqn: int[] with type: Type8 got: void
+Cannot find matching typeVariable for: int i=0
+Did not find solution for node: int i=0 with type Type51
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: i=0
+Did not find solution for node: i=0 with type Type51
+Did not find solution for node: i with type Type51
+Did not find solution for node: 0 with type Type53
+For node: i < solutionArray.length expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: i with type Type51
+Cannot find matching typeVariable for: solutionArray.length
+For node: solutionArray.length expected fqn: int with type: Type11 got: boolean
+For node: solutionArray expected fqn: int[] with type: Type52 got: int[]
+Did not find solution for node: length with type Type56
+Did not find solution for node: i++ with type Type51
+Did not find solution for node: i with type Type51
+For node: System.out.print(solutionArray[i] + " ") expected fqn: void with type: Type61 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type61 got: void
+Did not find solution for node: System with type Type59
+Did not find solution for node: out with type Type60
+Cannot find matching typeVariable for: print
+For node: print expected fqn: void with type: Type61 got: void
+Did not find solution for node: solutionArray[i] + " " with type Type51
+Did not find solution for node: solutionArray[i] with type Type51
+For node: solutionArray expected fqn: int[] with type: Type52 got: int[]
+Cannot find matching typeVariable for: i
+Did not find solution for node: i with type Type51
+Did not find solution for node: " " with type Type58
+For node: System.out.println() expected fqn: void with type: Type66 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type66 got: void
+Did not find solution for node: System with type Type64
+For node: out expected fqn: java.io.PrintStream with type: Type65 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type66 got: void
+For node: void expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: shuffleArray
+Cannot find matching typeVariable for: static void shuffleArray(int[] ar){
+  Random rnd=ThreadLocalRandom.current();
+  for (int i=ar.length - 1; i > 0; i--) {
+    int index=rnd.nextInt(i + 1);
+    int a=ar[index];
+    ar[index]=ar[i];
+    ar[i]=a;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int[] ar
+For node: int[] ar expected fqn: int[] with type: Type52 got: int[]
+For node: int[] expected fqn: int[] with type: Type52 got: int[]
+Did not find solution for node: int with type Type51
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+For node: Random expected fqn: java.util.Random with type: Type68 got: java.util.Random
+For node: Random expected fqn: java.util.Random with type: Type68 got: java.util.Random
+Cannot find matching typeVariable for: rnd=ThreadLocalRandom.current()
+For node: rnd=ThreadLocalRandom.current() expected fqn: java.util.Random with type: Type68 got: java.util.Random
+For node: rnd expected fqn: java.util.Random with type: Type68 got: java.util.Random
+For node: ThreadLocalRandom.current() expected fqn: java.util.concurrent.ThreadLocalRandom with type: Type70 got: java.util.Random
+For node: ThreadLocalRandom expected fqn: java.util.concurrent.ThreadLocalRandom with type: Type69 got: java.util.concurrent.ThreadLocalRandom
+Cannot find matching typeVariable for: current
+For node: current expected fqn: java.util.concurrent.ThreadLocalRandom with type: Type70 got: java.util.Random
+Cannot find matching typeVariable for: int i=ar.length - 1
+Did not find solution for node: int i=ar.length - 1 with type Type51
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: i=ar.length - 1
+Did not find solution for node: i=ar.length - 1 with type Type51
+Did not find solution for node: i with type Type51
+Did not find solution for node: ar.length - 1 with type Type56
+Cannot find matching typeVariable for: ar.length
+Did not find solution for node: ar.length with type Type56
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+Did not find solution for node: length with type Type56
+Did not find solution for node: 1 with type Type53
+For node: i > 0 expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: i with type Type51
+Did not find solution for node: 0 with type Type53
+Did not find solution for node: i-- with type Type51
+Did not find solution for node: i with type Type51
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: index=rnd.nextInt(i + 1)
+Did not find solution for node: index=rnd.nextInt(i + 1) with type Type51
+Did not find solution for node: index with type Type51
+Did not find solution for node: rnd.nextInt(i + 1) with type Type72
+For node: rnd expected fqn: java.util.Random with type: Type68 got: java.util.Random
+Cannot find matching typeVariable for: nextInt
+Did not find solution for node: nextInt with type Type72
+Did not find solution for node: i + 1 with type Type51
+Did not find solution for node: i with type Type51
+Did not find solution for node: 1 with type Type53
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: a=ar[index]
+Did not find solution for node: a=ar[index] with type Type51
+Did not find solution for node: a with type Type51
+Did not find solution for node: ar[index] with type Type51
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+Cannot find matching typeVariable for: index
+Did not find solution for node: index with type Type51
+Did not find solution for node: ar[index]=ar[i] with type Type51
+Did not find solution for node: ar[index] with type Type51
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+Cannot find matching typeVariable for: index
+Did not find solution for node: index with type Type51
+Did not find solution for node: ar[i] with type Type51
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+Cannot find matching typeVariable for: i
+Did not find solution for node: i with type Type51
+Did not find solution for node: ar[i]=a with type Type51
+Did not find solution for node: ar[i] with type Type51
+For node: ar expected fqn: int[] with type: Type52 got: int[]
+Cannot find matching typeVariable for: i
+Did not find solution for node: i with type Type51
+Did not find solution for node: a with type Type51
+Did not find solution for node: List<Integer> with type Type10=Type9<Type3>
+For node: List expected fqn: java.util.List<java.lang.Integer> with type: Type9 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.Integer> with type: Type9 got: java.util.List
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Cannot find matching typeVariable for: range
+Cannot find matching typeVariable for: protected static List<Integer> range(int n){
+  return toList(new Range(n),new ArrayList<Integer>());
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int n
+Did not find solution for node: int n with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: n with type Type51
+Did not find solution for node: toList(new Range(n),new ArrayList<Integer>()) with type Type13=Type9<Type12>
+Cannot find matching typeVariable for: toList
+Did not find solution for node: toList with type Type13=Type9<Type12>
+Did not find solution for node: new Range(n) with type Type1
+Did not find solution for node: Range with type Type1
+Did not find solution for node: Range with type Type1
+Did not find solution for node: n with type Type51
+For node: new ArrayList<Integer>() expected fqn: java.util.ArrayList<java.lang.Integer> with type: Type78=Type77<Type3> got: java.util.ArrayList<java.lang.Integer>
+For node: ArrayList<Integer> expected fqn: java.util.ArrayList<java.lang.Integer> with type: Type78=Type77<Type3> got: java.util.ArrayList<java.lang.Integer>
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.Integer> with type: Type77 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.Integer> with type: Type77 got: java.util.ArrayList
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: protected static <T>List<T> toList(Iterable<T> iterable){
+  return toList(iterable,new ArrayList<T>());
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: List<T> with type Type13=Type9<Type12>
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Cannot find matching typeVariable for: toList
+Cannot find matching typeVariable for: protected static <T>List<T> toList(Iterable<T> iterable){
+  return toList(iterable,new ArrayList<T>());
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Iterable<T> iterable
+Did not find solution for node: Iterable<T> iterable with type Type82=Type2<Type12>
+Did not find solution for node: Iterable<T> with type Type82=Type2<Type12>
+Did not find solution for node: Iterable with type Type2
+Did not find solution for node: Iterable with type Type2
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Did not find solution for node: iterable with type Type82=Type2<Type12>
+Did not find solution for node: toList(iterable,new ArrayList<T>()) with type Type13=Type9<Type12>
+Cannot find matching typeVariable for: toList
+Did not find solution for node: toList with type Type13=Type9<Type12>
+Cannot find matching typeVariable for: iterable
+Did not find solution for node: iterable with type Type13=Type9<Type12>
+For node: new ArrayList<T>() expected fqn: java.util.ArrayList<T> with type: Type83=Type77<Type12> got: java.util.ArrayList<java.lang.Object>
+For node: ArrayList<T> expected fqn: java.util.ArrayList<T> with type: Type83=Type77<Type12> got: java.util.ArrayList<java.lang.Object>
+For node: ArrayList expected fqn: java.util.ArrayList<T> with type: Type77 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<T> with type: Type77 got: java.util.ArrayList
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: protected static <T>List<T> toList(Iterable<T> iterable,List<T> destination){
+  addAll(destination,iterable.iterator());
+  return destination;
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: List<T> with type Type13=Type9<Type12>
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Cannot find matching typeVariable for: toList
+Cannot find matching typeVariable for: protected static <T>List<T> toList(Iterable<T> iterable,List<T> destination){
+  addAll(destination,iterable.iterator());
+  return destination;
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Iterable<T> iterable
+Did not find solution for node: Iterable<T> iterable with type Type82=Type2<Type12>
+Did not find solution for node: Iterable<T> with type Type82=Type2<Type12>
+Did not find solution for node: Iterable with type Type2
+Did not find solution for node: Iterable with type Type2
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Did not find solution for node: iterable with type Type82=Type2<Type12>
+Cannot find matching typeVariable for: List<T> destination
+Did not find solution for node: List<T> destination with type Type13=Type9<Type12>
+Did not find solution for node: List<T> with type Type13=Type9<Type12>
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: List expected fqn: java.util.List<T> with type: Type9 got: java.util.List
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+Did not find solution for node: destination with type Type13=Type9<Type12>
+For node: addAll(destination,iterable.iterator()) expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: addAll
+For node: addAll expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: destination
+For node: destination expected fqn: java.util.List<T> with type: Type8 got: void
+Did not find solution for node: iterable.iterator() with type Type85
+Did not find solution for node: iterable with type Type82=Type2<Type12>
+Cannot find matching typeVariable for: iterator
+Did not find solution for node: iterator with type Type85
+Did not find solution for node: destination with type Type13=Type9<Type12>
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: T
+Cannot find matching typeVariable for: protected static <T>void addAll(Collection<T> collection,Iterator<T> iterator){
+  while (iterator.hasNext()) {
+    collection.add(iterator.next());
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: addAll
+Cannot find matching typeVariable for: protected static <T>void addAll(Collection<T> collection,Iterator<T> iterator){
+  while (iterator.hasNext()) {
+    collection.add(iterator.next());
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Collection<T> collection
+For node: Collection<T> collection expected fqn: java.util.Collection<T> with type: Type90=Type89<Type12> got: java.util.Collection<java.lang.Object>
+For node: Collection<T> expected fqn: java.util.Collection<T> with type: Type90=Type89<Type12> got: java.util.Collection<java.lang.Object>
+For node: Collection expected fqn: java.util.Collection<T> with type: Type89 got: java.util.Collection
+For node: Collection expected fqn: java.util.Collection<T> with type: Type89 got: java.util.Collection
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: collection expected fqn: java.util.Collection<T> with type: Type90=Type89<Type12> got: java.util.Collection<java.lang.Object>
+Cannot find matching typeVariable for: Iterator<T> iterator
+For node: Iterator<T> iterator expected fqn: java.util.Iterator<T> with type: Type91=Type6<Type12> got: java.util.Iterator<java.lang.Object>
+For node: Iterator<T> expected fqn: java.util.Iterator<T> with type: Type91=Type6<Type12> got: java.util.Iterator<java.lang.Object>
+For node: Iterator expected fqn: java.util.Iterator<T> with type: Type6 got: java.util.Iterator
+For node: Iterator expected fqn: java.util.Iterator<T> with type: Type6 got: java.util.Iterator
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: T expected fqn: T with type: Type12 got: java.lang.Object
+For node: iterator expected fqn: java.util.Iterator<T> with type: Type91=Type6<Type12> got: java.util.Iterator<java.lang.Object>
+Did not find solution for node: iterator.hasNext() with type Type92
+For node: iterator expected fqn: java.util.Iterator<T> with type: Type91=Type6<Type12> got: java.util.Iterator<java.lang.Object>
+Cannot find matching typeVariable for: hasNext
+Did not find solution for node: hasNext with type Type92
+Did not find solution for node: collection.add(iterator.next()) with type Type100
+For node: collection expected fqn: java.util.Collection<T> with type: Type90=Type89<Type12> got: java.util.Collection<java.lang.Object>
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type100
+For node: iterator.next() expected fqn: T with type: Type96 got: E
+For node: iterator expected fqn: java.util.Iterator<T> with type: Type91=Type6<Type12> got: java.util.Iterator<java.lang.Object>
+Cannot find matching typeVariable for: next
+For node: next expected fqn: T with type: Type96 got: E
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Did not find solution for node: Range with type Type1
+Did not find solution for node: Iterable<Integer> with type Type4=Type2<Type3>
+Did not find solution for node: Iterable with type Type2
+Did not find solution for node: Iterable with type Type2
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: start
+Did not find solution for node: start with type Type51
+Cannot find matching typeVariable for: start
+Cannot find matching typeVariable for: private int start;
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: stop
+Did not find solution for node: stop with type Type51
+Cannot find matching typeVariable for: stop
+Cannot find matching typeVariable for: private int stop;
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: step
+Did not find solution for node: step with type Type51
+Cannot find matching typeVariable for: step
+Cannot find matching typeVariable for: private int step;
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Range
+Cannot find matching typeVariable for: private Range(int n){
+  this(0,n,1);
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int n
+Did not find solution for node: int n with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: n with type Type51
+Did not find solution for node: 0 with type Type53
+Cannot find matching typeVariable for: n
+Cannot find matching typeVariable for: this(0,n,1);
+
+Cannot find matching typeVariable for: {
+  this(0,n,1);
+}
+
+Cannot find matching typeVariable for: private Range(int n){
+  this(0,n,1);
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: 1 with type Type53
+Cannot find matching typeVariable for: Range
+Cannot find matching typeVariable for: private Range(int start,int stop){
+  this(start,stop,1);
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int start
+Did not find solution for node: int start with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: start with type Type51
+Cannot find matching typeVariable for: int stop
+Did not find solution for node: int stop with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: stop with type Type51
+Cannot find matching typeVariable for: start
+Cannot find matching typeVariable for: this(start,stop,1);
+
+Cannot find matching typeVariable for: {
+  this(start,stop,1);
+}
+
+Cannot find matching typeVariable for: private Range(int start,int stop){
+  this(start,stop,1);
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: stop
+Cannot find matching typeVariable for: this(start,stop,1);
+
+Cannot find matching typeVariable for: {
+  this(start,stop,1);
+}
+
+Cannot find matching typeVariable for: private Range(int start,int stop){
+  this(start,stop,1);
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: 1 with type Type53
+Cannot find matching typeVariable for: Range
+Cannot find matching typeVariable for: private Range(int start,int stop,int step){
+  this.start=start;
+  this.stop=stop;
+  this.step=step;
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int start
+Did not find solution for node: int start with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: start with type Type51
+Cannot find matching typeVariable for: int stop
+Did not find solution for node: int stop with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: stop with type Type51
+Cannot find matching typeVariable for: int step
+Did not find solution for node: int step with type Type51
+Did not find solution for node: int with type Type51
+Did not find solution for node: step with type Type51
+Did not find solution for node: this.start=start with type Type51
+Did not find solution for node: this.start with type Type51
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: start
+Did not find solution for node: start with type Type51
+Cannot find matching typeVariable for: start
+Did not find solution for node: start with type Type51
+Did not find solution for node: this.stop=stop with type Type51
+Did not find solution for node: this.stop with type Type51
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: stop
+Did not find solution for node: stop with type Type51
+Cannot find matching typeVariable for: stop
+Did not find solution for node: stop with type Type51
+Did not find solution for node: this.step=step with type Type51
+Did not find solution for node: this.step with type Type51
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: step
+Did not find solution for node: step with type Type51
+Cannot find matching typeVariable for: step
+Did not find solution for node: step with type Type51
+For node: @Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Iterator<Integer> expected fqn: java.util.Iterator<java.lang.Integer> with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+For node: Iterator expected fqn: java.util.Iterator<java.lang.Integer> with type: Type6 got: java.util.Iterator
+For node: Iterator expected fqn: java.util.Iterator<java.lang.Integer> with type: Type6 got: java.util.Iterator
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Cannot find matching typeVariable for: iterator
+Cannot find matching typeVariable for: @Override public Iterator<Integer> iterator(){
+  final int min=start;
+  final int max=stop / step;
+  return new Iterator<Integer>(){
+    private int current=min;
+    @Override public boolean hasNext(){
+      return current < max;
+    }
+    @Override public Integer next(){
+      if (hasNext()) {
+        return current++ * step;
+      }
+ else {
+        throw new NoSuchElementException("Range reached the end");
+      }
+    }
+    @Override public void remove(){
+      throw new UnsupportedOperationException("Can't remove values from a Range");
+    }
+  }
+;
+}
+
+Cannot find matching typeVariable for: private static class Range implements Iterable<Integer> {
+  private int start;
+  private int stop;
+  private int step;
+  private Range(  int n){
+    this(0,n,1);
+  }
+  private Range(  int start,  int stop){
+    this(start,stop,1);
+  }
+  private Range(  int start,  int stop,  int step){
+    this.start=start;
+    this.stop=stop;
+    this.step=step;
+  }
+  @Override public Iterator<Integer> iterator(){
+    final int min=start;
+    final int max=stop / step;
+    return new Iterator<Integer>(){
+      private int current=min;
+      @Override public boolean hasNext(){
+        return current < max;
+      }
+      @Override public Integer next(){
+        if (hasNext()) {
+          return current++ * step;
+        }
+ else {
+          throw new NoSuchElementException("Range reached the end");
+        }
+      }
+      @Override public void remove(){
+        throw new UnsupportedOperationException("Can't remove values from a Range");
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+class Test {
+  public static void main(  String args[]){
+    int[] solutionArray={1,2,3,4,5,6,16,15,14,13,12,11};
+    shuffleArray(solutionArray);
+    for (int i=0; i < solutionArray.length; i++) {
+      System.out.print(solutionArray[i] + " ");
+    }
+    System.out.println();
+  }
+  static void shuffleArray(  int[] ar){
+    Random rnd=ThreadLocalRandom.current();
+    for (int i=ar.length - 1; i > 0; i--) {
+      int index=rnd.nextInt(i + 1);
+      int a=ar[index];
+      ar[index]=ar[i];
+      ar[i]=a;
+    }
+  }
+  protected static List<Integer> range(  int n){
+    return toList(new Range(n),new ArrayList<Integer>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable){
+    return toList(iterable,new ArrayList<T>());
+  }
+  protected static <T>List<T> toList(  Iterable<T> iterable,  List<T> destination){
+    addAll(destination,iterable.iterator());
+    return destination;
+  }
+  protected static <T>void addAll(  Collection<T> collection,  Iterator<T> iterator){
+    while (iterator.hasNext()) {
+      collection.add(iterator.next());
+    }
+  }
+private static class Range implements Iterable<Integer> {
+    private int start;
+    private int stop;
+    private int step;
+    private Range(    int n){
+      this(0,n,1);
+    }
+    private Range(    int start,    int stop){
+      this(start,stop,1);
+    }
+    private Range(    int start,    int stop,    int step){
+      this.start=start;
+      this.stop=stop;
+      this.step=step;
+    }
+    @Override public Iterator<Integer> iterator(){
+      final int min=start;
+      final int max=stop / step;
+      return new Iterator<Integer>(){
+        private int current=min;
+        @Override public boolean hasNext(){
+          return current < max;
+        }
+        @Override public Integer next(){
+          if (hasNext()) {
+            return current++ * step;
+          }
+ else {
+            throw new NoSuchElementException("Range reached the end");
+          }
+        }
+        @Override public void remove(){
+          throw new UnsupportedOperationException("Can't remove values from a Range");
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: min=start
+Did not find solution for node: min=start with type Type51
+Did not find solution for node: min with type Type51
+Did not find solution for node: start with type Type51
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: max=stop / step
+Did not find solution for node: max=stop / step with type Type51
+Did not find solution for node: max with type Type51
+Did not find solution for node: stop / step with type Type51
+Did not find solution for node: stop with type Type51
+Did not find solution for node: step with type Type51
+For node: new Iterator<Integer>(){
+  private int current=min;
+  @Override public boolean hasNext(){
+    return current < max;
+  }
+  @Override public Integer next(){
+    if (hasNext()) {
+      return current++ * step;
+    }
+ else {
+      throw new NoSuchElementException("Range reached the end");
+    }
+  }
+  @Override public void remove(){
+    throw new UnsupportedOperationException("Can't remove values from a Range");
+  }
+}
+ expected fqn:  with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+For node: Iterator<Integer> expected fqn: java.util.Iterator<java.lang.Integer> with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+For node: Iterator expected fqn: java.util.Iterator<java.lang.Integer> with type: Type6 got: java.util.Iterator
+For node: Iterator expected fqn: java.util.Iterator<java.lang.Integer> with type: Type6 got: java.util.Iterator
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Cannot find matching typeVariable for: {
+  private int current=min;
+  @Override public boolean hasNext(){
+    return current < max;
+  }
+  @Override public Integer next(){
+    if (hasNext()) {
+      return current++ * step;
+    }
+ else {
+      throw new NoSuchElementException("Range reached the end");
+    }
+  }
+  @Override public void remove(){
+    throw new UnsupportedOperationException("Can't remove values from a Range");
+  }
+}
+
+Did not find solution for node: int with type Type51
+Cannot find matching typeVariable for: current=min
+Did not find solution for node: current=min with type Type51
+Did not find solution for node: current with type Type51
+Did not find solution for node: min with type Type51
+For node: @Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type11 got: boolean
+Cannot find matching typeVariable for: hasNext
+Cannot find matching typeVariable for: @Override public boolean hasNext(){
+  return current < max;
+}
+
+Cannot find matching typeVariable for: {
+  private int current=min;
+  @Override public boolean hasNext(){
+    return current < max;
+  }
+  @Override public Integer next(){
+    if (hasNext()) {
+      return current++ * step;
+    }
+ else {
+      throw new NoSuchElementException("Range reached the end");
+    }
+  }
+  @Override public void remove(){
+    throw new UnsupportedOperationException("Can't remove values from a Range");
+  }
+}
+
+For node: hasNext expected fqn: boolean with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+For node: current < max expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: current with type Type51
+Did not find solution for node: max with type Type51
+For node: @Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type3 got: java.lang.Integer
+Cannot find matching typeVariable for: next
+Cannot find matching typeVariable for: @Override public Integer next(){
+  if (hasNext()) {
+    return current++ * step;
+  }
+ else {
+    throw new NoSuchElementException("Range reached the end");
+  }
+}
+
+Cannot find matching typeVariable for: {
+  private int current=min;
+  @Override public boolean hasNext(){
+    return current < max;
+  }
+  @Override public Integer next(){
+    if (hasNext()) {
+      return current++ * step;
+    }
+ else {
+      throw new NoSuchElementException("Range reached the end");
+    }
+  }
+  @Override public void remove(){
+    throw new UnsupportedOperationException("Can't remove values from a Range");
+  }
+}
+
+For node: next expected fqn: java.lang.Integer with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+For node: hasNext() expected fqn: boolean with type: Type11 got: boolean
+Cannot find matching typeVariable for: hasNext
+For node: hasNext expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: current++ * step with type Type51
+Did not find solution for node: current++ with type Type51
+Did not find solution for node: current with type Type51
+Did not find solution for node: step with type Type51
+Did not find solution for node: new NoSuchElementException("Range reached the end") with type Type107
+Did not find solution for node: NoSuchElementException with type Type107
+Did not find solution for node: NoSuchElementException with type Type107
+Did not find solution for node: "Range reached the end" with type Type58
+For node: @Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type106 got: java.lang.Override
+For node: void expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: remove
+Cannot find matching typeVariable for: @Override public void remove(){
+  throw new UnsupportedOperationException("Can't remove values from a Range");
+}
+
+Cannot find matching typeVariable for: {
+  private int current=min;
+  @Override public boolean hasNext(){
+    return current < max;
+  }
+  @Override public Integer next(){
+    if (hasNext()) {
+      return current++ * step;
+    }
+ else {
+      throw new NoSuchElementException("Range reached the end");
+    }
+  }
+  @Override public void remove(){
+    throw new UnsupportedOperationException("Can't remove values from a Range");
+  }
+}
+
+For node: remove expected fqn: void with type: Type7=Type6<Type3> got: java.util.Iterator<java.lang.Integer>
+Did not find solution for node: new UnsupportedOperationException("Can't remove values from a Range") with type Type110
+Did not find solution for node: UnsupportedOperationException with type Type110
+Did not find solution for node: UnsupportedOperationException with type Type110
+Did not find solution for node: "Can't remove values from a Range" with type Type58
+{Checked=301, Analyzed=127, Unsolved=174, Incorrect=62, Correct=65}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=9, Correct=0}
+=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=8, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
+int=ArrayAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=FieldAccess: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=InfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+int=PostfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=53, Analyzed=10, Unsolved=43, Incorrect=1, Correct=9}
+int=SingleVariableDeclaration: {Checked=8, Analyzed=1, Unsolved=7, Incorrect=0, Correct=1}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=11, Analyzed=1, Unsolved=10, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+java=ParameterizedType: {Checked=13, Analyzed=6, Unsolved=7, Incorrect=3, Correct=3}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=52, Analyzed=35, Unsolved=17, Incorrect=19, Correct=16}
+java=SimpleType: {Checked=23, Analyzed=18, Unsolved=5, Incorrect=10, Correct=8}
+java=SingleVariableDeclaration: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=3, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+Total stats
+{Checked=301, Analyzed=127, Unsolved=174, Incorrect=62, Correct=65}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=9, Correct=0}
+=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=8, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
+int=ArrayAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=FieldAccess: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=InfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+int=PostfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=53, Analyzed=10, Unsolved=43, Incorrect=1, Correct=9}
+int=SingleVariableDeclaration: {Checked=8, Analyzed=1, Unsolved=7, Incorrect=0, Correct=1}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=11, Analyzed=1, Unsolved=10, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+java=ParameterizedType: {Checked=13, Analyzed=6, Unsolved=7, Incorrect=3, Correct=3}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=52, Analyzed=35, Unsolved=17, Incorrect=19, Correct=16}
+java=SimpleType: {Checked=23, Analyzed=18, Unsolved=5, Incorrect=10, Correct=8}
+java=SingleVariableDeclaration: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=3, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+,ClassInstanceCreation,1,2,0,1,1
+,MethodInvocation,1,1,0,1,0
+,SimpleName,9,11,0,9,2
+,SimpleType,8,9,0,8,1
+,ThisExpression,0,3,0,0,3
+boolean,InfixExpression,3,3,3,0,0
+boolean,MethodInvocation,1,3,1,0,2
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,2,4,1,1,2
+int,ArrayAccess,0,5,0,0,5
+int,ArrayInitializer,1,1,1,0,0
+int,ArrayType,2,2,2,0,0
+int,Assignment,0,5,0,0,5
+int,FieldAccess,0,3,0,0,3
+int,InfixExpression,0,4,0,0,4
+int,MethodInvocation,0,1,0,0,1
+int,NumberLiteral,0,19,0,0,19
+int,PostfixExpression,0,3,0,0,3
+int,PrimitiveType,0,19,0,0,19
+int,QualifiedName,1,2,0,1,1
+int,SimpleName,10,53,9,1,43
+int,SingleVariableDeclaration,1,8,1,0,7
+int,VariableDeclarationExpression,0,2,0,0,2
+int,VariableDeclarationFragment,1,11,1,0,10
+java,ClassInstanceCreation,2,4,1,1,2
+java,InfixExpression,0,1,0,0,1
+java,MarkerAnnotation,4,4,4,0,0
+java,MethodInvocation,1,4,0,1,3
+java,ParameterizedType,6,13,3,3,7
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,35,52,16,19,17
+java,SimpleType,18,23,8,10,5
+java,SingleVariableDeclaration,3,6,0,3,3
+java,StringLiteral,0,3,0,0,3
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,4,4,4,0,0
+void,PrimitiveType,4,4,4,0,0
+void,SimpleName,5,5,4,1,0

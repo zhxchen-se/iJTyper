@@ -1,0 +1,726 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_8",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "abstract",
+                      "type": "Modifier",
+                      "children": []
+                    },
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "@javax.persistence.MappedSuperclass",
+                  "type": "Annotation",
+                  "children": []
+                },
+                {
+                  "label": "serialVersionUID",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "long",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "1L",
+                      "type": "Literal",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "from",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.util.Date",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "thru",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.util.Date",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "isActive",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "boolean",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Transient",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "now",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.Date",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.util.Date()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "afterFrom",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "boolean",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "OR",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "before",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "from",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_8",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "now",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "equals",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "from",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_8",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "now",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "beforeThru",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "boolean",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "OR",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "OR",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "thru",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "hibernate_class_8",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "after",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "thru",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "hibernate_class_8",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "now",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "equals",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "thru",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_8",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "now",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "AND",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "afterFrom",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "beforeThru",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Determines if a model is active. A model is active if now is after or\nequal to from , and thru is either null, or after now, or equal to now.",
+                      "type": "JavaDoc",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "areDatesValid",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "boolean",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@org.hibernate.validator.AssertTrue(message \u003d \"Dates are not valid the thru date must be empty, or after the fromdate.\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"Dates are not valid the thru date must be empty, or after the fromdate.\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "EQ",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "thru",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_8",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "ELSE",
+                          "type": "else",
+                          "children": [
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "after",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "thru",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "hibernate_class_8",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "from",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "hibernate_class_8",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getFrom",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.util.Date",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Temporal(javax.persistence.TemporalType.TIMESTAMP)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "TIMESTAMP",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "javax.persistence.TemporalType",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@org.hibernate.validator.NotNull",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "@javax.persistence.Column(name \u003d \"fromDate\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"fromDate\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "from",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_8",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setFrom",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "from",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.util.Date",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "from",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_8",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "from",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getThru",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.util.Date",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Temporal(javax.persistence.TemporalType.TIMESTAMP)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "TIMESTAMP",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "javax.persistence.TemporalType",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "thru",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_8",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setThru",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "thru",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.util.Date",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "thru",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_8",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "thru",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "Several models are date range sensitive, this base class provides that basic\nfunctionality.",
+                  "type": "JavaDoc",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "JavaDocTag",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

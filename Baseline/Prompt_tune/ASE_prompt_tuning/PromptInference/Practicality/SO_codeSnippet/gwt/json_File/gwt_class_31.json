@@ -1,0 +1,339 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "gwt_class_31",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.http.client.RequestException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "arg",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "serverUrl",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestBuilder",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.http.client.RequestBuilder",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.lang.Object()",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "POST",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.http.client.RequestBuilder",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "encode",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.http.client.URL",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "serverUrl",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "-- serverUrl is the url to which this call is posted to.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setHeader",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Content-Type\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"application/x-www-form-urlencoded\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setHeader",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Expires\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"0\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "postData",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sendRequest",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "postData",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.http.client.RequestCallback()",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "1",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.http.client.RequestCallback",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "onError",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "exception",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Throwable",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "Do nothing",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "onResponseReceived",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "response",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Response",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "sometimes when the server is restarted, I get response.getStatusCode() \u003d 304 and the response.getText() as blank",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

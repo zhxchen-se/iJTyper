@@ -1,0 +1,469 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_23",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "threadLocal",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.ThreadLocal",
+                      "type": "VARIABLE_TYPE",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "TYPE_ARGUMENT",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "java.lang.ThreadLocal()",
+                      "type": "ConstructorCall",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "configuration",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.hibernate.cfg.Configuration",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "org.hibernate.cfg.AnnotationConfiguration()",
+                      "type": "ConstructorCall",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "sessionFactory",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "",
+                  "type": "AnonymousExecutable",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_AnonymousExecutable",
+                      "children": [
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "configFile",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "configure",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "configuration",
+                              "type": "FieldRead",
+                              "children": []
+                            },
+                            {
+                              "label": "configFile",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "buildSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "configuration",
+                                  "type": "FieldRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "\u003cinit\u003e",
+                  "type": "Constructor",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Constructor",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getSession",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.Session",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "org.hibernate.HibernateException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "get",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "threadLocal",
+                              "type": "FieldRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "OR",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "NOT",
+                              "type": "UnaryOperator",
+                              "children": [
+                                {
+                                  "label": "isOpen",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "session",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "sessionFactory",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "rebuildSessionFactory();//This method basically does what the static init block does",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "",
+                                  "type": "Conditional",
+                                  "children": [
+                                    {
+                                      "label": "NE",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "sessionFactory",
+                                          "type": "FieldRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "null",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "openSession",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "sessionFactory",
+                                          "type": "FieldRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "set",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "threadLocal",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

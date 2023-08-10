@@ -1,0 +1,402 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_23.java
+Expect check=88
+Cannot find matching typeVariable for: public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+Did not find solution for node: hibernate_class_23 with type Type1
+Did not find solution for node: ThreadLocal<Session> with type Type16=Type15<Type3>
+Did not find solution for node: ThreadLocal with type Type15
+Did not find solution for node: ThreadLocal with type Type15
+Did not find solution for node: Session with type Type3
+Did not find solution for node: Session with type Type3
+Cannot find matching typeVariable for: threadLocal=new ThreadLocal<Session>()
+Did not find solution for node: threadLocal=new ThreadLocal<Session>() with type Type16=Type15<Type3>
+Did not find solution for node: threadLocal with type Type16=Type15<Type3>
+Did not find solution for node: new ThreadLocal<Session>() with type Type16=Type15<Type3>
+Did not find solution for node: ThreadLocal<Session> with type Type16=Type15<Type3>
+Did not find solution for node: ThreadLocal with type Type15
+Did not find solution for node: ThreadLocal with type Type15
+Did not find solution for node: Session with type Type3
+Did not find solution for node: Session with type Type3
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration=new AnnotationConfiguration()
+For node: configuration=new AnnotationConfiguration() expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+For node: new AnnotationConfiguration() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type25 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type25 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type25 got: org.hibernate.cfg.AnnotationConfiguration
+For node: org.hibernate.SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+For node: org.hibernate.SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+No match for actual type QualifiedName: org.hibernate and also not find solution for: Type19
+No match for actual type SimpleName: org and also not find solution for: Type20
+Cannot find matching typeVariable for: SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private static org.hibernate.SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type27 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type27 got: java.lang.String
+Cannot find matching typeVariable for: configFile=""
+For node: configFile="" expected fqn: java.lang.String with type: Type27 got: java.lang.String
+For node: configFile expected fqn: java.lang.String with type: Type27 got: java.lang.String
+For node: "" expected fqn: java.lang.String with type: Type28 got: java.lang.String
+For node: configuration.configure(configFile) expected fqn: org.hibernate.cfg.Configuration with type: Type29 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type29 got: org.hibernate.cfg.Configuration
+For node: configFile expected fqn: java.lang.String with type: Type27 got: java.lang.String
+For node: sessionFactory=configuration.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+For node: configuration.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type32 got: org.hibernate.SessionFactory
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type17 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type32 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: Exception e
+For node: Exception e expected fqn: java.lang.Exception with type: Type34 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type34 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type34 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type34 got: java.lang.Exception
+Cannot find matching typeVariable for: hibernate_class_23
+Cannot find matching typeVariable for: private hibernate_class_23(){
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+Did not find solution for node: Session with type Type3
+Did not find solution for node: Session with type Type3
+Cannot find matching typeVariable for: getSession
+Cannot find matching typeVariable for: public static Session getSession() throws HibernateException {
+  Session session=(Session)threadLocal.get();
+  if (session == null || !session.isOpen()) {
+    if (sessionFactory == null) {
+    }
+    session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+    threadLocal.set(session);
+  }
+  return session;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_23 {
+  private static final ThreadLocal<Session> threadLocal=new ThreadLocal<Session>();
+  private static Configuration configuration=new AnnotationConfiguration();
+  private static org.hibernate.SessionFactory sessionFactory;
+static {
+    try {
+      String configFile="";
+      configuration.configure(configFile);
+      sessionFactory=configuration.buildSessionFactory();
+    }
+ catch (    Exception e) {
+    }
+  }
+  private hibernate_class_23(){
+  }
+  public static Session getSession() throws HibernateException {
+    Session session=(Session)threadLocal.get();
+    if (session == null || !session.isOpen()) {
+      if (sessionFactory == null) {
+      }
+      session=(sessionFactory != null) ? sessionFactory.openSession() : null;
+      threadLocal.set(session);
+    }
+    return session;
+  }
+}
+
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type35 got: org.hibernate.HibernateException
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type35 got: org.hibernate.HibernateException
+Did not find solution for node: Session with type Type3
+Did not find solution for node: Session with type Type3
+Cannot find matching typeVariable for: session=(Session)threadLocal.get()
+Did not find solution for node: session=(Session)threadLocal.get() with type Type3
+Did not find solution for node: session with type Type3
+Did not find solution for node: (Session)threadLocal.get() with type Type3
+Did not find solution for node: Session with type Type3
+Did not find solution for node: Session with type Type3
+Did not find solution for node: threadLocal.get() with type Type36
+Did not find solution for node: threadLocal with type Type16=Type15<Type3>
+Cannot find matching typeVariable for: get
+Did not find solution for node: get with type Type36
+Did not find solution for node: session == null || !session.isOpen() with type Type41
+Did not find solution for node: session == null with type Type41
+Did not find solution for node: session with type Type3
+Did not find solution for node: null with type Type40
+Did not find solution for node: !session.isOpen() with type Type42
+Did not find solution for node: session.isOpen() with type Type42
+Did not find solution for node: session with type Type3
+Cannot find matching typeVariable for: isOpen
+Did not find solution for node: isOpen with type Type42
+Did not find solution for node: sessionFactory == null with type Type41
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+Did not find solution for node: null with type Type45
+Did not find solution for node: session=(sessionFactory != null) ? sessionFactory.openSession() : null with type Type3
+Did not find solution for node: session with type Type3
+Did not find solution for node: (sessionFactory != null) ? sessionFactory.openSession() : null with type Type50
+Did not find solution for node: (sessionFactory != null) with type Type41
+Did not find solution for node: sessionFactory != null with type Type41
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+Did not find solution for node: null with type Type46
+For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type47 got: org.hibernate.classic.Session
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type18 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: openSession
+For node: openSession expected fqn: org.hibernate.Session with type: Type47 got: org.hibernate.classic.Session
+Did not find solution for node: null with type Type49
+Did not find solution for node: threadLocal.set(session) with type Type51
+Did not find solution for node: threadLocal with type Type16=Type15<Type3>
+Cannot find matching typeVariable for: set
+Did not find solution for node: set with type Type51
+Did not find solution for node: session with type Type3
+Did not find solution for node: session with type Type3
+{Checked=84, Analyzed=36, Unsolved=48, Incorrect=2, Correct=34}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=ParenthesizedExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=1, Correct=2}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=26, Analyzed=14, Unsolved=12, Incorrect=1, Correct=13}
+org.hibernate.=SimpleType: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=84, Analyzed=36, Unsolved=48, Incorrect=2, Correct=34}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=ParenthesizedExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=1, Correct=2}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=26, Analyzed=14, Unsolved=12, Incorrect=1, Correct=13}
+org.hibernate.=SimpleType: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+boolean,InfixExpression,0,4,0,0,4
+boolean,MethodInvocation,0,1,0,0,1
+boolean,ParenthesizedExpression,0,1,0,0,1
+boolean,PrefixExpression,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+java,ClassInstanceCreation,0,1,0,0,1
+java,ParameterizedType,0,2,0,0,2
+java,SimpleName,5,10,5,0,5
+java,SimpleType,2,4,2,0,2
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,1,2,1,0,1
+null,NullLiteral,0,4,0,0,4
+org.hibernate.,Assignment,1,2,1,0,1
+org.hibernate.,CastExpression,0,1,0,0,1
+org.hibernate.,ClassInstanceCreation,1,1,1,0,0
+org.hibernate.,ConditionalExpression,0,1,0,0,1
+org.hibernate.,MethodInvocation,3,4,2,1,1
+org.hibernate.,QualifiedName,1,1,1,0,0
+org.hibernate.,SimpleName,14,26,13,1,12
+org.hibernate.,SimpleType,4,9,4,0,5
+org.hibernate.,VariableDeclarationFragment,2,3,2,0,1
+void,MethodInvocation,0,1,0,0,1
+void,SimpleName,0,1,0,0,1

@@ -1,0 +1,526 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "gwt_class_49",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "putElementLinkIDsInList",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "elt",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.dom.client.BodyElement",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "list",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.util.ArrayList",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "rewriteLinksIterative",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "links",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.ArrayList",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.util.ArrayList()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "putElementLinkIDsInList",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "gwt_class_49",
+                          "type": "TypeAccess",
+                          "children": []
+                        },
+                        {
+                          "label": "getBody",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "get",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.dom.client.Document",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "links",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "For",
+                      "children": [
+                        {
+                          "label": "i",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "LT",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "size",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "links",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "POSTINC",
+                          "type": "UnaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableWrite",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "elt",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "com.google.gwt.user.client.Element",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getElementById",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.user.client.DOM",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "get",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "links",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "i",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "rewriteLink",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "gwt_class_49",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "elt",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"www.example.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "-{\n\n\n/**\nFind all anchor tags and if any point outside the site, redirect them to a\n\"blocked\" page.",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "rewriteLink",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "element",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.Element",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sitename",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "href",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getElementProperty",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "com.google.gwt.user.client.DOM",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "element",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"href\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "EQ",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "href",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "AND",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "startsWith",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "href",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"http://\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "NOT",
+                              "type": "UnaryOperator",
+                              "children": [
+                                {
+                                  "label": "startsWith",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "href",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "\"http://\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "sitename",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\"/\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "setElementProperty",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.user.client.DOM",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "element",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"href\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "\"http://\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "sitename",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\"/Blocked.html\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "We want to re-write absolute URLs that go outside of this site",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Block all accesses out of the website that don\u0027t match \u0027sitename\u0027",
+                      "type": "JavaDoc",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "JavaDocTag",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "JavaDocTag",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

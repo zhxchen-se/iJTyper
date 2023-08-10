@@ -1,0 +1,339 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_34.java
+Expect check=83
+Cannot find matching typeVariable for: public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_34
+Cannot find matching typeVariable for: public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.Transaction;
+public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: testUserClassAndUsers
+Cannot find matching typeVariable for: public void testUserClassAndUsers(){
+  System.out.println("Testing Users and UserClasses...");
+  Session newSession=null;
+  System.out.println("1 - Creating UserClasses:");
+  Transaction t1=newSession.beginTransaction();
+  t1.commit();
+  System.out.println("2 - Creating Users:");
+  Transaction t2=newSession.beginTransaction();
+  t2.commit();
+  System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+  Transaction t3=newSession.beginTransaction();
+  t3.commit();
+  newSession.close();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.Transaction;
+public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+For node: System.out.println("Testing Users and UserClasses...") expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type6 got: void
+Did not find solution for node: System with type Type4
+For node: out expected fqn: java.io.PrintStream with type: Type5 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type6 got: void
+For node: "Testing Users and UserClasses..." expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: newSession=null
+For node: newSession=null expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: newSession expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: null expected fqn: null with type: Type10 got: org.hibernate.Session
+For node: System.out.println("1 - Creating UserClasses:") expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type8 got: void
+Did not find solution for node: System with type Type4
+For node: out expected fqn: java.io.PrintStream with type: Type5 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type8 got: void
+For node: "1 - Creating UserClasses:" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: t1=newSession.beginTransaction()
+For node: t1=newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: t1 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type12 got: org.hibernate.Transaction
+For node: newSession expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: beginTransaction
+For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type12 got: org.hibernate.Transaction
+For node: t1.commit() expected fqn: void with type: Type14 got: void
+For node: t1 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type14 got: void
+For node: System.out.println("2 - Creating Users:") expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type8 got: void
+Did not find solution for node: System with type Type4
+For node: out expected fqn: java.io.PrintStream with type: Type5 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type8 got: void
+For node: "2 - Creating Users:" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: t2=newSession.beginTransaction()
+For node: t2=newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: t2 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type13 got: org.hibernate.Transaction
+For node: newSession expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: beginTransaction
+For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type13 got: org.hibernate.Transaction
+For node: t2.commit() expected fqn: void with type: Type15 got: void
+For node: t2 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type15 got: void
+For node: System.out.println("3 - Deleting UserClass (\"UserClass 1\"):") expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type8 got: void
+Did not find solution for node: System with type Type4
+For node: out expected fqn: java.io.PrintStream with type: Type5 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type8 got: void
+For node: "3 - Deleting UserClass (\"UserClass 1\"):" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: t3=newSession.beginTransaction()
+For node: t3=newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: t3 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+For node: newSession.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type13 got: org.hibernate.Transaction
+For node: newSession expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: beginTransaction
+For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type13 got: org.hibernate.Transaction
+For node: t3.commit() expected fqn: void with type: Type15 got: void
+For node: t3 expected fqn: org.hibernate.Transaction with type: Type11 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type15 got: void
+For node: newSession.close() expected fqn: void with type: Type16 got: java.sql.Connection
+For node: newSession expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: close
+For node: close expected fqn: void with type: Type16 got: java.sql.Connection
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  hibernate_class_34 instance=new hibernate_class_34();
+  instance.testUserClassAndUsers();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.Transaction;
+public class hibernate_class_34 {
+  public void testUserClassAndUsers(){
+    System.out.println("Testing Users and UserClasses...");
+    Session newSession=null;
+    System.out.println("1 - Creating UserClasses:");
+    Transaction t1=newSession.beginTransaction();
+    t1.commit();
+    System.out.println("2 - Creating Users:");
+    Transaction t2=newSession.beginTransaction();
+    t2.commit();
+    System.out.println("3 - Deleting UserClass (\"UserClass 1\"):");
+    Transaction t3=newSession.beginTransaction();
+    t3.commit();
+    newSession.close();
+  }
+  public static void main(  String[] args){
+    hibernate_class_34 instance=new hibernate_class_34();
+    instance.testUserClassAndUsers();
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+Did not find solution for node: hibernate_class_34 with type Type1
+Did not find solution for node: hibernate_class_34 with type Type1
+Cannot find matching typeVariable for: instance=new hibernate_class_34()
+Did not find solution for node: instance=new hibernate_class_34() with type Type1
+Did not find solution for node: instance with type Type1
+Did not find solution for node: new hibernate_class_34() with type Type1
+Did not find solution for node: hibernate_class_34 with type Type1
+Did not find solution for node: hibernate_class_34 with type Type1
+Did not find solution for node: instance.testUserClassAndUsers() with type Type20
+Did not find solution for node: instance with type Type1
+Cannot find matching typeVariable for: testUserClassAndUsers
+Did not find solution for node: testUserClassAndUsers with type Type20
+{Checked=79, Analyzed=65, Unsolved=14, Incorrect=7, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=1, Correct=7}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=1, Correct=7}
+Total stats
+{Checked=79, Analyzed=65, Unsolved=14, Incorrect=7, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=1, Correct=7}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=1, Correct=7}
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,4,0,0,4
+,SimpleType,0,2,0,0,2
+,VariableDeclarationFragment,0,1,0,0,1
+java,ArrayType,1,1,1,0,0
+java,QualifiedName,4,4,0,4,0
+java,SimpleName,6,10,6,0,4
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,4,4,4,0,0
+null,NullLiteral,1,1,0,1,0
+org.hibernate.,MethodInvocation,3,3,3,0,0
+org.hibernate.,SimpleName,18,18,18,0,0
+org.hibernate.,SimpleType,4,4,4,0,0
+org.hibernate.,VariableDeclarationFragment,4,4,4,0,0
+void,MethodInvocation,8,9,7,1,1
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,8,9,7,1,1

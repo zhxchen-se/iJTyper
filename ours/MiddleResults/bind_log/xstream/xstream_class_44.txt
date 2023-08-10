@@ -1,0 +1,1552 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_44.java
+Expect check=132
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Did not find solution for node: xstream_class_44 with type Type2
+Did not find solution for node: int with type Type5
+Cannot find matching typeVariable for: COUNT=0
+Did not find solution for node: COUNT=0 with type Type5
+Did not find solution for node: COUNT with type Type5
+For node: 0 expected fqn: int with type: Type6 got: byte
+Did not find solution for node: int with type Type5
+Cannot find matching typeVariable for: MAX_DEPTH=800
+Did not find solution for node: MAX_DEPTH=800 with type Type5
+Did not find solution for node: MAX_DEPTH with type Type5
+For node: 800 expected fqn: int with type: Type7 got: short
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+public static void main(String[] args){
+  try {
+    TestObject object=getNewTestObject();
+    File persistFile=new File("C:\\ABC.xml");
+    FileOutputStream outStream=new FileOutputStream(persistFile);
+    XStream x=new XStream();
+    x.alias("testObject",TestObject.class);
+    x.toXML(object,outStream);
+    outStream.close();
+  }
+ catch (  Throwable e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type8 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type8 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type8 got: java.lang.String[]
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Cannot find matching typeVariable for: object=getNewTestObject()
+Did not find solution for node: object=getNewTestObject() with type Type1
+Did not find solution for node: object with type Type1
+Did not find solution for node: getNewTestObject() with type Type1
+Cannot find matching typeVariable for: getNewTestObject
+Did not find solution for node: getNewTestObject with type Type1
+For node: File expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type9 got: java.io.File
+Cannot find matching typeVariable for: persistFile=new File("C:\\ABC.xml")
+For node: persistFile=new File("C:\\ABC.xml") expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: persistFile expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: new File("C:\\ABC.xml") expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: "C:\\ABC.xml" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: FileOutputStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: FileOutputStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+Cannot find matching typeVariable for: outStream=new FileOutputStream(persistFile)
+For node: outStream=new FileOutputStream(persistFile) expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: outStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: new FileOutputStream(persistFile) expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: FileOutputStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: FileOutputStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: persistFile expected fqn: java.io.File with type: Type9 got: java.io.File
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: x=new XStream()
+For node: x=new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+For node: x.alias("testObject",TestObject.class) expected fqn: void with type: Type19 got: void
+For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type19 got: void
+For node: "testObject" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: TestObject.class expected fqn: java.lang.Class<xstream_class_44.TestObject> with type: Type18 got: java.lang.Class
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+For node: x.toXML(object,outStream) expected fqn: void with type: Type23 got: void
+For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type16 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: toXML
+For node: toXML expected fqn: void with type: Type23 got: void
+Did not find solution for node: object with type Type1
+For node: outStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+For node: outStream.close() expected fqn: void with type: Type27 got: void
+For node: outStream expected fqn: java.io.FileOutputStream with type: Type13 got: java.io.FileOutputStream
+Cannot find matching typeVariable for: close
+For node: close expected fqn: void with type: Type27 got: void
+Cannot find matching typeVariable for: Throwable e
+For node: Throwable e expected fqn: java.lang.Throwable with type: Type29 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type29 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type29 got: java.lang.Throwable
+For node: e expected fqn: java.lang.Throwable with type: Type29 got: java.lang.Throwable
+For node: e.printStackTrace() expected fqn: void with type: Type30 got: void
+For node: e expected fqn: java.lang.Throwable with type: Type29 got: java.lang.Throwable
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type30 got: void
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Cannot find matching typeVariable for: getNewTestObject
+Cannot find matching typeVariable for: public static TestObject getNewTestObject(){
+  TestObject orderRecord=null;
+  orderRecord.setName("OBJECT_" + COUNT);
+  while (COUNT++ < MAX_DEPTH) {
+    orderRecord.setParentObject(getNewTestObject());
+  }
+  return orderRecord;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Cannot find matching typeVariable for: orderRecord=null
+Did not find solution for node: orderRecord=null with type Type1
+Did not find solution for node: orderRecord with type Type1
+Did not find solution for node: null with type Type32
+Did not find solution for node: orderRecord.setName("OBJECT_" + COUNT) with type Type33
+Did not find solution for node: orderRecord with type Type1
+Cannot find matching typeVariable for: setName
+Did not find solution for node: setName with type Type33
+For node: "OBJECT_" + COUNT expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: "OBJECT_" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: COUNT with type Type5
+For node: COUNT++ < MAX_DEPTH expected fqn: boolean with type: Type37 got: boolean
+Did not find solution for node: COUNT++ with type Type5
+Did not find solution for node: COUNT with type Type5
+Did not find solution for node: MAX_DEPTH with type Type5
+Did not find solution for node: orderRecord.setParentObject(getNewTestObject()) with type Type38
+Did not find solution for node: orderRecord with type Type1
+Cannot find matching typeVariable for: setParentObject
+Did not find solution for node: setParentObject with type Type38
+Did not find solution for node: getNewTestObject() with type Type1
+Cannot find matching typeVariable for: getNewTestObject
+Did not find solution for node: getNewTestObject with type Type1
+Did not find solution for node: orderRecord with type Type1
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Cannot find matching typeVariable for: parentObject
+Did not find solution for node: parentObject with type Type1
+Cannot find matching typeVariable for: parentObject
+Cannot find matching typeVariable for: private TestObject parentObject;
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: name
+For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: private String name;
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Cannot find matching typeVariable for: getParentObject
+Cannot find matching typeVariable for: /** 
+ * @return the parentObject 
+ */
+public TestObject getParentObject(){
+  return parentObject;
+}
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Did not find solution for node: parentObject with type Type1
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: setParentObject
+Cannot find matching typeVariable for: /** 
+ * @param parentObject the parentObject to set 
+ */
+public void setParentObject(TestObject parentObject){
+  this.parentObject=parentObject;
+}
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: TestObject parentObject
+Did not find solution for node: TestObject parentObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: TestObject with type Type1
+Did not find solution for node: parentObject with type Type1
+Did not find solution for node: this.parentObject=parentObject with type Type1
+Did not find solution for node: this.parentObject with type Type1
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: parentObject
+Did not find solution for node: parentObject with type Type1
+Cannot find matching typeVariable for: parentObject
+Did not find solution for node: parentObject with type Type1
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: getName
+Cannot find matching typeVariable for: /** 
+ * @return the name 
+ */
+public String getName(){
+  return name;
+}
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: setName
+Cannot find matching typeVariable for: /** 
+ * @param name the name to set 
+ */
+public void setName(String name){
+  this.name=name;
+}
+
+Cannot find matching typeVariable for: public class TestObject {
+  private TestObject parentObject;
+  private String name;
+  /** 
+ * @return the parentObject 
+ */
+  public TestObject getParentObject(){
+    return parentObject;
+  }
+  /** 
+ * @param parentObject the parentObject to set 
+ */
+  public void setParentObject(  TestObject parentObject){
+    this.parentObject=parentObject;
+  }
+  /** 
+ * @return the name 
+ */
+  public String getName(){
+    return name;
+  }
+  /** 
+ * @param name the name to set 
+ */
+  public void setName(  String name){
+    this.name=name;
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.File;
+import java.io.FileOutputStream;
+import com.thoughtworks.xstream.XStream;
+public class xstream_class_44 {
+  public static int COUNT=0;
+  public static int MAX_DEPTH=800;
+  /** 
+ * @param args 
+ * @throws FileNotFoundException 
+ */
+  public static void main(  String[] args){
+    try {
+      TestObject object=getNewTestObject();
+      File persistFile=new File("C:\\ABC.xml");
+      FileOutputStream outStream=new FileOutputStream(persistFile);
+      XStream x=new XStream();
+      x.alias("testObject",TestObject.class);
+      x.toXML(object,outStream);
+      outStream.close();
+    }
+ catch (    Throwable e) {
+      e.printStackTrace();
+    }
+  }
+  public static TestObject getNewTestObject(){
+    TestObject orderRecord=null;
+    orderRecord.setName("OBJECT_" + COUNT);
+    while (COUNT++ < MAX_DEPTH) {
+      orderRecord.setParentObject(getNewTestObject());
+    }
+    return orderRecord;
+  }
+public class TestObject {
+    private TestObject parentObject;
+    private String name;
+    /** 
+ * @return the parentObject 
+ */
+    public TestObject getParentObject(){
+      return parentObject;
+    }
+    /** 
+ * @param parentObject the parentObject to set 
+ */
+    public void setParentObject(    TestObject parentObject){
+      this.parentObject=parentObject;
+    }
+    /** 
+ * @return the name 
+ */
+    public String getName(){
+      return name;
+    }
+    /** 
+ * @param name the name to set 
+ */
+    public void setName(    String name){
+      this.name=name;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String name
+For node: String name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: this.name=name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: this.name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: name
+For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: name
+For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+{Checked=122, Analyzed=69, Unsolved=53, Incorrect=3, Correct=66}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleName: {Checked=21, Analyzed=0, Unsolved=21, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=PostfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
+java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+Total stats
+{Checked=122, Analyzed=69, Unsolved=53, Incorrect=3, Correct=66}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleName: {Checked=21, Analyzed=0, Unsolved=21, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=PostfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
+java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+,Assignment,0,1,0,0,1
+,FieldAccess,0,1,0,0,1
+,MethodInvocation,0,2,0,0,2
+,SimpleName,0,21,0,0,21
+,SimpleType,0,7,0,0,7
+,SingleVariableDeclaration,0,1,0,0,1
+,ThisExpression,0,2,0,0,2
+,VariableDeclarationFragment,0,3,0,0,3
+boolean,InfixExpression,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,5,5,5,0,0
+com.thoughtworks.xstream.,SimpleType,2,2,2,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+int,NumberLiteral,2,2,0,2,0
+int,PostfixExpression,0,1,0,0,1
+int,PrimitiveType,0,2,0,0,2
+int,SimpleName,0,5,0,0,5
+int,VariableDeclarationFragment,0,2,0,0,2
+java,ArrayType,1,1,1,0,0
+java,Assignment,1,1,1,0,0
+java,ClassInstanceCreation,2,2,2,0,0
+java,FieldAccess,1,1,1,0,0
+java,InfixExpression,1,1,1,0,0
+java,SimpleName,21,21,21,0,0
+java,SimpleType,9,9,9,0,0
+java,SingleVariableDeclaration,3,3,3,0,0
+java,StringLiteral,3,3,3,0,0
+java,TypeLiteral,1,1,0,1,0
+java,VariableDeclarationFragment,3,3,3,0,0
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,4,6,4,0,2
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,4,6,4,0,2

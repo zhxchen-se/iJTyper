@@ -1,0 +1,285 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android25",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "android.app.ListActivity",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "MY_DATABASE_NAME",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"myCoolUserDB.db\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "Called when the activity is first created.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "MY_DATABASE_TABLE",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"t_Users\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "c",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "android.content.Context",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "onCreate",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "savedInstanceState",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.os.Bundle",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "onCreate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "super",
+                              "type": "SuperAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "savedInstanceState",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "results",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.ArrayList",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.util.ArrayList()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setContentView",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "androidExamples.Android25",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "R.layout.main",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "mydb",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.database.sqlite.SQLiteDatabase",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "openOrCreateDatabase",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "mydb",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "MY_DATABASE_NAME",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "androidExamples.Android25",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.Exception",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,313 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_7",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "HibernateUtils",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_7$HibernateUtils",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "buildSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "configure",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.cfg.AnnotationConfiguration()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "sessionFactory",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.hibernate.SessionFactory",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_7$HibernateUtils",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "sessionFactory",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestSession",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_7$HibernateUtils",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_7$HibernateUtils",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if (session !\u003d null || session.isOpen()) {",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "return session;",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "} else {",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_7$HibernateUtils",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "}",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "this is the function that return a session.So i\u0027m free to implements any type of session in here.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

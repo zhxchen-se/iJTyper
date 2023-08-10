@@ -1,0 +1,309 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android33",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "init",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "context",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.content.Context",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "mRecording",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "boolean",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "false",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "frameCount",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "mCamera",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.hardware.Camera",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "mCamera",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "mCamera",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "open",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "android.hardware.Camera",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "parameters",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.hardware.Camera.Parameters",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getParameters",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "mCamera",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setPictureFormat",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "parameters",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "PixelFormat.JPEG",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setParameters",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mCamera",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "parameters",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "surfaceHolder",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "android.view.SurfaceHolder",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "setPreviewDisplay",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "mCamera",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "surfaceHolder",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "startPreview",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mCamera",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

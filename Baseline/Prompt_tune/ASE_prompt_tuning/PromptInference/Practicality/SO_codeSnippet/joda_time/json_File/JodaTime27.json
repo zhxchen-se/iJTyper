@@ -1,0 +1,292 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime27",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "monthStarts",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.ArrayList",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.DateTime",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.util.ArrayList()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "firstYear",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "lastYear",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "For",
+                          "children": [
+                            {
+                              "label": "y",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "int",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "firstYear",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "LE",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "y",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "lastYear",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "POSTINC",
+                              "type": "UnaryOperator",
+                              "children": [
+                                {
+                                  "label": "y",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "For",
+                              "children": [
+                                {
+                                  "label": "m",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "int",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "1",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "LE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "m",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "12",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "POSTINC",
+                                  "type": "UnaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "m",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "add",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "monthStarts",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "org.joda.time.DateTime(java.lang.Object)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "y",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "\"-\"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "m",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\"-01\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

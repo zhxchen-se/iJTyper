@@ -1,0 +1,878 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_24.java
+Expect check=122
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_24
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Did not find solution for node: HibernateInvocationHandler with type Type1
+For node: InvocationHandler expected fqn: java.lang.reflect.InvocationHandler with type: Type2 got: java.lang.reflect.InvocationHandler
+For node: InvocationHandler expected fqn: java.lang.reflect.InvocationHandler with type: Type2 got: java.lang.reflect.InvocationHandler
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: config
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: config
+Cannot find matching typeVariable for: final private Configuration config;
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: realSessionFactory
+For node: realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: realSessionFactory
+Cannot find matching typeVariable for: private SessionFactory realSessionFactory;
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: HibernateInvocationHandler
+Cannot find matching typeVariable for: public HibernateInvocationHandler(Configuration config){
+  this.config=config;
+}
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Configuration config
+For node: Configuration config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: this.config=config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+For node: this.config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: config
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: config
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+Cannot find matching typeVariable for: invoke1
+Cannot find matching typeVariable for: public Object invoke1(Object proxy,Method method,Object[] args) throws Throwable {
+  if (false)   proxy.hashCode();
+  System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+    if (this.realSessionFactory == null) {
+      SessionFactory sf=null;
+      try {
+        System.out.println("Gonna BUILD one or die trying");
+        sf=this.config.buildSessionFactory();
+      }
+ catch (      RuntimeException e) {
+        System.out.println("FAILED to build");
+        sf=null;
+      }
+      this.realSessionFactory=sf;
+    }
+    return method.invoke(this.realSessionFactory,args);
+  }
+}
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Object proxy
+Did not find solution for node: Object proxy with type Type5
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+Did not find solution for node: proxy with type Type5
+Cannot find matching typeVariable for: Method method
+For node: Method method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: Method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: Method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+Cannot find matching typeVariable for: Object[] args
+For node: Object[] args expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+For node: Object[] expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+For node: args expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+For node: Throwable expected fqn: java.lang.Throwable with type: Type22 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type22 got: java.lang.Throwable
+For node: false expected fqn: boolean with type: Type23 got: boolean
+Did not find solution for node: proxy.hashCode() with type Type24
+Did not find solution for node: proxy with type Type5
+Cannot find matching typeVariable for: hashCode
+Did not find solution for node: hashCode with type Type24
+For node: System.out.println("Proxy for SessionFactory called") expected fqn: void with type: Type29 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type29 got: void
+Did not find solution for node: System with type Type27
+For node: out expected fqn: java.io.PrintStream with type: Type28 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type29 got: void
+For node: "Proxy for SessionFactory called" expected fqn: java.lang.String with type: Type26 got: java.lang.String
+Did not find solution for node: this with type Type1
+For node: this.realSessionFactory == null expected fqn: boolean with type: Type23 got: boolean
+For node: this.realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: realSessionFactory
+For node: realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Did not find solution for node: null with type Type32
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sf=null
+For node: sf=null expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: sf expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: null expected fqn: null with type: Type33 got: org.hibernate.SessionFactory
+For node: System.out.println("Gonna BUILD one or die trying") expected fqn: void with type: Type31 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type31 got: void
+Did not find solution for node: System with type Type27
+For node: out expected fqn: java.io.PrintStream with type: Type28 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type31 got: void
+For node: "Gonna BUILD one or die trying" expected fqn: java.lang.String with type: Type26 got: java.lang.String
+For node: sf=this.config.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: sf expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: this.config.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type34 got: org.hibernate.SessionFactory
+For node: this.config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: config
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type18 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type34 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: RuntimeException e
+For node: RuntimeException e expected fqn: java.lang.RuntimeException with type: Type36 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type36 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type36 got: java.lang.RuntimeException
+For node: e expected fqn: java.lang.RuntimeException with type: Type36 got: java.lang.RuntimeException
+For node: System.out.println("FAILED to build") expected fqn: void with type: Type31 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type31 got: void
+Did not find solution for node: System with type Type27
+For node: out expected fqn: java.io.PrintStream with type: Type28 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type31 got: void
+For node: "FAILED to build" expected fqn: java.lang.String with type: Type26 got: java.lang.String
+For node: sf=null expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: sf expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: null expected fqn: null with type: Type37 got: org.hibernate.SessionFactory
+For node: this.realSessionFactory=sf expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: this.realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: realSessionFactory
+For node: realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: sf expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: method.invoke(this.realSessionFactory,args) expected fqn: java.lang.Object with type: Type38 got: java.lang.Object
+For node: method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+Cannot find matching typeVariable for: invoke
+For node: invoke expected fqn: java.lang.Object with type: Type38 got: java.lang.Object
+For node: this.realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: realSessionFactory
+For node: realSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type19 got: org.hibernate.SessionFactory
+For node: args expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+For node: @Override expected fqn: java.lang.Override with type: Type42 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type42 got: java.lang.Override
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+Cannot find matching typeVariable for: invoke
+Cannot find matching typeVariable for: @Override public Object invoke(Object proxy,Method method,Object[] args) throws Throwable {
+  return null;
+}
+
+Cannot find matching typeVariable for: public static class HibernateInvocationHandler implements InvocationHandler {
+  final private Configuration config;
+  private SessionFactory realSessionFactory;
+  public HibernateInvocationHandler(  Configuration config){
+    this.config=config;
+  }
+  public Object invoke1(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    if (false)     proxy.hashCode();
+    System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+      if (this.realSessionFactory == null) {
+        SessionFactory sf=null;
+        try {
+          System.out.println("Gonna BUILD one or die trying");
+          sf=this.config.buildSessionFactory();
+        }
+ catch (        RuntimeException e) {
+          System.out.println("FAILED to build");
+          sf=null;
+        }
+        this.realSessionFactory=sf;
+      }
+      return method.invoke(this.realSessionFactory,args);
+    }
+  }
+  @Override public Object invoke(  Object proxy,  Method method,  Object[] args) throws Throwable {
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_24 {
+public static class HibernateInvocationHandler implements InvocationHandler {
+    final private Configuration config;
+    private SessionFactory realSessionFactory;
+    public HibernateInvocationHandler(    Configuration config){
+      this.config=config;
+    }
+    public Object invoke1(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      if (false)       proxy.hashCode();
+      System.out.println("Proxy for SessionFactory called");
+synchronized (this) {
+        if (this.realSessionFactory == null) {
+          SessionFactory sf=null;
+          try {
+            System.out.println("Gonna BUILD one or die trying");
+            sf=this.config.buildSessionFactory();
+          }
+ catch (          RuntimeException e) {
+            System.out.println("FAILED to build");
+            sf=null;
+          }
+          this.realSessionFactory=sf;
+        }
+        return method.invoke(this.realSessionFactory,args);
+      }
+    }
+    @Override public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      return null;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Object proxy
+Did not find solution for node: Object proxy with type Type5
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+Did not find solution for node: proxy with type Type5
+Cannot find matching typeVariable for: Method method
+For node: Method method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: Method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: Method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+For node: method expected fqn: java.lang.reflect.Method with type: Type20 got: java.lang.reflect.Method
+Cannot find matching typeVariable for: Object[] args
+For node: Object[] args expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+For node: Object[] expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+Did not find solution for node: Object with type Type5
+Did not find solution for node: Object with type Type5
+For node: args expected fqn: java.lang.Object[] with type: Type21 got: java.lang.Object
+For node: Throwable expected fqn: java.lang.Throwable with type: Type22 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type22 got: java.lang.Throwable
+Did not find solution for node: null with type Type43
+{Checked=114, Analyzed=83, Unsolved=31, Incorrect=15, Correct=68}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=30, Analyzed=18, Unsolved=12, Incorrect=6, Correct=12}
+java=SimpleType: {Checked=12, Analyzed=6, Unsolved=6, Incorrect=0, Correct=6}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=2, Correct=3}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=2, Correct=0}
+org.hibernate.=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=114, Analyzed=83, Unsolved=31, Incorrect=15, Correct=68}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=30, Analyzed=18, Unsolved=12, Incorrect=6, Correct=12}
+java=SimpleType: {Checked=12, Analyzed=6, Unsolved=6, Incorrect=0, Correct=6}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=2, Correct=3}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=2, Correct=0}
+org.hibernate.=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,6,0,0,6
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,InfixExpression,1,1,1,0,0
+int,MethodInvocation,0,1,0,0,1
+int,SimpleName,0,1,0,0,1
+java,ArrayType,2,2,0,2,0
+java,MarkerAnnotation,1,1,1,0,0
+java,MethodInvocation,1,1,1,0,0
+java,QualifiedName,3,3,0,3,0
+java,SimpleName,18,30,12,6,12
+java,SimpleType,6,12,6,0,6
+java,SingleVariableDeclaration,5,7,3,2,2
+java,StringLiteral,3,3,3,0,0
+null,NullLiteral,2,4,0,2,2
+org.hibernate.,Assignment,4,4,4,0,0
+org.hibernate.,FieldAccess,5,5,5,0,0
+org.hibernate.,MethodInvocation,1,1,1,0,0
+org.hibernate.,SimpleName,16,16,16,0,0
+org.hibernate.,SimpleType,4,4,4,0,0
+org.hibernate.,SingleVariableDeclaration,1,1,1,0,0
+org.hibernate.,VariableDeclarationFragment,3,3,3,0,0
+void,MethodInvocation,3,3,3,0,0
+void,SimpleName,3,3,3,0,0

@@ -1,0 +1,381 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime22",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "TODO Auto-generated method stub",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getDateFromDateTime",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.text.ParseException",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "date",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "display",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Boolean",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dtFormatter",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.format.DateTimeFormatter",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "SimpleDateFormat working as designed, but pf_ordersController.selected.returnDateTime displaying incorrect date/time\n\nsee below from /orders/pf_View.xhtml\npf_ordersController.selected.returnDateTime (displayed on JSF page) \u003d 11/13/2011 02:00 AM\n\nORDER #  0739  Trip Date 11/11/2011 to 11/12/2011  Customer # 1004\n\nTrip Date/Time: 11/11/2011 05:00 PM  Report Date/Time: 11/11/2011 04:45 PM   Return Date/Time: 11/13/2011 02:00 AM\n\norders.returnDateTime (stored in database) \u003d 11/12/2011 21:00:00 (9:00 PM)\nSimpleDateFormat converts orders.returnDateTime to 11/12/2011 (working as designed)\n\nhttp://stackoverflow.com/questions/2356672/date-parsing-formating-with-timezone-and-simpledateformat-problem-around-dst-swi\n\nDateFormat formatter;\nString myDate;\n\nif (display)\nformatter \u003d new SimpleDateFormat(\"MM/dd/yyyy\");\nelse\nformatter \u003d new SimpleDateFormat(\"yyyy-MM-dd\");\n\nmyDate \u003d formatter.format(date);",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "display",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "dtFormatter",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "forPattern",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "org.joda.time.format.DateTimeFormat",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "\"MM/dd/yyyy\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "dtFormatter",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "forPattern",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "org.joda.time.format.DateTimeFormat",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "\"yyyy-MM-dd\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dt",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.DateTime(java.lang.Object)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "date",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "myDate",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "toString",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "dt",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "dtFormatter",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "\"OrderDisplayUtil.java:getDateFromDateTime(\"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "date",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "\", \"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "display",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\"): \"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\"myDate \u003d \"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "myDate",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "myDate",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

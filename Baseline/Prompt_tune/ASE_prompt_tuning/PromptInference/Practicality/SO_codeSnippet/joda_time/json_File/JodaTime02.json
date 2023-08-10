@@ -1,0 +1,266 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime02",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "today",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateMidnight",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.DateMidnight(int,int,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "2009",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "2",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "24",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "zone",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTimeZone",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getZone",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "today",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "previousTransition",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.DateTime(long)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "previousTransition",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "zone",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getMillis",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "today",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "previousTransition",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "2008-10-26T02:59:59.999+02:00 for Europe/Berlin",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "nextTransition",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.DateTime(long)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "nextTransition",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "zone",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getMillis",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "today",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "nextTransition",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "2009-03-29T03:00:00.000+02:00 for Europe/Berlin",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

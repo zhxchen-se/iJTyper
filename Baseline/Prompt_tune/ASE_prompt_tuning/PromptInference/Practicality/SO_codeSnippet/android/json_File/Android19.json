@@ -1,0 +1,334 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android19",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getView",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "android.view.View",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "position",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "convertView",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.view.View",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "parent",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.view.ViewGroup",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "imageView",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.widget.ImageView",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "convertView",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "mContext",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "android.content.Context",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "imageView",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "java.lang.Object()",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "mContext",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if it\u0027s not recycled, initialize some attributes",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setLayoutParams",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "imageView",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "android.widget.GridView$LayoutParams(int,int)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "85",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "85",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setScaleType",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "imageView",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "ImageView.ScaleType.CENTER_CROP",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setPadding",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "imageView",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "8",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "8",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "8",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "8",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "does this need imageView.onKeyDown(keyCode, event)?",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "imageView",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "convertView",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "mThumbIds",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setImageResource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "imageView",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "ArrayRead",
+                              "children": [
+                                {
+                                  "label": "mThumbIds",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "position",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "imageView",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

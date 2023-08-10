@@ -1,0 +1,198 @@
+Since you have this document, we assume you already downloaded the artifact tar with this,
+README.md, docker_scripts, src, etc.
+
+## Install and run using Docker (recommended)
+
+Running SnR using the Docker image should take around 10 minuets. 
+
+### Cloning and running the image. 
+
+1. Run Bash command `docker pull yiwendong98/snr` to download the image.
+2. Start docker by running `docker_scripts/start_docker.bash`.
+
+By this point, you should be in a Bash prompt inside the docker container.
+
+### Running SnR
+
+1. Go into the directory containing SnR by running `cd /snr-server`
+2. Run the benchmark `make benchmark`
+
+To ease the artifact evaluation process, we removed most of the code snippets
+in the `src/test/resources/snippets/so` folder. 
+Otherwise, it would take multiple hours to run all the code snippets.
+
+If the execution was successful, the console should print out a number of state 
+information and produce a summary of the results similar to the following ones.
+
+```
+# of compilable: 1/1 (100.0%)
+Correct Imports: 4/4 (100.0%)
+javac -cp "/snr-server/benchmark/../src/test/resources/jars/so/*" sample_so_18274902.java
+
+IgErrors: 0
+ReErrors: 0
+Success compile: True
+No golden stat for sample_so_18274902.java
+```
+A summary of the compilable code snippets and correct imports are printed.
+The evaluation script also tries to compile the output and it should succeed.
+There is no golden library files for `sample_so_18274902.java` so the last line correctly
+prints out that error.
+
+### Reading the benchmark results
+
+There are no text editors installed by default in the docker image.
+Either install your favorite editor using `apt-get install` or use `less` to 
+read the contents of a file.
+
+The main results are stored in 3 different folders.
+
+- `snippet_log` contain the stdout and stderr from running the benchmark.
+  - Read stdout and stderr to debug any potential issues. 
+  Does not contain any data.
+- `fixed` contain the fixed snippet and the compiled class file.
+  - Read the fixed snippets to see if the repair was correct. 
+  - If there's no compiled `.class` file, then it failed to compile.
+- `StatType-Completion-output-json` contain the type statistics outputted 
+  by SnR in Json format.
+  - Each code snippet generates 2 files during execution
+    - Files ending with `.java.json` are the output from SnR where the 
+    execution results are outputed.
+      - `status` indicates if the fix finished successfully.
+      - `problems` lists the problems that remain from compilation.
+      - `originalContent` shows the string that was given to SnR to fix.
+      - `updatedContent` shows the SnR fixed results.
+      - `usedLibraries` lists all the libraries SnR recommend to compile the
+      code snippet.
+    - Files ending with `.java.json.benchmark_log.json` are the output from
+    the benchmarking Python script containing some metadata regarding the
+    execution.
+      - `java_file` shows the path to the original code snippet file.
+      - `output_file` shows the path to SnR's execution output.
+      - `exit_code` shows the exit code from SnR process.
+      - `stdout` shows the path to the standard out log.
+      - `stderr` shows the path to the standard error log.
+      - `run_time` shows the total time in nano seconds it took for SnR to execute.
+      - `total_imports` shows the expected imports extracted from `java_file`.
+      - `correct_imports` shows the correct imports SnR recommended.
+
+### Expected files and content
+
+This is the tree of the 3 folders.
+```
+./benchmark/fixed
+├── sample_so_18274902.class
+└── sample_so_18274902.java
+./benchmark/StatType-Completion-output-json
+├── sample_so_18274902.java.json
+└── sample_so_18274902.java.json.benchmark_log.json
+./benchmark/snippet_log
+├── sample_so_18274902.java.stderr.df29e6f18e034923940a1b51b89c27ea.txt
+└── sample_so_18274902.java.stdout.df29e6f18e034923940a1b51b89c27ea.txt
+
+0 directories, 6 files
+```
+
+Contents of `benchmark/fixed/sample_so_18274902.java`
+```
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.DateTime;
+
+public class sample_so_18274902 {
+        public static void main(String[] args) {
+
+                DateTimeFormatter format = DateTimeFormat.mediumDateTime();
+
+                DateTime local = new DateTime();
+                DateTime utc = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);
+                System.out.println("utc zone = " + utc.getZone());
+                System.out.println("UTC time: " + utc);
+                long current = utc.getMillis();
+
+                System.out.println("current: " + format.print(current));
+                System.out.println("local: " + format.print(local.getMillis()));
+
+        }
+}
+```
+
+Contents of `benchmark/StatType-Completion-output-json/sample_so_18274902.java.json`
+```
+{"status":0,"problems":[],"originalContent":"public class sample_so_18274902 {\n\tpublic static void main(String[] args) {\n\n\t\tDateTimeFormatter format = DateTimeFormat.mediumDateTime();\n\n\t\tDateTime local = new DateTime();\n\t\tDateTime utc = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);\n\t\tSystem.out.println(\"utc zone = \" + utc.getZone());\n\t\tSystem.out.println(\"UTC time: \" + utc);\n\t\tlong current = utc.getMillis();\n\n\t\tSystem.out.println(\"current: \" + format.print(current));\n\t\tSystem.out.println(\"local: \" + format.print(local.getMillis()));\n\n\t}\n}","updatedContent":"\nimport org.joda.time.DateTimeZone;\nimport org.joda.time.format.DateTimeFormat;\nimport org.joda.time.format.DateTimeFormatter;\nimport org.joda.time.DateTime;\n\npublic class sample_so_18274902 {\n\tpublic static void main(String[] args) {\n\n\t\tDateTimeFormatter format = DateTimeFormat.mediumDateTime();\n\n\t\tDateTime local = new DateTime();\n\t\tDateTime utc = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);\n\t\tSystem.out.println(\"utc zone = \" + utc.getZone());\n\t\tSystem.out.println(\"UTC time: \" + utc);\n\t\tlong current = utc.getMillis();\n\n\t\tSystem.out.println(\"current: \" + format.print(current));\n\t\tSystem.out.println(\"local: \" + format.print(local.getMillis()));\n\n\t}\n}","usedLibraries":["jar:joda-time-2.0.jar:1"]}
+```
+
+Contents of `benchmark/StatType-Completion-output-json/sample_so_18274902.java.json.benchmark_log.json`
+```
+{
+  "java_file": "/snr-server/src/test/resources/snippets/so/sample_so_18274902.java",
+  "output_file": "StatType-Completion-output-json/sample_so_18274902.java.json",
+  "exit_code": 0,
+  "stdout": "/snr-server/benchmark/snippet_log/sample_so_18274902.java.stdout.df29e6f18e034923940a1b51b89c27ea.txt",
+  "stderr": "/snr-server/benchmark/snippet_log/sample_so_18274902.java.stderr.df29e6f18e034923940a1b51b89c27ea.txt",
+  "run_time": 1581919327,
+  "total_imports": [
+    "org.joda.time.DateTimeZone",
+    "org.joda.time.format.DateTimeFormat",
+    "org.joda.time.format.DateTimeFormatter",
+    "org.joda.time.DateTime"
+  ],
+  "correct_imports": [
+    "org.joda.time.DateTimeZone",
+    "org.joda.time.format.DateTimeFormat",
+    "org.joda.time.format.DateTimeFormatter",
+    "org.joda.time.DateTime"
+  ]
+}
+```
+
+Contents of `benchmark/snippet_log/sample_so_18274902.java.stdout.df29e6f18e034923940a1b51b89c27ea.txt`
+```
+23:24:59.327 [main] INFO snr.h - Building CompilationUnit takes 462 ms
+23:24:59.439 [main] INFO snr.e - Compilation takes 109 ms
+DateTimeFormatter cannot be resolved to a type
+DateTimeFormat cannot be resolved
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+DateTimeZone cannot be resolved to a variable
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+
+... Additional logs omitted ...
+
+23:24:59.945 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+23:24:59.946 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+23:24:59.946 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+23:24:59.946 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.DateTime;
+
+public class sample_so_18274902 {
+        public static void main(String[] args) {
+
+                DateTimeFormatter format = DateTimeFormat.mediumDateTime();
+
+                DateTime local = new DateTime();
+                DateTime utc = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);
+                System.out.println("utc zone = " + utc.getZone());
+                System.out.println("UTC time: " + utc);
+                long current = utc.getMillis();
+
+                System.out.println("current: " + format.print(current));
+                System.out.println("local: " + format.print(local.getMillis()));
+
+        }
+}
+23:24:59.946 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+23:24:59.973 [main] INFO snr.e - Compilation takes 26 ms
+```
+
+Contents of `benchmark/snippet_log/sample_so_18274902.java.stderr.df29e6f18e034923940a1b51b89c27ea.txt`
+```
+Empty file ...
+```

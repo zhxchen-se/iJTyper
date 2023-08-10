@@ -1,0 +1,1389 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_26",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "sessionFactory",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "org.hibernate.SessionFactory",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "d",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "hibernate_class_26",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "hibernate_class_26()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "run3",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "d",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "run3",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "beginTransaction",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createEntities",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "hibernate_class_26",
+                          "type": "TypeAccess",
+                          "children": []
+                        },
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "getTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"NOW WITH A NEW TRANSACTION\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableWrite",
+                          "children": []
+                        },
+                        {
+                          "label": "getSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "beginTransaction",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "query",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Query",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "createQuery",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"from A\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "results",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "list",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "query",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "For",
+                      "children": [
+                        {
+                          "label": "i",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "LT",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "size",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "results",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "POSTINC",
+                          "type": "UnaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableWrite",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "\"Row \"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "i",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\" was:\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "a",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26$A",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "get",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "results",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "i",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"Result \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "i",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "toString",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "a",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "getTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "createEntities",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "For",
+                      "children": [
+                        {
+                          "label": "i",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "LT",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "2",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "POSTINC",
+                          "type": "UnaryOperator",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "VariableWrite",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "a",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26$A",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "hibernate_class_26$A()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "b",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26$B",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "hibernate_class_26$B()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setB",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "a",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "b",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "save",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "a",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getSession",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.Session",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "EQ",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_26",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "config",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.cfg.AnnotationConfiguration",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "org.hibernate.cfg.AnnotationConfiguration()",
+                                  "type": "ConstructorCall",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "addAnnotatedClass",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "config",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26$A",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "addAnnotatedClass",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "config",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26$B",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "configure",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "config",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "create",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.lang.Object()",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "config",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldWrite",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "buildSessionFactory",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "config",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getCurrentSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_26",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "A",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "id",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.Integer",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "b",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "hibernate_class_26$B",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003cinit\u003e",
+                          "type": "Invocation",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getId",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.Integer",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@javax.persistence.Id",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "@javax.persistence.GeneratedValue",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "id",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_26$A",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setId",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "id",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Integer",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "id",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26$A",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "id",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getB",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "hibernate_class_26$B",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@javax.persistence.OneToOne(cascade \u003d javax.persistence.CascadeType.ALL)",
+                          "type": "Annotation",
+                          "children": [
+                            {
+                              "label": "ALL",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "javax.persistence.CascadeType",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@org.hibernate.annotations.Fetch(org.hibernate.annotations.FetchMode.JOIN)",
+                          "type": "Annotation",
+                          "children": [
+                            {
+                              "label": "JOIN",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.annotations.FetchMode",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "b",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_26$A",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setB",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "b",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "hibernate_class_26$B",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "b",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26$A",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "b",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "B",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Entity",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "id",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.Integer",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003cinit\u003e",
+                          "type": "Invocation",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getId",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.Integer",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@javax.persistence.Id",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "@javax.persistence.GeneratedValue",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "id",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_26$B",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setId",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "id",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Integer",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "id",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_26$B",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "id",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

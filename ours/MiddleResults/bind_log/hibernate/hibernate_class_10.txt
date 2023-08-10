@@ -1,0 +1,955 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_10.java
+Expect check=93
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Did not find solution for node: hibernate_class_10 with type Type1
+For node: Serializable expected fqn: java.io.Serializable with type: Type2 got: java.io.Serializable
+For node: Serializable expected fqn: java.io.Serializable with type: Type2 got: java.io.Serializable
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: providerId
+For node: providerId expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: providerId
+Cannot find matching typeVariable for: private String providerId;
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: providerName
+For node: providerName expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: providerName
+Cannot find matching typeVariable for: private String providerName;
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+For node: long expected fqn: long with type: Type5 got: long
+Cannot find matching typeVariable for: serialVersionUID=81073
+For node: serialVersionUID=81073 expected fqn: long with type: Type5 got: long
+For node: serialVersionUID expected fqn: long with type: Type5 got: long
+For node: 81073 expected fqn: int with type: Type6 got: int
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: load
+Cannot find matching typeVariable for: public static void load(Session session,List<String> values){
+  hibernate_class_10 ProviderInfo=new hibernate_class_10();
+  ProviderInfo.setProviderId(values.get(0));
+  ProviderInfo.setProviderName(values.get(1));
+  session.save(ProviderInfo);
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: Session session
+For node: Session session expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+Cannot find matching typeVariable for: List<String> values
+For node: List<String> values expected fqn: java.util.List<java.lang.String> with type: Type9=Type8<Type4> got: java.util.List<java.lang.String>
+For node: List<String> expected fqn: java.util.List<java.lang.String> with type: Type9=Type8<Type4> got: java.util.List<java.lang.String>
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type8 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type8 got: java.util.List
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: values expected fqn: java.util.List<java.lang.String> with type: Type9=Type8<Type4> got: java.util.List<java.lang.String>
+Did not find solution for node: hibernate_class_10 with type Type1
+Did not find solution for node: hibernate_class_10 with type Type1
+Cannot find matching typeVariable for: ProviderInfo=new hibernate_class_10()
+Did not find solution for node: ProviderInfo=new hibernate_class_10() with type Type1
+Did not find solution for node: ProviderInfo with type Type1
+Did not find solution for node: new hibernate_class_10() with type Type1
+Did not find solution for node: hibernate_class_10 with type Type1
+Did not find solution for node: hibernate_class_10 with type Type1
+Did not find solution for node: ProviderInfo.setProviderId(values.get(0)) with type Type18
+Did not find solution for node: ProviderInfo with type Type1
+Cannot find matching typeVariable for: setProviderId
+Did not find solution for node: setProviderId with type Type18
+Did not find solution for node: values.get(0) with type Type12
+For node: values expected fqn: java.util.List<java.lang.String> with type: Type9=Type8<Type4> got: java.util.List<java.lang.String>
+Cannot find matching typeVariable for: get
+Did not find solution for node: get with type Type12
+For node: 0 expected fqn: int with type: Type11 got: byte
+Did not find solution for node: ProviderInfo.setProviderName(values.get(1)) with type Type21
+Did not find solution for node: ProviderInfo with type Type1
+Cannot find matching typeVariable for: setProviderName
+Did not find solution for node: setProviderName with type Type21
+Did not find solution for node: values.get(1) with type Type17
+For node: values expected fqn: java.util.List<java.lang.String> with type: Type9=Type8<Type4> got: java.util.List<java.lang.String>
+Cannot find matching typeVariable for: get
+Did not find solution for node: get with type Type17
+For node: 1 expected fqn: int with type: Type11 got: byte
+For node: session.save(ProviderInfo) expected fqn: java.io.Serializable with type: Type24 got: java.io.Serializable
+For node: session expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+Cannot find matching typeVariable for: save
+For node: save expected fqn: java.io.Serializable with type: Type24 got: java.io.Serializable
+Did not find solution for node: ProviderInfo with type Type1
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: getProviderName
+Cannot find matching typeVariable for: /** 
+ * @return the ProviderName
+ */
+public String getProviderName(){
+  return providerName;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+For node: providerName expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: setProviderName
+Cannot find matching typeVariable for: /** 
+ * @param ProviderName the ProviderName to set
+ */
+public void setProviderName(String name){
+  this.providerName=name;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: String name
+For node: String name expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: name expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: this.providerName=name expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: this.providerName expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: providerName
+For node: providerName expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: name expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: getProviderId
+Cannot find matching typeVariable for: /** 
+ * @return the ProvId
+ */
+public String getProviderId(){
+  return this.providerId;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+For node: this.providerId expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: providerId
+For node: providerId expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: setProviderId
+Cannot find matching typeVariable for: /** 
+ * @param id the ProvId to set
+ */
+public void setProviderId(String id){
+  this.providerId=id;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: String id
+For node: String id expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: id expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: this.providerId=id expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: this.providerId expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: providerId
+For node: providerId expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: id expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: /** 
+ * @param args
+ */
+public static void main(String[] args){
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import java.util.List;
+import org.hibernate.Session;
+public class hibernate_class_10 implements Serializable {
+  private String providerId;
+  private String providerName;
+  private static final long serialVersionUID=81073;
+  public static void load(  Session session,  List<String> values){
+    hibernate_class_10 ProviderInfo=new hibernate_class_10();
+    ProviderInfo.setProviderId(values.get(0));
+    ProviderInfo.setProviderName(values.get(1));
+    session.save(ProviderInfo);
+  }
+  /** 
+ * @return the ProviderName
+ */
+  public String getProviderName(){
+    return providerName;
+  }
+  /** 
+ * @param ProviderName the ProviderName to set
+ */
+  public void setProviderName(  String name){
+    this.providerName=name;
+  }
+  /** 
+ * @return the ProvId
+ */
+  public String getProviderId(){
+    return this.providerId;
+  }
+  /** 
+ * @param id the ProvId to set
+ */
+  public void setProviderId(  String id){
+    this.providerId=id;
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type27 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type27 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type27 got: java.lang.String[]
+{Checked=84, Analyzed=62, Unsolved=22, Incorrect=4, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=25, Analyzed=23, Unsolved=2, Incorrect=1, Correct=22}
+java=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+Total stats
+{Checked=84, Analyzed=62, Unsolved=22, Incorrect=4, Correct=58}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=25, Analyzed=23, Unsolved=2, Incorrect=1, Correct=22}
+java=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,7,0,0,7
+,SimpleType,0,2,0,0,2
+,ThisExpression,0,3,0,0,3
+,VariableDeclarationFragment,0,1,0,0,1
+int,NumberLiteral,3,3,1,2,0
+java,ArrayType,1,1,1,0,0
+java,Assignment,2,2,2,0,0
+java,FieldAccess,3,3,3,0,0
+java,MethodInvocation,1,3,1,0,2
+java,ParameterizedType,1,1,1,0,0
+java,SimpleName,23,25,22,1,2
+java,SimpleType,10,10,9,1,0
+java,SingleVariableDeclaration,4,4,4,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,1,1,1,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.,SimpleName,3,3,3,0,0
+org.hibernate.,SimpleType,1,1,1,0,0
+org.hibernate.,SingleVariableDeclaration,1,1,1,0,0
+void,MethodInvocation,0,2,0,0,2
+void,PrimitiveType,4,4,4,0,0
+void,SimpleName,0,2,0,0,2

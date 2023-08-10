@@ -1,0 +1,460 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_23.java
+Expect check=81
+Cannot find matching typeVariable for: public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_23
+Cannot find matching typeVariable for: public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.UUID;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String arg[]){
+  final String filename=UUID.randomUUID().toString() + ".txt";
+  RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+  Object selected;
+  rb.setRequestData("aaa");
+  rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+  rb.setCallback(new RequestCallback(){
+    @Override public void onResponseReceived(    Request request,    Response response){
+    }
+    @Override public void onError(    Request request,    Throwable exception){
+      exception.printStackTrace();
+    }
+  }
+);
+  try {
+    rb.send();
+  }
+ catch (  RequestException e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.UUID;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String arg[]
+For node: String arg[] expected fqn: java.lang.String[] with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: arg expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: filename=UUID.randomUUID().toString() + ".txt"
+For node: filename=UUID.randomUUID().toString() + ".txt" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: filename expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: UUID.randomUUID().toString() + ".txt" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: UUID.randomUUID().toString() expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: UUID.randomUUID() expected fqn: java.util.UUID with type: Type6 got: java.util.UUID
+For node: UUID expected fqn: java.util.UUID with type: Type5 got: java.util.UUID
+Cannot find matching typeVariable for: randomUUID
+For node: randomUUID expected fqn: java.util.UUID with type: Type6 got: java.util.UUID
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: ".txt" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload")
+For node: rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload") expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: new RequestBuilder(RequestBuilder.POST,"http://localhost/upload") expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: RequestBuilder.POST
+For node: RequestBuilder.POST expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: POST expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type11 got: com.google.gwt.http.client.RequestBuilder$Method
+For node: "http://localhost/upload" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+For node: Object expected fqn: java.lang.Object with type: Type15 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type15 got: java.lang.Object
+Cannot find matching typeVariable for: selected
+For node: selected expected fqn: java.lang.Object with type: Type15 got: java.lang.Object
+Cannot find matching typeVariable for: selected
+Cannot find matching typeVariable for: Object selected;
+
+Cannot find matching typeVariable for: {
+  final String filename=UUID.randomUUID().toString() + ".txt";
+  RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+  Object selected;
+  rb.setRequestData("aaa");
+  rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+  rb.setCallback(new RequestCallback(){
+    @Override public void onResponseReceived(    Request request,    Response response){
+    }
+    @Override public void onError(    Request request,    Throwable exception){
+      exception.printStackTrace();
+    }
+  }
+);
+  try {
+    rb.send();
+  }
+ catch (  RequestException e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public static void main(String arg[]){
+  final String filename=UUID.randomUUID().toString() + ".txt";
+  RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+  Object selected;
+  rb.setRequestData("aaa");
+  rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+  rb.setCallback(new RequestCallback(){
+    @Override public void onResponseReceived(    Request request,    Response response){
+    }
+    @Override public void onError(    Request request,    Throwable exception){
+      exception.printStackTrace();
+    }
+  }
+);
+  try {
+    rb.send();
+  }
+ catch (  RequestException e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.UUID;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+public class gwt_class_23 {
+  public static void main(  String arg[]){
+    final String filename=UUID.randomUUID().toString() + ".txt";
+    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"http://localhost/upload");
+    Object selected;
+    rb.setRequestData("aaa");
+    rb.setHeader("Content-Type","application/x-www-form-urlencodeddata");
+    rb.setCallback(new RequestCallback(){
+      @Override public void onResponseReceived(      Request request,      Response response){
+      }
+      @Override public void onError(      Request request,      Throwable exception){
+        exception.printStackTrace();
+      }
+    }
+);
+    try {
+      rb.send();
+    }
+ catch (    RequestException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+No match for actual type MethodInvocation: rb.setRequestData("aaa") with type: Type16 got: void
+For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: "aaa" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+For node: rb.setHeader("Content-Type","application/x-www-form-urlencodeddata") expected fqn: void with type: Type19 got: void
+For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: setHeader
+For node: setHeader expected fqn: void with type: Type19 got: void
+For node: "Content-Type" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+For node: "application/x-www-form-urlencodeddata" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+No match for actual type MethodInvocation: rb.setCallback(new RequestCallback(){
+  @Override public void onResponseReceived(  Request request,  Response response){
+  }
+  @Override public void onError(  Request request,  Throwable exception){
+    exception.printStackTrace();
+  }
+}
+) with type: Type31 got: void
+For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+For node: new RequestCallback(){
+  @Override public void onResponseReceived(  Request request,  Response response){
+  }
+  @Override public void onError(  Request request,  Throwable exception){
+    exception.printStackTrace();
+  }
+}
+ expected fqn:  with type: Type23 got: com.google.gwt.http.client.RequestCallback
+For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type23 got: com.google.gwt.http.client.RequestCallback
+For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type23 got: com.google.gwt.http.client.RequestCallback
+Cannot find matching typeVariable for: {
+  @Override public void onResponseReceived(  Request request,  Response response){
+  }
+  @Override public void onError(  Request request,  Throwable exception){
+    exception.printStackTrace();
+  }
+}
+
+For node: @Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onResponseReceived
+Cannot find matching typeVariable for: @Override public void onResponseReceived(Request request,Response response){
+}
+
+Cannot find matching typeVariable for: {
+  @Override public void onResponseReceived(  Request request,  Response response){
+  }
+  @Override public void onError(  Request request,  Throwable exception){
+    exception.printStackTrace();
+  }
+}
+
+For node: onResponseReceived expected fqn: void with type: Type23 got: com.google.gwt.http.client.RequestCallback
+Cannot find matching typeVariable for: Request request
+For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+Cannot find matching typeVariable for: Response response
+For node: Response response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
+For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
+For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
+For node: response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
+For node: @Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onError
+Cannot find matching typeVariable for: @Override public void onError(Request request,Throwable exception){
+  exception.printStackTrace();
+}
+
+Cannot find matching typeVariable for: {
+  @Override public void onResponseReceived(  Request request,  Response response){
+  }
+  @Override public void onError(  Request request,  Throwable exception){
+    exception.printStackTrace();
+  }
+}
+
+For node: onError expected fqn: void with type: Type23 got: com.google.gwt.http.client.RequestCallback
+Cannot find matching typeVariable for: Request request
+For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+For node: request expected fqn: com.google.gwt.http.client.Request with type: Type25 got: com.google.gwt.http.client.Request
+Cannot find matching typeVariable for: Throwable exception
+For node: Throwable exception expected fqn: java.lang.Throwable with type: Type27 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type27 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type27 got: java.lang.Throwable
+For node: exception expected fqn: java.lang.Throwable with type: Type27 got: java.lang.Throwable
+For node: exception.printStackTrace() expected fqn: void with type: Type28 got: void
+For node: exception expected fqn: java.lang.Throwable with type: Type27 got: java.lang.Throwable
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type28 got: void
+No match for actual type MethodInvocation: rb.send() with type: Type34 got: com.google.gwt.http.client.Request
+For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type10 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: RequestException e
+For node: RequestException e expected fqn: com.google.gwt.http.client.RequestException with type: Type36 got: com.google.gwt.http.client.RequestException
+For node: RequestException expected fqn: com.google.gwt.http.client.RequestException with type: Type36 got: com.google.gwt.http.client.RequestException
+For node: RequestException expected fqn: com.google.gwt.http.client.RequestException with type: Type36 got: com.google.gwt.http.client.RequestException
+For node: e expected fqn: com.google.gwt.http.client.RequestException with type: Type36 got: com.google.gwt.http.client.RequestException
+For node: e.printStackTrace() expected fqn: void with type: Type37 got: void
+For node: e expected fqn: com.google.gwt.http.client.RequestException with type: Type36 got: com.google.gwt.http.client.RequestException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type37 got: void
+{Checked=76, Analyzed=76, Unsolved=0, Incorrect=6, Correct=70}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=1, Correct=18}
+gwt.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+gwt.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+Total stats
+{Checked=76, Analyzed=76, Unsolved=0, Incorrect=6, Correct=70}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=1, Correct=18}
+gwt.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+gwt.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+,ClassInstanceCreation,1,1,0,1,0
+gwt.,ClassInstanceCreation,1,1,1,0,0
+gwt.,QualifiedName,1,1,0,1,0
+gwt.,SimpleName,19,19,18,1,0
+gwt.,SimpleType,7,7,7,0,0
+gwt.,SingleVariableDeclaration,4,4,4,0,0
+gwt.,VariableDeclarationFragment,1,1,1,0,0
+java,InfixExpression,1,1,1,0,0
+java,MarkerAnnotation,2,2,2,0,0
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,13,13,13,0,0
+java,SimpleType,4,4,4,0,0
+java,SingleVariableDeclaration,2,2,1,1,0
+java,StringLiteral,5,5,5,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,5,5,3,2,0

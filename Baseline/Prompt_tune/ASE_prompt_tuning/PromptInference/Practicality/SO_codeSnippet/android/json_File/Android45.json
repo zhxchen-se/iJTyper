@@ -1,0 +1,502 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android45",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "android.app.Activity",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "TAG",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"MyActivity\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "onCreate",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "savedInstanceState",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.os.Bundle",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "onCreate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "super",
+                              "type": "SuperAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "savedInstanceState",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "intentFilter",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.content.IntentFilter",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.content.IntentFilter()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "addAction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "intentFilter",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Intent.ACTION_SEND",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "addCategory",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "intentFilter",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Intent.CATEGORY_DEFAULT",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "addDataType",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "intentFilter",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"image/*\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "android.content.IntentFilter.MalformedMimeTypeException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "e",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "android.util.Log",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TAG",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "toString",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "e",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "x",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.content.Intent",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "registerReceiver",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android45",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "android.content.BroadcastReceiver()",
+                                  "type": "NewClass",
+                                  "children": [
+                                    {
+                                      "label": "1",
+                                      "type": "Class",
+                                      "children": [
+                                        {
+                                          "label": "android.content.BroadcastReceiver",
+                                          "type": "SUPER_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "onReceive",
+                                          "type": "Method",
+                                          "children": [
+                                            {
+                                              "label": "void",
+                                              "type": "RETURN_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "",
+                                              "type": "Modifiers_Method",
+                                              "children": [
+                                                {
+                                                  "label": "public",
+                                                  "type": "Modifier",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "context",
+                                              "type": "Parameter",
+                                              "children": [
+                                                {
+                                                  "label": "android.content.Context",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "intent",
+                                              "type": "Parameter",
+                                              "children": [
+                                                {
+                                                  "label": "android.content.Intent",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "d",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "android.util.Log",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "TAG",
+                                                  "type": "FieldRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "\"Received intent \"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "intent",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "setComponent",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "intent",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "java.lang.Object()",
+                                                  "type": "ConstructorCall",
+                                                  "children": [
+                                                    {
+                                                      "label": "context",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "class",
+                                                      "type": "FieldRead",
+                                                      "children": [
+                                                        {
+                                                          "label": "androidExamples.Android45$Uploader",
+                                                          "type": "TypeAccess",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "startActivity",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "androidExamples.Android45$1",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "intent",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "intentFilter",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "x",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "i",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "android.util.Log",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TAG",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"failed to regist a receiver\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "i",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "android.util.Log",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TAG",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"registed a receiver successfully\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Uploader",
+                      "type": "Class",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

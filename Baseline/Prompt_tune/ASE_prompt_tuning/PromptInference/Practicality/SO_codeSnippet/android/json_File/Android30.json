@@ -1,0 +1,453 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android30",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "target",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.HttpHost",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.apache.http.HttpHost(java.lang.String,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "\"http://\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "SERVER_HOST",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "androidExamples.ServiceWrapper",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "SERVER_PORT",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "androidExamples.ServiceWrapper",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "get",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.client.methods.HttpGet",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.apache.http.client.methods.HttpGet(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"/list\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "result",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "entity",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.HttpEntity",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "client",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.client.HttpClient",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.apache.http.impl.client.DefaultHttpClient()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "response",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "org.apache.http.HttpResponse",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "execute",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "client",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "target",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "get",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "entity",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getEntity",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "response",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "result",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "toString",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.apache.http.util.EntityUtils",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "entity",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.Exception",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "NE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "entity",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "",
+                                      "type": "Try",
+                                      "children": [
+                                        {
+                                          "label": "consumeContent",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "entity",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Catch",
+                                          "children": [
+                                            {
+                                              "label": "e",
+                                              "type": "CatchVariable",
+                                              "children": [
+                                                {
+                                                  "label": "java.io.IOException",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "result",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "ServiceWrapper",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "SERVER_HOST",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"host\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SERVER_PORT",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "8080",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

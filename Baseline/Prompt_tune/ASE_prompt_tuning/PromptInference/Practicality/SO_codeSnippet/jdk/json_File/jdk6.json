@@ -1,0 +1,179 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "java",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "jdk",
+                  "type": "Package",
+                  "children": [
+                    {
+                      "label": "jdk6",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "h1",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "boolean",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "hasPermission",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "boolean",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "sm",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.SecurityManager",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getSecurityManager",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.System",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "NE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "sm",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "checkPermission",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "sm",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "java.util.PropertyPermission(java.lang.String,java.lang.String)",
+                                          "type": "ConstructorCall",
+                                          "children": [
+                                            {
+                                              "label": "\"user.timezone\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"write\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "hasPermission",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

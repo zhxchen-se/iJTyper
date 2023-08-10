@@ -1,0 +1,355 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime07",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "formatter",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.text.DateFormat",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.text.SimpleDateFormat(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"mm/dd/yyyy\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "someDate",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.util.Date()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "today",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getTime",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getInstance",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.util.Calendar",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "someDate",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "parse",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "formatter",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"06/22/2010\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "pe",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.text.ParseException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "println",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "out",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.System",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\"Parser Exception\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "days",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getDays",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "daysBetween",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.joda.time.Days",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "org.joda.time.DateTime(java.lang.Object)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "someDate",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "org.joda.time.DateTime(java.lang.Object)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "today",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "\" Days Between \"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "someDate",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\" : \"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "today",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\" - \"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "days",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ID \u003d 3329469",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

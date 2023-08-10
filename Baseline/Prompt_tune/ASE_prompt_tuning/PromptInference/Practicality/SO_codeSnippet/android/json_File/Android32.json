@@ -1,0 +1,422 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android32",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "start",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.io.IOException",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "state",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getExternalStorageState",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "android.os.Environment",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "NOT",
+                              "type": "UnaryOperator",
+                              "children": [
+                                {
+                                  "label": "equals",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "state",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "Environment.MEDIA_MOUNTED",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "",
+                                  "type": "Throw",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException(java.lang.String)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "\"SD card is not mounted. It is \"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "state",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\".\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "path",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"Root\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "directory",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.File",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getParentFile",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.io.File(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "path",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "AND",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "NOT",
+                                  "type": "UnaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "exists",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "directory",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "NOT",
+                                  "type": "UnaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "mkdirs",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "directory",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "",
+                                  "type": "Throw",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException(java.lang.String)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "\"Path to file could not be created.\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "recorder",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.media.MediaRecorder",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.media.MediaRecorder()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoSource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.VideoSource.CAMERA",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setOutputFormat",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.OutputFormat.THREE_GPP",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoEncoder",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.VideoEncoder.H263",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoFrameRate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "15",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoSize",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "176",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "144",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setOutputFile",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "path",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "prepare",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "start",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

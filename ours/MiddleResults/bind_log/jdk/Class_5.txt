@@ -1,0 +1,1698 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_5.java
+Expect check=289
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Class_5
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: K
+Cannot find matching typeVariable for: K
+Cannot find matching typeVariable for: public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(Map<K,V> map){
+  List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+  Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+    public int compare(    Map.Entry<K,V> o1,    Map.Entry<K,V> o2){
+      return (o1.getValue()).compareTo(o2.getValue());
+    }
+  }
+);
+  Map<K,V> result=new LinkedHashMap<K,V>();
+  for (  Map.Entry<K,V> entry : list) {
+    result.put(entry.getKey(),entry.getValue());
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: V extends Comparable<? super V>
+Cannot find matching typeVariable for: V
+Cannot find matching typeVariable for: V extends Comparable<? super V>
+Cannot find matching typeVariable for: public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(Map<K,V> map){
+  List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+  Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+    public int compare(    Map.Entry<K,V> o1,    Map.Entry<K,V> o2){
+      return (o1.getValue()).compareTo(o2.getValue());
+    }
+  }
+);
+  Map<K,V> result=new LinkedHashMap<K,V>();
+  for (  Map.Entry<K,V> entry : list) {
+    result.put(entry.getKey(),entry.getValue());
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Did not find solution for node: Comparable<? super V> with type Type33=Type31<Type32>
+For node: Comparable expected fqn: java.lang.Comparable<? super V> with type: Type31 got: java.lang.Comparable
+For node: Comparable expected fqn: java.lang.Comparable<? super V> with type: Type31 got: java.lang.Comparable
+For node: ? super V expected fqn: ? super V with type: Type32 got: java.lang.Object
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Did not find solution for node: Map<K,V> with type Type12=Type9<Type10,Type11>
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Cannot find matching typeVariable for: sortByValue
+Cannot find matching typeVariable for: public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(Map<K,V> map){
+  List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+  Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+    public int compare(    Map.Entry<K,V> o1,    Map.Entry<K,V> o2){
+      return (o1.getValue()).compareTo(o2.getValue());
+    }
+  }
+);
+  Map<K,V> result=new LinkedHashMap<K,V>();
+  for (  Map.Entry<K,V> entry : list) {
+    result.put(entry.getKey(),entry.getValue());
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Map<K,V> map
+Did not find solution for node: Map<K,V> map with type Type12=Type9<Type10,Type11>
+Did not find solution for node: Map<K,V> with type Type12=Type9<Type10,Type11>
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Did not find solution for node: map with type Type12=Type9<Type10,Type11>
+Did not find solution for node: List<Map.Entry<K,V>> with type Type37=Type34<Type36=Type35<Type10,Type11>>
+For node: List expected fqn: java.util.List<java.util.Map.Entry<K,V>> with type: Type34 got: java.util.List
+For node: List expected fqn: java.util.List<java.util.Map.Entry<K,V>> with type: Type34 got: java.util.List
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Cannot find matching typeVariable for: list=new LinkedList<Map.Entry<K,V>>(map.entrySet())
+Did not find solution for node: list=new LinkedList<Map.Entry<K,V>>(map.entrySet()) with type Type37=Type34<Type36=Type35<Type10,Type11>>
+Did not find solution for node: list with type Type37=Type34<Type36=Type35<Type10,Type11>>
+Did not find solution for node: new LinkedList<Map.Entry<K,V>>(map.entrySet()) with type Type39=Type38<Type36=Type35<Type10,Type11>>
+Did not find solution for node: LinkedList<Map.Entry<K,V>> with type Type39=Type38<Type36=Type35<Type10,Type11>>
+For node: LinkedList expected fqn: java.util.LinkedList<java.util.Map.Entry<K,V>> with type: Type38 got: java.util.LinkedList
+For node: LinkedList expected fqn: java.util.LinkedList<java.util.Map.Entry<K,V>> with type: Type38 got: java.util.LinkedList
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+For node: map.entrySet() expected fqn: java.util.Set<java.util.Map.Entry<K,V>> with type: Type40 got: java.util.Collection
+Did not find solution for node: map with type Type12=Type9<Type10,Type11>
+Cannot find matching typeVariable for: entrySet
+For node: entrySet expected fqn: java.util.Set<java.util.Map.Entry<K,V>> with type: Type40 got: java.util.Collection
+For node: Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+  public int compare(  Map.Entry<K,V> o1,  Map.Entry<K,V> o2){
+    return (o1.getValue()).compareTo(o2.getValue());
+  }
+}
+) expected fqn: void with type: Type61 got: void
+For node: Collections expected fqn: java.util.Collections with type: Type60 got: java.util.Collections
+Cannot find matching typeVariable for: sort
+For node: sort expected fqn: void with type: Type61 got: void
+Did not find solution for node: list with type Type37=Type34<Type36=Type35<Type10,Type11>>
+For node: new Comparator<Map.Entry<K,V>>(){
+  public int compare(  Map.Entry<K,V> o1,  Map.Entry<K,V> o2){
+    return (o1.getValue()).compareTo(o2.getValue());
+  }
+}
+ expected fqn:  with type: Type49=Type2<Type36=Type35<Type10,Type11>> got: java.util.Comparator
+For node: Comparator<Map.Entry<K,V>> expected fqn: java.util.Comparator<java.util.Map.Entry<K,V>> with type: Type49=Type2<Type36=Type35<Type10,Type11>> got: java.util.Comparator
+For node: Comparator expected fqn: java.util.Comparator<java.util.Map.Entry<K,V>> with type: Type2 got: java.util.Comparator
+For node: Comparator expected fqn: java.util.Comparator<java.util.Map.Entry<K,V>> with type: Type2 got: java.util.Comparator
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Cannot find matching typeVariable for: {
+  public int compare(  Map.Entry<K,V> o1,  Map.Entry<K,V> o2){
+    return (o1.getValue()).compareTo(o2.getValue());
+  }
+}
+
+For node: int expected fqn: int with type: Type7 got: int
+Cannot find matching typeVariable for: compare
+Cannot find matching typeVariable for: public int compare(Map.Entry<K,V> o1,Map.Entry<K,V> o2){
+  return (o1.getValue()).compareTo(o2.getValue());
+}
+
+Cannot find matching typeVariable for: {
+  public int compare(  Map.Entry<K,V> o1,  Map.Entry<K,V> o2){
+    return (o1.getValue()).compareTo(o2.getValue());
+  }
+}
+
+For node: compare expected fqn: int with type: Type49=Type2<Type36=Type35<Type10,Type11>> got: java.util.Comparator
+Cannot find matching typeVariable for: Map.Entry<K,V> o1
+Did not find solution for node: Map.Entry<K,V> o1 with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Did not find solution for node: o1 with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: Map.Entry<K,V> o2
+Did not find solution for node: Map.Entry<K,V> o2 with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Did not find solution for node: o2 with type Type36=Type35<Type10,Type11>
+For node: (o1.getValue()).compareTo(o2.getValue()) expected fqn: int with type: Type54 got: int
+For node: (o1.getValue()) expected fqn: V with type: Type50 got: java.io.File
+For node: o1.getValue() expected fqn: V with type: Type50 got: java.io.File
+Did not find solution for node: o1 with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: getValue
+For node: getValue expected fqn: V with type: Type50 got: java.io.File
+Cannot find matching typeVariable for: compareTo
+For node: compareTo expected fqn: int with type: Type54 got: int
+Did not find solution for node: o2.getValue() with type Type53
+Did not find solution for node: o2 with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type53
+Did not find solution for node: Map<K,V> with type Type12=Type9<Type10,Type11>
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+For node: Map expected fqn: java.util.Map<K,V> with type: Type9 got: java.util.Map
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Cannot find matching typeVariable for: result=new LinkedHashMap<K,V>()
+Did not find solution for node: result=new LinkedHashMap<K,V>() with type Type12=Type9<Type10,Type11>
+Did not find solution for node: result with type Type12=Type9<Type10,Type11>
+Did not find solution for node: new LinkedHashMap<K,V>() with type Type66=Type65<Type10,Type11>
+Did not find solution for node: LinkedHashMap<K,V> with type Type66=Type65<Type10,Type11>
+For node: LinkedHashMap expected fqn: java.util.LinkedHashMap<K,V> with type: Type65 got: java.util.LinkedHashMap
+For node: LinkedHashMap expected fqn: java.util.LinkedHashMap<K,V> with type: Type65 got: java.util.LinkedHashMap
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Cannot find matching typeVariable for: Map.Entry<K,V> entry
+Did not find solution for node: Map.Entry<K,V> entry with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry<K,V> with type Type36=Type35<Type10,Type11>
+Did not find solution for node: Map.Entry with type Type35
+Did not find solution for node: Map.Entry with type Type35
+For node: Map expected fqn: java.util.Map with type: Type9 got: java.util.Map
+Cannot find matching typeVariable for: Entry
+Did not find solution for node: Entry with type Type35
+Did not find solution for node: K with type Type10
+Did not find solution for node: K with type Type10
+Did not find solution for node: V with type Type11
+Did not find solution for node: V with type Type11
+Did not find solution for node: entry with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: list
+Cannot find matching typeVariable for: for (Map.Entry<K,V> entry : list) {
+  result.put(entry.getKey(),entry.getValue());
+}
+
+Cannot find matching typeVariable for: {
+  List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+  Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+    public int compare(    Map.Entry<K,V> o1,    Map.Entry<K,V> o2){
+      return (o1.getValue()).compareTo(o2.getValue());
+    }
+  }
+);
+  Map<K,V> result=new LinkedHashMap<K,V>();
+  for (  Map.Entry<K,V> entry : list) {
+    result.put(entry.getKey(),entry.getValue());
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(Map<K,V> map){
+  List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+  Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+    public int compare(    Map.Entry<K,V> o1,    Map.Entry<K,V> o2){
+      return (o1.getValue()).compareTo(o2.getValue());
+    }
+  }
+);
+  Map<K,V> result=new LinkedHashMap<K,V>();
+  for (  Map.Entry<K,V> entry : list) {
+    result.put(entry.getKey(),entry.getValue());
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Did not find solution for node: result.put(entry.getKey(),entry.getValue()) with type Type74
+Did not find solution for node: result with type Type12=Type9<Type10,Type11>
+Cannot find matching typeVariable for: put
+Did not find solution for node: put with type Type74
+For node: entry.getKey() expected fqn: K with type: Type70 got: K
+Did not find solution for node: entry with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: getKey
+For node: getKey expected fqn: K with type: Type70 got: K
+Did not find solution for node: entry.getValue() with type Type53
+Did not find solution for node: entry with type Type36=Type35<Type10,Type11>
+Cannot find matching typeVariable for: getValue
+Did not find solution for node: getValue with type Type53
+Did not find solution for node: result with type Type12=Type9<Type10,Type11>
+Cannot find matching typeVariable for: public class main {
+  public void main_1(){
+    HashMap<String,Double> map=new HashMap<String,Double>();
+    ValueComparator bvc=new ValueComparator(map);
+    TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+    map.put("A",99.5);
+    map.put("B",67.4);
+    map.put("C",67.4);
+    map.put("D",67.3);
+    System.out.println("unsorted map: " + map);
+    sorted_map.putAll(map);
+    System.out.println("results: " + sorted_map);
+  }
+}
+
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public class main {
+  public void main_1(){
+    HashMap<String,Double> map=new HashMap<String,Double>();
+    ValueComparator bvc=new ValueComparator(map);
+    TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+    map.put("A",99.5);
+    map.put("B",67.4);
+    map.put("C",67.4);
+    map.put("D",67.3);
+    System.out.println("unsorted map: " + map);
+    sorted_map.putAll(map);
+    System.out.println("results: " + sorted_map);
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type8 got: void
+Cannot find matching typeVariable for: main_1
+Cannot find matching typeVariable for: public void main_1(){
+  HashMap<String,Double> map=new HashMap<String,Double>();
+  ValueComparator bvc=new ValueComparator(map);
+  TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+  map.put("A",99.5);
+  map.put("B",67.4);
+  map.put("C",67.4);
+  map.put("D",67.3);
+  System.out.println("unsorted map: " + map);
+  sorted_map.putAll(map);
+  System.out.println("results: " + sorted_map);
+}
+
+Cannot find matching typeVariable for: public class main {
+  public void main_1(){
+    HashMap<String,Double> map=new HashMap<String,Double>();
+    ValueComparator bvc=new ValueComparator(map);
+    TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+    map.put("A",99.5);
+    map.put("B",67.4);
+    map.put("C",67.4);
+    map.put("D",67.3);
+    System.out.println("unsorted map: " + map);
+    sorted_map.putAll(map);
+    System.out.println("results: " + sorted_map);
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+For node: HashMap<String,Double> expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type82 got: java.util.HashMap
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type82 got: java.util.HashMap
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+Cannot find matching typeVariable for: map=new HashMap<String,Double>()
+For node: map=new HashMap<String,Double>() expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: new HashMap<String,Double>() expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: HashMap<String,Double> expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type82 got: java.util.HashMap
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type82 got: java.util.HashMap
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+Did not find solution for node: ValueComparator with type Type1
+Did not find solution for node: ValueComparator with type Type1
+Cannot find matching typeVariable for: bvc=new ValueComparator(map)
+Did not find solution for node: bvc=new ValueComparator(map) with type Type1
+Did not find solution for node: bvc with type Type1
+Did not find solution for node: new ValueComparator(map) with type Type1
+Did not find solution for node: ValueComparator with type Type1
+Did not find solution for node: ValueComparator with type Type1
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: TreeMap<String,Double> expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+For node: TreeMap expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type90 got: java.util.TreeMap
+For node: TreeMap expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type90 got: java.util.TreeMap
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+Cannot find matching typeVariable for: sorted_map=new TreeMap<String,Double>(bvc)
+For node: sorted_map=new TreeMap<String,Double>(bvc) expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+For node: sorted_map expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+For node: new TreeMap<String,Double>(bvc) expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+For node: TreeMap<String,Double> expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+For node: TreeMap expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type90 got: java.util.TreeMap
+For node: TreeMap expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type90 got: java.util.TreeMap
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+Did not find solution for node: bvc with type Type1
+For node: map.put("A",99.5) expected fqn: java.lang.Double with type: Type99 got: V
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: put
+For node: put expected fqn: java.lang.Double with type: Type99 got: V
+For node: "A" expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: 99.5 with type Type98
+Did not find solution for node: map.put("B",67.4) with type Type106
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: put
+Did not find solution for node: put with type Type106
+For node: "B" expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: 67.4 with type Type98
+Did not find solution for node: map.put("C",67.4) with type Type106
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: put
+Did not find solution for node: put with type Type106
+For node: "C" expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: 67.4 with type Type98
+Did not find solution for node: map.put("D",67.3) with type Type106
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: put
+Did not find solution for node: put with type Type106
+For node: "D" expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: 67.3 with type Type98
+For node: System.out.println("unsorted map: " + map) expected fqn: void with type: Type109 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type109 got: void
+Did not find solution for node: System with type Type107
+For node: out expected fqn: java.io.PrintStream with type: Type108 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type109 got: void
+For node: "unsorted map: " + map expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: "unsorted map: " expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+Did not find solution for node: sorted_map.putAll(map) with type Type112
+For node: sorted_map expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: putAll
+Did not find solution for node: putAll with type Type112
+For node: map expected fqn: java.util.HashMap<java.lang.String,java.lang.Double> with type: Type84=Type82<Type3,Type83> got: java.util.HashMap<java.lang.String,java.lang.Double>
+For node: System.out.println("results: " + sorted_map) expected fqn: void with type: Type111 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type111 got: void
+Did not find solution for node: System with type Type107
+For node: out expected fqn: java.io.PrintStream with type: Type108 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type111 got: void
+For node: "results: " + sorted_map expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: "results: " expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: sorted_map expected fqn: java.util.TreeMap<java.lang.String,java.lang.Double> with type: Type91=Type90<Type3,Type83> got: java.util.TreeMap<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: class ValueComparator implements Comparator<String> {
+  Map<String,Double> base;
+  public ValueComparator(  Map<String,Double> base){
+    this.base=base;
+  }
+  public int compare(  String a,  String b){
+    if (base.get(a) >= base.get(b)) {
+      return -1;
+    }
+ else {
+      return 1;
+    }
+  }
+}
+
+Did not find solution for node: ValueComparator with type Type1
+Did not find solution for node: Comparator<String> with type Type4=Type2<Type3>
+For node: Comparator expected fqn: java.util.Comparator<java.lang.String> with type: Type2 got: java.util.Comparator
+For node: Comparator expected fqn: java.util.Comparator<java.lang.String> with type: Type2 got: java.util.Comparator
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Map<String,Double> expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type9 got: java.util.Map
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type9 got: java.util.Map
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+Cannot find matching typeVariable for: base
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: base
+Cannot find matching typeVariable for: Map<String,Double> base;
+
+Cannot find matching typeVariable for: class ValueComparator implements Comparator<String> {
+  Map<String,Double> base;
+  public ValueComparator(  Map<String,Double> base){
+    this.base=base;
+  }
+  public int compare(  String a,  String b){
+    if (base.get(a) >= base.get(b)) {
+      return -1;
+    }
+ else {
+      return 1;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: ValueComparator
+Cannot find matching typeVariable for: public ValueComparator(Map<String,Double> base){
+  this.base=base;
+}
+
+Cannot find matching typeVariable for: class ValueComparator implements Comparator<String> {
+  Map<String,Double> base;
+  public ValueComparator(  Map<String,Double> base){
+    this.base=base;
+  }
+  public int compare(  String a,  String b){
+    if (base.get(a) >= base.get(b)) {
+      return -1;
+    }
+ else {
+      return 1;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Map<String,Double> base
+For node: Map<String,Double> base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: Map<String,Double> expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type9 got: java.util.Map
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type9 got: java.util.Map
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: Double expected fqn: java.lang.Double with type: Type83 got: java.lang.Double
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: this.base=base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: this.base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: base
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: base
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+For node: int expected fqn: int with type: Type7 got: int
+Cannot find matching typeVariable for: compare
+Cannot find matching typeVariable for: public int compare(String a,String b){
+  if (base.get(a) >= base.get(b)) {
+    return -1;
+  }
+ else {
+    return 1;
+  }
+}
+
+Cannot find matching typeVariable for: class ValueComparator implements Comparator<String> {
+  Map<String,Double> base;
+  public ValueComparator(  Map<String,Double> base){
+    this.base=base;
+  }
+  public int compare(  String a,  String b){
+    if (base.get(a) >= base.get(b)) {
+      return -1;
+    }
+ else {
+      return 1;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Comparator;
+public class Class_5 {
+  public static <K,V extends Comparable<? super V>>Map<K,V> sortByValue(  Map<K,V> map){
+    List<Map.Entry<K,V>> list=new LinkedList<Map.Entry<K,V>>(map.entrySet());
+    Collections.sort(list,new Comparator<Map.Entry<K,V>>(){
+      public int compare(      Map.Entry<K,V> o1,      Map.Entry<K,V> o2){
+        return (o1.getValue()).compareTo(o2.getValue());
+      }
+    }
+);
+    Map<K,V> result=new LinkedHashMap<K,V>();
+    for (    Map.Entry<K,V> entry : list) {
+      result.put(entry.getKey(),entry.getValue());
+    }
+    return result;
+  }
+public class main {
+    public void main_1(){
+      HashMap<String,Double> map=new HashMap<String,Double>();
+      ValueComparator bvc=new ValueComparator(map);
+      TreeMap<String,Double> sorted_map=new TreeMap<String,Double>(bvc);
+      map.put("A",99.5);
+      map.put("B",67.4);
+      map.put("C",67.4);
+      map.put("D",67.3);
+      System.out.println("unsorted map: " + map);
+      sorted_map.putAll(map);
+      System.out.println("results: " + sorted_map);
+    }
+  }
+class ValueComparator implements Comparator<String> {
+    Map<String,Double> base;
+    public ValueComparator(    Map<String,Double> base){
+      this.base=base;
+    }
+    public int compare(    String a,    String b){
+      if (base.get(a) >= base.get(b)) {
+        return -1;
+      }
+ else {
+        return 1;
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String a
+For node: String a expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: a expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Cannot find matching typeVariable for: String b
+For node: String b expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: b expected fqn: java.lang.String with type: Type97 got: java.lang.String
+For node: base.get(a) >= base.get(b) expected fqn: boolean with type: Type125 got: boolean
+Did not find solution for node: base.get(a) with type Type119
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: get
+Did not find solution for node: get with type Type119
+For node: a expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: base.get(b) with type Type124
+For node: base expected fqn: java.util.Map<java.lang.String,java.lang.Double> with type: Type118=Type9<Type97,Type83> got: java.util.Map<java.lang.String,java.lang.Double>
+Cannot find matching typeVariable for: get
+Did not find solution for node: get with type Type124
+For node: b expected fqn: java.lang.String with type: Type97 got: java.lang.String
+Did not find solution for node: -1 with type Type126
+Did not find solution for node: 1 with type Type126
+Did not find solution for node: 1 with type Type126
+{Checked=273, Analyzed=140, Unsolved=133, Incorrect=45, Correct=95}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=31, Analyzed=2, Unsolved=29, Incorrect=1, Correct=1}
+=SimpleType: {Checked=23, Analyzed=0, Unsolved=23, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=WildcardType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=2, Correct=0}
+java=ParameterizedType: {Checked=21, Analyzed=7, Unsolved=14, Incorrect=1, Correct=6}
+java=QualifiedName: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=88, Analyzed=61, Unsolved=27, Incorrect=19, Correct=42}
+java=SimpleType: {Checked=36, Analyzed=30, Unsolved=6, Incorrect=15, Correct=15}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+Total stats
+{Checked=273, Analyzed=140, Unsolved=133, Incorrect=45, Correct=95}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=31, Analyzed=2, Unsolved=29, Incorrect=1, Correct=1}
+=SimpleType: {Checked=23, Analyzed=0, Unsolved=23, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=WildcardType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=2, Correct=0}
+java=ParameterizedType: {Checked=21, Analyzed=7, Unsolved=14, Incorrect=1, Correct=6}
+java=QualifiedName: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=88, Analyzed=61, Unsolved=27, Incorrect=19, Correct=42}
+java=SimpleType: {Checked=36, Analyzed=30, Unsolved=6, Incorrect=15, Correct=15}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+,ClassInstanceCreation,1,2,0,1,1
+,MethodInvocation,2,5,1,1,3
+,ParenthesizedExpression,1,1,0,1,0
+,SimpleName,2,31,1,1,29
+,SimpleType,0,23,0,0,23
+,ThisExpression,0,1,0,0,1
+,VariableDeclarationFragment,0,1,0,0,1
+,WildcardType,1,1,0,1,0
+boolean,InfixExpression,1,1,1,0,0
+double,NumberLiteral,0,4,0,0,4
+int,MethodInvocation,1,1,1,0,0
+int,NumberLiteral,0,2,0,0,2
+int,PrefixExpression,0,1,0,0,1
+int,PrimitiveType,2,2,2,0,0
+int,SimpleName,2,2,1,1,0
+java,Assignment,1,1,1,0,0
+java,ClassInstanceCreation,2,4,2,0,2
+java,FieldAccess,1,1,1,0,0
+java,InfixExpression,2,2,2,0,0
+java,MethodInvocation,2,7,0,2,5
+java,ParameterizedType,7,21,6,1,14
+java,QualifiedName,2,8,0,2,6
+java,SimpleName,61,88,42,19,27
+java,SimpleType,30,36,15,15,6
+java,SingleVariableDeclaration,3,7,3,0,4
+java,StringLiteral,6,6,6,0,0
+java,VariableDeclarationFragment,3,5,3,0,2
+void,MethodInvocation,3,4,3,0,1
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,4,3,0,1

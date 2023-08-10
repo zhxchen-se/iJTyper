@@ -1,0 +1,586 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android11",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "com.google.android.maps.MyLocationOverlay",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "arg0",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.content.Context",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "arg1",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "com.google.android.maps.MapView",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003cinit\u003e",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "arg0",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "arg1",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "TODO Auto-generated constructor stub",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "drawMyLocation",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "canvas",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.graphics.Canvas",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "mapView",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "com.google.android.maps.MapView",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "lastFix",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.location.Location",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "myLocation",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "com.google.android.maps.GeoPoint",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "when",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "long",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "drawMyLocation",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "super",
+                              "type": "SuperAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "canvas",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "mapView",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "lastFix",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "myLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "when",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "bLocation",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.location.Location",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.location.Location(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"reverseGeocoded\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setLatitude",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "bLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "gpslat",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android11$FindList",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Value \u003d 3.294391E7",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setLongitude",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "bLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "gpslong",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android11$FindList",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Value \u003d -9.6564615E7",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "aLocation",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.location.Location",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.location.Location(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"reverseGeocoded\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setLatitude",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "aLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "getLatitudeE6",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "myLocation",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Value \u003d 3.2946164E7",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setLongitude",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "aLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "getLongitudeE6",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "myLocation",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Value \u003d -9.6505141E7",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "set",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "aLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "aLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Don\u0027t think I need this",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "set",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "bLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "bLocation",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Don\u0027t think I need this either",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "distance",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "distanceTo",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "aLocation",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "bLocation",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Value \u003d 12637795 ???",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "str",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "\" (\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "valueOf",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.String",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "distance",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\" meters)\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "FindList",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "gpslat",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "1",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "gpslong",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "1",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,196 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_2.java
+Expect check=51
+Cannot find matching typeVariable for: public class xstream_class_2 {
+  public static void main(  String arg[]) throws IOException {
+    XStream xstream=new XStream(new DomDriver());
+    FileReader fin=new FileReader("path_to_file.xml");
+    BufferedReader br=new BufferedReader(fin);
+    String str=null;
+    while (br.ready()) {
+      str+=br.readLine() + "\n";
+    }
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_2
+Cannot find matching typeVariable for: public class xstream_class_2 {
+  public static void main(  String arg[]) throws IOException {
+    XStream xstream=new XStream(new DomDriver());
+    FileReader fin=new FileReader("path_to_file.xml");
+    BufferedReader br=new BufferedReader(fin);
+    String str=null;
+    while (br.ready()) {
+      str+=br.readLine() + "\n";
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+public class xstream_class_2 {
+  public static void main(  String arg[]) throws IOException {
+    XStream xstream=new XStream(new DomDriver());
+    FileReader fin=new FileReader("path_to_file.xml");
+    BufferedReader br=new BufferedReader(fin);
+    String str=null;
+    while (br.ready()) {
+      str+=br.readLine() + "\n";
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String arg[]) throws IOException {
+  XStream xstream=new XStream(new DomDriver());
+  FileReader fin=new FileReader("path_to_file.xml");
+  BufferedReader br=new BufferedReader(fin);
+  String str=null;
+  while (br.ready()) {
+    str+=br.readLine() + "\n";
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_2 {
+  public static void main(  String arg[]) throws IOException {
+    XStream xstream=new XStream(new DomDriver());
+    FileReader fin=new FileReader("path_to_file.xml");
+    BufferedReader br=new BufferedReader(fin);
+    String str=null;
+    while (br.ready()) {
+      str+=br.readLine() + "\n";
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+public class xstream_class_2 {
+  public static void main(  String arg[]) throws IOException {
+    XStream xstream=new XStream(new DomDriver());
+    FileReader fin=new FileReader("path_to_file.xml");
+    BufferedReader br=new BufferedReader(fin);
+    String str=null;
+    while (br.ready()) {
+      str+=br.readLine() + "\n";
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String arg[]
+For node: String arg[] expected fqn: java.lang.String[] with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: arg expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream=new XStream(new DomDriver())
+For node: xstream=new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type6 got: com.thoughtworks.xstream.XStream
+For node: new DomDriver() expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type7 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type7 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type7 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: FileReader expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: FileReader expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+Cannot find matching typeVariable for: fin=new FileReader("path_to_file.xml")
+For node: fin=new FileReader("path_to_file.xml") expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: fin expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: new FileReader("path_to_file.xml") expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: FileReader expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: FileReader expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: "path_to_file.xml" expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: BufferedReader expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: BufferedReader expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+Cannot find matching typeVariable for: br=new BufferedReader(fin)
+For node: br=new BufferedReader(fin) expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: br expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: new BufferedReader(fin) expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: BufferedReader expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: BufferedReader expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+For node: fin expected fqn: java.io.FileReader with type: Type11 got: java.io.FileReader
+For node: String expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type12 got: java.lang.String
+Cannot find matching typeVariable for: str=null
+For node: str=null expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: str expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: null expected fqn: null with type: Type18 got: java.lang.String
+For node: br.ready() expected fqn: boolean with type: Type19 got: boolean
+For node: br expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+Cannot find matching typeVariable for: ready
+For node: ready expected fqn: boolean with type: Type19 got: boolean
+For node: str+=br.readLine() + "\n" expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: str expected fqn: java.lang.String with type: Type12 got: java.lang.String
+For node: br.readLine() + "\n" expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: br.readLine() expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: br expected fqn: java.io.BufferedReader with type: Type15 got: java.io.BufferedReader
+Cannot find matching typeVariable for: readLine
+For node: readLine expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: "\n" expected fqn: java.lang.String with type: Type12 got: java.lang.String
+{Checked=48, Analyzed=48, Unsolved=0, Incorrect=2, Correct=46}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=48, Analyzed=48, Unsolved=0, Incorrect=2, Correct=46}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,MethodInvocation,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
+com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+java,Assignment,1,1,1,0,0
+java,ClassInstanceCreation,2,2,2,0,0
+java,InfixExpression,1,1,1,0,0
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,16,16,16,0,0
+java,SimpleType,7,7,7,0,0
+java,SingleVariableDeclaration,1,1,0,1,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+null,NullLiteral,1,1,0,1,0
+void,PrimitiveType,1,1,1,0,0

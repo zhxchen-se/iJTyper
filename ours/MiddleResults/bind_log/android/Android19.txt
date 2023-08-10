@@ -1,0 +1,360 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android19.java
+Expect check=77
+Cannot find matching typeVariable for: public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+Cannot find matching typeVariable for: Android19
+Cannot find matching typeVariable for: public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ImageView;
+public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+For node: View expected fqn: android.view.View with type: Type2 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type2 got: android.view.View
+Cannot find matching typeVariable for: getView
+Cannot find matching typeVariable for: public View getView(int position,View convertView,ViewGroup parent){
+  ImageView imageView;
+  if (convertView == null) {
+    Context mContext=null;
+    imageView=new ImageView(mContext);
+    imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+    imageView.setPadding(8,8,8,8);
+  }
+ else {
+    imageView=(ImageView)convertView;
+  }
+  int[] mThumbIds=null;
+  imageView.setImageResource(mThumbIds[position]);
+  return imageView;
+}
+
+Cannot find matching typeVariable for: public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ImageView;
+public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+Cannot find matching typeVariable for: int position
+For node: int position expected fqn: int with type: Type3 got: int
+For node: int expected fqn: int with type: Type3 got: int
+For node: position expected fqn: int with type: Type3 got: int
+Cannot find matching typeVariable for: View convertView
+For node: View convertView expected fqn: android.view.View with type: Type2 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type2 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type2 got: android.view.View
+For node: convertView expected fqn: android.view.View with type: Type2 got: android.view.View
+Cannot find matching typeVariable for: ViewGroup parent
+For node: ViewGroup parent expected fqn: android.view.ViewGroup with type: Type4 got: android.view.ViewGroup
+For node: ViewGroup expected fqn: android.view.ViewGroup with type: Type4 got: android.view.ViewGroup
+For node: ViewGroup expected fqn: android.view.ViewGroup with type: Type4 got: android.view.ViewGroup
+For node: parent expected fqn: android.view.ViewGroup with type: Type4 got: android.view.ViewGroup
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: imageView
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: imageView
+Cannot find matching typeVariable for: ImageView imageView;
+
+Cannot find matching typeVariable for: {
+  ImageView imageView;
+  if (convertView == null) {
+    Context mContext=null;
+    imageView=new ImageView(mContext);
+    imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+    imageView.setPadding(8,8,8,8);
+  }
+ else {
+    imageView=(ImageView)convertView;
+  }
+  int[] mThumbIds=null;
+  imageView.setImageResource(mThumbIds[position]);
+  return imageView;
+}
+
+Cannot find matching typeVariable for: public View getView(int position,View convertView,ViewGroup parent){
+  ImageView imageView;
+  if (convertView == null) {
+    Context mContext=null;
+    imageView=new ImageView(mContext);
+    imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+    imageView.setPadding(8,8,8,8);
+  }
+ else {
+    imageView=(ImageView)convertView;
+  }
+  int[] mThumbIds=null;
+  imageView.setImageResource(mThumbIds[position]);
+  return imageView;
+}
+
+Cannot find matching typeVariable for: public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ImageView;
+public class Android19 {
+  public View getView(  int position,  View convertView,  ViewGroup parent){
+    ImageView imageView;
+    if (convertView == null) {
+      Context mContext=null;
+      imageView=new ImageView(mContext);
+      imageView.setLayoutParams(new GridView.LayoutParams(85,85));
+      imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+      imageView.setPadding(8,8,8,8);
+    }
+ else {
+      imageView=(ImageView)convertView;
+    }
+    int[] mThumbIds=null;
+    imageView.setImageResource(mThumbIds[position]);
+    return imageView;
+  }
+}
+
+For node: convertView == null expected fqn: boolean with type: Type7 got: boolean
+For node: convertView expected fqn: android.view.View with type: Type2 got: android.view.View
+Did not find solution for node: null with type Type6
+For node: Context expected fqn: android.content.Context with type: Type8 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type8 got: android.content.Context
+Cannot find matching typeVariable for: mContext=null
+For node: mContext=null expected fqn: android.content.Context with type: Type8 got: android.content.Context
+For node: mContext expected fqn: android.content.Context with type: Type8 got: android.content.Context
+For node: null expected fqn: null with type: Type9 got: android.content.Context
+For node: imageView=new ImageView(mContext) expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: new ImageView(mContext) expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: mContext expected fqn: android.content.Context with type: Type8 got: android.content.Context
+For node: imageView.setLayoutParams(new GridView.LayoutParams(85,85)) expected fqn: void with type: Type19 got: void
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: setLayoutParams
+For node: setLayoutParams expected fqn: void with type: Type19 got: void
+Did not find solution for node: new GridView.LayoutParams(85,85) with type Type13
+Did not find solution for node: GridView.LayoutParams with type Type13
+Did not find solution for node: GridView.LayoutParams with type Type13
+Did not find solution for node: GridView with type Type14
+Cannot find matching typeVariable for: LayoutParams
+Did not find solution for node: LayoutParams with type Type13
+For node: 85 expected fqn: int with type: Type15 got: byte
+For node: 85 expected fqn: int with type: Type15 got: byte
+For node: imageView.setScaleType(ImageView.ScaleType.CENTER_CROP) expected fqn: void with type: Type24 got: void
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: setScaleType
+For node: setScaleType expected fqn: void with type: Type24 got: void
+Cannot find matching typeVariable for: ImageView.ScaleType.CENTER_CROP
+For node: ImageView.ScaleType.CENTER_CROP expected fqn: android.widget.ImageView.ScaleType with type: Type24 got: void
+Cannot find matching typeVariable for: ImageView.ScaleType
+Cannot find matching typeVariable for: ImageView.ScaleType.CENTER_CROP
+For node: ImageView.ScaleType expected fqn: android.widget.ImageView.ScaleType with type: Type24 got: void
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ScaleType expected fqn: android.widget.ImageView.ScaleType with type: Type22 got: android.widget.ImageView$ScaleType
+For node: CENTER_CROP expected fqn: android.widget.ImageView.ScaleType with type: Type23 got: android.widget.ImageView$ScaleType
+For node: imageView.setPadding(8,8,8,8) expected fqn: void with type: Type27 got: void
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: setPadding
+For node: setPadding expected fqn: void with type: Type27 got: void
+For node: 8 expected fqn: int with type: Type15 got: byte
+For node: 8 expected fqn: int with type: Type15 got: byte
+For node: 8 expected fqn: int with type: Type15 got: byte
+For node: 8 expected fqn: int with type: Type15 got: byte
+For node: imageView=(ImageView)convertView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: (ImageView)convertView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: ImageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+For node: convertView expected fqn: android.view.View with type: Type2 got: android.view.View
+For node: int[] expected fqn: int[] with type: Type33 got: int[]
+For node: int expected fqn: int with type: Type3 got: int
+Cannot find matching typeVariable for: mThumbIds=null
+For node: mThumbIds=null expected fqn: int[] with type: Type33 got: int[]
+For node: mThumbIds expected fqn: int[] with type: Type33 got: int[]
+For node: null expected fqn: null with type: Type34 got: int[]
+For node: imageView.setImageResource(mThumbIds[position]) expected fqn: void with type: Type35 got: void
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+Cannot find matching typeVariable for: setImageResource
+For node: setImageResource expected fqn: void with type: Type35 got: void
+For node: mThumbIds[position] expected fqn: int with type: Type3 got: int
+For node: mThumbIds expected fqn: int[] with type: Type33 got: int[]
+Cannot find matching typeVariable for: position
+For node: position expected fqn: int with type: Type3 got: int
+For node: imageView expected fqn: android.widget.ImageView with type: Type5 got: android.widget.ImageView
+{Checked=73, Analyzed=67, Unsolved=6, Incorrect=12, Correct=55}
+android.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+android.=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+android.=SimpleName: {Checked=25, Analyzed=23, Unsolved=2, Incorrect=2, Correct=21}
+android.=SimpleType: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+android.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+Total stats
+{Checked=73, Analyzed=67, Unsolved=6, Incorrect=12, Correct=55}
+android.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+android.=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+android.=SimpleName: {Checked=25, Analyzed=23, Unsolved=2, Incorrect=2, Correct=21}
+android.=SimpleType: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+android.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+android.,Assignment,2,2,2,0,0
+android.,CastExpression,1,1,1,0,0
+android.,ClassInstanceCreation,1,2,1,0,1
+android.,QualifiedName,2,3,0,2,1
+android.,SimpleName,23,25,21,2,2
+android.,SimpleType,7,8,7,0,1
+android.,SingleVariableDeclaration,2,2,2,0,0
+android.,VariableDeclarationFragment,2,2,2,0,0
+boolean,InfixExpression,1,1,1,0,0
+int,ArrayAccess,1,1,1,0,0
+int,ArrayType,1,1,1,0,0
+int,NumberLiteral,6,6,0,6,0
+int,PrimitiveType,2,2,2,0,0
+int,SimpleName,4,4,4,0,0
+int,SingleVariableDeclaration,1,1,1,0,0
+int,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,2,3,0,2,1
+void,MethodInvocation,4,4,4,0,0
+void,SimpleName,4,4,4,0,0

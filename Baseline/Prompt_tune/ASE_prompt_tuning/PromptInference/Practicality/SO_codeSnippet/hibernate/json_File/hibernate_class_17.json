@@ -1,0 +1,733 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_17",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "SessionFactoryImpl",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SHARD_CFG_0",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"/com/hibshards/config/shard0.hibernate.cfg.xml\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SHARD_CFG_1",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"/com/hibshards/config/shard1.hibernate.cfg.xml\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "SHARDED_TABLE",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"com/hibshards/orm/weather.hbm.xml\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createSessionFactory",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "javax.naming.NamingException",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "prototypeConfig",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.cfg.Configuration",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "configure",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.cfg.Configuration()",
+                                  "type": "ConstructorCall",
+                                  "children": []
+                                },
+                                {
+                                  "label": "SHARD_CFG_0",
+                                  "type": "FieldRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "addResource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "prototypeConfig",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "SHARDED_TABLE",
+                              "type": "FieldRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "shardConfigs",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.shards.cfg.ShardConfiguration",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.util.ArrayList()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "add",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "shardConfigs",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "buildShardConfig",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_17$SessionFactoryImpl",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "SHARD_CFG_0",
+                                  "type": "FieldRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "add",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "shardConfigs",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "buildShardConfig",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_17$SessionFactoryImpl",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "SHARD_CFG_1",
+                                  "type": "FieldRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "shardStrategyFactory",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.shards.strategy.ShardStrategyFactory",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "buildShardStrategyFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_17$SessionFactoryImpl",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "shardedConfig",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.shards.ShardedConfiguration",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.Object()",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "prototypeConfig",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "shardConfigs",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "shardStrategyFactory",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "buildShardedSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "shardedConfig",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "buildShardStrategyFactory",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "org.hibernate.shards.strategy.ShardStrategyFactory",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "shardStrategyFactory",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.shards.strategy.ShardStrategyFactory",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.hibernate.shards.strategy.ShardStrategyFactory()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "1",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "org.hibernate.shards.strategy.ShardStrategyFactory",
+                                      "type": "SUPER_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "newShardStrategy1",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "org.hibernate.shards.strategy.ShardStrategy",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "shardIds",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "java.util.List",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": [
+                                                {
+                                                  "label": "org.hibernate.shards.ShardId",
+                                                  "type": "TYPE_ARGUMENT",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "loadBalancer",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "java.lang.Object()",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "shardIds",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "pss",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "org.hibernate.shards.strategy.selection.ShardSelectionStrategy",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "java.lang.Object()",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "loadBalancer",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "prs",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "org.hibernate.shards.strategy.resolution.ShardResolutionStrategy",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "java.lang.Object()",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "shardIds",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "pas",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "org.hibernate.shards.strategy.access.ShardAccessStrategy",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "org.hibernate.shards.strategy.access.SequentialShardAccessStrategy()",
+                                              "type": "ConstructorCall",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "return",
+                                          "type": "Return",
+                                          "children": [
+                                            {
+                                              "label": "java.lang.Object()",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "pss",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "prs",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "pas",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "newShardStrategy",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "org.hibernate.shards.strategy.ShardStrategy",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "@java.lang.Override",
+                                          "type": "Annotation",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "arg0",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "java.util.List",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": [
+                                                {
+                                                  "label": "org.hibernate.shards.ShardId",
+                                                  "type": "TYPE_ARGUMENT",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "return",
+                                          "type": "Return",
+                                          "children": [
+                                            {
+                                              "label": "null",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "TODO Auto-generated method stub",
+                                              "type": "Comment",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "shardStrategyFactory",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "buildShardConfig",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "org.hibernate.shards.cfg.ShardConfiguration",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "configFile",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "config",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.cfg.Configuration",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "configure",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.cfg.Configuration()",
+                                  "type": "ConstructorCall",
+                                  "children": []
+                                },
+                                {
+                                  "label": "configFile",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "java.lang.Object()",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "config",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

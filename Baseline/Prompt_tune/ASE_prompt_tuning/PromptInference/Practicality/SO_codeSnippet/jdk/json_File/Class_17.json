@@ -1,0 +1,315 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_17",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "arg",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "sourceDateFormat",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.text.SimpleDateFormat",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.text.SimpleDateFormat(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"yyyy-MM-DD HH:mm:ss\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "date",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.Date",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "parse",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "sourceDateFormat",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"2011-01-18 00:00:00.0\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "targetDateFormat",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.text.SimpleDateFormat",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.text.SimpleDateFormat(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"yyyy-MM-dd\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "println",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "out",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.System",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "format",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "targetDateFormat",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "date",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.text.ParseException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "date",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"2011-01-18 00:00:00.0\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "temporal",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.time.temporal.TemporalAccessor",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "parse",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "ofPattern",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.time.format.DateTimeFormatter",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"yyyy-MM-dd HH:mm:ss.S\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "date",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "use parse(date, LocalDateTime::from) to get LocalDateTime",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "output",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "format",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "ofPattern",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.time.format.DateTimeFormatter",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"yyyy-MM-dd\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "temporal",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

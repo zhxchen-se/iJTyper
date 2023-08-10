@@ -1,0 +1,332 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android03",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "com.google.android.maps.ItemizedOverlay",
+                      "type": "SUPER_TYPE",
+                      "children": [
+                        {
+                          "label": "com.google.android.maps.OverlayItem",
+                          "type": "TYPE_ARGUMENT",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "defaultMarker",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.graphics.drawable.Drawable",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003cinit\u003e",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "defaultMarker",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "populate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "androidExamples.Android03",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createItem",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "com.google.android.maps.OverlayItem",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "protected",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "index",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "lat",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Double",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "MUL",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "index",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "37.422006",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "1000000.0",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "lng",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Double",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "MUL",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "NEG",
+                                  "type": "UnaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "122.084095",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "1000000.0",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "point",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "com.google.android.maps.GeoPoint",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "com.google.android.maps.GeoPoint(int,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "intValue",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "lat",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "intValue",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "lng",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "oi",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "com.google.android.maps.OverlayItem",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.Object()",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "point",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Marker\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Marker Text\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "oi",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "size",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "5",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

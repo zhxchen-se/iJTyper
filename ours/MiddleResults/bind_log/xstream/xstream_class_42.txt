@@ -1,0 +1,407 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_42.java
+Expect check=54
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_42
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: @XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+  private String pathToCodeposFiles;
+  @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+}
+
+For node: @XStreamAlias("addressServiceConfig") expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: XStreamAlias expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: "addressServiceConfig" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Did not find solution for node: AddressServiceConfig with type Type2
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: pathToCodeposFiles
+For node: pathToCodeposFiles expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: pathToCodeposFiles
+Cannot find matching typeVariable for: private String pathToCodeposFiles;
+
+Cannot find matching typeVariable for: @XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+  private String pathToCodeposFiles;
+  @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+For node: @XStreamImplicit(itemFieldName="region") expected fqn: com.thoughtworks.xstream.annotations.XStreamImplicit with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+For node: XStreamImplicit expected fqn: com.thoughtworks.xstream.annotations.XStreamImplicit with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+Cannot find matching typeVariable for: itemFieldName
+Cannot find matching typeVariable for: itemFieldName="region"
+For node: itemFieldName expected fqn: java.lang.String with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+For node: "region" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: List<Region> expected fqn: java.util.List<xstream_class_42.Region> with type: Type7=Type6<Type3> got: java.util.List<java.lang.Object>
+For node: List expected fqn: java.util.List<xstream_class_42.Region> with type: Type6 got: java.util.List
+For node: List expected fqn: java.util.List<xstream_class_42.Region> with type: Type6 got: java.util.List
+For node: Region expected fqn: xstream_class_42.Region with type: Type3 got: java.lang.Object
+For node: Region expected fqn: xstream_class_42.Region with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: regions
+For node: regions expected fqn: java.util.List<xstream_class_42.Region> with type: Type7=Type6<Type3> got: java.util.List<java.lang.Object>
+Cannot find matching typeVariable for: regions
+Cannot find matching typeVariable for: @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+
+Cannot find matching typeVariable for: @XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+  private String pathToCodeposFiles;
+  @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: @XStreamAlias("region") public class Region {
+  private String regionName;
+  @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+}
+
+For node: @XStreamAlias("region") expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: XStreamAlias expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: "region" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: Region expected fqn: xstream_class_42.Region with type: Type3 got: java.lang.Object
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: regionName
+For node: regionName expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: regionName
+Cannot find matching typeVariable for: private String regionName;
+
+Cannot find matching typeVariable for: @XStreamAlias("region") public class Region {
+  private String regionName;
+  @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+For node: @XStreamImplicit(itemFieldName="province") expected fqn: com.thoughtworks.xstream.annotations.XStreamImplicit with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+For node: XStreamImplicit expected fqn: com.thoughtworks.xstream.annotations.XStreamImplicit with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+Cannot find matching typeVariable for: itemFieldName
+Cannot find matching typeVariable for: itemFieldName="province"
+For node: itemFieldName expected fqn: java.lang.String with type: Type10 got: com.thoughtworks.xstream.annotations.XStreamImplicit
+For node: "province" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: List<Province> expected fqn: java.util.List<xstream_class_42.Province> with type: Type11=Type6<Type1> got: java.util.List<java.lang.Object>
+For node: List expected fqn: java.util.List<xstream_class_42.Province> with type: Type6 got: java.util.List
+For node: List expected fqn: java.util.List<xstream_class_42.Province> with type: Type6 got: java.util.List
+For node: Province expected fqn: xstream_class_42.Province with type: Type1 got: java.lang.Object
+For node: Province expected fqn: xstream_class_42.Province with type: Type1 got: java.lang.Object
+Cannot find matching typeVariable for: provinces
+For node: provinces expected fqn: java.util.List<xstream_class_42.Province> with type: Type11=Type6<Type1> got: java.util.List<java.lang.Object>
+Cannot find matching typeVariable for: provinces
+Cannot find matching typeVariable for: @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+
+Cannot find matching typeVariable for: @XStreamAlias("region") public class Region {
+  private String regionName;
+  @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: @XStreamAlias("province") public class Province {
+  private int code;
+  private String name;
+}
+
+For node: @XStreamAlias("province") expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: XStreamAlias expected fqn: com.thoughtworks.xstream.annotations.XStreamAlias with type: Type9 got: com.thoughtworks.xstream.annotations.XStreamAlias
+For node: "province" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: Province expected fqn: xstream_class_42.Province with type: Type1 got: java.lang.Object
+For node: int expected fqn: int with type: Type12 got: int
+Cannot find matching typeVariable for: code
+For node: code expected fqn: int with type: Type12 got: int
+Cannot find matching typeVariable for: code
+Cannot find matching typeVariable for: private int code;
+
+Cannot find matching typeVariable for: @XStreamAlias("province") public class Province {
+  private int code;
+  private String name;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: name
+For node: name expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: private String name;
+
+Cannot find matching typeVariable for: @XStreamAlias("province") public class Province {
+  private int code;
+  private String name;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+public class xstream_class_42 {
+@XStreamAlias("addressServiceConfig") public class AddressServiceConfig {
+    private String pathToCodeposFiles;
+    @XStreamImplicit(itemFieldName="region") private List<Region> regions;
+  }
+@XStreamAlias("region") public class Region {
+    private String regionName;
+    @XStreamImplicit(itemFieldName="province") private List<Province> provinces;
+  }
+@XStreamAlias("province") public class Province {
+    private int code;
+    private String name;
+  }
+}
+
+{Checked=43, Analyzed=42, Unsolved=1, Incorrect=16, Correct=26}
+=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=4, Correct=0}
+=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+com.thoughtworks.xstream.=NormalAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleMemberAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=4, Correct=3}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+Total stats
+{Checked=43, Analyzed=42, Unsolved=1, Incorrect=16, Correct=26}
+=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=4, Correct=0}
+=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+com.thoughtworks.xstream.=NormalAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleMemberAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=4, Correct=3}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+,SimpleName,4,5,0,4,1
+,SimpleType,2,2,0,2,0
+com.thoughtworks.xstream.,NormalAnnotation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,5,5,5,0,0
+com.thoughtworks.xstream.,SingleMemberAnnotation,3,3,3,0,0
+int,PrimitiveType,1,1,1,0,0
+int,VariableDeclarationFragment,1,1,1,0,0
+java,ParameterizedType,2,2,0,2,0
+java,SimpleName,7,7,3,4,0
+java,SimpleType,5,5,3,2,0
+java,StringLiteral,5,5,5,0,0
+java,VariableDeclarationFragment,5,5,3,2,0

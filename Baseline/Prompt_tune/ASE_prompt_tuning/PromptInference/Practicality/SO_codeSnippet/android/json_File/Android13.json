@@ -1,0 +1,334 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android13",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "imageUri",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.net.Uri",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "bitmap",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.graphics.Bitmap",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "bitmap",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getBitmap",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "android.provider.MediaStore.Images.Media",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getContentResolver",
+                                      "type": "Invocation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "imageUri",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.FileNotFoundException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "bytes",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.ByteArrayOutputStream",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.ByteArrayOutputStream()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "compress",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "bitmap",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Bitmap.CompressFormat.JPEG",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "40",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "bytes",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "fileInputStream",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.ByteArrayInputStream",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.ByteArrayInputStream(byte[])",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "toByteArray",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "bytes",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getContentResolver",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "android.content.ContentResolver",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ID \u003d 559902",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,186 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime23",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getNearestDayOfWeek",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "org.joda.time.LocalDate",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "ld",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.joda.time.LocalDate",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "day",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "target",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.LocalDate",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "setCopy",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "dayOfWeek",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "ld",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "day",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "GT",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "getDayOfWeek",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "ld",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "SATURDAY",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "org.joda.time.DateTimeConstants",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "target",
+                                      "type": "VariableWrite",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "plusWeeks",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "target",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "1",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "target",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

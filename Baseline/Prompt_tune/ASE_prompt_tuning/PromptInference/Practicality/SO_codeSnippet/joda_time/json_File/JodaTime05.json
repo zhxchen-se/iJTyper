@@ -1,0 +1,210 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime05",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "zone",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTimeZone",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "forID",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.DateTimeZone",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Europe/London\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "coptic",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.Chronology",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getInstance",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.chrono.GJChronology",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "zone",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dt",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.DateTime(org.joda.time.Chronology)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "coptic",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "minusOneDay",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "minusDays",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "dt",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "1",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "minusOneDay",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ID \u003d 2182921",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,783 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_28.java
+Expect check=89
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_28
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
+public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+  /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+  private static final String SERVER_URL="http://localhost:8094";
+  private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+  /** 
+ * This is the entry point method.
+ */
+  public void onModuleLoad(){
+    RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+    try {
+      requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+    }
+ catch (    RequestException e) {
+      Window.alert("Failed to send the message: " + e.getMessage());
+    }
+  }
+class Jazz10RequestCallback implements RequestCallback {
+    public void onError(    Request request,    Throwable exception){
+      Window.alert("Failed to send the message: " + exception.getMessage());
+    }
+    public void onResponseReceived(    Request request,    Response response){
+      Window.alert(response.getText());
+    }
+  }
+}
+
+Did not find solution for node: Test with type Type4
+For node: EntryPoint expected fqn: com.google.gwt.core.client.EntryPoint with type: Type5 got: com.google.gwt.core.client.EntryPoint
+For node: EntryPoint expected fqn: com.google.gwt.core.client.EntryPoint with type: Type5 got: com.google.gwt.core.client.EntryPoint
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: SERVER_URL="http://localhost:8094"
+For node: SERVER_URL="http://localhost:8094" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: SERVER_URL expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "http://localhost:8094" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again."
+For node: SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again." expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: SERVER_ERROR expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again." expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "An error occurred while " expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "attempting to contact the server. Please check your network " expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "connection and try again." expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: onModuleLoad
+Cannot find matching typeVariable for: /** 
+ * This is the entry point method.
+ */
+public void onModuleLoad(){
+  RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+  try {
+    requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+  }
+ catch (  RequestException e) {
+    Window.alert("Failed to send the message: " + e.getMessage());
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+  /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+  private static final String SERVER_URL="http://localhost:8094";
+  private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+  /** 
+ * This is the entry point method.
+ */
+  public void onModuleLoad(){
+    RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+    try {
+      requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+    }
+ catch (    RequestException e) {
+      Window.alert("Failed to send the message: " + e.getMessage());
+    }
+  }
+class Jazz10RequestCallback implements RequestCallback {
+    public void onError(    Request request,    Throwable exception){
+      Window.alert("Failed to send the message: " + exception.getMessage());
+    }
+    public void onResponseReceived(    Request request,    Response response){
+      Window.alert(response.getText());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
+public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL)
+For node: requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL) expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: requestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: new RequestBuilder(RequestBuilder.GET,SERVER_URL) expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: RequestBuilder.GET
+For node: RequestBuilder.GET expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+For node: GET expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type10 got: com.google.gwt.http.client.RequestBuilder$Method
+For node: SERVER_URL expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: requestBuilder.sendRequest(null,new Jazz10RequestCallback()) expected fqn: com.google.gwt.http.client.Request with type: Type16 got: com.google.gwt.http.client.Request
+For node: requestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type9 got: com.google.gwt.http.client.RequestBuilder
+Cannot find matching typeVariable for: sendRequest
+For node: sendRequest expected fqn: com.google.gwt.http.client.Request with type: Type16 got: com.google.gwt.http.client.Request
+For node: null expected fqn: null with type: Type14 got: java.lang.String
+Did not find solution for node: new Jazz10RequestCallback() with type Type2
+Did not find solution for node: Jazz10RequestCallback with type Type2
+Did not find solution for node: Jazz10RequestCallback with type Type2
+Cannot find matching typeVariable for: RequestException e
+Did not find solution for node: RequestException e with type Type20
+Did not find solution for node: RequestException with type Type20
+Did not find solution for node: RequestException with type Type20
+Did not find solution for node: e with type Type20
+For node: Window.alert("Failed to send the message: " + e.getMessage()) expected fqn: void with type: Type24 got: void
+For node: Window expected fqn: com.google.gwt.user.client.Window with type: Type23 got: com.google.gwt.user.client.Window
+Cannot find matching typeVariable for: alert
+For node: alert expected fqn: void with type: Type24 got: void
+For node: "Failed to send the message: " + e.getMessage() expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "Failed to send the message: " expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: e.getMessage() expected fqn: java.lang.String with type: Type21 got: java.lang.String
+Did not find solution for node: e with type Type20
+Cannot find matching typeVariable for: getMessage
+For node: getMessage expected fqn: java.lang.String with type: Type21 got: java.lang.String
+Cannot find matching typeVariable for: class Jazz10RequestCallback implements RequestCallback {
+  public void onError(  Request request,  Throwable exception){
+    Window.alert("Failed to send the message: " + exception.getMessage());
+  }
+  public void onResponseReceived(  Request request,  Response response){
+    Window.alert(response.getText());
+  }
+}
+
+Cannot find matching typeVariable for: Jazz10RequestCallback
+Cannot find matching typeVariable for: class Jazz10RequestCallback implements RequestCallback {
+  public void onError(  Request request,  Throwable exception){
+    Window.alert("Failed to send the message: " + exception.getMessage());
+  }
+  public void onResponseReceived(  Request request,  Response response){
+    Window.alert(response.getText());
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+  /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+  private static final String SERVER_URL="http://localhost:8094";
+  private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+  /** 
+ * This is the entry point method.
+ */
+  public void onModuleLoad(){
+    RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+    try {
+      requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+    }
+ catch (    RequestException e) {
+      Window.alert("Failed to send the message: " + e.getMessage());
+    }
+  }
+class Jazz10RequestCallback implements RequestCallback {
+    public void onError(    Request request,    Throwable exception){
+      Window.alert("Failed to send the message: " + exception.getMessage());
+    }
+    public void onResponseReceived(    Request request,    Response response){
+      Window.alert(response.getText());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
+public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type3 got: com.google.gwt.http.client.RequestCallback
+For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type3 got: com.google.gwt.http.client.RequestCallback
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: onError
+Cannot find matching typeVariable for: public void onError(Request request,Throwable exception){
+  Window.alert("Failed to send the message: " + exception.getMessage());
+}
+
+Cannot find matching typeVariable for: class Jazz10RequestCallback implements RequestCallback {
+  public void onError(  Request request,  Throwable exception){
+    Window.alert("Failed to send the message: " + exception.getMessage());
+  }
+  public void onResponseReceived(  Request request,  Response response){
+    Window.alert(response.getText());
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+  /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+  private static final String SERVER_URL="http://localhost:8094";
+  private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+  /** 
+ * This is the entry point method.
+ */
+  public void onModuleLoad(){
+    RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+    try {
+      requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+    }
+ catch (    RequestException e) {
+      Window.alert("Failed to send the message: " + e.getMessage());
+    }
+  }
+class Jazz10RequestCallback implements RequestCallback {
+    public void onError(    Request request,    Throwable exception){
+      Window.alert("Failed to send the message: " + exception.getMessage());
+    }
+    public void onResponseReceived(    Request request,    Response response){
+      Window.alert(response.getText());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
+public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Request request
+For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+Cannot find matching typeVariable for: Throwable exception
+Did not find solution for node: Throwable exception with type Type28
+Did not find solution for node: Throwable with type Type28
+Did not find solution for node: Throwable with type Type28
+Did not find solution for node: exception with type Type28
+For node: Window.alert("Failed to send the message: " + exception.getMessage()) expected fqn: void with type: Type32 got: void
+For node: Window expected fqn: com.google.gwt.user.client.Window with type: Type31 got: com.google.gwt.user.client.Window
+Cannot find matching typeVariable for: alert
+For node: alert expected fqn: void with type: Type32 got: void
+For node: "Failed to send the message: " + exception.getMessage() expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "Failed to send the message: " expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: exception.getMessage() expected fqn: java.lang.String with type: Type29 got: java.lang.String
+Did not find solution for node: exception with type Type28
+Cannot find matching typeVariable for: getMessage
+For node: getMessage expected fqn: java.lang.String with type: Type29 got: java.lang.String
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: onResponseReceived
+Cannot find matching typeVariable for: public void onResponseReceived(Request request,Response response){
+  Window.alert(response.getText());
+}
+
+Cannot find matching typeVariable for: class Jazz10RequestCallback implements RequestCallback {
+  public void onError(  Request request,  Throwable exception){
+    Window.alert("Failed to send the message: " + exception.getMessage());
+  }
+  public void onResponseReceived(  Request request,  Response response){
+    Window.alert(response.getText());
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+  /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+  private static final String SERVER_URL="http://localhost:8094";
+  private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+  /** 
+ * This is the entry point method.
+ */
+  public void onModuleLoad(){
+    RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+    try {
+      requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+    }
+ catch (    RequestException e) {
+      Window.alert("Failed to send the message: " + e.getMessage());
+    }
+  }
+class Jazz10RequestCallback implements RequestCallback {
+    public void onError(    Request request,    Throwable exception){
+      Window.alert("Failed to send the message: " + exception.getMessage());
+    }
+    public void onResponseReceived(    Request request,    Response response){
+      Window.alert(response.getText());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
+public class gwt_class_28 {
+  /** 
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class Test implements EntryPoint {
+    /** 
+ * The message displayed to the user when the server cannot be reached or returns an error.
+ */
+    private static final String SERVER_URL="http://localhost:8094";
+    private static final String SERVER_ERROR="An error occurred while " + "attempting to contact the server. Please check your network " + "connection and try again.";
+    /** 
+ * This is the entry point method.
+ */
+    public void onModuleLoad(){
+      RequestBuilder requestBuilder=new RequestBuilder(RequestBuilder.GET,SERVER_URL);
+      try {
+        requestBuilder.sendRequest(null,new Jazz10RequestCallback());
+      }
+ catch (      RequestException e) {
+        Window.alert("Failed to send the message: " + e.getMessage());
+      }
+    }
+class Jazz10RequestCallback implements RequestCallback {
+      public void onError(      Request request,      Throwable exception){
+        Window.alert("Failed to send the message: " + exception.getMessage());
+      }
+      public void onResponseReceived(      Request request,      Response response){
+        Window.alert(response.getText());
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Request request
+For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+For node: request expected fqn: com.google.gwt.http.client.Request with type: Type27 got: com.google.gwt.http.client.Request
+Cannot find matching typeVariable for: Response response
+For node: Response response expected fqn: com.google.gwt.http.client.Response with type: Type35 got: com.google.gwt.http.client.Response
+For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type35 got: com.google.gwt.http.client.Response
+For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type35 got: com.google.gwt.http.client.Response
+For node: response expected fqn: com.google.gwt.http.client.Response with type: Type35 got: com.google.gwt.http.client.Response
+For node: Window.alert(response.getText()) expected fqn: void with type: Type39 got: void
+For node: Window expected fqn: com.google.gwt.user.client.Window with type: Type38 got: com.google.gwt.user.client.Window
+Cannot find matching typeVariable for: alert
+For node: alert expected fqn: void with type: Type39 got: void
+For node: response.getText() expected fqn: java.lang.String with type: Type36 got: java.lang.String
+For node: response expected fqn: com.google.gwt.http.client.Response with type: Type35 got: com.google.gwt.http.client.Response
+Cannot find matching typeVariable for: getText
+For node: getText expected fqn: java.lang.String with type: Type36 got: java.lang.String
+{Checked=81, Analyzed=67, Unsolved=14, Incorrect=3, Correct=64}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=22, Analyzed=19, Unsolved=3, Incorrect=1, Correct=18}
+gwt.=SimpleType: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+gwt.=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=81, Analyzed=67, Unsolved=14, Incorrect=3, Correct=64}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=22, Analyzed=19, Unsolved=3, Incorrect=1, Correct=18}
+gwt.=SimpleType: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+gwt.=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,2,0,0,2
+,SimpleType,0,1,0,0,1
+gwt.,ClassInstanceCreation,1,1,1,0,0
+gwt.,MethodInvocation,1,1,1,0,0
+gwt.,QualifiedName,1,1,0,1,0
+gwt.,SimpleName,19,22,18,1,3
+gwt.,SimpleType,7,8,7,0,1
+gwt.,SingleVariableDeclaration,3,4,3,0,1
+gwt.,VariableDeclarationFragment,1,1,1,0,0
+java,InfixExpression,3,3,3,0,0
+java,MethodInvocation,3,3,3,0,0
+java,SimpleName,8,11,8,0,3
+java,SimpleType,2,3,2,0,1
+java,SingleVariableDeclaration,0,1,0,0,1
+java,StringLiteral,6,6,6,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+null,NullLiteral,1,1,0,1,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,3,3,3,0,0

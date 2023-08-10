@@ -1,0 +1,1406 @@
+06:36:46.007 [main] INFO snr.h - Building CompilationUnit takes 664 ms
+06:36:46.160 [main] INFO snr.e - Compilation takes 149 ms
+Session cannot be resolved to a type
+SessionFactory cannot be resolved to a type
+Configuration cannot be resolved to a type
+Query cannot be resolved to a type
+List cannot be resolved to a type
+Iterator cannot be resolved to a type
+Return without setting candidates for Type14
+Finding class definition name: Configuration isfull? false fields: [] methods: [<init>, configure] argument sizes: [0, 0]
+Adding candidates [org.hibernate.cfg.Configuration] to Type8
+Return without setting candidates for Type50
+Finding class definition name: List isfull? false fields: [] methods: [iterator] argument sizes: [0]
+Adding candidates [java.util.List, java.util.List] to Type29
+Return without setting candidates for Type15
+Return without setting candidates for Type31
+Adding candidate void to Type2
+Return without setting candidates for Type21
+Return without setting candidates for Type40
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type16
+Return without setting candidates for Type12
+Return without setting candidates for Type13
+Finding class definition name: Session isfull? false fields: [] methods: [getNamedQuery, flush, close] argument sizes: [1, 0, 0]
+Adding candidates [org.hibernate.Session, org.hibernate.classic.Session] to Type5
+Return without setting candidates for Type24
+Return without setting candidates for Type51
+Return without setting candidates for Type41
+Finding class definition name: Object isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.Object, java.lang.Object] to Type37
+Finding class definition name: SessionFactory isfull? false fields: [] methods: [openSession] argument sizes: [0]
+Adding candidates [org.hibernate.SessionFactory] to Type7
+Return without setting candidates for Type9
+Return without setting candidates for Type6
+Return without setting candidates for Type43
+Finding class definition name: Iterator isfull? false fields: [] methods: [next, hasNext] argument sizes: [0, 0]
+Adding candidates [java.util.Iterator, java.util.Iterator] to Type32
+Return without setting candidates for Type23
+Return without setting candidates for Type19
+Return without setting candidates for Type11
+Return without setting candidates for Type20
+Return without setting candidates for Type42
+Return without setting candidates for Type33
+Return without setting candidates for Type28
+Return without setting candidates for Type34
+Finding class definition name: null isfull? false fields: [] methods: [buildSessionFactory] argument sizes: [0]
+Adding candidates [org.hibernate.cfg.Configuration] to Type10
+Return without setting candidates for Type48
+Return without setting candidates for Type25
+Return without setting candidates for Type26
+Return without setting candidates for Type30
+Return without setting candidates for Type36
+Return without setting candidates for Type27
+Return without setting candidates for Type44
+Finding class definition name: System isfull? false fields: [out] methods: [] argument sizes: []
+Adding candidates [] to Type17
+06:36:47.200 [main] INFO snr.G - Cannot find class definition for System with full name: false, with fields: [out], with methods: [], and argument sizes:[]
+06:36:47.200 [main] INFO snr.G - Cannot load candidates for Type17.
+   0. simple name: System
+   1. field: Type18 out;
+Finding class definition name: Query isfull? false fields: [] methods: [list] argument sizes: [0]
+Adding candidates [org.hibernate.Query] to Type22
+Return without setting candidates for Type35
+Finding class definition name: null isfull? false fields: [length] methods: [] argument sizes: []
+Adding candidates [java.io.OptionalDataException, java.io.OptionalDataException] to Type38
+Return without setting candidates for Type39
+Return without setting candidates for Type49
+Finding class definition name: null isfull? false fields: [] methods: [print, println, println] argument sizes: [1, 1, 1]
+Adding candidates [java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter] to Type18
+06:36:47.357 [main] INFO snr.G - Loading initial candidates takes 1031 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. simple name: void
+   1. subtype: Type9
+   2. full name: void
+[void]
+Before TypeVariable: Type7, Candidates: 1
+   0. simple name: SessionFactory
+   1. subtype: Type12
+   2. method: Type15 openSession();
+[org.hibernate.SessionFactory]
+Before TypeVariable: Type8, Candidates: 1
+   0. simple name: Configuration
+   1. method: Type11 configure();
+   2. method: Type9 <init>();
+[org.hibernate.cfg.Configuration]
+Before TypeVariable: Type10, Candidates: 1
+   0. method: Type13 buildSessionFactory();
+   1. subtype: Type11
+[org.hibernate.cfg.Configuration]
+Before TypeVariable: Type22, Candidates: 1
+   0. simple name: Query
+   1. subtype: Type23
+   2. method: Type31 list();
+[org.hibernate.Query]
+Before TypeVariable: Type5, Candidates: 2
+   0. method: Type49 flush();
+   1. method: Type51 close();
+   2. subtype: Type6
+   3. simple name: Session
+   4. subtype: Type14
+   5. method: Type25 getNamedQuery(Type24);
+[org.hibernate.classic.Session, org.hibernate.Session]
+Before TypeVariable: Type16, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type29, Candidates: 2
+   0. subtype: Type30
+   1. simple name: List
+   2. method: Type34 iterator();
+[java.util.List, java.util.List]
+Before TypeVariable: Type32, Candidates: 2
+   0. subtype: Type33
+   1. method: Type40 next();
+   2. method: Type36 hasNext();
+   3. simple name: Iterator
+[java.util.Iterator, java.util.Iterator]
+Before TypeVariable: Type37, Candidates: 2
+   0. array type: Type38
+   1. simple name: Object
+[java.lang.Object, java.lang.Object]
+Before TypeVariable: Type38, Candidates: 2
+   0. field: Type41 length;
+[java.io.OptionalDataException, java.io.OptionalDataException]
+Before TypeVariable: Type18, Candidates: 4
+   0. method: Type28 print(Type27);
+   1. method: Type21 println(Type20);
+   2. method: Type44 println(Type43);
+[java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+Before TypeVariable: Type6, Candidates: 0
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type11, Candidates: 0
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type13, Candidates: 0
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type15
+[]
+Before TypeVariable: Type15, Candidates: 0
+[]
+Before TypeVariable: Type17, Candidates: 0
+   0. simple name: System
+   1. field: Type18 out;
+[]
+Before TypeVariable: Type19, Candidates: 0
+   0. subtype: Type21
+[]
+Before TypeVariable: Type20, Candidates: 0
+   0. subtype: Type16
+[]
+Before TypeVariable: Type21, Candidates: 0
+[]
+Before TypeVariable: Type23, Candidates: 0
+   0. subtype: Type25
+[]
+Before TypeVariable: Type24, Candidates: 0
+   0. subtype: Type16
+[]
+Before TypeVariable: Type25, Candidates: 0
+[]
+Before TypeVariable: Type26, Candidates: 0
+   0. subtype: Type28
+[]
+Before TypeVariable: Type27, Candidates: 0
+   0. subtype: Type16
+[]
+Before TypeVariable: Type28, Candidates: 0
+[]
+Before TypeVariable: Type30, Candidates: 0
+   0. subtype: Type31
+[]
+Before TypeVariable: Type31, Candidates: 0
+[]
+Before TypeVariable: Type33, Candidates: 0
+   0. subtype: Type34
+[]
+Before TypeVariable: Type34, Candidates: 0
+[]
+Before TypeVariable: Type35, Candidates: 0
+   0. subtype: Type36
+[]
+Before TypeVariable: Type36, Candidates: 0
+[]
+Before TypeVariable: Type39, Candidates: 0
+   0. subtype: Type38
+   1. subtype: Type40
+[]
+Before TypeVariable: Type40, Candidates: 0
+[]
+Before TypeVariable: Type41, Candidates: 0
+[]
+Before TypeVariable: Type42, Candidates: 0
+   0. subtype: Type44
+[]
+Before TypeVariable: Type43, Candidates: 0
+   0. subtype: Type41
+[]
+Before TypeVariable: Type44, Candidates: 0
+[]
+Before TypeVariable: Type48, Candidates: 0
+   0. subtype: Type49
+[]
+Before TypeVariable: Type49, Candidates: 0
+[]
+Before TypeVariable: Type50, Candidates: 0
+   0. subtype: Type51
+[]
+Before TypeVariable: Type51, Candidates: 0
+[]
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type2
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint full name: void
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type16
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type2
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: Session
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type7
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: SessionFactory
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type8
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: Configuration
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type16
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type17
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: System
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type22
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: Query
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type29
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: List
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type32
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: Iterator
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type37
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint simple name: Object
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type17
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint field: Type18 out;
+06:36:47.368 [main] INFO snr.G - Populate candidates for type variable Type38
+06:36:47.368 [main] INFO snr.G - Populate candidates for type constraint field: Type41 length;
+06:36:47.369 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.369 [main] INFO snr.G - Populate candidates for type constraint method: Type51 close();
+Processing method constraint method: Type51 close(); on Type5
+Current solution for c Type5 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
+Current solution for r Type51 is uninit ? false []
+Looking at method: public abstract Ljava/sql/Connection; close()
+Looking at method: public abstract Ljava/sql/Connection; close()
+updated solution for c Type5 [org.hibernate.classic.Session, org.hibernate.Session]
+updated solution for r Type51 [java.sql.Connection]
+06:36:47.373 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.373 [main] INFO snr.G - Populate candidates for type constraint method: Type49 flush();
+Processing method constraint method: Type49 flush(); on Type5
+Current solution for c Type5 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
+Current solution for r Type49 is uninit ? false []
+Looking at method: public abstract V flush()
+Looking at method: public abstract V flush()
+updated solution for c Type5 [org.hibernate.classic.Session, org.hibernate.Session]
+updated solution for r Type49 [void]
+06:36:47.373 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.373 [main] INFO snr.G - Populate candidates for type constraint method: Type25 getNamedQuery(Type24);
+Processing method constraint method: Type25 getNamedQuery(Type24); on Type5
+Current solution for c Type5 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
+Current solution for r Type25 is uninit ? false []
+Current solution for p0 Type24 is uninit ? false []
+Looking at method: public abstract Lorg/hibernate/Query; getNamedQuery(Ljava/lang/String;)
+Looking at method: public abstract Lorg/hibernate/Query; getNamedQuery(Ljava/lang/String;)
+updated solution for c Type5 [org.hibernate.classic.Session, org.hibernate.Session]
+updated solution for r Type25 [org.hibernate.Query]
+updated solution for p0 Type24 [java.lang.String]
+06:36:47.376 [main] INFO snr.G - Populate candidates for type variable Type7
+06:36:47.376 [main] INFO snr.G - Populate candidates for type constraint method: Type15 openSession();
+Processing method constraint method: Type15 openSession(); on Type7
+Current solution for c Type7 is uninit ? false [org.hibernate.SessionFactory]
+Current solution for r Type15 is uninit ? false []
+Looking at method: public abstract Lorg/hibernate/classic/Session; openSession()
+updated solution for c Type7 [org.hibernate.SessionFactory]
+updated solution for r Type15 [org.hibernate.classic.Session]
+06:36:47.377 [main] INFO snr.G - Populate candidates for type variable Type8
+06:36:47.377 [main] INFO snr.G - Populate candidates for type constraint method: Type9 <init>();
+Processing method constraint method: Type9 <init>(); on Type8
+Current solution for c Type8 is uninit ? false [org.hibernate.cfg.Configuration]
+Current solution for r Type9 is uninit ? false []
+Looking at method: public V <init>()
+updated solution for c Type8 [org.hibernate.cfg.Configuration]
+updated solution for r Type9 [void]
+06:36:47.377 [main] INFO snr.G - Populate candidates for type variable Type8
+06:36:47.377 [main] INFO snr.G - Populate candidates for type constraint method: Type11 configure();
+Processing method constraint method: Type11 configure(); on Type8
+Current solution for c Type8 is uninit ? false [org.hibernate.cfg.Configuration]
+Current solution for r Type11 is uninit ? false []
+Looking at method: public Lorg/hibernate/cfg/Configuration; configure()
+updated solution for c Type8 [org.hibernate.cfg.Configuration]
+updated solution for r Type11 [org.hibernate.cfg.Configuration]
+06:36:47.378 [main] INFO snr.G - Populate candidates for type variable Type10
+06:36:47.378 [main] INFO snr.G - Populate candidates for type constraint method: Type13 buildSessionFactory();
+Processing method constraint method: Type13 buildSessionFactory(); on Type10
+Current solution for c Type10 is uninit ? false [org.hibernate.cfg.Configuration]
+Current solution for r Type13 is uninit ? false []
+Looking at method: public Lorg/hibernate/SessionFactory; buildSessionFactory()
+updated solution for c Type10 [org.hibernate.cfg.Configuration]
+updated solution for r Type13 [org.hibernate.SessionFactory]
+06:36:47.378 [main] INFO snr.G - Populate candidates for type variable Type18
+06:36:47.378 [main] INFO snr.G - Populate candidates for type constraint method: Type44 println(Type43);
+Processing method constraint method: Type44 println(Type43); on Type18
+Current solution for c Type18 is uninit ? false [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+Current solution for r Type44 is uninit ? false []
+Current solution for p0 Type43 is uninit ? false []
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+updated solution for c Type18 [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+updated solution for r Type44 [void]
+updated solution for p0 Type43 [int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+06:36:47.381 [main] INFO snr.G - Populate candidates for type variable Type18
+06:36:47.381 [main] INFO snr.G - Populate candidates for type constraint method: Type21 println(Type20);
+Processing method constraint method: Type21 println(Type20); on Type18
+Current solution for c Type18 is uninit ? false [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+Current solution for r Type21 is uninit ? false []
+Current solution for p0 Type20 is uninit ? false []
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+updated solution for c Type18 [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+updated solution for r Type21 [void]
+updated solution for p0 Type20 [int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+06:36:47.382 [main] INFO snr.G - Populate candidates for type variable Type18
+06:36:47.382 [main] INFO snr.G - Populate candidates for type constraint method: Type28 print(Type27);
+Processing method constraint method: Type28 print(Type27); on Type18
+Current solution for c Type18 is uninit ? false [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+Current solution for r Type28 is uninit ? false []
+Current solution for p0 Type27 is uninit ? false []
+Looking at method: public V print(Z)
+Looking at method: public V print(J)
+Looking at method: public V print(Ljava/lang/Object;)
+Looking at method: public V print(I)
+Looking at method: public V print(D)
+Looking at method: public V print(C)
+Looking at method: public V print(F)
+Looking at method: public V print([C)
+Looking at method: public V print(Ljava/lang/String;)
+Looking at method: public V print(Z)
+Looking at method: public V print(J)
+Looking at method: public V print(Ljava/lang/Object;)
+Looking at method: public V print(I)
+Looking at method: public V print(D)
+Looking at method: public V print(C)
+Looking at method: public V print(F)
+Looking at method: public V print([C)
+Looking at method: public V print(Ljava/lang/String;)
+Looking at method: public V print(Z)
+Looking at method: public V print(J)
+Looking at method: public V print(Ljava/lang/Object;)
+Looking at method: public V print(I)
+Looking at method: public V print(D)
+Looking at method: public V print(C)
+Looking at method: public V print(F)
+Looking at method: public V print([C)
+Looking at method: public V print(Ljava/lang/String;)
+Looking at method: public V print(Z)
+Looking at method: public V print(J)
+Looking at method: public V print(Ljava/lang/Object;)
+Looking at method: public V print(I)
+Looking at method: public V print(D)
+Looking at method: public V print(C)
+Looking at method: public V print(F)
+Looking at method: public V print([C)
+Looking at method: public V print(Ljava/lang/String;)
+updated solution for c Type18 [java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+updated solution for r Type28 [void]
+updated solution for p0 Type27 [int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+06:36:47.383 [main] INFO snr.G - Populate candidates for type variable Type22
+06:36:47.383 [main] INFO snr.G - Populate candidates for type constraint method: Type31 list();
+Processing method constraint method: Type31 list(); on Type22
+Current solution for c Type22 is uninit ? false [org.hibernate.Query]
+Current solution for r Type31 is uninit ? false []
+Looking at method: public abstract Ljava/util/List; list()
+updated solution for c Type22 [org.hibernate.Query]
+updated solution for r Type31 [java.util.List]
+06:36:47.384 [main] INFO snr.G - Populate candidates for type variable Type29
+06:36:47.384 [main] INFO snr.G - Populate candidates for type constraint method: Type34 iterator();
+Processing method constraint method: Type34 iterator(); on Type29
+Current solution for c Type29 is uninit ? false [java.util.List, java.util.List]
+Current solution for r Type34 is uninit ? false []
+Looking at method: public abstract Ljava/util/Iterator; iterator() ()Ljava/util/Iterator<TE;>;
+Looking at method: public abstract Ljava/util/Iterator; iterator() ()Ljava/util/Iterator<TE;>;
+updated solution for c Type29 [java.util.List, java.util.List]
+updated solution for r Type34 [java.util.Iterator, java.util.Iterator]
+06:36:47.386 [main] INFO snr.G - Populate candidates for type variable Type32
+06:36:47.386 [main] INFO snr.G - Populate candidates for type constraint method: Type36 hasNext();
+Processing method constraint method: Type36 hasNext(); on Type32
+Current solution for c Type32 is uninit ? false [java.util.Iterator, java.util.Iterator]
+Current solution for r Type36 is uninit ? false []
+Looking at method: public abstract Z hasNext()
+Looking at method: public abstract Z hasNext()
+updated solution for c Type32 [java.util.Iterator, java.util.Iterator]
+updated solution for r Type36 [boolean]
+06:36:47.386 [main] INFO snr.G - Populate candidates for type variable Type32
+06:36:47.386 [main] INFO snr.G - Populate candidates for type constraint method: Type40 next();
+Processing method constraint method: Type40 next(); on Type32
+Current solution for c Type32 is uninit ? false [java.util.Iterator, java.util.Iterator]
+Current solution for r Type40 is uninit ? false []
+Looking at method: public abstract Ljava/lang/Object; next() ()TE;
+Looking at method: public abstract Ljava/lang/Object; next() ()TE;
+updated solution for c Type32 [java.util.Iterator, java.util.Iterator]
+updated solution for r Type40 [E, E]
+06:36:47.386 [main] INFO snr.G - Populate candidates for type variable Type37
+06:36:47.386 [main] INFO snr.G - Populate candidates for type constraint array type: Type38
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type2
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type5
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type14
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type7
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type10
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type12
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type14
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type19
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type21
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type20
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type22
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type23
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type23
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type25
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type24
+06:36:47.387 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+06:36:47.387 [main] INFO snr.G - Populate candidates for type variable Type26
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type28
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type27
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type29
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type30
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type30
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type31
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type32
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type33
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type33
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type34
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type35
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type36
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type39
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type38
+06:36:47.388 [main] INFO snr.G - Populate candidates for type variable Type39
+06:36:47.388 [main] INFO snr.G - Populate candidates for type constraint subtype: Type40
+06:36:47.389 [main] INFO snr.G - Populate candidates for type variable Type42
+06:36:47.389 [main] INFO snr.G - Populate candidates for type constraint subtype: Type44
+06:36:47.389 [main] INFO snr.G - Populate candidates for type variable Type43
+06:36:47.389 [main] INFO snr.G - Populate candidates for type constraint subtype: Type41
+06:36:47.389 [main] INFO snr.G - Populate candidates for type variable Type48
+06:36:47.389 [main] INFO snr.G - Populate candidates for type constraint subtype: Type49
+06:36:47.389 [main] INFO snr.G - Populate candidates for type variable Type50
+06:36:47.389 [main] INFO snr.G - Populate candidates for type constraint subtype: Type51
+After TypeVariable: Type2, Candidates: 1
+   0. simple name: void
+   1. subtype: Type9
+   2. full name: void
+[void]
+After TypeVariable: Type7, Candidates: 1
+   0. simple name: SessionFactory
+   1. subtype: Type12
+   2. method: Type15 openSession();
+[org.hibernate.SessionFactory]
+After TypeVariable: Type8, Candidates: 1
+   0. simple name: Configuration
+   1. method: Type11 configure();
+   2. method: Type9 <init>();
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type9, Candidates: 1
+[void]
+After TypeVariable: Type10, Candidates: 1
+   0. method: Type13 buildSessionFactory();
+   1. subtype: Type11
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type11, Candidates: 1
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type13
+[org.hibernate.SessionFactory]
+After TypeVariable: Type13, Candidates: 1
+[org.hibernate.SessionFactory]
+After TypeVariable: Type15, Candidates: 1
+[org.hibernate.classic.Session]
+After TypeVariable: Type19, Candidates: 1
+   0. subtype: Type21
+[void]
+After TypeVariable: Type21, Candidates: 1
+[void]
+After TypeVariable: Type22, Candidates: 1
+   0. simple name: Query
+   1. subtype: Type23
+   2. method: Type31 list();
+[org.hibernate.Query]
+After TypeVariable: Type23, Candidates: 1
+   0. subtype: Type25
+[org.hibernate.Query]
+After TypeVariable: Type24, Candidates: 1
+   0. subtype: Type16
+[java.lang.String]
+After TypeVariable: Type25, Candidates: 1
+[org.hibernate.Query]
+After TypeVariable: Type26, Candidates: 1
+   0. subtype: Type28
+[void]
+After TypeVariable: Type28, Candidates: 1
+[void]
+After TypeVariable: Type31, Candidates: 1
+[java.util.List]
+After TypeVariable: Type35, Candidates: 1
+   0. subtype: Type36
+[boolean]
+After TypeVariable: Type36, Candidates: 1
+[boolean]
+After TypeVariable: Type41, Candidates: 1
+[int]
+After TypeVariable: Type42, Candidates: 1
+   0. subtype: Type44
+[void]
+After TypeVariable: Type44, Candidates: 1
+[void]
+After TypeVariable: Type48, Candidates: 1
+   0. subtype: Type49
+[void]
+After TypeVariable: Type49, Candidates: 1
+[void]
+After TypeVariable: Type50, Candidates: 1
+   0. subtype: Type51
+[java.sql.Connection]
+After TypeVariable: Type51, Candidates: 1
+[java.sql.Connection]
+After TypeVariable: Type5, Candidates: 2
+   0. method: Type49 flush();
+   1. method: Type51 close();
+   2. subtype: Type6
+   3. simple name: Session
+   4. subtype: Type14
+   5. method: Type25 getNamedQuery(Type24);
+[org.hibernate.classic.Session, org.hibernate.Session]
+After TypeVariable: Type6, Candidates: 2
+[org.hibernate.classic.Session, org.hibernate.Session]
+After TypeVariable: Type14, Candidates: 2
+   0. subtype: Type15
+[org.hibernate.classic.Session, org.hibernate.Session]
+After TypeVariable: Type16, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type29, Candidates: 2
+   0. subtype: Type30
+   1. simple name: List
+   2. method: Type34 iterator();
+[java.util.List, java.util.List]
+After TypeVariable: Type30, Candidates: 2
+   0. subtype: Type31
+[java.util.List, java.util.List]
+After TypeVariable: Type32, Candidates: 2
+   0. subtype: Type33
+   1. method: Type40 next();
+   2. method: Type36 hasNext();
+   3. simple name: Iterator
+[java.util.Iterator, java.util.Iterator]
+After TypeVariable: Type33, Candidates: 2
+   0. subtype: Type34
+[java.util.Iterator, java.util.Iterator]
+After TypeVariable: Type34, Candidates: 2
+[java.util.Iterator, java.util.Iterator]
+After TypeVariable: Type37, Candidates: 2
+   0. array type: Type38
+   1. simple name: Object
+[java.lang.Object, java.lang.Object]
+After TypeVariable: Type38, Candidates: 2
+   0. field: Type41 length;
+[java.lang.Object[], java.lang.Object[]]
+After TypeVariable: Type40, Candidates: 2
+[E, E]
+After TypeVariable: Type18, Candidates: 4
+   0. method: Type28 print(Type27);
+   1. method: Type21 println(Type20);
+   2. method: Type44 println(Type43);
+[java.io.PrintWriter, java.io.PrintStream, java.io.PrintWriter, java.io.PrintStream]
+After TypeVariable: Type20, Candidates: 4
+   0. subtype: Type16
+[java.lang.Object, java.lang.String, java.lang.String, java.lang.Object]
+After TypeVariable: Type27, Candidates: 4
+   0. subtype: Type16
+[java.lang.Object, java.lang.String, java.lang.String, java.lang.Object]
+After TypeVariable: Type43, Candidates: 6
+   0. subtype: Type41
+[int, java.lang.String, double, java.lang.String, long, float]
+After TypeVariable: Type17, Candidates: 0
+   0. simple name: System
+   1. field: Type18 out;
+[]
+After TypeVariable: Type39, Candidates: 0
+   0. subtype: Type38
+   1. subtype: Type40
+[]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:double	double	double
+	jar:android-13.jar:1:java.io.PrintStream	java.io.PrintStream	PrintStream
+	jar:android-13.jar:1:java.lang.Object	java.lang.Object	Object
+	jar:android-13.jar:1:E	E	E
+	jar:android-13.jar:1:java.util.List	java.util.List	List
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	org.hibernate.SessionFactory	SessionFactory
+	openjdk:jdk:1.8.0:float	float	float
+	openjdk:jdk:1.8.0:char	char	char
+	openjdk:jdk:1.8.0:java.util.List	java.util.List	List
+	jar:android-13.jar:1:java.lang.Object[]	java.lang.Object[]	Object[]
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	org.hibernate.cfg.Configuration	Configuration
+	openjdk:jdk:1.8.0:boolean	boolean	boolean
+	jar:android-13.jar:1:java.util.Iterator	java.util.Iterator	Iterator
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	org.hibernate.Query	Query
+	jar:android-13.jar:1:java.io.PrintWriter	java.io.PrintWriter	PrintWriter
+	openjdk:jdk:1.8.0:char[]	char[]	char[]
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.sql.Connection	java.sql.Connection	Connection
+	openjdk:jdk:1.8.0:java.lang.Object[]	java.lang.Object[]	Object[]
+	openjdk:jdk:1.8.0:java.io.PrintStream	java.io.PrintStream	PrintStream
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	org.hibernate.Session	Session
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	org.hibernate.classic.Session	Session
+	openjdk:jdk:1.8.0:java.lang.Object	java.lang.Object	Object
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:E	E	E
+	openjdk:jdk:1.8.0:long	long	long
+	openjdk:jdk:1.8.0:java.util.Iterator	java.util.Iterator	Iterator
+	openjdk:jdk:1.8.0:java.io.PrintWriter	java.io.PrintWriter	PrintWriter
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Object[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.util.Iterator	jar:android-13.jar:1:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.lang.Object[]	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.Iterator	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:float
+	openjdk:jdk:1.8.0:java.io.PrintWriter	jar:android-13.jar:1:java.io.PrintWriter
+	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:java.io.PrintWriter
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:double
+	openjdk:jdk:1.8.0:double	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:boolean	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.PrintStream	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Iterator	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:long
+	openjdk:jdk:1.8.0:java.util.Iterator	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Object	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object[]	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.Object	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.Iterator	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.sql.Connection	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object[]	openjdk:jdk:1.8.0:java.lang.Object[]
+	openjdk:jdk:1.8.0:java.lang.Object[]	jar:android-13.jar:1:java.lang.Object[]
+	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:java.util.Iterator
+	openjdk:jdk:1.8.0:java.util.Iterator	jar:android-13.jar:1:java.util.Iterator
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.io.PrintStream	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.io.PrintStream	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.util.List
+	openjdk:jdk:1.8.0:java.lang.Object[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.util.List
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:float
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:double	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.Iterator	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:boolean	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.lang.String	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:E	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.sql.Connection	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:double
+	jar:android-13.jar:1:java.io.PrintWriter	jar:android-13.jar:1:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:float	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.PrintWriter	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.io.PrintStream
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.io.PrintStream
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.sql.Connection	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.io.PrintWriter	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:char[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:long
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:long	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintWriter	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.io.PrintWriter	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.sql.Connection	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:double
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:float
+	openjdk:jdk:1.8.0:float	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	jar:android-13.jar:1:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	openjdk:jdk:1.8.0:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.io.PrintWriter	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:float	openjdk:jdk:1.8.0:double
+	openjdk:jdk:1.8.0:char[]	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.sql.Connection	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.sql.Connection	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:char	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:int
+	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:E	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Object	openjdk:jdk:1.8.0:E
+Printing: jfqlname.facts
+	Type16	java.lang.String
+	Type2	void
+Printing: type.facts
+	Type2
+	Type50
+	Type51
+	Type5
+	Type30
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type35
+	Type14
+	Type36
+	Type15
+	Type37
+	Type16
+	Type38
+	Type31
+	Type32
+	Type10
+	Type11
+	Type33
+	Type12
+	Type34
+	Type28
+	Type29
+	Type40
+	Type41
+	Type24
+	Type25
+	Type48
+	Type26
+	Type27
+	Type49
+	Type20
+	Type42
+	Type21
+	Type43
+	Type44
+	Type22
+	Type23
+	Type17
+	Type39
+	Type18
+	Type19
+Printing: candidate.facts
+	Type50	jar:android-13.jar:1:java.sql.Connection
+	Type51	jar:android-13.jar:1:java.sql.Connection
+	Type16	jar:android-13.jar:1:java.lang.String
+	Type11	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+	Type10	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+	Type29	openjdk:jdk:1.8.0:java.util.List
+	Type43	openjdk:jdk:1.8.0:double
+	Type8	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+	Type38	jar:android-13.jar:1:java.lang.Object[]
+	Type28	openjdk:jdk:1.8.0:void
+	Type14	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	Type18	jar:android-13.jar:1:java.io.PrintWriter
+	Type5	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	Type20	jar:android-13.jar:1:java.lang.Object
+	Type43	openjdk:jdk:1.8.0:long
+	Type30	openjdk:jdk:1.8.0:java.util.List
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	Type27	jar:android-13.jar:1:java.lang.Object
+	Type20	openjdk:jdk:1.8.0:java.lang.String
+	Type13	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session
+	Type43	openjdk:jdk:1.8.0:int
+	Type43	jar:android-13.jar:1:java.lang.String
+	Type5	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session
+	Type12	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory
+	Type27	openjdk:jdk:1.8.0:java.lang.String
+	Type21	openjdk:jdk:1.8.0:void
+	Type32	jar:android-13.jar:1:java.util.Iterator
+	Type33	jar:android-13.jar:1:java.util.Iterator
+	Type34	jar:android-13.jar:1:java.util.Iterator
+	Type15	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session
+	Type41	openjdk:jdk:1.8.0:int
+	Type14	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session
+	Type7	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory
+	Type26	openjdk:jdk:1.8.0:void
+	Type19	openjdk:jdk:1.8.0:void
+	Type18	openjdk:jdk:1.8.0:java.io.PrintWriter
+	Type23	jar:hibernate-3.5.3.jar:1:org.hibernate.Query
+	Type22	jar:hibernate-3.5.3.jar:1:org.hibernate.Query
+	Type25	jar:hibernate-3.5.3.jar:1:org.hibernate.Query
+	Type37	jar:android-13.jar:1:java.lang.Object
+	Type30	jar:android-13.jar:1:java.util.List
+	Type9	openjdk:jdk:1.8.0:void
+	Type2	openjdk:jdk:1.8.0:void
+	Type16	openjdk:jdk:1.8.0:java.lang.String
+	Type31	jar:android-13.jar:1:java.util.List
+	Type18	jar:android-13.jar:1:java.io.PrintStream
+	Type29	jar:android-13.jar:1:java.util.List
+	Type27	openjdk:jdk:1.8.0:java.lang.Object
+	Type38	openjdk:jdk:1.8.0:java.lang.Object[]
+	Type40	jar:android-13.jar:1:E
+	Type20	openjdk:jdk:1.8.0:java.lang.Object
+	Type43	openjdk:jdk:1.8.0:java.lang.String
+	Type20	jar:android-13.jar:1:java.lang.String
+	Type27	jar:android-13.jar:1:java.lang.String
+	Type24	jar:android-13.jar:1:java.lang.String
+	Type42	openjdk:jdk:1.8.0:void
+	Type36	openjdk:jdk:1.8.0:boolean
+	Type44	openjdk:jdk:1.8.0:void
+	Type35	openjdk:jdk:1.8.0:boolean
+	Type40	openjdk:jdk:1.8.0:E
+	Type49	openjdk:jdk:1.8.0:void
+	Type48	openjdk:jdk:1.8.0:void
+	Type18	openjdk:jdk:1.8.0:java.io.PrintStream
+	Type43	openjdk:jdk:1.8.0:float
+	Type37	openjdk:jdk:1.8.0:java.lang.Object
+	Type33	openjdk:jdk:1.8.0:java.util.Iterator
+	Type34	openjdk:jdk:1.8.0:java.util.Iterator
+	Type32	openjdk:jdk:1.8.0:java.util.Iterator
+Printing: jmethod_dependency.facts
+	7	Type10	Type13	buildSessionFactory
+	3	Type7	Type15	openSession
+	20	Type18	Type28	print
+	17	Type32	Type36	hasNext
+	6	Type32	Type40	next
+	2	Type29	Type34	iterator
+	10	Type5	Type25	getNamedQuery
+	15	Type18	Type44	println
+	8	Type5	Type49	flush
+	1	Type8	Type9	<init>
+	0	Type8	Type11	configure
+	4	Type18	Type21	println
+	5	Type22	Type31	list
+	9	Type5	Type51	close
+Printing: jsimplename.facts
+	Type16	String
+	Type37	Object
+	Type8	Configuration
+	Type2	void
+	Type7	SessionFactory
+	Type32	Iterator
+	Type17	System
+	Type22	Query
+	Type5	Session
+	Type29	List
+Printing: jmethod.facts
+	43	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	55	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.sql.Connection	close	0
+	165	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	160	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	176	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	19	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	14	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	53	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:void	flush	0
+	170	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	24	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	50	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	buildSessionFactory	0
+	54	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:void	<init>	0
+	180	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	3	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:void	<init>	0
+	156	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	185	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	7	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	openjdk:jdk:1.8.0:void	<init>	0
+	61	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	getNamedQuery	1
+	161	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	49	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:void	<init>	0
+	169	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	155	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	8	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	30	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	171	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	47	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:void	<init>	0
+	15	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	184	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	38	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	189	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	182	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	186	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	34	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	39	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	46	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:E	next	0
+	52	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:void	<init>	0
+	177	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	10	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	29	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	162	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	17	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	32	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	157	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	5	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:void	<init>	0
+	27	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	16	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	6	jar:hibernate-3.5.3.jar:1:org.hibernate.SessionFactory	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openSession	0
+	187	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	44	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	jar:android-13.jar:1:java.util.List	list	0
+	37	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	22	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	11	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	20	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	173	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	158	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	163	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	12	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	59	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	getNamedQuery	1
+	183	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	25	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	36	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	41	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	175	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	166	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	114	openjdk:jdk:1.8.0:java.util.Iterator	openjdk:jdk:1.8.0:boolean	hasNext	0
+	181	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	31	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	42	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	48	jar:android-13.jar:1:java.util.Iterator	jar:android-13.jar:1:E	next	0
+	179	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	18	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	1	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:void	<init>	0
+	174	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	159	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	2	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.util.Iterator	iterator	0
+	28	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	116	jar:android-13.jar:1:java.util.Iterator	openjdk:jdk:1.8.0:boolean	hasNext	0
+	167	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	26	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	35	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	0	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	configure	0
+	190	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	4	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:java.util.Iterator	iterator	0
+	21	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	51	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:void	flush	0
+	23	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	9	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	178	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	print	1
+	172	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	13	jar:android-13.jar:1:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	164	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	33	openjdk:jdk:1.8.0:java.io.PrintWriter	openjdk:jdk:1.8.0:void	println	1
+	168	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+	40	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	45	jar:hibernate-3.5.3.jar:1:org.hibernate.Query	openjdk:jdk:1.8.0:void	<init>	0
+	57	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.sql.Connection	close	0
+	188	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	print	1
+Printing: jsupertype_dependency.facts
+	Type23	Type22
+	Type34	Type33
+	Type49	Type48
+	Type36	Type35
+	Type44	Type42
+	Type15	Type14
+	Type51	Type50
+	Type33	Type32
+	Type11	Type10
+	Type25	Type23
+	Type9	Type2
+	Type13	Type12
+	Type6	Type5
+	Type14	Type5
+	Type12	Type7
+	Type41	Type43
+	Type31	Type30
+	Type30	Type29
+	Type40	Type39
+	Type21	Type19
+	Type16	Type27
+	Type16	Type24
+	Type16	Type20
+	Type28	Type26
+	Type38	Type39
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	43	0	openjdk:jdk:1.8.0:int
+	165	0	openjdk:jdk:1.8.0:long
+	160	0	openjdk:jdk:1.8.0:char
+	176	0	openjdk:jdk:1.8.0:int
+	19	0	openjdk:jdk:1.8.0:char
+	14	0	openjdk:jdk:1.8.0:boolean
+	170	0	openjdk:jdk:1.8.0:float
+	24	0	openjdk:jdk:1.8.0:long
+	180	0	openjdk:jdk:1.8.0:char[]
+	156	0	openjdk:jdk:1.8.0:long
+	185	0	openjdk:jdk:1.8.0:int
+	61	0	jar:android-13.jar:1:java.lang.String
+	161	0	openjdk:jdk:1.8.0:float
+	169	0	openjdk:jdk:1.8.0:char
+	155	0	openjdk:jdk:1.8.0:boolean
+	8	0	openjdk:jdk:1.8.0:float
+	30	0	openjdk:jdk:1.8.0:char[]
+	171	0	openjdk:jdk:1.8.0:char[]
+	15	0	openjdk:jdk:1.8.0:long
+	184	0	openjdk:jdk:1.8.0:java.lang.Object
+	38	0	openjdk:jdk:1.8.0:java.lang.Object
+	189	0	openjdk:jdk:1.8.0:char[]
+	182	0	openjdk:jdk:1.8.0:boolean
+	186	0	openjdk:jdk:1.8.0:double
+	34	0	openjdk:jdk:1.8.0:int
+	39	0	openjdk:jdk:1.8.0:char[]
+	177	0	openjdk:jdk:1.8.0:double
+	10	0	openjdk:jdk:1.8.0:char
+	29	0	openjdk:jdk:1.8.0:java.lang.Object
+	162	0	openjdk:jdk:1.8.0:char[]
+	17	0	openjdk:jdk:1.8.0:float
+	32	0	openjdk:jdk:1.8.0:boolean
+	157	0	jar:android-13.jar:1:java.lang.Object
+	27	0	openjdk:jdk:1.8.0:double
+	16	0	openjdk:jdk:1.8.0:int
+	187	0	openjdk:jdk:1.8.0:char
+	37	0	openjdk:jdk:1.8.0:char
+	22	0	jar:android-13.jar:1:java.lang.String
+	11	0	jar:android-13.jar:1:java.lang.Object
+	20	0	jar:android-13.jar:1:java.lang.Object
+	173	0	openjdk:jdk:1.8.0:boolean
+	158	0	openjdk:jdk:1.8.0:int
+	163	0	jar:android-13.jar:1:java.lang.String
+	12	0	openjdk:jdk:1.8.0:char[]
+	59	0	jar:android-13.jar:1:java.lang.String
+	183	0	openjdk:jdk:1.8.0:long
+	25	0	openjdk:jdk:1.8.0:int
+	36	0	openjdk:jdk:1.8.0:double
+	41	0	openjdk:jdk:1.8.0:boolean
+	175	0	openjdk:jdk:1.8.0:java.lang.Object
+	166	0	jar:android-13.jar:1:java.lang.Object
+	181	0	openjdk:jdk:1.8.0:java.lang.String
+	31	0	openjdk:jdk:1.8.0:java.lang.String
+	42	0	openjdk:jdk:1.8.0:long
+	179	0	openjdk:jdk:1.8.0:float
+	18	0	openjdk:jdk:1.8.0:double
+	174	0	openjdk:jdk:1.8.0:long
+	159	0	openjdk:jdk:1.8.0:double
+	28	0	openjdk:jdk:1.8.0:char
+	167	0	openjdk:jdk:1.8.0:int
+	26	0	openjdk:jdk:1.8.0:float
+	35	0	openjdk:jdk:1.8.0:float
+	190	0	openjdk:jdk:1.8.0:java.lang.String
+	21	0	openjdk:jdk:1.8.0:char[]
+	23	0	openjdk:jdk:1.8.0:boolean
+	9	0	openjdk:jdk:1.8.0:double
+	178	0	openjdk:jdk:1.8.0:char
+	172	0	jar:android-13.jar:1:java.lang.String
+	13	0	jar:android-13.jar:1:java.lang.String
+	164	0	openjdk:jdk:1.8.0:boolean
+	33	0	openjdk:jdk:1.8.0:long
+	168	0	openjdk:jdk:1.8.0:double
+	40	0	openjdk:jdk:1.8.0:java.lang.String
+	188	0	openjdk:jdk:1.8.0:float
+Printing: jmethod_param_dependency.facts
+	20	0	Type27
+	10	0	Type24
+	15	0	Type43
+	4	0	Type20
+All artifact rank: [jar:hibernate-3.5.3.jar:1, jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type19 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type20 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type50 -> java.sql.Connection
+Added artifact: jar:android-13.jar:1
+Found Type42 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type48 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type40 -> E
+Added artifact: jar:android-13.jar:1
+Found Type26 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type27 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type24 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type37 -> java.lang.Object
+Added artifact: jar:android-13.jar:1
+Found Type35 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type38 -> java.lang.Object[]
+Added artifact: jar:android-13.jar:1
+Found Type43 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type21 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type16 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type51 -> java.sql.Connection
+Added artifact: jar:android-13.jar:1
+Found Type41 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type32 -> java.util.Iterator
+Added artifact: jar:android-13.jar:1
+Found Type28 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type25 -> org.hibernate.Query
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type36 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type44 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type49 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type8 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type5 -> org.hibernate.Session
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type33 -> java.util.Iterator
+Added artifact: jar:android-13.jar:1
+Found Type18 -> java.io.PrintWriter
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type14 -> org.hibernate.Session
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type6 -> org.hibernate.Session
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type34 -> java.util.Iterator
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type29 -> java.util.List
+Added artifact: jar:android-13.jar:1
+Found Type15 -> org.hibernate.classic.Session
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type7 -> org.hibernate.SessionFactory
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type30 -> java.util.List
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type31 -> java.util.List
+Added artifact: jar:android-13.jar:1
+Found Type12 -> org.hibernate.SessionFactory
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type13 -> org.hibernate.SessionFactory
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type22 -> org.hibernate.Query
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type23 -> org.hibernate.Query
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type10 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type11 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Quiting souffle
+Bind Type14 to org.hibernate.Session, dumping:
+Bind Type50 to java.sql.Connection, dumping:
+Bind Type8 to org.hibernate.cfg.Configuration, dumping:
+Bind Type29 to java.util.List, dumping:
+Bind Type15 to org.hibernate.classic.Session, dumping:
+Bind Type2 to void, dumping:
+Bind Type21 to void, dumping:
+Bind Type31 to java.util.List, dumping:
+Bind Type40 to E, dumping:
+Bind Type16 to java.lang.String, dumping:
+Bind Type12 to org.hibernate.SessionFactory, dumping:
+Bind Type13 to org.hibernate.SessionFactory, dumping:
+Bind Type24 to java.lang.String, dumping:
+Bind Type5 to org.hibernate.Session, dumping:
+Bind Type51 to java.sql.Connection, dumping:
+Bind Type41 to int, dumping:
+Bind Type37 to java.lang.Object, dumping:
+Bind Type43 to java.lang.String, dumping:
+Bind Type9 to void, dumping:
+Bind Type6 to org.hibernate.Session, dumping:
+Bind Type7 to org.hibernate.SessionFactory, dumping:
+Bind Type32 to java.util.Iterator, dumping:
+Bind Type19 to void, dumping:
+Bind Type23 to org.hibernate.Query, dumping:
+Bind Type20 to java.lang.String, dumping:
+Bind Type11 to org.hibernate.cfg.Configuration, dumping:
+Bind Type42 to void, dumping:
+Bind Type28 to void, dumping:
+Bind Type33 to java.util.Iterator, dumping:
+Bind Type34 to java.util.Iterator, dumping:
+Bind Type48 to void, dumping:
+Bind Type10 to org.hibernate.cfg.Configuration, dumping:
+Bind Type26 to void, dumping:
+Bind Type25 to org.hibernate.Query, dumping:
+Bind Type30 to java.util.List, dumping:
+Bind Type36 to boolean, dumping:
+Bind Type27 to java.lang.String, dumping:
+Bind Type44 to void, dumping:
+Bind Type22 to org.hibernate.Query, dumping:
+Bind Type35 to boolean, dumping:
+Bind Type38 to java.lang.Object[], dumping:
+Bind Type49 to void, dumping:
+Bind Type18 to java.io.PrintWriter, dumping:
+06:36:47.806 [main] INFO snr.k - Fixing Type5 with org.hibernate.Session
+06:36:47.807 [main] INFO snr.k - Fixing Type7 with org.hibernate.SessionFactory
+06:36:47.807 [main] INFO snr.k - Fixing Type8 with org.hibernate.cfg.Configuration
+06:36:47.807 [main] INFO snr.k - Fixing Type22 with org.hibernate.Query
+06:36:47.807 [main] INFO snr.k - Fixing Type29 with java.util.List
+06:36:47.807 [main] INFO snr.k - Fixing Type32 with java.util.Iterator
+06:36:47.867 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+06:36:47.869 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+06:36:47.869 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+06:36:47.869 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+06:36:47.869 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+
+import java.util.List;
+import org.hibernate.Session;
+import java.util.Iterator;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;//ID = 3681045
+
+public class hibernate_class_40 {
+
+	public static void main(String[] args) {
+
+		Session session = null;
+		//String query = "select example.id, example.data from Example example";
+
+		try {
+
+			SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+			session = sessionFactory.openSession();
+
+			System.out.println("selecting records");
+			Query q = session.getNamedQuery("getRecordsSP");
+			//      Query q =  session.createSQLQuery("call getRecords","",Example.class);
+
+			System.out.print("Done");
+			List l = q.list();
+
+			for (Iterator it = l.iterator(); it.hasNext();) {
+				Object row[] = (Object[]) it.next();
+				System.out.println(row.length);
+				//      System.out.println(row[0]);
+				//      System.out.println("ID " + row[0]);
+				//  System.out.println("Data "+ row[1]);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.flush();
+			session.close();
+
+		}
+	}
+}
+06:36:47.869 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+06:36:47.916 [main] INFO snr.e - Compilation takes 46 ms

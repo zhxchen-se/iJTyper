@@ -1,0 +1,358 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android32.java
+Expect check=106
+Cannot find matching typeVariable for: public class Android32 {
+  public void start() throws IOException {
+    String state=android.os.Environment.getExternalStorageState();
+    if (!state.equals(Environment.MEDIA_MOUNTED)) {
+      throw new IOException("SD card is not mounted. It is " + state + ".");
+    }
+    String path="Root";
+    File directory=new File(path).getParentFile();
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw new IOException("Path to file could not be created.");
+    }
+    MediaRecorder recorder=new MediaRecorder();
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+    recorder.setVideoFrameRate(15);
+    recorder.setVideoSize(176,144);
+    recorder.setOutputFile(path);
+    recorder.prepare();
+    recorder.start();
+  }
+}
+
+Cannot find matching typeVariable for: Android32
+Cannot find matching typeVariable for: public class Android32 {
+  public void start() throws IOException {
+    String state=android.os.Environment.getExternalStorageState();
+    if (!state.equals(Environment.MEDIA_MOUNTED)) {
+      throw new IOException("SD card is not mounted. It is " + state + ".");
+    }
+    String path="Root";
+    File directory=new File(path).getParentFile();
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw new IOException("Path to file could not be created.");
+    }
+    MediaRecorder recorder=new MediaRecorder();
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+    recorder.setVideoFrameRate(15);
+    recorder.setVideoSize(176,144);
+    recorder.setOutputFile(path);
+    recorder.prepare();
+    recorder.start();
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.io.File;
+import java.io.IOException;
+import android.media.MediaRecorder;
+import android.os.Environment;
+public class Android32 {
+  public void start() throws IOException {
+    String state=android.os.Environment.getExternalStorageState();
+    if (!state.equals(Environment.MEDIA_MOUNTED)) {
+      throw new IOException("SD card is not mounted. It is " + state + ".");
+    }
+    String path="Root";
+    File directory=new File(path).getParentFile();
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw new IOException("Path to file could not be created.");
+    }
+    MediaRecorder recorder=new MediaRecorder();
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+    recorder.setVideoFrameRate(15);
+    recorder.setVideoSize(176,144);
+    recorder.setOutputFile(path);
+    recorder.prepare();
+    recorder.start();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: start
+Cannot find matching typeVariable for: public void start() throws IOException {
+  String state=android.os.Environment.getExternalStorageState();
+  if (!state.equals(Environment.MEDIA_MOUNTED)) {
+    throw new IOException("SD card is not mounted. It is " + state + ".");
+  }
+  String path="Root";
+  File directory=new File(path).getParentFile();
+  if (!directory.exists() && !directory.mkdirs()) {
+    throw new IOException("Path to file could not be created.");
+  }
+  MediaRecorder recorder=new MediaRecorder();
+  recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+  recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+  recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+  recorder.setVideoFrameRate(15);
+  recorder.setVideoSize(176,144);
+  recorder.setOutputFile(path);
+  recorder.prepare();
+  recorder.start();
+}
+
+Cannot find matching typeVariable for: public class Android32 {
+  public void start() throws IOException {
+    String state=android.os.Environment.getExternalStorageState();
+    if (!state.equals(Environment.MEDIA_MOUNTED)) {
+      throw new IOException("SD card is not mounted. It is " + state + ".");
+    }
+    String path="Root";
+    File directory=new File(path).getParentFile();
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw new IOException("Path to file could not be created.");
+    }
+    MediaRecorder recorder=new MediaRecorder();
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+    recorder.setVideoFrameRate(15);
+    recorder.setVideoSize(176,144);
+    recorder.setOutputFile(path);
+    recorder.prepare();
+    recorder.start();
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.io.File;
+import java.io.IOException;
+import android.media.MediaRecorder;
+import android.os.Environment;
+public class Android32 {
+  public void start() throws IOException {
+    String state=android.os.Environment.getExternalStorageState();
+    if (!state.equals(Environment.MEDIA_MOUNTED)) {
+      throw new IOException("SD card is not mounted. It is " + state + ".");
+    }
+    String path="Root";
+    File directory=new File(path).getParentFile();
+    if (!directory.exists() && !directory.mkdirs()) {
+      throw new IOException("Path to file could not be created.");
+    }
+    MediaRecorder recorder=new MediaRecorder();
+    recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+    recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+    recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263);
+    recorder.setVideoFrameRate(15);
+    recorder.setVideoSize(176,144);
+    recorder.setOutputFile(path);
+    recorder.prepare();
+    recorder.start();
+  }
+}
+
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: state=android.os.Environment.getExternalStorageState()
+For node: state=android.os.Environment.getExternalStorageState() expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: state expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: android.os.Environment.getExternalStorageState() expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: android.os.Environment
+For node: android.os.Environment expected fqn: android.os.Environment with type: Type6 got: java.lang.String
+No match for actual type SimpleName: android and also not find solution for: Type5
+No match for actual type SimpleName: os and also not find solution for: Type5
+Did not find solution for node: Environment with type Type5
+Cannot find matching typeVariable for: getExternalStorageState
+For node: getExternalStorageState expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: !state.equals(Environment.MEDIA_MOUNTED) expected fqn: boolean with type: Type9 got: java.lang.Number
+For node: state.equals(Environment.MEDIA_MOUNTED) expected fqn: boolean with type: Type9 got: java.lang.Number
+For node: state expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: equals
+For node: equals expected fqn: boolean with type: Type9 got: java.lang.Number
+Cannot find matching typeVariable for: Environment.MEDIA_MOUNTED
+For node: Environment.MEDIA_MOUNTED expected fqn: java.lang.String with type: Type9 got: java.lang.Number
+Did not find solution for node: Environment with type Type5
+Did not find solution for node: MEDIA_MOUNTED with type Type8
+For node: new IOException("SD card is not mounted. It is " + state + ".") expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: "SD card is not mounted. It is " + state + "." expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "SD card is not mounted. It is " expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: state expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: "." expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Cannot find matching typeVariable for: path="Root"
+For node: path="Root" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: path expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "Root" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: File expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type16 got: java.io.File
+Cannot find matching typeVariable for: directory=new File(path).getParentFile()
+For node: directory=new File(path).getParentFile() expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: directory expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: new File(path).getParentFile() expected fqn: java.io.File with type: Type19 got: java.io.File
+For node: new File(path) expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type16 got: java.io.File
+For node: path expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Cannot find matching typeVariable for: getParentFile
+For node: getParentFile expected fqn: java.io.File with type: Type19 got: java.io.File
+For node: !directory.exists() && !directory.mkdirs() expected fqn: boolean with type: Type21 got: java.lang.Number
+For node: !directory.exists() expected fqn: boolean with type: Type21 got: java.lang.Number
+For node: directory.exists() expected fqn: boolean with type: Type21 got: java.lang.Number
+For node: directory expected fqn: java.io.File with type: Type16 got: java.io.File
+Cannot find matching typeVariable for: exists
+For node: exists expected fqn: boolean with type: Type21 got: java.lang.Number
+Did not find solution for node: !directory.mkdirs() with type Type23
+Did not find solution for node: directory.mkdirs() with type Type23
+For node: directory expected fqn: java.io.File with type: Type16 got: java.io.File
+Cannot find matching typeVariable for: mkdirs
+Did not find solution for node: mkdirs with type Type23
+For node: new IOException("Path to file could not be created.") expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type3 got: java.io.IOException
+For node: "Path to file could not be created." expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: MediaRecorder with type Type25
+Cannot find matching typeVariable for: recorder=new MediaRecorder()
+Did not find solution for node: recorder=new MediaRecorder() with type Type25
+Did not find solution for node: recorder with type Type25
+Did not find solution for node: new MediaRecorder() with type Type25
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: recorder.setVideoSource(MediaRecorder.VideoSource.CAMERA) with type Type29
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setVideoSource
+Did not find solution for node: setVideoSource with type Type29
+Cannot find matching typeVariable for: MediaRecorder.VideoSource.CAMERA
+Did not find solution for node: MediaRecorder.VideoSource.CAMERA with type Type29
+Cannot find matching typeVariable for: MediaRecorder.VideoSource
+Cannot find matching typeVariable for: MediaRecorder.VideoSource.CAMERA
+Did not find solution for node: MediaRecorder.VideoSource with type Type29
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: VideoSource with type Type27
+Did not find solution for node: CAMERA with type Type28
+Did not find solution for node: recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP) with type Type34
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setOutputFormat
+Did not find solution for node: setOutputFormat with type Type34
+Cannot find matching typeVariable for: MediaRecorder.OutputFormat.THREE_GPP
+Did not find solution for node: MediaRecorder.OutputFormat.THREE_GPP with type Type34
+Cannot find matching typeVariable for: MediaRecorder.OutputFormat
+Cannot find matching typeVariable for: MediaRecorder.OutputFormat.THREE_GPP
+Did not find solution for node: MediaRecorder.OutputFormat with type Type34
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: OutputFormat with type Type32
+Did not find solution for node: THREE_GPP with type Type33
+Did not find solution for node: recorder.setVideoEncoder(MediaRecorder.VideoEncoder.H263) with type Type39
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setVideoEncoder
+Did not find solution for node: setVideoEncoder with type Type39
+Cannot find matching typeVariable for: MediaRecorder.VideoEncoder.H263
+Did not find solution for node: MediaRecorder.VideoEncoder.H263 with type Type39
+Cannot find matching typeVariable for: MediaRecorder.VideoEncoder
+Cannot find matching typeVariable for: MediaRecorder.VideoEncoder.H263
+Did not find solution for node: MediaRecorder.VideoEncoder with type Type39
+Did not find solution for node: MediaRecorder with type Type25
+Did not find solution for node: VideoEncoder with type Type37
+Did not find solution for node: H263 with type Type38
+Did not find solution for node: recorder.setVideoFrameRate(15) with type Type43
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setVideoFrameRate
+Did not find solution for node: setVideoFrameRate with type Type43
+Did not find solution for node: 15 with type Type42
+Did not find solution for node: recorder.setVideoSize(176,144) with type Type47
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setVideoSize
+Did not find solution for node: setVideoSize with type Type47
+Did not find solution for node: 176 with type Type46
+Did not find solution for node: 144 with type Type46
+Did not find solution for node: recorder.setOutputFile(path) with type Type51
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: setOutputFile
+Did not find solution for node: setOutputFile with type Type51
+For node: path expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: recorder.prepare() with type Type54
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: prepare
+Did not find solution for node: prepare with type Type54
+Did not find solution for node: recorder.start() with type Type56
+Did not find solution for node: recorder with type Type25
+Cannot find matching typeVariable for: start
+Did not find solution for node: start with type Type56
+{Checked=103, Analyzed=48, Unsolved=55, Incorrect=9, Correct=39}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+android.=SimpleName: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+boolean=PrefixExpression: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+boolean=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=19, Analyzed=18, Unsolved=1, Incorrect=0, Correct=18}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+Total stats
+{Checked=103, Analyzed=48, Unsolved=55, Incorrect=9, Correct=39}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+android.=SimpleName: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+boolean=PrefixExpression: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+boolean=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=19, Analyzed=18, Unsolved=1, Incorrect=0, Correct=18}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+android.,ClassInstanceCreation,0,1,0,0,1
+android.,QualifiedName,1,4,0,1,3
+android.,SimpleName,0,19,0,0,19
+android.,SimpleType,0,2,0,0,2
+android.,VariableDeclarationFragment,0,1,0,0,1
+boolean,InfixExpression,1,1,0,1,0
+boolean,MethodInvocation,2,3,0,2,1
+boolean,PrefixExpression,2,3,0,2,1
+boolean,SimpleName,2,3,0,2,1
+int,NumberLiteral,0,3,0,0,3
+int,QualifiedName,0,3,0,0,3
+int,SimpleName,0,3,0,0,3
+java,ClassInstanceCreation,3,3,3,0,0
+java,InfixExpression,1,1,1,0,0
+java,MethodInvocation,2,2,2,0,0
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,18,19,18,0,1
+java,SimpleType,7,7,7,0,0
+java,StringLiteral,4,4,4,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+void,MethodInvocation,0,8,0,0,8
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,0,8,0,0,8

@@ -1,0 +1,589 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_1",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "HibernateUserDAO",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "SUPER_INTERFACES",
+                      "children": [
+                        {
+                          "label": "library.dao.UserDAO",
+                          "type": "INTERFACE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "annotConf",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.cfg.AnnotationConfiguration",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.hibernate.cfg.AnnotationConfiguration()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "addAnnotatedClass",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "annotConf",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "library.model.User",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "configure",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "annotConf",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_1$HibernateUserDAO",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "buildSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "annotConf",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "The line below generates the exception!",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "store",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "user",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "library.model.User",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "session",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Session",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_1$HibernateUserDAO",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "tx",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Transaction",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "begin",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "tx",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "saveOrUpdate",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "user",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "commit",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "tx",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.RuntimeException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "rollback",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "tx",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "",
+                                  "type": "Throw",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "close",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getUser",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "library.model.User",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "arg0",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getUserByFirstLastName",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "library.model.User",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "arg0",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "arg1",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getUserByUsername",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "library.model.User",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "arg0",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "saveUser",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "arg0",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "library.model.User",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "0",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

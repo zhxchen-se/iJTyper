@@ -1,0 +1,473 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android26.java
+Expect check=77
+Cannot find matching typeVariable for: public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+
+Did not find solution for node: Android26 with type Type1
+For node: ScrollView expected fqn: android.widget.ScrollView with type: Type2 got: android.widget.ScrollView
+For node: ScrollView expected fqn: android.widget.ScrollView with type: Type2 got: android.widget.ScrollView
+Cannot find matching typeVariable for: Android26
+Cannot find matching typeVariable for: public Android26(Context context){
+  super(context);
+}
+
+Cannot find matching typeVariable for: public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: Context context
+For node: Context context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: @Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type3 got: boolean
+Cannot find matching typeVariable for: onInterceptTouchEvent
+Cannot find matching typeVariable for: @Override public boolean onInterceptTouchEvent(MotionEvent ev){
+  return false;
+}
+
+Cannot find matching typeVariable for: public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: MotionEvent ev
+For node: MotionEvent ev expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: ev expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: false expected fqn: boolean with type: Type3 got: boolean
+For node: @Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type3 got: boolean
+Cannot find matching typeVariable for: onKeyDown
+Cannot find matching typeVariable for: @Override public boolean onKeyDown(int keyCode,KeyEvent event){
+  return false;
+}
+
+Cannot find matching typeVariable for: public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: int keyCode
+For node: int keyCode expected fqn: int with type: Type18 got: int
+For node: int expected fqn: int with type: Type18 got: int
+For node: keyCode expected fqn: int with type: Type18 got: int
+Cannot find matching typeVariable for: KeyEvent event
+For node: KeyEvent event expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: KeyEvent expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: KeyEvent expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: event expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: false expected fqn: boolean with type: Type3 got: boolean
+Cannot find matching typeVariable for: class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Did not find solution for node: GameView with type Type20
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: OnTouchListener expected fqn: android.view.View.OnTouchListener with type: Type22 got: android.view.View$OnTouchListener
+For node: OnTouchListener expected fqn: android.view.View.OnTouchListener with type: Type22 got: android.view.View$OnTouchListener
+Cannot find matching typeVariable for: GameView
+Cannot find matching typeVariable for: public GameView(Context context){
+  super(context);
+}
+
+Cannot find matching typeVariable for: class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: Context context
+For node: Context context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: context expected fqn: android.content.Context with type: Type12 got: android.content.Context
+For node: boolean expected fqn: boolean with type: Type3 got: boolean
+Cannot find matching typeVariable for: onKey
+Cannot find matching typeVariable for: public boolean onKey(View v,int keyCode,KeyEvent event){
+  if (keyCode == KeyEvent.KEYCODE_BACK) {
+  }
+  invalidate();
+  return true;
+}
+
+Cannot find matching typeVariable for: class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: View v
+For node: View v expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: v expected fqn: android.view.View with type: Type21 got: android.view.View
+Cannot find matching typeVariable for: int keyCode
+For node: int keyCode expected fqn: int with type: Type18 got: int
+For node: int expected fqn: int with type: Type18 got: int
+For node: keyCode expected fqn: int with type: Type18 got: int
+Cannot find matching typeVariable for: KeyEvent event
+For node: KeyEvent event expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: KeyEvent expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: KeyEvent expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: event expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: keyCode == KeyEvent.KEYCODE_BACK expected fqn: boolean with type: Type3 got: boolean
+For node: keyCode expected fqn: int with type: Type18 got: int
+Cannot find matching typeVariable for: KeyEvent.KEYCODE_BACK
+For node: KeyEvent.KEYCODE_BACK expected fqn: int with type: Type3 got: boolean
+For node: KeyEvent expected fqn: android.view.KeyEvent with type: Type19 got: android.view.KeyEvent
+For node: KEYCODE_BACK expected fqn: int with type: Type57 got: int
+For node: invalidate() expected fqn: void with type: Type58 got: void
+Cannot find matching typeVariable for: invalidate
+For node: invalidate expected fqn: void with type: Type58 got: void
+For node: true expected fqn: boolean with type: Type3 got: boolean
+For node: @Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type16 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type3 got: boolean
+Cannot find matching typeVariable for: onTouch
+Cannot find matching typeVariable for: @Override public boolean onTouch(View arg0,MotionEvent arg1){
+  return false;
+}
+
+Cannot find matching typeVariable for: class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ScrollView;
+public class Android26 extends ScrollView {
+  public Android26(  Context context){
+    super(context);
+  }
+  @Override public boolean onInterceptTouchEvent(  MotionEvent ev){
+    return false;
+  }
+  @Override public boolean onKeyDown(  int keyCode,  KeyEvent event){
+    return false;
+  }
+}
+class GameView extends View implements OnTouchListener {
+  public GameView(  Context context){
+    super(context);
+  }
+  public boolean onKey(  View v,  int keyCode,  KeyEvent event){
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+    }
+    invalidate();
+    return true;
+  }
+  @Override public boolean onTouch(  View arg0,  MotionEvent arg1){
+    return false;
+  }
+}
+
+Cannot find matching typeVariable for: View arg0
+For node: View arg0 expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
+For node: arg0 expected fqn: android.view.View with type: Type21 got: android.view.View
+Cannot find matching typeVariable for: MotionEvent arg1
+For node: MotionEvent arg1 expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: arg1 expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
+For node: false expected fqn: boolean with type: Type3 got: boolean
+{Checked=69, Analyzed=67, Unsolved=2, Incorrect=3, Correct=64}
+=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=1, Correct=21}
+android.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+android.=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=69, Analyzed=67, Unsolved=2, Incorrect=3, Correct=64}
+=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=1, Correct=21}
+android.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+android.=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,0,2,0,0,2
+android.,SimpleName,22,22,21,1,0
+android.,SimpleType,11,11,10,1,0
+android.,SingleVariableDeclaration,8,8,8,0,0
+boolean,BooleanLiteral,4,4,4,0,0
+boolean,InfixExpression,1,1,1,0,0
+boolean,PrimitiveType,4,4,4,0,0
+int,PrimitiveType,2,2,2,0,0
+int,QualifiedName,1,1,0,1,0
+int,SimpleName,4,4,4,0,0
+int,SingleVariableDeclaration,2,2,2,0,0
+java,MarkerAnnotation,3,3,3,0,0
+java,SimpleName,3,3,3,0,0
+void,MethodInvocation,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

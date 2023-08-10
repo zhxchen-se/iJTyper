@@ -1,0 +1,456 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android35",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "recordVideoStart",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "recorder",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.media.MediaRecorder",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.media.MediaRecorder()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "NE",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "recorder",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "stop",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "recorder",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "release",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "recorder",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "file",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.File",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.File(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"/sdcard/videoTest.3gpp\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "createNewFile",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "file",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "android.media.MediaRecorder()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoSource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.VideoSource.CAMERA",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setAudioSource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.AudioSource.MIC",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setOutputFormat",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.OutputFormat.THREE_GPP",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setOutputFile",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "getAbsolutePath",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "file",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoSize",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "176",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "144",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoFrameRate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "15",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVideoEncoder",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.VideoEncoder.DEFAULT",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "recorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setAudioEncoder",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "MediaRecorder.AudioEncoder.AMR_NB",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "prepare",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "recorder",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.IllegalStateException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "start",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "recorder",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

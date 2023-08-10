@@ -1,0 +1,1384 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "xstream_class_29",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "createXmlEmail",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "xstream",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.XStream",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.lang.Object()",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "com.thoughtworks.xstream.io.xml.DomDriver()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setMode",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "xstream",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "XStream.NO_REFERENCES",
+                          "type": "TypeAccess",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "alias",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "xstream",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"email\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "class",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$EmailPojo",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "alias",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "xstream",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"recipient\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "class",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ep",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "xstream_class_29$EmailPojo",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$EmailPojo()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "toRecipient",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "java.util.ArrayList()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "toRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user1@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "toRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user2@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ccRecipient",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "java.util.ArrayList()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user3@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user4@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "bccRecipient",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "java.util.ArrayList()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "bccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user5@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "bccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_29$Recipient(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"user6@somecompany.com\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setTo",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ep",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "toRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setCc",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ep",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "ccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setBcc",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ep",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "bccRecipient",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setSubject",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ep",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"subject test\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setBody",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "ep",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"body test\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "xml",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "toXML",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "ep",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "xml",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "EmailPojo",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "to",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "cc",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "bcc",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "subject",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "body",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getTo",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "RETURN_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "to",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$EmailPojo",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setTo",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "to",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$Recipient",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "to",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$EmailPojo",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "to",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getCc",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "RETURN_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "cc",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$EmailPojo",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setCc",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "cc",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$Recipient",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "cc",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$EmailPojo",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "cc",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getBcc",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "RETURN_TYPE",
+                          "children": [
+                            {
+                              "label": "xstream_class_29$Recipient",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "bcc",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$EmailPojo",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setBcc",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "bcc",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$Recipient",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "bcc",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$EmailPojo",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "bcc",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getSubject",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "subject",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$EmailPojo",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setSubject",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "subject",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "subject",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$EmailPojo",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "subject",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getBody",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "body",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$EmailPojo",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setBody",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "body",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "body",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$EmailPojo",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "body",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "Recipient",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "recipient",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "recipient",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "recipient",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$Recipient",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "recipient",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getRecipient",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "recipient",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_29$Recipient",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setRecipient",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "recipient",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "recipient",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_29$Recipient",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "recipient",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

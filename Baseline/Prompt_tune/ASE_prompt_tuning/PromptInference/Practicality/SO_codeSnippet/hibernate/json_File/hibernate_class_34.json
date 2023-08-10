@@ -1,0 +1,337 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_34",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "testUserClassAndUsers",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"Testing Users and UserClasses...\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "newSession",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"1 - Creating UserClasses:\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "t1",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "newSession",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "t1",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"2 - Creating Users:\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "t2",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "newSession",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "t2",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"3 - Deleting UserClass (\\\"UserClass 1\\\"):\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "t3",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "newSession",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "t3",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "close",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "newSession",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "instance",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "hibernate_class_34",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "hibernate_class_34()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "testUserClassAndUsers",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "instance",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

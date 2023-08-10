@@ -1,0 +1,1656 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "xstream_class_34",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "ConfigParameters",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@com.thoughtworks.xstream.annotations.XStreamAlias(\"config\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"config\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "com.cloudbees.api.config.ParameterHolder",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "resources",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.ResourceSettings",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@com.thoughtworks.xstream.annotations.XStreamImplicit(itemFieldName \u003d \"resource\")",
+                          "type": "Annotation",
+                          "children": [
+                            {
+                              "label": "\"resource\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "environments",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "VARIABLE_TYPE",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.Environment",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@com.thoughtworks.xstream.annotations.XStreamImplicit(itemFieldName \u003d \"env\")",
+                          "type": "Annotation",
+                          "children": [
+                            {
+                              "label": "\"env\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getEnvironments",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "RETURN_TYPE",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.Environment",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "environments",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "environments",
+                                      "type": "FieldWrite",
+                                      "children": [
+                                        {
+                                          "label": "xstream_class_34$ConfigParameters",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "java.util.ArrayList()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "environments",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setEnvironments",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "environments",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.Environment",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "environments",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "environments",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setEnvironment",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "environment",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.Environment",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "deleteEnvironment",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream_class_34$ConfigParameters",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "getName",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "environment",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "add",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getEnvironments",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "environment",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getEnvironment",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "com.cloudbees.api.config.Environment",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "env",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "ForEach",
+                          "children": [
+                            {
+                              "label": "environment",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.Environment",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "getEnvironments",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "equals",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "env",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getName",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "environment",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "environment",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "deleteEnvironment",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "name",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "it",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Iterator",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.Environment",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "iterator",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getEnvironments",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "while",
+                          "type": "While",
+                          "children": [
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "it",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "equals",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "getName",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "next",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "it",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "name",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "remove",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "it",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getResources",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.List",
+                          "type": "RETURN_TYPE",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.ResourceSettings",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "resources",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "\u003d",
+                                  "type": "Assignment",
+                                  "children": [
+                                    {
+                                      "label": "resources",
+                                      "type": "FieldWrite",
+                                      "children": [
+                                        {
+                                          "label": "xstream_class_34$ConfigParameters",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "java.util.ArrayList()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "resources",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setResources",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "resources",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.ResourceSettings",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "resources",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "resources",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setResource",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "resource",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "com.cloudbees.api.config.ResourceSettings",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "deleteResource",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream_class_34$ConfigParameters",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "getName",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "resource",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "add",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getResources",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "resource",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getResource",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "com.cloudbees.api.config.ResourceSettings",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "name",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "ForEach",
+                          "children": [
+                            {
+                              "label": "resource",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.ResourceSettings",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "getResources",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "equals",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "getName",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "resource",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "name",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "resource",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "deleteResource",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "name",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "it",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Iterator",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.ResourceSettings",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "iterator",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getResources",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "while",
+                          "type": "While",
+                          "children": [
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "it",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "equals",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "getName",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "next",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "it",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "name",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "remove",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "it",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createXStream",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.XStream",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "xstream",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "com.thoughtworks.xstream.XStream",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "com.thoughtworks.xstream.XStream()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "1",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "com.thoughtworks.xstream.XStream",
+                                      "type": "SUPER_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "wrapMapper",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "com.thoughtworks.xstream.mapper.MapperWrapper",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "protected",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "next",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "com.thoughtworks.xstream.mapper.MapperWrapper",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "return",
+                                          "type": "Return",
+                                          "children": [
+                                            {
+                                              "label": "com.thoughtworks.xstream.mapper.MapperWrapper()",
+                                              "type": "NewClass",
+                                              "children": [
+                                                {
+                                                  "label": "next",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "1",
+                                                  "type": "Class",
+                                                  "children": [
+                                                    {
+                                                      "label": "com.thoughtworks.xstream.mapper.MapperWrapper",
+                                                      "type": "SUPER_TYPE",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "shouldSerializeMember",
+                                                      "type": "Method",
+                                                      "children": [
+                                                        {
+                                                          "label": "boolean",
+                                                          "type": "RETURN_TYPE",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "",
+                                                          "type": "Modifiers_Method",
+                                                          "children": [
+                                                            {
+                                                              "label": "public",
+                                                              "type": "Modifier",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "definedIn",
+                                                          "type": "Parameter",
+                                                          "children": [
+                                                            {
+                                                              "label": "java.lang.Class",
+                                                              "type": "VARIABLE_TYPE",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "fieldName",
+                                                          "type": "Parameter",
+                                                          "children": [
+                                                            {
+                                                              "label": "java.lang.String",
+                                                              "type": "VARIABLE_TYPE",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "return",
+                                                          "type": "Return",
+                                                          "children": [
+                                                            {
+                                                              "label": "AND",
+                                                              "type": "BinaryOperator",
+                                                              "children": [
+                                                                {
+                                                                  "label": "NE",
+                                                                  "type": "BinaryOperator",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "definedIn",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "label": "class",
+                                                                      "type": "FieldRead",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "java.lang.Object",
+                                                                          "type": "TypeAccess",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "label": "shouldSerializeMember",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "super",
+                                                                      "type": "SuperAccess",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "label": "definedIn",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "label": "fieldName",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setClassLoader",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "getClassLoader",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "processAnnotations",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.ResourceSettings",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "processAnnotations",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.Environment",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "processAnnotations",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_34$ConfigParameters",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "processAnnotations",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "com.cloudbees.api.config.ParameterHolder",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "xstream",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "toXML",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "toXML",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "createXStream",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Returns a string representation of XML.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "parse",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "xstream_class_34$ConfigParameters",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "xml",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "xml",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "return",
+                                  "type": "Return",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "fromXML",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "createXStream",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_34$ConfigParameters",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "xml",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

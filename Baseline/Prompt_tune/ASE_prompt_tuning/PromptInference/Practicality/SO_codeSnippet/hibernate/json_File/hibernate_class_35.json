@@ -1,0 +1,344 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_35",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "configure",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "org.apache.log4j.BasicConfigurator",
+                          "type": "TypeAccess",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "HibernateUtil",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "transaction",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "transaction",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "beginTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "query",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Query",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "createQuery",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"from vij\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "Label label \u003d new Label(\"vijay\");",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "list",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "list",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "query",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "For",
+                          "children": [
+                            {
+                              "label": "it",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.Iterator",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "iterator",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "list",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "it",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "System.out.println(label.getId());",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "commit",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "transaction",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.HibernateException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "NE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "transaction",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "rollback",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "transaction",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "close",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

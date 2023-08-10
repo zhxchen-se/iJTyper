@@ -1,0 +1,402 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "xstream_class_20",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "fromXML",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "A",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.SuppressWarnings(\"unchecked\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"unchecked\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "A",
+                      "type": "TypeParameter",
+                      "children": []
+                    },
+                    {
+                      "label": "c",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.Class",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "file",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.io.File",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "xStream",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.XStream",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.thoughtworks.xstream.XStream()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Don\u0027t ever try to use DomDriver. They are VERY slow.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "inputStream",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.io.InputStream",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "reader",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.io.Reader",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "inputStream",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.FileInputStream(java.io.File)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "file",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "reader",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.InputStreamReader(java.io.InputStream,java.nio.charset.Charset)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "inputStream",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "forName",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.nio.charset.Charset",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"UTF-8\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "object",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "fromXML",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "xStream",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "reader",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "isInstance",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "c",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "object",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "return",
+                                  "type": "Return",
+                                  "children": [
+                                    {
+                                      "label": "object",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "exp",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "false",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "return",
+                                  "type": "Return",
+                                  "children": [
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "false",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "return",
+                                  "type": "Return",
+                                  "children": [
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "reader",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "inputStream",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

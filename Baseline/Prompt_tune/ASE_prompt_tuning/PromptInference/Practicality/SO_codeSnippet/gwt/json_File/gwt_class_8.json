@@ -1,0 +1,775 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "gwt_class_8",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.http.client.RequestException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestBuilder",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.http.client.RequestBuilder",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.lang.Object()",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "POST",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.http.client.RequestBuilder",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"j_spring_security_check\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setHeader",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Content-Type\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"application/x-www-form-urlencoded\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setRequestData",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "PLUS",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "\"j_username\u003dtest1\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "\"\u0026j_password\u003dabc\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "-- sending the username and the password in designated fields.",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "Hard coding values for testing reasons:",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setCallback",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.http.client.RequestCallback()",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "1",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.http.client.RequestCallback",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "onError1",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "exception",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Throwable",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "alert",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.user.client.Window",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "\"ERROR !!!\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "getMessage",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "exception",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "onResponseReceived1",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "response",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Response",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "AND",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "NE",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "getStatusCode",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "response",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "SC_UNAUTHORIZED",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "com.google.gwt.http.client.Response",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "NE",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "getStatusCode",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "response",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "SC_OK",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "com.google.gwt.http.client.Response",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "onError1",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "gwt_class_8$1",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "request",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "java.lang.Object()",
+                                                  "type": "ConstructorCall",
+                                                  "children": [
+                                                    {
+                                                      "label": "PLUS",
+                                                      "type": "BinaryOperator",
+                                                      "children": [
+                                                        {
+                                                          "label": "PLUS",
+                                                          "type": "BinaryOperator",
+                                                          "children": [
+                                                            {
+                                                              "label": "getStatusText",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "response",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "\":\\n\"",
+                                                              "type": "Literal",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "getText",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "response",
+                                                              "type": "VariableRead",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "return",
+                                              "type": "Return",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "EQ",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "getStatusCode",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "response",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "SC_UNAUTHORIZED",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "com.google.gwt.http.client.Response",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "alert",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "com.google.gwt.user.client.Window",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"You have entered an incorrect username or password. Please try again.\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "This code is never encountered !! :((",
+                                                  "type": "Comment",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "ELSE",
+                                          "type": "else",
+                                          "children": [
+                                            {
+                                              "label": "height",
+                                              "type": "LocalVariable",
+                                              "children": [
+                                                {
+                                                  "label": "java.lang.String",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "800",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "\"\"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "width",
+                                              "type": "LocalVariable",
+                                              "children": [
+                                                {
+                                                  "label": "java.lang.String",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "600",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "\"\"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "alert",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "com.google.gwt.user.client.Window",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"Authorisation succeeded, you may enter....\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "open",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "com.google.gwt.user.client.Window",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"MainScreen.html\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"Main screen!!\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "PLUS",
+                                                      "type": "BinaryOperator",
+                                                      "children": [
+                                                        {
+                                                          "label": "PLUS",
+                                                          "type": "BinaryOperator",
+                                                          "children": [
+                                                            {
+                                                              "label": "PLUS",
+                                                              "type": "BinaryOperator",
+                                                              "children": [
+                                                                {
+                                                                  "label": "\"height\u003d\"",
+                                                                  "type": "Literal",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "height",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "\",width\u003d\"",
+                                                              "type": "Literal",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "width",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "\",scrollbars\u003dyes,resizable\u003dyes,titlebar\u003dno,toolbar\u003dno,status\u003dyes,close\u003dno,left\u003d0,top\u003d0\"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "onResponseReceived",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "response",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Response",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated method stub",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "onError",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "request",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.http.client.Request",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "exception",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Throwable",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated method stub",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "send",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "requestBuilder",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

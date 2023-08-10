@@ -1,0 +1,177 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android04.java
+Expect check=40
+Cannot find matching typeVariable for: public class Android04 extends Activity {
+  /** 
+ * Called when the activity is first created. 
+ */
+  @Override public void onCreate(  Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    mTextView=new TextView(this);
+    if (savedInstanceState == null) {
+      mTextView.setText("Welcome to HelloAndroid!");
+    }
+ else {
+      mTextView.setText("Welcome back.");
+    }
+    setContentView(mTextView);
+  }
+  private TextView mTextView=null;
+}
+
+Did not find solution for node: Android04 with type Type1
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: @Override expected fqn: java.lang.Override with type: Type5 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type5 got: java.lang.Override
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: onCreate
+Cannot find matching typeVariable for: /** 
+ * Called when the activity is first created. 
+ */
+@Override public void onCreate(Bundle savedInstanceState){
+  super.onCreate(savedInstanceState);
+  mTextView=new TextView(this);
+  if (savedInstanceState == null) {
+    mTextView.setText("Welcome to HelloAndroid!");
+  }
+ else {
+    mTextView.setText("Welcome back.");
+  }
+  setContentView(mTextView);
+}
+
+Cannot find matching typeVariable for: public class Android04 extends Activity {
+  /** 
+ * Called when the activity is first created. 
+ */
+  @Override public void onCreate(  Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    mTextView=new TextView(this);
+    if (savedInstanceState == null) {
+      mTextView.setText("Welcome to HelloAndroid!");
+    }
+ else {
+      mTextView.setText("Welcome back.");
+    }
+    setContentView(mTextView);
+  }
+  private TextView mTextView=null;
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+public class Android04 extends Activity {
+  /** 
+ * Called when the activity is first created. 
+ */
+  @Override public void onCreate(  Bundle savedInstanceState){
+    super.onCreate(savedInstanceState);
+    mTextView=new TextView(this);
+    if (savedInstanceState == null) {
+      mTextView.setText("Welcome to HelloAndroid!");
+    }
+ else {
+      mTextView.setText("Welcome back.");
+    }
+    setContentView(mTextView);
+  }
+  private TextView mTextView=null;
+}
+
+Cannot find matching typeVariable for: Bundle savedInstanceState
+For node: Bundle savedInstanceState expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+For node: Bundle expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+For node: Bundle expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+For node: savedInstanceState expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+For node: super.onCreate(savedInstanceState) expected fqn: void with type: Type7 got: void
+Cannot find matching typeVariable for: onCreate
+For node: onCreate expected fqn: void with type: Type7 got: void
+For node: savedInstanceState expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+For node: mTextView=new TextView(this) expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: new TextView(this) expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Did not find solution for node: this with type Type1
+For node: savedInstanceState == null expected fqn: boolean with type: Type13 got: boolean
+For node: savedInstanceState expected fqn: android.os.Bundle with type: Type6 got: android.os.Bundle
+Did not find solution for node: null with type Type12
+For node: mTextView.setText("Welcome to HelloAndroid!") expected fqn: void with type: Type15 got: void
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Cannot find matching typeVariable for: setText
+For node: setText expected fqn: void with type: Type15 got: void
+For node: "Welcome to HelloAndroid!" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: mTextView.setText("Welcome back.") expected fqn: void with type: Type17 got: void
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Cannot find matching typeVariable for: setText
+For node: setText expected fqn: void with type: Type17 got: void
+For node: "Welcome back." expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: setContentView(mTextView) expected fqn: void with type: Type18 got: void
+Cannot find matching typeVariable for: setContentView
+For node: setContentView expected fqn: void with type: Type18 got: void
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Cannot find matching typeVariable for: mTextView=null
+For node: mTextView=null expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: null expected fqn: null with type: Type21 got: android.widget.TextView
+{Checked=38, Analyzed=35, Unsolved=3, Incorrect=1, Correct=34}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+android.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SuperMethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=38, Analyzed=35, Unsolved=3, Incorrect=1, Correct=34}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+android.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SuperMethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,1,0,0,1
+android.,Assignment,1,1,1,0,0
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,SimpleName,12,12,12,0,0
+android.,SimpleType,4,4,4,0,0
+android.,SingleVariableDeclaration,1,1,1,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+boolean,InfixExpression,1,1,1,0,0
+java,MarkerAnnotation,1,1,1,0,0
+java,SimpleName,1,1,1,0,0
+java,StringLiteral,2,2,2,0,0
+null,NullLiteral,1,2,0,1,1
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,4,4,4,0,0
+void,SuperMethodInvocation,1,1,1,0,0

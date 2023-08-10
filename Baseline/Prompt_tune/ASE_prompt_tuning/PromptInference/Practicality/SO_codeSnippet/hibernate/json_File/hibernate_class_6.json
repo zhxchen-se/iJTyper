@@ -1,0 +1,827 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_6",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "main",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.net.MalformedURLException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Parameter",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "baseDir",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.io.File",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.io.File(java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"C:\\\\workspaces\\\\hobby\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "importer",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "hibernate_class_6",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "hibernate_class_6()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "config",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.cfg.Configuration",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "setupDb",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "importer",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "baseDir",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "NE",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "config",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "importContents",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "importer",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.File(java.io.File,java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "baseDir",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"people.xml\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "config",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "importContents",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.net.MalformedURLException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "file",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.io.File",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Parameter",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "config",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.hibernate.cfg.Configuration",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Parameter",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "buildSessionFactory",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "config",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tx",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "dom4jSession",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "EntityMode.DOM4J",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "saxReader",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.dom4j.io.SAXReader",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "org.dom4j.io.SAXReader()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "document",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.dom4j.Document",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "read",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "saxReader",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "file",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "list",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "selectNodes",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "document",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"//Person\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "iter",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Iterator",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "iterator",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "list",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "while",
+                          "type": "While",
+                          "children": [
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "iter",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "personObj",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Object",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "next",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "iter",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dom4jSession.save(Person.class.getName(), personObj);",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "flush",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "commit",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "tx",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "close",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.HibernateException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "org.dom4j.DocumentException",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setupDb",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.hibernate.cfg.Configuration",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "org.hibernate.HibernateException",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "baseDir",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.io.File",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Parameter",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "cfg",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.cfg.Configuration",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "org.hibernate.cfg.Configuration()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addFile",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "cfg",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "java.io.File(java.io.File,java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "baseDir",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"name/seller/rich/hobby/Person.hbm.xml\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addFile",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "cfg",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "java.io.File(java.io.File,java.lang.String)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "baseDir",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"name/seller/rich/hobby/Hobby.hbm.xml\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "export",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.tool.hbm2ddl.SchemaExport",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.lang.Object()",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "cfg",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setOutputFile",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "export",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"hobbyDB.txt\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "execute",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "export",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "true",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "cfg",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

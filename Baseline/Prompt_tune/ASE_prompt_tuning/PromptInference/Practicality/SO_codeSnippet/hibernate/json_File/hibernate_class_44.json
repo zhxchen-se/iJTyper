@@ -1,0 +1,2166 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_44",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "org.apache.struts.actions.DispatchAction",
+                  "type": "SUPER_TYPE",
+                  "children": []
+                },
+                {
+                  "label": "add",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.apache.struts.action.ActionForward",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.lang.Exception",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mapping",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionMapping",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionForm",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "request",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletRequest",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "response",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletResponse",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "isDebugEnabled",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "debug",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Entering Master add method\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "cargoForm cargoForm \u003d (cargoForm) form;",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "System.out.println(\"ID\" + cargoForm.getId());",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "cargo cargo \u003d new cargo();",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "System.out.println(\"in cargo Action\");",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "// copy customerform to model",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "cargoForm.reset(mapping, request);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "BeanUtils.copyProperties(cargo, cargoForm);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "cargoForm.reset(mapping, request);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "cargoForm.setInputParam(\"new\");",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "updateFormBean(mapping, request, cargoForm);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "ex",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "ex",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "findForward",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "mapping",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"failure\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "findForward",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mapping",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"success1\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "save",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.apache.struts.action.ActionForward",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.lang.Exception",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mapping",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionMapping",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionForm",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "request",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletRequest",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "response",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletResponse",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"in cargo Action\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "getAttribute",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getServletContext",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "servlet",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\"aa\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "tx",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Transaction",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "beginTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"in cargo Action\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "cargoForm carForm \u003d (cargoForm) form;",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "cargo cargo \u003d new cargo();",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "commit",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "tx",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "BeanUtils.copyProperties();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"id\"+ carForm.getId());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"item id\"+ carForm.getItemid());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "Set itemset \u003d carForm.getItemDtl();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"size\"+itemset.size());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "//    Iterator iterator \u003ditemset.iterator();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "while(iterator.hasNext()) {",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "//     Item it \u003d (Item)iterator.next();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"name\"+it.getItemName()); //log.debug(\"HERE\");",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "//   it.setCargo(cargo); }",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "cargo.setItemList(itemset);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"size\"+ itemset.size());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "session.saveOrUpdate(\"cargo\",cargo);",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "findForward",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mapping",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"success\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "search",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.apache.struts.action.ActionForward",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.lang.Exception",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mapping",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionMapping",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionForm",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "request",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletRequest",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "response",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletResponse",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"in cargo search Action\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getAttribute",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getServletContext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "servlet",
+                                  "type": "FieldRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"aaa\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session1",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpSession",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "getSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "request",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tx",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"in cargo search Action\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "cargoForm cargoform \u003d (cargoForm) form;",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "System.out.println(\"Name\"+cargoForm.getName());",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "cargo cargo \u003d new cargo();",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "name",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "copy customerform to model",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "BeanUtils.copyProperties(cargo, cargoform);",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "status",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createby",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "SQL_QUERY",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"createby\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "if ((name.equals(\"\")) \u0026\u0026 (createby.equals(\"\"))",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "\u0026\u0026 (status.equals(\"\")))",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "query",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Query",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "createQuery",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "SQL_QUERY",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setParameter",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "query",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"name\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "name",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setParameter",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "query",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"status\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "status",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setParameter",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "query",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"createby\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "createby",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "al",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.ArrayList",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.util.ArrayList()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "For",
+                          "children": [
+                            {
+                              "label": "i",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.Iterator",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "iterate",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "query",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "i",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "cargo cargo1 \u003d (cargo) i.next();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "al.add(cargo1);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"Cargo ID is:\" + cargo1.getId());",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"Cargo list is:\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "size",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "al",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setAttribute",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session1",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"clist\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "al",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "findForward",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "mapping",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"failure\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "System.out.println(\"Name...\" + name);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "System.out.println(\"status...\" + status);",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "System.out.println(\"createby...\" + createby);",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"search Cargo list is success\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "findForward",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mapping",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"success\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "edit",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.apache.struts.action.ActionForward",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.lang.Exception",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mapping",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionMapping",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionForm",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "request",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletRequest",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "response",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletResponse",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "sessionFactory",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "if",
+                      "type": "If",
+                      "children": [
+                        {
+                          "label": "isDebugEnabled",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "log",
+                              "type": "FieldRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "THEN",
+                          "type": "then",
+                          "children": [
+                            {
+                              "label": "debug",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "log",
+                                  "type": "FieldRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Entering Master Edit method\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "sessionFactory",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "getAttribute",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getServletContext",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "servlet",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\"aa\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "transaction",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Transaction",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "beginTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "qstring",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"from cargo c where c.id\u003d:id\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "cargoForm carForm \u003d (cargoForm) form;",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(carForm.getStatus());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(carForm.getCreate());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "cargo cargo \u003d new cargo();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "BeanUtils.copyProperties(cargo, carForm);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"In Cargo Edit \"+cargo.getId());",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "query",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Query",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "createQuery",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "qstring",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "all",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.ArrayList",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.util.ArrayList()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            },
+                            {
+                              "label": "query.setParameter(\"id\", cargo.getId());",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"Edit Cargo list \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "size",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "all",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "cargo c \u003d (cargo) query.iterate().next();",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "purchaseArray",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Set",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.util.HashSet()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "flush",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"Edit\"+c.getItemList().size());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "carForm.setItemDtl(purchaseArray);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "BeanUtils.copyProperties(carForm,c);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "transaction.commit();",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "findForward",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "mapping",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"failure\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"Edit Cargo list is success\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "return a forward to edit forward",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "findForward",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mapping",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"succ\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "delete",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "org.apache.struts.action.ActionForward",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "THROWN_TYPES",
+                      "children": [
+                        {
+                          "label": "java.lang.Exception",
+                          "type": "THROWN",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mapping",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionMapping",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "org.apache.struts.action.ActionForm",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "request",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletRequest",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "response",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "javax.servlet.http.HttpServletResponse",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Try",
+                      "children": [
+                        {
+                          "label": "sessionFactory",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.SessionFactory",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getAttribute",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getServletContext",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "servlet",
+                                      "type": "FieldRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\"aaa\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "session",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Session",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "openSession",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "sessionFactory",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "tx",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.hibernate.Transaction",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "beginTransaction",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "session",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "commit",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "tx",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "cargoForm carForm \u003d (cargoForm) form;",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(carForm.getStatus());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(carForm.getCreate());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "cargo cargo \u003d new cargo();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "BeanUtils.copyProperties(cargo, carForm);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"In Cargo Delete \"+cargo.getId());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "//String qstring \u003d \"delete from cargo c where c.id\u003d:id\";",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "//Query query \u003d session.createQuery(qstring);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "session.delete(\"cargo\",cargo);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "session.delete(cargo);",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "session.flush();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "query.setParameter(\"id\", cargo.getId());",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "int row\u003dquery.executeUpdate();",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "System.out.println(\"deleted row\"+row);",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Catch",
+                          "children": [
+                            {
+                              "label": "e",
+                              "type": "CatchVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.Exception",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "printStackTrace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "findForward",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "mapping",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"failure\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "println",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "out",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.lang.System",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"Deleted success\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "return a forward to edit forward",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "findForward",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mapping",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"succes\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

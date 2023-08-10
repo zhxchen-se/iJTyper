@@ -1,0 +1,529 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_11",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "content",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"This is the content to write into create file\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "Create new file",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "path",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"D:\\\\a\\\\hi.txt\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "file",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.File",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.File(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "path",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "NOT",
+                                  "type": "UnaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "exists",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "file",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "createNewFile",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "file",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "If file doesn\u0027t exists, then create it",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "fw",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.FileWriter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.FileWriter(java.io.File)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "getAbsoluteFile",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "file",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "bw",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.BufferedWriter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.BufferedWriter(java.io.Writer)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "fw",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "write",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "content",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "Write in file",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "close",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "Close connection",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.Exception",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "println",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "out",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.System",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "c",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "javax.swing.JFileChooser",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "javax.swing.JFileChooser()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "showOpenDialog",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "c",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "c",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "writeFile",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.File",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getSelectedFile",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "c",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "content",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"Input the data here to be written to your file\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "fw",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.FileWriter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.FileWriter(java.io.File)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "writeFile",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "bw",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.BufferedWriter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.BufferedWriter(java.io.Writer)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "fw",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "append",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "content",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "append",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"hiiiii\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "close",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "close",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "fw",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "exc",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.Exception",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "println",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "out",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.System",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "exc",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

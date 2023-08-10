@@ -1,0 +1,169 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime24",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getFormattedDateDifference",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "startDate",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "endDate",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "p",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.Period",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.joda.time.Period(org.joda.time.ReadableInstant,org.joda.time.ReadableInstant,org.joda.time.PeriodType)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "startDate",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "endDate",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "withMillisRemoved",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "withSecondsRemoved",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "standard",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "org.joda.time.PeriodType",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "print",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getDefault",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.joda.time.format.PeriodFormat",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "p",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

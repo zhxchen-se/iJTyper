@@ -1,0 +1,789 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_12.java
+Expect check=98
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_12
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Did not find solution for node: ListToStringXStreamConverter with type Type1
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type2 got: com.thoughtworks.xstream.converters.Converter
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type2 got: com.thoughtworks.xstream.converters.Converter
+For node: String expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type19 got: java.lang.String
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+Cannot find matching typeVariable for: alias
+Cannot find matching typeVariable for: private String alias;
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: ListToStringXStreamConverter
+Cannot find matching typeVariable for: public ListToStringXStreamConverter(String alias){
+  super();
+  this.alias=alias;
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String alias
+For node: String alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: this.alias=alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: this.alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: @SuppressWarnings("rawtypes") expected fqn: java.lang.SuppressWarnings with type: Type22 got: java.lang.SuppressWarnings
+For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type22 got: java.lang.SuppressWarnings
+For node: "rawtypes" expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: @Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type5 got: boolean
+Cannot find matching typeVariable for: canConvert
+Cannot find matching typeVariable for: @SuppressWarnings("rawtypes") @Override public boolean canConvert(Class type){
+  return true;
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Class type
+For node: Class type expected fqn: java.lang.Class with type: Type24 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type24 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type24 got: java.lang.Class
+For node: type expected fqn: java.lang.Class with type: Type24 got: java.lang.Class
+For node: true expected fqn: boolean with type: Type5 got: boolean
+For node: @Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: marshal
+Cannot find matching typeVariable for: @Override public void marshal(Object source,HierarchicalStreamWriter writer,MarshallingContext context){
+  @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+  for (  String string : list) {
+    writer.startNode(alias);
+    writer.setValue(string);
+    writer.endNode();
+  }
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Object source
+For node: Object source expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+For node: source expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+Cannot find matching typeVariable for: HierarchicalStreamWriter writer
+For node: HierarchicalStreamWriter writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: MarshallingContext context
+For node: MarshallingContext context expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type26 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type26 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type26 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: context expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type26 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: @SuppressWarnings("unchecked") expected fqn: java.lang.SuppressWarnings with type: Type22 got: java.lang.SuppressWarnings
+For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type22 got: java.lang.SuppressWarnings
+For node: "unchecked" expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: List<String> expected fqn: java.util.List<java.lang.String> with type: Type28=Type27<Type21> got: java.util.List<java.lang.String>
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type27 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type27 got: java.util.List
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+Cannot find matching typeVariable for: list=(List<String>)source
+For node: list=(List<String>)source expected fqn: java.util.List<java.lang.String> with type: Type28=Type27<Type21> got: java.util.List<java.lang.String>
+For node: list expected fqn: java.util.List<java.lang.String> with type: Type28=Type27<Type21> got: java.util.List<java.lang.String>
+For node: (List<String>)source expected fqn: java.util.List<java.lang.String> with type: Type28=Type27<Type21> got: java.util.List<java.lang.String>
+For node: List<String> expected fqn: java.util.List<java.lang.String> with type: Type28=Type27<Type21> got: java.util.List<java.lang.String>
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type27 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type27 got: java.util.List
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: source expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+Cannot find matching typeVariable for: String string
+For node: String string expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: string expected fqn: java.lang.String with type: Type21 got: java.lang.String
+Cannot find matching typeVariable for: list
+Cannot find matching typeVariable for: for (String string : list) {
+  writer.startNode(alias);
+  writer.setValue(string);
+  writer.endNode();
+}
+
+Cannot find matching typeVariable for: {
+  @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+  for (  String string : list) {
+    writer.startNode(alias);
+    writer.setValue(string);
+    writer.endNode();
+  }
+}
+
+Cannot find matching typeVariable for: @Override public void marshal(Object source,HierarchicalStreamWriter writer,MarshallingContext context){
+  @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+  for (  String string : list) {
+    writer.startNode(alias);
+    writer.setValue(string);
+    writer.endNode();
+  }
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+For node: writer.startNode(alias) expected fqn: void with type: Type29 got: void
+For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: startNode
+For node: startNode expected fqn: void with type: Type29 got: void
+For node: alias expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: writer.setValue(string) expected fqn: void with type: Type32 got: void
+For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: setValue
+For node: setValue expected fqn: void with type: Type32 got: void
+For node: string expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: writer.endNode() expected fqn: void with type: Type35 got: void
+For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type25 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: endNode
+For node: endNode expected fqn: void with type: Type35 got: void
+For node: @Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type23 got: java.lang.Override
+For node: Object expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type4 got: java.lang.Object
+Cannot find matching typeVariable for: unmarshal
+Cannot find matching typeVariable for: @Override public Object unmarshal(HierarchicalStreamReader reader,UnmarshallingContext context){
+  throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+}
+
+Cannot find matching typeVariable for: public class ListToStringXStreamConverter implements Converter {
+  private String alias;
+  public ListToStringXStreamConverter(  String alias){
+    super();
+    this.alias=alias;
+  }
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class type){
+    return true;
+  }
+  @Override public void marshal(  Object source,  HierarchicalStreamWriter writer,  MarshallingContext context){
+    @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+    for (    String string : list) {
+      writer.startNode(alias);
+      writer.setValue(string);
+      writer.endNode();
+    }
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_12 {
+public class ListToStringXStreamConverter implements Converter {
+    private String alias;
+    public ListToStringXStreamConverter(    String alias){
+      super();
+      this.alias=alias;
+    }
+    @SuppressWarnings("rawtypes") @Override public boolean canConvert(    Class type){
+      return true;
+    }
+    @Override public void marshal(    Object source,    HierarchicalStreamWriter writer,    MarshallingContext context){
+      @SuppressWarnings("unchecked") List<String> list=(List<String>)source;
+      for (      String string : list) {
+        writer.startNode(alias);
+        writer.setValue(string);
+        writer.endNode();
+      }
+    }
+    @Override public Object unmarshal(    HierarchicalStreamReader reader,    UnmarshallingContext context){
+      throw new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: HierarchicalStreamReader reader
+For node: HierarchicalStreamReader reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type37 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type37 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type37 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type37 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: UnmarshallingContext context
+For node: UnmarshallingContext context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+Did not find solution for node: new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation") with type Type39
+Did not find solution for node: UnsupportedOperationException with type Type39
+Did not find solution for node: UnsupportedOperationException with type Type39
+For node: "ListToStringXStreamConverter does not offer suport for unmarshal operation" expected fqn: java.lang.String with type: Type21 got: java.lang.String
+{Checked=89, Analyzed=84, Unsolved=5, Incorrect=4, Correct=80}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=2, Correct=23}
+java=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=2, Correct=8}
+java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=89, Analyzed=84, Unsolved=5, Incorrect=4, Correct=80}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=2, Correct=23}
+java=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=2, Correct=8}
+java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,1,0,0,1
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,12,12,12,0,0
+com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
+java,Assignment,1,1,1,0,0
+java,CastExpression,1,1,1,0,0
+java,ClassInstanceCreation,0,1,0,0,1
+java,FieldAccess,1,1,1,0,0
+java,MarkerAnnotation,3,3,3,0,0
+java,ParameterizedType,2,2,2,0,0
+java,SimpleName,25,26,23,2,1
+java,SimpleType,10,11,8,2,1
+java,SingleMemberAnnotation,2,2,2,0,0
+java,SingleVariableDeclaration,4,4,4,0,0
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

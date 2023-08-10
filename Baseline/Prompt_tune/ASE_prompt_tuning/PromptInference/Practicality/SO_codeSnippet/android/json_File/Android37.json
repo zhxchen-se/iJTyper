@@ -1,0 +1,419 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android37",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "SUPER_INTERFACES",
+                      "children": [
+                        {
+                          "label": "java.lang.Runnable",
+                          "type": "INTERFACE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "android.app.Activity",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "mProgress",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "android.app.ProgressDialog",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "send",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "mProgress",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android37",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "show",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "android.app.ProgressDialog",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "androidExamples.Android37",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\"Please wait\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Please wait\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "true",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "thread",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Thread",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.Thread(java.lang.Runnable)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "androidExamples.Android37",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "start",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "thread",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "UI has a button that when pressed calls send",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "run",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "sleep",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.lang.Thread",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "10000",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.InterruptedException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "printStackTrace",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "e",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "TODO Auto-generated catch block",
+                                      "type": "Comment",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "msg",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.os.Message",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "android.os.Message()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "sendMessage",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "mHandler",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android37",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "msg",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "mHandler",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "android.os.Handler",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "android.os.Handler()",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "1",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "android.os.Handler",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "handleMessage",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "msg",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "android.os.Message",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "dismiss",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "mProgress",
+                                          "type": "FieldRead",
+                                          "children": [
+                                            {
+                                              "label": "androidExamples.Android37",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,654 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_24",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "HibernateInvocationHandler",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "SUPER_INTERFACES",
+                      "children": [
+                        {
+                          "label": "java.lang.reflect.InvocationHandler",
+                          "type": "INTERFACE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "config",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "org.hibernate.cfg.Configuration",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "realSessionFactory",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003cinit\u003e",
+                      "type": "Constructor",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Constructor",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "config",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.hibernate.cfg.Configuration",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "config",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_24$HibernateInvocationHandler",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "config",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "invoke1",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.Object",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.lang.Throwable",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "proxy",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "method",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.reflect.Method",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Object[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "false",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "hashCode",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "proxy",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"Proxy for SessionFactory called\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Synchronized",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_24$HibernateInvocationHandler",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "realSessionFactory",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "this",
+                                          "type": "ThisAccess",
+                                          "children": [
+                                            {
+                                              "label": "hibernate_class_24$HibernateInvocationHandler",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "sf",
+                                      "type": "LocalVariable",
+                                      "children": [
+                                        {
+                                          "label": "org.hibernate.SessionFactory",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "null",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Try",
+                                      "children": [
+                                        {
+                                          "label": "println",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "out",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "java.lang.System",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\"Gonna BUILD one or die trying\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\u003d",
+                                          "type": "Assignment",
+                                          "children": [
+                                            {
+                                              "label": "sf",
+                                              "type": "VariableWrite",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "buildSessionFactory",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "config",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "this",
+                                                      "type": "ThisAccess",
+                                                      "children": [
+                                                        {
+                                                          "label": "hibernate_class_24$HibernateInvocationHandler",
+                                                          "type": "TypeAccess",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Catch",
+                                          "children": [
+                                            {
+                                              "label": "e",
+                                              "type": "CatchVariable",
+                                              "children": [
+                                                {
+                                                  "label": "java.lang.RuntimeException",
+                                                  "type": "VARIABLE_TYPE",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "println",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "out",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "java.lang.System",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "\"FAILED to build\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "System.out.println(ErrorHandle.exceptionToString(e));",
+                                                  "type": "Comment",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "log.error(\"SessionFactoryProxy\",e);",
+                                                  "type": "Comment",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "closeSessionFactory(sf);",
+                                                  "type": "Comment",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\u003d",
+                                              "type": "Assignment",
+                                              "children": [
+                                                {
+                                                  "label": "sf",
+                                                  "type": "VariableWrite",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "null",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\u003d",
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "label": "realSessionFactory",
+                                          "type": "FieldWrite",
+                                          "children": [
+                                            {
+                                              "label": "this",
+                                              "type": "ThisAccess",
+                                              "children": [
+                                                {
+                                                  "label": "hibernate_class_24$HibernateInvocationHandler",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "sf",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "if (sf\u003d\u003dnull) throw new RetainConfigDataAccessException(\"SessionFactory not available\");",
+                                          "type": "Comment",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "invoke",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "method",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "realSessionFactory",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "this",
+                                          "type": "ThisAccess",
+                                          "children": [
+                                            {
+                                              "label": "hibernate_class_24$HibernateInvocationHandler",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "args",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "invoke",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.Object",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.lang.Throwable",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "proxy",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "method",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.reflect.Method",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Object[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "null",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

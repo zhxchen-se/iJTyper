@@ -1,0 +1,1015 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "ComponentImageCapture",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "HELP",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "PLUS",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "\"Type Ctrl-0 to get a screenshot of the current GUI.\\n\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"The screenshot will be saved to the current \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"directory as \u0027screenshot.png\u0027.\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getScreenShot",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.awt.image.BufferedImage",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "component",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.awt.Component",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "image",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.awt.image.BufferedImage",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.awt.image.BufferedImage(int,int,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "getWidth",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "component",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "getHeight",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "component",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "TYPE_INT_RGB",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.awt.image.BufferedImage",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "paint",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "component",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "getGraphics",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "image",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "call the Component\u0027s paint method, using",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "the Graphics object of the image.",
+                              "type": "Comment",
+                              "children": []
+                            },
+                            {
+                              "label": "alternately use .printAll(..)",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "image",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "r",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Runnable",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "Class_.ComponentImageCapture$1()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "1",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "",
+                                      "type": "SUPER_INTERFACES",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Runnable",
+                                          "type": "INTERFACE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "run",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "void",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "f",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "javax.swing.JFrame",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "",
+                                              "type": "Modifiers_LocalVariable",
+                                              "children": [
+                                                {
+                                                  "label": "final",
+                                                  "type": "Modifier",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "javax.swing.JFrame(java.lang.String)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "\"Test Screenshot\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "screenshot",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "javax.swing.JMenuItem",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JMenuItem(java.lang.String)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "\"Screenshot\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setAccelerator",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "screenshot",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "getKeyStroke",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "javax.swing.KeyStroke",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "VK_0",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "java.awt.event.KeyEvent",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "CTRL_DOWN_MASK",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "java.awt.event.InputEvent",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "addActionListener",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "screenshot",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "Class_.ComponentImageCapture$1$1()",
+                                              "type": "NewClass",
+                                              "children": [
+                                                {
+                                                  "label": "1",
+                                                  "type": "Class",
+                                                  "children": [
+                                                    {
+                                                      "label": "",
+                                                      "type": "SUPER_INTERFACES",
+                                                      "children": [
+                                                        {
+                                                          "label": "java.awt.event.ActionListener",
+                                                          "type": "INTERFACE",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "actionPerformed",
+                                                      "type": "Method",
+                                                      "children": [
+                                                        {
+                                                          "label": "void",
+                                                          "type": "RETURN_TYPE",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "",
+                                                          "type": "Modifiers_Method",
+                                                          "children": [
+                                                            {
+                                                              "label": "public",
+                                                              "type": "Modifier",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "ae",
+                                                          "type": "Parameter",
+                                                          "children": [
+                                                            {
+                                                              "label": "java.awt.event.ActionEvent",
+                                                              "type": "VARIABLE_TYPE",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "img",
+                                                          "type": "LocalVariable",
+                                                          "children": [
+                                                            {
+                                                              "label": "java.awt.image.BufferedImage",
+                                                              "type": "VARIABLE_TYPE",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "getScreenShot",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "getContentPane",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "f",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "showMessageDialog",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "javax.swing.JOptionPane",
+                                                              "type": "TypeAccess",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "null",
+                                                              "type": "Literal",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "javax.swing.JLabel(javax.swing.Icon)",
+                                                              "type": "ConstructorCall",
+                                                              "children": [
+                                                                {
+                                                                  "label": "javax.swing.ImageIcon(java.awt.Image)",
+                                                                  "type": "ConstructorCall",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "getScaledInstance",
+                                                                      "type": "Invocation",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "img",
+                                                                          "type": "VariableRead",
+                                                                          "children": []
+                                                                        },
+                                                                        {
+                                                                          "label": "DIV",
+                                                                          "type": "BinaryOperator",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "getWidth",
+                                                                              "type": "Invocation",
+                                                                              "children": [
+                                                                                {
+                                                                                  "label": "img",
+                                                                                  "type": "VariableRead",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "label": "null",
+                                                                                  "type": "Literal",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "label": "2",
+                                                                              "type": "Literal",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "label": "DIV",
+                                                                          "type": "BinaryOperator",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "getHeight",
+                                                                              "type": "Invocation",
+                                                                              "children": [
+                                                                                {
+                                                                                  "label": "img",
+                                                                                  "type": "VariableRead",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "label": "null",
+                                                                                  "type": "Literal",
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "label": "2",
+                                                                              "type": "Literal",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "label": "SCALE_SMOOTH",
+                                                                          "type": "FieldRead",
+                                                                          "children": [
+                                                                            {
+                                                                              "label": "java.awt.Image",
+                                                                              "type": "TypeAccess",
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "",
+                                                          "type": "Try",
+                                                          "children": [
+                                                            {
+                                                              "label": "write",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "javax.imageio.ImageIO",
+                                                                  "type": "TypeAccess",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "img",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "\"png\"",
+                                                                  "type": "Literal",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "java.io.File(java.lang.String)",
+                                                                  "type": "ConstructorCall",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "\"screenshot.png\"",
+                                                                      "type": "Literal",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "label": "write the image as a PNG",
+                                                                  "type": "Comment",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "",
+                                                              "type": "Catch",
+                                                              "children": [
+                                                                {
+                                                                  "label": "e",
+                                                                  "type": "CatchVariable",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "java.lang.Exception",
+                                                                      "type": "VARIABLE_TYPE",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "label": "printStackTrace",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "e",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "menu",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "javax.swing.JMenu",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JMenu(java.lang.String)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "\"Other\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "add",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "menu",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "screenshot",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "mb",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "javax.swing.JMenuBar",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JMenuBar()",
+                                              "type": "ConstructorCall",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "add",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "mb",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "menu",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setJMenuBar",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "mb",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "p",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "javax.swing.JPanel",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JPanel(java.awt.LayoutManager)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "java.awt.BorderLayout(int,int)",
+                                                  "type": "ConstructorCall",
+                                                  "children": [
+                                                    {
+                                                      "label": "5",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "5",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setBorder",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "p",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.border.TitledBorder(java.lang.String)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "\"Main GUI\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "add",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "p",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JScrollPane(java.awt.Component)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "javax.swing.JTree()",
+                                                  "type": "ConstructorCall",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "WEST",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "java.awt.BorderLayout",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "add",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "p",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "javax.swing.JScrollPane(java.awt.Component)",
+                                              "type": "ConstructorCall",
+                                              "children": [
+                                                {
+                                                  "label": "javax.swing.JTextArea(java.lang.String,int,int)",
+                                                  "type": "ConstructorCall",
+                                                  "children": [
+                                                    {
+                                                      "label": "HELP",
+                                                      "type": "FieldRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "10",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "30",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "CENTER",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "java.awt.BorderLayout",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setContentPane",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "p",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "pack",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setLocationRelativeTo",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "null",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setDefaultCloseOperation",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "EXIT_ON_CLOSE",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "javax.swing.JFrame",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setVisible",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "f",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "true",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "invokeLater",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "javax.swing.SwingUtilities",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "r",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Create a screenshot of a component.",
+                      "type": "JavaDoc",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "JavaDocTag",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

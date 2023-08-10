@@ -1,0 +1,291 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime25",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "getDaysBetweenTwoDates",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "oldDate",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.joda.time.LocalDateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Parameter",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "newDate",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.joda.time.LocalDateTime",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Parameter",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "\"--Calculate days between: \"",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "toString",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "oldDate",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\"-\u003e\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "newDate",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "days",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.joda.time.Days",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "daysBetween",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.Days",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "org.joda.time.DateMidnight(java.lang.Object)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "toDateTime",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "oldDate",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "org.joda.time.DateMidnight(java.lang.Object)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "toDateTime",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "newDate",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "println",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "out",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "java.lang.System",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"----DIFF: \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "size",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "days",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "size",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "days",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ID \u003d 8654398",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

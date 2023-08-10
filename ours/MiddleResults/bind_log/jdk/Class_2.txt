@@ -1,0 +1,1893 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_2.java
+Expect check=572
+Cannot find matching typeVariable for: class Class_2 {
+  public static void main(  String[] args){
+    Runnable r=new Runnable(){
+      public void run(){
+        final JFrame frame=new JFrame("Nested Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        final JPanel gui=new JPanel(new BorderLayout(5,5));
+        gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+        JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+        plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+        final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+        String[] plafNames=new String[plafInfos.length];
+        for (int ii=0; ii < plafInfos.length; ii++) {
+          plafNames[ii]=plafInfos[ii].getName();
+        }
+        final JComboBox plafChooser=new JComboBox(plafNames);
+        plafComponents.add(plafChooser);
+        final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+        plafComponents.add(pack);
+        plafChooser.addActionListener(new ActionListener(){
+          public void actionPerformed(          ActionEvent ae){
+            int index=plafChooser.getSelectedIndex();
+            try {
+              UIManager.setLookAndFeel(plafInfos[index].getClassName());
+              SwingUtilities.updateComponentTreeUI(frame);
+              if (pack.isSelected()) {
+                frame.pack();
+                frame.setMinimumSize(frame.getSize());
+              }
+            }
+ catch (            Exception e) {
+              e.printStackTrace();
+            }
+          }
+        }
+);
+        gui.add(plafComponents,BorderLayout.NORTH);
+        JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+        dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+        gui.add(dynamicLabels,BorderLayout.WEST);
+        final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+        labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+        JButton addNew=new JButton("Add Another Label");
+        dynamicLabels.add(addNew,BorderLayout.NORTH);
+        addNew.addActionListener(new ActionListener(){
+          private int labelCount=0;
+          public void actionPerformed(          ActionEvent ae){
+            labels.add(new JLabel("Label " + ++labelCount));
+            frame.validate();
+          }
+        }
+);
+        dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+        String[] header={"Name","Value"};
+        String[] a=new String[0];
+        String[] names=System.getProperties().stringPropertyNames().toArray(a);
+        String[][] data=new String[names.length][2];
+        for (int ii=0; ii < names.length; ii++) {
+          data[ii][0]=names[ii];
+          data[ii][1]=System.getProperty(names[ii]);
+        }
+        DefaultTableModel model=new DefaultTableModel(data,header);
+        JTable table=new JTable(model);
+        try {
+          table.setAutoCreateRowSorter(true);
+        }
+ catch (        Exception continuewithNoSort) {
+        }
+        JScrollPane tableScroll=new JScrollPane(table);
+        Dimension tablePreferred=tableScroll.getPreferredSize();
+        tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+        JPanel imagePanel=new JPanel(new GridBagLayout());
+        imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+        BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g=bi.createGraphics();
+        GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+        g.setPaint(gp);
+        g.fillRect(0,0,200,200);
+        ImageIcon ii=new ImageIcon(bi);
+        JLabel imageLabel=new JLabel(ii);
+        imagePanel.add(imageLabel,null);
+        JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+        gui.add(splitPane,BorderLayout.CENTER);
+        frame.setContentPane(gui);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        try {
+          frame.setLocationByPlatform(true);
+          frame.setMinimumSize(frame.getSize());
+        }
+ catch (        Throwable ignoreAndContinue) {
+        }
+        frame.setVisible(true);
+      }
+    }
+;
+    SwingUtilities.invokeLater(r);
+  }
+}
+
+Did not find solution for node: Class_2 with type Type1
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  Runnable r=new Runnable(){
+    public void run(){
+      final JFrame frame=new JFrame("Nested Layout Example");
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      final JPanel gui=new JPanel(new BorderLayout(5,5));
+      gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+      JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+      plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+      final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+      String[] plafNames=new String[plafInfos.length];
+      for (int ii=0; ii < plafInfos.length; ii++) {
+        plafNames[ii]=plafInfos[ii].getName();
+      }
+      final JComboBox plafChooser=new JComboBox(plafNames);
+      plafComponents.add(plafChooser);
+      final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+      plafComponents.add(pack);
+      plafChooser.addActionListener(new ActionListener(){
+        public void actionPerformed(        ActionEvent ae){
+          int index=plafChooser.getSelectedIndex();
+          try {
+            UIManager.setLookAndFeel(plafInfos[index].getClassName());
+            SwingUtilities.updateComponentTreeUI(frame);
+            if (pack.isSelected()) {
+              frame.pack();
+              frame.setMinimumSize(frame.getSize());
+            }
+          }
+ catch (          Exception e) {
+            e.printStackTrace();
+          }
+        }
+      }
+);
+      gui.add(plafComponents,BorderLayout.NORTH);
+      JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+      dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+      gui.add(dynamicLabels,BorderLayout.WEST);
+      final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+      labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+      JButton addNew=new JButton("Add Another Label");
+      dynamicLabels.add(addNew,BorderLayout.NORTH);
+      addNew.addActionListener(new ActionListener(){
+        private int labelCount=0;
+        public void actionPerformed(        ActionEvent ae){
+          labels.add(new JLabel("Label " + ++labelCount));
+          frame.validate();
+        }
+      }
+);
+      dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+      String[] header={"Name","Value"};
+      String[] a=new String[0];
+      String[] names=System.getProperties().stringPropertyNames().toArray(a);
+      String[][] data=new String[names.length][2];
+      for (int ii=0; ii < names.length; ii++) {
+        data[ii][0]=names[ii];
+        data[ii][1]=System.getProperty(names[ii]);
+      }
+      DefaultTableModel model=new DefaultTableModel(data,header);
+      JTable table=new JTable(model);
+      try {
+        table.setAutoCreateRowSorter(true);
+      }
+ catch (      Exception continuewithNoSort) {
+      }
+      JScrollPane tableScroll=new JScrollPane(table);
+      Dimension tablePreferred=tableScroll.getPreferredSize();
+      tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+      JPanel imagePanel=new JPanel(new GridBagLayout());
+      imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+      BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+      Graphics2D g=bi.createGraphics();
+      GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+      g.setPaint(gp);
+      g.fillRect(0,0,200,200);
+      ImageIcon ii=new ImageIcon(bi);
+      JLabel imageLabel=new JLabel(ii);
+      imagePanel.add(imageLabel,null);
+      JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+      gui.add(splitPane,BorderLayout.CENTER);
+      frame.setContentPane(gui);
+      frame.pack();
+      frame.setLocationRelativeTo(null);
+      try {
+        frame.setLocationByPlatform(true);
+        frame.setMinimumSize(frame.getSize());
+      }
+ catch (      Throwable ignoreAndContinue) {
+      }
+      frame.setVisible(true);
+    }
+  }
+;
+  SwingUtilities.invokeLater(r);
+}
+
+Cannot find matching typeVariable for: class Class_2 {
+  public static void main(  String[] args){
+    Runnable r=new Runnable(){
+      public void run(){
+        final JFrame frame=new JFrame("Nested Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        final JPanel gui=new JPanel(new BorderLayout(5,5));
+        gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+        JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+        plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+        final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+        String[] plafNames=new String[plafInfos.length];
+        for (int ii=0; ii < plafInfos.length; ii++) {
+          plafNames[ii]=plafInfos[ii].getName();
+        }
+        final JComboBox plafChooser=new JComboBox(plafNames);
+        plafComponents.add(plafChooser);
+        final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+        plafComponents.add(pack);
+        plafChooser.addActionListener(new ActionListener(){
+          public void actionPerformed(          ActionEvent ae){
+            int index=plafChooser.getSelectedIndex();
+            try {
+              UIManager.setLookAndFeel(plafInfos[index].getClassName());
+              SwingUtilities.updateComponentTreeUI(frame);
+              if (pack.isSelected()) {
+                frame.pack();
+                frame.setMinimumSize(frame.getSize());
+              }
+            }
+ catch (            Exception e) {
+              e.printStackTrace();
+            }
+          }
+        }
+);
+        gui.add(plafComponents,BorderLayout.NORTH);
+        JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+        dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+        gui.add(dynamicLabels,BorderLayout.WEST);
+        final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+        labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+        JButton addNew=new JButton("Add Another Label");
+        dynamicLabels.add(addNew,BorderLayout.NORTH);
+        addNew.addActionListener(new ActionListener(){
+          private int labelCount=0;
+          public void actionPerformed(          ActionEvent ae){
+            labels.add(new JLabel("Label " + ++labelCount));
+            frame.validate();
+          }
+        }
+);
+        dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+        String[] header={"Name","Value"};
+        String[] a=new String[0];
+        String[] names=System.getProperties().stringPropertyNames().toArray(a);
+        String[][] data=new String[names.length][2];
+        for (int ii=0; ii < names.length; ii++) {
+          data[ii][0]=names[ii];
+          data[ii][1]=System.getProperty(names[ii]);
+        }
+        DefaultTableModel model=new DefaultTableModel(data,header);
+        JTable table=new JTable(model);
+        try {
+          table.setAutoCreateRowSorter(true);
+        }
+ catch (        Exception continuewithNoSort) {
+        }
+        JScrollPane tableScroll=new JScrollPane(table);
+        Dimension tablePreferred=tableScroll.getPreferredSize();
+        tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+        JPanel imagePanel=new JPanel(new GridBagLayout());
+        imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+        BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g=bi.createGraphics();
+        GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+        g.setPaint(gp);
+        g.fillRect(0,0,200,200);
+        ImageIcon ii=new ImageIcon(bi);
+        JLabel imageLabel=new JLabel(ii);
+        imagePanel.add(imageLabel,null);
+        JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+        gui.add(splitPane,BorderLayout.CENTER);
+        frame.setContentPane(gui);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        try {
+          frame.setLocationByPlatform(true);
+          frame.setMinimumSize(frame.getSize());
+        }
+ catch (        Throwable ignoreAndContinue) {
+        }
+        frame.setVisible(true);
+      }
+    }
+;
+    SwingUtilities.invokeLater(r);
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import javax.swing.table.DefaultTableModel;
+import java.awt.GridBagLayout;
+import javax.swing.JButton;
+import java.awt.image.BufferedImage;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import java.awt.Dimension;
+import javax.swing.JLabel;
+import javax.swing.JCheckBox;
+import java.awt.GradientPaint;
+import javax.swing.JSplitPane;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.UIManager;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import javax.swing.SwingUtilities;
+import java.awt.GridLayout;
+import javax.swing.border.TitledBorder;
+import javax.swing.JFrame;
+import javax.swing.JComboBox;
+import javax.swing.ImageIcon;
+import java.awt.BorderLayout;
+class Class_2 {
+  public static void main(  String[] args){
+    Runnable r=new Runnable(){
+      public void run(){
+        final JFrame frame=new JFrame("Nested Layout Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        final JPanel gui=new JPanel(new BorderLayout(5,5));
+        gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+        JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+        plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+        final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+        String[] plafNames=new String[plafInfos.length];
+        for (int ii=0; ii < plafInfos.length; ii++) {
+          plafNames[ii]=plafInfos[ii].getName();
+        }
+        final JComboBox plafChooser=new JComboBox(plafNames);
+        plafComponents.add(plafChooser);
+        final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+        plafComponents.add(pack);
+        plafChooser.addActionListener(new ActionListener(){
+          public void actionPerformed(          ActionEvent ae){
+            int index=plafChooser.getSelectedIndex();
+            try {
+              UIManager.setLookAndFeel(plafInfos[index].getClassName());
+              SwingUtilities.updateComponentTreeUI(frame);
+              if (pack.isSelected()) {
+                frame.pack();
+                frame.setMinimumSize(frame.getSize());
+              }
+            }
+ catch (            Exception e) {
+              e.printStackTrace();
+            }
+          }
+        }
+);
+        gui.add(plafComponents,BorderLayout.NORTH);
+        JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+        dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+        gui.add(dynamicLabels,BorderLayout.WEST);
+        final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+        labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+        JButton addNew=new JButton("Add Another Label");
+        dynamicLabels.add(addNew,BorderLayout.NORTH);
+        addNew.addActionListener(new ActionListener(){
+          private int labelCount=0;
+          public void actionPerformed(          ActionEvent ae){
+            labels.add(new JLabel("Label " + ++labelCount));
+            frame.validate();
+          }
+        }
+);
+        dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+        String[] header={"Name","Value"};
+        String[] a=new String[0];
+        String[] names=System.getProperties().stringPropertyNames().toArray(a);
+        String[][] data=new String[names.length][2];
+        for (int ii=0; ii < names.length; ii++) {
+          data[ii][0]=names[ii];
+          data[ii][1]=System.getProperty(names[ii]);
+        }
+        DefaultTableModel model=new DefaultTableModel(data,header);
+        JTable table=new JTable(model);
+        try {
+          table.setAutoCreateRowSorter(true);
+        }
+ catch (        Exception continuewithNoSort) {
+        }
+        JScrollPane tableScroll=new JScrollPane(table);
+        Dimension tablePreferred=tableScroll.getPreferredSize();
+        tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+        JPanel imagePanel=new JPanel(new GridBagLayout());
+        imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+        BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g=bi.createGraphics();
+        GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+        g.setPaint(gp);
+        g.fillRect(0,0,200,200);
+        ImageIcon ii=new ImageIcon(bi);
+        JLabel imageLabel=new JLabel(ii);
+        imagePanel.add(imageLabel,null);
+        JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+        gui.add(splitPane,BorderLayout.CENTER);
+        frame.setContentPane(gui);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        try {
+          frame.setLocationByPlatform(true);
+          frame.setMinimumSize(frame.getSize());
+        }
+ catch (        Throwable ignoreAndContinue) {
+        }
+        frame.setVisible(true);
+      }
+    }
+;
+    SwingUtilities.invokeLater(r);
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: Runnable expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+Cannot find matching typeVariable for: r=new Runnable(){
+  public void run(){
+    final JFrame frame=new JFrame("Nested Layout Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    final JPanel gui=new JPanel(new BorderLayout(5,5));
+    gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+    JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+    plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+    final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+    String[] plafNames=new String[plafInfos.length];
+    for (int ii=0; ii < plafInfos.length; ii++) {
+      plafNames[ii]=plafInfos[ii].getName();
+    }
+    final JComboBox plafChooser=new JComboBox(plafNames);
+    plafComponents.add(plafChooser);
+    final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+    plafComponents.add(pack);
+    plafChooser.addActionListener(new ActionListener(){
+      public void actionPerformed(      ActionEvent ae){
+        int index=plafChooser.getSelectedIndex();
+        try {
+          UIManager.setLookAndFeel(plafInfos[index].getClassName());
+          SwingUtilities.updateComponentTreeUI(frame);
+          if (pack.isSelected()) {
+            frame.pack();
+            frame.setMinimumSize(frame.getSize());
+          }
+        }
+ catch (        Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+);
+    gui.add(plafComponents,BorderLayout.NORTH);
+    JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+    dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+    gui.add(dynamicLabels,BorderLayout.WEST);
+    final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+    labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+    JButton addNew=new JButton("Add Another Label");
+    dynamicLabels.add(addNew,BorderLayout.NORTH);
+    addNew.addActionListener(new ActionListener(){
+      private int labelCount=0;
+      public void actionPerformed(      ActionEvent ae){
+        labels.add(new JLabel("Label " + ++labelCount));
+        frame.validate();
+      }
+    }
+);
+    dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+    String[] header={"Name","Value"};
+    String[] a=new String[0];
+    String[] names=System.getProperties().stringPropertyNames().toArray(a);
+    String[][] data=new String[names.length][2];
+    for (int ii=0; ii < names.length; ii++) {
+      data[ii][0]=names[ii];
+      data[ii][1]=System.getProperty(names[ii]);
+    }
+    DefaultTableModel model=new DefaultTableModel(data,header);
+    JTable table=new JTable(model);
+    try {
+      table.setAutoCreateRowSorter(true);
+    }
+ catch (    Exception continuewithNoSort) {
+    }
+    JScrollPane tableScroll=new JScrollPane(table);
+    Dimension tablePreferred=tableScroll.getPreferredSize();
+    tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+    JPanel imagePanel=new JPanel(new GridBagLayout());
+    imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+    BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+    Graphics2D g=bi.createGraphics();
+    GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+    g.setPaint(gp);
+    g.fillRect(0,0,200,200);
+    ImageIcon ii=new ImageIcon(bi);
+    JLabel imageLabel=new JLabel(ii);
+    imagePanel.add(imageLabel,null);
+    JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+    gui.add(splitPane,BorderLayout.CENTER);
+    frame.setContentPane(gui);
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    try {
+      frame.setLocationByPlatform(true);
+      frame.setMinimumSize(frame.getSize());
+    }
+ catch (    Throwable ignoreAndContinue) {
+    }
+    frame.setVisible(true);
+  }
+}
+
+For node: r=new Runnable(){
+  public void run(){
+    final JFrame frame=new JFrame("Nested Layout Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    final JPanel gui=new JPanel(new BorderLayout(5,5));
+    gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+    JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+    plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+    final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+    String[] plafNames=new String[plafInfos.length];
+    for (int ii=0; ii < plafInfos.length; ii++) {
+      plafNames[ii]=plafInfos[ii].getName();
+    }
+    final JComboBox plafChooser=new JComboBox(plafNames);
+    plafComponents.add(plafChooser);
+    final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+    plafComponents.add(pack);
+    plafChooser.addActionListener(new ActionListener(){
+      public void actionPerformed(      ActionEvent ae){
+        int index=plafChooser.getSelectedIndex();
+        try {
+          UIManager.setLookAndFeel(plafInfos[index].getClassName());
+          SwingUtilities.updateComponentTreeUI(frame);
+          if (pack.isSelected()) {
+            frame.pack();
+            frame.setMinimumSize(frame.getSize());
+          }
+        }
+ catch (        Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+);
+    gui.add(plafComponents,BorderLayout.NORTH);
+    JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+    dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+    gui.add(dynamicLabels,BorderLayout.WEST);
+    final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+    labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+    JButton addNew=new JButton("Add Another Label");
+    dynamicLabels.add(addNew,BorderLayout.NORTH);
+    addNew.addActionListener(new ActionListener(){
+      private int labelCount=0;
+      public void actionPerformed(      ActionEvent ae){
+        labels.add(new JLabel("Label " + ++labelCount));
+        frame.validate();
+      }
+    }
+);
+    dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+    String[] header={"Name","Value"};
+    String[] a=new String[0];
+    String[] names=System.getProperties().stringPropertyNames().toArray(a);
+    String[][] data=new String[names.length][2];
+    for (int ii=0; ii < names.length; ii++) {
+      data[ii][0]=names[ii];
+      data[ii][1]=System.getProperty(names[ii]);
+    }
+    DefaultTableModel model=new DefaultTableModel(data,header);
+    JTable table=new JTable(model);
+    try {
+      table.setAutoCreateRowSorter(true);
+    }
+ catch (    Exception continuewithNoSort) {
+    }
+    JScrollPane tableScroll=new JScrollPane(table);
+    Dimension tablePreferred=tableScroll.getPreferredSize();
+    tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+    JPanel imagePanel=new JPanel(new GridBagLayout());
+    imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+    BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+    Graphics2D g=bi.createGraphics();
+    GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+    g.setPaint(gp);
+    g.fillRect(0,0,200,200);
+    ImageIcon ii=new ImageIcon(bi);
+    JLabel imageLabel=new JLabel(ii);
+    imagePanel.add(imageLabel,null);
+    JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+    gui.add(splitPane,BorderLayout.CENTER);
+    frame.setContentPane(gui);
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    try {
+      frame.setLocationByPlatform(true);
+      frame.setMinimumSize(frame.getSize());
+    }
+ catch (    Throwable ignoreAndContinue) {
+    }
+    frame.setVisible(true);
+  }
+}
+ expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+For node: r expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+For node: new Runnable(){
+  public void run(){
+    final JFrame frame=new JFrame("Nested Layout Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    final JPanel gui=new JPanel(new BorderLayout(5,5));
+    gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+    JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+    plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+    final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+    String[] plafNames=new String[plafInfos.length];
+    for (int ii=0; ii < plafInfos.length; ii++) {
+      plafNames[ii]=plafInfos[ii].getName();
+    }
+    final JComboBox plafChooser=new JComboBox(plafNames);
+    plafComponents.add(plafChooser);
+    final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+    plafComponents.add(pack);
+    plafChooser.addActionListener(new ActionListener(){
+      public void actionPerformed(      ActionEvent ae){
+        int index=plafChooser.getSelectedIndex();
+        try {
+          UIManager.setLookAndFeel(plafInfos[index].getClassName());
+          SwingUtilities.updateComponentTreeUI(frame);
+          if (pack.isSelected()) {
+            frame.pack();
+            frame.setMinimumSize(frame.getSize());
+          }
+        }
+ catch (        Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+);
+    gui.add(plafComponents,BorderLayout.NORTH);
+    JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+    dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+    gui.add(dynamicLabels,BorderLayout.WEST);
+    final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+    labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+    JButton addNew=new JButton("Add Another Label");
+    dynamicLabels.add(addNew,BorderLayout.NORTH);
+    addNew.addActionListener(new ActionListener(){
+      private int labelCount=0;
+      public void actionPerformed(      ActionEvent ae){
+        labels.add(new JLabel("Label " + ++labelCount));
+        frame.validate();
+      }
+    }
+);
+    dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+    String[] header={"Name","Value"};
+    String[] a=new String[0];
+    String[] names=System.getProperties().stringPropertyNames().toArray(a);
+    String[][] data=new String[names.length][2];
+    for (int ii=0; ii < names.length; ii++) {
+      data[ii][0]=names[ii];
+      data[ii][1]=System.getProperty(names[ii]);
+    }
+    DefaultTableModel model=new DefaultTableModel(data,header);
+    JTable table=new JTable(model);
+    try {
+      table.setAutoCreateRowSorter(true);
+    }
+ catch (    Exception continuewithNoSort) {
+    }
+    JScrollPane tableScroll=new JScrollPane(table);
+    Dimension tablePreferred=tableScroll.getPreferredSize();
+    tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+    JPanel imagePanel=new JPanel(new GridBagLayout());
+    imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+    BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+    Graphics2D g=bi.createGraphics();
+    GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+    g.setPaint(gp);
+    g.fillRect(0,0,200,200);
+    ImageIcon ii=new ImageIcon(bi);
+    JLabel imageLabel=new JLabel(ii);
+    imagePanel.add(imageLabel,null);
+    JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+    gui.add(splitPane,BorderLayout.CENTER);
+    frame.setContentPane(gui);
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    try {
+      frame.setLocationByPlatform(true);
+      frame.setMinimumSize(frame.getSize());
+    }
+ catch (    Throwable ignoreAndContinue) {
+    }
+    frame.setVisible(true);
+  }
+}
+ expected fqn:  with type: Type5 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+Cannot find matching typeVariable for: {
+  public void run(){
+    final JFrame frame=new JFrame("Nested Layout Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    final JPanel gui=new JPanel(new BorderLayout(5,5));
+    gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+    JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+    plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+    final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+    String[] plafNames=new String[plafInfos.length];
+    for (int ii=0; ii < plafInfos.length; ii++) {
+      plafNames[ii]=plafInfos[ii].getName();
+    }
+    final JComboBox plafChooser=new JComboBox(plafNames);
+    plafComponents.add(plafChooser);
+    final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+    plafComponents.add(pack);
+    plafChooser.addActionListener(new ActionListener(){
+      public void actionPerformed(      ActionEvent ae){
+        int index=plafChooser.getSelectedIndex();
+        try {
+          UIManager.setLookAndFeel(plafInfos[index].getClassName());
+          SwingUtilities.updateComponentTreeUI(frame);
+          if (pack.isSelected()) {
+            frame.pack();
+            frame.setMinimumSize(frame.getSize());
+          }
+        }
+ catch (        Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+);
+    gui.add(plafComponents,BorderLayout.NORTH);
+    JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+    dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+    gui.add(dynamicLabels,BorderLayout.WEST);
+    final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+    labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+    JButton addNew=new JButton("Add Another Label");
+    dynamicLabels.add(addNew,BorderLayout.NORTH);
+    addNew.addActionListener(new ActionListener(){
+      private int labelCount=0;
+      public void actionPerformed(      ActionEvent ae){
+        labels.add(new JLabel("Label " + ++labelCount));
+        frame.validate();
+      }
+    }
+);
+    dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+    String[] header={"Name","Value"};
+    String[] a=new String[0];
+    String[] names=System.getProperties().stringPropertyNames().toArray(a);
+    String[][] data=new String[names.length][2];
+    for (int ii=0; ii < names.length; ii++) {
+      data[ii][0]=names[ii];
+      data[ii][1]=System.getProperty(names[ii]);
+    }
+    DefaultTableModel model=new DefaultTableModel(data,header);
+    JTable table=new JTable(model);
+    try {
+      table.setAutoCreateRowSorter(true);
+    }
+ catch (    Exception continuewithNoSort) {
+    }
+    JScrollPane tableScroll=new JScrollPane(table);
+    Dimension tablePreferred=tableScroll.getPreferredSize();
+    tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+    JPanel imagePanel=new JPanel(new GridBagLayout());
+    imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+    BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+    Graphics2D g=bi.createGraphics();
+    GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+    g.setPaint(gp);
+    g.fillRect(0,0,200,200);
+    ImageIcon ii=new ImageIcon(bi);
+    JLabel imageLabel=new JLabel(ii);
+    imagePanel.add(imageLabel,null);
+    JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+    gui.add(splitPane,BorderLayout.CENTER);
+    frame.setContentPane(gui);
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    try {
+      frame.setLocationByPlatform(true);
+      frame.setMinimumSize(frame.getSize());
+    }
+ catch (    Throwable ignoreAndContinue) {
+    }
+    frame.setVisible(true);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: run
+Cannot find matching typeVariable for: public void run(){
+  final JFrame frame=new JFrame("Nested Layout Example");
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  final JPanel gui=new JPanel(new BorderLayout(5,5));
+  gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+  JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+  plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+  final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+  String[] plafNames=new String[plafInfos.length];
+  for (int ii=0; ii < plafInfos.length; ii++) {
+    plafNames[ii]=plafInfos[ii].getName();
+  }
+  final JComboBox plafChooser=new JComboBox(plafNames);
+  plafComponents.add(plafChooser);
+  final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+  plafComponents.add(pack);
+  plafChooser.addActionListener(new ActionListener(){
+    public void actionPerformed(    ActionEvent ae){
+      int index=plafChooser.getSelectedIndex();
+      try {
+        UIManager.setLookAndFeel(plafInfos[index].getClassName());
+        SwingUtilities.updateComponentTreeUI(frame);
+        if (pack.isSelected()) {
+          frame.pack();
+          frame.setMinimumSize(frame.getSize());
+        }
+      }
+ catch (      Exception e) {
+        e.printStackTrace();
+      }
+    }
+  }
+);
+  gui.add(plafComponents,BorderLayout.NORTH);
+  JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+  dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+  gui.add(dynamicLabels,BorderLayout.WEST);
+  final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+  labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+  JButton addNew=new JButton("Add Another Label");
+  dynamicLabels.add(addNew,BorderLayout.NORTH);
+  addNew.addActionListener(new ActionListener(){
+    private int labelCount=0;
+    public void actionPerformed(    ActionEvent ae){
+      labels.add(new JLabel("Label " + ++labelCount));
+      frame.validate();
+    }
+  }
+);
+  dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+  String[] header={"Name","Value"};
+  String[] a=new String[0];
+  String[] names=System.getProperties().stringPropertyNames().toArray(a);
+  String[][] data=new String[names.length][2];
+  for (int ii=0; ii < names.length; ii++) {
+    data[ii][0]=names[ii];
+    data[ii][1]=System.getProperty(names[ii]);
+  }
+  DefaultTableModel model=new DefaultTableModel(data,header);
+  JTable table=new JTable(model);
+  try {
+    table.setAutoCreateRowSorter(true);
+  }
+ catch (  Exception continuewithNoSort) {
+  }
+  JScrollPane tableScroll=new JScrollPane(table);
+  Dimension tablePreferred=tableScroll.getPreferredSize();
+  tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+  JPanel imagePanel=new JPanel(new GridBagLayout());
+  imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+  BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+  Graphics2D g=bi.createGraphics();
+  GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+  g.setPaint(gp);
+  g.fillRect(0,0,200,200);
+  ImageIcon ii=new ImageIcon(bi);
+  JLabel imageLabel=new JLabel(ii);
+  imagePanel.add(imageLabel,null);
+  JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+  gui.add(splitPane,BorderLayout.CENTER);
+  frame.setContentPane(gui);
+  frame.pack();
+  frame.setLocationRelativeTo(null);
+  try {
+    frame.setLocationByPlatform(true);
+    frame.setMinimumSize(frame.getSize());
+  }
+ catch (  Throwable ignoreAndContinue) {
+  }
+  frame.setVisible(true);
+}
+
+Cannot find matching typeVariable for: {
+  public void run(){
+    final JFrame frame=new JFrame("Nested Layout Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    final JPanel gui=new JPanel(new BorderLayout(5,5));
+    gui.setBorder(new TitledBorder("BorderLayout(5,5)"));
+    JPanel plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3));
+    plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)"));
+    final UIManager.LookAndFeelInfo[] plafInfos=UIManager.getInstalledLookAndFeels();
+    String[] plafNames=new String[plafInfos.length];
+    for (int ii=0; ii < plafInfos.length; ii++) {
+      plafNames[ii]=plafInfos[ii].getName();
+    }
+    final JComboBox plafChooser=new JComboBox(plafNames);
+    plafComponents.add(plafChooser);
+    final JCheckBox pack=new JCheckBox("Pack on PLAF change",true);
+    plafComponents.add(pack);
+    plafChooser.addActionListener(new ActionListener(){
+      public void actionPerformed(      ActionEvent ae){
+        int index=plafChooser.getSelectedIndex();
+        try {
+          UIManager.setLookAndFeel(plafInfos[index].getClassName());
+          SwingUtilities.updateComponentTreeUI(frame);
+          if (pack.isSelected()) {
+            frame.pack();
+            frame.setMinimumSize(frame.getSize());
+          }
+        }
+ catch (        Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+);
+    gui.add(plafComponents,BorderLayout.NORTH);
+    JPanel dynamicLabels=new JPanel(new BorderLayout(4,4));
+    dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)"));
+    gui.add(dynamicLabels,BorderLayout.WEST);
+    final JPanel labels=new JPanel(new GridLayout(0,2,3,3));
+    labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)"));
+    JButton addNew=new JButton("Add Another Label");
+    dynamicLabels.add(addNew,BorderLayout.NORTH);
+    addNew.addActionListener(new ActionListener(){
+      private int labelCount=0;
+      public void actionPerformed(      ActionEvent ae){
+        labels.add(new JLabel("Label " + ++labelCount));
+        frame.validate();
+      }
+    }
+);
+    dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER);
+    String[] header={"Name","Value"};
+    String[] a=new String[0];
+    String[] names=System.getProperties().stringPropertyNames().toArray(a);
+    String[][] data=new String[names.length][2];
+    for (int ii=0; ii < names.length; ii++) {
+      data[ii][0]=names[ii];
+      data[ii][1]=System.getProperty(names[ii]);
+    }
+    DefaultTableModel model=new DefaultTableModel(data,header);
+    JTable table=new JTable(model);
+    try {
+      table.setAutoCreateRowSorter(true);
+    }
+ catch (    Exception continuewithNoSort) {
+    }
+    JScrollPane tableScroll=new JScrollPane(table);
+    Dimension tablePreferred=tableScroll.getPreferredSize();
+    tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3));
+    JPanel imagePanel=new JPanel(new GridBagLayout());
+    imagePanel.setBorder(new TitledBorder("GridBagLayout()"));
+    BufferedImage bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB);
+    Graphics2D g=bi.createGraphics();
+    GradientPaint gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow);
+    g.setPaint(gp);
+    g.fillRect(0,0,200,200);
+    ImageIcon ii=new ImageIcon(bi);
+    JLabel imageLabel=new JLabel(ii);
+    imagePanel.add(imageLabel,null);
+    JSplitPane splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel));
+    gui.add(splitPane,BorderLayout.CENTER);
+    frame.setContentPane(gui);
+    frame.pack();
+    frame.setLocationRelativeTo(null);
+    try {
+      frame.setLocationByPlatform(true);
+      frame.setMinimumSize(frame.getSize());
+    }
+ catch (    Throwable ignoreAndContinue) {
+    }
+    frame.setVisible(true);
+  }
+}
+
+For node: run expected fqn: void with type: Type5 got: java.lang.Runnable
+For node: JFrame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: JFrame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: frame=new JFrame("Nested Layout Example")
+For node: frame=new JFrame("Nested Layout Example") expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: new JFrame("Nested Layout Example") expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: JFrame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: JFrame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: "Nested Layout Example" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) expected fqn: void with type: Type11 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setDefaultCloseOperation
+For node: setDefaultCloseOperation expected fqn: void with type: Type11 got: void
+Cannot find matching typeVariable for: JFrame.EXIT_ON_CLOSE
+For node: JFrame.EXIT_ON_CLOSE expected fqn: int with type: Type11 got: void
+For node: JFrame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: EXIT_ON_CLOSE expected fqn: int with type: Type10 got: int
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: gui=new JPanel(new BorderLayout(5,5))
+For node: gui=new JPanel(new BorderLayout(5,5)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new JPanel(new BorderLayout(5,5)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new BorderLayout(5,5) expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: 5 expected fqn: int with type: Type16 got: byte
+For node: 5 expected fqn: int with type: Type16 got: byte
+For node: gui.setBorder(new TitledBorder("BorderLayout(5,5)")) expected fqn: void with type: Type25 got: void
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: setBorder
+For node: setBorder expected fqn: void with type: Type25 got: void
+For node: new TitledBorder("BorderLayout(5,5)") expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: "BorderLayout(5,5)" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3))
+For node: plafComponents=new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: plafComponents expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new JPanel(new FlowLayout(FlowLayout.RIGHT,3,3)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new FlowLayout(FlowLayout.RIGHT,3,3) expected fqn: java.awt.FlowLayout with type: Type28 got: java.awt.FlowLayout
+For node: FlowLayout expected fqn: java.awt.FlowLayout with type: Type28 got: java.awt.FlowLayout
+For node: FlowLayout expected fqn: java.awt.FlowLayout with type: Type28 got: java.awt.FlowLayout
+Cannot find matching typeVariable for: FlowLayout.RIGHT
+For node: FlowLayout.RIGHT expected fqn: int with type: Type28 got: java.awt.FlowLayout
+For node: FlowLayout expected fqn: java.awt.FlowLayout with type: Type28 got: java.awt.FlowLayout
+For node: RIGHT expected fqn: int with type: Type29 got: int
+For node: 3 expected fqn: int with type: Type16 got: byte
+For node: 3 expected fqn: int with type: Type16 got: byte
+For node: plafComponents.setBorder(new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)")) expected fqn: void with type: Type27 got: void
+For node: plafComponents expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: setBorder
+For node: setBorder expected fqn: void with type: Type27 got: void
+For node: new TitledBorder("FlowLayout(FlowLayout.RIGHT, 3,3)") expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: "FlowLayout(FlowLayout.RIGHT, 3,3)" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Did not find solution for node: UIManager.LookAndFeelInfo[] with type Type38
+Did not find solution for node: UIManager.LookAndFeelInfo with type Type36
+Did not find solution for node: UIManager.LookAndFeelInfo with type Type36
+For node: UIManager expected fqn: javax.swing.UIManager with type: Type37 got: javax.swing.UIManager
+Cannot find matching typeVariable for: LookAndFeelInfo
+Did not find solution for node: LookAndFeelInfo with type Type36
+Cannot find matching typeVariable for: plafInfos=UIManager.getInstalledLookAndFeels()
+Did not find solution for node: plafInfos=UIManager.getInstalledLookAndFeels() with type Type38
+Did not find solution for node: plafInfos with type Type38
+For node: UIManager.getInstalledLookAndFeels() expected fqn: javax.swing.UIManager.LookAndFeelInfo[] with type: Type39 got: javax.swing.UIManager$LookAndFeelInfo[]
+For node: UIManager expected fqn: javax.swing.UIManager with type: Type37 got: javax.swing.UIManager
+Cannot find matching typeVariable for: getInstalledLookAndFeels
+For node: getInstalledLookAndFeels expected fqn: javax.swing.UIManager.LookAndFeelInfo[] with type: Type39 got: javax.swing.UIManager$LookAndFeelInfo[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: plafNames=new String[plafInfos.length]
+For node: plafNames=new String[plafInfos.length] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: plafNames expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: new String[plafInfos.length] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: plafInfos.length
+For node: plafInfos.length expected fqn: int with type: Type4 got: java.lang.String[]
+Did not find solution for node: plafInfos with type Type38
+For node: length expected fqn: int with type: Type42 got: int
+Cannot find matching typeVariable for: int ii=0
+Did not find solution for node: int ii=0 with type Type41
+Did not find solution for node: int with type Type41
+Cannot find matching typeVariable for: ii=0
+Did not find solution for node: ii=0 with type Type41
+Did not find solution for node: ii with type Type41
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: ii < plafInfos.length expected fqn: boolean with type: Type43 got: boolean
+Did not find solution for node: ii with type Type41
+Cannot find matching typeVariable for: plafInfos.length
+For node: plafInfos.length expected fqn: int with type: Type43 got: boolean
+Did not find solution for node: plafInfos with type Type38
+For node: length expected fqn: int with type: Type42 got: int
+Did not find solution for node: ii++ with type Type41
+Did not find solution for node: ii with type Type41
+Did not find solution for node: plafNames[ii]=plafInfos[ii].getName() with type Type3
+Did not find solution for node: plafNames[ii] with type Type3
+For node: plafNames expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Cannot find matching typeVariable for: ii
+Did not find solution for node: ii with type Type3
+Did not find solution for node: plafInfos[ii].getName() with type Type45
+Did not find solution for node: plafInfos[ii] with type Type36
+Did not find solution for node: plafInfos with type Type38
+Cannot find matching typeVariable for: ii
+Did not find solution for node: ii with type Type36
+Cannot find matching typeVariable for: getName
+Did not find solution for node: getName with type Type45
+For node: JComboBox expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: JComboBox expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+Cannot find matching typeVariable for: plafChooser=new JComboBox(plafNames)
+For node: plafChooser=new JComboBox(plafNames) expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: plafChooser expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: new JComboBox(plafNames) expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: JComboBox expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: JComboBox expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: plafNames expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: plafComponents.add(plafChooser) expected fqn: java.awt.Component with type: Type50 got: void
+For node: plafComponents expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: java.awt.Component with type: Type50 got: void
+For node: plafChooser expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+For node: JCheckBox expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: JCheckBox expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+Cannot find matching typeVariable for: pack=new JCheckBox("Pack on PLAF change",true)
+For node: pack=new JCheckBox("Pack on PLAF change",true) expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: pack expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: new JCheckBox("Pack on PLAF change",true) expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: JCheckBox expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: JCheckBox expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: "Pack on PLAF change" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: true expected fqn: boolean with type: Type43 got: boolean
+For node: plafComponents.add(pack) expected fqn: java.awt.Component with type: Type57 got: void
+For node: plafComponents expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: java.awt.Component with type: Type57 got: void
+For node: pack expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+For node: plafChooser.addActionListener(new ActionListener(){
+  public void actionPerformed(  ActionEvent ae){
+    int index=plafChooser.getSelectedIndex();
+    try {
+      UIManager.setLookAndFeel(plafInfos[index].getClassName());
+      SwingUtilities.updateComponentTreeUI(frame);
+      if (pack.isSelected()) {
+        frame.pack();
+        frame.setMinimumSize(frame.getSize());
+      }
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+) expected fqn: void with type: Type86 got: void
+For node: plafChooser expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+Cannot find matching typeVariable for: addActionListener
+For node: addActionListener expected fqn: void with type: Type86 got: void
+For node: new ActionListener(){
+  public void actionPerformed(  ActionEvent ae){
+    int index=plafChooser.getSelectedIndex();
+    try {
+      UIManager.setLookAndFeel(plafInfos[index].getClassName());
+      SwingUtilities.updateComponentTreeUI(frame);
+      if (pack.isSelected()) {
+        frame.pack();
+        frame.setMinimumSize(frame.getSize());
+      }
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+ expected fqn:  with type: Type60 got: java.awt.event.ActionListener
+For node: ActionListener expected fqn: java.awt.event.ActionListener with type: Type60 got: java.awt.event.ActionListener
+For node: ActionListener expected fqn: java.awt.event.ActionListener with type: Type60 got: java.awt.event.ActionListener
+Cannot find matching typeVariable for: {
+  public void actionPerformed(  ActionEvent ae){
+    int index=plafChooser.getSelectedIndex();
+    try {
+      UIManager.setLookAndFeel(plafInfos[index].getClassName());
+      SwingUtilities.updateComponentTreeUI(frame);
+      if (pack.isSelected()) {
+        frame.pack();
+        frame.setMinimumSize(frame.getSize());
+      }
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: actionPerformed
+Cannot find matching typeVariable for: public void actionPerformed(ActionEvent ae){
+  int index=plafChooser.getSelectedIndex();
+  try {
+    UIManager.setLookAndFeel(plafInfos[index].getClassName());
+    SwingUtilities.updateComponentTreeUI(frame);
+    if (pack.isSelected()) {
+      frame.pack();
+      frame.setMinimumSize(frame.getSize());
+    }
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: {
+  public void actionPerformed(  ActionEvent ae){
+    int index=plafChooser.getSelectedIndex();
+    try {
+      UIManager.setLookAndFeel(plafInfos[index].getClassName());
+      SwingUtilities.updateComponentTreeUI(frame);
+      if (pack.isSelected()) {
+        frame.pack();
+        frame.setMinimumSize(frame.getSize());
+      }
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+For node: actionPerformed expected fqn: void with type: Type60 got: java.awt.event.ActionListener
+Cannot find matching typeVariable for: ActionEvent ae
+For node: ActionEvent ae expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ActionEvent expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ActionEvent expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ae expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+Did not find solution for node: int with type Type41
+Cannot find matching typeVariable for: index=plafChooser.getSelectedIndex()
+Did not find solution for node: index=plafChooser.getSelectedIndex() with type Type41
+Did not find solution for node: index with type Type41
+For node: plafChooser.getSelectedIndex() expected fqn: int with type: Type62 got: int
+For node: plafChooser expected fqn: javax.swing.JComboBox with type: Type47 got: javax.swing.JComboBox
+Cannot find matching typeVariable for: getSelectedIndex
+For node: getSelectedIndex expected fqn: int with type: Type62 got: int
+For node: UIManager.setLookAndFeel(plafInfos[index].getClassName()) expected fqn: void with type: Type66 got: void
+For node: UIManager expected fqn: javax.swing.UIManager with type: Type37 got: javax.swing.UIManager
+Cannot find matching typeVariable for: setLookAndFeel
+For node: setLookAndFeel expected fqn: void with type: Type66 got: void
+For node: plafInfos[index].getClassName() expected fqn: java.lang.String with type: Type64 got: java.lang.String
+Did not find solution for node: plafInfos[index] with type Type36
+Did not find solution for node: plafInfos with type Type38
+Cannot find matching typeVariable for: index
+Did not find solution for node: index with type Type36
+Cannot find matching typeVariable for: getClassName
+For node: getClassName expected fqn: java.lang.String with type: Type64 got: java.lang.String
+For node: SwingUtilities.updateComponentTreeUI(frame) expected fqn: void with type: Type70 got: void
+For node: SwingUtilities expected fqn: javax.swing.SwingUtilities with type: Type69 got: javax.swing.SwingUtilities
+Cannot find matching typeVariable for: updateComponentTreeUI
+For node: updateComponentTreeUI expected fqn: void with type: Type70 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+For node: pack.isSelected() expected fqn: boolean with type: Type73 got: boolean
+For node: pack expected fqn: javax.swing.JCheckBox with type: Type53 got: javax.swing.JCheckBox
+Cannot find matching typeVariable for: isSelected
+For node: isSelected expected fqn: boolean with type: Type73 got: boolean
+For node: frame.pack() expected fqn: void with type: Type75 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: pack
+For node: pack expected fqn: void with type: Type75 got: void
+For node: frame.setMinimumSize(frame.getSize()) expected fqn: void with type: Type79 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setMinimumSize
+For node: setMinimumSize expected fqn: void with type: Type79 got: void
+For node: frame.getSize() expected fqn: java.awt.Dimension with type: Type77 got: java.awt.Dimension
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: getSize
+For node: getSize expected fqn: java.awt.Dimension with type: Type77 got: java.awt.Dimension
+Cannot find matching typeVariable for: Exception e
+For node: Exception e expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: e.printStackTrace() expected fqn: void with type: Type83 got: void
+For node: e expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type83 got: void
+For node: gui.add(plafComponents,BorderLayout.NORTH) expected fqn: void with type: Type90 got: void
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type90 got: void
+For node: plafComponents expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: BorderLayout.NORTH
+For node: BorderLayout.NORTH expected fqn: java.lang.String with type: Type90 got: void
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: NORTH expected fqn: java.lang.String with type: Type89 got: java.lang.String
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: dynamicLabels=new JPanel(new BorderLayout(4,4))
+For node: dynamicLabels=new JPanel(new BorderLayout(4,4)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: dynamicLabels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new JPanel(new BorderLayout(4,4)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new BorderLayout(4,4) expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: 4 expected fqn: int with type: Type16 got: byte
+For node: 4 expected fqn: int with type: Type16 got: byte
+For node: dynamicLabels.setBorder(new TitledBorder("BorderLayout(4,4)")) expected fqn: void with type: Type27 got: void
+For node: dynamicLabels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: setBorder
+For node: setBorder expected fqn: void with type: Type27 got: void
+For node: new TitledBorder("BorderLayout(4,4)") expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: "BorderLayout(4,4)" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: gui.add(dynamicLabels,BorderLayout.WEST) expected fqn: void with type: Type95 got: void
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type95 got: void
+For node: dynamicLabels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: BorderLayout.WEST
+For node: BorderLayout.WEST expected fqn: java.lang.String with type: Type95 got: void
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: WEST expected fqn: java.lang.String with type: Type94 got: java.lang.String
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: labels=new JPanel(new GridLayout(0,2,3,3))
+For node: labels=new JPanel(new GridLayout(0,2,3,3)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: labels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new JPanel(new GridLayout(0,2,3,3)) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new GridLayout(0,2,3,3) expected fqn: java.awt.GridLayout with type: Type99 got: java.awt.GridLayout
+For node: GridLayout expected fqn: java.awt.GridLayout with type: Type99 got: java.awt.GridLayout
+For node: GridLayout expected fqn: java.awt.GridLayout with type: Type99 got: java.awt.GridLayout
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: 2 expected fqn: int with type: Type16 got: byte
+For node: 3 expected fqn: int with type: Type16 got: byte
+For node: 3 expected fqn: int with type: Type16 got: byte
+For node: labels.setBorder(new TitledBorder("GridLayout(0,2,3,3)")) expected fqn: void with type: Type27 got: void
+For node: labels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: setBorder
+For node: setBorder expected fqn: void with type: Type27 got: void
+For node: new TitledBorder("GridLayout(0,2,3,3)") expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: "GridLayout(0,2,3,3)" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: JButton expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: JButton expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+Cannot find matching typeVariable for: addNew=new JButton("Add Another Label")
+For node: addNew=new JButton("Add Another Label") expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: addNew expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: new JButton("Add Another Label") expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: JButton expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: JButton expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+For node: "Add Another Label" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: dynamicLabels.add(addNew,BorderLayout.NORTH) expected fqn: void with type: Type110 got: void
+For node: dynamicLabels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type110 got: void
+For node: addNew expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+Cannot find matching typeVariable for: BorderLayout.NORTH
+For node: BorderLayout.NORTH expected fqn: java.lang.String with type: Type110 got: void
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: NORTH expected fqn: java.lang.String with type: Type89 got: java.lang.String
+For node: addNew.addActionListener(new ActionListener(){
+  private int labelCount=0;
+  public void actionPerformed(  ActionEvent ae){
+    labels.add(new JLabel("Label " + ++labelCount));
+    frame.validate();
+  }
+}
+) expected fqn: void with type: Type122 got: void
+For node: addNew expected fqn: javax.swing.JButton with type: Type107 got: javax.swing.JButton
+Cannot find matching typeVariable for: addActionListener
+For node: addActionListener expected fqn: void with type: Type122 got: void
+For node: new ActionListener(){
+  private int labelCount=0;
+  public void actionPerformed(  ActionEvent ae){
+    labels.add(new JLabel("Label " + ++labelCount));
+    frame.validate();
+  }
+}
+ expected fqn:  with type: Type60 got: java.awt.event.ActionListener
+For node: ActionListener expected fqn: java.awt.event.ActionListener with type: Type60 got: java.awt.event.ActionListener
+For node: ActionListener expected fqn: java.awt.event.ActionListener with type: Type60 got: java.awt.event.ActionListener
+Cannot find matching typeVariable for: {
+  private int labelCount=0;
+  public void actionPerformed(  ActionEvent ae){
+    labels.add(new JLabel("Label " + ++labelCount));
+    frame.validate();
+  }
+}
+
+Did not find solution for node: int with type Type41
+Cannot find matching typeVariable for: labelCount=0
+Did not find solution for node: labelCount=0 with type Type41
+Did not find solution for node: labelCount with type Type41
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: actionPerformed
+Cannot find matching typeVariable for: public void actionPerformed(ActionEvent ae){
+  labels.add(new JLabel("Label " + ++labelCount));
+  frame.validate();
+}
+
+Cannot find matching typeVariable for: {
+  private int labelCount=0;
+  public void actionPerformed(  ActionEvent ae){
+    labels.add(new JLabel("Label " + ++labelCount));
+    frame.validate();
+  }
+}
+
+For node: actionPerformed expected fqn: void with type: Type60 got: java.awt.event.ActionListener
+Cannot find matching typeVariable for: ActionEvent ae
+For node: ActionEvent ae expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ActionEvent expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ActionEvent expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: ae expected fqn: java.awt.event.ActionEvent with type: Type61 got: java.awt.event.ActionEvent
+For node: labels.add(new JLabel("Label " + ++labelCount)) expected fqn: java.awt.Component with type: Type117 got: void
+For node: labels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: java.awt.Component with type: Type117 got: void
+For node: new JLabel("Label " + ++labelCount) expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: "Label " + ++labelCount expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "Label " expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Did not find solution for node: ++labelCount with type Type41
+Did not find solution for node: labelCount with type Type41
+For node: frame.validate() expected fqn: void with type: Type120 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: validate
+For node: validate expected fqn: void with type: Type120 got: void
+For node: dynamicLabels.add(new JScrollPane(labels),BorderLayout.CENTER) expected fqn: void with type: Type129 got: void
+For node: dynamicLabels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type129 got: void
+For node: new JScrollPane(labels) expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: labels expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: BorderLayout.CENTER
+For node: BorderLayout.CENTER expected fqn: java.lang.String with type: Type129 got: void
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: CENTER expected fqn: java.lang.String with type: Type128 got: java.lang.String
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: header={"Name","Value"}
+For node: header={"Name","Value"} expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: header expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: {"Name","Value"} expected fqn: java.lang.String[] with type: Type133 got: java.lang.String[]
+For node: "Name" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "Value" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: a=new String[0]
+For node: a=new String[0] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: a expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: new String[0] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: names=System.getProperties().stringPropertyNames().toArray(a)
+For node: names=System.getProperties().stringPropertyNames().toArray(a) expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: names expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: System.getProperties().stringPropertyNames().toArray(a) expected fqn: java.lang.String[] with type: Type140 got: A[]
+For node: System.getProperties().stringPropertyNames() expected fqn: java.util.Set<java.lang.String> with type: Type138 got: java.util.Set
+For node: System.getProperties() expected fqn: java.util.Properties with type: Type136 got: java.util.Properties
+Did not find solution for node: System with type Type135
+Cannot find matching typeVariable for: getProperties
+For node: getProperties expected fqn: java.util.Properties with type: Type136 got: java.util.Properties
+Cannot find matching typeVariable for: stringPropertyNames
+For node: stringPropertyNames expected fqn: java.util.Set<java.lang.String> with type: Type138 got: java.util.Set
+Cannot find matching typeVariable for: toArray
+For node: toArray expected fqn: java.lang.String[] with type: Type140 got: A[]
+For node: a expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[][] expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: data=new String[names.length][2]
+For node: data=new String[names.length][2] expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: data expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: new String[names.length][2] expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: String[][] expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: names.length
+For node: names.length expected fqn: int with type: Type143 got: java.lang.String[][]
+For node: names expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: length expected fqn: int with type: Type144 got: int
+For node: 2 expected fqn: int with type: Type16 got: byte
+Cannot find matching typeVariable for: int ii=0
+Did not find solution for node: int ii=0 with type Type41
+Did not find solution for node: int with type Type41
+Cannot find matching typeVariable for: ii=0
+Did not find solution for node: ii=0 with type Type41
+Did not find solution for node: ii with type Type41
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: ii < names.length expected fqn: boolean with type: Type43 got: boolean
+Did not find solution for node: ii with type Type41
+Cannot find matching typeVariable for: names.length
+For node: names.length expected fqn: int with type: Type43 got: boolean
+For node: names expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: length expected fqn: int with type: Type144 got: int
+Did not find solution for node: ii++ with type Type41
+Did not find solution for node: ii with type Type41
+Did not find solution for node: data[ii][0]=names[ii] with type Type3
+Did not find solution for node: data[ii][0] with type Type3
+For node: data[ii] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: data expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+Cannot find matching typeVariable for: ii
+For node: ii expected fqn: int with type: Type4 got: java.lang.String[]
+For node: 0 expected fqn: int with type: Type16 got: byte
+Did not find solution for node: names[ii] with type Type3
+For node: names expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Cannot find matching typeVariable for: ii
+Did not find solution for node: ii with type Type3
+Did not find solution for node: data[ii][1]=System.getProperty(names[ii]) with type Type3
+Did not find solution for node: data[ii][1] with type Type3
+For node: data[ii] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: data expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+Cannot find matching typeVariable for: ii
+For node: ii expected fqn: int with type: Type4 got: java.lang.String[]
+For node: 1 expected fqn: int with type: Type16 got: byte
+Did not find solution for node: System.getProperty(names[ii]) with type Type145
+Did not find solution for node: System with type Type135
+Cannot find matching typeVariable for: getProperty
+Did not find solution for node: getProperty with type Type145
+Did not find solution for node: names[ii] with type Type3
+For node: names expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Cannot find matching typeVariable for: ii
+Did not find solution for node: ii with type Type3
+For node: DefaultTableModel expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: DefaultTableModel expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+Cannot find matching typeVariable for: model=new DefaultTableModel(data,header)
+For node: model=new DefaultTableModel(data,header) expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: model expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: new DefaultTableModel(data,header) expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: DefaultTableModel expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: DefaultTableModel expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: data expected fqn: java.lang.String[][] with type: Type143 got: java.lang.String[][]
+For node: header expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: JTable expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: JTable expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+Cannot find matching typeVariable for: table=new JTable(model)
+For node: table=new JTable(model) expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: table expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: new JTable(model) expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: JTable expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: JTable expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: model expected fqn: javax.swing.table.DefaultTableModel with type: Type148 got: javax.swing.table.DefaultTableModel
+For node: table.setAutoCreateRowSorter(true) expected fqn: void with type: Type155 got: void
+For node: table expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+Cannot find matching typeVariable for: setAutoCreateRowSorter
+For node: setAutoCreateRowSorter expected fqn: void with type: Type155 got: void
+For node: true expected fqn: boolean with type: Type43 got: boolean
+Cannot find matching typeVariable for: Exception continuewithNoSort
+For node: Exception continuewithNoSort expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: continuewithNoSort expected fqn: java.lang.Exception with type: Type82 got: java.lang.Exception
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+Cannot find matching typeVariable for: tableScroll=new JScrollPane(table)
+For node: tableScroll=new JScrollPane(table) expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: tableScroll expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: new JScrollPane(table) expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: table expected fqn: javax.swing.JTable with type: Type152 got: javax.swing.JTable
+For node: Dimension expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: Dimension expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+Cannot find matching typeVariable for: tablePreferred=tableScroll.getPreferredSize()
+For node: tablePreferred=tableScroll.getPreferredSize() expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: tablePreferred expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: tableScroll.getPreferredSize() expected fqn: java.awt.Dimension with type: Type161 got: java.awt.Dimension
+For node: tableScroll expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+Cannot find matching typeVariable for: getPreferredSize
+For node: getPreferredSize expected fqn: java.awt.Dimension with type: Type161 got: java.awt.Dimension
+For node: tableScroll.setPreferredSize(new Dimension(tablePreferred.width,tablePreferred.height / 3)) expected fqn: void with type: Type168 got: void
+For node: tableScroll expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+Cannot find matching typeVariable for: setPreferredSize
+For node: setPreferredSize expected fqn: void with type: Type168 got: void
+For node: new Dimension(tablePreferred.width,tablePreferred.height / 3) expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: Dimension expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: Dimension expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+Cannot find matching typeVariable for: tablePreferred.width
+For node: tablePreferred.width expected fqn: int with type: Type160 got: java.awt.Dimension
+For node: tablePreferred expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: width expected fqn: int with type: Type164 got: int
+For node: tablePreferred.height / 3 expected fqn: int with type: Type163 got: int
+Cannot find matching typeVariable for: tablePreferred.height
+For node: tablePreferred.height expected fqn: int with type: Type163 got: int
+For node: tablePreferred expected fqn: java.awt.Dimension with type: Type160 got: java.awt.Dimension
+For node: height expected fqn: int with type: Type163 got: int
+For node: 3 expected fqn: int with type: Type16 got: byte
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: imagePanel=new JPanel(new GridBagLayout())
+For node: imagePanel=new JPanel(new GridBagLayout()) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: imagePanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new JPanel(new GridBagLayout()) expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: JPanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: new GridBagLayout() expected fqn: java.awt.GridBagLayout with type: Type171 got: java.awt.GridBagLayout
+For node: GridBagLayout expected fqn: java.awt.GridBagLayout with type: Type171 got: java.awt.GridBagLayout
+For node: GridBagLayout expected fqn: java.awt.GridBagLayout with type: Type171 got: java.awt.GridBagLayout
+For node: imagePanel.setBorder(new TitledBorder("GridBagLayout()")) expected fqn: void with type: Type27 got: void
+For node: imagePanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: setBorder
+For node: setBorder expected fqn: void with type: Type27 got: void
+For node: new TitledBorder("GridBagLayout()") expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: TitledBorder expected fqn: javax.swing.border.TitledBorder with type: Type22 got: javax.swing.border.TitledBorder
+For node: "GridBagLayout()" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+Cannot find matching typeVariable for: bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB)
+For node: bi=new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB) expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: bi expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: new BufferedImage(200,200,BufferedImage.TYPE_INT_ARGB) expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: 200 expected fqn: int with type: Type176 got: short
+For node: 200 expected fqn: int with type: Type176 got: short
+Cannot find matching typeVariable for: BufferedImage.TYPE_INT_ARGB
+For node: BufferedImage.TYPE_INT_ARGB expected fqn: int with type: Type175 got: java.awt.image.BufferedImage
+For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: TYPE_INT_ARGB expected fqn: int with type: Type177 got: int
+For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+Cannot find matching typeVariable for: g=bi.createGraphics()
+For node: g=bi.createGraphics() expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+For node: g expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+For node: bi.createGraphics() expected fqn: java.awt.Graphics2D with type: Type183 got: java.awt.Graphics2D
+For node: bi expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+Cannot find matching typeVariable for: createGraphics
+For node: createGraphics expected fqn: java.awt.Graphics2D with type: Type183 got: java.awt.Graphics2D
+For node: GradientPaint expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: GradientPaint expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+Cannot find matching typeVariable for: gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow)
+For node: gp=new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow) expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: gp expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: new GradientPaint(20f,20f,Color.red,180f,180f,Color.yellow) expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: GradientPaint expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: GradientPaint expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: 20f expected fqn: float with type: Type186 got: float
+For node: 20f expected fqn: float with type: Type186 got: float
+Cannot find matching typeVariable for: Color.red
+For node: Color.red expected fqn: java.awt.Color with type: Type185 got: java.awt.GradientPaint
+For node: Color expected fqn: java.awt.Color with type: Type187 got: java.awt.Color
+For node: red expected fqn: java.awt.Color with type: Type188 got: java.awt.Color
+For node: 180f expected fqn: float with type: Type186 got: float
+For node: 180f expected fqn: float with type: Type186 got: float
+Cannot find matching typeVariable for: Color.yellow
+For node: Color.yellow expected fqn: java.awt.Color with type: Type185 got: java.awt.GradientPaint
+For node: Color expected fqn: java.awt.Color with type: Type187 got: java.awt.Color
+For node: yellow expected fqn: java.awt.Color with type: Type189 got: java.awt.Color
+For node: g.setPaint(gp) expected fqn: void with type: Type197 got: void
+For node: g expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+Cannot find matching typeVariable for: setPaint
+For node: setPaint expected fqn: void with type: Type197 got: void
+For node: gp expected fqn: java.awt.GradientPaint with type: Type185 got: java.awt.GradientPaint
+For node: g.fillRect(0,0,200,200) expected fqn: void with type: Type200 got: void
+For node: g expected fqn: java.awt.Graphics2D with type: Type182 got: java.awt.Graphics2D
+Cannot find matching typeVariable for: fillRect
+For node: fillRect expected fqn: void with type: Type200 got: void
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: 0 expected fqn: int with type: Type16 got: byte
+For node: 200 expected fqn: int with type: Type176 got: short
+For node: 200 expected fqn: int with type: Type176 got: short
+For node: ImageIcon expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: ImageIcon expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+Cannot find matching typeVariable for: ii=new ImageIcon(bi)
+For node: ii=new ImageIcon(bi) expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: ii expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: new ImageIcon(bi) expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: ImageIcon expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: ImageIcon expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: bi expected fqn: java.awt.image.BufferedImage with type: Type175 got: java.awt.image.BufferedImage
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+Cannot find matching typeVariable for: imageLabel=new JLabel(ii)
+For node: imageLabel=new JLabel(ii) expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: imageLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: new JLabel(ii) expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: JLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: ii expected fqn: javax.swing.ImageIcon with type: Type206 got: javax.swing.ImageIcon
+For node: imagePanel.add(imageLabel,null) expected fqn: void with type: Type212 got: void
+For node: imagePanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type212 got: void
+For node: imageLabel expected fqn: javax.swing.JLabel with type: Type114 got: javax.swing.JLabel
+For node: null expected fqn: null with type: Type211 got: int
+For node: JSplitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: JSplitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+Cannot find matching typeVariable for: splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel))
+For node: splitPane=new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel)) expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: splitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: new JSplitPane(JSplitPane.VERTICAL_SPLIT,tableScroll,new JScrollPane(imagePanel)) expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: JSplitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: JSplitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+Cannot find matching typeVariable for: JSplitPane.VERTICAL_SPLIT
+For node: JSplitPane.VERTICAL_SPLIT expected fqn: int with type: Type216 got: javax.swing.JSplitPane
+For node: JSplitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+For node: VERTICAL_SPLIT expected fqn: int with type: Type217 got: int
+For node: tableScroll expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: new JScrollPane(imagePanel) expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: JScrollPane expected fqn: javax.swing.JScrollPane with type: Type125 got: javax.swing.JScrollPane
+For node: imagePanel expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: gui.add(splitPane,BorderLayout.CENTER) expected fqn: void with type: Type222 got: void
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type222 got: void
+For node: splitPane expected fqn: javax.swing.JSplitPane with type: Type216 got: javax.swing.JSplitPane
+Cannot find matching typeVariable for: BorderLayout.CENTER
+For node: BorderLayout.CENTER expected fqn: java.lang.String with type: Type222 got: void
+For node: BorderLayout expected fqn: java.awt.BorderLayout with type: Type15 got: java.awt.BorderLayout
+For node: CENTER expected fqn: java.lang.String with type: Type128 got: java.lang.String
+For node: frame.setContentPane(gui) expected fqn: void with type: Type226 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setContentPane
+For node: setContentPane expected fqn: void with type: Type226 got: void
+For node: gui expected fqn: javax.swing.JPanel with type: Type14 got: javax.swing.JPanel
+For node: frame.pack() expected fqn: void with type: Type76 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: pack
+For node: pack expected fqn: void with type: Type76 got: void
+For node: frame.setLocationRelativeTo(null) expected fqn: void with type: Type230 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setLocationRelativeTo
+For node: setLocationRelativeTo expected fqn: void with type: Type230 got: void
+For node: null expected fqn: null with type: Type229 got: java.awt.Component
+For node: frame.setLocationByPlatform(true) expected fqn: void with type: Type233 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setLocationByPlatform
+For node: setLocationByPlatform expected fqn: void with type: Type233 got: void
+For node: true expected fqn: boolean with type: Type43 got: boolean
+For node: frame.setMinimumSize(frame.getSize()) expected fqn: void with type: Type236 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setMinimumSize
+For node: setMinimumSize expected fqn: void with type: Type236 got: void
+For node: frame.getSize() expected fqn: java.awt.Dimension with type: Type78 got: java.awt.Dimension
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: getSize
+For node: getSize expected fqn: java.awt.Dimension with type: Type78 got: java.awt.Dimension
+Cannot find matching typeVariable for: Throwable ignoreAndContinue
+For node: Throwable ignoreAndContinue expected fqn: java.lang.Throwable with type: Type239 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type239 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type239 got: java.lang.Throwable
+For node: ignoreAndContinue expected fqn: java.lang.Throwable with type: Type239 got: java.lang.Throwable
+For node: frame.setVisible(true) expected fqn: void with type: Type240 got: void
+For node: frame expected fqn: javax.swing.JFrame with type: Type6 got: javax.swing.JFrame
+Cannot find matching typeVariable for: setVisible
+For node: setVisible expected fqn: void with type: Type240 got: void
+For node: true expected fqn: boolean with type: Type43 got: boolean
+For node: SwingUtilities.invokeLater(r) expected fqn: void with type: Type245 got: void
+For node: SwingUtilities expected fqn: javax.swing.SwingUtilities with type: Type244 got: javax.swing.SwingUtilities
+Cannot find matching typeVariable for: invokeLater
+For node: invokeLater expected fqn: void with type: Type245 got: void
+For node: r expected fqn: java.lang.Runnable with type: Type5 got: java.lang.Runnable
+{Checked=567, Analyzed=511, Unsolved=56, Incorrect=62, Correct=449}
+=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=24, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=9, Correct=1}
+int=SimpleName: {Checked=27, Analyzed=13, Unsolved=14, Incorrect=2, Correct=11}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayAccess: {Checked=9, Analyzed=2, Unsolved=7, Incorrect=0, Correct=2}
+java=ArrayCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=Assignment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=31, Analyzed=31, Unsolved=0, Incorrect=0, Correct=31}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=14, Analyzed=12, Unsolved=2, Incorrect=6, Correct=6}
+java=QualifiedName: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=7, Correct=0}
+java=SimpleName: {Checked=212, Analyzed=201, Unsolved=11, Incorrect=6, Correct=195}
+java=SimpleType: {Checked=69, Analyzed=67, Unsolved=2, Incorrect=0, Correct=67}
+java=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=StringLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=VariableDeclarationFragment: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=0, Correct=25}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=31, Analyzed=31, Unsolved=0, Incorrect=0, Correct=31}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=3, Correct=31}
+Total stats
+{Checked=567, Analyzed=511, Unsolved=56, Incorrect=62, Correct=449}
+=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=24, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=9, Correct=1}
+int=SimpleName: {Checked=27, Analyzed=13, Unsolved=14, Incorrect=2, Correct=11}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayAccess: {Checked=9, Analyzed=2, Unsolved=7, Incorrect=0, Correct=2}
+java=ArrayCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=Assignment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=31, Analyzed=31, Unsolved=0, Incorrect=0, Correct=31}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=14, Analyzed=12, Unsolved=2, Incorrect=6, Correct=6}
+java=QualifiedName: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=7, Correct=0}
+java=SimpleName: {Checked=212, Analyzed=201, Unsolved=11, Incorrect=6, Correct=195}
+java=SimpleType: {Checked=69, Analyzed=67, Unsolved=2, Incorrect=0, Correct=67}
+java=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=StringLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=VariableDeclarationFragment: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=0, Correct=25}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=31, Analyzed=31, Unsolved=0, Incorrect=0, Correct=31}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=3, Correct=31}
+,ClassInstanceCreation,3,3,0,3,0
+,SimpleName,0,1,0,0,1
+boolean,BooleanLiteral,4,4,4,0,0
+boolean,InfixExpression,2,2,2,0,0
+boolean,MethodInvocation,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+float,NumberLiteral,4,4,4,0,0
+int,InfixExpression,1,1,1,0,0
+int,MethodInvocation,1,1,1,0,0
+int,NumberLiteral,24,24,0,24,0
+int,PostfixExpression,0,2,0,0,2
+int,PrefixExpression,0,1,0,0,1
+int,PrimitiveType,0,4,0,0,4
+int,QualifiedName,10,10,1,9,0
+int,SimpleName,13,27,11,2,14
+int,VariableDeclarationExpression,0,2,0,0,2
+int,VariableDeclarationFragment,0,4,0,0,4
+java,ArrayAccess,2,9,2,0,7
+java,ArrayCreation,3,3,3,0,0
+java,ArrayInitializer,1,1,1,0,0
+java,ArrayType,9,10,9,0,1
+java,Assignment,0,3,0,0,3
+java,ClassInstanceCreation,31,31,31,0,0
+java,InfixExpression,1,1,1,0,0
+java,MethodInvocation,12,14,6,6,2
+java,QualifiedName,7,8,0,7,1
+java,SimpleName,201,212,195,6,11
+java,SimpleType,67,69,67,0,2
+java,SingleVariableDeclaration,6,6,6,0,0
+java,StringLiteral,11,11,11,0,0
+java,VariableDeclarationFragment,25,26,25,0,1
+null,NullLiteral,2,2,0,2,0
+void,MethodInvocation,31,31,31,0,0
+void,PrimitiveType,4,4,4,0,0
+void,SimpleName,34,34,31,3,0

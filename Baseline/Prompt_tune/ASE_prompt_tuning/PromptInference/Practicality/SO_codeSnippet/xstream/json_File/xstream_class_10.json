@@ -1,0 +1,283 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "xstream_class_10",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "generateResponse",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "xStream",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.XStream",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Parameter",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "writer",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.io.StringWriter",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "java.io.StringWriter()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "marshal",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "xStream",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "this",
+                          "type": "ThisAccess",
+                          "children": [
+                            {
+                              "label": "xstream_class_10",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "com.thoughtworks.xstream.io.xml.PrettyPrintWriter(java.io.StringWriter)",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "writer",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "1",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "com.thoughtworks.xstream.io.xml.PrettyPrintWriter",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "addAttribute",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "key",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.String",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Parameter",
+                                          "children": [
+                                            {
+                                              "label": "final",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "value",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.String",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Parameter",
+                                          "children": [
+                                            {
+                                              "label": "final",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "NOT",
+                                          "type": "UnaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "equals",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "key",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"class\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "addAttribute",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "super",
+                                                  "type": "SuperAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "key",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "value",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "toString",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "writer",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

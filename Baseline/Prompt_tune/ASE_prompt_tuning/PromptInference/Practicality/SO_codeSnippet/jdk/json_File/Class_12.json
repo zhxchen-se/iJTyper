@@ -1,0 +1,1654 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_12",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "fromCalendar",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "calendar",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.util.Calendar",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Parameter",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "date",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getTime",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "calendar",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "formatted",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "format",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.text.SimpleDateFormat(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"yyyy-MM-dd\u0027T\u0027HH:mm:ssZ\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "date",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "substring",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "formatted",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "0",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "22",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\":\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "substring",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "formatted",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "22",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Transform Calendar to ISO 8601 string.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "now",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "fromCalendar",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getInstance",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.util.GregorianCalendar",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Get current date and time formatted as ISO 8601 string.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "toCalendar",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "java.util.Calendar",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.text.ParseException",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "iso8601string",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Parameter",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "calendar",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Calendar",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getInstance",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.util.GregorianCalendar",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "s",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "replace",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "iso8601string",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Z\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"+00:00\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "s",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "substring",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "s",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "0",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "22",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "substring",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "s",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "23",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "to get rid of the \":\"",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.IndexOutOfBoundsException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "",
+                                  "type": "Throw",
+                                  "children": [
+                                    {
+                                      "label": "java.text.ParseException(java.lang.String,int)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "\"Invalid length\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "0",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "date",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "parse",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.text.SimpleDateFormat(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"yyyy-MM-dd\u0027T\u0027HH:mm:ssZ\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "s",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setTime",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "calendar",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "date",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "return",
+                          "type": "Return",
+                          "children": [
+                            {
+                              "label": "calendar",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Transform ISO 8601 string to Calendar.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "ISO8601DateFormatter",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "DATE_FORMAT_1",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "java.text.DateFormat",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.text.SimpleDateFormat(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"yyyy-MM-dd\u0027T\u0027HH:mm:ssZ\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "DATE_FORMAT_2",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "java.text.DateFormat",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.text.SimpleDateFormat(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"yyyy-MM-dd\u0027T\u0027HHmmssZ\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "UTC_PLUS",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"+\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "UTC_MINUS",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"-\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "toDate",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "THROWN_TYPES",
+                              "children": [
+                                {
+                                  "label": "java.text.ParseException",
+                                  "type": "THROWN",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "iso8601string",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\u003d",
+                              "type": "Assignment",
+                              "children": [
+                                {
+                                  "label": "iso8601string",
+                                  "type": "VariableWrite",
+                                  "children": []
+                                },
+                                {
+                                  "label": "trim",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "iso8601string",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "GT",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "indexOf",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "toUpperCase",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "iso8601string",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\"Z\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "0",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "\u003d",
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "label": "iso8601string",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "replace",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "toUpperCase",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "iso8601string",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\"Z\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"+0000\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "ELSE",
+                                  "type": "else",
+                                  "children": [
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "GT",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "indexOf",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "iso8601string",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "UTC_PLUS",
+                                                  "type": "FieldRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "\u003d",
+                                              "type": "Assignment",
+                                              "children": [
+                                                {
+                                                  "label": "iso8601string",
+                                                  "type": "VariableWrite",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "replaceColon",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "iso8601string",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "indexOf",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "iso8601string",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "UTC_PLUS",
+                                                          "type": "FieldRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\u003d",
+                                              "type": "Assignment",
+                                              "children": [
+                                                {
+                                                  "label": "iso8601string",
+                                                  "type": "VariableWrite",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "appendZeros",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "iso8601string",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "indexOf",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "iso8601string",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "UTC_PLUS",
+                                                          "type": "FieldRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "UTC_PLUS",
+                                                      "type": "FieldRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "ELSE",
+                                          "type": "else",
+                                          "children": [
+                                            {
+                                              "label": "if",
+                                              "type": "If",
+                                              "children": [
+                                                {
+                                                  "label": "GT",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "indexOf",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "iso8601string",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "UTC_MINUS",
+                                                          "type": "FieldRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "0",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "THEN",
+                                                  "type": "then",
+                                                  "children": [
+                                                    {
+                                                      "label": "\u003d",
+                                                      "type": "Assignment",
+                                                      "children": [
+                                                        {
+                                                          "label": "iso8601string",
+                                                          "type": "VariableWrite",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "replaceColon",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                              "type": "TypeAccess",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "iso8601string",
+                                                              "type": "VariableRead",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "indexOf",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "iso8601string",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "UTC_MINUS",
+                                                                  "type": "FieldRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "\u003d",
+                                                      "type": "Assignment",
+                                                      "children": [
+                                                        {
+                                                          "label": "iso8601string",
+                                                          "type": "VariableWrite",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "appendZeros",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                              "type": "TypeAccess",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "iso8601string",
+                                                              "type": "VariableRead",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "indexOf",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "iso8601string",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "UTC_MINUS",
+                                                                  "type": "FieldRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "UTC_MINUS",
+                                                              "type": "FieldRead",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "date",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.Date",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "contains",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "iso8601string",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\":\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "\u003d",
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "label": "date",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "parse",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "DATE_FORMAT_1",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "iso8601string",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "ELSE",
+                                  "type": "else",
+                                  "children": [
+                                    {
+                                      "label": "\u003d",
+                                      "type": "Assignment",
+                                      "children": [
+                                        {
+                                          "label": "date",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "parse",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "DATE_FORMAT_2",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "Class_.Class_12$ISO8601DateFormatter",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "iso8601string",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "date",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "toISO8601String",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "date",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.util.Date",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "format",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "DATE_FORMAT_1",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "Class_.Class_12$ISO8601DateFormatter",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "date",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "replaceColon",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "sourceStr",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "offsetIndex",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "int",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "contains",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "substring",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "sourceStr",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "offsetIndex",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\":\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "substring",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "sourceStr",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "0",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "offsetIndex",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "replace",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "substring",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "sourceStr",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "offsetIndex",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "\":\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "sourceStr",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "appendZeros",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "private",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "sourceStr",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "offsetIndex",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "int",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "offsetChar",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "LE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "MINUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "MINUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "length",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "sourceStr",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "1",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "indexOf",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "sourceStr",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "offsetChar",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "offsetIndex",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "2",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "sourceStr",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"00\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "sourceStr",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Helper class for handling a most common subset of ISO 8601 strings\n(in the following format: \"2008-03-01T13:00:00+01:00\"). It supports\nparsing the \"Z\" timezone, but many other less-used features are\nmissing.",
+                      "type": "JavaDoc",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

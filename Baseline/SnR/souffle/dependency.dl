@@ -1,0 +1,531 @@
+// Simple Data Type
+
+.type jtype <: symbol
+.type jclassname <: symbol
+.decl jclass(cname:jclassname, cfql:symbol, sname:symbol) // Java class with full name with package info, fqn, simple name
+.decl type(tname:jtype)
+.decl candidate(tname:jtype, cname:jclassname) // Type with candidate classes
+
+
+// Field Constraint
+.decl jfield(cname:jclassname, fcname:jclassname, fname:symbol) // Field on class with name, fcname cname.fname ex. String Main.s
+.decl jfield_dependency(tname:jtype, ftname:jtype, fname:symbol)
+
+// Method Constraint
+
+.decl jmethod(uid:number,cname:jclassname, retcname:jclassname, mname:symbol, nparam:number) // Method in java with unique id on class with retname cname.mname(...nparam...) ex. void PrintStream.println(String x)
+.decl jmethod_param(uid:number,paramnumber:number,cname:jclassname) // Method parameter with unique id of method this is on, the nth parameter this is, the class name of this.
+.decl jmethod_dependency(uid:number, tname:jtype, rettname:jtype, mname:symbol) // Dependency of Type to method that is on type
+.decl jmethod_param_dependency(uid:number,paramnumber:number,tname:jtype) // Dependency of Type to method that is on type
+
+.decl satisfied_jmethod_param_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol,paramcname:jclassname,paramtname:jtype)
+satisfied_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M,Cp,Tp) :-
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    jmethod_param(MId,N,Cp),
+    jmethod_param_dependency(DId,N,Tp),
+    candidate(Tp,Cp).
+    
+.decl unsatified_jmethod_param_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol,paramcname:jclassname,paramtname:jtype)
+unsatified_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M,Cp,Tp) :- 
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    jmethod_param(MId,N,Cp), 
+    jmethod_param_dependency(DId,N,Tp),
+    !satisfied_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M,Cp,Tp).
+    
+.decl check_jmethod_param_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol)
+check_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M) :- 
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    !jmethod_param(MId,_,_), 
+    !jmethod_param_dependency(DId,_,_).
+check_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M) :- 
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    jmethod_param(MId,N,Cp), 
+    jmethod_param_dependency(DId,N,Tp),
+    !unsatified_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M,Cp,Tp).
+    
+.decl satisfied_jmethod_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol)
+satisfied_jmethod_dependency(MId,Cn,RCn,DId,Tn,RTn,M) :- 
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    check_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M).
+    
+.decl unsatisfied_jmethod_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol)
+unsatisfied_jmethod_dependency(MId,Cn,RCn,DId,Tn,RTn,M) :- 
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    !satisfied_jmethod_dependency(MId,Cn,RCn,DId,Tn,RTn,M).
+    
+.decl check_jmethod_dependency_on(tname:jtype,cname:jclassname)
+check_jmethod_dependency_on(T,C) :- 
+    jmethod(MId,C,RCn,M,_), 
+    jmethod_dependency(DId,T,RTn,M), 
+    candidate(T,C), 
+    candidate(RTn,RCn), 
+    jclass(C,_,_),
+    jclass(RCn,_,_),
+    !unsatisfied_jmethod_dependency(MId,C,RCn,DId,T,RTn,M), type_class(RTn,RCn).
+check_jmethod_dependency_on(T,C) :-
+    jmethod(MId,C,RCn,M,_),
+    jmethod_dependency(DId,T,RTn,M),
+    candidate(T,C),
+    no_candidate(RTn),
+    jclass(C,_,_),
+    jclass(RCn,_,_).
+check_jmethod_dependency_on(T,C) :- 
+    !jmethod_dependency(_,T,_,_), 
+    candidate(T,C).
+    
+.decl check_jmethod_dependency_ret(tname:jtype,cname:jclassname)
+check_jmethod_dependency_ret(T,C) :- 
+    jmethod(MId,Cn,C,M,_), 
+    jmethod_dependency(DId,Tn,T,M), 
+    candidate(T,C), 
+    candidate(Tn,Cn), 
+    jclass(C,_,_),
+    jclass(Cn,_,_),
+    !unsatisfied_jmethod_dependency(MId,Cn,C,DId,Tn,T,M).
+check_jmethod_dependency_ret(T,C) :-
+    jmethod(MId,Cn,C,M,_),
+    jmethod_dependency(DId,Tn,T,M),
+    candidate(T,C),
+    no_candidate(Tn),
+    jclass(C,_,_),
+    jclass(Cn,_,_).
+check_jmethod_dependency_ret(T,C) :- 
+    !jmethod_dependency(_,_,T,_), 
+    candidate(T,C).
+    
+// .decl unsatified_jmethod_param_dependency(muid:number,cname:jclassname,retcname:jclassname,duid:number,tname:jtype,rettname:jtype,mname:symbol)
+.decl check_jmethod_dependency_param(tname:jtype,cname:jclassname)
+check_jmethod_dependency_param(T,C) :-
+    jmethod(MId,Cn,RCn,M,_), 
+    jmethod_dependency(DId,Tn,RTn,M), 
+    candidate(Tn,Cn), 
+    candidate(RTn,RCn), 
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    jmethod_param(MId,N,C),
+    jmethod_param_dependency(DId,N,T),
+    !unsatified_jmethod_param_dependency(MId,Cn,RCn,DId,Tn,RTn,M,C,T).
+check_jmethod_dependency_param(T,C) :-
+    jmethod(MId,Cn,RCn,M,_),
+    jmethod_dependency(DId,Tn,RTn,M),
+    candidate(Tn,Cn),
+    no_candidate(RTn),
+    jclass(Cn,_,_),
+    jclass(RCn,_,_),
+    jmethod_param(MId,N,C),
+    jmethod_param_dependency(DId,N,T).
+check_jmethod_dependency_param(T,C) :-
+    !jmethod_param_dependency(_,_,T),
+    candidate(T,C).
+    
+.decl check_jmethod_dependency(tname:jtype,cname:jclassname)
+check_jmethod_dependency(T,C) :- 
+    check_jmethod_dependency_on(T,C), 
+    check_jmethod_dependency_ret(T,C),
+    check_jmethod_dependency_param(T,C).
+check_jmethod_dependency(T,C) :- 
+    !jmethod_dependency(_,T,_,_), 
+    !jmethod_dependency(_,_,T,_),
+    !jmethod_param_dependency(_,_,T),
+    candidate(T,C).
+
+// Subclass Constraint
+
+.decl jclasssuper(cname:jclassname,supercname:jclassname) // cname extends/implements supercname
+.decl jsupertype_dependency(tname:jtype,supertname:jtype) // tname extends/implements supertname
+
+.decl jclass_compatable_super(cname:jclassname,supercname:jclassname)
+jclass_compatable_super(C,C) :- jclass(C,_,_).
+jclass_compatable_super(C,S) :- jclasssuper(C,S).
+jclass_compatable_super(C,S) :- jclasssuper(C,A), jclass_compatable_super(A,S).
+
+.decl satisfy_jsubtype_dependency(tn:jtype,ts:jtype,cn:jclassname,cs:jclassname)
+satisfy_jsubtype_dependency(Tn,Ts,Cn,Cs) :- 
+    jsupertype_dependency(Tn,Ts), 
+    candidate(Tn,Cn), 
+    candidate(Ts,Cs), 
+    jclass(Cn,_,_),
+    jclass(Cs,_,_),
+    jclass_compatable_super(Cn,Cs).
+    
+.decl unsatisfied_jsubtype_dependency(tn:jtype,ts:jtype,cn:jclassname,cs:jclassname)
+unsatisfied_jsubtype_dependency(Tn,Ts,Cn,Cs) :- 
+    jsupertype_dependency(Tn,Ts), 
+    candidate(Tn,Cn), 
+    candidate(Ts,Cs), 
+    jclass(Cn,_,_),
+    jclass(Cs,_,_),
+    !satisfy_jsubtype_dependency(Tn,Ts,Cn,Cs).
+    
+.decl check_jsubtype_second(tname:jtype, cname:jclassname)
+check_jsubtype_second(T,C) :- 
+    candidate(T,C), 
+    candidate(Tn,Cn), 
+    jsupertype_dependency(Tn,T), 
+    !unsatisfied_jsubtype_dependency(Tn,T,Cn,C).
+check_jsubtype_second(T,C) :-
+    candidate(T,C),
+    no_candidate(Tn),
+    jsupertype_dependency(Tn,T).
+check_jsubtype_second(T,C) :- 
+    candidate(T,C), 
+    !jsupertype_dependency(_,T).
+    
+.decl check_jsubtype_first(tname:jtype, cname:jclassname)
+check_jsubtype_first(T,C) :- 
+    candidate(T,C), 
+    candidate(Ts,Cs), 
+    jsupertype_dependency(T,Ts), 
+    !unsatisfied_jsubtype_dependency(T,Ts,C,Cs), 
+    type_class(Ts,Cs).
+check_jsubtype_first(T,C) :-
+    candidate(T,C),
+    no_candidate(Ts),
+    jsupertype_dependency(T,Ts).
+check_jsubtype_first(T,C) :- 
+    candidate(T,C), 
+    !jsupertype_dependency(T,_).
+    
+.decl check_jsubtype(tname:jtype, cname:jclassname)
+check_jsubtype(T,C) :- 
+    candidate(T,C), 
+    !jsupertype_dependency(T,_), 
+    !jsupertype_dependency(_,T).
+check_jsubtype(T,C) :- 
+    candidate(T,C), 
+    check_jsubtype_first(T,C), 
+    check_jsubtype_second(T,C).
+
+
+// FullName Constraint
+    
+.decl jfullname(tname:jtype,cname:jclassname)
+
+.decl satisfy_jfullname_dependency(tn:jtype,cn:jclassname)
+satisfy_jfullname_dependency(Tn,Cn) :- 
+    jfullname(Tn,Cn), 
+    candidate(Tn,Cn), 
+    jclass(Cn,_,_).
+    
+.decl unsatisfied_jfullname_dependency(tn:jtype,cn:jclassname)
+unsatisfied_jfullname_dependency(Tn,Cn) :- 
+    candidate(Tn,Cn), 
+    jclass(Cn,_,_),
+    !satisfy_jfullname_dependency(Tn,Cn).
+    
+.decl check_jfullname_dependency(tname:jtype, cname:jclassname)
+check_jfullname_dependency(T,C) :- 
+    candidate(T,C), 
+    (!unsatisfied_jfullname_dependency(T,C); !jfullname(T,_)).
+
+
+.decl jfqlname(tname:jtype,fqlname:symbol)
+
+.decl satisfy_jfqlname_dependency(tn:jtype,cn:jclassname,FQLn:symbol)
+satisfy_jfqlname_dependency(Tn,Cn,FQLn) :-
+    jfqlname(Tn,FQLn),
+    candidate(Tn,Cn),
+    jclass(Cn,FQLn,_).
+
+.decl unsatisfied_jfqlname_dependency(tn:jtype,cn:jclassname)
+unsatisfied_jfqlname_dependency(Tn,Cn) :-
+    candidate(Tn,Cn),
+    jfqlname(Tn,FQLn),
+    !satisfy_jfqlname_dependency(Tn,Cn,FQLn).
+
+.decl check_jfqlname_dependency(tname:jtype, cname:jclassname)
+check_jfqlname_dependency(T,C) :-
+    candidate(T,C),
+    (!unsatisfied_jfqlname_dependency(T,C); !jfqlname(T,_)).
+
+
+// SimpleName Constraint
+    
+.decl jsimplename(tname:jtype,sname:symbol)
+
+.decl satisfy_jsimplename_dependency(tn:jtype,cn:jclassname,sn:symbol)
+satisfy_jsimplename_dependency(Tn,Cn,Sn) :- 
+    jsimplename(Tn,Sn), 
+    candidate(Tn,Cn), 
+    jclass(Cn,_,Sn).
+    
+.decl unsatisfied_jsimplename_dependency(tn:jtype,cn:jclassname)
+unsatisfied_jsimplename_dependency(Tn,Cn) :- 
+    candidate(Tn,Cn),
+    jsimplename(Tn,Sn),
+    !satisfy_jsimplename_dependency(Tn,Cn,Sn).
+    
+.decl check_jsimplename_dependency(tname:jtype, cname:jclassname)
+check_jsimplename_dependency(T,C) :- 
+    candidate(T,C), 
+    (!unsatisfied_jsimplename_dependency(T,C); !jsimplename(T,_)).
+
+
+// Joint Constraint
+
+.decl type_class(tname:jtype, cname:jclassname)
+type_class(T,C) :- 
+    candidate(T,C), 
+    check_jmethod_dependency(T,C), 
+    check_jsubtype(T,C),
+    check_jfullname_dependency(T,C),
+    check_jfqlname_dependency(T,C),
+    check_jsimplename_dependency(T,C).
+
+.output type_class
+
+
+.decl no_candidate(tname:jtype)
+no_candidate(T) :-
+    type(T),
+    !candidate(T,_).
+
+
+// Get Solved constraints
+
+.decl previously_solved_constraint(tname:jtype)
+previously_solved_constraint(T) :-
+    jfullname(T,_).
+previously_solved_constraint(T) :-
+    type(T),
+    !candidate(T,_).
+
+// Solve for the dependency where tname is dependent on ontname. Need to solve OT first.
+.decl dependent_pair(tname:jtype, ontname:jtype)
+dependent_pair(T,OT) :-
+    candidate(T,_), candidate(OT,_), jsupertype_dependency(T,OT).
+dependent_pair(T,OT) :-
+    candidate(T,_), candidate(OT,_), jmethod_dependency(_,T,OT,_).
+dependent_pair(T,OT) :-
+    candidate(T,_), candidate(OT,_), jmethod_dependency(Id,_,T,_), jmethod_param_dependency(Id,0,OT).
+dependent_pair(T,OT) :-
+    candidate(T,_), candidate(OT,_), jmethod_param_dependency(Id,X,T), jmethod_param_dependency(Id,X+1,OT).
+.decl some_previously_unsolved_constraint(tname:jtype, ontname:jtype)
+some_previously_unsolved_constraint(T,OT) :-
+    dependent_pair(T,OT), !previously_solved_constraint(OT).
+    
+.decl all_previously_solved_constraint(tname:jtype)
+all_previously_solved_constraint(T) :-
+    dependent_pair(T,OT), !some_previously_unsolved_constraint(T,OT).
+    
+.decl solved_constraint(tname:jtype)
+solved_constraint(T) :-
+    type(T), previously_solved_constraint(T).
+solved_constraint(T) :-
+    type(T), all_previously_solved_constraint(T).
+solved_constraint(T) :-
+    type(T), !dependent_pair(T,_).
+ .output previously_solved_constraint
+ .output dependent_pair
+ .output solved_constraint
+
+
+// Filtered solved constraint
+.decl filtered_type_class(tname:jtype, cname:jclassname)
+filtered_type_class(T,C) :-
+    type_class(T,C), solved_constraint(T).
+
+.output filtered_type_class
+
+// Data
+.input jclass
+.input jclasssuper
+.input jmethod
+.input jmethod_param
+.input type
+.input candidate
+.input jsupertype_dependency
+.input jmethod_dependency
+.input jmethod_param_dependency
+.input jfullname
+.input jfqlname
+.input jsimplename
+
+
+// Test for method (no param)
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// jclass("java.lang.A", "A").
+// jclass("void", "void").
+// jmethod(1, "java.lang.String", "void", "toString", 0).
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// candidate("Type4", "java.lang.String").
+// candidate("Type4", "java.lang.A").
+// candidate("Type5", "void").
+// candidate("Type5", "java.lang.Object").
+// jmethod_dependency(1, "Type2", "Type5", "toString").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.String
+// Type4   java.lang.String
+// Type4   java.lang.A
+// Type5   void
+// ===============
+
+
+// Test for method
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// jclass("java.lang.A", "A").
+// jclass("void", "void").
+// jmethod(1, "java.lang.String", "void", "toString", 0).
+// jmethod_param(1, 0, "java.lang.A").
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// candidate("Type4", "java.lang.String").
+// candidate("Type4", "java.lang.A").
+// candidate("Type5", "void").
+// candidate("Type5", "java.lang.Object").
+// jmethod_dependency(1, "Type2", "Type5", "toString").
+// jmethod_param_dependency(1, 0, "Type4").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.String
+// Type4   java.lang.A
+// Type5   void
+// ===============
+
+
+// Test for full name
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// jfullname("Type2", "java.lang.String").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.String
+// ===============
+
+
+// Test for simple name
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// jsimplename("Type2", "String").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.String
+// ===============
+
+
+// Test for subtype
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// jclass("java.lang.AnotherString", "AnotherString").
+// jclass("java.lang.A", "A").
+// jclasssuper("java.lang.String", "java.lang.Object").
+// jclasssuper("java.lang.AnotherString", "java.lang.String").
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// candidate("Type2", "java.lang.AnotherString").
+// candidate("Type4", "java.lang.String").
+// candidate("Type4", "java.lang.A").
+// jsupertype_dependency("Type4", "Type2").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.Object
+// Type2   java.lang.String
+// Type4   java.lang.String
+// ===============
+
+
+// Test for jodatime
+// jclass("org.joda.time.format.DateTimeFormatter", "DateTimeFormatter").
+// jclass("android.icu.util.TimeZone", "TimeZone").
+// jclass("com.ibm.icu.util.TimeZone", "TimeZone").
+// jclass("java.util.TimeZone", "TimeZone").
+// jclass("net.sourceforge.argparse4j.internal.ArgumentImpl", "ArgumentImpl").
+// jmethod(0, "java.util.TimeZone", "java.util.TimeZone", "getDefault", 0).
+// jmethod(1, "android.icu.util.TimeZone", "android.icu.util.TimeZone", "getDefault", 0).
+// candidate("Type9", "org.joda.time.format.DateTimeFormatter").
+// candidate("Type9", "android.icu.util.TimeZone").
+// candidate("Type9", "com.ibm.icu.util.TimeZone").
+// candidate("Type9", "java.util.TimeZone").
+// candidate("Type8", "net.sourceforge.argparse4j.internal.ArgumentImpl").
+// candidate("Type8", "android.icu.util.TimeZone").
+// candidate("Type8", "com.ibm.icu.util.TimeZone").
+// candidate("Type8", "java.util.TimeZone").
+// jmethod_dependency(1, "Type8", "Type9", "getDefault").
+
+
+// Test for method for filtered_type_class
+// jclass("java.lang.Object", "Object").
+// jclass("java.lang.String", "String").
+// jclass("java.lang.A", "A").
+// jclass("void", "void").
+// jmethod(1, "java.lang.String", "void", "toString", 0).
+// jmethod_param(1, 0, "java.lang.A").
+// candidate("Type2", "java.lang.Object").
+// candidate("Type2", "java.lang.String").
+// candidate("Type4", "java.lang.String").
+// candidate("Type4", "java.lang.A").
+// candidate("Type5", "void").
+// candidate("Type5", "java.lang.Object").
+// jmethod_dependency(1, "Type2", "Type5", "toString").
+// jmethod_param_dependency(1, 0, "Type4").
+// jfullname("Type4", "java.lang.A").
+
+// Expected
+// type_class
+// tname   cname
+// ===============
+// Type2   java.lang.String
+// Type4   java.lang.String
+// Type4   java.lang.A
+// Type5   void
+// ===============
+// ---------------
+// filtered_type_class
+// tname   cname
+// ===============
+// Type4   java.lang.A
+// Type5   void
+// ===============

@@ -1,0 +1,1050 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_1",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.SuppressWarnings(\"serial\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"serial\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "createBinaryApplet",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.io.IOException",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "applet",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.applet.Applet",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "Class_.Class_1$1()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "1",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "java.applet.Applet",
+                                      "type": "SUPER_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "paint",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "void",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "@java.lang.Override",
+                                          "type": "Annotation",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "g",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "java.awt.Graphics",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "paint",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "super",
+                                              "type": "SuperAccess",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "fillRect",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "10",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "10",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "oos",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.io.ObjectOutputStream",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.io.ObjectOutputStream(java.io.OutputStream)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "java.io.FileOutputStream(java.lang.String)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "\"applet.dat\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "writeObject",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "oos",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "applet",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "close",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "oos",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "frame",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.awt.Frame",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_LocalVariable",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.awt.Frame(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"Applet Test\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "addWindowListener",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "frame",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Class_.Class_1$2()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "2",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "java.awt.event.WindowAdapter",
+                                      "type": "SUPER_TYPE",
+                                      "children": [
+                                        {
+                                          "label": "",
+                                          "type": "SUPER_INTERFACES",
+                                          "children": [
+                                            {
+                                              "label": "java.awt.event.WindowFocusListener",
+                                              "type": "INTERFACE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "java.awt.event.WindowStateListener",
+                                              "type": "INTERFACE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "java.awt.event.WindowListener",
+                                              "type": "INTERFACE",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "windowClosing",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "void",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "we",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "java.awt.event.WindowEvent",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "dispose",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "frame",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "prefHeight",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_LocalVariable",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "50",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "prefWidth",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "int",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_LocalVariable",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "50",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "container",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.awt.Container",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "Class_.Class_1$3()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "3",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "java.awt.Container",
+                                      "type": "SUPER_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "paint",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "void",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "@java.lang.Override",
+                                          "type": "Annotation",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "g",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "java.awt.Graphics",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "paint",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "super",
+                                              "type": "SuperAccess",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "graphs",
+                                          "type": "LocalVariable",
+                                          "children": [
+                                            {
+                                              "label": "java.awt.Graphics2D",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setBackground",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "graphs",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "WHITE",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "java.awt.Color",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "clearRect",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "graphs",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "prefWidth",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "prefHeight",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "setColor",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "RED",
+                                              "type": "FieldRead",
+                                              "children": [
+                                                {
+                                                  "label": "java.awt.Color",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "fillRect",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "g",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "5",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "5",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "10",
+                                              "type": "Literal",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "10",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setPreferredSize",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "container",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "java.awt.Dimension(int,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "prefWidth",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "prefHeight",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "add",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "frame",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "container",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "pack",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "frame",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setVisible",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "frame",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "true",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "bufImage",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.awt.image.BufferedImage",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.awt.image.BufferedImage(int,int,int)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "prefWidth",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "prefHeight",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "TYPE_INT_RGB",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.awt.image.BufferedImage",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "paint",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "container",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "createGraphics",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "bufImage",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "createBinaryApplet",
+                              "type": "Invocation",
+                              "children": []
+                            },
+                            {
+                              "label": "ois",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.io.ObjectInputStream",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "java.io.ObjectInputStream(java.io.InputStream)",
+                                  "type": "ConstructorCall",
+                                  "children": [
+                                    {
+                                      "label": "java.io.FileInputStream(java.lang.String)",
+                                      "type": "ConstructorCall",
+                                      "children": [
+                                        {
+                                          "label": "\"applet.dat\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "applet",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.applet.Applet",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "readObject",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "ois",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "close",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "ois",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "add",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "container",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "applet",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "setBounds",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "applet",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "0",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "0",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "prefWidth",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "prefHeight",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "init",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "applet",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "g",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.awt.Graphics",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getGraphics",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "applet",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "drawImage",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "g",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "bufImage",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "0",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "0",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "applet",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "paint",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "applet",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "g",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.Exception",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "println",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "out",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.System",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "\"Whoops\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

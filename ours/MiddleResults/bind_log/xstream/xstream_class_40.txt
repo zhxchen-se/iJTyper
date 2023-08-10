@@ -1,0 +1,297 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_40.java
+Expect check=71
+Cannot find matching typeVariable for: public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_40
+Cannot find matching typeVariable for: public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type2 got: com.thoughtworks.xstream.converters.Converter
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type2 got: com.thoughtworks.xstream.converters.Converter
+For node: @SuppressWarnings("rawtypes") expected fqn: java.lang.SuppressWarnings with type: Type7 got: java.lang.SuppressWarnings
+For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type7 got: java.lang.SuppressWarnings
+For node: "rawtypes" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: @Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type4 got: boolean
+Cannot find matching typeVariable for: canConvert
+Cannot find matching typeVariable for: @SuppressWarnings("rawtypes") @Override public boolean canConvert(Class clazz){
+  return clazz.equals(Integer.class);
+}
+
+Cannot find matching typeVariable for: public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: Class clazz
+Did not find solution for node: Class clazz with type Type9
+Did not find solution for node: Class with type Type9
+Did not find solution for node: Class with type Type9
+Did not find solution for node: clazz with type Type9
+For node: clazz.equals(Integer.class) expected fqn: boolean with type: Type12 got: boolean
+Did not find solution for node: clazz with type Type9
+Cannot find matching typeVariable for: equals
+For node: equals expected fqn: boolean with type: Type12 got: boolean
+Did not find solution for node: Integer.class with type Type11
+For node: Integer expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+For node: @Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: void expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: marshal
+Cannot find matching typeVariable for: @Override public void marshal(Object object,HierarchicalStreamWriter writer,MarshallingContext context){
+}
+
+Cannot find matching typeVariable for: public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: Object object
+For node: Object object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: HierarchicalStreamWriter writer
+For node: HierarchicalStreamWriter writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type15 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type15 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: HierarchicalStreamWriter expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type15 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type15 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
+Cannot find matching typeVariable for: MarshallingContext context
+For node: MarshallingContext context expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type16 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type16 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type16 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: context expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type16 got: com.thoughtworks.xstream.converters.MarshallingContext
+For node: @Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: unmarshal
+Cannot find matching typeVariable for: @Override public Object unmarshal(HierarchicalStreamReader reader,UnmarshallingContext context){
+  String text=(String)reader.getValue();
+  Integer number=Integer.parseInt(text.trim());
+  return number;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
+public class xstream_class_40 implements Converter {
+  @SuppressWarnings("rawtypes") @Override public boolean canConvert(  Class clazz){
+    return clazz.equals(Integer.class);
+  }
+  @Override public void marshal(  Object object,  HierarchicalStreamWriter writer,  MarshallingContext context){
+  }
+  @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
+    String text=(String)reader.getValue();
+    Integer number=Integer.parseInt(text.trim());
+    return number;
+  }
+}
+
+Cannot find matching typeVariable for: HierarchicalStreamReader reader
+For node: HierarchicalStreamReader reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type17 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type17 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type17 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type17 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: UnmarshallingContext context
+For node: UnmarshallingContext context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type18 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type18 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type18 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type18 got: com.thoughtworks.xstream.converters.UnmarshallingContext
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: text=(String)reader.getValue()
+For node: text=(String)reader.getValue() expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: text expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: (String)reader.getValue() expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: reader.getValue() expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type17 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+Cannot find matching typeVariable for: getValue
+For node: getValue expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: Integer expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+Cannot find matching typeVariable for: number=Integer.parseInt(text.trim())
+For node: number=Integer.parseInt(text.trim()) expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+For node: number expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+Did not find solution for node: Integer.parseInt(text.trim()) with type Type23
+For node: Integer expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+Cannot find matching typeVariable for: parseInt
+Did not find solution for node: parseInt with type Type23
+For node: text.trim() expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: text expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: trim
+For node: trim expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: number expected fqn: java.lang.Integer with type: Type10 got: java.lang.Integer
+{Checked=66, Analyzed=58, Unsolved=8, Incorrect=0, Correct=58}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=21, Analyzed=18, Unsolved=3, Incorrect=0, Correct=18}
+java=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=66, Analyzed=58, Unsolved=8, Incorrect=0, Correct=58}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=21, Analyzed=18, Unsolved=3, Incorrect=0, Correct=18}
+java=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,MethodInvocation,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,10,10,10,0,0
+com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
+int,MethodInvocation,0,1,0,0,1
+int,SimpleName,0,1,0,0,1
+java,CastExpression,1,1,1,0,0
+java,MarkerAnnotation,3,3,3,0,0
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,18,21,18,0,3
+java,SimpleType,6,7,6,0,1
+java,SingleMemberAnnotation,1,1,1,0,0
+java,SingleVariableDeclaration,1,2,1,0,1
+java,StringLiteral,1,1,1,0,0
+java,TypeLiteral,0,1,0,0,1
+java,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

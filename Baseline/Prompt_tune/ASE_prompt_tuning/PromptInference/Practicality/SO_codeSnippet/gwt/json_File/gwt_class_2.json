@@ -1,0 +1,895 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "gwt_class_2",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "SUPER_INTERFACES",
+                  "children": [
+                    {
+                      "label": "com.google.gwt.core.client.EntryPoint",
+                      "type": "INTERFACE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "onModuleLoad",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "form",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.FormPanel",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_LocalVariable",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.FormPanel()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Create a FormPanel and point it at a service.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setAction",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"/myFormHandler\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setEncoding",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "FormPanel.ENCODING_MULTIPART",
+                          "type": "TypeAccess",
+                          "children": []
+                        },
+                        {
+                          "label": "Because we\u0027re going to add a FileUpload widget,",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "we\u0027ll need to set the form to use the POST method,",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "and multipart MIME encoding.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setMethod",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "FormPanel.METHOD_POST",
+                          "type": "TypeAccess",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "panel",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.VerticalPanel",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.VerticalPanel()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Create a panel to hold all of the form widgets.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setSpacing",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "10",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setWidget",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tb",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.TextBox",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_LocalVariable",
+                          "children": [
+                            {
+                              "label": "final",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.TextBox()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Create a TextBox, giving it a name so that it will be submitted.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setWidth",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "tb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"220\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setName",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "tb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"textBoxFormElement\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "tb",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "lb",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.ListBox",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.ListBox()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Create a ListBox, giving it a name and",
+                          "type": "Comment",
+                          "children": []
+                        },
+                        {
+                          "label": "some values to be associated with its options.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setName",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"listBoxFormElement\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addItem",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item1\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item1\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addItem",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item2\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item2\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addItem",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item3\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"item3\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setWidth",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"220\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "lb",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "upload",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.FileUpload",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.FileUpload()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        },
+                        {
+                          "label": "Create a FileUpload widget.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setName",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "upload",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "\"uploadFormElement\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "upload",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "panel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.Button(java.lang.String,gwt_class_2$1)",
+                          "type": "ConstructorCall",
+                          "children": [
+                            {
+                              "label": "\"Submit\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "com.google.gwt.event.dom.client.ClickHandler()",
+                              "type": "NewClass",
+                              "children": [
+                                {
+                                  "label": "1",
+                                  "type": "Class",
+                                  "children": [
+                                    {
+                                      "label": "com.google.gwt.event.dom.client.ClickHandler",
+                                      "type": "SUPER_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "onClick",
+                                      "type": "Method",
+                                      "children": [
+                                        {
+                                          "label": "void",
+                                          "type": "RETURN_TYPE",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "",
+                                          "type": "Modifiers_Method",
+                                          "children": [
+                                            {
+                                              "label": "public",
+                                              "type": "Modifier",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "@java.lang.Override",
+                                          "type": "Annotation",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "event",
+                                          "type": "Parameter",
+                                          "children": [
+                                            {
+                                              "label": "com.google.gwt.event.dom.client.ClickEvent",
+                                              "type": "VARIABLE_TYPE",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "submit",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "form",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Add a \u0027submit\u0027 button.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addSubmitHandler",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.FormPanel$SubmitHandler()",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "2",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.user.client.ui.FormPanel$SubmitHandler",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "onSubmit",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "event",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.user.client.ui.FormPanel.SubmitEvent",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "if",
+                                      "type": "If",
+                                      "children": [
+                                        {
+                                          "label": "EQ",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "length",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "getText",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "tb",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "0",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "THEN",
+                                          "type": "then",
+                                          "children": [
+                                            {
+                                              "label": "alert",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "com.google.gwt.user.client.Window",
+                                                  "type": "TypeAccess",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "\"The text box must not be empty\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "cancel",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "event",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "This event is fired just before the form is submitted.",
+                                          "type": "Comment",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "We can take this opportunity to perform validation.",
+                                          "type": "Comment",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Add an event handler to the form.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "addSubmitCompleteHandler",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.FormPanel$SubmitCompleteHandler()",
+                          "type": "NewClass",
+                          "children": [
+                            {
+                              "label": "3",
+                              "type": "Class",
+                              "children": [
+                                {
+                                  "label": "com.google.gwt.user.client.ui.FormPanel$SubmitCompleteHandler",
+                                  "type": "SUPER_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "onSubmitComplete",
+                                  "type": "Method",
+                                  "children": [
+                                    {
+                                      "label": "void",
+                                      "type": "RETURN_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Modifiers_Method",
+                                      "children": [
+                                        {
+                                          "label": "public",
+                                          "type": "Modifier",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "@java.lang.Override",
+                                      "type": "Annotation",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "event",
+                                      "type": "Parameter",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "alert",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "com.google.gwt.user.client.Window",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "getResults",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "event",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "When the form submission is successfully completed,",
+                                          "type": "Comment",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "this event is fired. Assuming the service returned",
+                                          "type": "Comment",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "a response of type text/html, we can get the result",
+                                          "type": "Comment",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "here.",
+                                          "type": "Comment",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "decoratorPanel",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.ui.DecoratorPanel",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.user.client.ui.DecoratorPanel()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "decoratorPanel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "form",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "add",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "get",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "com.google.gwt.user.client.ui.RootPanel",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "decoratorPanel",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "Add the widgets to the root panel.",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

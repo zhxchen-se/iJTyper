@@ -1,0 +1,958 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_35.java
+Expect check=147
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_35
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: public static class AClass {
+  public String value="This should be in an attribute";
+  public CompositeClass anotherValue=new CompositeClass();
+}
+
+Did not find solution for node: AClass with type Type4
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: value="This should be in an attribute"
+For node: value="This should be in an attribute" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: value expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "This should be in an attribute" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Cannot find matching typeVariable for: anotherValue=new CompositeClass()
+Did not find solution for node: anotherValue=new CompositeClass() with type Type5
+Did not find solution for node: anotherValue with type Type5
+Did not find solution for node: new CompositeClass() with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Cannot find matching typeVariable for: public static class CompositeClass {
+  public Integer value=42;
+}
+
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: Integer with type Type13
+Did not find solution for node: Integer with type Type13
+Cannot find matching typeVariable for: value=42
+Did not find solution for node: value=42 with type Type13
+Did not find solution for node: value with type Type13
+Did not find solution for node: 42 with type Type14
+Cannot find matching typeVariable for: public static class ToSingleValue implements SingleValueConverter {
+  @Override public boolean canConvert(  Class type){
+    return CompositeClass.class == type;
+  }
+  @Override public String toString(  Object obj){
+    CompositeClass cCompositeClass=(CompositeClass)obj;
+    return cCompositeClass.value.toString();
+  }
+  @Override public Object fromString(  String str){
+    return new CompositeClass();
+  }
+}
+
+Cannot find matching typeVariable for: ToSingleValue
+Cannot find matching typeVariable for: public static class ToSingleValue implements SingleValueConverter {
+  @Override public boolean canConvert(  Class type){
+    return CompositeClass.class == type;
+  }
+  @Override public String toString(  Object obj){
+    CompositeClass cCompositeClass=(CompositeClass)obj;
+    return cCompositeClass.value.toString();
+  }
+  @Override public Object fromString(  String str){
+    return new CompositeClass();
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+For node: SingleValueConverter expected fqn: com.thoughtworks.xstream.converters.SingleValueConverter with type: Type2 got: com.thoughtworks.xstream.converters.SingleValueConverter
+For node: SingleValueConverter expected fqn: com.thoughtworks.xstream.converters.SingleValueConverter with type: Type2 got: com.thoughtworks.xstream.converters.SingleValueConverter
+For node: @Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: boolean expected fqn: boolean with type: Type7 got: boolean
+Cannot find matching typeVariable for: canConvert
+Cannot find matching typeVariable for: @Override public boolean canConvert(Class type){
+  return CompositeClass.class == type;
+}
+
+Cannot find matching typeVariable for: public static class ToSingleValue implements SingleValueConverter {
+  @Override public boolean canConvert(  Class type){
+    return CompositeClass.class == type;
+  }
+  @Override public String toString(  Object obj){
+    CompositeClass cCompositeClass=(CompositeClass)obj;
+    return cCompositeClass.value.toString();
+  }
+  @Override public Object fromString(  String str){
+    return new CompositeClass();
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: Class type
+For node: Class type expected fqn: java.lang.Class with type: Type16 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type16 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type16 got: java.lang.Class
+For node: type expected fqn: java.lang.Class with type: Type16 got: java.lang.Class
+For node: CompositeClass.class == type expected fqn: boolean with type: Type7 got: boolean
+For node: CompositeClass.class expected fqn: java.lang.Class<xstream_class_35.CompositeClass> with type: Type17 got: java.lang.Class
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+For node: type expected fqn: java.lang.Class with type: Type16 got: java.lang.Class
+For node: @Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: toString
+Cannot find matching typeVariable for: @Override public String toString(Object obj){
+  CompositeClass cCompositeClass=(CompositeClass)obj;
+  return cCompositeClass.value.toString();
+}
+
+Cannot find matching typeVariable for: public static class ToSingleValue implements SingleValueConverter {
+  @Override public boolean canConvert(  Class type){
+    return CompositeClass.class == type;
+  }
+  @Override public String toString(  Object obj){
+    CompositeClass cCompositeClass=(CompositeClass)obj;
+    return cCompositeClass.value.toString();
+  }
+  @Override public Object fromString(  String str){
+    return new CompositeClass();
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: Object obj
+For node: Object obj expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+For node: obj expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Cannot find matching typeVariable for: cCompositeClass=(CompositeClass)obj
+Did not find solution for node: cCompositeClass=(CompositeClass)obj with type Type5
+Did not find solution for node: cCompositeClass with type Type5
+Did not find solution for node: (CompositeClass)obj with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+For node: obj expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+For node: cCompositeClass.value.toString() expected fqn: java.lang.String with type: Type18 got: java.lang.String
+Cannot find matching typeVariable for: cCompositeClass.value
+For node: cCompositeClass.value expected fqn: java.lang.Integer with type: Type18 got: java.lang.String
+Did not find solution for node: cCompositeClass with type Type5
+Did not find solution for node: value with type Type13
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: @Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type15 got: java.lang.Override
+For node: Object expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type9 got: java.lang.Object
+Cannot find matching typeVariable for: fromString
+Cannot find matching typeVariable for: @Override public Object fromString(String str){
+  return new CompositeClass();
+}
+
+Cannot find matching typeVariable for: public static class ToSingleValue implements SingleValueConverter {
+  @Override public boolean canConvert(  Class type){
+    return CompositeClass.class == type;
+  }
+  @Override public String toString(  Object obj){
+    CompositeClass cCompositeClass=(CompositeClass)obj;
+    return cCompositeClass.value.toString();
+  }
+  @Override public Object fromString(  String str){
+    return new CompositeClass();
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: String str
+For node: String str expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: str expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Did not find solution for node: new CompositeClass() with type Type5
+Did not find solution for node: CompositeClass with type Type5
+Did not find solution for node: CompositeClass with type Type5
+For node: @Test expected fqn: org.junit.Test with type: Type19 got: org.junit.Test
+For node: Test expected fqn: org.junit.Test with type: Type19 got: org.junit.Test
+For node: void expected fqn: void with type: Type10 got: void
+Cannot find matching typeVariable for: testName
+Cannot find matching typeVariable for: @Test public void testName() throws Exception {
+  XStream xStream=new XStream();
+  xStream.registerConverter(new ToSingleValue());
+  Mapper mapper=xStream.getMapper();
+  ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+  ConverterLookup converterLookup=xStream.getConverterLookup();
+  String valueField=null;
+  Converter converter=null;
+  xStream.registerConverter(converter);
+  System.out.println(xStream.toXML(new AClass()));
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+For node: Exception expected fqn: java.lang.Exception with type: Type20 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type20 got: java.lang.Exception
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xStream=new XStream()
+For node: xStream=new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+For node: xStream.registerConverter(new ToSingleValue()) expected fqn: void with type: Type24 got: void
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: registerConverter
+For node: registerConverter expected fqn: void with type: Type24 got: void
+Did not find solution for node: new ToSingleValue() with type Type1
+Did not find solution for node: ToSingleValue with type Type1
+Did not find solution for node: ToSingleValue with type Type1
+For node: Mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: Mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+Cannot find matching typeVariable for: mapper=xStream.getMapper()
+For node: mapper=xStream.getMapper() expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: xStream.getMapper() expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type28 got: com.thoughtworks.xstream.mapper.Mapper
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: getMapper
+For node: getMapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type28 got: com.thoughtworks.xstream.mapper.Mapper
+For node: ReflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type30 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+For node: ReflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type30 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+Cannot find matching typeVariable for: reflectionProvider=xStream.getReflectionProvider()
+For node: reflectionProvider=xStream.getReflectionProvider() expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type30 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+For node: reflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type30 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+For node: xStream.getReflectionProvider() expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type31 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: getReflectionProvider
+For node: getReflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type31 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+For node: ConverterLookup expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type33 got: com.thoughtworks.xstream.converters.ConverterLookup
+For node: ConverterLookup expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type33 got: com.thoughtworks.xstream.converters.ConverterLookup
+Cannot find matching typeVariable for: converterLookup=xStream.getConverterLookup()
+For node: converterLookup=xStream.getConverterLookup() expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type33 got: com.thoughtworks.xstream.converters.ConverterLookup
+For node: converterLookup expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type33 got: com.thoughtworks.xstream.converters.ConverterLookup
+For node: xStream.getConverterLookup() expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type34 got: com.thoughtworks.xstream.converters.ConverterLookup
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: getConverterLookup
+For node: getConverterLookup expected fqn: com.thoughtworks.xstream.converters.ConverterLookup with type: Type34 got: com.thoughtworks.xstream.converters.ConverterLookup
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Cannot find matching typeVariable for: valueField=null
+For node: valueField=null expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: valueField expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: null expected fqn: null with type: Type36 got: java.lang.String
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type37 got: com.thoughtworks.xstream.converters.Converter
+For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type37 got: com.thoughtworks.xstream.converters.Converter
+Cannot find matching typeVariable for: converter=null
+For node: converter=null expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type37 got: com.thoughtworks.xstream.converters.Converter
+For node: converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type37 got: com.thoughtworks.xstream.converters.Converter
+For node: null expected fqn: null with type: Type38 got: com.thoughtworks.xstream.converters.Converter
+For node: xStream.registerConverter(converter) expected fqn: void with type: Type39 got: void
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: registerConverter
+For node: registerConverter expected fqn: void with type: Type39 got: void
+For node: converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type37 got: com.thoughtworks.xstream.converters.Converter
+For node: System.out.println(xStream.toXML(new AClass())) expected fqn: void with type: Type48 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type48 got: void
+Did not find solution for node: System with type Type46
+For node: out expected fqn: java.io.PrintStream with type: Type47 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type48 got: void
+Did not find solution for node: xStream.toXML(new AClass()) with type Type43
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type21 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: toXML
+Did not find solution for node: toXML with type Type43
+Did not find solution for node: new AClass() with type Type4
+Did not find solution for node: AClass with type Type4
+Did not find solution for node: AClass with type Type4
+For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+Cannot find matching typeVariable for: wrapMapper
+Cannot find matching typeVariable for: protected MapperWrapper wrapMapper(MapperWrapper next){
+  return next;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: import org.junit.Test;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.ConverterLookup;
+import com.thoughtworks.xstream.converters.SingleValueConverter;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
+import com.thoughtworks.xstream.mapper.Mapper;
+import com.thoughtworks.xstream.mapper.MapperWrapper;
+public class xstream_class_35 {
+public static class AClass {
+    public String value="This should be in an attribute";
+    public CompositeClass anotherValue=new CompositeClass();
+  }
+public static class CompositeClass {
+    public Integer value=42;
+  }
+public static class ToSingleValue implements SingleValueConverter {
+    @Override public boolean canConvert(    Class type){
+      return CompositeClass.class == type;
+    }
+    @Override public String toString(    Object obj){
+      CompositeClass cCompositeClass=(CompositeClass)obj;
+      return cCompositeClass.value.toString();
+    }
+    @Override public Object fromString(    String str){
+      return new CompositeClass();
+    }
+  }
+  @Test public void testName() throws Exception {
+    XStream xStream=new XStream();
+    xStream.registerConverter(new ToSingleValue());
+    Mapper mapper=xStream.getMapper();
+    ReflectionProvider reflectionProvider=xStream.getReflectionProvider();
+    ConverterLookup converterLookup=xStream.getConverterLookup();
+    String valueField=null;
+    Converter converter=null;
+    xStream.registerConverter(converter);
+    System.out.println(xStream.toXML(new AClass()));
+  }
+  protected MapperWrapper wrapMapper(  MapperWrapper next){
+    return next;
+  }
+}
+
+Cannot find matching typeVariable for: MapperWrapper next
+For node: MapperWrapper next expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+For node: next expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+For node: next expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
+{Checked=136, Analyzed=99, Unsolved=37, Incorrect=5, Correct=94}
+=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleName: {Checked=14, Analyzed=1, Unsolved=13, Incorrect=0, Correct=1}
+=SimpleType: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=0, Correct=26}
+com.thoughtworks.xstream.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=20, Unsolved=5, Incorrect=0, Correct=20}
+java=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=136, Analyzed=99, Unsolved=37, Incorrect=5, Correct=94}
+=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleName: {Checked=14, Analyzed=1, Unsolved=13, Incorrect=0, Correct=1}
+=SimpleType: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=0, Correct=26}
+com.thoughtworks.xstream.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=20, Unsolved=5, Incorrect=0, Correct=20}
+java=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+,CastExpression,0,1,0,0,1
+,ClassInstanceCreation,0,4,0,0,4
+,MarkerAnnotation,1,1,1,0,0
+,SimpleName,1,14,1,0,13
+,SimpleType,0,8,0,0,8
+,VariableDeclarationFragment,0,2,0,0,2
+boolean,InfixExpression,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,1,1,1,0,0
+com.thoughtworks.xstream.,MethodInvocation,3,3,3,0,0
+com.thoughtworks.xstream.,SimpleName,26,26,26,0,0
+com.thoughtworks.xstream.,SimpleType,9,9,9,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,1,1,1,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,5,5,5,0,0
+int,NumberLiteral,0,1,0,0,1
+java,MarkerAnnotation,3,3,3,0,0
+java,MethodInvocation,1,2,1,0,1
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,20,25,20,0,5
+java,SimpleType,8,9,8,0,1
+java,SingleVariableDeclaration,3,3,3,0,0
+java,StringLiteral,1,1,1,0,0
+java,TypeLiteral,1,1,0,1,0
+java,VariableDeclarationFragment,2,3,2,0,1
+null,NullLiteral,2,2,0,2,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

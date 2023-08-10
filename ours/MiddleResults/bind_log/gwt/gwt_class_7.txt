@@ -1,0 +1,1360 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_7.java
+Expect check=106
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_7
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Did not find solution for node: GWTMemoryIssue with type Type1
+For node: EntryPoint expected fqn: com.google.gwt.core.client.EntryPoint with type: Type2 got: com.google.gwt.core.client.EntryPoint
+For node: EntryPoint expected fqn: com.google.gwt.core.client.EntryPoint with type: Type2 got: com.google.gwt.core.client.EntryPoint
+For node: boolean expected fqn: boolean with type: Type5 got: boolean
+Cannot find matching typeVariable for: WITH_TABLE=false
+For node: WITH_TABLE=false expected fqn: boolean with type: Type5 got: boolean
+For node: WITH_TABLE expected fqn: boolean with type: Type5 got: boolean
+For node: false expected fqn: boolean with type: Type5 got: boolean
+For node: Panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+For node: Panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: panel
+For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: panel
+Cannot find matching typeVariable for: private Panel panel;
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+For node: Timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+For node: Timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Cannot find matching typeVariable for: timer
+For node: timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Cannot find matching typeVariable for: timer
+Cannot find matching typeVariable for: private Timer timer;
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: Table with type Type8
+Did not find solution for node: Table with type Type8
+Cannot find matching typeVariable for: table
+Did not find solution for node: table with type Type8
+Cannot find matching typeVariable for: table
+Cannot find matching typeVariable for: private Table table;
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: onModuleLoad
+Cannot find matching typeVariable for: public void onModuleLoad(){
+  RootPanel rootPanel=RootPanel.get();
+  this.panel=new VerticalPanel();
+  this.panel.setSize("100%","100%");
+  rootPanel.add(panel);
+  if (WITH_TABLE) {
+    loadTable();
+  }
+ else {
+    startUpdateTask();
+  }
+}
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Cannot find matching typeVariable for: rootPanel=RootPanel.get()
+For node: rootPanel=RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+For node: rootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type10 got: com.google.gwt.user.client.ui.RootPanel
+For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Cannot find matching typeVariable for: get
+For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type10 got: com.google.gwt.user.client.ui.RootPanel
+For node: this.panel=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+For node: this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: panel
+For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: this.panel.setSize("100%","100%") expected fqn: void with type: Type15 got: void
+For node: this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: panel
+For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: setSize
+For node: setSize expected fqn: void with type: Type15 got: void
+For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: rootPanel.add(panel) expected fqn: void with type: Type19 got: void
+For node: rootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type19 got: void
+For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: WITH_TABLE
+Cannot find matching typeVariable for: if (WITH_TABLE) {
+  loadTable();
+}
+ else {
+  startUpdateTask();
+}
+
+Cannot find matching typeVariable for: {
+  RootPanel rootPanel=RootPanel.get();
+  this.panel=new VerticalPanel();
+  this.panel.setSize("100%","100%");
+  rootPanel.add(panel);
+  if (WITH_TABLE) {
+    loadTable();
+  }
+ else {
+    startUpdateTask();
+  }
+}
+
+Cannot find matching typeVariable for: public void onModuleLoad(){
+  RootPanel rootPanel=RootPanel.get();
+  this.panel=new VerticalPanel();
+  this.panel.setSize("100%","100%");
+  rootPanel.add(panel);
+  if (WITH_TABLE) {
+    loadTable();
+  }
+ else {
+    startUpdateTask();
+  }
+}
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+For node: loadTable() expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: loadTable
+For node: loadTable expected fqn: void with type: Type4 got: void
+For node: startUpdateTask() expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: startUpdateTask
+For node: startUpdateTask expected fqn: void with type: Type4 got: void
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: startUpdateTask
+Cannot find matching typeVariable for: private void startUpdateTask(){
+  this.timer=new Timer(){
+    public void run(){
+    }
+  }
+;
+  this.timer.scheduleRepeating(2000);
+}
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+For node: this.timer=new Timer(){
+  public void run(){
+  }
+}
+ expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+For node: this.timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: timer
+For node: timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+For node: new Timer(){
+  public void run(){
+  }
+}
+ expected fqn:  with type: Type7 got: com.google.gwt.user.client.Timer
+For node: Timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+For node: Timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Cannot find matching typeVariable for: {
+  public void run(){
+  }
+}
+
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: run
+Cannot find matching typeVariable for: public void run(){
+}
+
+Cannot find matching typeVariable for: {
+  public void run(){
+  }
+}
+
+For node: run expected fqn: void with type: Type7 got: com.google.gwt.user.client.Timer
+For node: this.timer.scheduleRepeating(2000) expected fqn: void with type: Type24 got: void
+For node: this.timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: timer
+For node: timer expected fqn: com.google.gwt.user.client.Timer with type: Type7 got: com.google.gwt.user.client.Timer
+Cannot find matching typeVariable for: scheduleRepeating
+For node: scheduleRepeating expected fqn: void with type: Type24 got: void
+For node: 2000 expected fqn: int with type: Type23 got: short
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: loadTable
+Cannot find matching typeVariable for: public void loadTable(){
+  Runnable onLoadCallback=new Runnable(){
+    public void run(){
+      GWTMemoryIssue.this.table.setSize("100%","100%");
+      GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+      GWTMemoryIssue.this.startUpdateTask();
+    }
+  }
+;
+}
+
+Cannot find matching typeVariable for: public class GWTMemoryIssue implements EntryPoint {
+  private static final boolean WITH_TABLE=false;
+  private Panel panel;
+  private Timer timer;
+  private Table table;
+  public void onModuleLoad(){
+    RootPanel rootPanel=RootPanel.get();
+    this.panel=new VerticalPanel();
+    this.panel.setSize("100%","100%");
+    rootPanel.add(panel);
+    if (WITH_TABLE) {
+      loadTable();
+    }
+ else {
+      startUpdateTask();
+    }
+  }
+  private void startUpdateTask(){
+    this.timer=new Timer(){
+      public void run(){
+      }
+    }
+;
+    this.timer.scheduleRepeating(2000);
+  }
+  public void loadTable(){
+    Runnable onLoadCallback=new Runnable(){
+      public void run(){
+        GWTMemoryIssue.this.table.setSize("100%","100%");
+        GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+        GWTMemoryIssue.this.startUpdateTask();
+      }
+    }
+;
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import com.extjs.gxt.ui.client.widget.table.Table;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Timer;
+import com.google.gwt.user.client.ui.Panel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_7 {
+public class GWTMemoryIssue implements EntryPoint {
+    private static final boolean WITH_TABLE=false;
+    private Panel panel;
+    private Timer timer;
+    private Table table;
+    public void onModuleLoad(){
+      RootPanel rootPanel=RootPanel.get();
+      this.panel=new VerticalPanel();
+      this.panel.setSize("100%","100%");
+      rootPanel.add(panel);
+      if (WITH_TABLE) {
+        loadTable();
+      }
+ else {
+        startUpdateTask();
+      }
+    }
+    private void startUpdateTask(){
+      this.timer=new Timer(){
+        public void run(){
+        }
+      }
+;
+      this.timer.scheduleRepeating(2000);
+    }
+    public void loadTable(){
+      Runnable onLoadCallback=new Runnable(){
+        public void run(){
+          GWTMemoryIssue.this.table.setSize("100%","100%");
+          GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+          GWTMemoryIssue.this.startUpdateTask();
+        }
+      }
+;
+    }
+  }
+}
+
+Did not find solution for node: Runnable with type Type27
+Did not find solution for node: Runnable with type Type27
+Cannot find matching typeVariable for: onLoadCallback=new Runnable(){
+  public void run(){
+    GWTMemoryIssue.this.table.setSize("100%","100%");
+    GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+    GWTMemoryIssue.this.startUpdateTask();
+  }
+}
+
+Did not find solution for node: onLoadCallback=new Runnable(){
+  public void run(){
+    GWTMemoryIssue.this.table.setSize("100%","100%");
+    GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+    GWTMemoryIssue.this.startUpdateTask();
+  }
+}
+ with type Type27
+Did not find solution for node: onLoadCallback with type Type27
+Did not find solution for node: new Runnable(){
+  public void run(){
+    GWTMemoryIssue.this.table.setSize("100%","100%");
+    GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+    GWTMemoryIssue.this.startUpdateTask();
+  }
+}
+ with type Type27
+Did not find solution for node: Runnable with type Type27
+Did not find solution for node: Runnable with type Type27
+Cannot find matching typeVariable for: {
+  public void run(){
+    GWTMemoryIssue.this.table.setSize("100%","100%");
+    GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+    GWTMemoryIssue.this.startUpdateTask();
+  }
+}
+
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: run
+Cannot find matching typeVariable for: public void run(){
+  GWTMemoryIssue.this.table.setSize("100%","100%");
+  GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+  GWTMemoryIssue.this.startUpdateTask();
+}
+
+Cannot find matching typeVariable for: {
+  public void run(){
+    GWTMemoryIssue.this.table.setSize("100%","100%");
+    GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
+    GWTMemoryIssue.this.startUpdateTask();
+  }
+}
+
+Did not find solution for node: run with type Type27
+Did not find solution for node: GWTMemoryIssue.this.table.setSize("100%","100%") with type Type28
+Did not find solution for node: GWTMemoryIssue.this.table with type Type8
+Did not find solution for node: GWTMemoryIssue.this with type Type1
+Did not find solution for node: GWTMemoryIssue with type Type1
+Cannot find matching typeVariable for: table
+Did not find solution for node: table with type Type8
+Cannot find matching typeVariable for: setSize
+Did not find solution for node: setSize with type Type28
+For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table) expected fqn: void with type: Type32 got: void
+For node: GWTMemoryIssue.this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: GWTMemoryIssue.this with type Type1
+Did not find solution for node: GWTMemoryIssue with type Type1
+Cannot find matching typeVariable for: panel
+For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type32 got: void
+Did not find solution for node: GWTMemoryIssue.this.table with type Type8
+Did not find solution for node: GWTMemoryIssue.this with type Type1
+Did not find solution for node: GWTMemoryIssue with type Type1
+Cannot find matching typeVariable for: table
+Did not find solution for node: table with type Type8
+Did not find solution for node: GWTMemoryIssue.this.startUpdateTask() with type Type35
+Did not find solution for node: GWTMemoryIssue.this with type Type1
+Did not find solution for node: GWTMemoryIssue with type Type1
+Cannot find matching typeVariable for: startUpdateTask
+Did not find solution for node: startUpdateTask with type Type35
+{Checked=94, Analyzed=62, Unsolved=32, Incorrect=3, Correct=59}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+void=SimpleName: {Checked=10, Analyzed=7, Unsolved=3, Incorrect=1, Correct=6}
+Total stats
+{Checked=94, Analyzed=62, Unsolved=32, Incorrect=3, Correct=59}
+=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+void=SimpleName: {Checked=10, Analyzed=7, Unsolved=3, Incorrect=1, Correct=6}
+,ClassInstanceCreation,1,2,0,1,1
+,FieldAccess,0,2,0,0,2
+,SimpleName,0,8,0,0,8
+,SimpleType,0,1,0,0,1
+,ThisExpression,0,8,0,0,8
+,VariableDeclarationFragment,0,1,0,0,1
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+boolean,VariableDeclarationFragment,1,1,1,0,0
+gwt.,Assignment,2,2,2,0,0
+gwt.,ClassInstanceCreation,1,1,1,0,0
+gwt.,FieldAccess,5,5,5,0,0
+gwt.,MethodInvocation,1,1,1,0,0
+gwt.,SimpleName,16,16,16,0,0
+gwt.,SimpleType,6,6,6,0,0
+gwt.,VariableDeclarationFragment,3,3,3,0,0
+int,NumberLiteral,1,1,0,1,0
+java,SimpleName,0,3,0,0,3
+java,SimpleType,0,2,0,0,2
+java,StringLiteral,4,4,4,0,0
+java,VariableDeclarationFragment,0,1,0,0,1
+void,MethodInvocation,6,8,6,0,2
+void,PrimitiveType,5,5,5,0,0
+void,SimpleName,7,10,6,1,3

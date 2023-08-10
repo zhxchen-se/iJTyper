@@ -1,0 +1,205 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime02.java
+Expect check=64
+Cannot find matching typeVariable for: public class JodaTime02 {
+  public static void main(  String[] args){
+    DateMidnight today=new DateMidnight(2009,2,24);
+    DateTimeZone zone=today.getZone();
+    DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+    System.out.println(previousTransition);
+    DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+    System.out.println(nextTransition);
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime02
+Cannot find matching typeVariable for: public class JodaTime02 {
+  public static void main(  String[] args){
+    DateMidnight today=new DateMidnight(2009,2,24);
+    DateTimeZone zone=today.getZone();
+    DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+    System.out.println(previousTransition);
+    DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+    System.out.println(nextTransition);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateMidnight;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+public class JodaTime02 {
+  public static void main(  String[] args){
+    DateMidnight today=new DateMidnight(2009,2,24);
+    DateTimeZone zone=today.getZone();
+    DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+    System.out.println(previousTransition);
+    DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+    System.out.println(nextTransition);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateMidnight today=new DateMidnight(2009,2,24);
+  DateTimeZone zone=today.getZone();
+  DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+  System.out.println(previousTransition);
+  DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+  System.out.println(nextTransition);
+}
+
+Cannot find matching typeVariable for: public class JodaTime02 {
+  public static void main(  String[] args){
+    DateMidnight today=new DateMidnight(2009,2,24);
+    DateTimeZone zone=today.getZone();
+    DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+    System.out.println(previousTransition);
+    DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+    System.out.println(nextTransition);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateMidnight;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+public class JodaTime02 {
+  public static void main(  String[] args){
+    DateMidnight today=new DateMidnight(2009,2,24);
+    DateTimeZone zone=today.getZone();
+    DateTime previousTransition=new DateTime(zone.previousTransition(today.getMillis()));
+    System.out.println(previousTransition);
+    DateTime nextTransition=new DateTime(zone.nextTransition(today.getMillis()));
+    System.out.println(nextTransition);
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: DateMidnight expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: DateMidnight expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+Cannot find matching typeVariable for: today=new DateMidnight(2009,2,24)
+For node: today=new DateMidnight(2009,2,24) expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: today expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: new DateMidnight(2009,2,24) expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: DateMidnight expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: DateMidnight expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+For node: 2009 expected fqn: int with type: Type6 got: short
+For node: 2 expected fqn: int with type: Type7 got: byte
+For node: 24 expected fqn: int with type: Type7 got: byte
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: zone=today.getZone()
+For node: zone=today.getZone() expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+For node: zone expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+For node: today.getZone() expected fqn: org.joda.time.DateTimeZone with type: Type13 got: org.joda.time.DateTimeZone
+For node: today expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+Cannot find matching typeVariable for: getZone
+For node: getZone expected fqn: org.joda.time.DateTimeZone with type: Type13 got: org.joda.time.DateTimeZone
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: previousTransition=new DateTime(zone.previousTransition(today.getMillis()))
+For node: previousTransition=new DateTime(zone.previousTransition(today.getMillis())) expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: previousTransition expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: new DateTime(zone.previousTransition(today.getMillis())) expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: zone.previousTransition(today.getMillis()) expected fqn: long with type: Type18 got: long
+For node: zone expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: previousTransition
+For node: previousTransition expected fqn: long with type: Type18 got: long
+For node: today.getMillis() expected fqn: long with type: Type16 got: long
+For node: today expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+Cannot find matching typeVariable for: getMillis
+For node: getMillis expected fqn: long with type: Type16 got: long
+For node: System.out.println(previousTransition) expected fqn: void with type: Type25 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type25 got: void
+Did not find solution for node: System with type Type23
+For node: out expected fqn: java.io.PrintStream with type: Type24 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type25 got: void
+For node: previousTransition expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: nextTransition=new DateTime(zone.nextTransition(today.getMillis()))
+For node: nextTransition=new DateTime(zone.nextTransition(today.getMillis())) expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: nextTransition expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: new DateTime(zone.nextTransition(today.getMillis())) expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+For node: zone.nextTransition(today.getMillis()) expected fqn: long with type: Type28 got: long
+For node: zone expected fqn: org.joda.time.DateTimeZone with type: Type12 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: nextTransition
+For node: nextTransition expected fqn: long with type: Type28 got: long
+For node: today.getMillis() expected fqn: long with type: Type17 got: long
+For node: today expected fqn: org.joda.time.DateMidnight with type: Type5 got: org.joda.time.DateMidnight
+Cannot find matching typeVariable for: getMillis
+For node: getMillis expected fqn: long with type: Type17 got: long
+For node: System.out.println(nextTransition) expected fqn: void with type: Type27 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type27 got: void
+Did not find solution for node: System with type Type23
+For node: out expected fqn: java.io.PrintStream with type: Type24 got: java.io.PrintWriter
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type27 got: void
+For node: nextTransition expected fqn: org.joda.time.DateTime with type: Type15 got: org.joda.time.DateTime
+{Checked=61, Analyzed=59, Unsolved=2, Incorrect=7, Correct=52}
+int=NumberLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=2, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+org.joda.time.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=61, Analyzed=59, Unsolved=2, Incorrect=7, Correct=52}
+int=NumberLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=2, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+org.joda.time.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int,NumberLiteral,3,3,0,3,0
+java,ArrayType,1,1,1,0,0
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,4,6,2,2,2
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+long,MethodInvocation,4,4,4,0,0
+long,SimpleName,4,4,4,0,0
+org.joda.time.,ClassInstanceCreation,3,3,3,0,0
+org.joda.time.,MethodInvocation,1,1,1,0,0
+org.joda.time.,SimpleName,19,19,19,0,0
+org.joda.time.,SimpleType,7,7,7,0,0
+org.joda.time.,VariableDeclarationFragment,4,4,4,0,0
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

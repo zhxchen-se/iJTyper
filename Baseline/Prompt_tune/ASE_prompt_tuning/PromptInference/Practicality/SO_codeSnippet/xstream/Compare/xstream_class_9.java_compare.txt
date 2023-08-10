@@ -1,0 +1,59 @@
+[
+  {
+    "codeStatement": "private XStream xstream = new XStream(new DomDriver());",
+    "FQN_Pred": [
+      [
+        "java.io.XStream",
+        "com.thoughtworks.xstream.XStream",
+        "com.thoughtworks.xstream.io.xml.XStream"
+      ],
+      [
+        "java.io.XStream",
+        "com.thoughtworks.xstream.io.xml.XStream",
+        "com.thoughtworks.xstream.XStream"
+      ],
+      [
+        "com.thoughtworks.xstream.io.xml.DomDriver",
+        "com.thoughtworks.xstream.io.binary.client.DomDriver",
+        "com.thoughtworks.xstream.io.xml.DocumentStreamTest.DomDriver"
+      ]
+    ],
+    "FQN_true": [
+      "com.thoughtworks.xstream.XStream",
+      "com.thoughtworks.xstream.XStream",
+      "com.thoughtworks.xstream.io.xml.DomDriver"
+    ]
+  },
+  {
+    "codeStatement": "FileInputStream fis = new FileInputStream(path + fileName);",
+    "FQN_Pred": [
+      [
+        "java.io.FileInputStream",
+        "java.ioio.FileInputStream",
+        "com.thoughtworks.xstream.io.util.FileInputStream"
+      ],
+      [
+        "java.io.FileInputStream",
+        "java.ioio.FileInputStream",
+        "java.util.io.FileInputStream"
+      ]
+    ],
+    "FQN_true": [
+      "java.io.FileInputStream",
+      "java.io.FileInputStream"
+    ]
+  },
+  {
+    "codeStatement": "catch (FileNotFoundException e)",
+    "FQN_Pred": [
+      [
+        "java.io.FileNotFoundException",
+        "java.util.zip.FileNotFoundException",
+        "java.awfile.FileNotFoundException"
+      ]
+    ],
+    "FQN_true": [
+      "java.io.FileNotFoundException"
+    ]
+  }
+]

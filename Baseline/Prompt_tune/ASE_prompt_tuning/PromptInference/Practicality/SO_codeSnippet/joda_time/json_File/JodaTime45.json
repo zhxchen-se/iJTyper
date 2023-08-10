@@ -1,0 +1,396 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "jodatime",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "JodaTime45",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "FastDateTimeZoneProvider",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "SUPER_INTERFACES",
+                          "children": [
+                            {
+                              "label": "org.joda.time.tz.Provider",
+                              "type": "INTERFACE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "AVAILABLE_IDS",
+                          "type": "Field",
+                          "children": [
+                            {
+                              "label": "java.util.Set",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Field",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "java.util.HashSet()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "getZone",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "org.joda.time.DateTimeZone",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "id",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "id",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "UTC",
+                                          "type": "FieldRead",
+                                          "children": [
+                                            {
+                                              "label": "org.joda.time.DateTimeZone",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "tz",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.TimeZone",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getTimeZone",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "java.util.TimeZone",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "id",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "EQ",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "tz",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "null",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "return",
+                                      "type": "Return",
+                                      "children": [
+                                        {
+                                          "label": "UTC",
+                                          "type": "FieldRead",
+                                          "children": [
+                                            {
+                                              "label": "org.joda.time.DateTimeZone",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "rawOffset",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "int",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getRawOffset",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "tz",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "inDaylightTime",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "tz",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "java.util.Date()",
+                                      "type": "ConstructorCall",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "",
+                                      "type": "OperatorAssignment",
+                                      "children": [
+                                        {
+                                          "label": "rawOffset",
+                                          "type": "VariableWrite",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "getDSTSavings",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "tz",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "sub-optimal. could be improved to only create a new Date every few minutes",
+                                  "type": "Comment",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "forOffsetMillis",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "org.joda.time.DateTimeZone",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "rawOffset",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "getAvailableIDs",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.util.Set",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "AVAILABLE_IDS",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "jodatime.JodaTime45$FastDateTimeZoneProvider",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

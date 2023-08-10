@@ -1,0 +1,494 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "Class_",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Class_14",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "THROWN_TYPES",
+                          "children": [
+                            {
+                              "label": "java.lang.Exception",
+                              "type": "THROWN",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dogClassName",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"com.mypackage.bean.Dog\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dogClass",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Class",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "?",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "forName",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "java.lang.Class",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "dogClassName",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "convert string classname to class",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "dog",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Object",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "newInstance",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "dogClass",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "invoke empty constructor",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "methodName",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "\"\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "methodName",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "\"setName\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "with single parameter, return void",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setNameMethod",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.reflect.Method",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getMethod",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getClass",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "dog",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "methodName",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "invoke",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "setNameMethod",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "dog",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"Mishka\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "pass arg",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "methodName",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "\"getName\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "without parameters, return string",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "getNameMethod",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.reflect.Method",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getMethod",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getClass",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "dog",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "methodName",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "name",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "invoke",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getNameMethod",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "dog",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "explicit cast",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "methodName",
+                              "type": "VariableWrite",
+                              "children": []
+                            },
+                            {
+                              "label": "\"printDog\"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "with multiple parameters",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "paramTypes",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.Class[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "NewArray",
+                              "children": [
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "class",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "int",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "printDogMethod",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.reflect.Method",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getMethod",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "getClass",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "dog",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "methodName",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "paramTypes",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "invoke",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "printDogMethod",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "dog",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "name",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "3",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "pass args",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

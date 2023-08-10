@@ -1,0 +1,179 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "java",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "joda_time",
+                  "type": "Package",
+                  "children": [
+                    {
+                      "label": "jt17",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "h1",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "void",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                },
+                                {
+                                  "label": "static",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dateTime",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"2015-07-18T13:32:56.971-0400\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "formatter",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.format.DateTimeFormatter",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "withChronology",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "withLocale",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "forPattern",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "org.joda.time.format.DateTimeFormat",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "\"yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSZZ\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "ROOT",
+                                          "type": "FieldRead",
+                                          "children": [
+                                            {
+                                              "label": "java.util.Locale",
+                                              "type": "TypeAccess",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "getInstanceUTC",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "org.joda.time.chrono.ISOChronology",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dt",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "org.joda.time.DateTime",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "parseDateTime",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "formatter",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "dateTime",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

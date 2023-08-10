@@ -1,0 +1,349 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "gwt_class_29",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "SERVER_URL",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\"http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt\u003djson-in-script\u0026callback\u003dinsertAgenda\u0026orderby\u003dstarttime\u0026max-results\u003d15\u0026singleevents\u003dtrue\u0026sortorder\u003dascending\u0026futureevents\u003dtrue\"",
+                      "type": "Literal",
+                      "children": []
+                    },
+                    {
+                      "label": "private static final String SERVER_URL \u003d \"http://localhost:8094/data/view/\";",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "SERVER_ERROR",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "PLUS",
+                      "type": "BinaryOperator",
+                      "children": [
+                        {
+                          "label": "\"An error occurred while \"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "PLUS",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "\"attempting to contact the server. Please check your network \"",
+                              "type": "Literal",
+                              "children": []
+                            },
+                            {
+                              "label": "\"connection and try again.\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "onModuleLoad",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestBuilder",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.jsonp.client.JsonpRequestBuilder",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "com.google.gwt.jsonp.client.JsonpRequestBuilder()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "requestBuilder.setTimeout(10000);",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "requestBuilder.requestObject(SERVER_URL, new Jazz10RequestCallback());",
+                      "type": "Comment",
+                      "children": []
+                    },
+                    {
+                      "label": "This is the entry point method.",
+                      "type": "JavaDoc",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "Jazz10RequestCallback",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "SUPER_INTERFACES",
+                      "children": [
+                        {
+                          "label": "com.google.gwt.user.client.rpc.AsyncCallback",
+                          "type": "INTERFACE",
+                          "children": [
+                            {
+                              "label": "org.apache.commons.net.nntp.Article",
+                              "type": "TYPE_ARGUMENT",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "onFailure",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "caught",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.Throwable",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "alert",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "com.google.gwt.user.client.Window",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "\"Failed to send the message: \"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "getMessage",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "caught",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "onSuccess",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "result",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "org.apache.commons.net.nntp.Article",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "alert",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "com.google.gwt.user.client.Window",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "toString",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "result",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

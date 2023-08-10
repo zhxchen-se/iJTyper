@@ -1,0 +1,325 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android24",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "android.app.Activity",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "onCreate",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "savedInstanceState",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.os.Bundle",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "onCreate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "super",
+                              "type": "SuperAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "savedInstanceState",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setContentView",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "androidExamples.Android24",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "R.layout.main",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "l",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.location.LocationManager",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "getSystemService",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "androidExamples.Android24",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "Context.LOCATION_SERVICE",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "li",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.util.List",
+                              "type": "VARIABLE_TYPE",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "TYPE_ARGUMENT",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "getAllProviders",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "l",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "For",
+                          "children": [
+                            {
+                              "label": "iterator",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.util.Iterator",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": [
+                                    {
+                                      "label": "java.lang.String",
+                                      "type": "TYPE_ARGUMENT",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "iterator",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "li",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "hasNext",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "iterator",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "string",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "next",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "iterator",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "d",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "android.util.Log",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"gps\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "string",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "EQ",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "getLastKnownLocation",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "l",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"gps\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "null",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "d",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "android.util.Log",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"gps\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "\"null\"",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Called when the activity is first created.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,853 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_28",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "SUPER_INTERFACES",
+                  "children": [
+                    {
+                      "label": "java.io.Serializable",
+                      "type": "INTERFACE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "@javax.persistence.Entity",
+                  "type": "Annotation",
+                  "children": []
+                },
+                {
+                  "label": "id",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "int",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Id",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "@javax.persistence.GeneratedValue(strategy \u003d javax.persistence.GenerationType.AUTO)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "AUTO",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "javax.persistence.GenerationType",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "user",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "library.model.User",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.ManyToOne",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "@javax.persistence.JoinColumn(name \u003d \"user_id\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"user_id\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "comments",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.util.List",
+                      "type": "VARIABLE_TYPE",
+                      "children": [
+                        {
+                          "label": "hibernate_class_28",
+                          "type": "TYPE_ARGUMENT",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.OneToMany(targetEntity \u003d hibernate_class_28.class)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "class",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_28",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.JoinColumn(name \u003d \"parent_id\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"parent_id\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@org.hibernate.annotations.IndexColumn(name \u003d \"id\", base \u003d 0)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "0",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"id\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "java.util.ArrayList()",
+                      "type": "ConstructorCall",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "articleId",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "int",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Column(name \u003d \"article_id\", length \u003d 10)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "10",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"article_id\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "text",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@javax.persistence.Column(name \u003d \"text\", length \u003d 8192)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "8192",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"text\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getArticleId",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "int",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "articleId",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_28",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setArticleId",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "articleId",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "articleId",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_28",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "articleId",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getId",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "int",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "id",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_28",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setId",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "id",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "int",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "id",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_28",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "id",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getText",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "text",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_28",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setText",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "text",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "text",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_28",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "text",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "getUser",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "library.model.User",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "user",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_28",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "setUser",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "user",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "library.model.User",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "\u003d",
+                      "type": "Assignment",
+                      "children": [
+                        {
+                          "label": "user",
+                          "type": "FieldWrite",
+                          "children": [
+                            {
+                              "label": "this",
+                              "type": "ThisAccess",
+                              "children": [
+                                {
+                                  "label": "hibernate_class_28",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "user",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "toString",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.Override",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "PLUS",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "PLUS",
+                              "type": "BinaryOperator",
+                              "children": [
+                                {
+                                  "label": "PLUS",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "PLUS",
+                                      "type": "BinaryOperator",
+                                      "children": [
+                                        {
+                                          "label": "PLUS",
+                                          "type": "BinaryOperator",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "PLUS",
+                                                  "type": "BinaryOperator",
+                                                  "children": [
+                                                    {
+                                                      "label": "PLUS",
+                                                      "type": "BinaryOperator",
+                                                      "children": [
+                                                        {
+                                                          "label": "PLUS",
+                                                          "type": "BinaryOperator",
+                                                          "children": [
+                                                            {
+                                                              "label": "PLUS",
+                                                              "type": "BinaryOperator",
+                                                              "children": [
+                                                                {
+                                                                  "label": "\"Comment [\"",
+                                                                  "type": "Literal",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "\"articleId \"",
+                                                                  "type": "Literal",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "articleId",
+                                                              "type": "FieldRead",
+                                                              "children": [
+                                                                {
+                                                                  "label": "hibernate_class_28",
+                                                                  "type": "TypeAccess",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "label": "\" \"",
+                                                          "type": "Literal",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "\"id \"",
+                                                      "type": "Literal",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "label": "id",
+                                                  "type": "FieldRead",
+                                                  "children": [
+                                                    {
+                                                      "label": "hibernate_class_28",
+                                                      "type": "TypeAccess",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "\" \"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "\"text \"",
+                                          "type": "Literal",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "text",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "hibernate_class_28",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "\" \"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "\"]\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

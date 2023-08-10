@@ -1,0 +1,357 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android47",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "android.app.Activity",
+                      "type": "SUPER_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "onCreate",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "@java.lang.Override",
+                          "type": "Annotation",
+                          "children": []
+                        },
+                        {
+                          "label": "savedInstanceState",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.os.Bundle",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "onCreate",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "super",
+                              "type": "SuperAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "savedInstanceState",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setContentView",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "androidExamples.Android47",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "R.layout.main",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "client",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.impl.client.DefaultHttpClient",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.apache.http.impl.client.DefaultHttpClient()",
+                              "type": "ConstructorCall",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "method",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "org.apache.http.client.methods.HttpGet",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "org.apache.http.client.methods.HttpGet(java.lang.String)",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "\"http://www.google.com\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "Try",
+                          "children": [
+                            {
+                              "label": "execute",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "client",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "method",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "t",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "android.widget.TextView",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "findViewById",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "androidExamples.Android47",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "R.id.lay",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "setText",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "t",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Ok\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "org.apache.http.client.ClientProtocolException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "t",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "android.widget.TextView",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "findViewById",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "androidExamples.Android47",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "R.id.lay",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setText",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "t",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getMessage",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "e",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Catch",
+                              "children": [
+                                {
+                                  "label": "e",
+                                  "type": "CatchVariable",
+                                  "children": [
+                                    {
+                                      "label": "java.io.IOException",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "t",
+                                  "type": "LocalVariable",
+                                  "children": [
+                                    {
+                                      "label": "android.widget.TextView",
+                                      "type": "VARIABLE_TYPE",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "findViewById",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "androidExamples.Android47",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "R.id.lay",
+                                          "type": "TypeAccess",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "setText",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "t",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getMessage",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "e",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "Called when the activity is first created.",
+                          "type": "JavaDoc",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

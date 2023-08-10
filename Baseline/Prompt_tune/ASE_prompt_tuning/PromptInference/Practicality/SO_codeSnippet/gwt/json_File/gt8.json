@@ -1,0 +1,160 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "java",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "gwt",
+                  "type": "Package",
+                  "children": [
+                    {
+                      "label": "gt8",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "parse",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "java.util.Date",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "dateString",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "java.lang.String",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Try",
+                              "children": [
+                                {
+                                  "label": "return",
+                                  "type": "Return",
+                                  "children": [
+                                    {
+                                      "label": "parse",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "java.text.SimpleDateFormat(java.lang.String)",
+                                          "type": "ConstructorCall",
+                                          "children": [
+                                            {
+                                              "label": "\"yyyyMMdd\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "label": "dateString",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "",
+                                  "type": "Catch",
+                                  "children": [
+                                    {
+                                      "label": "ex",
+                                      "type": "CatchVariable",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.Exception",
+                                          "type": "VARIABLE_TYPE",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "",
+                                      "type": "Throw",
+                                      "children": [
+                                        {
+                                          "label": "java.lang.IllegalArgumentException(java.lang.String)",
+                                          "type": "ConstructorCall",
+                                          "children": [
+                                            {
+                                              "label": "PLUS",
+                                              "type": "BinaryOperator",
+                                              "children": [
+                                                {
+                                                  "label": "\"Cannot convert to date: \"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "dateString",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

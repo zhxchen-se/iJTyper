@@ -1,0 +1,283 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_48.java
+Expect check=74
+Cannot find matching typeVariable for: public abstract class hibernate_class_48 {
+  private static final long serialVersionUID=1L;
+  private HibernateUtil gileadHibernateUtil=new HibernateUtil();
+  public hibernate_class_48(){
+    SessionFactory session=null;
+    gileadHibernateUtil.setSessionFactory(session);
+    PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+    persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+    persistentBeanManager.setProxyStore(new StatelessProxyStore());
+  }
+  public String greetServer(  String S){
+    Session session=gileadHibernateUtil.getSessionFactory().openSession();
+    Transaction tr=session.beginTransaction();
+    session.save(S);
+    tr.commit();
+    session.close();
+    return S;
+  }
+}
+
+Did not find solution for node: hibernate_class_48 with type Type1
+For node: long expected fqn: long with type: Type9 got: long
+Cannot find matching typeVariable for: serialVersionUID=1L
+For node: serialVersionUID=1L expected fqn: long with type: Type9 got: long
+For node: serialVersionUID expected fqn: long with type: Type9 got: long
+For node: 1L expected fqn: long with type: Type9 got: long
+Did not find solution for node: HibernateUtil with type Type10
+Did not find solution for node: HibernateUtil with type Type10
+Cannot find matching typeVariable for: gileadHibernateUtil=new HibernateUtil()
+Did not find solution for node: gileadHibernateUtil=new HibernateUtil() with type Type10
+Did not find solution for node: gileadHibernateUtil with type Type10
+Did not find solution for node: new HibernateUtil() with type Type10
+Did not find solution for node: HibernateUtil with type Type10
+Did not find solution for node: HibernateUtil with type Type10
+Cannot find matching typeVariable for: hibernate_class_48
+Cannot find matching typeVariable for: public hibernate_class_48(){
+  SessionFactory session=null;
+  gileadHibernateUtil.setSessionFactory(session);
+  PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+  persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+  persistentBeanManager.setProxyStore(new StatelessProxyStore());
+}
+
+Cannot find matching typeVariable for: public abstract class hibernate_class_48 {
+  private static final long serialVersionUID=1L;
+  private HibernateUtil gileadHibernateUtil=new HibernateUtil();
+  public hibernate_class_48(){
+    SessionFactory session=null;
+    gileadHibernateUtil.setSessionFactory(session);
+    PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+    persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+    persistentBeanManager.setProxyStore(new StatelessProxyStore());
+  }
+  public String greetServer(  String S){
+    Session session=gileadHibernateUtil.getSessionFactory().openSession();
+    Transaction tr=session.beginTransaction();
+    session.save(S);
+    tr.commit();
+    session.close();
+    return S;
+  }
+}
+
+Cannot find matching typeVariable for: import net.sf.gilead.core.PersistentBeanManager;
+import net.sf.gilead.core.hibernate.HibernateUtil;
+import net.sf.gilead.core.store.stateless.StatelessProxyStore;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+public abstract class hibernate_class_48 {
+  private static final long serialVersionUID=1L;
+  private HibernateUtil gileadHibernateUtil=new HibernateUtil();
+  public hibernate_class_48(){
+    SessionFactory session=null;
+    gileadHibernateUtil.setSessionFactory(session);
+    PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+    persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+    persistentBeanManager.setProxyStore(new StatelessProxyStore());
+  }
+  public String greetServer(  String S){
+    Session session=gileadHibernateUtil.getSessionFactory().openSession();
+    Transaction tr=session.beginTransaction();
+    session.save(S);
+    tr.commit();
+    session.close();
+    return S;
+  }
+}
+
+Did not find solution for node: SessionFactory with type Type13
+Did not find solution for node: SessionFactory with type Type13
+Cannot find matching typeVariable for: session=null
+Did not find solution for node: session=null with type Type13
+Did not find solution for node: session with type Type13
+Did not find solution for node: null with type Type14
+Did not find solution for node: gileadHibernateUtil.setSessionFactory(session) with type Type15
+Did not find solution for node: gileadHibernateUtil with type Type10
+Cannot find matching typeVariable for: setSessionFactory
+Did not find solution for node: setSessionFactory with type Type15
+Did not find solution for node: session with type Type13
+Did not find solution for node: PersistentBeanManager with type Type18
+Did not find solution for node: PersistentBeanManager with type Type18
+Cannot find matching typeVariable for: persistentBeanManager=new PersistentBeanManager()
+Did not find solution for node: persistentBeanManager=new PersistentBeanManager() with type Type18
+Did not find solution for node: persistentBeanManager with type Type18
+Did not find solution for node: new PersistentBeanManager() with type Type18
+Did not find solution for node: PersistentBeanManager with type Type18
+Did not find solution for node: PersistentBeanManager with type Type18
+Did not find solution for node: persistentBeanManager.setPersistenceUtil(gileadHibernateUtil) with type Type20
+Did not find solution for node: persistentBeanManager with type Type18
+Cannot find matching typeVariable for: setPersistenceUtil
+Did not find solution for node: setPersistenceUtil with type Type20
+Did not find solution for node: gileadHibernateUtil with type Type10
+Did not find solution for node: persistentBeanManager.setProxyStore(new StatelessProxyStore()) with type Type25
+Did not find solution for node: persistentBeanManager with type Type18
+Cannot find matching typeVariable for: setProxyStore
+Did not find solution for node: setProxyStore with type Type25
+Did not find solution for node: new StatelessProxyStore() with type Type23
+Did not find solution for node: StatelessProxyStore with type Type23
+Did not find solution for node: StatelessProxyStore with type Type23
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: greetServer
+Cannot find matching typeVariable for: public String greetServer(String S){
+  Session session=gileadHibernateUtil.getSessionFactory().openSession();
+  Transaction tr=session.beginTransaction();
+  session.save(S);
+  tr.commit();
+  session.close();
+  return S;
+}
+
+Cannot find matching typeVariable for: public abstract class hibernate_class_48 {
+  private static final long serialVersionUID=1L;
+  private HibernateUtil gileadHibernateUtil=new HibernateUtil();
+  public hibernate_class_48(){
+    SessionFactory session=null;
+    gileadHibernateUtil.setSessionFactory(session);
+    PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+    persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+    persistentBeanManager.setProxyStore(new StatelessProxyStore());
+  }
+  public String greetServer(  String S){
+    Session session=gileadHibernateUtil.getSessionFactory().openSession();
+    Transaction tr=session.beginTransaction();
+    session.save(S);
+    tr.commit();
+    session.close();
+    return S;
+  }
+}
+
+Cannot find matching typeVariable for: import net.sf.gilead.core.PersistentBeanManager;
+import net.sf.gilead.core.hibernate.HibernateUtil;
+import net.sf.gilead.core.store.stateless.StatelessProxyStore;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+public abstract class hibernate_class_48 {
+  private static final long serialVersionUID=1L;
+  private HibernateUtil gileadHibernateUtil=new HibernateUtil();
+  public hibernate_class_48(){
+    SessionFactory session=null;
+    gileadHibernateUtil.setSessionFactory(session);
+    PersistentBeanManager persistentBeanManager=new PersistentBeanManager();
+    persistentBeanManager.setPersistenceUtil(gileadHibernateUtil);
+    persistentBeanManager.setProxyStore(new StatelessProxyStore());
+  }
+  public String greetServer(  String S){
+    Session session=gileadHibernateUtil.getSessionFactory().openSession();
+    Transaction tr=session.beginTransaction();
+    session.save(S);
+    tr.commit();
+    session.close();
+    return S;
+  }
+}
+
+Cannot find matching typeVariable for: String S
+For node: String S expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: S expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: Session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+Cannot find matching typeVariable for: session=gileadHibernateUtil.getSessionFactory().openSession()
+For node: session=gileadHibernateUtil.getSessionFactory().openSession() expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+For node: gileadHibernateUtil.getSessionFactory().openSession() expected fqn: org.hibernate.Session with type: Type31 got: org.hibernate.classic.Session
+For node: gileadHibernateUtil.getSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type29 got: org.hibernate.SessionFactory
+Did not find solution for node: gileadHibernateUtil with type Type10
+Cannot find matching typeVariable for: getSessionFactory
+For node: getSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type29 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: openSession
+For node: openSession expected fqn: org.hibernate.Session with type: Type31 got: org.hibernate.classic.Session
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type33 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type33 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: tr=session.beginTransaction()
+For node: tr=session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type33 got: org.hibernate.Transaction
+For node: tr expected fqn: org.hibernate.Transaction with type: Type33 got: org.hibernate.Transaction
+For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type34 got: org.hibernate.Transaction
+For node: session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+Cannot find matching typeVariable for: beginTransaction
+For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type34 got: org.hibernate.Transaction
+For node: session.save(S) expected fqn: java.io.Serializable with type: Type36 got: java.io.Serializable
+For node: session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+Cannot find matching typeVariable for: save
+For node: save expected fqn: java.io.Serializable with type: Type36 got: java.io.Serializable
+For node: S expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: tr.commit() expected fqn: void with type: Type39 got: void
+For node: tr expected fqn: org.hibernate.Transaction with type: Type33 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type39 got: void
+For node: session.close() expected fqn: void with type: Type41 got: java.sql.Connection
+For node: session expected fqn: org.hibernate.Session with type: Type28 got: org.hibernate.Session
+Cannot find matching typeVariable for: close
+For node: close expected fqn: void with type: Type41 got: java.sql.Connection
+For node: S expected fqn: java.lang.String with type: Type2 got: java.lang.String
+{Checked=71, Analyzed=36, Unsolved=35, Incorrect=4, Correct=32}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=SimpleName: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+org.hibernate.=SimpleName: {Checked=14, Analyzed=11, Unsolved=3, Incorrect=1, Correct=10}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+Total stats
+{Checked=71, Analyzed=36, Unsolved=35, Incorrect=4, Correct=32}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=SimpleName: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+org.hibernate.=SimpleName: {Checked=14, Analyzed=11, Unsolved=3, Incorrect=1, Correct=10}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=1, Correct=1}
+,ClassInstanceCreation,0,3,0,0,3
+,SimpleName,0,13,0,0,13
+,SimpleType,0,5,0,0,5
+,VariableDeclarationFragment,0,2,0,0,2
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,6,6,6,0,0
+java,SimpleType,2,2,2,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+long,NumberLiteral,1,1,1,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,1,1,1,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,0,1,0,0,1
+org.hibernate.,MethodInvocation,3,3,2,1,0
+org.hibernate.,SimpleName,11,14,10,1,3
+org.hibernate.,SimpleType,2,3,2,0,1
+org.hibernate.,VariableDeclarationFragment,2,3,2,0,1
+void,MethodInvocation,2,5,1,1,3
+void,SimpleName,2,5,1,1,3

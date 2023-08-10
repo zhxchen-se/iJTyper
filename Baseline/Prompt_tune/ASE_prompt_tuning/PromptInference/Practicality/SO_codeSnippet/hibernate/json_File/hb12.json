@@ -1,0 +1,187 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "java",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "hibernate",
+                  "type": "Package",
+                  "children": [
+                    {
+                      "label": "hb12",
+                      "type": "Class",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "Modifiers_Class",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "getReturnType",
+                          "type": "Method",
+                          "children": [
+                            {
+                              "label": "org.hibernate.annotations.Type",
+                              "type": "RETURN_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "THROWN_TYPES",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.QueryException",
+                                  "type": "THROWN",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_Method",
+                              "children": [
+                                {
+                                  "label": "public",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "columnType",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.annotations.Type",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "mapping",
+                              "type": "Parameter",
+                              "children": [
+                                {
+                                  "label": "org.hibernate.engine.Mapping",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "sqlTypes",
+                              "type": "LocalVariable",
+                              "children": [
+                                {
+                                  "label": "int[]",
+                                  "type": "VARIABLE_TYPE",
+                                  "children": []
+                                },
+                                {
+                                  "label": "",
+                                  "type": "NewArray",
+                                  "children": [
+                                    {
+                                      "label": "0",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "if",
+                              "type": "If",
+                              "children": [
+                                {
+                                  "label": "NE",
+                                  "type": "BinaryOperator",
+                                  "children": [
+                                    {
+                                      "label": "length",
+                                      "type": "FieldRead",
+                                      "children": [
+                                        {
+                                          "label": "sqlTypes",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "1",
+                                      "type": "Literal",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "label": "THEN",
+                                  "type": "then",
+                                  "children": [
+                                    {
+                                      "label": "",
+                                      "type": "Throw",
+                                      "children": [
+                                        {
+                                          "label": "org.hibernate.QueryException(java.lang.String)",
+                                          "type": "ConstructorCall",
+                                          "children": [
+                                            {
+                                              "label": "\"multi-column type in avg()\"",
+                                              "type": "Literal",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "return",
+                              "type": "Return",
+                              "children": [
+                                {
+                                  "label": "columnType",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

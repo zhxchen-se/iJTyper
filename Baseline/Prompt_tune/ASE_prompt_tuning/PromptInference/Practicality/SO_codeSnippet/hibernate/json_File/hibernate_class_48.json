@@ -1,0 +1,357 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_48",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "abstract",
+                      "type": "Modifier",
+                      "children": []
+                    },
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "serialVersionUID",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "long",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "final",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "1L",
+                      "type": "Literal",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "gileadHibernateUtil",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "net.sf.gilead.core.hibernate.HibernateUtil",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "net.sf.gilead.core.hibernate.HibernateUtil()",
+                      "type": "ConstructorCall",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "\u003cinit\u003e",
+                  "type": "Constructor",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Constructor",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.SessionFactory",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "null",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setSessionFactory",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "gileadHibernateUtil",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_48",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "persistentBeanManager",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "net.sf.gilead.core.PersistentBeanManager",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "net.sf.gilead.core.PersistentBeanManager()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setPersistenceUtil",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "persistentBeanManager",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "gileadHibernateUtil",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "hibernate_class_48",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setProxyStore",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "persistentBeanManager",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "net.sf.gilead.core.store.stateless.StatelessProxyStore()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "greetServer",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "S",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "session",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Session",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "openSession",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "getSessionFactory",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "gileadHibernateUtil",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "hibernate_class_48",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "tr",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "org.hibernate.Transaction",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "beginTransaction",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "session",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "save",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        },
+                        {
+                          "label": "S",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "commit",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "tr",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "close",
+                      "type": "Invocation",
+                      "children": [
+                        {
+                          "label": "session",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "S",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "import aQute.gwt.greeter.shared.GreetingService;",
+                  "type": "Comment",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

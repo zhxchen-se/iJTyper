@@ -1,0 +1,469 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_18.java
+Expect check=84
+Cannot find matching typeVariable for: public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+Did not find solution for node: hibernate_class_18 with type Type1
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory=buildSessionFactory()
+For node: sessionFactory=buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: buildSessionFactory
+Cannot find matching typeVariable for: private static SessionFactory buildSessionFactory(){
+  try {
+    Configuration configuration=new Configuration().configure();
+    return configuration.buildSessionFactory();
+  }
+ catch (  Throwable ex) {
+    System.err.println("Initial SessionFactory creation failed." + ex);
+    throw new ExceptionInInitializerError(ex);
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration=new Configuration().configure()
+For node: configuration=new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type6 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type6 got: org.hibernate.cfg.Configuration
+For node: configuration.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type8 got: org.hibernate.SessionFactory
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type8 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: Throwable ex
+For node: Throwable ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: System.err.println("Initial SessionFactory creation failed." + ex) expected fqn: void with type: Type14 got: void
+Cannot find matching typeVariable for: System.err
+For node: System.err expected fqn: java.io.PrintStream with type: Type14 got: void
+Did not find solution for node: System with type Type12
+For node: err expected fqn: java.io.PrintStream with type: Type13 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type14 got: void
+For node: "Initial SessionFactory creation failed." + ex expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: "Initial SessionFactory creation failed." expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+Did not find solution for node: new ExceptionInInitializerError(ex) with type Type17
+Did not find solution for node: ExceptionInInitializerError with type Type17
+Did not find solution for node: ExceptionInInitializerError with type Type17
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory1
+Cannot find matching typeVariable for: public static SessionFactory getSessionFactory1(){
+  return sessionFactory;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory1=buildSessionFactory()
+For node: sessionFactory1=buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: sessionFactory1 expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: buildSessionFactory1
+Cannot find matching typeVariable for: private static SessionFactory buildSessionFactory1(){
+  try {
+    Configuration configuration=new Configuration().configure();
+    return configuration.buildSessionFactory();
+  }
+ catch (  Throwable ex) {
+    System.err.println("Initial SessionFactory creation failed." + ex);
+    throw new ExceptionInInitializerError(ex);
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration=new Configuration().configure()
+For node: configuration=new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type7 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type7 got: org.hibernate.cfg.Configuration
+For node: configuration.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type9 got: org.hibernate.SessionFactory
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type9 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: Throwable ex
+For node: Throwable ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: System.err.println("Initial SessionFactory creation failed." + ex) expected fqn: void with type: Type22 got: void
+Cannot find matching typeVariable for: System.err
+For node: System.err expected fqn: java.io.PrintStream with type: Type22 got: void
+Did not find solution for node: System with type Type20
+For node: err expected fqn: java.io.PrintStream with type: Type21 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type22 got: void
+For node: "Initial SessionFactory creation failed." + ex expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: "Initial SessionFactory creation failed." expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+Did not find solution for node: new ExceptionInInitializerError(ex) with type Type17
+Did not find solution for node: ExceptionInInitializerError with type Type17
+Did not find solution for node: ExceptionInInitializerError with type Type17
+For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+Cannot find matching typeVariable for: public static SessionFactory getSessionFactory(){
+  return sessionFactory;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_18 {
+  private static final SessionFactory sessionFactory=buildSessionFactory();
+  private static SessionFactory buildSessionFactory(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory1(){
+    return sessionFactory;
+  }
+  private static final SessionFactory sessionFactory1=buildSessionFactory();
+  private static SessionFactory buildSessionFactory1(){
+    try {
+      Configuration configuration=new Configuration().configure();
+      return configuration.buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      System.err.println("Initial SessionFactory creation failed." + ex);
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+}
+
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
+{Checked=79, Analyzed=70, Unsolved=9, Incorrect=2, Correct=68}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=14, Analyzed=10, Unsolved=4, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+org.hibernate.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=79, Analyzed=70, Unsolved=9, Incorrect=2, Correct=68}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=14, Analyzed=10, Unsolved=4, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+org.hibernate.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+java,ClassInstanceCreation,0,2,0,0,2
+java,InfixExpression,2,2,2,0,0
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,10,14,10,0,4
+java,SimpleType,2,4,2,0,2
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,2,2,2,0,0
+org.hibernate.,ClassInstanceCreation,2,2,2,0,0
+org.hibernate.,MethodInvocation,6,6,6,0,0
+org.hibernate.,SimpleName,24,24,24,0,0
+org.hibernate.,SimpleType,10,10,10,0,0
+org.hibernate.,VariableDeclarationFragment,4,4,4,0,0
+void,MethodInvocation,2,2,2,0,0
+void,SimpleName,2,2,2,0,0

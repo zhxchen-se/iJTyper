@@ -1,0 +1,273 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "androidExamples",
+              "type": "Package",
+              "children": [
+                {
+                  "label": "Android15",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "main",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "args",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String[]",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "sendIntent",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "android.content.Intent",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "java.lang.Object()",
+                              "type": "ConstructorCall",
+                              "children": [
+                                {
+                                  "label": "ACTION_SEND",
+                                  "type": "FieldRead",
+                                  "children": [
+                                    {
+                                      "label": "android.content.Intent",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "TODO Auto-generated method stub",
+                              "type": "Comment",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "setType",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sendIntent",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "\"image/jpeg\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "putExtra",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sendIntent",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Intent.EXTRA_SUBJECT",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "\"Photo\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "putExtra",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sendIntent",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Intent.EXTRA_STREAM",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "parse",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "android.net.Uri",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"file://sdcard/dcim/Camera/filename.jpg\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "putExtra",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "sendIntent",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "Intent.EXTRA_TEXT",
+                              "type": "TypeAccess",
+                              "children": []
+                            },
+                            {
+                              "label": "\"Enjoy the photo\"",
+                              "type": "Literal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "startActivity",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "createChooser",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "android.content.Intent",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                },
+                                {
+                                  "label": "sendIntent",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Email:\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "startActivity",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            },
+                            {
+                              "label": "static",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "createChooser",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "android.content.Intent",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "TODO Auto-generated method stub",
+                          "type": "Comment",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

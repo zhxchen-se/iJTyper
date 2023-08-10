@@ -1,0 +1,1183 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_19.java
+Expect check=121
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: @Entity expected fqn: javax.persistence.Entity with type: Type5 got: org.hibernate.annotations.Entity
+For node: Entity expected fqn: javax.persistence.Entity with type: Type5 got: org.hibernate.annotations.Entity
+Did not find solution for node: @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) with type Type14
+Did not find solution for node: org.hibernate.annotations.Table with type Type14
+Cannot find matching typeVariable for: Table
+Did not find solution for node: Table with type Type14
+Cannot find matching typeVariable for: appliesTo
+Cannot find matching typeVariable for: appliesTo=hibernate_class_19.TABLE_NAME
+Did not find solution for node: appliesTo with type Type14
+Did not find solution for node: hibernate_class_19.TABLE_NAME with type Type15
+Did not find solution for node: hibernate_class_19 with type Type9
+Did not find solution for node: TABLE_NAME with type Type15
+Cannot find matching typeVariable for: indexes
+Cannot find matching typeVariable for: indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}
+Did not find solution for node: indexes with type Type14
+Did not find solution for node: {@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})} with type Type12
+Did not find solution for node: @Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN}) with type Type11
+Did not find solution for node: Index with type Type11
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="IDX_XDN_DFN"
+Did not find solution for node: name with type Type11
+For node: "IDX_XDN_DFN" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: columnNames
+Cannot find matching typeVariable for: columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN}
+Did not find solution for node: columnNames with type Type11
+Did not find solution for node: {hibernate_class_19.XDN,hibernate_class_19.DFN} with type Type7
+Cannot find matching typeVariable for: hibernate_class_19.XDN
+Did not find solution for node: hibernate_class_19.XDN with type Type7
+Did not find solution for node: hibernate_class_19 with type Type9
+Did not find solution for node: XDN with type Type9
+Cannot find matching typeVariable for: hibernate_class_19.DFN
+Did not find solution for node: hibernate_class_19.DFN with type Type7
+Did not find solution for node: hibernate_class_19 with type Type9
+Did not find solution for node: DFN with type Type10
+Did not find solution for node: hibernate_class_19 with type Type1
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: TABLE_NAME="house"
+For node: TABLE_NAME="house" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: TABLE_NAME expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: "house" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: XDN="xdn"
+For node: XDN="xdn" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: XDN expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: "xdn" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: DFN="dfn"
+For node: DFN="dfn" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: DFN expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: "dfn" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: @Id with type Type16
+Did not find solution for node: Id with type Type16
+Did not find solution for node: @GeneratedValue with type Type17
+Did not find solution for node: GeneratedValue with type Type17
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: Id
+For node: Id expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: Id
+Cannot find matching typeVariable for: @Id @GeneratedValue private long Id;
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Did not find solution for node: @Column(name=XDN) with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name=XDN
+Did not find solution for node: name with type Type18
+For node: XDN expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: xdn
+For node: xdn expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: xdn
+Cannot find matching typeVariable for: @Column(name=XDN) private long xdn;
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Did not find solution for node: @Column(name=DFN) with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name=DFN
+Did not find solution for node: name with type Type18
+For node: DFN expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: dfn
+For node: dfn expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: dfn
+Cannot find matching typeVariable for: @Column(name=DFN) private long dfn;
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Did not find solution for node: @Column with type Type18
+Did not find solution for node: Column with type Type18
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: address
+For node: address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: address
+Cannot find matching typeVariable for: @Column private String address;
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: getId
+Cannot find matching typeVariable for: public long getId(){
+  return Id;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: Id expected fqn: long with type: Type3 got: long
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setId
+Cannot find matching typeVariable for: public void setId(long id){
+  this.Id=id;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: long id
+For node: long id expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+For node: id expected fqn: long with type: Type3 got: long
+For node: this.Id=id expected fqn: long with type: Type3 got: long
+For node: this.Id expected fqn: long with type: Type3 got: long
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: Id
+For node: Id expected fqn: long with type: Type3 got: long
+For node: id expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: getXdn
+Cannot find matching typeVariable for: public long getXdn(){
+  return xdn;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: xdn expected fqn: long with type: Type3 got: long
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setXdn
+Cannot find matching typeVariable for: public void setXdn(long xdn){
+  this.xdn=xdn;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: long xdn
+For node: long xdn expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+For node: xdn expected fqn: long with type: Type3 got: long
+For node: this.xdn=xdn expected fqn: long with type: Type3 got: long
+For node: this.xdn expected fqn: long with type: Type3 got: long
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: xdn
+For node: xdn expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: xdn
+For node: xdn expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: getDfn
+Cannot find matching typeVariable for: public long getDfn(){
+  return dfn;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: dfn expected fqn: long with type: Type3 got: long
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setDfn
+Cannot find matching typeVariable for: public void setDfn(long dfn){
+  this.dfn=dfn;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: long dfn
+For node: long dfn expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+For node: dfn expected fqn: long with type: Type3 got: long
+For node: this.dfn=dfn expected fqn: long with type: Type3 got: long
+For node: this.dfn expected fqn: long with type: Type3 got: long
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: dfn
+For node: dfn expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: dfn
+For node: dfn expected fqn: long with type: Type3 got: long
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: getAddress
+Cannot find matching typeVariable for: public String getAddress(){
+  return address;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+For node: address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setAddress
+Cannot find matching typeVariable for: public void setAddress(String address){
+  this.address=address;
+}
+
+Cannot find matching typeVariable for: @Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.annotations.Index;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity @org.hibernate.annotations.Table(appliesTo=hibernate_class_19.TABLE_NAME,indexes={@Index(name="IDX_XDN_DFN",columnNames={hibernate_class_19.XDN,hibernate_class_19.DFN})}) public class hibernate_class_19 {
+  public final static String TABLE_NAME="house";
+  public final static String XDN="xdn";
+  public final static String DFN="dfn";
+  @Id @GeneratedValue private long Id;
+  @Column(name=XDN) private long xdn;
+  @Column(name=DFN) private long dfn;
+  @Column private String address;
+  public long getId(){
+    return Id;
+  }
+  public void setId(  long id){
+    this.Id=id;
+  }
+  public long getXdn(){
+    return xdn;
+  }
+  public void setXdn(  long xdn){
+    this.xdn=xdn;
+  }
+  public long getDfn(){
+    return dfn;
+  }
+  public void setDfn(  long dfn){
+    this.dfn=dfn;
+  }
+  public String getAddress(){
+    return address;
+  }
+  public void setAddress(  String address){
+    this.address=address;
+  }
+}
+
+Cannot find matching typeVariable for: String address
+For node: String address expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: address expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: this.address=address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: this.address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: address
+For node: address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: address
+For node: address expected fqn: java.lang.String with type: Type4 got: java.lang.String
+{Checked=108, Analyzed=71, Unsolved=37, Incorrect=2, Correct=69}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+java=NormalAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=29, Analyzed=16, Unsolved=13, Incorrect=1, Correct=15}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=Assignment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=PrimitiveType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+long=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+long=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+Total stats
+{Checked=108, Analyzed=71, Unsolved=37, Incorrect=2, Correct=69}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+java=NormalAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=29, Analyzed=16, Unsolved=13, Incorrect=1, Correct=15}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=Assignment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=PrimitiveType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+long=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+long=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+,SimpleName,0,4,0,0,4
+,ThisExpression,0,4,0,0,4
+java,ArrayInitializer,0,1,0,0,1
+java,Assignment,1,1,1,0,0
+java,FieldAccess,1,1,1,0,0
+java,MarkerAnnotation,1,4,0,1,3
+java,NormalAnnotation,0,2,0,0,2
+java,QualifiedName,0,3,0,0,3
+java,SimpleName,16,29,15,1,13
+java,SimpleType,6,6,6,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,4,4,4,0,0
+java,VariableDeclarationFragment,4,4,4,0,0
+long,Assignment,3,3,3,0,0
+long,FieldAccess,3,3,3,0,0
+long,PrimitiveType,9,9,9,0,0
+long,SimpleName,12,12,12,0,0
+long,SingleVariableDeclaration,3,3,3,0,0
+long,VariableDeclarationFragment,3,3,3,0,0
+org.hibernate.,ArrayInitializer,0,1,0,0,1
+org.hibernate.,NormalAnnotation,0,2,0,0,2
+org.hibernate.,QualifiedName,0,1,0,0,1
+org.hibernate.,SimpleName,0,3,0,0,3
+void,PrimitiveType,4,4,4,0,0

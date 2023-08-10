@@ -1,0 +1,1037 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "xstream_class_30",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "SUPER_INTERFACES",
+                  "children": [
+                    {
+                      "label": "com.thoughtworks.xstream.converters.Converter",
+                      "type": "INTERFACE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "marshal",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "void",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.Override",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "o",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.Object",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "hierarchicalStreamWriter",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.io.HierarchicalStreamWriter",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "marshallingContext",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.converters.MarshallingContext",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "implement logic for marshalling to xml",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "unmarshal",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "java.lang.Object",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.Override",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "hierarchicalStreamReader",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.io.HierarchicalStreamReader",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "unmarshallingContext",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "com.thoughtworks.xstream.converters.UnmarshallingContext",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "items",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "xstream_class_30$Items",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "xstream_class_30$Items()",
+                          "type": "ConstructorCall",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "while",
+                      "type": "While",
+                      "children": [
+                        {
+                          "label": "hasMoreChildren",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "hierarchicalStreamReader",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "moveDown",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "hierarchicalStreamReader",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "currentAttribute",
+                          "type": "LocalVariable",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            },
+                            {
+                              "label": "",
+                              "type": "Modifiers_LocalVariable",
+                              "children": [
+                                {
+                                  "label": "final",
+                                  "type": "Modifier",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "getAttribute",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "hierarchicalStreamReader",
+                                  "type": "VariableRead",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"name\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "if",
+                          "type": "If",
+                          "children": [
+                            {
+                              "label": "equals",
+                              "type": "Invocation",
+                              "children": [
+                                {
+                                  "label": "\"id\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "currentAttribute",
+                                  "type": "VariableRead",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "THEN",
+                              "type": "then",
+                              "children": [
+                                {
+                                  "label": "setId",
+                                  "type": "Invocation",
+                                  "children": [
+                                    {
+                                      "label": "items",
+                                      "type": "VariableRead",
+                                      "children": []
+                                    },
+                                    {
+                                      "label": "getValue",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "hierarchicalStreamReader",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "ELSE",
+                              "type": "else",
+                              "children": [
+                                {
+                                  "label": "if",
+                                  "type": "If",
+                                  "children": [
+                                    {
+                                      "label": "equals",
+                                      "type": "Invocation",
+                                      "children": [
+                                        {
+                                          "label": "\"first-name\"",
+                                          "type": "Literal",
+                                          "children": []
+                                        },
+                                        {
+                                          "label": "currentAttribute",
+                                          "type": "VariableRead",
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "THEN",
+                                      "type": "then",
+                                      "children": [
+                                        {
+                                          "label": "setFirstName",
+                                          "type": "Invocation",
+                                          "children": [
+                                            {
+                                              "label": "items",
+                                              "type": "VariableRead",
+                                              "children": []
+                                            },
+                                            {
+                                              "label": "getValue",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "hierarchicalStreamReader",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "label": "ELSE",
+                                      "type": "else",
+                                      "children": [
+                                        {
+                                          "label": "if",
+                                          "type": "If",
+                                          "children": [
+                                            {
+                                              "label": "equals",
+                                              "type": "Invocation",
+                                              "children": [
+                                                {
+                                                  "label": "\"last-name\"",
+                                                  "type": "Literal",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "label": "currentAttribute",
+                                                  "type": "VariableRead",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "THEN",
+                                              "type": "then",
+                                              "children": [
+                                                {
+                                                  "label": "setLastName",
+                                                  "type": "Invocation",
+                                                  "children": [
+                                                    {
+                                                      "label": "items",
+                                                      "type": "VariableRead",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "label": "getValue",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "hierarchicalStreamReader",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "label": "ELSE",
+                                              "type": "else",
+                                              "children": [
+                                                {
+                                                  "label": "if",
+                                                  "type": "If",
+                                                  "children": [
+                                                    {
+                                                      "label": "equals",
+                                                      "type": "Invocation",
+                                                      "children": [
+                                                        {
+                                                          "label": "\"address\"",
+                                                          "type": "Literal",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "label": "currentAttribute",
+                                                          "type": "VariableRead",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "THEN",
+                                                      "type": "then",
+                                                      "children": [
+                                                        {
+                                                          "label": "setAddress",
+                                                          "type": "Invocation",
+                                                          "children": [
+                                                            {
+                                                              "label": "items",
+                                                              "type": "VariableRead",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "label": "getValue",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "hierarchicalStreamReader",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "label": "ELSE",
+                                                      "type": "else",
+                                                      "children": [
+                                                        {
+                                                          "label": "if",
+                                                          "type": "If",
+                                                          "children": [
+                                                            {
+                                                              "label": "equals",
+                                                              "type": "Invocation",
+                                                              "children": [
+                                                                {
+                                                                  "label": "\"zip\"",
+                                                                  "type": "Literal",
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "label": "currentAttribute",
+                                                                  "type": "VariableRead",
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "label": "THEN",
+                                                              "type": "then",
+                                                              "children": [
+                                                                {
+                                                                  "label": "setZip",
+                                                                  "type": "Invocation",
+                                                                  "children": [
+                                                                    {
+                                                                      "label": "items",
+                                                                      "type": "VariableRead",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "label": "getValue",
+                                                                      "type": "Invocation",
+                                                                      "children": [
+                                                                        {
+                                                                          "label": "hierarchicalStreamReader",
+                                                                          "type": "VariableRead",
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "moveUp",
+                          "type": "Invocation",
+                          "children": [
+                            {
+                              "label": "hierarchicalStreamReader",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "items",
+                          "type": "VariableRead",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "canConvert",
+                  "type": "Method",
+                  "children": [
+                    {
+                      "label": "boolean",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Method",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@java.lang.Override",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "aClass",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.Class",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "return",
+                      "type": "Return",
+                      "children": [
+                        {
+                          "label": "EQ",
+                          "type": "BinaryOperator",
+                          "children": [
+                            {
+                              "label": "aClass",
+                              "type": "VariableRead",
+                              "children": []
+                            },
+                            {
+                              "label": "class",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "xstream_class_30$Items",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "Items",
+                  "type": "Class",
+                  "children": [
+                    {
+                      "label": "",
+                      "type": "Modifiers_Class",
+                      "children": [
+                        {
+                          "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "id",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "firstName",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "lastName",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "address",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "zip",
+                      "type": "Field",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Field",
+                          "children": [
+                            {
+                              "label": "private",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setId",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "id",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "id",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_30$Items",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "id",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setFirstName",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "firstName",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "firstName",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_30$Items",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "firstName",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setLastName",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "lastName",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "lastName",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_30$Items",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "lastName",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setAddress",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "address",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "address",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_30$Items",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "address",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "setZip",
+                      "type": "Method",
+                      "children": [
+                        {
+                          "label": "void",
+                          "type": "RETURN_TYPE",
+                          "children": []
+                        },
+                        {
+                          "label": "",
+                          "type": "Modifiers_Method",
+                          "children": [
+                            {
+                              "label": "public",
+                              "type": "Modifier",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "zip",
+                          "type": "Parameter",
+                          "children": [
+                            {
+                              "label": "java.lang.String",
+                              "type": "VARIABLE_TYPE",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\u003d",
+                          "type": "Assignment",
+                          "children": [
+                            {
+                              "label": "zip",
+                              "type": "FieldWrite",
+                              "children": [
+                                {
+                                  "label": "this",
+                                  "type": "ThisAccess",
+                                  "children": [
+                                    {
+                                      "label": "xstream_class_30$Items",
+                                      "type": "TypeAccess",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "label": "zip",
+                              "type": "VariableRead",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

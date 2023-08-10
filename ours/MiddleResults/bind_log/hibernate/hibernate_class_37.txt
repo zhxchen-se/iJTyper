@@ -1,0 +1,559 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_37.java
+Expect check=69
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_37
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: test
+Cannot find matching typeVariable for: public static void test(){
+  String c="";
+  Session session=HibernateUtil.getSession();
+  session.beginTransaction();
+  session.save(c);
+  session.getTransaction().commit();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: c=""
+For node: c="" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: c expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: session=HibernateUtil.getSession()
+For node: session=HibernateUtil.getSession() expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+For node: HibernateUtil.getSession() expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+Did not find solution for node: HibernateUtil with type Type2
+Cannot find matching typeVariable for: getSession
+For node: getSession expected fqn: org.hibernate.Session with type: Type7 got: org.hibernate.Session
+For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type9 got: org.hibernate.Transaction
+For node: session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: beginTransaction
+For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type9 got: org.hibernate.Transaction
+For node: session.save(c) expected fqn: java.io.Serializable with type: Type11 got: java.io.Serializable
+For node: session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: save
+For node: save expected fqn: java.io.Serializable with type: Type11 got: java.io.Serializable
+For node: c expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: session.getTransaction().commit() expected fqn: void with type: Type16 got: void
+For node: session.getTransaction() expected fqn: org.hibernate.Transaction with type: Type14 got: org.hibernate.Transaction
+For node: session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: getTransaction
+For node: getTransaction expected fqn: org.hibernate.Transaction with type: Type14 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type16 got: void
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: /** 
+ * @param args
+ */
+public static void main(String[] args){
+  hibernate_class_37.test();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type18 got: java.lang.String[]
+Did not find solution for node: hibernate_class_37.test() with type Type19
+Did not find solution for node: hibernate_class_37 with type Type1
+Cannot find matching typeVariable for: test
+Did not find solution for node: test with type Type19
+Cannot find matching typeVariable for: public static class HibernateUtil {
+  private static final SessionFactory sessionFactory;
+static {
+    try {
+      sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static Session getSession() throws HibernateException {
+    return sessionFactory.openSession();
+  }
+}
+
+Did not find solution for node: HibernateUtil with type Type2
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private static final SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public static class HibernateUtil {
+  private static final SessionFactory sessionFactory;
+static {
+    try {
+      sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static Session getSession() throws HibernateException {
+    return sessionFactory.openSession();
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+For node: sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: new AnnotationConfiguration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type26 got: org.hibernate.SessionFactory
+For node: new AnnotationConfiguration().configure() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type24 got: org.hibernate.cfg.Configuration
+For node: new AnnotationConfiguration() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type22 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type22 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type22 got: org.hibernate.cfg.AnnotationConfiguration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type24 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type26 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: Throwable ex
+Did not find solution for node: Throwable ex with type Type28
+Did not find solution for node: Throwable with type Type28
+Did not find solution for node: Throwable with type Type28
+Did not find solution for node: ex with type Type28
+Did not find solution for node: new ExceptionInInitializerError(ex) with type Type29
+Did not find solution for node: ExceptionInInitializerError with type Type29
+Did not find solution for node: ExceptionInInitializerError with type Type29
+Did not find solution for node: ex with type Type28
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: getSession
+Cannot find matching typeVariable for: public static Session getSession() throws HibernateException {
+  return sessionFactory.openSession();
+}
+
+Cannot find matching typeVariable for: public static class HibernateUtil {
+  private static final SessionFactory sessionFactory;
+static {
+    try {
+      sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+    }
+ catch (    Throwable ex) {
+      throw new ExceptionInInitializerError(ex);
+    }
+  }
+  public static Session getSession() throws HibernateException {
+    return sessionFactory.openSession();
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+public class hibernate_class_37 {
+  public static void test(){
+    String c="";
+    Session session=HibernateUtil.getSession();
+    session.beginTransaction();
+    session.save(c);
+    session.getTransaction().commit();
+  }
+  /** 
+ * @param args
+ */
+  public static void main(  String[] args){
+    hibernate_class_37.test();
+  }
+public static class HibernateUtil {
+    private static final SessionFactory sessionFactory;
+static {
+      try {
+        sessionFactory=new AnnotationConfiguration().configure().buildSessionFactory();
+      }
+ catch (      Throwable ex) {
+        throw new ExceptionInInitializerError(ex);
+      }
+    }
+    public static Session getSession() throws HibernateException {
+      return sessionFactory.openSession();
+    }
+  }
+}
+
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type32 got: org.hibernate.HibernateException
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type32 got: org.hibernate.HibernateException
+For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type33 got: org.hibernate.Session
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: openSession
+For node: openSession expected fqn: org.hibernate.Session with type: Type33 got: org.hibernate.Session
+{Checked=62, Analyzed=49, Unsolved=13, Incorrect=2, Correct=47}
+=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=1, Correct=5}
+org.hibernate.=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=1, Correct=16}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+Total stats
+{Checked=62, Analyzed=49, Unsolved=13, Incorrect=2, Correct=47}
+=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=1, Correct=5}
+org.hibernate.=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=1, Correct=16}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+,SimpleName,0,3,0,0,3
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,0,1,0,0,1
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,6,10,6,0,4
+java,SimpleType,2,4,2,0,2
+java,SingleVariableDeclaration,1,2,1,0,1
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,ClassInstanceCreation,1,1,1,0,0
+org.hibernate.,MethodInvocation,6,6,5,1,0
+org.hibernate.,SimpleName,17,17,16,1,0
+org.hibernate.,SimpleType,5,5,5,0,0
+org.hibernate.,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,1,2,1,0,1
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,1,2,1,0,1

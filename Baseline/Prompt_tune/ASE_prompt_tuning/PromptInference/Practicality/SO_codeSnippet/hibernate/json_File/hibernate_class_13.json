@@ -1,0 +1,552 @@
+{
+  "label": "",
+  "type": "root",
+  "children": [
+    {
+      "label": "unnamed module",
+      "type": "UnnamedMo",
+      "children": [
+        {
+          "label": "unnamed package",
+          "type": "RootPac",
+          "children": [
+            {
+              "label": "hibernate_class_13",
+              "type": "Class",
+              "children": [
+                {
+                  "label": "",
+                  "type": "SUPER_INTERFACES",
+                  "children": [
+                    {
+                      "label": "java.io.Serializable",
+                      "type": "INTERFACE",
+                      "children": []
+                    },
+                    {
+                      "label": "java.lang.Cloneable",
+                      "type": "INTERFACE",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "",
+                  "type": "Modifiers_Class",
+                  "children": [
+                    {
+                      "label": "public",
+                      "type": "Modifier",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "@Entity",
+                  "type": "Annotation",
+                  "children": []
+                },
+                {
+                  "label": "@Table(name \u003d \"tblUser\")",
+                  "type": "Annotation",
+                  "children": [
+                    {
+                      "label": "\"tblUser\"",
+                      "type": "Literal",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "countyId",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.Integer",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@Id",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "@Column(name \u003d \"CountyId\", nullable \u003d false)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"CountyId\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "username",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@Id",
+                      "type": "Annotation",
+                      "children": []
+                    },
+                    {
+                      "label": "@Column(name \u003d \"Username\", length \u003d 25, nullable \u003d false)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "25",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Username\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "name",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@ManyToOne(fetch \u003d FetchType.LAZY)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "LAZY",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "FetchType",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@JoinColumn(name \u003d \"CountyId\", nullable \u003d false, insertable \u003d false, updatable \u003d false)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"CountyId\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@org.hibernate.annotations.ForeignKey(name \u003d \"FK_CountyID\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"FK_CountyID\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@Column(name \u003d \"Name\", length \u003d 50, nullable \u003d true)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "50",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Name\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "true",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "private County county;",
+                      "type": "Comment",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "label": "password",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.String",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@Column(name \u003d \"Password\", length \u003d 30, nullable \u003d true)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "30",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "\"Password\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "true",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "role",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.lang.Integer",
+                      "type": "VARIABLE_TYPE",
+                      "children": []
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@Column(name \u003d \"Role\", nullable \u003d false)",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"Role\"",
+                          "type": "Literal",
+                          "children": []
+                        },
+                        {
+                          "label": "false",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "permissions",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.util.Collection",
+                      "type": "VARIABLE_TYPE",
+                      "children": [
+                        {
+                          "label": "java.security.Permission",
+                          "type": "TYPE_ARGUMENT",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@ManyToMany(targetEntity \u003d java.security.Permission.class, cascade \u003d { CascadeType.PERSIST, CascadeType.MERGE })",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "NewArray",
+                          "children": [
+                            {
+                              "label": "PERSIST",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "CascadeType",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "MERGE",
+                              "type": "FieldRead",
+                              "children": [
+                                {
+                                  "label": "CascadeType",
+                                  "type": "TypeAccess",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "class",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "java.security.Permission",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@JoinTable(name \u003d \"tblUserPermission\", joinColumns \u003d { @JoinColumn(name \u003d \"Username\", referencedColumnName \u003d \"Username\"), @JoinColumn(name \u003d \"CountyId\", referencedColumnName \u003d \"CountyId\") }, inverseJoinColumns \u003d { @JoinColumn(name \u003d \"PermissionId\", referencedColumnName \u003d \"PermissionId\") })",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "",
+                          "type": "NewArray",
+                          "children": [
+                            {
+                              "label": "@JoinColumn(name \u003d \"PermissionId\", referencedColumnName \u003d \"PermissionId\")",
+                              "type": "Annotation",
+                              "children": [
+                                {
+                                  "label": "\"PermissionId\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"PermissionId\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "",
+                          "type": "NewArray",
+                          "children": [
+                            {
+                              "label": "@JoinColumn(name \u003d \"Username\", referencedColumnName \u003d \"Username\")",
+                              "type": "Annotation",
+                              "children": [
+                                {
+                                  "label": "\"Username\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"Username\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "label": "@JoinColumn(name \u003d \"CountyId\", referencedColumnName \u003d \"CountyId\")",
+                              "type": "Annotation",
+                              "children": [
+                                {
+                                  "label": "\"CountyId\"",
+                                  "type": "Literal",
+                                  "children": []
+                                },
+                                {
+                                  "label": "\"CountyId\"",
+                                  "type": "Literal",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"tblUserPermission\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "versions",
+                  "type": "Field",
+                  "children": [
+                    {
+                      "label": "java.util.List",
+                      "type": "VARIABLE_TYPE",
+                      "children": [
+                        {
+                          "label": "Version",
+                          "type": "TYPE_ARGUMENT",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "",
+                      "type": "Modifiers_Field",
+                      "children": [
+                        {
+                          "label": "private",
+                          "type": "Modifier",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@OneToMany(fetch \u003d FetchType.LAZY, mappedBy \u003d \"county\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "LAZY",
+                          "type": "FieldRead",
+                          "children": [
+                            {
+                              "label": "FetchType",
+                              "type": "TypeAccess",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "label": "\"county\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "label": "@org.hibernate.annotations.IndexColumn(name \u003d \"version\")",
+                      "type": "Annotation",
+                      "children": [
+                        {
+                          "label": "\"version\"",
+                          "type": "Literal",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "label": "Getters and setters *",
+                  "type": "JavaDoc",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
