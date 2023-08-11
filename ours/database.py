@@ -225,7 +225,7 @@ class DB:
         if connection:
             connection.close()
         end_time = time.time()
-        print(f'debug138:the process {table_name} used time : {end_time-start_time}')
+        # print(f'debug138:the process {table_name} used time : {end_time-start_time}')
 
 
     

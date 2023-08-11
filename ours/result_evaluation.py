@@ -24,7 +24,7 @@ class Result:
 
         self.snippet_file_name = snippet_file_name
         self.lib = lib
-        self.csv_result = [(snippet_file_name,""),("Node","ASE_pred","ASE_truth","ASE_correct","SNR_pred","SNR_truth","SNR_correct","Total_correct")]
+        self.csv_result = [(snippet_file_name,""),("Node","DL_pred","DL_truth","DL_correct","Rule_pred","Rule_truth","Rule_correct","Total_correct")]
 
 
 
