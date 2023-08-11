@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_7.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_7.java
 Expect check=106
 Cannot find matching typeVariable for: public class gwt_class_7 {
 public class GWTMemoryIssue implements EntryPoint {
@@ -173,10 +173,10 @@ Cannot find matching typeVariable for: WITH_TABLE=false
 For node: WITH_TABLE=false expected fqn: boolean with type: Type5 got: boolean
 For node: WITH_TABLE expected fqn: boolean with type: Type5 got: boolean
 For node: false expected fqn: boolean with type: Type5 got: boolean
-For node: Panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
-For node: Panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: Panel with type Type6
+Did not find solution for node: Panel with type Type6
 Cannot find matching typeVariable for: panel
-For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: panel with type Type6
 Cannot find matching typeVariable for: panel
 Cannot find matching typeVariable for: private Panel panel;
 
@@ -697,37 +697,37 @@ public class GWTMemoryIssue implements EntryPoint {
   }
 }
 
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Did not find solution for node: RootPanel with type Type9
+Did not find solution for node: RootPanel with type Type9
 Cannot find matching typeVariable for: rootPanel=RootPanel.get()
-For node: rootPanel=RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
-For node: rootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
-For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type10 got: com.google.gwt.user.client.ui.RootPanel
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Did not find solution for node: rootPanel=RootPanel.get() with type Type9
+Did not find solution for node: rootPanel with type Type9
+Did not find solution for node: RootPanel.get() with type Type10
+Did not find solution for node: RootPanel with type Type9
 Cannot find matching typeVariable for: get
-For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type10 got: com.google.gwt.user.client.ui.RootPanel
-For node: this.panel=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
-For node: this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: get with type Type10
+Did not find solution for node: this.panel=new VerticalPanel() with type Type6
+Did not find solution for node: this.panel with type Type6
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: panel
-For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: panel with type Type6
 For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
 For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
 For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type12 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: this.panel.setSize("100%","100%") expected fqn: void with type: Type15 got: void
-For node: this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: this.panel.setSize("100%","100%") with type Type15
+Did not find solution for node: this.panel with type Type6
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: panel
-For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: panel with type Type6
 Cannot find matching typeVariable for: setSize
-For node: setSize expected fqn: void with type: Type15 got: void
-For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
+Did not find solution for node: setSize with type Type15
+Did not find solution for node: "100%" with type Type14
+Did not find solution for node: "100%" with type Type14
 For node: rootPanel.add(panel) expected fqn: void with type: Type19 got: void
-For node: rootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type9 got: com.google.gwt.user.client.ui.RootPanel
+Did not find solution for node: rootPanel with type Type9
 Cannot find matching typeVariable for: add
 For node: add expected fqn: void with type: Type19 got: void
-For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: panel with type Type6
 Cannot find matching typeVariable for: WITH_TABLE
 Cannot find matching typeVariable for: if (WITH_TABLE) {
   loadTable();
@@ -1198,8 +1198,8 @@ public class GWTMemoryIssue implements EntryPoint {
   }
 }
 
-Did not find solution for node: Runnable with type Type27
-Did not find solution for node: Runnable with type Type27
+For node: Runnable expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
 Cannot find matching typeVariable for: onLoadCallback=new Runnable(){
   public void run(){
     GWTMemoryIssue.this.table.setSize("100%","100%");
@@ -1208,25 +1208,25 @@ Cannot find matching typeVariable for: onLoadCallback=new Runnable(){
   }
 }
 
-Did not find solution for node: onLoadCallback=new Runnable(){
+For node: onLoadCallback=new Runnable(){
   public void run(){
     GWTMemoryIssue.this.table.setSize("100%","100%");
     GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
     GWTMemoryIssue.this.startUpdateTask();
   }
 }
- with type Type27
-Did not find solution for node: onLoadCallback with type Type27
-Did not find solution for node: new Runnable(){
+ expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
+For node: onLoadCallback expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
+For node: new Runnable(){
   public void run(){
     GWTMemoryIssue.this.table.setSize("100%","100%");
     GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table);
     GWTMemoryIssue.this.startUpdateTask();
   }
 }
- with type Type27
-Did not find solution for node: Runnable with type Type27
-Did not find solution for node: Runnable with type Type27
+ expected fqn:  with type: Type27 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type27 got: java.lang.Runnable
 Cannot find matching typeVariable for: {
   public void run(){
     GWTMemoryIssue.this.table.setSize("100%","100%");
@@ -1251,7 +1251,7 @@ Cannot find matching typeVariable for: {
   }
 }
 
-Did not find solution for node: run with type Type27
+For node: run expected fqn: void with type: Type27 got: java.lang.Runnable
 Did not find solution for node: GWTMemoryIssue.this.table.setSize("100%","100%") with type Type28
 Did not find solution for node: GWTMemoryIssue.this.table with type Type8
 Did not find solution for node: GWTMemoryIssue.this with type Type1
@@ -1260,16 +1260,16 @@ Cannot find matching typeVariable for: table
 Did not find solution for node: table with type Type8
 Cannot find matching typeVariable for: setSize
 Did not find solution for node: setSize with type Type28
-For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "100%" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table) expected fqn: void with type: Type32 got: void
-For node: GWTMemoryIssue.this.panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: "100%" with type Type14
+Did not find solution for node: "100%" with type Type14
+Did not find solution for node: GWTMemoryIssue.this.panel.add(GWTMemoryIssue.this.table) with type Type32
+Did not find solution for node: GWTMemoryIssue.this.panel with type Type6
 Did not find solution for node: GWTMemoryIssue.this with type Type1
 Did not find solution for node: GWTMemoryIssue with type Type1
 Cannot find matching typeVariable for: panel
-For node: panel expected fqn: com.google.gwt.user.client.ui.Panel with type: Type6 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: panel with type Type6
 Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type32 got: void
+Did not find solution for node: add with type Type32
 Did not find solution for node: GWTMemoryIssue.this.table with type Type8
 Did not find solution for node: GWTMemoryIssue.this with type Type1
 Did not find solution for node: GWTMemoryIssue with type Type1
@@ -1280,8 +1280,8 @@ Did not find solution for node: GWTMemoryIssue.this with type Type1
 Did not find solution for node: GWTMemoryIssue with type Type1
 Cannot find matching typeVariable for: startUpdateTask
 Did not find solution for node: startUpdateTask with type Type35
-{Checked=94, Analyzed=62, Unsolved=32, Incorrect=3, Correct=59}
-=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+{Checked=94, Analyzed=43, Unsolved=51, Incorrect=5, Correct=38}
+=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 =FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -1291,24 +1291,24 @@ boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=FieldAccess: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
+gwt.=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=0, Correct=4}
 void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=SimpleName: {Checked=10, Analyzed=7, Unsolved=3, Incorrect=1, Correct=6}
+void=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=2, Correct=4}
 Total stats
-{Checked=94, Analyzed=62, Unsolved=32, Incorrect=3, Correct=59}
-=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+{Checked=94, Analyzed=43, Unsolved=51, Incorrect=5, Correct=38}
+=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 =FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -1318,22 +1318,22 @@ boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=FieldAccess: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
+gwt.=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=0, Correct=4}
 void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=SimpleName: {Checked=10, Analyzed=7, Unsolved=3, Incorrect=1, Correct=6}
-,ClassInstanceCreation,1,2,0,1,1
+void=SimpleName: {Checked=10, Analyzed=6, Unsolved=4, Incorrect=2, Correct=4}
+,ClassInstanceCreation,2,2,0,2,0
 ,FieldAccess,0,2,0,0,2
 ,SimpleName,0,8,0,0,8
 ,SimpleType,0,1,0,0,1
@@ -1343,18 +1343,18 @@ boolean,BooleanLiteral,1,1,1,0,0
 boolean,PrimitiveType,1,1,1,0,0
 boolean,SimpleName,1,1,1,0,0
 boolean,VariableDeclarationFragment,1,1,1,0,0
-gwt.,Assignment,2,2,2,0,0
+gwt.,Assignment,1,2,1,0,1
 gwt.,ClassInstanceCreation,1,1,1,0,0
-gwt.,FieldAccess,5,5,5,0,0
-gwt.,MethodInvocation,1,1,1,0,0
-gwt.,SimpleName,16,16,16,0,0
-gwt.,SimpleType,6,6,6,0,0
-gwt.,VariableDeclarationFragment,3,3,3,0,0
+gwt.,FieldAccess,2,5,2,0,3
+gwt.,MethodInvocation,0,1,0,0,1
+gwt.,SimpleName,6,16,6,0,10
+gwt.,SimpleType,4,6,4,0,2
+gwt.,VariableDeclarationFragment,1,3,1,0,2
 int,NumberLiteral,1,1,0,1,0
-java,SimpleName,0,3,0,0,3
-java,SimpleType,0,2,0,0,2
-java,StringLiteral,4,4,4,0,0
-java,VariableDeclarationFragment,0,1,0,0,1
-void,MethodInvocation,6,8,6,0,2
+java,SimpleName,3,3,3,0,0
+java,SimpleType,2,2,2,0,0
+java,StringLiteral,0,4,0,0,4
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,4,8,4,0,4
 void,PrimitiveType,5,5,5,0,0
-void,SimpleName,7,10,6,1,3
+void,SimpleName,6,10,4,2,4

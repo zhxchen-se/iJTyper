@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_18.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_18.java
 Expect check=84
 Cannot find matching typeVariable for: public class hibernate_class_18 {
   private static final SessionFactory sessionFactory=buildSessionFactory();
@@ -144,16 +144,16 @@ For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.
 For node: System.err.println("Initial SessionFactory creation failed." + ex) expected fqn: void with type: Type14 got: void
 Cannot find matching typeVariable for: System.err
 For node: System.err expected fqn: java.io.PrintStream with type: Type14 got: void
-Did not find solution for node: System with type Type12
+For node: System expected fqn: java.lang.System with type: Type12 got: java.lang.System
 For node: err expected fqn: java.io.PrintStream with type: Type13 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type14 got: void
 For node: "Initial SessionFactory creation failed." + ex expected fqn: java.lang.String with type: Type11 got: java.lang.String
 For node: "Initial SessionFactory creation failed." expected fqn: java.lang.String with type: Type11 got: java.lang.String
 For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
-Did not find solution for node: new ExceptionInInitializerError(ex) with type Type17
-Did not find solution for node: ExceptionInInitializerError with type Type17
-Did not find solution for node: ExceptionInInitializerError with type Type17
+For node: new ExceptionInInitializerError(ex) expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
+For node: ExceptionInInitializerError expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
+For node: ExceptionInInitializerError expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
 For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
 For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
 For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
@@ -336,16 +336,16 @@ For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.
 For node: System.err.println("Initial SessionFactory creation failed." + ex) expected fqn: void with type: Type22 got: void
 Cannot find matching typeVariable for: System.err
 For node: System.err expected fqn: java.io.PrintStream with type: Type22 got: void
-Did not find solution for node: System with type Type20
+For node: System expected fqn: java.lang.System with type: Type20 got: java.lang.System
 For node: err expected fqn: java.io.PrintStream with type: Type21 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type22 got: void
 For node: "Initial SessionFactory creation failed." + ex expected fqn: java.lang.String with type: Type11 got: java.lang.String
 For node: "Initial SessionFactory creation failed." expected fqn: java.lang.String with type: Type11 got: java.lang.String
 For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
-Did not find solution for node: new ExceptionInInitializerError(ex) with type Type17
-Did not find solution for node: ExceptionInInitializerError with type Type17
-Did not find solution for node: ExceptionInInitializerError with type Type17
+For node: new ExceptionInInitializerError(ex) expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
+For node: ExceptionInInitializerError expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
+For node: ExceptionInInitializerError expected fqn: java.lang.ExceptionInInitializerError with type: Type17 got: java.lang.ExceptionInInitializerError
 For node: ex expected fqn: java.lang.Throwable with type: Type10 got: java.lang.Throwable
 For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
 For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
@@ -419,13 +419,13 @@ public class hibernate_class_18 {
 }
 
 For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type2 got: org.hibernate.SessionFactory
-{Checked=79, Analyzed=70, Unsolved=9, Incorrect=2, Correct=68}
+{Checked=79, Analyzed=78, Unsolved=1, Incorrect=2, Correct=76}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=14, Analyzed=10, Unsolved=4, Incorrect=0, Correct=10}
-java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
@@ -436,13 +436,13 @@ org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, 
 void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 Total stats
-{Checked=79, Analyzed=70, Unsolved=9, Incorrect=2, Correct=68}
+{Checked=79, Analyzed=78, Unsolved=1, Incorrect=2, Correct=76}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=14, Analyzed=10, Unsolved=4, Incorrect=0, Correct=10}
-java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
@@ -453,11 +453,11 @@ org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, 
 void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 ,SimpleName,0,1,0,0,1
-java,ClassInstanceCreation,0,2,0,0,2
+java,ClassInstanceCreation,2,2,2,0,0
 java,InfixExpression,2,2,2,0,0
 java,QualifiedName,2,2,0,2,0
-java,SimpleName,10,14,10,0,4
-java,SimpleType,2,4,2,0,2
+java,SimpleName,14,14,14,0,0
+java,SimpleType,4,4,4,0,0
 java,SingleVariableDeclaration,2,2,2,0,0
 java,StringLiteral,2,2,2,0,0
 org.hibernate.,ClassInstanceCreation,2,2,2,0,0

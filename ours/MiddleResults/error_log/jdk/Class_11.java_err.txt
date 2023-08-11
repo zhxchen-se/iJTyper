@@ -1,0 +1,12 @@
+Error processing file Class_11.java: Fail to execute make runcomparebindinganalysisandeclipsejdt:time out and reached maximum retries.(rerun:success)
+Traceback (most recent call last):
+  File "framework.py", line 183, in run_lib
+    result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,StartFromRule,log_feed_back_flag,Maximum_iter_round)
+  File "framework.py", line 50, in iterative_execute_one_snippet
+    rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag)
+  File "/iJTyper/ours/rule.py", line 215, in Rule_predict_with_DL_info
+    bind_log_path = execute_make_binding(file_name,lib)
+  File "/iJTyper/ours/rule.py", line 115, in execute_make_binding
+    raise TimeoutError("Fail to execute make runcomparebindinganalysisandeclipsejdt:time out and reached maximum retries.")  # Throw a custom timeout error
+TimeoutError: Fail to execute make runcomparebindinganalysisandeclipsejdt:time out and reached maximum retries.
+

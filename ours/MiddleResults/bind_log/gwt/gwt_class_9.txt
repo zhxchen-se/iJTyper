@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_9.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_9.java
 Expect check=44
 Cannot find matching typeVariable for: public class gwt_class_9 {
   VerticalPanel v1=new VerticalPanel();
@@ -24,26 +24,26 @@ For node: v1 expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type
 For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
 For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
 For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
-Did not find solution for node: Command with type Type4
-Did not find solution for node: Command with type Type4
+For node: Command expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
+For node: Command expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
 Cannot find matching typeVariable for: comm=new Command(){
   @Override public void execute(){
   }
 }
 
-Did not find solution for node: comm=new Command(){
+For node: comm=new Command(){
   @Override public void execute(){
   }
 }
- with type Type4
-Did not find solution for node: comm with type Type4
-Did not find solution for node: new Command(){
+ expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
+For node: comm expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
+For node: new Command(){
   @Override public void execute(){
   }
 }
- with type Type4
-Did not find solution for node: Command with type Type4
-Did not find solution for node: Command with type Type4
+ expected fqn:  with type: Type4 got: com.google.gwt.user.client.Command
+For node: Command expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
+For node: Command expected fqn: com.google.gwt.user.client.Command with type: Type4 got: com.google.gwt.user.client.Command
 Cannot find matching typeVariable for: {
   @Override public void execute(){
   }
@@ -61,7 +61,7 @@ Cannot find matching typeVariable for: {
   }
 }
 
-Did not find solution for node: execute with type Type4
+For node: execute expected fqn: void with type: Type4 got: com.google.gwt.user.client.Command
 For node: MenuBar expected fqn: com.google.gwt.user.client.ui.MenuBar with type: Type5 got: com.google.gwt.user.client.ui.MenuBar
 For node: MenuBar expected fqn: com.google.gwt.user.client.ui.MenuBar with type: Type5 got: com.google.gwt.user.client.ui.MenuBar
 Cannot find matching typeVariable for: menu=new MenuBar()
@@ -88,39 +88,39 @@ For node: new MenuBar(true) expected fqn: com.google.gwt.user.client.ui.MenuBar 
 For node: MenuBar expected fqn: com.google.gwt.user.client.ui.MenuBar with type: Type5 got: com.google.gwt.user.client.ui.MenuBar
 For node: MenuBar expected fqn: com.google.gwt.user.client.ui.MenuBar with type: Type5 got: com.google.gwt.user.client.ui.MenuBar
 For node: true expected fqn: boolean with type: Type10 got: boolean
-{Checked=42, Analyzed=33, Unsolved=9, Incorrect=0, Correct=33}
-=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+{Checked=42, Analyzed=41, Unsolved=1, Incorrect=2, Correct=39}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-gwt.=SimpleName: {Checked=15, Analyzed=12, Unsolved=3, Incorrect=0, Correct=12}
-gwt.=SimpleType: {Checked=10, Analyzed=8, Unsolved=2, Incorrect=0, Correct=8}
-gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+gwt.=SimpleName: {Checked=15, Analyzed=15, Unsolved=0, Incorrect=0, Correct=15}
+gwt.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 Total stats
-{Checked=42, Analyzed=33, Unsolved=9, Incorrect=0, Correct=33}
-=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+{Checked=42, Analyzed=41, Unsolved=1, Incorrect=2, Correct=39}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-gwt.=SimpleName: {Checked=15, Analyzed=12, Unsolved=3, Incorrect=0, Correct=12}
-gwt.=SimpleType: {Checked=10, Analyzed=8, Unsolved=2, Incorrect=0, Correct=8}
-gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+gwt.=SimpleName: {Checked=15, Analyzed=15, Unsolved=0, Incorrect=0, Correct=15}
+gwt.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-,ClassInstanceCreation,0,1,0,0,1
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+,ClassInstanceCreation,1,1,0,1,0
 ,SimpleName,0,1,0,0,1
 boolean,BooleanLiteral,2,2,2,0,0
 gwt.,ClassInstanceCreation,4,4,4,0,0
-gwt.,SimpleName,12,15,12,0,3
-gwt.,SimpleType,8,10,8,0,2
-gwt.,VariableDeclarationFragment,4,5,4,0,1
+gwt.,SimpleName,15,15,15,0,0
+gwt.,SimpleType,10,10,10,0,0
+gwt.,VariableDeclarationFragment,5,5,5,0,0
 java,MarkerAnnotation,1,1,1,0,0
 java,SimpleName,1,1,1,0,0
 void,PrimitiveType,1,1,1,0,0
-void,SimpleName,0,1,0,0,1
+void,SimpleName,1,1,0,1,0

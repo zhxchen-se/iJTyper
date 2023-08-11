@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android09.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android09.java
 Expect check=58
 Cannot find matching typeVariable for: public class Android09 {
   float seconds;
@@ -345,10 +345,10 @@ public class Android09 {
 }
 
 Cannot find matching typeVariable for: Bundle sis
-For node: Bundle sis expected fqn: android.os.Bundle with type: Type14 got: android.os.Bundle
-For node: Bundle expected fqn: android.os.Bundle with type: Type14 got: android.os.Bundle
-For node: Bundle expected fqn: android.os.Bundle with type: Type14 got: android.os.Bundle
-For node: sis expected fqn: android.os.Bundle with type: Type14 got: android.os.Bundle
+Did not find solution for node: Bundle sis with type Type14
+Did not find solution for node: Bundle with type Type14
+Did not find solution for node: Bundle with type Type14
+Did not find solution for node: sis with type Type14
 For node: gametimer.schedule(new TimerTask(){
   public void run(){
     seconds+=0.1;
@@ -398,13 +398,13 @@ Cannot find matching typeVariable for: updatecount
 For node: updatecount expected fqn: void with type: Type2 got: void
 For node: 100 expected fqn: int with type: Type17 got: byte
 For node: 100 expected fqn: int with type: Type17 got: byte
-{Checked=51, Analyzed=50, Unsolved=1, Incorrect=6, Correct=44}
+{Checked=51, Analyzed=46, Unsolved=5, Incorrect=6, Correct=40}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-android.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 float=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -425,13 +425,13 @@ void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
 Total stats
-{Checked=51, Analyzed=50, Unsolved=1, Incorrect=6, Correct=44}
+{Checked=51, Analyzed=46, Unsolved=5, Incorrect=6, Correct=40}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-android.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 float=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -454,9 +454,9 @@ void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
 ,ClassInstanceCreation,1,1,0,1,0
 ,SimpleName,0,1,0,0,1
 android.,CastExpression,1,1,1,0,0
-android.,SimpleName,9,9,9,0,0
-android.,SimpleType,4,4,4,0,0
-android.,SingleVariableDeclaration,1,1,1,0,0
+android.,SimpleName,7,9,7,0,2
+android.,SimpleType,3,4,3,0,1
+android.,SingleVariableDeclaration,0,1,0,0,1
 android.,VariableDeclarationFragment,1,1,1,0,0
 double,NumberLiteral,1,1,0,1,0
 float,Assignment,1,1,1,0,0

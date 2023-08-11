@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_35.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_35.java
 Expect check=147
 Cannot find matching typeVariable for: public class xstream_class_35 {
 public static class AClass {
@@ -765,7 +765,7 @@ For node: converter expected fqn: com.thoughtworks.xstream.converters.Converter 
 For node: System.out.println(xStream.toXML(new AClass())) expected fqn: void with type: Type48 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type48 got: void
-Did not find solution for node: System with type Type46
+For node: System expected fqn: java.lang.System with type: Type46 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type47 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type48 got: void
@@ -869,7 +869,7 @@ For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrap
 For node: MapperWrapper expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
 For node: next expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
 For node: next expected fqn: com.thoughtworks.xstream.mapper.MapperWrapper with type: Type6 got: com.thoughtworks.xstream.mapper.MapperWrapper
-{Checked=136, Analyzed=99, Unsolved=37, Incorrect=5, Correct=94}
+{Checked=136, Analyzed=100, Unsolved=36, Incorrect=5, Correct=95}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 =MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -888,7 +888,7 @@ int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=25, Analyzed=20, Unsolved=5, Incorrect=0, Correct=20}
+java=SimpleName: {Checked=25, Analyzed=21, Unsolved=4, Incorrect=0, Correct=21}
 java=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
 java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -899,7 +899,7 @@ void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 Total stats
-{Checked=136, Analyzed=99, Unsolved=37, Incorrect=5, Correct=94}
+{Checked=136, Analyzed=100, Unsolved=36, Incorrect=5, Correct=95}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 =MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -918,7 +918,7 @@ int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=25, Analyzed=20, Unsolved=5, Incorrect=0, Correct=20}
+java=SimpleName: {Checked=25, Analyzed=21, Unsolved=4, Incorrect=0, Correct=21}
 java=SimpleType: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
 java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -946,7 +946,7 @@ int,NumberLiteral,0,1,0,0,1
 java,MarkerAnnotation,3,3,3,0,0
 java,MethodInvocation,1,2,1,0,1
 java,QualifiedName,2,2,0,2,0
-java,SimpleName,20,25,20,0,5
+java,SimpleName,21,25,21,0,4
 java,SimpleType,8,9,8,0,1
 java,SingleVariableDeclaration,3,3,3,0,0
 java,StringLiteral,1,1,1,0,0

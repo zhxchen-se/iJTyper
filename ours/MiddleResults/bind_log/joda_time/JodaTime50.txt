@@ -1,0 +1,171 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime50.java
+Expect check=36
+Cannot find matching typeVariable for: public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime50
+Cannot find matching typeVariable for: public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+}
+
+Cannot find matching typeVariable for: public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+Did not find solution for node: int with type Type2
+Cannot find matching typeVariable for: daysOfMonth
+Cannot find matching typeVariable for: public static int daysOfMonth(int year,int month){
+  DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+  return dateTime.dayOfMonth().getMaximumValue();
+}
+
+Cannot find matching typeVariable for: public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+public class JodaTime50 {
+  public static void main(  String[] args){
+  }
+  public static int daysOfMonth(  int year,  int month){
+    DateTime dateTime=new DateTime(year,month,14,12,0,0,000);
+    return dateTime.dayOfMonth().getMaximumValue();
+  }
+}
+
+Cannot find matching typeVariable for: int year
+Did not find solution for node: int year with type Type2
+Did not find solution for node: int with type Type2
+Did not find solution for node: year with type Type2
+Cannot find matching typeVariable for: int month
+Did not find solution for node: int month with type Type2
+Did not find solution for node: int with type Type2
+Did not find solution for node: month with type Type2
+Did not find solution for node: DateTime with type Type6
+Did not find solution for node: DateTime with type Type6
+Cannot find matching typeVariable for: dateTime=new DateTime(year,month,14,12,0,0,000)
+Did not find solution for node: dateTime=new DateTime(year,month,14,12,0,0,000) with type Type6
+Did not find solution for node: dateTime with type Type6
+Did not find solution for node: new DateTime(year,month,14,12,0,0,000) with type Type6
+Did not find solution for node: DateTime with type Type6
+Did not find solution for node: DateTime with type Type6
+Did not find solution for node: year with type Type2
+Did not find solution for node: month with type Type2
+Did not find solution for node: 14 with type Type7
+Did not find solution for node: 12 with type Type7
+Did not find solution for node: 0 with type Type7
+Did not find solution for node: 0 with type Type7
+Did not find solution for node: 000 with type Type7
+Did not find solution for node: dateTime.dayOfMonth().getMaximumValue() with type Type18
+Did not find solution for node: dateTime.dayOfMonth() with type Type16
+Did not find solution for node: dateTime with type Type6
+Cannot find matching typeVariable for: dayOfMonth
+Did not find solution for node: dayOfMonth with type Type16
+Cannot find matching typeVariable for: getMaximumValue
+Did not find solution for node: getMaximumValue with type Type18
+{Checked=32, Analyzed=6, Unsolved=26, Incorrect=0, Correct=6}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=32, Analyzed=6, Unsolved=26, Incorrect=0, Correct=6}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int,MethodInvocation,0,1,0,0,1
+int,NumberLiteral,0,5,0,0,5
+int,PrimitiveType,0,3,0,0,3
+int,SimpleName,0,5,0,0,5
+int,SingleVariableDeclaration,0,2,0,0,2
+java,ArrayType,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,0,1,0,0,1
+org.joda.time.,MethodInvocation,0,1,0,0,1
+org.joda.time.,SimpleName,0,5,0,0,5
+org.joda.time.,SimpleType,0,2,0,0,2
+org.joda.time.,VariableDeclarationFragment,0,1,0,0,1
+void,PrimitiveType,1,1,1,0,0

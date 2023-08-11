@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android38.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android38.java
 Expect check=626
 Cannot find matching typeVariable for: public class Android38 {
   static String serviceDomain="http://staging.abaqus.net";
@@ -5038,10 +5038,10 @@ For node: conn.getResponseCode() expected fqn: int with type: Type97 got: int
 For node: conn expected fqn: java.net.HttpURLConnection with type: Type61 got: java.net.HttpURLConnection
 Cannot find matching typeVariable for: getResponseCode
 For node: getResponseCode expected fqn: int with type: Type97 got: int
-Did not find solution for node: response.contains("uploaded successfully") with type Type99
+For node: response.contains("uploaded successfully") expected fqn: boolean with type: Type99 got: boolean
 For node: response expected fqn: java.lang.String with type: Type46 got: java.lang.String
 Cannot find matching typeVariable for: contains
-Did not find solution for node: contains with type Type99
+For node: contains expected fqn: boolean with type: Type99 got: boolean
 For node: "uploaded successfully" expected fqn: java.lang.String with type: Type46 got: java.lang.String
 Cannot find matching typeVariable for: ReturnCode.http201
 Cannot find matching typeVariable for: return ReturnCode.http201;
@@ -6152,21 +6152,21 @@ catch (    Exception e) {
 Did not find solution for node: ReturnCode with type Type5
 Did not find solution for node: http401 with type Type103
 Cannot find matching typeVariable for: MalformedURLException mue
-Did not find solution for node: MalformedURLException mue with type Type104
-Did not find solution for node: MalformedURLException with type Type104
-Did not find solution for node: MalformedURLException with type Type104
-Did not find solution for node: mue with type Type104
+For node: MalformedURLException mue expected fqn: java.net.MalformedURLException with type: Type104 got: java.net.MalformedURLException
+For node: MalformedURLException expected fqn: java.net.MalformedURLException with type: Type104 got: java.net.MalformedURLException
+For node: MalformedURLException expected fqn: java.net.MalformedURLException with type: Type104 got: java.net.MalformedURLException
+For node: mue expected fqn: java.net.MalformedURLException with type: Type104 got: java.net.MalformedURLException
 For node: System.out.println("GeoPictureUploader.uploadPicture: Malformed URL: " + mue.getMessage()) expected fqn: void with type: Type109 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type109 got: void
-Did not find solution for node: System with type Type107
-For node: out expected fqn: java.io.PrintStream with type: Type108 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type107 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type108 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type109 got: void
 For node: "GeoPictureUploader.uploadPicture: Malformed URL: " + mue.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: "GeoPictureUploader.uploadPicture: Malformed URL: " expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: mue.getMessage() expected fqn: java.lang.String with type: Type105 got: java.lang.String
-Did not find solution for node: mue with type Type104
+For node: mue expected fqn: java.net.MalformedURLException with type: Type104 got: java.net.MalformedURLException
 Cannot find matching typeVariable for: getMessage
 For node: getMessage expected fqn: java.lang.String with type: Type105 got: java.lang.String
 Cannot find matching typeVariable for: ReturnCode.http400
@@ -6704,21 +6704,21 @@ catch (    Exception e) {
 Did not find solution for node: ReturnCode with type Type5
 Did not find solution for node: http400 with type Type112
 Cannot find matching typeVariable for: IOException ioe
-Did not find solution for node: IOException ioe with type Type113
-Did not find solution for node: IOException with type Type113
-Did not find solution for node: IOException with type Type113
-Did not find solution for node: ioe with type Type113
+For node: IOException ioe expected fqn: java.io.IOException with type: Type113 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type113 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type113 got: java.io.IOException
+For node: ioe expected fqn: java.io.IOException with type: Type113 got: java.io.IOException
 For node: System.out.println("GeoPictureUploader.uploadPicture: IOE: " + ioe.getMessage()) expected fqn: void with type: Type118 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type118 got: void
-Did not find solution for node: System with type Type116
-For node: out expected fqn: java.io.PrintStream with type: Type117 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type116 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type117 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type118 got: void
 For node: "GeoPictureUploader.uploadPicture: IOE: " + ioe.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: "GeoPictureUploader.uploadPicture: IOE: " expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: ioe.getMessage() expected fqn: java.lang.String with type: Type114 got: java.lang.String
-Did not find solution for node: ioe with type Type113
+For node: ioe expected fqn: java.io.IOException with type: Type113 got: java.io.IOException
 Cannot find matching typeVariable for: getMessage
 For node: getMessage expected fqn: java.lang.String with type: Type114 got: java.lang.String
 Cannot find matching typeVariable for: ReturnCode.http500
@@ -7256,21 +7256,21 @@ catch (    Exception e) {
 Did not find solution for node: ReturnCode with type Type5
 Did not find solution for node: http500 with type Type121
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: System.out.println("GeoPictureUploader.uploadPicture: unknown: " + e.getMessage()) expected fqn: void with type: Type127 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type127 got: void
-Did not find solution for node: System with type Type125
-For node: out expected fqn: java.io.PrintStream with type: Type126 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type125 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type126 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type127 got: void
 For node: "GeoPictureUploader.uploadPicture: unknown: " + e.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: "GeoPictureUploader.uploadPicture: unknown: " expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: e.getMessage() expected fqn: java.lang.String with type: Type123 got: java.lang.String
-Did not find solution for node: e with type Type122
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 Cannot find matching typeVariable for: getMessage
 For node: getMessage expected fqn: java.lang.String with type: Type123 got: java.lang.String
 Cannot find matching typeVariable for: ReturnCode.unknown
@@ -8723,15 +8723,15 @@ Did not find solution for node: 0 with type Type137
 For node: len expected fqn: int with type: Type140 got: int
 For node: "" expected fqn: java.lang.String with type: Type46 got: java.lang.String
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: System.out.println("GeoPictureUploader: biffed it getting HTTPResponse") expected fqn: void with type: Type154 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type154 got: void
-Did not find solution for node: System with type Type152
-For node: out expected fqn: java.io.PrintStream with type: Type153 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type152 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type153 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type154 got: void
 For node: "GeoPictureUploader: biffed it getting HTTPResponse" expected fqn: java.lang.String with type: Type46 got: java.lang.String
@@ -9566,14 +9566,14 @@ catch (    Exception e) {
   }
 }
 
-Did not find solution for node: StringBuffer with type Type159
-Did not find solution for node: StringBuffer with type Type159
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
 Cannot find matching typeVariable for: sb=new StringBuffer()
-Did not find solution for node: sb=new StringBuffer() with type Type159
-Did not find solution for node: sb with type Type159
-Did not find solution for node: new StringBuffer() with type Type159
-Did not find solution for node: StringBuffer with type Type159
-Did not find solution for node: StringBuffer with type Type159
+For node: sb=new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
+For node: sb expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
+For node: new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
 For node: (ch=is.read()) != -1 expected fqn: boolean with type: Type64 got: boolean
 For node: (ch=is.read()) expected fqn: int with type: Type140 got: int
 For node: ch=is.read() expected fqn: int with type: Type140 got: int
@@ -9584,27 +9584,27 @@ Cannot find matching typeVariable for: read
 For node: read expected fqn: int with type: Type161 got: int
 Did not find solution for node: -1 with type Type137
 Did not find solution for node: 1 with type Type137
-Did not find solution for node: sb.append((char)ch) with type Type165
-Did not find solution for node: sb with type Type159
+For node: sb.append((char)ch) expected fqn: java.lang.StringBuffer with type: Type165 got: java.lang.StringBuffer
+For node: sb expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type165
+For node: append expected fqn: java.lang.StringBuffer with type: Type165 got: java.lang.StringBuffer
 For node: (char)ch expected fqn: char with type: Type164 got: char
 For node: char expected fqn: char with type: Type164 got: char
 For node: ch expected fqn: int with type: Type140 got: int
 For node: sb.toString() expected fqn: java.lang.String with type: Type168 got: java.lang.String
-Did not find solution for node: sb with type Type159
+For node: sb expected fqn: java.lang.StringBuffer with type: Type159 got: java.lang.StringBuffer
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type168 got: java.lang.String
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: System.out.println("GeoPictureUploader: biffed it getting HTTPResponse") expected fqn: void with type: Type171 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type171 got: void
-Did not find solution for node: System with type Type169
-For node: out expected fqn: java.io.PrintStream with type: Type170 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type169 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type170 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type171 got: void
 For node: "GeoPictureUploader: biffed it getting HTTPResponse" expected fqn: java.lang.String with type: Type46 got: java.lang.String
@@ -9616,10 +9616,10 @@ For node: is expected fqn: java.io.InputStream with type: Type157 got: java.io.I
 Cannot find matching typeVariable for: close
 For node: close expected fqn: void with type: Type175 got: void
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: "" expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: writeFormField
@@ -10034,23 +10034,23 @@ Cannot find matching typeVariable for: writeBytes
 For node: writeBytes expected fqn: void with type: Type89 got: void
 For node: CRLF expected fqn: java.lang.String with type: Type2 got: java.lang.String
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: System.out.println("GeoPictureUploader.writeFormField: got: " + e.getMessage()) expected fqn: void with type: Type182 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type182 got: void
-Did not find solution for node: System with type Type180
-For node: out expected fqn: java.io.PrintStream with type: Type181 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type180 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type181 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type182 got: void
 For node: "GeoPictureUploader.writeFormField: got: " + e.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: "GeoPictureUploader.writeFormField: got: " expected fqn: java.lang.String with type: Type46 got: java.lang.String
-Did not find solution for node: e.getMessage() with type Type124
-Did not find solution for node: e with type Type122
+For node: e.getMessage() expected fqn: java.lang.String with type: Type124 got: java.lang.String
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 Cannot find matching typeVariable for: getMessage
-Did not find solution for node: getMessage with type Type124
+For node: getMessage expected fqn: java.lang.String with type: Type124 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: writeFileField
 Cannot find matching typeVariable for: /** 
@@ -10506,7 +10506,7 @@ Cannot find matching typeVariable for: bufferSize=Math.min(bytesAvailable,maxBuf
 For node: bufferSize=Math.min(bytesAvailable,maxBufferSize) expected fqn: int with type: Type140 got: int
 For node: bufferSize expected fqn: int with type: Type140 got: int
 For node: Math.min(bytesAvailable,maxBufferSize) expected fqn: int with type: Type188 got: int
-Did not find solution for node: Math with type Type187
+For node: Math expected fqn: java.lang.Math with type: Type187 got: java.lang.Math
 Cannot find matching typeVariable for: min
 For node: min expected fqn: int with type: Type188 got: int
 For node: bytesAvailable expected fqn: int with type: Type140 got: int
@@ -10549,10 +10549,10 @@ Cannot find matching typeVariable for: available
 For node: available expected fqn: int with type: Type186 got: int
 For node: bufferSize=Math.min(bytesAvailable,maxBufferSize) expected fqn: int with type: Type140 got: int
 For node: bufferSize expected fqn: int with type: Type140 got: int
-Did not find solution for node: Math.min(bytesAvailable,maxBufferSize) with type Type191
-Did not find solution for node: Math with type Type187
+For node: Math.min(bytesAvailable,maxBufferSize) expected fqn: int with type: Type191 got: int
+For node: Math expected fqn: java.lang.Math with type: Type187 got: java.lang.Math
 Cannot find matching typeVariable for: min
-Did not find solution for node: min with type Type191
+For node: min expected fqn: int with type: Type191 got: int
 For node: bytesAvailable expected fqn: int with type: Type140 got: int
 For node: maxBufferSize expected fqn: int with type: Type140 got: int
 For node: bytesRead=fis.read(buffer,0,bufferSize) expected fqn: int with type: Type140 got: int
@@ -10570,23 +10570,23 @@ Cannot find matching typeVariable for: writeBytes
 For node: writeBytes expected fqn: void with type: Type89 got: void
 For node: CRLF expected fqn: java.lang.String with type: Type2 got: java.lang.String
 Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: Exception with type Type122
-Did not find solution for node: e with type Type122
+For node: Exception e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 For node: System.out.println("GeoPictureUploader.writeFormField: got: " + e.getMessage()) expected fqn: void with type: Type204 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type204 got: void
-Did not find solution for node: System with type Type202
-For node: out expected fqn: java.io.PrintStream with type: Type203 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type202 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type203 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type204 got: void
 For node: "GeoPictureUploader.writeFormField: got: " + e.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: "GeoPictureUploader.writeFormField: got: " expected fqn: java.lang.String with type: Type46 got: java.lang.String
-Did not find solution for node: e.getMessage() with type Type124
-Did not find solution for node: e with type Type122
+For node: e.getMessage() expected fqn: java.lang.String with type: Type124 got: java.lang.String
+For node: e expected fqn: java.lang.Exception with type: Type122 got: java.lang.Exception
 Cannot find matching typeVariable for: getMessage
-Did not find solution for node: getMessage with type Type124
+For node: getMessage expected fqn: java.lang.String with type: Type124 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: /** 
@@ -10950,15 +10950,15 @@ catch (    Exception e) {
 }
 
 Cannot find matching typeVariable for: String[] args
-Did not find solution for node: String[] args with type Type207
-Did not find solution for node: String[] with type Type207
+For node: String[] args expected fqn: java.lang.String[] with type: Type207 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type207 got: java.lang.String[]
 For node: String expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type46 got: java.lang.String
-Did not find solution for node: args with type Type207
+For node: args expected fqn: java.lang.String[] with type: Type207 got: java.lang.String[]
 For node: args.length >= 0 expected fqn: boolean with type: Type64 got: boolean
 Cannot find matching typeVariable for: args.length
 For node: args.length expected fqn: int with type: Type64 got: boolean
-Did not find solution for node: args with type Type207
+For node: args expected fqn: java.lang.String[] with type: Type207 got: java.lang.String[]
 Did not find solution for node: length with type Type208
 Did not find solution for node: 0 with type Type137
 Did not find solution for node: Android38 with type Type1
@@ -10977,22 +10977,22 @@ Cannot find matching typeVariable for: picName=args[0]
 For node: picName=args[0] expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: picName expected fqn: java.lang.String with type: Type46 got: java.lang.String
 For node: args[0] expected fqn: java.lang.String with type: Type46 got: java.lang.String
-Did not find solution for node: args with type Type207
+For node: args expected fqn: java.lang.String[] with type: Type207 got: java.lang.String[]
 Did not find solution for node: 0 with type Type137
 Did not find solution for node: gpu.uploadPicture(picName) with type Type212
 Did not find solution for node: gpu with type Type1
 Cannot find matching typeVariable for: uploadPicture
 Did not find solution for node: uploadPicture with type Type212
 For node: picName expected fqn: java.lang.String with type: Type46 got: java.lang.String
-For node: System.out.printf("done") expected fqn: java.io.PrintStream with type: Type217 got: java.io.Console
+For node: System.out.printf("done") expected fqn: java.io.PrintStream with type: Type217 got: java.io.PrintStream
 Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type217 got: java.io.Console
-Did not find solution for node: System with type Type215
-For node: out expected fqn: java.io.PrintStream with type: Type216 got: java.io.Console
+For node: System.out expected fqn: java.io.PrintStream with type: Type217 got: java.io.PrintStream
+For node: System expected fqn: java.lang.System with type: Type215 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type216 got: java.io.PrintStream
 Cannot find matching typeVariable for: printf
-For node: printf expected fqn: java.io.PrintStream with type: Type217 got: java.io.Console
+For node: printf expected fqn: java.io.PrintStream with type: Type217 got: java.io.PrintStream
 For node: "done" expected fqn: java.lang.String with type: Type46 got: java.lang.String
-{Checked=599, Analyzed=467, Unsolved=132, Incorrect=32, Correct=435}
+{Checked=599, Analyzed=538, Unsolved=61, Incorrect=21, Correct=517}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
@@ -11001,8 +11001,8 @@ For node: "done" expected fqn: java.lang.String with type: Type46 got: java.lang
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 boolean=InfixExpression: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 byte=ArrayCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 byte=ArrayType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 byte=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -11011,34 +11011,34 @@ byte=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=
 char=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 char=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 int=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-int=MethodInvocation: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+int=MethodInvocation: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 int=NumberLiteral: {Checked=13, Analyzed=3, Unsolved=10, Incorrect=3, Correct=0}
 int=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=32, Analyzed=30, Unsolved=2, Incorrect=0, Correct=30}
+int=SimpleName: {Checked=32, Analyzed=31, Unsolved=1, Incorrect=0, Correct=31}
 int=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=ArrayAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 java=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
-java=MethodInvocation: {Checked=13, Analyzed=9, Unsolved=4, Incorrect=1, Correct=8}
-java=QualifiedName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
-java=SimpleName: {Checked=210, Analyzed=167, Unsolved=43, Incorrect=14, Correct=153}
-java=SimpleType: {Checked=49, Analyzed=39, Unsolved=10, Incorrect=0, Correct=39}
-java=SingleVariableDeclaration: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=0, Correct=12}
+java=MethodInvocation: {Checked=13, Analyzed=12, Unsolved=1, Incorrect=0, Correct=12}
+java=QualifiedName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=7, Correct=1}
+java=SimpleName: {Checked=210, Analyzed=209, Unsolved=1, Incorrect=5, Correct=204}
+java=SimpleType: {Checked=49, Analyzed=49, Unsolved=0, Incorrect=0, Correct=49}
+java=SingleVariableDeclaration: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
 java=StringLiteral: {Checked=36, Analyzed=36, Unsolved=0, Incorrect=0, Correct=36}
-java=VariableDeclarationFragment: {Checked=17, Analyzed=16, Unsolved=1, Incorrect=0, Correct=16}
+java=VariableDeclarationFragment: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
 null=NullLiteral: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=5, Correct=0}
 void=MethodInvocation: {Checked=35, Analyzed=35, Unsolved=0, Incorrect=0, Correct=35}
 void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 void=SimpleName: {Checked=35, Analyzed=35, Unsolved=0, Incorrect=0, Correct=35}
 Total stats
-{Checked=599, Analyzed=467, Unsolved=132, Incorrect=32, Correct=435}
+{Checked=599, Analyzed=538, Unsolved=61, Incorrect=21, Correct=517}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=19, Analyzed=0, Unsolved=19, Incorrect=0, Correct=0}
@@ -11047,8 +11047,8 @@ Total stats
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 boolean=InfixExpression: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 byte=ArrayCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 byte=ArrayType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 byte=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -11057,28 +11057,28 @@ byte=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=
 char=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 char=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 int=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-int=MethodInvocation: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+int=MethodInvocation: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 int=NumberLiteral: {Checked=13, Analyzed=3, Unsolved=10, Incorrect=3, Correct=0}
 int=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 int=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=32, Analyzed=30, Unsolved=2, Incorrect=0, Correct=30}
+int=SimpleName: {Checked=32, Analyzed=31, Unsolved=1, Incorrect=0, Correct=31}
 int=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=ArrayAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 java=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
-java=MethodInvocation: {Checked=13, Analyzed=9, Unsolved=4, Incorrect=1, Correct=8}
-java=QualifiedName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
-java=SimpleName: {Checked=210, Analyzed=167, Unsolved=43, Incorrect=14, Correct=153}
-java=SimpleType: {Checked=49, Analyzed=39, Unsolved=10, Incorrect=0, Correct=39}
-java=SingleVariableDeclaration: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=0, Correct=12}
+java=MethodInvocation: {Checked=13, Analyzed=12, Unsolved=1, Incorrect=0, Correct=12}
+java=QualifiedName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=7, Correct=1}
+java=SimpleName: {Checked=210, Analyzed=209, Unsolved=1, Incorrect=5, Correct=204}
+java=SimpleType: {Checked=49, Analyzed=49, Unsolved=0, Incorrect=0, Correct=49}
+java=SingleVariableDeclaration: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
 java=StringLiteral: {Checked=36, Analyzed=36, Unsolved=0, Incorrect=0, Correct=36}
-java=VariableDeclarationFragment: {Checked=17, Analyzed=16, Unsolved=1, Incorrect=0, Correct=16}
+java=VariableDeclarationFragment: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
 null=NullLiteral: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=5, Correct=0}
 void=MethodInvocation: {Checked=35, Analyzed=35, Unsolved=0, Incorrect=0, Correct=35}
 void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
@@ -11091,8 +11091,8 @@ void=SimpleName: {Checked=35, Analyzed=35, Unsolved=0, Incorrect=0, Correct=35}
 ,VariableDeclarationFragment,0,1,0,0,1
 boolean,BooleanLiteral,3,3,3,0,0
 boolean,InfixExpression,5,5,5,0,0
-boolean,MethodInvocation,1,2,1,0,1
-boolean,SimpleName,1,2,1,0,1
+boolean,MethodInvocation,2,2,2,0,0
+boolean,SimpleName,2,2,2,0,0
 byte,ArrayCreation,0,2,0,0,2
 byte,ArrayType,0,4,0,0,4
 byte,PrimitiveType,0,4,0,0,4
@@ -11101,28 +11101,28 @@ byte,VariableDeclarationFragment,0,2,0,0,2
 char,CastExpression,1,1,1,0,0
 char,PrimitiveType,1,1,1,0,0
 int,Assignment,4,4,4,0,0
-int,MethodInvocation,9,10,9,0,1
+int,MethodInvocation,10,10,10,0,0
 int,NumberLiteral,3,13,0,3,10
 int,ParenthesizedExpression,1,1,1,0,0
 int,PrefixExpression,0,1,0,0,1
 int,PrimitiveType,6,6,6,0,0
 int,QualifiedName,1,1,0,1,0
-int,SimpleName,30,32,30,0,2
+int,SimpleName,31,32,31,0,1
 int,VariableDeclarationFragment,6,6,6,0,0
 java,ArrayAccess,1,1,1,0,0
-java,ArrayType,0,1,0,0,1
+java,ArrayType,1,1,1,0,0
 java,Assignment,6,6,6,0,0
 java,CastExpression,1,1,1,0,0
-java,ClassInstanceCreation,6,7,6,0,1
+java,ClassInstanceCreation,7,7,7,0,0
 java,FieldAccess,2,2,2,0,0
 java,InfixExpression,13,13,13,0,0
-java,MethodInvocation,9,13,8,1,4
-java,QualifiedName,8,8,0,8,0
-java,SimpleName,167,210,153,14,43
-java,SimpleType,39,49,39,0,10
-java,SingleVariableDeclaration,12,21,12,0,9
+java,MethodInvocation,12,13,12,0,1
+java,QualifiedName,8,8,1,7,0
+java,SimpleName,209,210,204,5,1
+java,SimpleType,49,49,49,0,0
+java,SingleVariableDeclaration,21,21,21,0,0
 java,StringLiteral,36,36,36,0,0
-java,VariableDeclarationFragment,16,17,16,0,1
+java,VariableDeclarationFragment,17,17,17,0,0
 null,NullLiteral,5,6,0,5,1
 void,MethodInvocation,35,35,35,0,0
 void,PrimitiveType,4,4,4,0,0

@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))
 from Baseline import run_baseline
 
 def get_api_pool(dl_node_pred_dict):
-    api_pool = ['java.lang','java.io']
+    api_pool = ['java.lang']
     for value in dl_node_pred_dict.values():
         api_pool.extend(value)
     api_pool = list(set(api_pool))
@@ -145,7 +145,7 @@ def add_text_to_file(file_path,text):
     except Exception as e:
         print(f"add text to {file_path} error:", str(e))
 
-def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag): #DL -> Rule
+def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_with_extension,log_feed_back_flag): #DL -> Rule
     '''
     returns Rule_ans and Rule_truth
     {'node':['fqn']}
@@ -173,23 +173,35 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_b
 
     # 3.query entries from complete database
     complete_database = DB(isComplete=True)
-    results = complete_database.query_apipool(api_pool)
+    queryapipool_start_time = time.time()
+    if build_kb_with_extension:
+        results = complete_database.query_apipool(api_pool)
+    else:
+        results = complete_database.query_apipool_without_extension(api_pool)
+    queryapipool_time = time.time() - queryapipool_start_time
 
     # 4.insert entries to empty database
     simplified_database = DB(isComplete=False)
+    insert_results_start_time = time.time()
     simplified_database.clear_four_tables()
     simplified_database.copy_results_to_four_tables(results)
+    insert_results_time = time.time()-insert_results_start_time
     
     os.chdir("./SnR")
     match_str = ''
+    # print(f'debug185:log_feed_back_flag = {log_feed_back_flag}')
     # 5.execute make benchmark, get feedback log 
+    all_benchmark_time = 0
     if log_feed_back_flag:
+        benchmark_start_time = time.time()
         benchmark_log_path = execute_make_benchmark(file_name,lib)
+        all_benchmark_time += time.time()-benchmark_start_time
+
         extra_info_folder = os.path.abspath(os.path.join(tmp_dir,'MiddleResults','extra_info',lib))
         if not os.path.exists(extra_info_folder):
             os.makedirs(extra_info_folder)
         # 6.repeat until no more unresolved type
-        for i in range(0,10):
+        for i in range(0,5):
             # 6.1 extract unresolved type info from log
             extra_types = extract_typeinfo_from_log(benchmark_log_path)
             print(f'extra_types={extra_types},len(extra_types)={len(extra_types)}')
@@ -203,15 +215,23 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_b
             api_pool = list(set(api_pool))
 
             # 6.2 rebuild database
-            results = complete_database.query_apipool(api_pool)
+            if build_kb_with_extension:
+                results = complete_database.query_apipool(api_pool)
+            else:
+                results = complete_database.query_apipool_without_extension(api_pool)
             simplified_database.clear_four_tables()
             simplified_database.copy_results_to_four_tables(results)
 
             # 6.3 reexecute make benchmark
+            benchmark_start_time = time.time()
             benchmark_log_path = execute_make_benchmark(file_name,lib)
-            
+            all_benchmark_time += time.time()-benchmark_start_time
+
     # 7.execute make binding 
+    all_binding_time = 0
+    binding_start_time = time.time()
     bind_log_path = execute_make_binding(file_name,lib)
+    all_binding_time += time.time() - binding_start_time
 
     if log_feed_back_flag:
         extra_field,match_str = handle_unsupported_exception(bind_log_path)
@@ -219,18 +239,23 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_b
         if(len(extra_field)):
             # rebuild knowledgebase
             api_pool += extra_field
-            results = complete_database.query_apipool(api_pool)
+            if build_kb_with_extension:
+                results = complete_database.query_apipool(api_pool)
+            else:
+                results = complete_database.query_apipool_without_extension(api_pool)
             simplified_database.clear_four_tables()
             simplified_database.copy_results_to_four_tables(results)
             # rerun
+            binding_start_time = time.time()
             bind_log_path = execute_make_binding(file_name,lib)
+            all_binding_time += time.time() - binding_start_time
 
     node_pred_dict,node_truth_dict = run_baseline.Extract_binding_logs(bind_log_path)
 
     complete_database.close()
     simplified_database.close()
 
-    # 9. TODO save unsupported_exception error info
+    # 9.save unsupported_exception error info
     if log_feed_back_flag:
         os.chdir(tmp_dir)
         exception_info_path = os.path.abspath(os.path.join(extra_info_folder,'UnsupportedOperationException_info.txt'))
@@ -238,4 +263,4 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,log_feed_b
 
     os.chdir(tmp_dir)
 
-    return node_pred_dict,node_truth_dict
+    return node_pred_dict,node_truth_dict,queryapipool_time,insert_results_time,all_benchmark_time,all_binding_time

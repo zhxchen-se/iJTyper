@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_1.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_1.java
 Expect check=95
 Cannot find matching typeVariable for: public class xstream_class_1 implements Converter {
   @Override public Object unmarshal(  HierarchicalStreamReader reader,  UnmarshallingContext context){
@@ -159,27 +159,27 @@ public class xstream_class_1 implements Converter {
 }
 
 Cannot find matching typeVariable for: HierarchicalStreamReader reader
-Did not find solution for node: HierarchicalStreamReader reader with type Type7
-Did not find solution for node: HierarchicalStreamReader with type Type7
-Did not find solution for node: HierarchicalStreamReader with type Type7
-Did not find solution for node: reader with type Type7
+For node: HierarchicalStreamReader reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: HierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: UnmarshallingContext context
 For node: UnmarshallingContext context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
-Did not find solution for node: reader.hasMoreChildren() with type Type9
-Did not find solution for node: reader with type Type7
+For node: reader.hasMoreChildren() expected fqn: boolean with type: Type9 got: boolean
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: hasMoreChildren
-Did not find solution for node: hasMoreChildren with type Type9
-Did not find solution for node: reader.moveDown() with type Type11
-Did not find solution for node: reader with type Type7
+For node: hasMoreChildren expected fqn: boolean with type: Type9 got: boolean
+For node: reader.moveDown() expected fqn: void with type: Type11 got: void
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: moveDown
-Did not find solution for node: moveDown with type Type11
-Did not find solution for node: String with type Type13
-Did not find solution for node: String with type Type13
+For node: moveDown expected fqn: void with type: Type11 got: void
+For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
 Cannot find matching typeVariable for: a
-Did not find solution for node: a with type Type13
+For node: a expected fqn: java.lang.String with type: Type13 got: java.lang.String
 Cannot find matching typeVariable for: a
 Cannot find matching typeVariable for: String a;
 
@@ -298,28 +298,28 @@ public class xstream_class_1 implements Converter {
   }
 }
 
-For node: reader.getNodeName().equals("a") expected fqn: boolean with type: Type17 got: boolean
-Did not find solution for node: reader.getNodeName() with type Type14
-Did not find solution for node: reader with type Type7
+Did not find solution for node: reader.getNodeName().equals("a") with type Type17
+For node: reader.getNodeName() expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getNodeName
-Did not find solution for node: getNodeName with type Type14
+For node: getNodeName expected fqn: java.lang.String with type: Type14 got: java.lang.String
 Cannot find matching typeVariable for: equals
-For node: equals expected fqn: boolean with type: Type17 got: boolean
-Did not find solution for node: "a" with type Type16
-Did not find solution for node: a=reader.getValue() with type Type13
-Did not find solution for node: a with type Type13
-Did not find solution for node: reader.getValue() with type Type20
-Did not find solution for node: reader with type Type7
+Did not find solution for node: equals with type Type17
+For node: "a" expected fqn: java.lang.String with type: Type16 got: java.lang.String
+For node: a=reader.getValue() expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: a expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: reader.getValue() expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
-Did not find solution for node: getValue with type Type20
-Did not find solution for node: reader.getNodeName().equals("b") with type Type22
-Did not find solution for node: reader.getNodeName() with type Type15
-Did not find solution for node: reader with type Type7
+For node: getValue expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: reader.getNodeName().equals("b") expected fqn: boolean with type: Type22 got: boolean
+For node: reader.getNodeName() expected fqn: java.lang.String with type: Type15 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getNodeName
-Did not find solution for node: getNodeName with type Type15
+For node: getNodeName expected fqn: java.lang.String with type: Type15 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type22
-Did not find solution for node: "b" with type Type16
+For node: equals expected fqn: boolean with type: Type22 got: boolean
+For node: "b" expected fqn: java.lang.String with type: Type16 got: java.lang.String
 For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
 For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
 Cannot find matching typeVariable for: b=(Object)context.convertAnother(reader,Object.class)
@@ -332,24 +332,24 @@ For node: context.convertAnother(reader,Object.class) expected fqn: java.lang.Ob
 For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 Cannot find matching typeVariable for: convertAnother
 For node: convertAnother expected fqn: java.lang.Object with type: Type26 got: java.lang.Object
-Did not find solution for node: reader with type Type7
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 For node: Object.class expected fqn: java.lang.Class<java.lang.Object> with type: Type25 got: java.lang.Class
 For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
 For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
-Did not find solution for node: reader.getNodeName().equals("c") with type Type24
-Did not find solution for node: reader.getNodeName() with type Type15
-Did not find solution for node: reader with type Type7
+For node: reader.getNodeName().equals("c") expected fqn: boolean with type: Type24 got: boolean
+For node: reader.getNodeName() expected fqn: java.lang.String with type: Type15 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getNodeName
-Did not find solution for node: getNodeName with type Type15
+For node: getNodeName expected fqn: java.lang.String with type: Type15 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type24
-Did not find solution for node: "c" with type Type16
-Did not find solution for node: a=reader.getValue() with type Type13
-Did not find solution for node: a with type Type13
-Did not find solution for node: reader.getValue() with type Type21
-Did not find solution for node: reader with type Type7
+For node: equals expected fqn: boolean with type: Type24 got: boolean
+For node: "c" expected fqn: java.lang.String with type: Type16 got: java.lang.String
+For node: a=reader.getValue() expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: a expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: reader.getValue() expected fqn: java.lang.String with type: Type21 got: java.lang.String
+For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type7 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
-Did not find solution for node: getValue with type Type21
+For node: getValue expected fqn: java.lang.String with type: Type21 got: java.lang.String
 For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type8 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: @Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
@@ -493,66 +493,66 @@ For node: MarshallingContext arg2 expected fqn: com.thoughtworks.xstream.convert
 For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type31 got: com.thoughtworks.xstream.converters.MarshallingContext
 For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type31 got: com.thoughtworks.xstream.converters.MarshallingContext
 For node: arg2 expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type31 got: com.thoughtworks.xstream.converters.MarshallingContext
-{Checked=89, Analyzed=49, Unsolved=40, Incorrect=1, Correct=48}
+{Checked=89, Analyzed=87, Unsolved=2, Incorrect=1, Correct=86}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
-com.thoughtworks.xstream.=SimpleName: {Checked=19, Analyzed=9, Unsolved=10, Incorrect=0, Correct=9}
-com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
-java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=21, Analyzed=13, Unsolved=8, Incorrect=0, Correct=13}
-java=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 Total stats
-{Checked=89, Analyzed=49, Unsolved=40, Incorrect=1, Correct=48}
+{Checked=89, Analyzed=87, Unsolved=2, Incorrect=1, Correct=86}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
-com.thoughtworks.xstream.=SimpleName: {Checked=19, Analyzed=9, Unsolved=10, Incorrect=0, Correct=9}
-com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
-java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=21, Analyzed=13, Unsolved=8, Incorrect=0, Correct=13}
-java=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=21, Analyzed=21, Unsolved=0, Incorrect=0, Correct=21}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean,BooleanLiteral,1,1,1,0,0
-boolean,MethodInvocation,1,4,1,0,3
+boolean,MethodInvocation,3,4,3,0,1
 boolean,PrimitiveType,1,1,1,0,0
-boolean,SimpleName,1,4,1,0,3
-com.thoughtworks.xstream.,SimpleName,9,19,9,0,10
-com.thoughtworks.xstream.,SimpleType,4,5,4,0,1
-com.thoughtworks.xstream.,SingleVariableDeclaration,3,4,3,0,1
-java,Assignment,0,2,0,0,2
+boolean,SimpleName,3,4,3,0,1
+com.thoughtworks.xstream.,SimpleName,19,19,19,0,0
+com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
+java,Assignment,2,2,2,0,0
 java,CastExpression,1,1,1,0,0
 java,MarkerAnnotation,3,3,3,0,0
-java,MethodInvocation,1,6,1,0,5
-java,SimpleName,13,21,13,0,8
-java,SimpleType,6,7,6,0,1
+java,MethodInvocation,6,6,6,0,0
+java,SimpleName,21,21,21,0,0
+java,SimpleType,7,7,7,0,0
 java,SingleVariableDeclaration,2,2,2,0,0
-java,StringLiteral,0,3,0,0,3
+java,StringLiteral,3,3,3,0,0
 java,TypeLiteral,1,1,0,1,0
-java,VariableDeclarationFragment,1,2,1,0,1
-void,MethodInvocation,0,1,0,0,1
+java,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,1,1,1,0,0
 void,PrimitiveType,1,1,1,0,0
-void,SimpleName,0,1,0,0,1
+void,SimpleName,1,1,1,0,0

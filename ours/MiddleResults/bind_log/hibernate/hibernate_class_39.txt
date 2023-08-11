@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_39.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_39.java
 Expect check=369
 Cannot find matching typeVariable for: public class hibernate_class_39 {
 @Transactional @SuppressWarnings("unchecked") public class GenericDaoImpl<T,ID extends Serializable> implements GenericDao<T,ID> {
@@ -503,7 +503,7 @@ Did not find solution for node: @Transactional with type Type12
 Did not find solution for node: Transactional with type Type12
 For node: @SuppressWarnings("unchecked") expected fqn: java.lang.SuppressWarnings with type: Type14 got: java.lang.SuppressWarnings
 For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type14 got: java.lang.SuppressWarnings
-For node: "unchecked" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: "unchecked" with type Type13
 Did not find solution for node: GenericDaoImpl with type Type1
 Cannot find matching typeVariable for: T
 Cannot find matching typeVariable for: T
@@ -2446,66 +2446,66 @@ Cannot find matching typeVariable for: id=null
 Did not find solution for node: id=null with type Type4
 Did not find solution for node: id with type Type4
 Did not find solution for node: null with type Type16
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: Session with type Type17
+Did not find solution for node: Session with type Type17
 Cannot find matching typeVariable for: session=sessionFactory.openSession()
-For node: session=sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type18 got: org.hibernate.Session
+Did not find solution for node: session=sessionFactory.openSession() with type Type17
+Did not find solution for node: session with type Type17
+Did not find solution for node: sessionFactory.openSession() with type Type18
 For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type11 got: org.hibernate.SessionFactory
 Cannot find matching typeVariable for: openSession
-For node: openSession expected fqn: org.hibernate.Session with type: Type18 got: org.hibernate.Session
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: openSession with type Type18
+Did not find solution for node: Transaction with type Type20
+Did not find solution for node: Transaction with type Type20
 Cannot find matching typeVariable for: tx=session.beginTransaction()
-For node: tx=session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type21 got: org.hibernate.Transaction
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: tx=session.beginTransaction() with type Type20
+Did not find solution for node: tx with type Type20
+Did not find solution for node: session.beginTransaction() with type Type21
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: beginTransaction
-For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type21 got: org.hibernate.Transaction
+Did not find solution for node: beginTransaction with type Type21
 Did not find solution for node: id=(ID)session.save(newInstance) with type Type4
 Did not find solution for node: id with type Type4
 Did not find solution for node: (ID)session.save(newInstance) with type Type4
 Did not find solution for node: ID with type Type4
 Did not find solution for node: ID with type Type4
-For node: session.save(newInstance) expected fqn: java.io.Serializable with type: Type23 got: java.io.Serializable
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.save(newInstance) with type Type23
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: save
-For node: save expected fqn: java.io.Serializable with type: Type23 got: java.io.Serializable
+Did not find solution for node: save with type Type23
 For node: newInstance expected fqn: T with type: Type3 got: java.lang.Object
 For node: tx.commit() expected fqn: void with type: Type26 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: commit
 For node: commit expected fqn: void with type: Type26 got: void
-For node: session.close() expected fqn: void with type: Type28 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.close() with type Type28
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type28 got: java.sql.Connection
+Did not find solution for node: close with type Type28
 Cannot find matching typeVariable for: final Exception e
 For node: final Exception e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: tx != null expected fqn: boolean with type: Type10 got: boolean
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Did not find solution for node: null with type Type31
 For node: tx.rollback() expected fqn: void with type: Type32 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: rollback
 For node: rollback expected fqn: void with type: Type32 got: void
 For node: e.printStackTrace() expected fqn: void with type: Type34 got: void
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 Cannot find matching typeVariable for: printStackTrace
 For node: printStackTrace expected fqn: void with type: Type34 got: void
-For node: session.isOpen() expected fqn: boolean with type: Type36 got: boolean
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.isOpen() with type Type36
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: isOpen
-For node: isOpen expected fqn: boolean with type: Type36 got: boolean
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: isOpen with type Type36
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 Did not find solution for node: id with type Type4
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
@@ -2916,68 +2916,68 @@ For node: T expected fqn: T with type: Type3 got: java.lang.Object
 Cannot find matching typeVariable for: id=null
 For node: id=null expected fqn: T with type: Type3 got: java.lang.Object
 For node: id expected fqn: T with type: Type3 got: java.lang.Object
-Did not find solution for node: null with type Type38
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+For node: null expected fqn: null with type: Type38 got: java.lang.Object
+Did not find solution for node: Session with type Type17
+Did not find solution for node: Session with type Type17
 Cannot find matching typeVariable for: session=sessionFactory.openSession()
-For node: session=sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
+Did not find solution for node: session=sessionFactory.openSession() with type Type17
+Did not find solution for node: session with type Type17
+Did not find solution for node: sessionFactory.openSession() with type Type19
 For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type11 got: org.hibernate.SessionFactory
 Cannot find matching typeVariable for: openSession
-For node: openSession expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: openSession with type Type19
+Did not find solution for node: Transaction with type Type20
+Did not find solution for node: Transaction with type Type20
 Cannot find matching typeVariable for: tx=session.beginTransaction()
-For node: tx=session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: tx=session.beginTransaction() with type Type20
+Did not find solution for node: tx with type Type20
+Did not find solution for node: session.beginTransaction() with type Type22
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: beginTransaction
-For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
+Did not find solution for node: beginTransaction with type Type22
 For node: id=(T)session.get("aaa",primaryKey) expected fqn: T with type: Type3 got: java.lang.Object
 For node: id expected fqn: T with type: Type3 got: java.lang.Object
 For node: (T)session.get("aaa",primaryKey) expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
-For node: session.get("aaa",primaryKey) expected fqn: java.lang.Object with type: Type39 got: java.lang.Object
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.get("aaa",primaryKey) with type Type39
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: get
-For node: get expected fqn: java.lang.Object with type: Type39 got: java.lang.Object
-For node: "aaa" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: get with type Type39
+Did not find solution for node: "aaa" with type Type13
 Did not find solution for node: primaryKey with type Type4
-For node: tx.commit() expected fqn: void with type: Type27 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.commit() with type Type27
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: commit
-For node: commit expected fqn: void with type: Type27 got: void
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: commit with type Type27
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 Cannot find matching typeVariable for: final Exception e
 For node: final Exception e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: tx != null expected fqn: boolean with type: Type10 got: boolean
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Did not find solution for node: null with type Type43
-For node: tx.rollback() expected fqn: void with type: Type33 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.rollback() with type Type33
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: rollback
-For node: rollback expected fqn: void with type: Type33 got: void
+Did not find solution for node: rollback with type Type33
 For node: e.printStackTrace() expected fqn: void with type: Type35 got: void
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 Cannot find matching typeVariable for: printStackTrace
 For node: printStackTrace expected fqn: void with type: Type35 got: void
-For node: session.isOpen() expected fqn: boolean with type: Type37 got: boolean
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.isOpen() with type Type37
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: isOpen
-For node: isOpen expected fqn: boolean with type: Type37 got: boolean
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: isOpen with type Type37
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 For node: id expected fqn: T with type: Type3 got: java.lang.Object
 For node: void expected fqn: void with type: Type9 got: void
 Cannot find matching typeVariable for: update
@@ -3380,61 +3380,61 @@ For node: final T transientObject expected fqn: T with type: Type3 got: java.lan
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: transientObject expected fqn: T with type: Type3 got: java.lang.Object
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: Session with type Type17
+Did not find solution for node: Session with type Type17
 Cannot find matching typeVariable for: session=sessionFactory.openSession()
-For node: session=sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
+Did not find solution for node: session=sessionFactory.openSession() with type Type17
+Did not find solution for node: session with type Type17
+Did not find solution for node: sessionFactory.openSession() with type Type19
 For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type11 got: org.hibernate.SessionFactory
 Cannot find matching typeVariable for: openSession
-For node: openSession expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: openSession with type Type19
+Did not find solution for node: Transaction with type Type20
+Did not find solution for node: Transaction with type Type20
 Cannot find matching typeVariable for: tx=session.beginTransaction()
-For node: tx=session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: tx=session.beginTransaction() with type Type20
+Did not find solution for node: tx with type Type20
+Did not find solution for node: session.beginTransaction() with type Type22
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: beginTransaction
-For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
-For node: session.saveOrUpdate(transientObject) expected fqn: void with type: Type44 got: void
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: beginTransaction with type Type22
+Did not find solution for node: session.saveOrUpdate(transientObject) with type Type44
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: saveOrUpdate
-For node: saveOrUpdate expected fqn: void with type: Type44 got: void
+Did not find solution for node: saveOrUpdate with type Type44
 For node: transientObject expected fqn: T with type: Type3 got: java.lang.Object
-For node: tx.commit() expected fqn: void with type: Type27 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.commit() with type Type27
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: commit
-For node: commit expected fqn: void with type: Type27 got: void
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: commit with type Type27
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 Cannot find matching typeVariable for: final Exception e
 For node: final Exception e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: tx != null expected fqn: boolean with type: Type10 got: boolean
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Did not find solution for node: null with type Type47
-For node: tx.rollback() expected fqn: void with type: Type33 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.rollback() with type Type33
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: rollback
-For node: rollback expected fqn: void with type: Type33 got: void
+Did not find solution for node: rollback with type Type33
 For node: e.printStackTrace() expected fqn: void with type: Type35 got: void
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 Cannot find matching typeVariable for: printStackTrace
 For node: printStackTrace expected fqn: void with type: Type35 got: void
-For node: session.isOpen() expected fqn: boolean with type: Type37 got: boolean
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.isOpen() with type Type37
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: isOpen
-For node: isOpen expected fqn: boolean with type: Type37 got: boolean
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: isOpen with type Type37
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 For node: void expected fqn: void with type: Type9 got: void
 Cannot find matching typeVariable for: delete
 Cannot find matching typeVariable for: public void delete(final T persistentObject){
@@ -3836,61 +3836,61 @@ For node: final T persistentObject expected fqn: T with type: Type3 got: java.la
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: persistentObject expected fqn: T with type: Type3 got: java.lang.Object
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: Session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: Session with type Type17
+Did not find solution for node: Session with type Type17
 Cannot find matching typeVariable for: session=sessionFactory.openSession()
-For node: session=sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
-For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
+Did not find solution for node: session=sessionFactory.openSession() with type Type17
+Did not find solution for node: session with type Type17
+Did not find solution for node: sessionFactory.openSession() with type Type19
 For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type11 got: org.hibernate.SessionFactory
 Cannot find matching typeVariable for: openSession
-For node: openSession expected fqn: org.hibernate.Session with type: Type19 got: org.hibernate.classic.Session
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: Transaction expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: openSession with type Type19
+Did not find solution for node: Transaction with type Type20
+Did not find solution for node: Transaction with type Type20
 Cannot find matching typeVariable for: tx=session.beginTransaction()
-For node: tx=session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
-For node: session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: tx=session.beginTransaction() with type Type20
+Did not find solution for node: tx with type Type20
+Did not find solution for node: session.beginTransaction() with type Type22
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: beginTransaction
-For node: beginTransaction expected fqn: org.hibernate.Transaction with type: Type22 got: org.hibernate.Transaction
-For node: session.delete(persistentObject) expected fqn: void with type: Type48 got: int
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: beginTransaction with type Type22
+Did not find solution for node: session.delete(persistentObject) with type Type48
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: delete
-For node: delete expected fqn: void with type: Type48 got: int
+Did not find solution for node: delete with type Type48
 For node: persistentObject expected fqn: T with type: Type3 got: java.lang.Object
-For node: tx.commit() expected fqn: void with type: Type27 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.commit() with type Type27
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: commit
-For node: commit expected fqn: void with type: Type27 got: void
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: commit with type Type27
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 Cannot find matching typeVariable for: final Exception e
 For node: final Exception e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 For node: tx != null expected fqn: boolean with type: Type10 got: boolean
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx with type Type20
 Did not find solution for node: null with type Type51
-For node: tx.rollback() expected fqn: void with type: Type33 got: void
-For node: tx expected fqn: org.hibernate.Transaction with type: Type20 got: org.hibernate.Transaction
+Did not find solution for node: tx.rollback() with type Type33
+Did not find solution for node: tx with type Type20
 Cannot find matching typeVariable for: rollback
-For node: rollback expected fqn: void with type: Type33 got: void
+Did not find solution for node: rollback with type Type33
 For node: e.printStackTrace() expected fqn: void with type: Type35 got: void
 For node: e expected fqn: java.lang.Exception with type: Type30 got: java.lang.Exception
 Cannot find matching typeVariable for: printStackTrace
 For node: printStackTrace expected fqn: void with type: Type35 got: void
-For node: session.isOpen() expected fqn: boolean with type: Type37 got: boolean
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: session.isOpen() with type Type37
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: isOpen
-For node: isOpen expected fqn: boolean with type: Type37 got: boolean
-For node: session.close() expected fqn: void with type: Type29 got: java.sql.Connection
-For node: session expected fqn: org.hibernate.Session with type: Type17 got: org.hibernate.Session
+Did not find solution for node: isOpen with type Type37
+Did not find solution for node: session.close() with type Type29
+Did not find solution for node: session with type Type17
 Cannot find matching typeVariable for: close
-For node: close expected fqn: void with type: Type29 got: java.sql.Connection
+Did not find solution for node: close with type Type29
 For node: @Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: boolean expected fqn: boolean with type: Type10 got: boolean
@@ -4664,17 +4664,17 @@ public class hibernate_class_39 {
 }
 
 Cannot find matching typeVariable for: String arg0
-For node: String arg0 expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: arg0 expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: String arg0 with type Type13
+Did not find solution for node: String with type Type13
+Did not find solution for node: String with type Type13
+Did not find solution for node: arg0 with type Type13
 Cannot find matching typeVariable for: Map<String,Object> arg1
 Did not find solution for node: Map<String,Object> arg1 with type Type55=Type53<Type13,Type54>
 Did not find solution for node: Map<String,Object> with type Type55=Type53<Type13,Type54>
 For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Object> with type: Type53 got: java.util.Map
 For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.Object> with type: Type53 got: java.util.Map
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: String with type Type13
+Did not find solution for node: String with type Type13
 For node: Object expected fqn: java.lang.Object with type: Type54 got: java.lang.Object
 For node: Object expected fqn: java.lang.Object with type: Type54 got: java.lang.Object
 Did not find solution for node: arg1 with type Type55=Type53<Type13,Type54>
@@ -5066,7 +5066,7 @@ Did not find solution for node: ID arg0 with type Type4
 Did not find solution for node: ID with type Type4
 Did not find solution for node: ID with type Type4
 Did not find solution for node: arg0 with type Type4
-Did not find solution for node: null with type Type57
+For node: null expected fqn: null with type: Type57 got: java.lang.Object
 For node: @Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: List<T> expected fqn: java.util.List<T> with type: Type8=Type7<Type3> got: java.util.List<java.lang.Object>
@@ -7760,7 +7760,7 @@ For node: T arg0 expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: T expected fqn: T with type: Type3 got: java.lang.Object
 For node: arg0 expected fqn: T with type: Type3 got: java.lang.Object
-Did not find solution for node: null with type Type60
+For node: null expected fqn: null with type: Type60 got: java.lang.Object
 For node: @Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type52 got: java.lang.Override
 For node: List<T> expected fqn: java.util.List<T> with type: Type8=Type7<Type3> got: java.util.List<java.lang.Object>
@@ -8147,14 +8147,14 @@ public class hibernate_class_39 {
 }
 
 Cannot find matching typeVariable for: String arg0
-For node: String arg0 expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type13 got: java.lang.String
-For node: arg0 expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: String arg0 with type Type13
+Did not find solution for node: String with type Type13
+Did not find solution for node: String with type Type13
+Did not find solution for node: arg0 with type Type13
 Did not find solution for node: SearchException with type Type61
 Did not find solution for node: SearchException with type Type61
 For node: null expected fqn: null with type: Type62 got: java.util.List
-{Checked=345, Analyzed=294, Unsolved=51, Incorrect=91, Correct=203}
+{Checked=345, Analyzed=161, Unsolved=184, Incorrect=70, Correct=91}
 =Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 =CastExpression: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 =MarkerAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -8166,31 +8166,31 @@ For node: null expected fqn: null with type: Type62 got: java.util.List
 =VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-boolean=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 boolean=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+boolean=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 boolean=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ParameterizedType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=39, Analyzed=38, Unsolved=1, Incorrect=5, Correct=33}
-java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=5, Correct=9}
+java=SimpleName: {Checked=39, Analyzed=31, Unsolved=8, Incorrect=5, Correct=26}
+java=SimpleType: {Checked=14, Analyzed=11, Unsolved=3, Incorrect=5, Correct=6}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-null=NullLiteral: {Checked=12, Analyzed=4, Unsolved=8, Incorrect=4, Correct=0}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=12, Analyzed=7, Unsolved=5, Incorrect=7, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.hibernate.=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=3, Correct=5}
-org.hibernate.=SimpleName: {Checked=65, Analyzed=65, Unsolved=0, Incorrect=3, Correct=62}
-org.hibernate.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.hibernate.=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=65, Analyzed=9, Unsolved=56, Incorrect=0, Correct=9}
+org.hibernate.=SimpleType: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
 org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-void=MethodInvocation: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=9, Correct=13}
+org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=1, Unsolved=8, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=22, Analyzed=6, Unsolved=16, Incorrect=0, Correct=6}
 void=PrimitiveType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-void=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=9, Correct=13}
+void=SimpleName: {Checked=22, Analyzed=6, Unsolved=16, Incorrect=0, Correct=6}
 Total stats
-{Checked=345, Analyzed=294, Unsolved=51, Incorrect=91, Correct=203}
+{Checked=345, Analyzed=161, Unsolved=184, Incorrect=70, Correct=91}
 =Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 =CastExpression: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 =MarkerAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -8202,29 +8202,29 @@ Total stats
 =VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-boolean=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 boolean=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+boolean=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 boolean=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ParameterizedType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=39, Analyzed=38, Unsolved=1, Incorrect=5, Correct=33}
-java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=5, Correct=9}
+java=SimpleName: {Checked=39, Analyzed=31, Unsolved=8, Incorrect=5, Correct=26}
+java=SimpleType: {Checked=14, Analyzed=11, Unsolved=3, Incorrect=5, Correct=6}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-null=NullLiteral: {Checked=12, Analyzed=4, Unsolved=8, Incorrect=4, Correct=0}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=12, Analyzed=7, Unsolved=5, Incorrect=7, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.hibernate.=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=3, Correct=5}
-org.hibernate.=SimpleName: {Checked=65, Analyzed=65, Unsolved=0, Incorrect=3, Correct=62}
-org.hibernate.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.hibernate.=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=65, Analyzed=9, Unsolved=56, Incorrect=0, Correct=9}
+org.hibernate.=SimpleType: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
 org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-void=MethodInvocation: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=9, Correct=13}
+org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=1, Unsolved=8, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=22, Analyzed=6, Unsolved=16, Incorrect=0, Correct=6}
 void=PrimitiveType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-void=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=9, Correct=13}
+void=SimpleName: {Checked=22, Analyzed=6, Unsolved=16, Incorrect=0, Correct=6}
 ,Assignment,1,2,0,1,1
 ,CastExpression,1,2,0,1,1
 ,MarkerAnnotation,0,1,0,0,1
@@ -8236,26 +8236,26 @@ void=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=9, Correct=13}
 ,VariableDeclarationFragment,1,2,0,1,1
 boolean,BooleanLiteral,1,1,1,0,0
 boolean,InfixExpression,4,4,4,0,0
-boolean,MethodInvocation,4,4,4,0,0
+boolean,MethodInvocation,0,4,0,0,4
 boolean,PrimitiveType,2,2,2,0,0
-boolean,SimpleName,5,5,5,0,0
+boolean,SimpleName,1,5,1,0,4
 boolean,SingleVariableDeclaration,1,1,1,0,0
 java,MarkerAnnotation,11,11,11,0,0
-java,MethodInvocation,2,2,2,0,0
+java,MethodInvocation,0,2,0,0,2
 java,ParameterizedType,4,5,0,4,1
-java,SimpleName,38,39,33,5,1
-java,SimpleType,14,14,9,5,0
+java,SimpleName,31,39,26,5,8
+java,SimpleType,11,14,6,5,3
 java,SingleMemberAnnotation,1,1,1,0,0
-java,SingleVariableDeclaration,6,7,6,0,1
-java,StringLiteral,2,2,2,0,0
-null,NullLiteral,4,12,0,4,8
+java,SingleVariableDeclaration,4,7,4,0,3
+java,StringLiteral,0,2,0,0,2
+null,NullLiteral,7,12,0,7,5
 org.hibernate.,Assignment,1,1,1,0,0
 org.hibernate.,FieldAccess,1,1,1,0,0
-org.hibernate.,MethodInvocation,8,8,5,3,0
-org.hibernate.,SimpleName,65,65,62,3,0
-org.hibernate.,SimpleType,10,10,10,0,0
+org.hibernate.,MethodInvocation,0,8,0,0,8
+org.hibernate.,SimpleName,9,65,9,0,56
+org.hibernate.,SimpleType,2,10,2,0,8
 org.hibernate.,SingleVariableDeclaration,1,1,1,0,0
-org.hibernate.,VariableDeclarationFragment,9,9,9,0,0
-void,MethodInvocation,22,22,13,9,0
+org.hibernate.,VariableDeclarationFragment,1,9,1,0,8
+void,MethodInvocation,6,22,6,0,16
 void,PrimitiveType,7,7,7,0,0
-void,SimpleName,22,22,13,9,0
+void,SimpleName,6,22,6,0,16

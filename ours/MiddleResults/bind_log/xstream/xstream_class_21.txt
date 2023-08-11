@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_21.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_21.java
 Expect check=148
 Cannot find matching typeVariable for: public class xstream_class_21 {
 static class MyConverter implements Converter {
@@ -134,15 +134,15 @@ Cannot find matching typeVariable for: static class MyConverter implements Conve
 Did not find solution for node: MyConverter with type Type2
 For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
 For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
-For node: Map<String,String> expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
-For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type19 got: java.util.Map
-For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type19 got: java.util.Map
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: Map<String,String> with type Type21=Type19<Type20,Type20>
+Did not find solution for node: Map with type Type19
+Did not find solution for node: Map with type Type19
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
 Cannot find matching typeVariable for: attributes
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 Cannot find matching typeVariable for: attributes
 Cannot find matching typeVariable for: private final Map<String,String> attributes;
 
@@ -681,15 +681,15 @@ For node: Class expected fqn: java.lang.Class<?> with type: Type22 got: java.lan
 For node: ? expected fqn: ? with type: Type27 got: java.lang.Object
 Did not find solution for node: clazz with type Type28=Type22<Type27>
 Cannot find matching typeVariable for: Map<String,String> attributes
-For node: Map<String,String> attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
-For node: Map<String,String> expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
-For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type19 got: java.util.Map
-For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type19 got: java.util.Map
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: Map<String,String> attributes with type Type21=Type19<Type20,Type20>
+Did not find solution for node: Map<String,String> with type Type21=Type19<Type20,Type20>
+Did not find solution for node: Map with type Type19
+Did not find solution for node: Map with type Type19
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 For node: this.mapper=mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type25 got: com.thoughtworks.xstream.mapper.Mapper
 For node: this.mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type25 got: com.thoughtworks.xstream.mapper.Mapper
 Did not find solution for node: this with type Type2
@@ -704,13 +704,13 @@ Cannot find matching typeVariable for: reflectionProvider
 For node: reflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type26 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
 Cannot find matching typeVariable for: reflectionProvider
 For node: reflectionProvider expected fqn: com.thoughtworks.xstream.converters.reflection.ReflectionProvider with type: Type26 got: com.thoughtworks.xstream.converters.reflection.ReflectionProvider
-For node: this.attributes=attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
-For node: this.attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: this.attributes=attributes with type Type21=Type19<Type20,Type20>
+Did not find solution for node: this.attributes with type Type21=Type19<Type20,Type20>
 Did not find solution for node: this with type Type2
 Cannot find matching typeVariable for: attributes
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 Cannot find matching typeVariable for: attributes
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 Did not find solution for node: this.clazz=clazz with type Type24=Type22<Type23>
 Did not find solution for node: this.clazz with type Type24=Type22<Type23>
 Did not find solution for node: this with type Type2
@@ -957,24 +957,24 @@ For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.M
 For node: MarshallingContext expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type32 got: com.thoughtworks.xstream.converters.MarshallingContext
 For node: context expected fqn: com.thoughtworks.xstream.converters.MarshallingContext with type: Type32 got: com.thoughtworks.xstream.converters.MarshallingContext
 Cannot find matching typeVariable for: String key
-For node: String key expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type20 got: java.lang.String
-For node: key expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: String key with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: String with type Type20
+Did not find solution for node: key with type Type20
 Did not find solution for node: attributes.keySet() with type Type33
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 Cannot find matching typeVariable for: keySet
 Did not find solution for node: keySet with type Type33
 For node: writer.addAttribute(key,attributes.get(key)) expected fqn: void with type: Type43 got: void
 For node: writer expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamWriter with type: Type31 got: com.thoughtworks.xstream.io.HierarchicalStreamWriter
 Cannot find matching typeVariable for: addAttribute
 For node: addAttribute expected fqn: void with type: Type43 got: void
-For node: key expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: key with type Type20
 For node: attributes.get(key) expected fqn: java.lang.String with type: Type37 got: java.lang.String
-For node: attributes expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type21=Type19<Type20,Type20> got: java.util.Map<java.lang.String,java.lang.String>
+Did not find solution for node: attributes with type Type21=Type19<Type20,Type20>
 Cannot find matching typeVariable for: get
 For node: get expected fqn: java.lang.String with type: Type37 got: java.lang.String
-For node: key expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: key with type Type20
 For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
 For node: Converter expected fqn: com.thoughtworks.xstream.converters.Converter with type: Type3 got: com.thoughtworks.xstream.converters.Converter
 Cannot find matching typeVariable for: converter=new ReflectionConverter(mapper,reflectionProvider)
@@ -1114,7 +1114,7 @@ For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters
 For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type57 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: arg1 expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type57 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: null expected fqn: null with type: Type58 got: java.lang.Object
-{Checked=137, Analyzed=120, Unsolved=17, Incorrect=12, Correct=108}
+{Checked=137, Analyzed=91, Unsolved=46, Incorrect=8, Correct=83}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 =WildcardType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
@@ -1127,21 +1127,21 @@ com.thoughtworks.xstream.=SimpleName: {Checked=27, Analyzed=27, Unsolved=0, Inco
 com.thoughtworks.xstream.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-java=ParameterizedType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=35, Analyzed=30, Unsolved=5, Incorrect=4, Correct=26}
-java=SimpleType: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=4, Correct=9}
-java=SingleVariableDeclaration: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=35, Analyzed=15, Unsolved=20, Incorrect=2, Correct=13}
+java=SimpleType: {Checked=13, Analyzed=6, Unsolved=7, Incorrect=2, Correct=4}
+java=SingleVariableDeclaration: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 Total stats
-{Checked=137, Analyzed=120, Unsolved=17, Incorrect=12, Correct=108}
+{Checked=137, Analyzed=91, Unsolved=46, Incorrect=8, Correct=83}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 =WildcardType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
@@ -1154,15 +1154,15 @@ com.thoughtworks.xstream.=SimpleName: {Checked=27, Analyzed=27, Unsolved=0, Inco
 com.thoughtworks.xstream.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-java=ParameterizedType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=35, Analyzed=30, Unsolved=5, Incorrect=4, Correct=26}
-java=SimpleType: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=4, Correct=9}
-java=SingleVariableDeclaration: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=35, Analyzed=15, Unsolved=20, Incorrect=2, Correct=13}
+java=SimpleType: {Checked=13, Analyzed=6, Unsolved=7, Incorrect=2, Correct=4}
+java=SingleVariableDeclaration: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -1179,15 +1179,15 @@ com.thoughtworks.xstream.,SimpleName,27,27,27,0,0
 com.thoughtworks.xstream.,SimpleType,11,11,11,0,0
 com.thoughtworks.xstream.,SingleVariableDeclaration,6,6,6,0,0
 com.thoughtworks.xstream.,VariableDeclarationFragment,3,3,3,0,0
-java,Assignment,1,2,1,0,1
-java,FieldAccess,1,2,1,0,1
+java,Assignment,0,2,0,0,2
+java,FieldAccess,0,2,0,0,2
 java,MarkerAnnotation,3,3,3,0,0
 java,MethodInvocation,1,2,1,0,1
-java,ParameterizedType,2,4,2,0,2
-java,SimpleName,30,35,26,4,5
-java,SimpleType,13,13,9,4,0
-java,SingleVariableDeclaration,4,5,4,0,1
-java,VariableDeclarationFragment,2,3,2,0,1
+java,ParameterizedType,0,4,0,0,4
+java,SimpleName,15,35,13,2,20
+java,SimpleType,6,13,4,2,7
+java,SingleVariableDeclaration,2,5,2,0,3
+java,VariableDeclarationFragment,1,3,1,0,2
 null,NullLiteral,2,2,0,2,0
 void,MethodInvocation,2,2,2,0,0
 void,PrimitiveType,1,1,1,0,0

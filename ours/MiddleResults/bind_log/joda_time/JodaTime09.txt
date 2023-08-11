@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime09.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime09.java
 Expect check=32
 Cannot find matching typeVariable for: public class JodaTime09 {
   public static void main(  String[] args){
@@ -73,19 +73,19 @@ For node: "GMT+08:00" expected fqn: java.lang.String with type: Type5 got: java.
 For node: System.out.println(TimeZone.getTimeZone(string_from_3rd_party)) expected fqn: void with type: Type12 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type12 got: void
-Did not find solution for node: System with type Type10
+For node: System expected fqn: java.lang.System with type: Type10 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type11 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type12 got: void
-For node: TimeZone.getTimeZone(string_from_3rd_party) expected fqn: java.util.TimeZone with type: Type7 got: java.util.TimeZone
-For node: TimeZone expected fqn: java.util.TimeZone with type: Type6 got: java.util.TimeZone
+Did not find solution for node: TimeZone.getTimeZone(string_from_3rd_party) with type Type7
+Did not find solution for node: TimeZone with type Type6
 Cannot find matching typeVariable for: getTimeZone
-For node: getTimeZone expected fqn: java.util.TimeZone with type: Type7 got: java.util.TimeZone
+Did not find solution for node: getTimeZone with type Type7
 For node: string_from_3rd_party expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: System.out.println(DateTimeZone.forID(string_from_3rd_party)) expected fqn: void with type: Type19 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type19 got: void
-Did not find solution for node: System with type Type10
+For node: System expected fqn: java.lang.System with type: Type10 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type11 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type19 got: void
@@ -94,9 +94,9 @@ Did not find solution for node: DateTimeZone with type Type15
 Cannot find matching typeVariable for: forID
 Did not find solution for node: forID with type Type16
 For node: string_from_3rd_party expected fqn: java.lang.String with type: Type3 got: java.lang.String
-{Checked=29, Analyzed=24, Unsolved=5, Incorrect=2, Correct=22}
+{Checked=29, Analyzed=23, Unsolved=6, Incorrect=2, Correct=21}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=SimpleName: {Checked=12, Analyzed=10, Unsolved=2, Incorrect=0, Correct=10}
 java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
@@ -109,9 +109,9 @@ void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 Total stats
-{Checked=29, Analyzed=24, Unsolved=5, Incorrect=2, Correct=22}
+{Checked=29, Analyzed=23, Unsolved=6, Incorrect=2, Correct=21}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=SimpleName: {Checked=12, Analyzed=10, Unsolved=2, Incorrect=0, Correct=10}
 java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
@@ -124,7 +124,7 @@ void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java,ArrayType,1,1,1,0,0
-java,MethodInvocation,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
 java,QualifiedName,2,2,0,2,0
 java,SimpleName,10,12,10,0,2
 java,SimpleType,2,2,2,0,0

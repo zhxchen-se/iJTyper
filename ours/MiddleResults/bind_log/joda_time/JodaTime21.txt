@@ -1,0 +1,301 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime21.java
+Expect check=91
+Cannot find matching typeVariable for: public class JodaTime21 {
+  public static void main(  String[] args){
+    DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Date dt=null;
+    try {
+      dt=formatter.parse("2011-10-23 12:00:00");
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+    System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+    DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+    System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime21
+Cannot find matching typeVariable for: public class JodaTime21 {
+  public static void main(  String[] args){
+    DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Date dt=null;
+    try {
+      dt=formatter.parse("2011-10-23 12:00:00");
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+    System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+    DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+    System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalDateTime;
+public class JodaTime21 {
+  public static void main(  String[] args){
+    DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Date dt=null;
+    try {
+      dt=formatter.parse("2011-10-23 12:00:00");
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+    System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+    DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+    System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+  Date dt=null;
+  try {
+    dt=formatter.parse("2011-10-23 12:00:00");
+  }
+ catch (  ParseException e) {
+    e.printStackTrace();
+  }
+  LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+  System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+  DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+  System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+}
+
+Cannot find matching typeVariable for: public class JodaTime21 {
+  public static void main(  String[] args){
+    DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Date dt=null;
+    try {
+      dt=formatter.parse("2011-10-23 12:00:00");
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+    System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+    DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+    System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalDateTime;
+public class JodaTime21 {
+  public static void main(  String[] args){
+    DateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    Date dt=null;
+    try {
+      dt=formatter.parse("2011-10-23 12:00:00");
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    LocalDateTime ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime();
+    System.out.println("Original date: " + ldt.toDateTime().toDate().toString());
+    DateTime cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"));
+    System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString());
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: DateFormat expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
+For node: DateFormat expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
+Cannot find matching typeVariable for: formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+For node: formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
+For node: formatter expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
+For node: new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
+For node: "yyyy-MM-dd HH:mm:ss" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
+Cannot find matching typeVariable for: dt=null
+For node: dt=null expected fqn: java.util.Date with type: Type10 got: java.util.Date
+For node: dt expected fqn: java.util.Date with type: Type10 got: java.util.Date
+For node: null expected fqn: null with type: Type11 got: java.util.Date
+For node: dt=formatter.parse("2011-10-23 12:00:00") expected fqn: java.util.Date with type: Type10 got: java.util.Date
+For node: dt expected fqn: java.util.Date with type: Type10 got: java.util.Date
+For node: formatter.parse("2011-10-23 12:00:00") expected fqn: java.util.Date with type: Type12 got: java.util.Date
+For node: formatter expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
+Cannot find matching typeVariable for: parse
+For node: parse expected fqn: java.util.Date with type: Type12 got: java.util.Date
+For node: "2011-10-23 12:00:00" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: ParseException e
+For node: ParseException e expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
+For node: e expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
+For node: e.printStackTrace() expected fqn: void with type: Type16 got: void
+For node: e expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type16 got: void
+For node: LocalDateTime expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+For node: LocalDateTime expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+Cannot find matching typeVariable for: ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime()
+For node: ldt=new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime() expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+For node: ldt expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+For node: new DateTime(dt).withZone(DateTimeZone.UTC).toLocalDateTime() expected fqn: org.joda.time.LocalDateTime with type: Type27 got: org.joda.time.LocalDateTime
+For node: new DateTime(dt).withZone(DateTimeZone.UTC) expected fqn: org.joda.time.DateTime with type: Type24 got: org.joda.time.DateTime
+For node: new DateTime(dt) expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: dt expected fqn: java.util.Date with type: Type10 got: java.util.Date
+Cannot find matching typeVariable for: withZone
+For node: withZone expected fqn: org.joda.time.DateTime with type: Type24 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: DateTimeZone.UTC
+For node: DateTimeZone.UTC expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTime
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type22 got: org.joda.time.DateTimeZone
+For node: UTC expected fqn: org.joda.time.DateTimeZone with type: Type23 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: toLocalDateTime
+For node: toLocalDateTime expected fqn: org.joda.time.LocalDateTime with type: Type27 got: org.joda.time.LocalDateTime
+For node: System.out.println("Original date: " + ldt.toDateTime().toDate().toString()) expected fqn: void with type: Type36 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type36 got: void
+For node: System expected fqn: java.lang.System with type: Type34 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type35 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type36 got: void
+For node: "Original date: " + ldt.toDateTime().toDate().toString() expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "Original date: " expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: ldt.toDateTime().toDate().toString() expected fqn: java.lang.String with type: Type33 got: java.lang.String
+For node: ldt.toDateTime().toDate() expected fqn: java.util.Date with type: Type31 got: java.util.Date
+Did not find solution for node: ldt.toDateTime() with type Type29
+For node: ldt expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+Cannot find matching typeVariable for: toDateTime
+Did not find solution for node: toDateTime with type Type29
+Cannot find matching typeVariable for: toDate
+For node: toDate expected fqn: java.util.Date with type: Type31 got: java.util.Date
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type33 got: java.lang.String
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00"))
+For node: cvtldt=ldt.toDateTime(DateTimeZone.forID("-05:00")) expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: cvtldt expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+For node: ldt.toDateTime(DateTimeZone.forID("-05:00")) expected fqn: org.joda.time.DateTime with type: Type42 got: org.joda.time.DateTime
+For node: ldt expected fqn: org.joda.time.LocalDateTime with type: Type18 got: org.joda.time.LocalDateTime
+Cannot find matching typeVariable for: toDateTime
+For node: toDateTime expected fqn: org.joda.time.DateTime with type: Type42 got: org.joda.time.DateTime
+For node: DateTimeZone.forID("-05:00") expected fqn: org.joda.time.DateTimeZone with type: Type39 got: org.joda.time.DateTimeZone
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type22 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: forID
+For node: forID expected fqn: org.joda.time.DateTimeZone with type: Type39 got: org.joda.time.DateTimeZone
+For node: "-05:00" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: System.out.println("Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString()) expected fqn: void with type: Type38 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type38 got: void
+For node: System expected fqn: java.lang.System with type: Type34 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type35 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type38 got: void
+For node: "Converted date: " + cvtldt.toLocalDateTime().toDateTime().toDate().toString() expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "Converted date: " expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: cvtldt.toLocalDateTime().toDateTime().toDate().toString() expected fqn: java.lang.String with type: Type51 got: java.lang.String
+For node: cvtldt.toLocalDateTime().toDateTime().toDate() expected fqn: java.util.Date with type: Type49 got: java.util.Date
+Did not find solution for node: cvtldt.toLocalDateTime().toDateTime() with type Type47
+Did not find solution for node: cvtldt.toLocalDateTime() with type Type45
+For node: cvtldt expected fqn: org.joda.time.DateTime with type: Type19 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: toLocalDateTime
+Did not find solution for node: toLocalDateTime with type Type45
+Cannot find matching typeVariable for: toDateTime
+Did not find solution for node: toDateTime with type Type47
+Cannot find matching typeVariable for: toDate
+For node: toDate expected fqn: java.util.Date with type: Type49 got: java.util.Date
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type51 got: java.lang.String
+{Checked=88, Analyzed=82, Unsolved=6, Incorrect=4, Correct=78}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+org.joda.time.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=15, Unsolved=3, Incorrect=0, Correct=15}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=88, Analyzed=82, Unsolved=6, Incorrect=4, Correct=78}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+org.joda.time.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=15, Unsolved=3, Incorrect=0, Correct=15}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java,ArrayType,1,1,1,0,0
+java,Assignment,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,InfixExpression,2,2,2,0,0
+java,MethodInvocation,5,5,5,0,0
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,22,22,22,0,0
+java,SimpleType,5,5,5,0,0
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,5,5,5,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+null,NullLiteral,1,1,0,1,0
+org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,MethodInvocation,4,7,4,0,3
+org.joda.time.,QualifiedName,1,1,0,1,0
+org.joda.time.,SimpleName,15,18,15,0,3
+org.joda.time.,SimpleType,3,3,3,0,0
+org.joda.time.,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_13.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_13.java
 Expect check=93
 Cannot find matching typeVariable for: class WhereToPutTheGui {
   public static void initGui(){
@@ -170,30 +170,30 @@ Cannot find matching typeVariable for: ii=1
 Did not find solution for node: ii=1 with type Type3
 Did not find solution for node: ii with type Type3
 For node: 1 expected fqn: int with type: Type4 got: byte
-For node: ii < 4 expected fqn: boolean with type: Type5 got: boolean
+Did not find solution for node: ii < 4 with type Type5
 Did not find solution for node: ii with type Type3
 For node: 4 expected fqn: int with type: Type4 got: byte
 Did not find solution for node: ii++ with type Type3
 Did not find solution for node: ii with type Type3
-For node: JFrame expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: JFrame expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: JFrame with type Type7
+Did not find solution for node: JFrame with type Type7
 Cannot find matching typeVariable for: f=new JFrame("Frame " + ii)
-For node: f=new JFrame("Frame " + ii) expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: new JFrame("Frame " + ii) expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: JFrame expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: JFrame expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: f=new JFrame("Frame " + ii) with type Type7
+Did not find solution for node: f with type Type7
+Did not find solution for node: new JFrame("Frame " + ii) with type Type7
+Did not find solution for node: JFrame with type Type7
+Did not find solution for node: JFrame with type Type7
 Did not find solution for node: "Frame " + ii with type Type8
 Did not find solution for node: "Frame " with type Type8
 Did not find solution for node: ii with type Type3
-For node: f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE) expected fqn: void with type: Type12 got: void
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE) with type Type12
+Did not find solution for node: f with type Type7
 Cannot find matching typeVariable for: setDefaultCloseOperation
-For node: setDefaultCloseOperation expected fqn: void with type: Type12 got: void
+Did not find solution for node: setDefaultCloseOperation with type Type12
 Cannot find matching typeVariable for: JFrame.DISPOSE_ON_CLOSE
-For node: JFrame.DISPOSE_ON_CLOSE expected fqn: int with type: Type12 got: void
-For node: JFrame expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
-For node: DISPOSE_ON_CLOSE expected fqn: int with type: Type11 got: int
+Did not find solution for node: JFrame.DISPOSE_ON_CLOSE with type Type12
+Did not find solution for node: JFrame with type Type7
+Did not find solution for node: DISPOSE_ON_CLOSE with type Type11
 Did not find solution for node: String with type Type8
 Did not find solution for node: String with type Type8
 Cannot find matching typeVariable for: s="os.name: " + System.getProperty("os.name") + "\nos.version: "+ System.getProperty("os.version")
@@ -202,40 +202,40 @@ Did not find solution for node: s with type Type8
 Did not find solution for node: "os.name: " + System.getProperty("os.name") + "\nos.version: "+ System.getProperty("os.version") with type Type8
 Did not find solution for node: "os.name: " with type Type8
 Did not find solution for node: System.getProperty("os.name") with type Type16
-Did not find solution for node: System with type Type15
+For node: System expected fqn: java.lang.System with type: Type15 got: java.lang.System
 Cannot find matching typeVariable for: getProperty
 Did not find solution for node: getProperty with type Type16
 Did not find solution for node: "os.name" with type Type8
 Did not find solution for node: "\nos.version: " with type Type8
 Did not find solution for node: System.getProperty("os.version") with type Type18
-Did not find solution for node: System with type Type15
+For node: System expected fqn: java.lang.System with type: Type15 got: java.lang.System
 Cannot find matching typeVariable for: getProperty
 Did not find solution for node: getProperty with type Type18
 Did not find solution for node: "os.version" with type Type8
-For node: f.add(new JTextArea(s,3,28)) expected fqn: java.awt.Component with type: Type24 got: void
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: f.add(new JTextArea(s,3,28)) with type Type24
+Did not find solution for node: f with type Type7
 Cannot find matching typeVariable for: add
-For node: add expected fqn: java.awt.Component with type: Type24 got: void
-For node: new JTextArea(s,3,28) expected fqn: javax.swing.JTextArea with type: Type19 got: javax.swing.JTextArea
-For node: JTextArea expected fqn: javax.swing.JTextArea with type: Type19 got: javax.swing.JTextArea
-For node: JTextArea expected fqn: javax.swing.JTextArea with type: Type19 got: javax.swing.JTextArea
+Did not find solution for node: add with type Type24
+Did not find solution for node: new JTextArea(s,3,28) with type Type19
+Did not find solution for node: JTextArea with type Type19
+Did not find solution for node: JTextArea with type Type19
 Did not find solution for node: s with type Type8
 For node: 3 expected fqn: int with type: Type4 got: byte
 For node: 28 expected fqn: int with type: Type4 got: byte
-For node: f.pack() expected fqn: void with type: Type27 got: void
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: f.pack() with type Type27
+Did not find solution for node: f with type Type7
 Cannot find matching typeVariable for: pack
-For node: pack expected fqn: void with type: Type27 got: void
-For node: f.setLocationByPlatform(true) expected fqn: void with type: Type29 got: void
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: pack with type Type27
+Did not find solution for node: f.setLocationByPlatform(true) with type Type29
+Did not find solution for node: f with type Type7
 Cannot find matching typeVariable for: setLocationByPlatform
-For node: setLocationByPlatform expected fqn: void with type: Type29 got: void
-For node: true expected fqn: boolean with type: Type5 got: boolean
-For node: f.setVisible(true) expected fqn: void with type: Type32 got: void
-For node: f expected fqn: javax.swing.JFrame with type: Type7 got: javax.swing.JFrame
+Did not find solution for node: setLocationByPlatform with type Type29
+Did not find solution for node: true with type Type5
+Did not find solution for node: f.setVisible(true) with type Type32
+Did not find solution for node: f with type Type7
 Cannot find matching typeVariable for: setVisible
-For node: setVisible expected fqn: void with type: Type32 got: void
-For node: true expected fqn: boolean with type: Type5 got: boolean
+Did not find solution for node: setVisible with type Type32
+Did not find solution for node: true with type Type5
 For node: void expected fqn: void with type: Type2 got: void
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: public static void main(String[] args){
@@ -394,72 +394,72 @@ For node: useDefault expected fqn: java.lang.Exception with type: Type43 got: ja
 For node: initGui() expected fqn: void with type: Type2 got: void
 Cannot find matching typeVariable for: initGui
 For node: initGui expected fqn: void with type: Type2 got: void
-{Checked=88, Analyzed=60, Unsolved=28, Incorrect=9, Correct=51}
+{Checked=88, Analyzed=31, Unsolved=57, Incorrect=6, Correct=25}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
 int=PostfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 int=VariableDeclarationExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
-java=SimpleName: {Checked=27, Analyzed=19, Unsolved=8, Incorrect=1, Correct=18}
-java=SimpleType: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=0, Correct=5}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=27, Analyzed=10, Unsolved=17, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=1, Correct=7}
+void=SimpleName: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=1, Correct=3}
 Total stats
-{Checked=88, Analyzed=60, Unsolved=28, Incorrect=9, Correct=51}
+{Checked=88, Analyzed=31, Unsolved=57, Incorrect=6, Correct=25}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
 int=PostfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 int=VariableDeclarationExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=1, Correct=1}
-java=SimpleName: {Checked=27, Analyzed=19, Unsolved=8, Incorrect=1, Correct=18}
-java=SimpleType: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=0, Correct=5}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=27, Analyzed=10, Unsolved=17, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=1, Correct=7}
+void=SimpleName: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=1, Correct=3}
 ,ClassInstanceCreation,1,1,0,1,0
-boolean,BooleanLiteral,2,2,2,0,0
-boolean,InfixExpression,1,1,1,0,0
+boolean,BooleanLiteral,0,2,0,0,2
+boolean,InfixExpression,0,1,0,0,1
 int,NumberLiteral,4,4,0,4,0
 int,PostfixExpression,0,1,0,0,1
 int,PrimitiveType,0,1,0,0,1
-int,QualifiedName,1,1,0,1,0
-int,SimpleName,1,5,1,0,4
+int,QualifiedName,0,1,0,0,1
+int,SimpleName,0,5,0,0,5
 int,VariableDeclarationExpression,0,1,0,0,1
 int,VariableDeclarationFragment,0,1,0,0,1
 java,ArrayType,1,1,1,0,0
-java,ClassInstanceCreation,2,2,2,0,0
+java,ClassInstanceCreation,0,2,0,0,2
 java,InfixExpression,0,2,0,0,2
-java,MethodInvocation,2,4,1,1,2
-java,SimpleName,19,27,18,1,8
-java,SimpleType,5,7,5,0,2
+java,MethodInvocation,1,4,1,0,3
+java,SimpleName,10,27,10,0,17
+java,SimpleType,2,7,2,0,5
 java,SingleVariableDeclaration,2,2,2,0,0
 java,StringLiteral,0,5,0,0,5
-java,VariableDeclarationFragment,1,2,1,0,1
-void,MethodInvocation,7,7,7,0,0
+java,VariableDeclarationFragment,0,2,0,0,2
+void,MethodInvocation,3,7,3,0,4
 void,PrimitiveType,3,3,3,0,0
-void,SimpleName,8,8,7,1,0
+void,SimpleName,4,8,3,1,4

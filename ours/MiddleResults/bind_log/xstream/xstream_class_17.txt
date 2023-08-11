@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_17.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_17.java
 Expect check=330
 Cannot find matching typeVariable for: public final class xstream_class_17 {
   public static void main(  String[] args){
@@ -495,16 +495,16 @@ Did not find solution for node: position with type Type2
 For node: System.out.println("Generated XML:") expected fqn: void with type: Type35 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type35 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type35 got: void
 For node: "Generated XML:" expected fqn: java.lang.String with type: Type20 got: java.lang.String
 For node: System.out.println(xml) expected fqn: void with type: Type37 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type37 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type37 got: void
 For node: xml expected fqn: java.lang.String with type: Type20 got: java.lang.String
@@ -524,16 +524,16 @@ For node: xml expected fqn: java.lang.String with type: Type20 got: java.lang.St
 For node: System.out.println("Generated Position:") expected fqn: void with type: Type37 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type37 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type37 got: void
 For node: "Generated Position:" expected fqn: java.lang.String with type: Type20 got: java.lang.String
 For node: System.out.println("\tTitle: " + genPosition.getTitle()) expected fqn: void with type: Type37 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type37 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type37 got: void
 For node: "\tTitle: " + genPosition.getTitle() expected fqn: java.lang.String with type: Type20 got: java.lang.String
@@ -545,8 +545,8 @@ For node: getTitle expected fqn: java.lang.String with type: Type41 got: java.la
 For node: System.out.println("\tStart Date: " + genPosition.getStartDate()) expected fqn: void with type: Type37 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type37 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type37 got: void
 For node: "\tStart Date: " + genPosition.getStartDate() expected fqn: java.lang.String with type: Type20 got: java.lang.String
@@ -558,8 +558,8 @@ For node: getStartDate expected fqn: java.lang.String with type: Type43 got: jav
 For node: System.out.println("\tEnd Date: " + genPosition.getEndDate()) expected fqn: void with type: Type37 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type37 got: void
-Did not find solution for node: System with type Type33
-For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type33 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type34 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type37 got: void
 For node: "\tEnd Date: " + genPosition.getEndDate() expected fqn: java.lang.String with type: Type20 got: java.lang.String
@@ -3471,7 +3471,7 @@ For node: reader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamRea
 Cannot find matching typeVariable for: moveUp
 For node: moveUp expected fqn: void with type: Type76 got: void
 Did not find solution for node: position with type Type2
-{Checked=312, Analyzed=235, Unsolved=77, Incorrect=13, Correct=222}
+{Checked=312, Analyzed=241, Unsolved=71, Incorrect=7, Correct=234}
 =CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleName: {Checked=29, Analyzed=0, Unsolved=29, Incorrect=0, Correct=0}
@@ -3493,7 +3493,7 @@ java=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
 java=QualifiedName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
-java=SimpleName: {Checked=66, Analyzed=57, Unsolved=9, Incorrect=6, Correct=51}
+java=SimpleName: {Checked=66, Analyzed=63, Unsolved=3, Incorrect=0, Correct=63}
 java=SimpleType: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
 java=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=StringLiteral: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
@@ -3503,7 +3503,7 @@ void=MethodInvocation: {Checked=32, Analyzed=26, Unsolved=6, Incorrect=0, Correc
 void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 void=SimpleName: {Checked=32, Analyzed=26, Unsolved=6, Incorrect=0, Correct=26}
 Total stats
-{Checked=312, Analyzed=235, Unsolved=77, Incorrect=13, Correct=222}
+{Checked=312, Analyzed=241, Unsolved=71, Incorrect=7, Correct=234}
 =CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleName: {Checked=29, Analyzed=0, Unsolved=29, Incorrect=0, Correct=0}
@@ -3525,7 +3525,7 @@ java=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MethodInvocation: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
 java=QualifiedName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
-java=SimpleName: {Checked=66, Analyzed=57, Unsolved=9, Incorrect=6, Correct=51}
+java=SimpleName: {Checked=66, Analyzed=63, Unsolved=3, Incorrect=0, Correct=63}
 java=SimpleType: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
 java=SingleVariableDeclaration: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=StringLiteral: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
@@ -3555,7 +3555,7 @@ java,FieldAccess,3,3,3,0,0
 java,InfixExpression,3,3,3,0,0
 java,MethodInvocation,8,11,8,0,3
 java,QualifiedName,6,6,0,6,0
-java,SimpleName,57,66,51,6,9
+java,SimpleName,63,66,63,0,3
 java,SimpleType,17,17,17,0,0
 java,SingleVariableDeclaration,6,6,6,0,0
 java,StringLiteral,13,13,13,0,0

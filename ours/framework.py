@@ -27,15 +27,41 @@ def Set_GPU(gpu_index):
         print("CUDA is not available.")
 
 
-def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
+def write_time_info(snippet_file_name,lib,all_queryapipool_time,all_insert_results_time,all_benchmark_time,all_binding_time,rule_time,dl_time,snippet_time):
+    time_folder = os.path.abspath(os.path.join(os.getcwd(),'MiddleResults','time_info',lib))
+    if not os.path.exists(time_folder):
+        os.makedirs(time_folder)
+    csv_time_path = os.path.abspath(os.path.join(time_folder,f"{lib}_time_info.csv"))
+    print(f'debug35:csv_time_path = {csv_time_path}')
+
+    time_info = [snippet_file_name, all_queryapipool_time, all_insert_results_time, all_benchmark_time, all_binding_time,rule_time,dl_time, snippet_time]
+    if not os.path.exists(csv_time_path):
+        with open(csv_time_path, 'w', newline='') as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(['Snippet File', 'Query API Pool Time', 'Insert Results Time', 'Benchmark Time', 'Binding Time', 'Rule_time','DL_time','Snippet Time'])
+
+    with open(csv_time_path, 'a', newline='') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(time_info)
+
+    
+
+
+def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
     '''
     returns a Result object and iter_round
     '''
     tmp_dir = os.getcwd()
     last_result = None
-
     iter_round = 1
 
+    snippet_start_time = time.time()
+    rule_time = 0
+    dl_time = 0
+    all_benchmark_time = 0
+    all_binding_time = 0
+    all_queryapipool_time = 0
+    all_insert_results_time = 0
     if StartFromRule: # Rule -> DL -> Rule -> DL...
         print("Iterative mode:Rule -> DL -> Rule -> DL...")
         while True:     #repeat until total_dict remain unchanged
@@ -45,11 +71,23 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFrom
                 db.kill_binding_query_thread()
                 db.close()
                 reset_database() 
-                rule_node_pred_dict,rule_node_truth_dict = run_baseline.Rule_predict_one_snippet(snippet_file_name,dataset,lib)
+                rule_start_time = time.time()
+                rule_node_pred_dict,rule_node_truth_dict,benchmark_time,binding_time = run_baseline.Rule_predict_one_snippet(snippet_file_name,dataset,lib)
+                rule_time += time.time() - rule_start_time
+                all_benchmark_time += benchmark_time
+                all_binding_time += binding_time
             else:
-                rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag)
+                rule_start_time = time.time()
+                rule_node_pred_dict,rule_node_truth_dict,queryapipool_time,insert_results_time,benchmark_time,binding_time = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,build_kb_with_extension,log_feed_back_flag)
+                rule_time += time.time() - rule_start_time
+                all_queryapipool_time += queryapipool_time
+                all_insert_results_time += insert_results_time
+                all_benchmark_time += benchmark_time
+                all_binding_time += binding_time
 
+            dl_start_time = time.time()
             dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,3,rule_node_pred_dict)
+            dl_time += time.time()-dl_start_time
 
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             if last_result:
@@ -76,12 +114,22 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFrom
         while True:
             print(f"iter_round = {iter_round}")
             if last_result == None:
+                dl_start_time = time.time()
                 dl_node_pred_dict,dl_node_truth_dict = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,3)
+                dl_time += time.time()-dl_start_time
             else:
+                dl_start_time = time.time()
                 dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,3,rule_node_pred_dict)
+                dl_time += time.time()-dl_start_time
 
-            rule_node_pred_dict,rule_node_truth_dict = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,log_feed_back_flag)
-            
+            rule_start_time = time.time()
+            rule_node_pred_dict,rule_node_truth_dict,queryapipool_time,insert_results_time,benchmark_time,binding_time = Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,build_kb_with_extension,log_feed_back_flag)
+            rule_time += time.time()-rule_start_time
+            all_queryapipool_time += queryapipool_time
+            all_insert_results_time += insert_results_time
+            all_benchmark_time += benchmark_time
+            all_binding_time += binding_time
+
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             if last_result:
                 result.combine_ans(last_result)
@@ -100,7 +148,11 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFrom
             last_result = result
             iter_round += 1
 
+    snippet_time = time.time() - snippet_start_time
     os.chdir(tmp_dir)
+
+    write_time_info(snippet_file_name,lib,all_queryapipool_time,all_insert_results_time,all_benchmark_time,all_binding_time,rule_time,dl_time,snippet_time)
+
     print(f"{snippet_file_name} has been successfully processed after {iter_round} rounds.")
     return last_result,iter_round
 
@@ -153,7 +205,10 @@ def clear_lib_folders(lib):
     pure_extra_info_folder = os.path.abspath(os.path.join(os.getcwd(),'MiddleResults','pure_rule_extra_info',lib))
     run_baseline.clear_folder(pure_extra_info_folder)
 
-def run_lib(dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
+    time_info_folder = os.path.abspath(os.path.join(os.getcwd(),'MiddleResults','time_info',lib))
+    run_baseline.clear_folder(time_info_folder)
+
+def run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15):
     '''
     work_dir: ~/ours
     '''
@@ -179,7 +234,7 @@ def run_lib(dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximu
             continue
         try:
             with time_limit(360): # if subprocess timeout, unable to track
-                result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,StartFromRule,Maximum_iter_round)
+                result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,build_kb_with_extension,StartFromRule,log_feed_back_flag,Maximum_iter_round)
                 # result,iter_round = execute_baseline_only_combine_ans(file_name,dataset,lib,topK)
             result.show_csv() # save file_name.csv
             iter_round_dict[file_name] = iter_round # count iter_round
@@ -241,15 +296,15 @@ def run_lib(dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=True,Maximu
 if __name__ == '__main__':
     tmp_dir = os.getcwd()
 
-    Set_GPU(1)
+    Set_GPU(2)
     # snippet_file_name = 'Class_2.java'  
     # lib = 'jdk'    
     dataset = 'StatType-SO'
     # dataset = 'Short-SO'
-    snippet_file_name = 'Class_16.java'
-    lib = 'jdk'
-    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
-    result.show_csv()
+    # snippet_file_name = 'xstream_class_2.java'
+    # lib = 'xstream'
+    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
+    # result.show_csv()
 
 
     # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,3,False)
@@ -259,19 +314,19 @@ if __name__ == '__main__':
 
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
-    # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
-    # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
-    # open(error_log_file, "w").close() # clear log
-    # for lib in libs:
-    #     try:
-    #         reset_database() # run pure baseline combine ans
-    #         run_lib(dataset,lib,topK=1,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
-    #     except Exception as e:
-    #         with open(error_log_file, "a") as error_log:
-    #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
-    #             error_log.write(error_msg+ '\n')
-    #             error_log.write(traceback.format_exc())  # stack info
-    #             error_log.write("\n")
+    libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
+    error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
+    open(error_log_file, "w").close() # clear log
+    for lib in libs:
+        try:
+            reset_database() # run pure baseline combine ans
+            run_lib(dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round=15)
+        except Exception as e:
+            with open(error_log_file, "a") as error_log:
+                error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
+                error_log.write(error_msg+ '\n')
+                error_log.write(traceback.format_exc())  # stack info
+                error_log.write("\n")
 
 
     # start_time = time.time()

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android26.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android26.java
 Expect check=77
 Cannot find matching typeVariable for: public class Android26 extends ScrollView {
   public Android26(  Context context){
@@ -214,8 +214,8 @@ Cannot find matching typeVariable for: class GameView extends View implements On
 Did not find solution for node: GameView with type Type20
 For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
 For node: View expected fqn: android.view.View with type: Type21 got: android.view.View
-For node: OnTouchListener expected fqn: android.view.View.OnTouchListener with type: Type22 got: android.view.View$OnTouchListener
-For node: OnTouchListener expected fqn: android.view.View.OnTouchListener with type: Type22 got: android.view.View$OnTouchListener
+Did not find solution for node: OnTouchListener with type Type22
+Did not find solution for node: OnTouchListener with type Type22
 Cannot find matching typeVariable for: GameView
 Cannot find matching typeVariable for: public GameView(Context context){
   super(context);
@@ -423,10 +423,10 @@ For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 g
 For node: MotionEvent expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
 For node: arg1 expected fqn: android.view.MotionEvent with type: Type17 got: android.view.MotionEvent
 For node: false expected fqn: boolean with type: Type3 got: boolean
-{Checked=69, Analyzed=67, Unsolved=2, Incorrect=3, Correct=64}
+{Checked=69, Analyzed=65, Unsolved=4, Incorrect=1, Correct=64}
 =SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=1, Correct=21}
-android.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+android.=SimpleName: {Checked=22, Analyzed=21, Unsolved=1, Incorrect=0, Correct=21}
+android.=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
 android.=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
 boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -440,10 +440,10 @@ java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 Total stats
-{Checked=69, Analyzed=67, Unsolved=2, Incorrect=3, Correct=64}
+{Checked=69, Analyzed=65, Unsolved=4, Incorrect=1, Correct=64}
 =SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=1, Correct=21}
-android.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+android.=SimpleName: {Checked=22, Analyzed=21, Unsolved=1, Incorrect=0, Correct=21}
+android.=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
 android.=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
 boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -457,8 +457,8 @@ java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 ,SimpleName,0,2,0,0,2
-android.,SimpleName,22,22,21,1,0
-android.,SimpleType,11,11,10,1,0
+android.,SimpleName,21,22,21,0,1
+android.,SimpleType,10,11,10,0,1
 android.,SingleVariableDeclaration,8,8,8,0,0
 boolean,BooleanLiteral,4,4,4,0,0
 boolean,InfixExpression,1,1,1,0,0

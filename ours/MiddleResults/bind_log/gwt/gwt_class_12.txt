@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_12.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_12.java
 Expect check=76
 Cannot find matching typeVariable for: public class gwt_class_12 implements EntryPoint {
   public void onModuleLoad(){
@@ -120,18 +120,18 @@ public class gwt_class_12 implements EntryPoint {
   }
 }
 
-For node: AbsolutePanel expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: AbsolutePanel expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
+Did not find solution for node: AbsolutePanel with type Type4
+Did not find solution for node: AbsolutePanel with type Type4
 Cannot find matching typeVariable for: ap=new AbsolutePanel()
-For node: ap=new AbsolutePanel() expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: ap expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: new AbsolutePanel() expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: AbsolutePanel expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: AbsolutePanel expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
-For node: ap.setSize("600px","600px") expected fqn: void with type: Type7 got: void
-For node: ap expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
+Did not find solution for node: ap=new AbsolutePanel() with type Type4
+Did not find solution for node: ap with type Type4
+Did not find solution for node: new AbsolutePanel() with type Type4
+Did not find solution for node: AbsolutePanel with type Type4
+Did not find solution for node: AbsolutePanel with type Type4
+Did not find solution for node: ap.setSize("600px","600px") with type Type7
+Did not find solution for node: ap with type Type4
 Cannot find matching typeVariable for: setSize
-For node: setSize expected fqn: void with type: Type7 got: void
+Did not find solution for node: setSize with type Type7
 For node: "600px" expected fqn: java.lang.String with type: Type6 got: java.lang.String
 For node: "600px" expected fqn: java.lang.String with type: Type6 got: java.lang.String
 For node: RootPanel.get().add(ap,10,10) expected fqn: void with type: Type15 got: void
@@ -141,7 +141,7 @@ Cannot find matching typeVariable for: get
 For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type12 got: com.google.gwt.user.client.ui.RootPanel
 Cannot find matching typeVariable for: add
 For node: add expected fqn: void with type: Type15 got: void
-For node: ap expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
+Did not find solution for node: ap with type Type4
 For node: 10 expected fqn: int with type: Type14 got: byte
 For node: 10 expected fqn: int with type: Type14 got: byte
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
@@ -153,10 +153,10 @@ For node: new Label("Example") expected fqn: com.google.gwt.user.client.ui.Label
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: "Example" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: ap.add(l) expected fqn: void with type: Type23 got: void
-For node: ap expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
+Did not find solution for node: ap.add(l) with type Type23
+Did not find solution for node: ap with type Type4
 Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type23 got: void
+Did not find solution for node: add with type Type23
 For node: l expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
@@ -167,72 +167,72 @@ For node: new Label("Label for VP") expected fqn: com.google.gwt.user.client.ui.
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
 For node: "Label for VP" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
-For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
+Did not find solution for node: TextBox with type Type26
+Did not find solution for node: TextBox with type Type26
 Cannot find matching typeVariable for: t1=new TextBox()
-For node: t1=new TextBox() expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
-For node: t1 expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
-For node: new TextBox() expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
-For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
-For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
+Did not find solution for node: t1=new TextBox() with type Type26
+Did not find solution for node: t1 with type Type26
+Did not find solution for node: new TextBox() with type Type26
+Did not find solution for node: TextBox with type Type26
+Did not find solution for node: TextBox with type Type26
 For node: t1.setText("Hello") expected fqn: void with type: Type28 got: void
-For node: t1 expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
+Did not find solution for node: t1 with type Type26
 Cannot find matching typeVariable for: setText
 For node: setText expected fqn: void with type: Type28 got: void
 For node: "Hello" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: VerticalPanel with type Type31
+Did not find solution for node: VerticalPanel with type Type31
 Cannot find matching typeVariable for: vp=new VerticalPanel()
-For node: vp=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vp=new VerticalPanel() with type Type31
+Did not find solution for node: vp with type Type31
+Did not find solution for node: new VerticalPanel() with type Type31
+Did not find solution for node: VerticalPanel with type Type31
+Did not find solution for node: VerticalPanel with type Type31
 For node: vp.add(t1) expected fqn: void with type: Type33 got: void
-For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vp with type Type31
 Cannot find matching typeVariable for: add
 For node: add expected fqn: void with type: Type33 got: void
-For node: t1 expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type26 got: com.google.gwt.user.client.ui.TextBox
+Did not find solution for node: t1 with type Type26
 For node: vp.add(l1) expected fqn: void with type: Type36 got: void
-For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vp with type Type31
 Cannot find matching typeVariable for: add
 For node: add expected fqn: void with type: Type36 got: void
 For node: l1 expected fqn: com.google.gwt.user.client.ui.Label with type: Type20 got: com.google.gwt.user.client.ui.Label
-For node: ap.add(vp) expected fqn: void with type: Type39 got: void
-For node: ap expected fqn: com.google.gwt.user.client.ui.AbsolutePanel with type: Type4 got: com.google.gwt.user.client.ui.AbsolutePanel
+Did not find solution for node: ap.add(vp) with type Type39
+Did not find solution for node: ap with type Type4
 Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type39 got: void
-For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type31 got: com.google.gwt.user.client.ui.VerticalPanel
-{Checked=73, Analyzed=73, Unsolved=0, Incorrect=2, Correct=71}
-gwt.=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+Did not find solution for node: add with type Type39
+Did not find solution for node: vp with type Type31
+{Checked=73, Analyzed=37, Unsolved=36, Incorrect=2, Correct=35}
+gwt.=ClassInstanceCreation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=29, Analyzed=29, Unsolved=0, Incorrect=0, Correct=29}
-gwt.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=SimpleName: {Checked=29, Analyzed=11, Unsolved=18, Incorrect=0, Correct=11}
+gwt.=SimpleType: {Checked=11, Analyzed=5, Unsolved=6, Incorrect=0, Correct=5}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=MethodInvocation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=SimpleName: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
 Total stats
-{Checked=73, Analyzed=73, Unsolved=0, Incorrect=2, Correct=71}
-gwt.=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+{Checked=73, Analyzed=37, Unsolved=36, Incorrect=2, Correct=35}
+gwt.=ClassInstanceCreation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=29, Analyzed=29, Unsolved=0, Incorrect=0, Correct=29}
-gwt.=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=SimpleName: {Checked=29, Analyzed=11, Unsolved=18, Incorrect=0, Correct=11}
+gwt.=SimpleType: {Checked=11, Analyzed=5, Unsolved=6, Incorrect=0, Correct=5}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=MethodInvocation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-gwt.,ClassInstanceCreation,5,5,5,0,0
+void=SimpleName: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+gwt.,ClassInstanceCreation,2,5,2,0,3
 gwt.,MethodInvocation,1,1,1,0,0
-gwt.,SimpleName,29,29,29,0,0
-gwt.,SimpleType,11,11,11,0,0
-gwt.,VariableDeclarationFragment,5,5,5,0,0
+gwt.,SimpleName,11,29,11,0,18
+gwt.,SimpleType,5,11,5,0,6
+gwt.,VariableDeclarationFragment,2,5,2,0,3
 int,NumberLiteral,2,2,0,2,0
 java,StringLiteral,5,5,5,0,0
-void,MethodInvocation,7,7,7,0,0
+void,MethodInvocation,4,7,4,0,3
 void,PrimitiveType,1,1,1,0,0
-void,SimpleName,7,7,7,0,0
+void,SimpleName,4,7,4,0,3

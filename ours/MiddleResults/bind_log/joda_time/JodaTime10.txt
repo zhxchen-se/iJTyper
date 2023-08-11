@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime10.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime10.java
 Expect check=67
 Cannot find matching typeVariable for: public class JodaTime10 {
   private Object writeReplace(){
@@ -396,10 +396,10 @@ private static final class Stub implements Serializable {
   }
 }
 
-For node: ISOChronology.getInstance(iZone) expected fqn: org.joda.time.chrono.ISOChronology with type: Type26 got: java.lang.Object
+Did not find solution for node: ISOChronology.getInstance(iZone) with type Type26
 For node: ISOChronology expected fqn: org.joda.time.chrono.ISOChronology with type: Type25 got: org.joda.time.chrono.ISOChronology
 Cannot find matching typeVariable for: getInstance
-For node: getInstance expected fqn: org.joda.time.chrono.ISOChronology with type: Type26 got: java.lang.Object
+Did not find solution for node: getInstance with type Type26
 For node: iZone expected fqn: org.joda.time.DateTimeZone with type: Type23 got: org.joda.time.DateTimeZone
 For node: void expected fqn: void with type: Type5 got: void
 Cannot find matching typeVariable for: writeObject
@@ -579,7 +579,7 @@ Did not find solution for node: in.readObject() with type Type36
 For node: in expected fqn: java.io.ObjectInputStream with type: Type34 got: java.io.ObjectInputStream
 Cannot find matching typeVariable for: readObject
 Did not find solution for node: readObject with type Type36
-{Checked=58, Analyzed=46, Unsolved=12, Incorrect=2, Correct=44}
+{Checked=58, Analyzed=44, Unsolved=14, Incorrect=0, Correct=44}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -595,8 +595,8 @@ long=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.joda.time.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-org.joda.time.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
 org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 org.joda.time.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -604,7 +604,7 @@ void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 Total stats
-{Checked=58, Analyzed=46, Unsolved=12, Incorrect=2, Correct=44}
+{Checked=58, Analyzed=44, Unsolved=14, Incorrect=0, Correct=44}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -620,8 +620,8 @@ long=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.joda.time.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-org.joda.time.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=1, Correct=10}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
 org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 org.joda.time.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -643,8 +643,8 @@ long,VariableDeclarationFragment,0,1,0,0,1
 null,NullLiteral,0,1,0,0,1
 org.joda.time.,Assignment,2,2,2,0,0
 org.joda.time.,CastExpression,1,1,1,0,0
-org.joda.time.,MethodInvocation,1,1,0,1,0
-org.joda.time.,SimpleName,11,11,10,1,0
+org.joda.time.,MethodInvocation,0,1,0,0,1
+org.joda.time.,SimpleName,10,11,10,0,1
 org.joda.time.,SimpleType,3,3,3,0,0
 org.joda.time.,SingleVariableDeclaration,1,1,1,0,0
 org.joda.time.,VariableDeclarationFragment,1,1,1,0,0

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android48.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android48.java
 Expect check=154
 Cannot find matching typeVariable for: public class Android48 {
   public void captureImage(){
@@ -216,31 +216,31 @@ public class Android48 {
   }
 }
 
-For node: Camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: Camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: Camera with type Type3
+Did not find solution for node: Camera with type Type3
 Cannot find matching typeVariable for: camera=null
-For node: camera=null expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: null expected fqn: null with type: Type4 got: android.hardware.Camera
+Did not find solution for node: camera=null with type Type3
+Did not find solution for node: camera with type Type3
+Did not find solution for node: null with type Type4
 Did not find solution for node: Camera.Parameters with type Type5
 Did not find solution for node: Camera.Parameters with type Type5
-For node: Camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: Camera with type Type3
 Cannot find matching typeVariable for: Parameters
 Did not find solution for node: Parameters with type Type5
 Cannot find matching typeVariable for: params=camera.getParameters()
 Did not find solution for node: params=camera.getParameters() with type Type5
 Did not find solution for node: params with type Type5
 Did not find solution for node: camera.getParameters() with type Type6
-For node: camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: camera with type Type3
 Cannot find matching typeVariable for: getParameters
 Did not find solution for node: getParameters with type Type6
-For node: camera.setParameters(params) expected fqn: void with type: Type8 got: void
-For node: camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: camera.setParameters(params) with type Type8
+Did not find solution for node: camera with type Type3
 Cannot find matching typeVariable for: setParameters
-For node: setParameters expected fqn: void with type: Type8 got: void
+Did not find solution for node: setParameters with type Type8
 Did not find solution for node: params with type Type5
-For node: PictureCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
-For node: PictureCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
+Did not find solution for node: PictureCallback with type Type11
+Did not find solution for node: PictureCallback with type Type11
 Cannot find matching typeVariable for: jpgCallback=new PictureCallback(){
   public void onPictureTaken(  byte[] data,  Camera camera){
     Context c=null;
@@ -264,7 +264,7 @@ Cannot find matching typeVariable for: jpgCallback=new PictureCallback(){
   }
 }
 
-For node: jpgCallback=new PictureCallback(){
+Did not find solution for node: jpgCallback=new PictureCallback(){
   public void onPictureTaken(  byte[] data,  Camera camera){
     Context c=null;
     try {
@@ -286,9 +286,9 @@ For node: jpgCallback=new PictureCallback(){
     }
   }
 }
- expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
-For node: jpgCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
-For node: new PictureCallback(){
+ with type Type11
+Did not find solution for node: jpgCallback with type Type11
+Did not find solution for node: new PictureCallback(){
   public void onPictureTaken(  byte[] data,  Camera camera){
     Context c=null;
     try {
@@ -310,9 +310,9 @@ For node: new PictureCallback(){
     }
   }
 }
- expected fqn:  with type: Type11 got: android.hardware.Camera$PictureCallback
-For node: PictureCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
-For node: PictureCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
+ with type Type11
+Did not find solution for node: PictureCallback with type Type11
+Did not find solution for node: PictureCallback with type Type11
 Cannot find matching typeVariable for: {
   public void onPictureTaken(  byte[] data,  Camera camera){
     Context c=null;
@@ -382,17 +382,17 @@ Cannot find matching typeVariable for: {
   }
 }
 
-For node: onPictureTaken expected fqn: void with type: Type11 got: android.hardware.Camera$PictureCallback
+Did not find solution for node: onPictureTaken with type Type11
 Cannot find matching typeVariable for: byte[] data
 Did not find solution for node: byte[] data with type Type13
 Did not find solution for node: byte[] with type Type13
 Did not find solution for node: byte with type Type12
 Did not find solution for node: data with type Type13
 Cannot find matching typeVariable for: Camera camera
-For node: Camera camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: Camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: Camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
-For node: camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: Camera camera with type Type3
+Did not find solution for node: Camera with type Type3
+Did not find solution for node: Camera with type Type3
+Did not find solution for node: camera with type Type3
 Did not find solution for node: Context with type Type14
 Did not find solution for node: Context with type Type14
 Cannot find matching typeVariable for: c=null
@@ -526,23 +526,23 @@ Did not find solution for node: alert.show() with type Type60
 Did not find solution for node: alert with type Type49
 Cannot find matching typeVariable for: show
 Did not find solution for node: show with type Type60
-For node: camera.takePicture(null,null,jpgCallback) expected fqn: void with type: Type65 got: void
-For node: camera expected fqn: android.hardware.Camera with type: Type3 got: android.hardware.Camera
+Did not find solution for node: camera.takePicture(null,null,jpgCallback) with type Type65
+Did not find solution for node: camera with type Type3
 Cannot find matching typeVariable for: takePicture
-For node: takePicture expected fqn: void with type: Type65 got: void
-For node: null expected fqn: null with type: Type63 got: android.hardware.Camera$ShutterCallback
-For node: null expected fqn: null with type: Type63 got: android.hardware.Camera$ShutterCallback
-For node: jpgCallback expected fqn: android.hardware.Camera.PictureCallback with type: Type11 got: android.hardware.Camera$PictureCallback
-{Checked=150, Analyzed=30, Unsolved=120, Incorrect=12, Correct=18}
-=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+Did not find solution for node: takePicture with type Type65
+Did not find solution for node: null with type Type63
+Did not find solution for node: null with type Type63
+Did not find solution for node: jpgCallback with type Type11
+{Checked=150, Analyzed=2, Unsolved=148, Incorrect=0, Correct=2}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 android.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 android.=MethodInvocation: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 android.=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=59, Analyzed=12, Unsolved=47, Incorrect=4, Correct=8}
-android.=SimpleType: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=2, Correct=2}
-android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=1, Correct=1}
+android.=SimpleName: {Checked=59, Analyzed=0, Unsolved=59, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=17, Analyzed=0, Unsolved=17, Incorrect=0, Correct=0}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
 byte=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -556,21 +556,21 @@ java=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-null=NullLiteral: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=1, Correct=2}
+void=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 Total stats
-{Checked=150, Analyzed=30, Unsolved=120, Incorrect=12, Correct=18}
-=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+{Checked=150, Analyzed=2, Unsolved=148, Incorrect=0, Correct=2}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 android.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 android.=MethodInvocation: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 android.=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=59, Analyzed=12, Unsolved=47, Incorrect=4, Correct=8}
-android.=SimpleType: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=2, Correct=2}
-android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=1, Correct=1}
+android.=SimpleName: {Checked=59, Analyzed=0, Unsolved=59, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=17, Analyzed=0, Unsolved=17, Incorrect=0, Correct=0}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
 byte=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -584,19 +584,19 @@ java=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-null=NullLiteral: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=1, Correct=2}
-,ClassInstanceCreation,1,1,0,1,0
+void=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+,ClassInstanceCreation,0,1,0,0,1
 android.,CastExpression,0,2,0,0,2
 android.,ClassInstanceCreation,0,3,0,0,3
 android.,MethodInvocation,0,7,0,0,7
 android.,QualifiedName,0,5,0,0,5
-android.,SimpleName,12,59,8,4,47
-android.,SimpleType,4,17,2,2,13
-android.,SingleVariableDeclaration,1,1,1,0,0
-android.,VariableDeclarationFragment,2,10,1,1,8
+android.,SimpleName,0,59,0,0,59
+android.,SimpleType,0,17,0,0,17
+android.,SingleVariableDeclaration,0,1,0,0,1
+android.,VariableDeclarationFragment,0,10,0,0,10
 byte,ArrayType,0,1,0,0,1
 byte,PrimitiveType,0,1,0,0,1
 byte,SimpleName,0,4,0,0,4
@@ -610,7 +610,7 @@ java,SimpleName,0,4,0,0,4
 java,SimpleType,0,1,0,0,1
 java,SingleVariableDeclaration,0,1,0,0,1
 java,StringLiteral,0,2,0,0,2
-null,NullLiteral,3,4,0,3,1
-void,MethodInvocation,2,6,2,0,4
+null,NullLiteral,0,4,0,0,4
+void,MethodInvocation,0,6,0,0,6
 void,PrimitiveType,2,2,2,0,0
-void,SimpleName,3,7,2,1,4
+void,SimpleName,0,7,0,0,7

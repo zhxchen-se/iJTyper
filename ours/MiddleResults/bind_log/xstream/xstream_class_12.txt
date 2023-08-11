@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_12.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_12.java
 Expect check=98
 Cannot find matching typeVariable for: public class xstream_class_12 {
 public class ListToStringXStreamConverter implements Converter {
@@ -714,11 +714,11 @@ For node: UnmarshallingContext context expected fqn: com.thoughtworks.xstream.co
 For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: UnmarshallingContext expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
 For node: context expected fqn: com.thoughtworks.xstream.converters.UnmarshallingContext with type: Type38 got: com.thoughtworks.xstream.converters.UnmarshallingContext
-Did not find solution for node: new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation") with type Type39
-Did not find solution for node: UnsupportedOperationException with type Type39
-Did not find solution for node: UnsupportedOperationException with type Type39
+For node: new UnsupportedOperationException("ListToStringXStreamConverter does not offer suport for unmarshal operation") expected fqn: java.lang.UnsupportedOperationException with type: Type39 got: java.lang.UnsupportedOperationException
+For node: UnsupportedOperationException expected fqn: java.lang.UnsupportedOperationException with type: Type39 got: java.lang.UnsupportedOperationException
+For node: UnsupportedOperationException expected fqn: java.lang.UnsupportedOperationException with type: Type39 got: java.lang.UnsupportedOperationException
 For node: "ListToStringXStreamConverter does not offer suport for unmarshal operation" expected fqn: java.lang.String with type: Type21 got: java.lang.String
-{Checked=89, Analyzed=84, Unsolved=5, Incorrect=4, Correct=80}
+{Checked=89, Analyzed=87, Unsolved=2, Incorrect=4, Correct=83}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -728,12 +728,12 @@ com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorr
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=2, Correct=23}
-java=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=2, Correct=8}
+java=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=2, Correct=24}
+java=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=2, Correct=9}
 java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
@@ -742,7 +742,7 @@ void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 Total stats
-{Checked=89, Analyzed=84, Unsolved=5, Incorrect=4, Correct=80}
+{Checked=89, Analyzed=87, Unsolved=2, Incorrect=4, Correct=83}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -752,12 +752,12 @@ com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorr
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=2, Correct=23}
-java=SimpleType: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=2, Correct=8}
+java=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=2, Correct=24}
+java=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=2, Correct=9}
 java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
@@ -774,12 +774,12 @@ com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
 com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
 java,Assignment,1,1,1,0,0
 java,CastExpression,1,1,1,0,0
-java,ClassInstanceCreation,0,1,0,0,1
+java,ClassInstanceCreation,1,1,1,0,0
 java,FieldAccess,1,1,1,0,0
 java,MarkerAnnotation,3,3,3,0,0
 java,ParameterizedType,2,2,2,0,0
-java,SimpleName,25,26,23,2,1
-java,SimpleType,10,11,8,2,1
+java,SimpleName,26,26,24,2,0
+java,SimpleType,11,11,9,2,0
 java,SingleMemberAnnotation,2,2,2,0,0
 java,SingleVariableDeclaration,4,4,4,0,0
 java,StringLiteral,3,3,3,0,0

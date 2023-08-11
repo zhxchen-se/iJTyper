@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_29.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_29.java
 Expect check=61
 Cannot find matching typeVariable for: public class gwt_class_29 {
   private static final String SERVER_URL="http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt=json-in-script&callback=insertAgenda&orderby=starttime&max-results=15&singleevents=true&sortorder=ascending&futureevents=true";
@@ -223,10 +223,10 @@ class Jazz10RequestCallback implements AsyncCallback<Article> {
 }
 
 Cannot find matching typeVariable for: Throwable caught
-Did not find solution for node: Throwable caught with type Type12
-Did not find solution for node: Throwable with type Type12
-Did not find solution for node: Throwable with type Type12
-Did not find solution for node: caught with type Type12
+For node: Throwable caught expected fqn: java.lang.Throwable with type: Type12 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type12 got: java.lang.Throwable
+For node: Throwable expected fqn: java.lang.Throwable with type: Type12 got: java.lang.Throwable
+For node: caught expected fqn: java.lang.Throwable with type: Type12 got: java.lang.Throwable
 For node: Window.alert("Failed to send the message: " + caught.getMessage()) expected fqn: void with type: Type16 got: void
 For node: Window expected fqn: com.google.gwt.user.client.Window with type: Type15 got: com.google.gwt.user.client.Window
 Cannot find matching typeVariable for: alert
@@ -234,7 +234,7 @@ For node: alert expected fqn: void with type: Type16 got: void
 For node: "Failed to send the message: " + caught.getMessage() expected fqn: java.lang.String with type: Type8 got: java.lang.String
 For node: "Failed to send the message: " expected fqn: java.lang.String with type: Type8 got: java.lang.String
 For node: caught.getMessage() expected fqn: java.lang.String with type: Type13 got: java.lang.String
-Did not find solution for node: caught with type Type12
+For node: caught expected fqn: java.lang.Throwable with type: Type12 got: java.lang.Throwable
 Cannot find matching typeVariable for: getMessage
 For node: getMessage expected fqn: java.lang.String with type: Type13 got: java.lang.String
 For node: @Override expected fqn: java.lang.Override with type: Type11 got: java.lang.Override
@@ -309,7 +309,7 @@ For node: result.toString() expected fqn: java.lang.String with type: Type19 got
 Did not find solution for node: result with type Type4
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type19 got: java.lang.String
-{Checked=55, Analyzed=41, Unsolved=14, Incorrect=0, Correct=41}
+{Checked=55, Analyzed=46, Unsolved=9, Incorrect=0, Correct=46}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 gwt.=ParameterizedType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -319,9 +319,9 @@ gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=
 java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
-java=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.apache.=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -331,7 +331,7 @@ void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 Total stats
-{Checked=55, Analyzed=41, Unsolved=14, Incorrect=0, Correct=41}
+{Checked=55, Analyzed=46, Unsolved=9, Incorrect=0, Correct=46}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 gwt.=ParameterizedType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -341,9 +341,9 @@ gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=
 java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
-java=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 org.apache.=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
@@ -361,9 +361,9 @@ gwt.,VariableDeclarationFragment,1,1,1,0,0
 java,InfixExpression,2,2,2,0,0
 java,MarkerAnnotation,2,2,2,0,0
 java,MethodInvocation,2,2,2,0,0
-java,SimpleName,8,11,8,0,3
-java,SimpleType,2,3,2,0,1
-java,SingleVariableDeclaration,0,1,0,0,1
+java,SimpleName,11,11,11,0,0
+java,SimpleType,3,3,3,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
 java,StringLiteral,5,5,5,0,0
 java,VariableDeclarationFragment,2,2,2,0,0
 org.apache.,SimpleName,0,4,0,0,4

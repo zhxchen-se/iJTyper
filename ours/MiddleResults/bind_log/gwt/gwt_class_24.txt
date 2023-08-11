@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_24.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_24.java
 Expect check=88
 Cannot find matching typeVariable for: public class gwt_class_24 {
 public abstract class AbstractNotificationWidget extends Composite implements ClickHandler, HasClickHandlers {
@@ -101,14 +101,14 @@ Cannot find matching typeVariable for: public abstract class AbstractNotificatio
 }
 
 Did not find solution for node: AbstractNotificationWidget with type Type1
-For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
-For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
-For node: ClickHandler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-For node: ClickHandler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
+Did not find solution for node: Composite with type Type2
+Did not find solution for node: Composite with type Type2
+Did not find solution for node: ClickHandler with type Type3
+Did not find solution for node: ClickHandler with type Type3
 For node: HasClickHandlers expected fqn: com.google.gwt.event.dom.client.HasClickHandlers with type: Type4 got: com.google.gwt.event.dom.client.HasClickHandlers
 For node: HasClickHandlers expected fqn: com.google.gwt.event.dom.client.HasClickHandlers with type: Type4 got: com.google.gwt.event.dom.client.HasClickHandlers
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
 Cannot find matching typeVariable for: getUniqueId
 Cannot find matching typeVariable for: protected abstract String getUniqueId();
 
@@ -262,16 +262,16 @@ public class ErrorNotificationWidget extends AbstractNotificationWidget {
 }
 
 Cannot find matching typeVariable for: ClickHandler handler
-For node: ClickHandler handler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-For node: ClickHandler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-For node: ClickHandler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-For node: handler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-No match for actual type MethodInvocation: addDomHandler(handler,ClickEvent.getType()) with type: Type28 got: com.google.gwt.event.shared.HandlerRegistration
-For node: handler expected fqn: com.google.gwt.event.dom.client.ClickHandler with type: Type3 got: com.google.gwt.event.dom.client.ClickHandler
-For node: ClickEvent.getType() expected fqn: com.google.gwt.event.dom.client.DomEvent.Type<com.google.gwt.event.dom.client.ClickHandler> with type: Type26 got: com.google.gwt.event.dom.client.DomEvent$Type
-For node: ClickEvent expected fqn: com.google.gwt.event.dom.client.ClickEvent with type: Type25 got: com.google.gwt.event.dom.client.ClickEvent
+Did not find solution for node: ClickHandler handler with type Type3
+Did not find solution for node: ClickHandler with type Type3
+Did not find solution for node: ClickHandler with type Type3
+Did not find solution for node: handler with type Type3
+No match for actual type MethodInvocation: addDomHandler(handler,ClickEvent.getType()) and also not find solution for: Type28
+Did not find solution for node: handler with type Type3
+Did not find solution for node: ClickEvent.getType() with type Type26
+Did not find solution for node: ClickEvent with type Type25
 Cannot find matching typeVariable for: getType
-For node: getType expected fqn: com.google.gwt.event.dom.client.DomEvent.Type<com.google.gwt.event.dom.client.ClickHandler> with type: Type26 got: com.google.gwt.event.dom.client.DomEvent$Type
+Did not find solution for node: getType with type Type26
 For node: @Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
 For node: void expected fqn: void with type: Type7 got: void
@@ -358,9 +358,9 @@ For node: event expected fqn: com.google.gwt.event.dom.client.ClickEvent with ty
 For node: doClick(getUniqueId()) expected fqn: void with type: Type7 got: void
 Cannot find matching typeVariable for: doClick
 For node: doClick expected fqn: void with type: Type7 got: void
-For node: getUniqueId() expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: getUniqueId() with type Type10
 Cannot find matching typeVariable for: getUniqueId
-For node: getUniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: getUniqueId with type Type10
 For node: void expected fqn: void with type: Type7 got: void
 Cannot find matching typeVariable for: doClick
 Cannot find matching typeVariable for: protected native void doClick(String name);
@@ -436,10 +436,10 @@ public class ErrorNotificationWidget extends AbstractNotificationWidget {
 }
 
 Cannot find matching typeVariable for: String name
-For node: String name expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: name expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: String name with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: name with type Type10
 Cannot find matching typeVariable for: public class ErrorNotificationWidget extends AbstractNotificationWidget {
   private final String uniqueId;
   public ErrorNotificationWidget(  String title,  String message){
@@ -457,10 +457,10 @@ Cannot find matching typeVariable for: public class ErrorNotificationWidget exte
 Did not find solution for node: ErrorNotificationWidget with type Type5
 Did not find solution for node: AbstractNotificationWidget with type Type1
 Did not find solution for node: AbstractNotificationWidget with type Type1
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
 Cannot find matching typeVariable for: uniqueId
-For node: uniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: uniqueId with type Type10
 Cannot find matching typeVariable for: uniqueId
 Cannot find matching typeVariable for: private final String uniqueId;
 
@@ -620,19 +620,19 @@ public class ErrorNotificationWidget extends AbstractNotificationWidget {
 }
 
 Cannot find matching typeVariable for: String title
-For node: String title expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: title expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: String title with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: title with type Type10
 Cannot find matching typeVariable for: String message
-For node: String message expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: message expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: uniqueId=DOM.createUniqueId() expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: uniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
-No match for actual type MethodInvocation: DOM.createUniqueId() with type: Type34 got: java.lang.String
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type33 got: com.google.gwt.user.client.DOM
+Did not find solution for node: String message with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
+Did not find solution for node: message with type Type10
+Did not find solution for node: uniqueId=DOM.createUniqueId() with type Type10
+Did not find solution for node: uniqueId with type Type10
+No match for actual type MethodInvocation: DOM.createUniqueId() and also not find solution for: Type34
+Did not find solution for node: DOM with type Type33
 Did not find solution for node: Widget with type Type36
 Did not find solution for node: Widget with type Type36
 Cannot find matching typeVariable for: w=null
@@ -643,12 +643,12 @@ Did not find solution for node: initWidget(w) with type Type38
 Cannot find matching typeVariable for: initWidget
 Did not find solution for node: initWidget with type Type38
 Did not find solution for node: w with type Type36
-No match for actual type MethodInvocation: this.getElement().setId(uniqueId) with type: Type43 got: void
-For node: this.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type41 got: com.google.gwt.dom.client.Element
+No match for actual type MethodInvocation: this.getElement().setId(uniqueId) and also not find solution for: Type43
+Did not find solution for node: this.getElement() with type Type41
 Did not find solution for node: this with type Type5
 Cannot find matching typeVariable for: getElement
-For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type41 got: com.google.gwt.dom.client.Element
-For node: uniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: getElement with type Type41
+Did not find solution for node: uniqueId with type Type10
 Did not find solution for node: this.addClickHandler(this) with type Type46
 Did not find solution for node: this with type Type5
 Cannot find matching typeVariable for: addClickHandler
@@ -656,8 +656,8 @@ Did not find solution for node: addClickHandler with type Type46
 Did not find solution for node: this with type Type5
 For node: @Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type24 got: java.lang.Override
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: String with type Type10
+Did not find solution for node: String with type Type10
 Cannot find matching typeVariable for: getUniqueId
 Cannot find matching typeVariable for: @Override protected String getUniqueId(){
   return this.uniqueId;
@@ -736,49 +736,49 @@ public class ErrorNotificationWidget extends AbstractNotificationWidget {
   }
 }
 
-For node: this.uniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: this.uniqueId with type Type10
 Did not find solution for node: this with type Type5
 Cannot find matching typeVariable for: uniqueId
-For node: uniqueId expected fqn: java.lang.String with type: Type10 got: java.lang.String
-{Checked=77, Analyzed=59, Unsolved=18, Incorrect=4, Correct=55}
+Did not find solution for node: uniqueId with type Type10
+{Checked=77, Analyzed=18, Unsolved=59, Incorrect=0, Correct=18}
 =SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-gwt.=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
-gwt.=SimpleName: {Checked=17, Analyzed=13, Unsolved=4, Incorrect=2, Correct=11}
-gwt.=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
-gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=0, Correct=4}
+gwt.=SimpleType: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
+gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=16, Analyzed=3, Unsolved=13, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 void=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 Total stats
-{Checked=77, Analyzed=59, Unsolved=18, Incorrect=4, Correct=55}
+{Checked=77, Analyzed=18, Unsolved=59, Incorrect=0, Correct=18}
 =SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-gwt.=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
-gwt.=SimpleName: {Checked=17, Analyzed=13, Unsolved=4, Incorrect=2, Correct=11}
-gwt.=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
-gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=0, Correct=4}
+gwt.=SimpleType: {Checked=7, Analyzed=3, Unsolved=4, Incorrect=0, Correct=3}
+gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=16, Analyzed=3, Unsolved=13, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 void=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
@@ -786,19 +786,19 @@ void=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 ,SimpleName,0,3,0,0,3
 ,SimpleType,0,1,0,0,1
 ,ThisExpression,0,4,0,0,4
-gwt.,MethodInvocation,2,3,0,2,1
-gwt.,SimpleName,13,17,11,2,4
-gwt.,SimpleType,6,7,6,0,1
-gwt.,SingleVariableDeclaration,2,2,2,0,0
+gwt.,MethodInvocation,0,3,0,0,3
+gwt.,SimpleName,4,17,4,0,13
+gwt.,SimpleType,3,7,3,0,4
+gwt.,SingleVariableDeclaration,1,2,1,0,1
 gwt.,VariableDeclarationFragment,0,1,0,0,1
-java,Assignment,1,1,1,0,0
-java,FieldAccess,1,1,1,0,0
+java,Assignment,0,1,0,0,1
+java,FieldAccess,0,1,0,0,1
 java,MarkerAnnotation,3,3,3,0,0
-java,MethodInvocation,1,1,1,0,0
-java,SimpleName,16,16,16,0,0
-java,SimpleType,6,6,6,0,0
-java,SingleVariableDeclaration,3,3,3,0,0
-java,VariableDeclarationFragment,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,3,16,3,0,13
+java,SimpleType,0,6,0,0,6
+java,SingleVariableDeclaration,0,3,0,0,3
+java,VariableDeclarationFragment,0,1,0,0,1
 null,NullLiteral,0,1,0,0,1
 void,MethodInvocation,1,2,1,0,1
 void,PrimitiveType,2,2,2,0,0

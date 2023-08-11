@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_12.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_12.java
 Expect check=318
 Cannot find matching typeVariable for: /** 
  * Helper class for handling a most common subset of ISO 8601 strings (in the following format: "2008-03-01T13:00:00+01:00"). It supports parsing the "Z" timezone, but many other less-used features are missing.
@@ -1168,11 +1168,11 @@ For node: "Z" expected fqn: java.lang.String with type: Type9 got: java.lang.Str
 For node: "+0000" expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: ((iso8601string.indexOf(UTC_PLUS)) > 0) expected fqn: boolean with type: Type60 got: boolean
 For node: (iso8601string.indexOf(UTC_PLUS)) > 0 expected fqn: boolean with type: Type60 got: boolean
-For node: (iso8601string.indexOf(UTC_PLUS)) expected fqn: int with type: Type65 got: byte
-For node: iso8601string.indexOf(UTC_PLUS) expected fqn: int with type: Type65 got: byte
+Did not find solution for node: (iso8601string.indexOf(UTC_PLUS)) with type Type65
+Did not find solution for node: iso8601string.indexOf(UTC_PLUS) with type Type65
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-For node: indexOf expected fqn: int with type: Type65 got: byte
+Did not find solution for node: indexOf with type Type65
 For node: UTC_PLUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: 0 expected fqn: int with type: Type16 got: byte
 For node: iso8601string=replaceColon(iso8601string,iso8601string.indexOf(UTC_PLUS)) expected fqn: java.lang.String with type: Type9 got: java.lang.String
@@ -1182,10 +1182,10 @@ Cannot find matching typeVariable for: replaceColon
 For node: replaceColon expected fqn: java.lang.String with type: Type3 got: java.lang.String
 Cannot find matching typeVariable for: iso8601string
 For node: iso8601string expected fqn: java.lang.String with type: Type3 got: java.lang.String
-Did not find solution for node: iso8601string.indexOf(UTC_PLUS) with type Type67
+For node: iso8601string.indexOf(UTC_PLUS) expected fqn: int with type: Type67 got: int
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-Did not find solution for node: indexOf with type Type67
+For node: indexOf expected fqn: int with type: Type67 got: int
 For node: UTC_PLUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: iso8601string=appendZeros(iso8601string,iso8601string.indexOf(UTC_PLUS),UTC_PLUS) expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
@@ -1194,19 +1194,19 @@ Cannot find matching typeVariable for: appendZeros
 For node: appendZeros expected fqn: java.lang.String with type: Type3 got: java.lang.String
 Cannot find matching typeVariable for: iso8601string
 For node: iso8601string expected fqn: java.lang.String with type: Type3 got: java.lang.String
-Did not find solution for node: iso8601string.indexOf(UTC_PLUS) with type Type67
+For node: iso8601string.indexOf(UTC_PLUS) expected fqn: int with type: Type67 got: int
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-Did not find solution for node: indexOf with type Type67
+For node: indexOf expected fqn: int with type: Type67 got: int
 For node: UTC_PLUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: UTC_PLUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: ((iso8601string.indexOf(UTC_MINUS)) > 0) expected fqn: boolean with type: Type60 got: boolean
 For node: (iso8601string.indexOf(UTC_MINUS)) > 0 expected fqn: boolean with type: Type60 got: boolean
-Did not find solution for node: (iso8601string.indexOf(UTC_MINUS)) with type Type67
-Did not find solution for node: iso8601string.indexOf(UTC_MINUS) with type Type67
+For node: (iso8601string.indexOf(UTC_MINUS)) expected fqn: int with type: Type67 got: int
+For node: iso8601string.indexOf(UTC_MINUS) expected fqn: int with type: Type67 got: int
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-Did not find solution for node: indexOf with type Type67
+For node: indexOf expected fqn: int with type: Type67 got: int
 For node: UTC_MINUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: 0 expected fqn: int with type: Type16 got: byte
 For node: iso8601string=replaceColon(iso8601string,iso8601string.indexOf(UTC_MINUS)) expected fqn: java.lang.String with type: Type9 got: java.lang.String
@@ -1216,10 +1216,10 @@ Cannot find matching typeVariable for: replaceColon
 For node: replaceColon expected fqn: java.lang.String with type: Type3 got: java.lang.String
 Cannot find matching typeVariable for: iso8601string
 For node: iso8601string expected fqn: java.lang.String with type: Type3 got: java.lang.String
-Did not find solution for node: iso8601string.indexOf(UTC_MINUS) with type Type67
+For node: iso8601string.indexOf(UTC_MINUS) expected fqn: int with type: Type67 got: int
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-Did not find solution for node: indexOf with type Type67
+For node: indexOf expected fqn: int with type: Type67 got: int
 For node: UTC_MINUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: iso8601string=appendZeros(iso8601string,iso8601string.indexOf(UTC_MINUS),UTC_MINUS) expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
@@ -1228,10 +1228,10 @@ Cannot find matching typeVariable for: appendZeros
 For node: appendZeros expected fqn: java.lang.String with type: Type3 got: java.lang.String
 Cannot find matching typeVariable for: iso8601string
 For node: iso8601string expected fqn: java.lang.String with type: Type3 got: java.lang.String
-Did not find solution for node: iso8601string.indexOf(UTC_MINUS) with type Type67
+For node: iso8601string.indexOf(UTC_MINUS) expected fqn: int with type: Type67 got: int
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-Did not find solution for node: indexOf with type Type67
+For node: indexOf expected fqn: int with type: Type67 got: int
 For node: UTC_MINUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: UTC_MINUS expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: Date expected fqn: java.util.Date with type: Type5 got: java.util.Date
@@ -1240,10 +1240,10 @@ Cannot find matching typeVariable for: date=null
 For node: date=null expected fqn: java.util.Date with type: Type5 got: java.util.Date
 For node: date expected fqn: java.util.Date with type: Type5 got: java.util.Date
 For node: null expected fqn: null with type: Type68 got: java.util.Date
-Did not find solution for node: iso8601string.contains(":") with type Type69
+For node: iso8601string.contains(":") expected fqn: boolean with type: Type69 got: boolean
 For node: iso8601string expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: contains
-Did not find solution for node: contains with type Type69
+For node: contains expected fqn: boolean with type: Type69 got: boolean
 For node: ":" expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: date=DATE_FORMAT_1.parse(iso8601string) expected fqn: java.util.Date with type: Type5 got: java.util.Date
 For node: date expected fqn: java.util.Date with type: Type5 got: java.util.Date
@@ -1676,14 +1676,14 @@ Cannot find matching typeVariable for: int offsetIndex
 For node: int offsetIndex expected fqn: int with type: Type78 got: int
 For node: int expected fqn: int with type: Type78 got: int
 For node: offsetIndex expected fqn: int with type: Type78 got: int
-For node: sourceStr.substring(offsetIndex).contains(":") expected fqn: boolean with type: Type82 got: boolean
-Did not find solution for node: sourceStr.substring(offsetIndex) with type Type79
+Did not find solution for node: sourceStr.substring(offsetIndex).contains(":") with type Type82
+For node: sourceStr.substring(offsetIndex) expected fqn: java.lang.String with type: Type79 got: java.lang.String
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: substring
-Did not find solution for node: substring with type Type79
+For node: substring expected fqn: java.lang.String with type: Type79 got: java.lang.String
 For node: offsetIndex expected fqn: int with type: Type78 got: int
 Cannot find matching typeVariable for: contains
-For node: contains expected fqn: boolean with type: Type82 got: boolean
+Did not find solution for node: contains with type Type82
 For node: ":" expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: sourceStr.substring(0,offsetIndex) + sourceStr.substring(offsetIndex).replace(":","") expected fqn: java.lang.String with type: Type85 got: java.lang.String
 For node: sourceStr.substring(0,offsetIndex) expected fqn: java.lang.String with type: Type85 got: java.lang.String
@@ -1693,10 +1693,10 @@ For node: substring expected fqn: java.lang.String with type: Type85 got: java.l
 For node: 0 expected fqn: int with type: Type16 got: byte
 For node: offsetIndex expected fqn: int with type: Type78 got: int
 For node: sourceStr.substring(offsetIndex).replace(":","") expected fqn: java.lang.String with type: Type89 got: java.lang.String
-Did not find solution for node: sourceStr.substring(offsetIndex) with type Type81
+For node: sourceStr.substring(offsetIndex) expected fqn: java.lang.String with type: Type81 got: java.lang.String
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: substring
-Did not find solution for node: substring with type Type81
+For node: substring expected fqn: java.lang.String with type: Type81 got: java.lang.String
 For node: offsetIndex expected fqn: int with type: Type78 got: int
 Cannot find matching typeVariable for: replace
 For node: replace expected fqn: java.lang.String with type: Type89 got: java.lang.String
@@ -1917,18 +1917,18 @@ For node: String expected fqn: java.lang.String with type: Type9 got: java.lang.
 For node: String expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: offsetChar expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: (sourceStr.length() - 1) - sourceStr.indexOf(offsetChar,offsetIndex) <= 2 expected fqn: boolean with type: Type60 got: boolean
-For node: (sourceStr.length() - 1) - sourceStr.indexOf(offsetChar,offsetIndex) expected fqn: int with type: Type93 got: byte
-For node: (sourceStr.length() - 1) expected fqn: int with type: Type93 got: byte
-For node: sourceStr.length() - 1 expected fqn: int with type: Type93 got: byte
-For node: sourceStr.length() expected fqn: int with type: Type93 got: byte
+Did not find solution for node: (sourceStr.length() - 1) - sourceStr.indexOf(offsetChar,offsetIndex) with type Type93
+Did not find solution for node: (sourceStr.length() - 1) with type Type93
+Did not find solution for node: sourceStr.length() - 1 with type Type93
+Did not find solution for node: sourceStr.length() with type Type93
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: length
-For node: length expected fqn: int with type: Type93 got: byte
+Did not find solution for node: length with type Type93
 For node: 1 expected fqn: int with type: Type16 got: byte
-For node: sourceStr.indexOf(offsetChar,offsetIndex) expected fqn: int with type: Type95 got: byte
+Did not find solution for node: sourceStr.indexOf(offsetChar,offsetIndex) with type Type95
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: indexOf
-For node: indexOf expected fqn: int with type: Type95 got: byte
+Did not find solution for node: indexOf with type Type95
 For node: offsetChar expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: offsetIndex expected fqn: int with type: Type78 got: int
 For node: 2 expected fqn: int with type: Type16 got: byte
@@ -1936,24 +1936,24 @@ For node: sourceStr + "00" expected fqn: java.lang.String with type: Type9 got: 
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: "00" expected fqn: java.lang.String with type: Type9 got: java.lang.String
 For node: sourceStr expected fqn: java.lang.String with type: Type9 got: java.lang.String
-{Checked=308, Analyzed=286, Unsolved=22, Incorrect=26, Correct=260}
+{Checked=308, Analyzed=291, Unsolved=17, Incorrect=16, Correct=275}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 boolean=ParenthesizedExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-int=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-int=MethodInvocation: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=4, Correct=0}
+int=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=9, Analyzed=6, Unsolved=3, Incorrect=1, Correct=5}
 int=NumberLiteral: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=13, Correct=0}
-int=ParenthesizedExpression: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+int=ParenthesizedExpression: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-int=SimpleName: {Checked=15, Analyzed=10, Unsolved=5, Incorrect=4, Correct=6}
+int=SimpleName: {Checked=15, Analyzed=12, Unsolved=3, Incorrect=1, Correct=11}
 int=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=Assignment: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
 java=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=MethodInvocation: {Checked=26, Analyzed=22, Unsolved=4, Incorrect=0, Correct=22}
-java=SimpleName: {Checked=136, Analyzed=132, Unsolved=4, Incorrect=0, Correct=132}
+java=MethodInvocation: {Checked=26, Analyzed=24, Unsolved=2, Incorrect=0, Correct=24}
+java=SimpleName: {Checked=136, Analyzed=134, Unsolved=2, Incorrect=0, Correct=134}
 java=SimpleType: {Checked=32, Analyzed=32, Unsolved=0, Incorrect=0, Correct=32}
 java=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
 java=StringLiteral: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
@@ -1962,24 +1962,24 @@ null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 Total stats
-{Checked=308, Analyzed=286, Unsolved=22, Incorrect=26, Correct=260}
+{Checked=308, Analyzed=291, Unsolved=17, Incorrect=16, Correct=275}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 boolean=ParenthesizedExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-int=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-int=MethodInvocation: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=4, Correct=0}
+int=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=9, Analyzed=6, Unsolved=3, Incorrect=1, Correct=5}
 int=NumberLiteral: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=13, Correct=0}
-int=ParenthesizedExpression: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+int=ParenthesizedExpression: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-int=SimpleName: {Checked=15, Analyzed=10, Unsolved=5, Incorrect=4, Correct=6}
+int=SimpleName: {Checked=15, Analyzed=12, Unsolved=3, Incorrect=1, Correct=11}
 int=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=Assignment: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
 java=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=MethodInvocation: {Checked=26, Analyzed=22, Unsolved=4, Incorrect=0, Correct=22}
-java=SimpleName: {Checked=136, Analyzed=132, Unsolved=4, Incorrect=0, Correct=132}
+java=MethodInvocation: {Checked=26, Analyzed=24, Unsolved=2, Incorrect=0, Correct=24}
+java=SimpleName: {Checked=136, Analyzed=134, Unsolved=2, Incorrect=0, Correct=134}
 java=SimpleType: {Checked=32, Analyzed=32, Unsolved=0, Incorrect=0, Correct=32}
 java=SingleVariableDeclaration: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
 java=StringLiteral: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
@@ -1992,18 +1992,18 @@ boolean,InfixExpression,4,4,4,0,0
 boolean,MethodInvocation,1,2,1,0,1
 boolean,ParenthesizedExpression,2,2,2,0,0
 boolean,SimpleName,1,2,1,0,1
-int,InfixExpression,2,2,0,2,0
-int,MethodInvocation,4,9,0,4,5
+int,InfixExpression,0,2,0,0,2
+int,MethodInvocation,6,9,5,1,3
 int,NumberLiteral,13,13,0,13,0
-int,ParenthesizedExpression,2,3,0,2,1
+int,ParenthesizedExpression,1,3,1,0,2
 int,PrimitiveType,2,2,2,0,0
-int,SimpleName,10,15,6,4,5
+int,SimpleName,12,15,11,1,3
 int,SingleVariableDeclaration,2,2,2,0,0
 java,Assignment,9,9,9,0,0
 java,ClassInstanceCreation,5,5,5,0,0
 java,InfixExpression,4,4,4,0,0
-java,MethodInvocation,22,26,22,0,4
-java,SimpleName,132,136,132,0,4
+java,MethodInvocation,24,26,24,0,2
+java,SimpleName,134,136,134,0,2
 java,SimpleType,32,32,32,0,0
 java,SingleVariableDeclaration,8,8,8,0,0
 java,StringLiteral,18,18,18,0,0

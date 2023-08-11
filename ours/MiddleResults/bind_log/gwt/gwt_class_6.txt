@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_6.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_6.java
 Expect check=104
 Cannot find matching typeVariable for: public class gwt_class_6 {
 public class TitledPanel extends Widget {
@@ -138,12 +138,12 @@ Cannot find matching typeVariable for: public class TitledPanel extends Widget {
 }
 
 Did not find solution for node: TitledPanel with type Type1
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: Element with type Type22
+Did not find solution for node: Element with type Type22
 Cannot find matching typeVariable for: legend
-For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Did not find solution for node: legend with type Type22
 Cannot find matching typeVariable for: legend
 Cannot find matching typeVariable for: private Element legend;
 
@@ -247,12 +247,12 @@ public class TitledPanel extends Widget {
   }
 }
 
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: Widget with type Type2
 Cannot find matching typeVariable for: content=null
-For node: content=null expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: null expected fqn: null with type: Type23 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: content=null with type Type2
+Did not find solution for node: content with type Type2
+Did not find solution for node: null with type Type23
 Cannot find matching typeVariable for: TitledPanel
 Cannot find matching typeVariable for: public TitledPanel(){
   Element fieldset=DOM.createFieldSet();
@@ -361,31 +361,31 @@ public class TitledPanel extends Widget {
   }
 }
 
-For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: Element expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Did not find solution for node: Element with type Type22
+Did not find solution for node: Element with type Type22
 Cannot find matching typeVariable for: fieldset=DOM.createFieldSet()
-For node: fieldset=DOM.createFieldSet() expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: DOM.createFieldSet() expected fqn: com.google.gwt.user.client.Element with type: Type25 got: com.google.gwt.user.client.Element
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Did not find solution for node: fieldset=DOM.createFieldSet() with type Type22
+Did not find solution for node: fieldset with type Type22
+Did not find solution for node: DOM.createFieldSet() with type Type25
+Did not find solution for node: DOM with type Type24
 Cannot find matching typeVariable for: createFieldSet
-For node: createFieldSet expected fqn: com.google.gwt.user.client.Element with type: Type25 got: com.google.gwt.user.client.Element
-For node: legend=DOM.createLegend() expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: DOM.createLegend() expected fqn: com.google.gwt.user.client.Element with type: Type27 got: com.google.gwt.user.client.Element
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Did not find solution for node: createFieldSet with type Type25
+Did not find solution for node: legend=DOM.createLegend() with type Type22
+Did not find solution for node: legend with type Type22
+Did not find solution for node: DOM.createLegend() with type Type27
+Did not find solution for node: DOM with type Type24
 Cannot find matching typeVariable for: createLegend
-For node: createLegend expected fqn: com.google.gwt.user.client.Element with type: Type27 got: com.google.gwt.user.client.Element
-For node: DOM.appendChild(fieldset,legend) expected fqn: void with type: Type29 got: void
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type24 got: com.google.gwt.user.client.DOM
+Did not find solution for node: createLegend with type Type27
+Did not find solution for node: DOM.appendChild(fieldset,legend) with type Type29
+Did not find solution for node: DOM with type Type24
 Cannot find matching typeVariable for: appendChild
-For node: appendChild expected fqn: void with type: Type29 got: void
-For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: setElement(fieldset) expected fqn: void with type: Type33 got: void
+Did not find solution for node: appendChild with type Type29
+Did not find solution for node: fieldset with type Type22
+Did not find solution for node: legend with type Type22
+Did not find solution for node: setElement(fieldset) with type Type33
 Cannot find matching typeVariable for: setElement
-For node: setElement expected fqn: void with type: Type33 got: void
-For node: fieldset expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Did not find solution for node: setElement with type Type33
+Did not find solution for node: fieldset with type Type22
 Cannot find matching typeVariable for: TitledPanel
 Cannot find matching typeVariable for: public TitledPanel(String title){
   this();
@@ -493,10 +493,10 @@ public class TitledPanel extends Widget {
 }
 
 Cannot find matching typeVariable for: String title
-For node: String title expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: title expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: String title with type Type6
+Did not find solution for node: String with type Type6
+Did not find solution for node: String with type Type6
+Did not find solution for node: title with type Type6
 For node: setTitle(title) expected fqn: void with type: Type5 got: void
 Cannot find matching typeVariable for: setTitle
 For node: setTitle expected fqn: void with type: Type5 got: void
@@ -504,8 +504,8 @@ Cannot find matching typeVariable for: title
 For node: title expected fqn: java.lang.String with type: Type5 got: void
 For node: @Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: String with type Type6
+Did not find solution for node: String with type Type6
 Cannot find matching typeVariable for: getTitle
 Cannot find matching typeVariable for: @Override public String getTitle(){
   return DOM.getInnerHTML(legend);
@@ -611,11 +611,11 @@ public class TitledPanel extends Widget {
   }
 }
 
-For node: DOM.getInnerHTML(legend) expected fqn: java.lang.String with type: Type38 got: java.lang.String
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type37 got: com.google.gwt.user.client.DOM
+Did not find solution for node: DOM.getInnerHTML(legend) with type Type38
+Did not find solution for node: DOM with type Type37
 Cannot find matching typeVariable for: getInnerHTML
-For node: getInnerHTML expected fqn: java.lang.String with type: Type38 got: java.lang.String
-For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
+Did not find solution for node: getInnerHTML with type Type38
+Did not find solution for node: legend with type Type22
 For node: @Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type36 got: java.lang.Override
 For node: void expected fqn: void with type: Type5 got: void
@@ -725,18 +725,18 @@ public class TitledPanel extends Widget {
 }
 
 Cannot find matching typeVariable for: String html
-For node: String html expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: html expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: DOM.setInnerHTML(legend,html) expected fqn: void with type: Type42 got: void
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type41 got: com.google.gwt.user.client.DOM
+Did not find solution for node: String html with type Type6
+Did not find solution for node: String with type Type6
+Did not find solution for node: String with type Type6
+Did not find solution for node: html with type Type6
+Did not find solution for node: DOM.setInnerHTML(legend,html) with type Type42
+Did not find solution for node: DOM with type Type41
 Cannot find matching typeVariable for: setInnerHTML
-For node: setInnerHTML expected fqn: void with type: Type42 got: void
-For node: legend expected fqn: com.google.gwt.user.client.Element with type: Type22 got: com.google.gwt.user.client.Element
-For node: html expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: setInnerHTML with type Type42
+Did not find solution for node: legend with type Type22
+Did not find solution for node: html with type Type6
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: Widget with type Type2
 Cannot find matching typeVariable for: getContent
 Cannot find matching typeVariable for: public Widget getContent(){
   return content;
@@ -842,7 +842,7 @@ public class TitledPanel extends Widget {
   }
 }
 
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: content with type Type2
 For node: void expected fqn: void with type: Type5 got: void
 Cannot find matching typeVariable for: setContent
 Cannot find matching typeVariable for: public void setContent(Widget content){
@@ -954,105 +954,105 @@ public class TitledPanel extends Widget {
 }
 
 Cannot find matching typeVariable for: Widget content
-For node: Widget content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: Widget content with type Type2
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: Widget with type Type2
+Did not find solution for node: content with type Type2
 For node: this.content != null expected fqn: boolean with type: Type47 got: boolean
-For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: this.content with type Type2
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: content
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: content with type Type2
 Did not find solution for node: null with type Type46
-For node: DOM.removeChild(getElement(),this.content.getElement()) expected fqn: void with type: Type51 got: void
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type50 got: com.google.gwt.user.client.DOM
+Did not find solution for node: DOM.removeChild(getElement(),this.content.getElement()) with type Type51
+Did not find solution for node: DOM with type Type50
 Cannot find matching typeVariable for: removeChild
-For node: removeChild expected fqn: void with type: Type51 got: void
-For node: getElement() expected fqn: com.google.gwt.user.client.Element with type: Type48 got: com.google.gwt.user.client.Element
+Did not find solution for node: removeChild with type Type51
+Did not find solution for node: getElement() with type Type48
 Cannot find matching typeVariable for: getElement
-For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type48 got: com.google.gwt.user.client.Element
-For node: this.content.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
-For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: getElement with type Type48
+Did not find solution for node: this.content.getElement() with type Type49
+Did not find solution for node: this.content with type Type2
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: content
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: content with type Type2
 Cannot find matching typeVariable for: getElement
-For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
-For node: this.content=content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: this.content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: getElement with type Type49
+Did not find solution for node: this.content=content with type Type2
+Did not find solution for node: this.content with type Type2
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: content
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: content with type Type2
 Cannot find matching typeVariable for: content
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
-For node: DOM.appendChild(getElement(),content.getElement()) expected fqn: void with type: Type55 got: void
-For node: DOM expected fqn: com.google.gwt.user.client.DOM with type: Type50 got: com.google.gwt.user.client.DOM
+Did not find solution for node: content with type Type2
+Did not find solution for node: DOM.appendChild(getElement(),content.getElement()) with type Type55
+Did not find solution for node: DOM with type Type50
 Cannot find matching typeVariable for: appendChild
-For node: appendChild expected fqn: void with type: Type55 got: void
-For node: getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
+Did not find solution for node: appendChild with type Type55
+Did not find solution for node: getElement() with type Type49
 Cannot find matching typeVariable for: getElement
-For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
-For node: content.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
-For node: content expected fqn: com.google.gwt.user.client.ui.Widget with type: Type2 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: getElement with type Type49
+Did not find solution for node: content.getElement() with type Type49
+Did not find solution for node: content with type Type2
 Cannot find matching typeVariable for: getElement
-For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type49 got: com.google.gwt.user.client.Element
-{Checked=94, Analyzed=89, Unsolved=5, Incorrect=2, Correct=87}
+Did not find solution for node: getElement with type Type49
+{Checked=94, Analyzed=10, Unsolved=84, Incorrect=1, Correct=9}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=0, Correct=34}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+gwt.=FieldAccess: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=34, Analyzed=0, Unsolved=34, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
-java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=3, Unsolved=7, Incorrect=1, Correct=2}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
 Total stats
-{Checked=94, Analyzed=89, Unsolved=5, Incorrect=2, Correct=87}
+{Checked=94, Analyzed=10, Unsolved=84, Incorrect=1, Correct=9}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=SimpleName: {Checked=34, Analyzed=34, Unsolved=0, Incorrect=0, Correct=34}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+gwt.=FieldAccess: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=34, Analyzed=0, Unsolved=34, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=1, Correct=9}
-java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-null=NullLiteral: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=3, Unsolved=7, Incorrect=1, Correct=2}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
 ,SimpleName,0,1,0,0,1
 ,ThisExpression,0,3,0,0,3
 boolean,InfixExpression,1,1,1,0,0
-gwt.,Assignment,2,2,2,0,0
-gwt.,FieldAccess,3,3,3,0,0
-gwt.,MethodInvocation,6,6,6,0,0
-gwt.,SimpleName,34,34,34,0,0
-gwt.,SimpleType,6,6,6,0,0
-gwt.,SingleVariableDeclaration,1,1,1,0,0
-gwt.,VariableDeclarationFragment,3,3,3,0,0
+gwt.,Assignment,0,2,0,0,2
+gwt.,FieldAccess,0,3,0,0,3
+gwt.,MethodInvocation,0,6,0,0,6
+gwt.,SimpleName,0,34,0,0,34
+gwt.,SimpleType,0,6,0,0,6
+gwt.,SingleVariableDeclaration,0,1,0,0,1
+gwt.,VariableDeclarationFragment,0,3,0,0,3
 java,MarkerAnnotation,2,2,2,0,0
-java,MethodInvocation,1,1,1,0,0
-java,SimpleName,10,10,9,1,0
-java,SimpleType,3,3,3,0,0
-java,SingleVariableDeclaration,2,2,2,0,0
-null,NullLiteral,1,2,0,1,1
-void,MethodInvocation,6,6,6,0,0
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,3,10,2,1,7
+java,SimpleType,0,3,0,0,3
+java,SingleVariableDeclaration,0,2,0,0,2
+null,NullLiteral,0,2,0,0,2
+void,MethodInvocation,1,6,1,0,5
 void,PrimitiveType,2,2,2,0,0
-void,SimpleName,6,6,6,0,0
+void,SimpleName,1,6,1,0,5

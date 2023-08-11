@@ -280,14 +280,14 @@ Android34.java,
 Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
 TabActivity,android.app.TabActivity,android.app.TabActivity,1,android.app.TabActivity,android.app.TabActivity,1,1
 TabContentFactory,android.widget.TabContentFactory,android.widget.TabHost.TabContentFactory,0,android.widget.TabHost.TabContentFactory,android.widget.TabHost.TabContentFactory,1,1
-OnTabChangeListener,android.view.View.OnTabChangeListener,android.widget.TabHost.OnTabChangeListener,0,android.widget.TabHost.OnTabChangeListener,android.widget.TabHost.OnTabChangeListener,1,1
-OnClickListener,android.widget.OnClickListener,android.view.View.OnClickListener,0,android.view.View.OnClickListener,android.view.View.OnClickListener,1,1
+OnTabChangeListener,android.widget.TabInterface.OnTabChangeListener,android.widget.TabHost.OnTabChangeListener,0,android.widget.TabHost.OnTabChangeListener,android.widget.TabHost.OnTabChangeListener,1,1
+OnClickListener,android.view.View.OnClickListener,android.view.View.OnClickListener,1,android.view.View.OnClickListener,android.view.View.OnClickListener,1,1
 ListView,android.widget.ListView,android.widget.ListView,1,android.widget.ListView,android.widget.ListView,1,1
 Bundle,java.util.Bundle,android.os.Bundle,0,android.os.Bundle,android.os.Bundle,1,1
 TabHost,android.widget.TabHost,android.widget.TabHost,1,android.widget.TabHost,android.widget.TabHost,1,1
 View,android.view.View,android.view.View,1,android.view.View,android.view.View,1,1
 Log,android.util.Log,android.util.Log,1,android.util.Log,android.util.Log,1,1
-dl_correct:5,dl_precision:0.5556,,rule_correct:9,rule_checked:9,rule_precision:1.0,rule_recall:1.0
+dl_correct:6,dl_precision:0.6667,,rule_correct:9,rule_checked:9,rule_precision:1.0,rule_recall:1.0
 checked:9,total correct:9,total precision:1.0
 
 Android35.java,
@@ -410,9 +410,9 @@ checked:9,total correct:8,total precision:0.8889
 Android48.java,
 Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
 Camera,android.hardware.Camera,android.hardware.Camera,1,android.hardware.Camera,android.hardware.Camera,1,1
-PictureCallback,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,1
-PictureCallback,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,1
-dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,rule_recall:1.0
+PictureCallback,android.os.PictureCallback,android.hardware.Camera.PictureCallback,0,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,1
+PictureCallback,android.content.PictureCallback,android.hardware.Camera.PictureCallback,0,android.hardware.Camera.PictureCallback,android.hardware.Camera.PictureCallback,1,1
+dl_correct:1,dl_precision:0.3333,,rule_correct:3,rule_checked:3,rule_precision:1.0,rule_recall:1.0
 checked:3,total correct:3,total precision:1.0
 
 Android50.java,
@@ -426,5 +426,5 @@ dl_correct:4,dl_precision:0.8,,rule_correct:5,rule_checked:5,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 total status,
-total checked:237,rule correct:217,rule checked:218,dl correct:184,total correct:227
-dl precision:0.7764,rule precision:0.9954,rule recall:0.9156,total_precision:0.9578
+total checked:237,rule correct:217,rule checked:218,dl correct:183,total correct:227
+dl precision:0.7722,rule precision:0.9954,rule recall:0.9156,total_precision:0.9578

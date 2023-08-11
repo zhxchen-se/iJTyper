@@ -1,0 +1,328 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime48.java
+Expect check=49
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Did not find solution for node: JodaTime48 with type Type1
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+}
+
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils.MillisProvider;
+public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type15 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type15 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type15 got: java.lang.String[]
+Did not find solution for node: MillisProvider with type Type12
+Did not find solution for node: MillisProvider with type Type12
+Cannot find matching typeVariable for: millisProvider
+Did not find solution for node: millisProvider with type Type12
+Cannot find matching typeVariable for: millisProvider
+Cannot find matching typeVariable for: private final MillisProvider millisProvider;
+
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils.MillisProvider;
+public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Did not find solution for node: DateTime with type Type13
+Did not find solution for node: DateTime with type Type13
+Cannot find matching typeVariable for: someDate
+Did not find solution for node: someDate with type Type13
+Cannot find matching typeVariable for: someDate
+Cannot find matching typeVariable for: private final DateTime someDate;
+
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils.MillisProvider;
+public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime48
+Cannot find matching typeVariable for: public JodaTime48(MillisProvider millisProvider,DateTime someDate){
+  this.millisProvider=millisProvider;
+  this.someDate=someDate;
+}
+
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils.MillisProvider;
+public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: MillisProvider millisProvider
+Did not find solution for node: MillisProvider millisProvider with type Type12
+Did not find solution for node: MillisProvider with type Type12
+Did not find solution for node: MillisProvider with type Type12
+Did not find solution for node: millisProvider with type Type12
+Cannot find matching typeVariable for: DateTime someDate
+Did not find solution for node: DateTime someDate with type Type13
+Did not find solution for node: DateTime with type Type13
+Did not find solution for node: DateTime with type Type13
+Did not find solution for node: someDate with type Type13
+Did not find solution for node: this.millisProvider=millisProvider with type Type12
+Did not find solution for node: this.millisProvider with type Type12
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: millisProvider
+Did not find solution for node: millisProvider with type Type12
+Cannot find matching typeVariable for: millisProvider
+Did not find solution for node: millisProvider with type Type12
+Did not find solution for node: this.someDate=someDate with type Type13
+Did not find solution for node: this.someDate with type Type13
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: someDate
+Did not find solution for node: someDate with type Type13
+Cannot find matching typeVariable for: someDate
+Did not find solution for node: someDate with type Type13
+For node: boolean expected fqn: boolean with type: Type2 got: boolean
+Cannot find matching typeVariable for: isAvailable
+Cannot find matching typeVariable for: public boolean isAvailable(){
+  long now=millisProvider.getMillis();
+  return (someDate.isBefore(now));
+}
+
+Cannot find matching typeVariable for: public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeUtils.MillisProvider;
+public class JodaTime48 {
+  public static void main(  String[] args){
+  }
+  private final MillisProvider millisProvider;
+  private final DateTime someDate;
+  public JodaTime48(  MillisProvider millisProvider,  DateTime someDate){
+    this.millisProvider=millisProvider;
+    this.someDate=someDate;
+  }
+  public boolean isAvailable(){
+    long now=millisProvider.getMillis();
+    return (someDate.isBefore(now));
+  }
+}
+
+Did not find solution for node: long with type Type16
+Cannot find matching typeVariable for: now=millisProvider.getMillis()
+Did not find solution for node: now=millisProvider.getMillis() with type Type16
+Did not find solution for node: now with type Type16
+Did not find solution for node: millisProvider.getMillis() with type Type17
+Did not find solution for node: millisProvider with type Type12
+Cannot find matching typeVariable for: getMillis
+Did not find solution for node: getMillis with type Type17
+For node: (someDate.isBefore(now)) expected fqn: boolean with type: Type19 got: boolean
+For node: someDate.isBefore(now) expected fqn: boolean with type: Type19 got: boolean
+Did not find solution for node: someDate with type Type13
+Cannot find matching typeVariable for: isBefore
+For node: isBefore expected fqn: boolean with type: Type19 got: boolean
+Did not find solution for node: now with type Type16
+{Checked=43, Analyzed=10, Unsolved=33, Incorrect=0, Correct=10}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=43, Analyzed=10, Unsolved=33, Incorrect=0, Correct=10}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,2,0,0,2
+boolean,MethodInvocation,1,1,1,0,0
+boolean,ParenthesizedExpression,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+java,ArrayType,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+long,MethodInvocation,0,1,0,0,1
+long,PrimitiveType,0,1,0,0,1
+long,SimpleName,0,3,0,0,3
+long,VariableDeclarationFragment,0,1,0,0,1
+org.joda.time.,Assignment,0,2,0,0,2
+org.joda.time.,FieldAccess,0,2,0,0,2
+org.joda.time.,SimpleName,0,12,0,0,12
+org.joda.time.,SimpleType,0,4,0,0,4
+org.joda.time.,SingleVariableDeclaration,0,2,0,0,2
+org.joda.time.,VariableDeclarationFragment,0,2,0,0,2
+void,PrimitiveType,1,1,1,0,0

@@ -1,5 +1,5 @@
-06:24:04.105 [main] INFO snr.h - Building CompilationUnit takes 670 ms
-06:24:04.302 [main] INFO snr.e - Compilation takes 189 ms
+20:39:50.338 [main] INFO snr.h - Building CompilationUnit takes 599 ms
+20:39:50.477 [main] INFO snr.e - Compilation takes 134 ms
 Session cannot be resolved to a type
 SessionFactory cannot be resolved to a type
 Configuration cannot be resolved to a type
@@ -29,7 +29,7 @@ Adding candidates [org.hibernate.Session, org.hibernate.classic.Session] to Type
 Return without setting candidates for Type12
 Return without setting candidates for Type6
 Return without setting candidates for Type13
-06:24:04.478 [main] INFO snr.G - Loading initial candidates takes 51 ms.
+20:39:50.657 [main] INFO snr.G - Loading initial candidates takes 60 ms.
 Before TypeVariable: Type2, Candidates: 1
    0. full name: void
    1. simple name: void
@@ -95,20 +95,20 @@ Before TypeVariable: Type25, Candidates: 0
 []
 Before TypeVariable: Type26, Candidates: 0
 []
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type2
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint full name: void
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type2
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint simple name: void
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type5
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint simple name: Session
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type7
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint simple name: SessionFactory
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type8
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint simple name: Configuration
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type14
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint simple name: Transaction
-06:24:04.486 [main] INFO snr.G - Populate candidates for type variable Type5
-06:24:04.486 [main] INFO snr.G - Populate candidates for type constraint method: Type26 close();
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type2
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint full name: void
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type2
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type5
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint simple name: Session
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type7
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint simple name: SessionFactory
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type8
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint simple name: Configuration
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type14
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint simple name: Transaction
+20:39:50.666 [main] INFO snr.G - Populate candidates for type variable Type5
+20:39:50.666 [main] INFO snr.G - Populate candidates for type constraint method: Type26 close();
 Processing method constraint method: Type26 close(); on Type5
 Current solution for c Type5 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
 Current solution for r Type26 is uninit ? false []
@@ -116,8 +116,8 @@ Looking at method: public abstract Ljava/sql/Connection; close()
 Looking at method: public abstract Ljava/sql/Connection; close()
 updated solution for c Type5 [org.hibernate.classic.Session, org.hibernate.Session]
 updated solution for r Type26 [java.sql.Connection]
-06:24:04.490 [main] INFO snr.G - Populate candidates for type variable Type5
-06:24:04.490 [main] INFO snr.G - Populate candidates for type constraint method: Type19 beginTransaction();
+20:39:50.669 [main] INFO snr.G - Populate candidates for type variable Type5
+20:39:50.669 [main] INFO snr.G - Populate candidates for type constraint method: Type19 beginTransaction();
 Processing method constraint method: Type19 beginTransaction(); on Type5
 Current solution for c Type5 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
 Current solution for r Type19 is uninit ? false []
@@ -125,32 +125,32 @@ Looking at method: public abstract Lorg/hibernate/Transaction; beginTransaction(
 Looking at method: public abstract Lorg/hibernate/Transaction; beginTransaction()
 updated solution for c Type5 [org.hibernate.classic.Session, org.hibernate.Session]
 updated solution for r Type19 [org.hibernate.Transaction]
-06:24:04.490 [main] INFO snr.G - Populate candidates for type variable Type7
-06:24:04.490 [main] INFO snr.G - Populate candidates for type constraint method: Type17 openSession();
+20:39:50.670 [main] INFO snr.G - Populate candidates for type variable Type7
+20:39:50.670 [main] INFO snr.G - Populate candidates for type constraint method: Type17 openSession();
 Processing method constraint method: Type17 openSession(); on Type7
 Current solution for c Type7 is uninit ? false [org.hibernate.SessionFactory]
 Current solution for r Type17 is uninit ? false []
 Looking at method: public abstract Lorg/hibernate/classic/Session; openSession()
 updated solution for c Type7 [org.hibernate.SessionFactory]
 updated solution for r Type17 [org.hibernate.classic.Session]
-06:24:04.491 [main] INFO snr.G - Populate candidates for type variable Type8
-06:24:04.491 [main] INFO snr.G - Populate candidates for type constraint method: Type9 <init>();
+20:39:50.670 [main] INFO snr.G - Populate candidates for type variable Type8
+20:39:50.670 [main] INFO snr.G - Populate candidates for type constraint method: Type9 <init>();
 Processing method constraint method: Type9 <init>(); on Type8
 Current solution for c Type8 is uninit ? false [org.hibernate.cfg.Configuration]
 Current solution for r Type9 is uninit ? false []
 Looking at method: public V <init>()
 updated solution for c Type8 [org.hibernate.cfg.Configuration]
 updated solution for r Type9 [void]
-06:24:04.491 [main] INFO snr.G - Populate candidates for type variable Type8
-06:24:04.491 [main] INFO snr.G - Populate candidates for type constraint method: Type11 configure();
+20:39:50.670 [main] INFO snr.G - Populate candidates for type variable Type8
+20:39:50.670 [main] INFO snr.G - Populate candidates for type constraint method: Type11 configure();
 Processing method constraint method: Type11 configure(); on Type8
 Current solution for c Type8 is uninit ? false [org.hibernate.cfg.Configuration]
 Current solution for r Type11 is uninit ? false []
 Looking at method: public Lorg/hibernate/cfg/Configuration; configure()
 updated solution for c Type8 [org.hibernate.cfg.Configuration]
 updated solution for r Type11 [org.hibernate.cfg.Configuration]
-06:24:04.491 [main] INFO snr.G - Populate candidates for type variable Type10
-06:24:04.491 [main] INFO snr.G - Populate candidates for type constraint method: Type13 buildSessionFactory();
+20:39:50.670 [main] INFO snr.G - Populate candidates for type variable Type10
+20:39:50.670 [main] INFO snr.G - Populate candidates for type constraint method: Type13 buildSessionFactory();
 Processing method constraint method: Type13 buildSessionFactory(); on Type10
 Current solution for c Type10 is uninit ? false [org.hibernate.cfg.AnnotationConfiguration, org.hibernate.ejb.Ejb3Configuration, org.hibernate.cfg.AnnotationConfiguration, org.hibernate.cfg.Configuration, org.hibernate.jmx.HibernateService]
 Current solution for r Type13 is uninit ? false []
@@ -161,38 +161,38 @@ Looking at method: public Lorg/hibernate/SessionFactory; buildSessionFactory()
 Looking at method: Lorg/hibernate/SessionFactory; buildSessionFactory()
 updated solution for c Type10 [org.hibernate.cfg.AnnotationConfiguration, org.hibernate.ejb.Ejb3Configuration, org.hibernate.cfg.AnnotationConfiguration, org.hibernate.cfg.Configuration, org.hibernate.jmx.HibernateService]
 updated solution for r Type13 [org.hibernate.SessionFactory]
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type14
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint method: Type21 commit();
+20:39:50.671 [main] INFO snr.G - Populate candidates for type variable Type14
+20:39:50.671 [main] INFO snr.G - Populate candidates for type constraint method: Type21 commit();
 Processing method constraint method: Type21 commit(); on Type14
 Current solution for c Type14 is uninit ? false [org.hibernate.Transaction]
 Current solution for r Type21 is uninit ? false []
 Looking at method: public abstract V commit()
 updated solution for c Type14 [org.hibernate.Transaction]
 updated solution for r Type21 [void]
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type2
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type5
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type5
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type7
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type10
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type12
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type14
-06:24:04.492 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
-06:24:04.492 [main] INFO snr.G - Populate candidates for type variable Type14
-06:24:04.493 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
-06:24:04.493 [main] INFO snr.G - Populate candidates for type variable Type16
-06:24:04.493 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
-06:24:04.493 [main] INFO snr.G - Populate candidates for type variable Type18
-06:24:04.493 [main] INFO snr.G - Populate candidates for type constraint subtype: Type19
-06:24:04.493 [main] INFO snr.G - Populate candidates for type variable Type20
-06:24:04.493 [main] INFO snr.G - Populate candidates for type constraint subtype: Type21
-06:24:04.493 [main] INFO snr.G - Populate candidates for type variable Type25
-06:24:04.493 [main] INFO snr.G - Populate candidates for type constraint subtype: Type26
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type2
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type5
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type5
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type7
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type10
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type12
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type14
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type14
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type16
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type18
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type19
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type20
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type21
+20:39:50.672 [main] INFO snr.G - Populate candidates for type variable Type25
+20:39:50.672 [main] INFO snr.G - Populate candidates for type constraint subtype: Type26
 After TypeVariable: Type2, Candidates: 1
    0. full name: void
    1. simple name: void
@@ -433,14 +433,14 @@ Bind Type5 to org.hibernate.Session, dumping:
 Bind Type12 to org.hibernate.SessionFactory, dumping:
 Bind Type6 to org.hibernate.Session, dumping:
 Bind Type13 to org.hibernate.SessionFactory, dumping:
-06:24:04.896 [main] INFO snr.k - Fixing Type5 with org.hibernate.Session
-06:24:04.897 [main] INFO snr.k - Fixing Type7 with org.hibernate.SessionFactory
-06:24:04.897 [main] INFO snr.k - Fixing Type8 with org.hibernate.cfg.Configuration
-06:24:04.897 [main] INFO snr.k - Fixing Type14 with org.hibernate.Transaction
-06:24:04.954 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
-06:24:04.957 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
-06:24:04.957 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
-06:24:04.957 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+20:39:50.982 [main] INFO snr.k - Fixing Type5 with org.hibernate.Session
+20:39:50.983 [main] INFO snr.k - Fixing Type7 with org.hibernate.SessionFactory
+20:39:50.983 [main] INFO snr.k - Fixing Type8 with org.hibernate.cfg.Configuration
+20:39:50.983 [main] INFO snr.k - Fixing Type14 with org.hibernate.Transaction
+20:39:51.032 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+20:39:51.034 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+20:39:51.034 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+20:39:51.034 [main] INFO org.javelus.snr.compile.SnRBuilder - 
 
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
@@ -467,5 +467,5 @@ public class hibernate_class_36 {
 		}
 	}
 }
-06:24:04.957 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
-06:24:05.018 [main] INFO snr.e - Compilation takes 60 ms
+20:39:51.034 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+20:39:51.074 [main] INFO snr.e - Compilation takes 39 ms

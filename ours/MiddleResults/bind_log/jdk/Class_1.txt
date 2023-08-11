@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_1.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_1.java
 Expect check=261
 Cannot find matching typeVariable for: @SuppressWarnings("serial") public class Class_1 {
   private static void createBinaryApplet() throws IOException {
@@ -65,7 +65,7 @@ For node: @SuppressWarnings("serial") expected fqn: java.lang.SuppressWarnings w
 For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type4 got: java.lang.SuppressWarnings
 For node: "serial" expected fqn: java.lang.String with type: Type3 got: java.lang.String
 Did not find solution for node: Class_1 with type Type1
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: createBinaryApplet
 Cannot find matching typeVariable for: private static void createBinaryApplet() throws IOException {
   java.applet.Applet applet=new java.applet.Applet(){
@@ -205,12 +205,12 @@ import java.io.*;
 
 For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
 For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
-For node: java.applet.Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: java.applet.Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: java.applet.Applet with type Type6
+Did not find solution for node: java.applet.Applet with type Type6
 No match for actual type QualifiedName: java.applet and also not find solution for: Type7
 No match for actual type SimpleName: java and also not find solution for: Type8
 Cannot find matching typeVariable for: Applet
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: Applet with type Type6
 Cannot find matching typeVariable for: applet=new java.applet.Applet(){
   @Override public void paint(  Graphics g){
     super.paint(g);
@@ -218,27 +218,27 @@ Cannot find matching typeVariable for: applet=new java.applet.Applet(){
   }
 }
 
-For node: applet=new java.applet.Applet(){
+Did not find solution for node: applet=new java.applet.Applet(){
   @Override public void paint(  Graphics g){
     super.paint(g);
     g.fillRect(0,0,10,10);
   }
 }
- expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: new java.applet.Applet(){
+ with type Type6
+Did not find solution for node: applet with type Type6
+Did not find solution for node: new java.applet.Applet(){
   @Override public void paint(  Graphics g){
     super.paint(g);
     g.fillRect(0,0,10,10);
   }
 }
- expected fqn:  with type: Type6 got: java.applet.Applet
-For node: java.applet.Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: java.applet.Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+ with type Type6
+Did not find solution for node: java.applet.Applet with type Type6
+Did not find solution for node: java.applet.Applet with type Type6
 No match for actual type QualifiedName: java.applet and also not find solution for: Type7
 No match for actual type SimpleName: java and also not find solution for: Type8
 Cannot find matching typeVariable for: Applet
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: Applet with type Type6
 Cannot find matching typeVariable for: {
   @Override public void paint(  Graphics g){
     super.paint(g);
@@ -248,7 +248,7 @@ Cannot find matching typeVariable for: {
 
 For node: @Override expected fqn: java.lang.Override with type: Type9 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type9 got: java.lang.Override
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: paint
 Cannot find matching typeVariable for: @Override public void paint(Graphics g){
   super.paint(g);
@@ -262,24 +262,24 @@ Cannot find matching typeVariable for: {
   }
 }
 
-For node: paint expected fqn: void with type: Type6 got: java.applet.Applet
+Did not find solution for node: paint with type Type6
 Cannot find matching typeVariable for: Graphics g
-For node: Graphics g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: Graphics g with type Type10
+Did not find solution for node: Graphics with type Type10
+Did not find solution for node: Graphics with type Type10
+Did not find solution for node: g with type Type10
 For node: super.paint(g) expected fqn: void with type: Type12 got: void
 Cannot find matching typeVariable for: paint
 For node: paint expected fqn: void with type: Type12 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: g with type Type10
 For node: g.fillRect(0,0,10,10) expected fqn: void with type: Type16 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: g with type Type10
 Cannot find matching typeVariable for: fillRect
 For node: fillRect expected fqn: void with type: Type16 got: void
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: 10 expected fqn: int with type: Type15 got: byte
-For node: 10 expected fqn: int with type: Type15 got: byte
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: 10 with type Type15
+Did not find solution for node: 10 with type Type15
 For node: java.io.ObjectOutputStream expected fqn: java.io.ObjectOutputStream with type: Type23 got: java.io.ObjectOutputStream
 For node: java.io.ObjectOutputStream expected fqn: java.io.ObjectOutputStream with type: Type23 got: java.io.ObjectOutputStream
 No match for actual type QualifiedName: java.io and also not find solution for: Type24
@@ -304,12 +304,12 @@ For node: oos.writeObject(applet) expected fqn: void with type: Type30 got: void
 For node: oos expected fqn: java.io.ObjectOutputStream with type: Type23 got: java.io.ObjectOutputStream
 Cannot find matching typeVariable for: writeObject
 For node: writeObject expected fqn: void with type: Type30 got: void
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: applet with type Type6
 For node: oos.close() expected fqn: void with type: Type33 got: void
 For node: oos expected fqn: java.io.ObjectOutputStream with type: Type23 got: java.io.ObjectOutputStream
 Cannot find matching typeVariable for: close
 For node: close expected fqn: void with type: Type33 got: void
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: public static void main(String[] args){
   final java.awt.Frame frame=new java.awt.Frame("Applet Test");
@@ -524,7 +524,7 @@ Cannot find matching typeVariable for: {
   }
 }
 
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: windowClosing
 Cannot find matching typeVariable for: public void windowClosing(WindowEvent we){
   frame.dispose();
@@ -538,24 +538,24 @@ Cannot find matching typeVariable for: {
 
 Did not find solution for node: windowClosing with type Type40
 Cannot find matching typeVariable for: WindowEvent we
-For node: WindowEvent we expected fqn: java.awt.event.WindowEvent with type: Type41 got: java.awt.event.WindowEvent
-For node: WindowEvent expected fqn: java.awt.event.WindowEvent with type: Type41 got: java.awt.event.WindowEvent
-For node: WindowEvent expected fqn: java.awt.event.WindowEvent with type: Type41 got: java.awt.event.WindowEvent
-For node: we expected fqn: java.awt.event.WindowEvent with type: Type41 got: java.awt.event.WindowEvent
+Did not find solution for node: WindowEvent we with type Type41
+Did not find solution for node: WindowEvent with type Type41
+Did not find solution for node: WindowEvent with type Type41
+Did not find solution for node: we with type Type41
 Did not find solution for node: frame.dispose() with type Type42
 Did not find solution for node: frame with type Type36
 Cannot find matching typeVariable for: dispose
 Did not find solution for node: dispose with type Type42
-For node: int expected fqn: int with type: Type48 got: int
+Did not find solution for node: int with type Type48
 Cannot find matching typeVariable for: prefHeight=50
-For node: prefHeight=50 expected fqn: int with type: Type48 got: int
-For node: prefHeight expected fqn: int with type: Type48 got: int
-For node: 50 expected fqn: int with type: Type15 got: byte
-For node: int expected fqn: int with type: Type48 got: int
+Did not find solution for node: prefHeight=50 with type Type48
+Did not find solution for node: prefHeight with type Type48
+Did not find solution for node: 50 with type Type15
+Did not find solution for node: int with type Type48
 Cannot find matching typeVariable for: prefWidth=50
-For node: prefWidth=50 expected fqn: int with type: Type48 got: int
-For node: prefWidth expected fqn: int with type: Type48 got: int
-For node: 50 expected fqn: int with type: Type15 got: byte
+Did not find solution for node: prefWidth=50 with type Type48
+Did not find solution for node: prefWidth with type Type48
+Did not find solution for node: 50 with type Type15
 Did not find solution for node: Container with type Type49
 Did not find solution for node: Container with type Type49
 Cannot find matching typeVariable for: container=new Container(){
@@ -607,7 +607,7 @@ Cannot find matching typeVariable for: {
 
 For node: @Override expected fqn: java.lang.Override with type: Type9 got: java.lang.Override
 For node: Override expected fqn: java.lang.Override with type: Type9 got: java.lang.Override
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: paint
 Cannot find matching typeVariable for: @Override public void paint(Graphics g){
   super.paint(g);
@@ -631,65 +631,65 @@ Cannot find matching typeVariable for: {
 
 Did not find solution for node: paint with type Type49
 Cannot find matching typeVariable for: Graphics g
-For node: Graphics g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: super.paint(g) expected fqn: void with type: Type14 got: void
+Did not find solution for node: Graphics g with type Type10
+Did not find solution for node: Graphics with type Type10
+Did not find solution for node: Graphics with type Type10
+Did not find solution for node: g with type Type10
+Did not find solution for node: super.paint(g) with type Type14
 Cannot find matching typeVariable for: paint
-For node: paint expected fqn: void with type: Type14 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
+Did not find solution for node: paint with type Type14
+Did not find solution for node: g with type Type10
+Did not find solution for node: Graphics2D with type Type50
+Did not find solution for node: Graphics2D with type Type50
 Cannot find matching typeVariable for: graphs=(Graphics2D)g
-For node: graphs=(Graphics2D)g expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: graphs expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: (Graphics2D)g expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: Graphics2D expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: graphs.setBackground(java.awt.Color.WHITE) expected fqn: void with type: Type54 got: void
-For node: graphs expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
+Did not find solution for node: graphs=(Graphics2D)g with type Type50
+Did not find solution for node: graphs with type Type50
+Did not find solution for node: (Graphics2D)g with type Type50
+Did not find solution for node: Graphics2D with type Type50
+Did not find solution for node: Graphics2D with type Type50
+Did not find solution for node: g with type Type10
+Did not find solution for node: graphs.setBackground(java.awt.Color.WHITE) with type Type54
+Did not find solution for node: graphs with type Type50
 Cannot find matching typeVariable for: setBackground
-For node: setBackground expected fqn: void with type: Type54 got: void
+Did not find solution for node: setBackground with type Type54
 Cannot find matching typeVariable for: java.awt.Color.WHITE
-For node: java.awt.Color.WHITE expected fqn: java.awt.Color with type: Type54 got: void
+Did not find solution for node: java.awt.Color.WHITE with type Type54
 Cannot find matching typeVariable for: java.awt.Color
 Cannot find matching typeVariable for: java.awt.Color.WHITE
-For node: java.awt.Color expected fqn: java.awt.Color with type: Type54 got: void
+Did not find solution for node: java.awt.Color with type Type54
 No match for actual type SimpleName: java and also not find solution for: Type8
 No match for actual type SimpleName: awt and also not find solution for: Type51
-For node: Color expected fqn: java.awt.Color with type: Type52 got: java.awt.Color
-For node: WHITE expected fqn: java.awt.Color with type: Type53 got: java.awt.Color
-For node: graphs.clearRect(0,0,prefWidth,prefHeight) expected fqn: void with type: Type57 got: void
-For node: graphs expected fqn: java.awt.Graphics2D with type: Type50 got: java.awt.Graphics2D
+Did not find solution for node: Color with type Type52
+Did not find solution for node: WHITE with type Type53
+Did not find solution for node: graphs.clearRect(0,0,prefWidth,prefHeight) with type Type57
+Did not find solution for node: graphs with type Type50
 Cannot find matching typeVariable for: clearRect
-For node: clearRect expected fqn: void with type: Type57 got: void
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: prefWidth expected fqn: int with type: Type48 got: int
-For node: prefHeight expected fqn: int with type: Type48 got: int
-For node: g.setColor(java.awt.Color.RED) expected fqn: void with type: Type64 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: clearRect with type Type57
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: prefWidth with type Type48
+Did not find solution for node: prefHeight with type Type48
+Did not find solution for node: g.setColor(java.awt.Color.RED) with type Type64
+Did not find solution for node: g with type Type10
 Cannot find matching typeVariable for: setColor
-For node: setColor expected fqn: void with type: Type64 got: void
+Did not find solution for node: setColor with type Type64
 Cannot find matching typeVariable for: java.awt.Color.RED
-For node: java.awt.Color.RED expected fqn: java.awt.Color with type: Type64 got: void
+Did not find solution for node: java.awt.Color.RED with type Type64
 Cannot find matching typeVariable for: java.awt.Color
 Cannot find matching typeVariable for: java.awt.Color.RED
-For node: java.awt.Color expected fqn: java.awt.Color with type: Type64 got: void
+Did not find solution for node: java.awt.Color with type Type64
 No match for actual type SimpleName: java and also not find solution for: Type8
 No match for actual type SimpleName: awt and also not find solution for: Type51
-For node: Color expected fqn: java.awt.Color with type: Type52 got: java.awt.Color
-For node: RED expected fqn: java.awt.Color with type: Type63 got: java.awt.Color
-For node: g.fillRect(5,5,10,10) expected fqn: void with type: Type21 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: Color with type Type52
+Did not find solution for node: RED with type Type63
+Did not find solution for node: g.fillRect(5,5,10,10) with type Type21
+Did not find solution for node: g with type Type10
 Cannot find matching typeVariable for: fillRect
-For node: fillRect expected fqn: void with type: Type21 got: void
-For node: 5 expected fqn: int with type: Type15 got: byte
-For node: 5 expected fqn: int with type: Type15 got: byte
-For node: 10 expected fqn: int with type: Type15 got: byte
-For node: 10 expected fqn: int with type: Type15 got: byte
+Did not find solution for node: fillRect with type Type21
+Did not find solution for node: 5 with type Type15
+Did not find solution for node: 5 with type Type15
+Did not find solution for node: 10 with type Type15
+Did not find solution for node: 10 with type Type15
 For node: container.setPreferredSize(new Dimension(prefWidth,prefHeight)) expected fqn: void with type: Type72 got: void
 Did not find solution for node: container with type Type49
 Cannot find matching typeVariable for: setPreferredSize
@@ -697,8 +697,8 @@ For node: setPreferredSize expected fqn: void with type: Type72 got: void
 For node: new Dimension(prefWidth,prefHeight) expected fqn: java.awt.Dimension with type: Type68 got: java.awt.Dimension
 For node: Dimension expected fqn: java.awt.Dimension with type: Type68 got: java.awt.Dimension
 For node: Dimension expected fqn: java.awt.Dimension with type: Type68 got: java.awt.Dimension
-For node: prefWidth expected fqn: int with type: Type48 got: int
-For node: prefHeight expected fqn: int with type: Type48 got: int
+Did not find solution for node: prefWidth with type Type48
+Did not find solution for node: prefHeight with type Type48
 Did not find solution for node: frame.add(container) with type Type75
 Did not find solution for node: frame with type Type36
 Cannot find matching typeVariable for: add
@@ -713,31 +713,31 @@ Did not find solution for node: frame with type Type36
 Cannot find matching typeVariable for: setVisible
 Did not find solution for node: setVisible with type Type81
 Did not find solution for node: true with type Type80
-For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
+Did not find solution for node: BufferedImage with type Type84
+Did not find solution for node: BufferedImage with type Type84
 Cannot find matching typeVariable for: bufImage=new BufferedImage(prefWidth,prefHeight,BufferedImage.TYPE_INT_RGB)
-For node: bufImage=new BufferedImage(prefWidth,prefHeight,BufferedImage.TYPE_INT_RGB) expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: bufImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: new BufferedImage(prefWidth,prefHeight,BufferedImage.TYPE_INT_RGB) expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: prefWidth expected fqn: int with type: Type48 got: int
-For node: prefHeight expected fqn: int with type: Type48 got: int
+Did not find solution for node: bufImage=new BufferedImage(prefWidth,prefHeight,BufferedImage.TYPE_INT_RGB) with type Type84
+Did not find solution for node: bufImage with type Type84
+Did not find solution for node: new BufferedImage(prefWidth,prefHeight,BufferedImage.TYPE_INT_RGB) with type Type84
+Did not find solution for node: BufferedImage with type Type84
+Did not find solution for node: BufferedImage with type Type84
+Did not find solution for node: prefWidth with type Type48
+Did not find solution for node: prefHeight with type Type48
 Cannot find matching typeVariable for: BufferedImage.TYPE_INT_RGB
-For node: BufferedImage.TYPE_INT_RGB expected fqn: int with type: Type84 got: java.awt.image.BufferedImage
-For node: BufferedImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: TYPE_INT_RGB expected fqn: int with type: Type85 got: int
+Did not find solution for node: BufferedImage.TYPE_INT_RGB with type Type84
+Did not find solution for node: BufferedImage with type Type84
+Did not find solution for node: TYPE_INT_RGB with type Type85
 For node: container.paint(bufImage.createGraphics()) expected fqn: void with type: Type92 got: void
 Did not find solution for node: container with type Type49
 Cannot find matching typeVariable for: paint
 For node: paint expected fqn: void with type: Type92 got: void
-For node: bufImage.createGraphics() expected fqn: java.awt.Graphics2D with type: Type90 got: java.awt.Graphics2D
-For node: bufImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
+Did not find solution for node: bufImage.createGraphics() with type Type90
+Did not find solution for node: bufImage with type Type84
 Cannot find matching typeVariable for: createGraphics
-For node: createGraphics expected fqn: java.awt.Graphics2D with type: Type90 got: java.awt.Graphics2D
-For node: createBinaryApplet() expected fqn: void with type: Type2 got: void
+Did not find solution for node: createGraphics with type Type90
+Did not find solution for node: createBinaryApplet() with type Type2
 Cannot find matching typeVariable for: createBinaryApplet
-For node: createBinaryApplet expected fqn: void with type: Type2 got: void
+Did not find solution for node: createBinaryApplet with type Type2
 For node: ObjectInputStream expected fqn: java.io.ObjectInputStream with type: Type95 got: java.io.ObjectInputStream
 For node: ObjectInputStream expected fqn: java.io.ObjectInputStream with type: Type95 got: java.io.ObjectInputStream
 Cannot find matching typeVariable for: ois=new ObjectInputStream(new FileInputStream("applet.dat"))
@@ -750,14 +750,14 @@ For node: new FileInputStream("applet.dat") expected fqn: java.io.FileInputStrea
 For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type96 got: java.io.FileInputStream
 For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type96 got: java.io.FileInputStream
 For node: "applet.dat" expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: Applet with type Type6
+Did not find solution for node: Applet with type Type6
 Cannot find matching typeVariable for: applet=(Applet)ois.readObject()
-For node: applet=(Applet)ois.readObject() expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: (Applet)ois.readObject() expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
-For node: Applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: applet=(Applet)ois.readObject() with type Type6
+Did not find solution for node: applet with type Type6
+Did not find solution for node: (Applet)ois.readObject() with type Type6
+Did not find solution for node: Applet with type Type6
+Did not find solution for node: Applet with type Type6
 Did not find solution for node: ois.readObject() with type Type101
 For node: ois expected fqn: java.io.ObjectInputStream with type: Type95 got: java.io.ObjectInputStream
 Cannot find matching typeVariable for: readObject
@@ -766,45 +766,45 @@ For node: ois.close() expected fqn: void with type: Type103 got: void
 For node: ois expected fqn: java.io.ObjectInputStream with type: Type95 got: java.io.ObjectInputStream
 Cannot find matching typeVariable for: close
 For node: close expected fqn: void with type: Type103 got: void
-For node: container.add(applet) expected fqn: java.awt.Component with type: Type105 got: void
+For node: container.add(applet) expected fqn: java.awt.Component with type: Type105 got: java.awt.Component
 Did not find solution for node: container with type Type49
 Cannot find matching typeVariable for: add
-For node: add expected fqn: java.awt.Component with type: Type105 got: void
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+For node: add expected fqn: java.awt.Component with type: Type105 got: java.awt.Component
+Did not find solution for node: applet with type Type6
 For node: applet.setBounds(0,0,prefWidth,prefHeight) expected fqn: void with type: Type108 got: void
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: applet with type Type6
 Cannot find matching typeVariable for: setBounds
 For node: setBounds expected fqn: void with type: Type108 got: void
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: prefWidth expected fqn: int with type: Type48 got: int
-For node: prefHeight expected fqn: int with type: Type48 got: int
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: prefWidth with type Type48
+Did not find solution for node: prefHeight with type Type48
 For node: applet.init() expected fqn: void with type: Type114 got: void
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: applet with type Type6
 Cannot find matching typeVariable for: init
 For node: init expected fqn: void with type: Type114 got: void
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: Graphics expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: Graphics with type Type10
+Did not find solution for node: Graphics with type Type10
 Cannot find matching typeVariable for: g=applet.getGraphics()
-For node: g=applet.getGraphics() expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
-For node: applet.getGraphics() expected fqn: java.awt.Graphics with type: Type116 got: java.awt.Graphics
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: g=applet.getGraphics() with type Type10
+Did not find solution for node: g with type Type10
+Did not find solution for node: applet.getGraphics() with type Type116
+Did not find solution for node: applet with type Type6
 Cannot find matching typeVariable for: getGraphics
-For node: getGraphics expected fqn: java.awt.Graphics with type: Type116 got: java.awt.Graphics
-For node: g.drawImage(bufImage,0,0,applet) expected fqn: boolean with type: Type118 got: boolean
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: getGraphics with type Type116
+Did not find solution for node: g.drawImage(bufImage,0,0,applet) with type Type118
+Did not find solution for node: g with type Type10
 Cannot find matching typeVariable for: drawImage
-For node: drawImage expected fqn: boolean with type: Type118 got: boolean
-For node: bufImage expected fqn: java.awt.image.BufferedImage with type: Type84 got: java.awt.image.BufferedImage
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: 0 expected fqn: int with type: Type15 got: byte
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: drawImage with type Type118
+Did not find solution for node: bufImage with type Type84
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: 0 with type Type15
+Did not find solution for node: applet with type Type6
 For node: applet.paint(g) expected fqn: void with type: Type124 got: void
-For node: applet expected fqn: java.applet.Applet with type: Type6 got: java.applet.Applet
+Did not find solution for node: applet with type Type6
 Cannot find matching typeVariable for: paint
 For node: paint expected fqn: void with type: Type124 got: void
-For node: g expected fqn: java.awt.Graphics with type: Type10 got: java.awt.Graphics
+Did not find solution for node: g with type Type10
 Cannot find matching typeVariable for: ClassNotFoundException|IOException e
 Did not find solution for node: ClassNotFoundException|IOException e with type Type128
 Did not find solution for node: ClassNotFoundException|IOException with type Type128
@@ -816,92 +816,92 @@ Did not find solution for node: e with type Type128
 For node: System.out.println("Whoops") expected fqn: void with type: Type131 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type131 got: void
-Did not find solution for node: System with type Type129
+For node: System expected fqn: java.lang.System with type: Type129 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type130 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type131 got: void
 For node: "Whoops" expected fqn: java.lang.String with type: Type3 got: java.lang.String
-{Checked=255, Analyzed=207, Unsolved=48, Incorrect=26, Correct=181}
-=ClassInstanceCreation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
+{Checked=255, Analyzed=78, Unsolved=177, Incorrect=1, Correct=77}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=NumberLiteral: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=16, Correct=0}
-int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-int=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=CastExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=1, Correct=2}
-java=QualifiedName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=5, Correct=4}
-java=SimpleName: {Checked=89, Analyzed=69, Unsolved=20, Incorrect=1, Correct=68}
-java=SimpleType: {Checked=28, Analyzed=23, Unsolved=5, Incorrect=0, Correct=23}
+java=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=11, Analyzed=3, Unsolved=8, Incorrect=1, Correct=2}
+java=SimpleName: {Checked=89, Analyzed=24, Unsolved=65, Incorrect=0, Correct=24}
+java=SimpleType: {Checked=28, Analyzed=11, Unsolved=17, Incorrect=0, Correct=11}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=UnionType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
-void=MethodInvocation: {Checked=19, Analyzed=15, Unsolved=4, Incorrect=0, Correct=15}
-void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=SimpleName: {Checked=24, Analyzed=18, Unsolved=6, Incorrect=1, Correct=17}
-void=SuperMethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=9, Analyzed=2, Unsolved=7, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=19, Analyzed=10, Unsolved=9, Incorrect=0, Correct=10}
+void=PrimitiveType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=24, Analyzed=11, Unsolved=13, Incorrect=0, Correct=11}
+void=SuperMethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 Total stats
-{Checked=255, Analyzed=207, Unsolved=48, Incorrect=26, Correct=181}
-=ClassInstanceCreation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
+{Checked=255, Analyzed=78, Unsolved=177, Incorrect=1, Correct=77}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=NumberLiteral: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=16, Correct=0}
-int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-int=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=CastExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
+java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=7, Analyzed=5, Unsolved=2, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=1, Correct=2}
-java=QualifiedName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=5, Correct=4}
-java=SimpleName: {Checked=89, Analyzed=69, Unsolved=20, Incorrect=1, Correct=68}
-java=SimpleType: {Checked=28, Analyzed=23, Unsolved=5, Incorrect=0, Correct=23}
+java=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=11, Analyzed=3, Unsolved=8, Incorrect=1, Correct=2}
+java=SimpleName: {Checked=89, Analyzed=24, Unsolved=65, Incorrect=0, Correct=24}
+java=SimpleType: {Checked=28, Analyzed=11, Unsolved=17, Incorrect=0, Correct=11}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=UnionType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
-void=MethodInvocation: {Checked=19, Analyzed=15, Unsolved=4, Incorrect=0, Correct=15}
-void=PrimitiveType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=SimpleName: {Checked=24, Analyzed=18, Unsolved=6, Incorrect=1, Correct=17}
-void=SuperMethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-,ClassInstanceCreation,1,3,0,1,2
+java=VariableDeclarationFragment: {Checked=9, Analyzed=2, Unsolved=7, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=19, Analyzed=10, Unsolved=9, Incorrect=0, Correct=10}
+void=PrimitiveType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=24, Analyzed=11, Unsolved=13, Incorrect=0, Correct=11}
+void=SuperMethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+,ClassInstanceCreation,0,3,0,0,3
 ,SimpleName,0,1,0,0,1
 boolean,BooleanLiteral,0,1,0,0,1
-boolean,MethodInvocation,1,1,1,0,0
-boolean,SimpleName,1,1,1,0,0
-int,NumberLiteral,16,16,0,16,0
-int,PrimitiveType,2,2,2,0,0
-int,QualifiedName,1,1,0,1,0
-int,SimpleName,11,11,11,0,0
-int,VariableDeclarationFragment,2,2,2,0,0
+boolean,MethodInvocation,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+int,NumberLiteral,0,16,0,0,16
+int,PrimitiveType,0,2,0,0,2
+int,QualifiedName,0,1,0,0,1
+int,SimpleName,0,11,0,0,11
+int,VariableDeclarationFragment,0,2,0,0,2
 java,ArrayType,1,1,1,0,0
-java,CastExpression,2,2,2,0,0
-java,ClassInstanceCreation,6,7,6,0,1
+java,CastExpression,0,2,0,0,2
+java,ClassInstanceCreation,5,7,5,0,2
 java,MarkerAnnotation,2,2,2,0,0
-java,MethodInvocation,3,5,2,1,2
-java,QualifiedName,9,11,4,5,2
-java,SimpleName,69,89,68,1,20
-java,SimpleType,23,28,23,0,5
+java,MethodInvocation,1,5,1,0,4
+java,QualifiedName,3,11,2,1,8
+java,SimpleName,24,89,24,0,65
+java,SimpleType,11,28,11,0,17
 java,SingleMemberAnnotation,1,1,1,0,0
-java,SingleVariableDeclaration,4,5,4,0,1
+java,SingleVariableDeclaration,1,5,1,0,4
 java,StringLiteral,5,5,5,0,0
 java,UnionType,0,1,0,0,1
-java,VariableDeclarationFragment,7,9,7,0,2
-void,MethodInvocation,15,19,15,0,4
-void,PrimitiveType,5,5,5,0,0
-void,SimpleName,18,24,17,1,6
-void,SuperMethodInvocation,2,2,2,0,0
+java,VariableDeclarationFragment,2,9,2,0,7
+void,MethodInvocation,10,19,10,0,9
+void,PrimitiveType,0,5,0,0,5
+void,SimpleName,11,24,11,0,13
+void,SuperMethodInvocation,1,2,1,0,1

@@ -1,0 +1,127 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime24.java
+Expect check=35
+Cannot find matching typeVariable for: public class JodaTime24 {
+  public static String getFormattedDateDifference(  DateTime startDate,  DateTime endDate){
+    Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+    return PeriodFormat.getDefault().print(p);
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime24
+Cannot find matching typeVariable for: public class JodaTime24 {
+  public static String getFormattedDateDifference(  DateTime startDate,  DateTime endDate){
+    Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+    return PeriodFormat.getDefault().print(p);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
+import org.joda.time.format.PeriodFormat;
+import org.joda.time.DateTime;
+public class JodaTime24 {
+  public static String getFormattedDateDifference(  DateTime startDate,  DateTime endDate){
+    Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+    return PeriodFormat.getDefault().print(p);
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: getFormattedDateDifference
+Cannot find matching typeVariable for: public static String getFormattedDateDifference(DateTime startDate,DateTime endDate){
+  Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+  return PeriodFormat.getDefault().print(p);
+}
+
+Cannot find matching typeVariable for: public class JodaTime24 {
+  public static String getFormattedDateDifference(  DateTime startDate,  DateTime endDate){
+    Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+    return PeriodFormat.getDefault().print(p);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.PeriodType;
+import org.joda.time.format.PeriodFormat;
+import org.joda.time.DateTime;
+public class JodaTime24 {
+  public static String getFormattedDateDifference(  DateTime startDate,  DateTime endDate){
+    Period p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved());
+    return PeriodFormat.getDefault().print(p);
+  }
+}
+
+Cannot find matching typeVariable for: DateTime startDate
+Did not find solution for node: DateTime startDate with type Type3
+Did not find solution for node: DateTime with type Type3
+Did not find solution for node: DateTime with type Type3
+Did not find solution for node: startDate with type Type3
+Cannot find matching typeVariable for: DateTime endDate
+Did not find solution for node: DateTime endDate with type Type3
+Did not find solution for node: DateTime with type Type3
+Did not find solution for node: DateTime with type Type3
+Did not find solution for node: endDate with type Type3
+Did not find solution for node: Period with type Type4
+Did not find solution for node: Period with type Type4
+Cannot find matching typeVariable for: p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved())
+Did not find solution for node: p=new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved()) with type Type4
+Did not find solution for node: p with type Type4
+Did not find solution for node: new Period(startDate,endDate,PeriodType.standard().withSecondsRemoved().withMillisRemoved()) with type Type4
+Did not find solution for node: Period with type Type4
+Did not find solution for node: Period with type Type4
+Did not find solution for node: startDate with type Type3
+Did not find solution for node: endDate with type Type3
+For node: PeriodType.standard().withSecondsRemoved().withMillisRemoved() expected fqn: org.joda.time.PeriodType with type: Type10 got: org.joda.time.PeriodType
+For node: PeriodType.standard().withSecondsRemoved() expected fqn: org.joda.time.PeriodType with type: Type8 got: org.joda.time.PeriodType
+For node: PeriodType.standard() expected fqn: org.joda.time.PeriodType with type: Type6 got: org.joda.time.PeriodType
+For node: PeriodType expected fqn: org.joda.time.PeriodType with type: Type5 got: org.joda.time.PeriodType
+Cannot find matching typeVariable for: standard
+For node: standard expected fqn: org.joda.time.PeriodType with type: Type6 got: org.joda.time.PeriodType
+Cannot find matching typeVariable for: withSecondsRemoved
+For node: withSecondsRemoved expected fqn: org.joda.time.PeriodType with type: Type8 got: org.joda.time.PeriodType
+Cannot find matching typeVariable for: withMillisRemoved
+For node: withMillisRemoved expected fqn: org.joda.time.PeriodType with type: Type10 got: org.joda.time.PeriodType
+For node: PeriodFormat.getDefault().print(p) expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: PeriodFormat.getDefault() with type Type18
+Did not find solution for node: PeriodFormat with type Type17
+Cannot find matching typeVariable for: getDefault
+Did not find solution for node: getDefault with type Type18
+Cannot find matching typeVariable for: print
+For node: print expected fqn: java.lang.String with type: Type20 got: java.lang.String
+Did not find solution for node: p with type Type4
+{Checked=32, Analyzed=11, Unsolved=21, Incorrect=0, Correct=11}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=16, Analyzed=4, Unsolved=12, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=32, Analyzed=11, Unsolved=21, Incorrect=0, Correct=11}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=16, Analyzed=4, Unsolved=12, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,0,1,0,0,1
+org.joda.time.,MethodInvocation,3,4,3,0,1
+org.joda.time.,SimpleName,4,16,4,0,12
+org.joda.time.,SimpleType,0,4,0,0,4
+org.joda.time.,SingleVariableDeclaration,0,2,0,0,2
+org.joda.time.,VariableDeclarationFragment,0,1,0,0,1

@@ -363,7 +363,7 @@ class DB:
         ]
 
         interface_results = [
-            ['mvn_interface', self.query_interface_fuzzy(str)]
+            ['mvn_interface', self.query_interface_exact(str)]
         ]
 
         method_results = [
@@ -377,10 +377,9 @@ class DB:
         return results
 
 
-
-    def query_apipool(self,api_pool):
-        print("Querying knowledge base...")
-        # 1.query fuzzy by name
+    def query_apipool_without_extension(self,api_pool):
+        print("Querying knowledge base without extension...")
+        # 1.query by name
         api_pool = [api.replace('.', '/') for api in api_pool]
         results = {
         'mvn_class': [],
@@ -389,7 +388,34 @@ class DB:
         'mvn_method': []
         }
         for api in api_pool:
-            if (api == 'java/lang') or (api =='java/io'):
+            if (api == 'java/lang'):
+                res = self.query_four_tables_fuzzy(api) 
+            else:
+                res = self.query_four_tables_exact(api) #[['mvn_class', [(attribute,attribute,...),(attribute,attribute,...)...]], ['mvn_field', []], ['mvn_interface', []], ['mvn_method', []]]
+            for r in res: 
+                # r[0]:tablename, r[1]:query results
+                if(len(r[1]) > 0):
+                    for x in r[1]:
+                        results[r[0]].append(x)
+
+        results['mvn_class'] = list(set(results['mvn_class']))
+        results['mvn_interface'] = list(set(results['mvn_interface']))
+        results['mvn_field'] = list(set(results['mvn_field']))
+        results['mvn_method'] = list(set(results['mvn_method']))
+        return results      #'...':[(org/joda/time/...),(...),(...)]
+        
+    def query_apipool(self,api_pool):
+        print("Querying knowledge base...")
+        # 1.query by name
+        api_pool = [api.replace('.', '/') for api in api_pool]
+        results = {
+        'mvn_class': [],
+        'mvn_field': [], 
+        'mvn_interface': [],
+        'mvn_method': []
+        }
+        for api in api_pool:
+            if (api == 'java/lang'):
                 res = self.query_four_tables_fuzzy(api) 
             else:
                 res = self.query_four_tables_exact(api) #[['mvn_class', [(attribute,attribute,...),(attribute,attribute,...)...]], ['mvn_field', []], ['mvn_interface', []], ['mvn_method', []]]

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_10.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_10.java
 Expect check=374
 Cannot find matching typeVariable for: /** 
  * &lt;P&gt; {@code java TimeIteratorVsIndexIntArray 1000000}&lt;/P&gt;
@@ -1251,14 +1251,14 @@ Did not find solution for node: lDuration=System.nanoTime() - l_nanoStart with t
 Did not find solution for node: lDuration with type Type3
 Did not find solution for node: System.nanoTime() - l_nanoStart with type Type35
 Did not find solution for node: System.nanoTime() with type Type35
-Did not find solution for node: System with type Type34
+For node: System expected fqn: java.lang.System with type: Type34 got: java.lang.System
 Cannot find matching typeVariable for: nanoTime
 Did not find solution for node: nanoTime with type Type35
 Did not find solution for node: l_nanoStart with type Type3
 For node: System.out.println("Test " + s_testName + ": "+ nf.format(lDuration)+ " nanoseconds") expected fqn: void with type: Type41 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type41 got: void
-Did not find solution for node: System with type Type34
+For node: System expected fqn: java.lang.System with type: Type34 got: java.lang.System
 Did not find solution for node: out with type Type40
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type41 got: void
@@ -1504,7 +1504,7 @@ Did not find solution for node: "A" with type Type22
 For node: System.out.println(sFaster + " faster by " + nf.format(lDiff)+ " nanoseconds ("+ dPct+ "% faster)") expected fqn: void with type: Type49 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type49 got: void
-Did not find solution for node: System with type Type47
+For node: System expected fqn: java.lang.System with type: Type47 got: java.lang.System
 Did not find solution for node: out with type Type48
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type49 got: void
@@ -1521,7 +1521,7 @@ Cannot find matching typeVariable for: dPct
 Did not find solution for node: dPct with type Type22
 Did not find solution for node: "% faster)" with type Type22
 Did not find solution for node: lDiff with type Type3
-{Checked=366, Analyzed=58, Unsolved=308, Incorrect=5, Correct=53}
+{Checked=366, Analyzed=61, Unsolved=305, Incorrect=5, Correct=56}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 double=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -1554,7 +1554,7 @@ java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Cor
 java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 java=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=38, Analyzed=11, Unsolved=27, Incorrect=0, Correct=11}
+java=SimpleName: {Checked=38, Analyzed=14, Unsolved=24, Incorrect=0, Correct=14}
 java=SimpleType: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
 java=SingleVariableDeclaration: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
@@ -1572,7 +1572,7 @@ void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 Total stats
-{Checked=366, Analyzed=58, Unsolved=308, Incorrect=5, Correct=53}
+{Checked=366, Analyzed=61, Unsolved=305, Incorrect=5, Correct=56}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 double=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -1605,7 +1605,7 @@ java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Cor
 java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 java=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=38, Analyzed=11, Unsolved=27, Incorrect=0, Correct=11}
+java=SimpleName: {Checked=38, Analyzed=14, Unsolved=24, Incorrect=0, Correct=14}
 java=SimpleType: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
 java=SingleVariableDeclaration: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
@@ -1654,7 +1654,7 @@ java,ClassInstanceCreation,0,1,0,0,1
 java,InfixExpression,0,3,0,0,3
 java,MethodInvocation,1,3,1,0,2
 java,QualifiedName,2,3,0,2,1
-java,SimpleName,11,38,11,0,27
+java,SimpleName,14,38,14,0,24
 java,SimpleType,3,9,3,0,6
 java,SingleVariableDeclaration,1,5,1,0,4
 java,StringLiteral,0,13,0,0,13

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android37.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android37.java
 Expect check=76
 Cannot find matching typeVariable for: public class Android37 extends Activity implements Runnable {
   public ProgressDialog mProgress;
@@ -33,10 +33,10 @@ For node: Activity expected fqn: android.app.Activity with type: Type2 got: andr
 For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
 For node: Runnable expected fqn: java.lang.Runnable with type: Type3 got: java.lang.Runnable
 For node: Runnable expected fqn: java.lang.Runnable with type: Type3 got: java.lang.Runnable
-For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
-For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Did not find solution for node: ProgressDialog with type Type5
+Did not find solution for node: ProgressDialog with type Type5
 Cannot find matching typeVariable for: mProgress
-For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Did not find solution for node: mProgress with type Type5
 Cannot find matching typeVariable for: mProgress
 Cannot find matching typeVariable for: public ProgressDialog mProgress;
 
@@ -158,30 +158,30 @@ public class Android37 extends Activity implements Runnable {
 ;
 }
 
-For node: mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true) expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
-For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
-For node: ProgressDialog.show(this,"Please wait","Please wait",true,true) expected fqn: android.app.ProgressDialog with type: Type9 got: android.app.ProgressDialog
-For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Did not find solution for node: mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true) with type Type5
+Did not find solution for node: mProgress with type Type5
+Did not find solution for node: ProgressDialog.show(this,"Please wait","Please wait",true,true) with type Type9
+Did not find solution for node: ProgressDialog with type Type5
 Cannot find matching typeVariable for: show
-For node: show expected fqn: android.app.ProgressDialog with type: Type9 got: android.app.ProgressDialog
+Did not find solution for node: show with type Type9
 Did not find solution for node: this with type Type1
-For node: "Please wait" expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: "Please wait" expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: true expected fqn: boolean with type: Type8 got: boolean
-For node: true expected fqn: boolean with type: Type8 got: boolean
-Did not find solution for node: Thread with type Type16
-Did not find solution for node: Thread with type Type16
+Did not find solution for node: "Please wait" with type Type7
+Did not find solution for node: "Please wait" with type Type7
+Did not find solution for node: true with type Type8
+Did not find solution for node: true with type Type8
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
 Cannot find matching typeVariable for: thread=new Thread(this)
-Did not find solution for node: thread=new Thread(this) with type Type16
-Did not find solution for node: thread with type Type16
-Did not find solution for node: new Thread(this) with type Type16
-Did not find solution for node: Thread with type Type16
-Did not find solution for node: Thread with type Type16
+For node: thread=new Thread(this) expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: new Thread(this) expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
 Did not find solution for node: this with type Type1
-Did not find solution for node: thread.start() with type Type19
-Did not find solution for node: thread with type Type16
+For node: thread.start() expected fqn: void with type: Type19 got: void
+For node: thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
 Cannot find matching typeVariable for: start
-Did not find solution for node: start with type Type19
+For node: start expected fqn: void with type: Type19 got: void
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: run
 Cannot find matching typeVariable for: public void run(){
@@ -250,11 +250,11 @@ public class Android37 extends Activity implements Runnable {
 ;
 }
 
-Did not find solution for node: Thread.sleep(10000) with type Type22
-Did not find solution for node: Thread with type Type16
+For node: Thread.sleep(10000) expected fqn: void with type: Type22 got: void
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
 Cannot find matching typeVariable for: sleep
-Did not find solution for node: sleep with type Type22
-Did not find solution for node: 10000 with type Type21
+For node: sleep expected fqn: void with type: Type22 got: void
+For node: 10000 expected fqn: int with type: Type21 got: short
 Cannot find matching typeVariable for: InterruptedException e
 For node: InterruptedException e expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
 For node: InterruptedException expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
@@ -326,82 +326,82 @@ For node: Message msg expected fqn: android.os.Message with type: Type28 got: an
 For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
 For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
 For node: msg expected fqn: android.os.Message with type: Type28 got: android.os.Message
-For node: mProgress.dismiss() expected fqn: void with type: Type34 got: void
-For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Did not find solution for node: mProgress.dismiss() with type Type34
+Did not find solution for node: mProgress with type Type5
 Cannot find matching typeVariable for: dismiss
-For node: dismiss expected fqn: void with type: Type34 got: void
-{Checked=71, Analyzed=54, Unsolved=17, Incorrect=2, Correct=52}
+Did not find solution for node: dismiss with type Type34
+{Checked=71, Analyzed=53, Unsolved=18, Incorrect=3, Correct=50}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-android.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=16, Analyzed=11, Unsolved=5, Incorrect=0, Correct=11}
+android.=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
 android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=0, Correct=5}
-java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=1, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=1, Correct=3}
 Total stats
-{Checked=71, Analyzed=54, Unsolved=17, Incorrect=2, Correct=52}
+{Checked=71, Analyzed=53, Unsolved=18, Incorrect=3, Correct=50}
 =ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
-android.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=16, Analyzed=11, Unsolved=5, Incorrect=0, Correct=11}
+android.=SimpleType: {Checked=7, Analyzed=6, Unsolved=1, Incorrect=0, Correct=6}
 android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=0, Correct=5}
-java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=1, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=1, Correct=3}
 ,ClassInstanceCreation,1,1,0,1,0
 ,SimpleName,0,1,0,0,1
 ,ThisExpression,0,2,0,0,2
-android.,Assignment,1,1,1,0,0
+android.,Assignment,0,1,0,0,1
 android.,ClassInstanceCreation,1,1,1,0,0
-android.,MethodInvocation,1,1,1,0,0
-android.,SimpleName,16,16,16,0,0
-android.,SimpleType,7,7,7,0,0
+android.,MethodInvocation,0,1,0,0,1
+android.,SimpleName,11,16,11,0,5
+android.,SimpleType,6,7,6,0,1
 android.,SingleVariableDeclaration,1,1,1,0,0
-android.,VariableDeclarationFragment,3,3,3,0,0
-boolean,BooleanLiteral,2,2,2,0,0
+android.,VariableDeclarationFragment,2,3,2,0,1
+boolean,BooleanLiteral,0,2,0,0,2
 boolean,MethodInvocation,1,1,1,0,0
 boolean,SimpleName,1,1,1,0,0
-int,NumberLiteral,0,1,0,0,1
-java,ClassInstanceCreation,0,1,0,0,1
+int,NumberLiteral,1,1,0,1,0
+java,ClassInstanceCreation,1,1,1,0,0
 java,MarkerAnnotation,1,1,1,0,0
-java,SimpleName,5,10,5,0,5
-java,SimpleType,2,4,2,0,2
+java,SimpleName,10,10,10,0,0
+java,SimpleType,4,4,4,0,0
 java,SingleVariableDeclaration,1,1,1,0,0
-java,StringLiteral,2,2,2,0,0
-java,VariableDeclarationFragment,0,1,0,0,1
-void,MethodInvocation,2,4,2,0,2
+java,StringLiteral,0,2,0,0,2
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,3,4,3,0,1
 void,PrimitiveType,3,3,3,0,0
-void,SimpleName,3,5,2,1,2
+void,SimpleName,4,5,3,1,1

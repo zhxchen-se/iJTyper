@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_3.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_3.java
 Expect check=337
 Cannot find matching typeVariable for: public class Class_3 {
   private static final String SYMBOL_INFINITE="\u221e";
@@ -1344,9 +1344,9 @@ Did not find solution for node: decimalPlaces with type Type6
 For node: decimalPlaces <= 0 expected fqn: boolean with type: Type11 got: boolean
 Did not find solution for node: decimalPlaces with type Type6
 For node: 0 expected fqn: int with type: Type9 got: byte
-Did not find solution for node: new IllegalArgumentException("Invalid decimal places") with type Type12
-Did not find solution for node: IllegalArgumentException with type Type12
-Did not find solution for node: IllegalArgumentException with type Type12
+For node: new IllegalArgumentException("Invalid decimal places") expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
 For node: "Invalid decimal places" expected fqn: java.lang.String with type: Type8 got: java.lang.String
 For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
 For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
@@ -1376,22 +1376,22 @@ For node: separators.getGroupingSeparator() expected fqn: char with type: Type27
 For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
 Cannot find matching typeVariable for: getGroupingSeparator
 For node: getGroupingSeparator expected fqn: char with type: Type27 got: char
-Did not find solution for node: StringBuilder with type Type29
-Did not find solution for node: StringBuilder with type Type29
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: decimal=new StringBuilder()
-Did not find solution for node: decimal=new StringBuilder() with type Type29
-Did not find solution for node: decimal with type Type29
-Did not find solution for node: new StringBuilder() with type Type29
-Did not find solution for node: StringBuilder with type Type29
-Did not find solution for node: StringBuilder with type Type29
-Did not find solution for node: StringBuilder with type Type29
-Did not find solution for node: StringBuilder with type Type29
+For node: decimal=new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: exponential=new StringBuilder("0.")
-Did not find solution for node: exponential=new StringBuilder("0.") with type Type29
-Did not find solution for node: exponential with type Type29
-Did not find solution for node: new StringBuilder("0.") with type Type29
-Did not find solution for node: StringBuilder with type Type29
-Did not find solution for node: StringBuilder with type Type29
+For node: exponential=new StringBuilder("0.") expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: new StringBuilder("0.") expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 For node: "0." expected fqn: java.lang.String with type: Type8 got: java.lang.String
 Cannot find matching typeVariable for: int i=0
 Did not find solution for node: int i=0 with type Type6
@@ -1405,15 +1405,15 @@ Did not find solution for node: i with type Type6
 Did not find solution for node: DECIMAL_LEADING_GROUPS with type Type6
 Did not find solution for node: i++ with type Type6
 Did not find solution for node: i with type Type6
-For node: decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",") expected fqn: java.lang.StringBuilder with type: Type38 got: java.io.Writer
-Did not find solution for node: decimal.append("###") with type Type34
-Did not find solution for node: decimal with type Type29
+Did not find solution for node: decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",") with type Type38
+For node: decimal.append("###") expected fqn: java.lang.StringBuilder with type: Type34 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type34
+For node: append expected fqn: java.lang.StringBuilder with type: Type34 got: java.lang.StringBuilder
 For node: "###" expected fqn: java.lang.String with type: Type8 got: java.lang.String
 Cannot find matching typeVariable for: append
-For node: append expected fqn: java.lang.StringBuilder with type: Type38 got: java.io.Writer
-For node: i == DECIMAL_LEADING_GROUPS - 1 ? "." : "," expected fqn: java.lang.String with type: Type37 got: java.lang.Boolean
+Did not find solution for node: append with type Type38
+Did not find solution for node: i == DECIMAL_LEADING_GROUPS - 1 ? "." : "," with type Type37
 For node: i == DECIMAL_LEADING_GROUPS - 1 expected fqn: boolean with type: Type11 got: boolean
 Did not find solution for node: i with type Type6
 Did not find solution for node: DECIMAL_LEADING_GROUPS - 1 with type Type6
@@ -1433,20 +1433,20 @@ Did not find solution for node: i with type Type6
 Did not find solution for node: decimalPlaces with type Type6
 Did not find solution for node: i++ with type Type6
 Did not find solution for node: i with type Type6
-Did not find solution for node: decimal.append("#") with type Type36
-Did not find solution for node: decimal with type Type29
+For node: decimal.append("#") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type36
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 For node: "#" expected fqn: java.lang.String with type: Type8 got: java.lang.String
-Did not find solution for node: exponential.append("0") with type Type36
-Did not find solution for node: exponential with type Type29
+For node: exponential.append("0") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type36
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 For node: "0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
-Did not find solution for node: exponential.append("E0") with type Type36
-Did not find solution for node: exponential with type Type29
+For node: exponential.append("E0") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type36
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 For node: "E0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
 For node: decimalFormat=new DecimalFormat(decimal.toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
@@ -1454,7 +1454,7 @@ For node: new DecimalFormat(decimal.toString(),separators) expected fqn: java.te
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: decimal.toString() expected fqn: java.lang.String with type: Type41 got: java.lang.String
-Did not find solution for node: decimal with type Type29
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type41 got: java.lang.String
 For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
@@ -1464,10 +1464,10 @@ For node: new DecimalFormat(decimal.append("####").toString(),separators) expect
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: decimal.append("####").toString() expected fqn: java.lang.String with type: Type45 got: java.lang.String
-Did not find solution for node: decimal.append("####") with type Type36
-Did not find solution for node: decimal with type Type29
+For node: decimal.append("####") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type36
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 For node: "####" expected fqn: java.lang.String with type: Type8 got: java.lang.String
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type45 got: java.lang.String
@@ -1478,7 +1478,7 @@ For node: new DecimalFormat(exponential.toString(),separators) expected fqn: jav
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
 For node: exponential.toString() expected fqn: java.lang.String with type: Type49 got: java.lang.String
-Did not find solution for node: exponential with type Type29
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type49 got: java.lang.String
 For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
@@ -2757,7 +2757,7 @@ Cannot find matching typeVariable for: valueOf
 Did not find solution for node: valueOf with type Type89
 For node: groupSeparator expected fqn: char with type: Type5 got: char
 For node: "" expected fqn: java.lang.String with type: Type8 got: java.lang.String
-{Checked=325, Analyzed=234, Unsolved=91, Incorrect=16, Correct=218}
+{Checked=325, Analyzed=265, Unsolved=60, Incorrect=13, Correct=252}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
@@ -2784,20 +2784,20 @@ int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, 
 int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=Assignment: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-java=ClassInstanceCreation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
-java=ConditionalExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=MethodInvocation: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=1, Correct=11}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=21, Analyzed=16, Unsolved=5, Incorrect=0, Correct=16}
 java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=SimpleName: {Checked=101, Analyzed=72, Unsolved=29, Incorrect=1, Correct=71}
-java=SimpleType: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=0, Correct=12}
+java=SimpleName: {Checked=101, Analyzed=90, Unsolved=11, Incorrect=0, Correct=90}
+java=SimpleType: {Checked=21, Analyzed=17, Unsolved=4, Incorrect=0, Correct=17}
 java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
-java=VariableDeclarationFragment: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
 void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 Total stats
-{Checked=325, Analyzed=234, Unsolved=91, Incorrect=16, Correct=218}
+{Checked=325, Analyzed=265, Unsolved=60, Incorrect=13, Correct=252}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
 boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
@@ -2824,15 +2824,15 @@ int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, 
 int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=Assignment: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-java=ClassInstanceCreation: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
-java=ConditionalExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=MethodInvocation: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=1, Correct=11}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=21, Analyzed=16, Unsolved=5, Incorrect=0, Correct=16}
 java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=SimpleName: {Checked=101, Analyzed=72, Unsolved=29, Incorrect=1, Correct=71}
-java=SimpleType: {Checked=21, Analyzed=12, Unsolved=9, Incorrect=0, Correct=12}
+java=SimpleName: {Checked=101, Analyzed=90, Unsolved=11, Incorrect=0, Correct=90}
+java=SimpleType: {Checked=21, Analyzed=17, Unsolved=4, Incorrect=0, Correct=17}
 java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
-java=VariableDeclarationFragment: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
 void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
@@ -2862,15 +2862,15 @@ int,SingleVariableDeclaration,0,2,0,0,2
 int,VariableDeclarationExpression,0,2,0,0,2
 int,VariableDeclarationFragment,0,4,0,0,4
 java,Assignment,11,11,11,0,0
-java,ClassInstanceCreation,4,7,4,0,3
-java,ConditionalExpression,1,1,0,1,0
-java,MethodInvocation,12,21,11,1,9
+java,ClassInstanceCreation,7,7,7,0,0
+java,ConditionalExpression,0,1,0,0,1
+java,MethodInvocation,16,21,16,0,5
 java,QualifiedName,3,3,0,3,0
-java,SimpleName,72,101,71,1,29
-java,SimpleType,12,21,12,0,9
+java,SimpleName,90,101,90,0,11
+java,SimpleType,17,21,17,0,4
 java,SingleVariableDeclaration,3,3,3,0,0
 java,StringLiteral,14,14,14,0,0
-java,VariableDeclarationFragment,5,8,5,0,3
+java,VariableDeclarationFragment,7,8,7,0,1
 void,MethodInvocation,7,7,7,0,0
 void,PrimitiveType,2,2,2,0,0
 void,SimpleName,7,7,7,0,0

@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime13.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime13.java
 Expect check=147
 Cannot find matching typeVariable for: public class JodaTime13 {
   public static void main(  String[] args){
@@ -648,11 +648,11 @@ public static class OurDateTimeFormatter {
   }
 }
 
-For node: PeriodFormatter expected fqn: org.joda.time.format.PeriodFormatter with type: Type58 got: org.joda.time.format.PeriodFormatter
-For node: PeriodFormatter expected fqn: org.joda.time.format.PeriodFormatter with type: Type58 got: org.joda.time.format.PeriodFormatter
+Did not find solution for node: PeriodFormatter with type Type58
+Did not find solution for node: PeriodFormatter with type Type58
 Cannot find matching typeVariable for: dateFormat=new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2).toFormatter()
-For node: dateFormat=new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2).toFormatter() expected fqn: org.joda.time.format.PeriodFormatter with type: Type58 got: org.joda.time.format.PeriodFormatter
-For node: dateFormat expected fqn: org.joda.time.format.PeriodFormatter with type: Type58 got: org.joda.time.format.PeriodFormatter
+Did not find solution for node: dateFormat=new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2).toFormatter() with type Type58
+Did not find solution for node: dateFormat with type Type58
 For node: new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2).toFormatter() expected fqn: org.joda.time.format.PeriodFormatter with type: Type88 got: org.joda.time.format.PeriodFormatter
 For node: new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds().minimumPrintedDigits(2) expected fqn: org.joda.time.format.PeriodFormatterBuilder with type: Type85 got: org.joda.time.format.PeriodFormatterBuilder
 Did not find solution for node: new PeriodFormatterBuilder().appendDays().appendSuffix(" day"," days").appendSeparator(" ").appendHours().appendSeparator(":").appendMinutes().minimumPrintedDigits(2).appendSeparator(":").appendSeconds() with type Type83
@@ -782,18 +782,18 @@ Cannot find matching typeVariable for: long millis
 For node: long millis expected fqn: long with type: Type90 got: long
 For node: long expected fqn: long with type: Type90 got: long
 For node: millis expected fqn: long with type: Type90 got: long
-For node: dateFormat.print(new Period(millis).normalizedStandard()) expected fqn: java.lang.String with type: Type96 got: java.lang.String
-For node: dateFormat expected fqn: org.joda.time.format.PeriodFormatter with type: Type58 got: org.joda.time.format.PeriodFormatter
+Did not find solution for node: dateFormat.print(new Period(millis).normalizedStandard()) with type Type96
+Did not find solution for node: dateFormat with type Type58
 Cannot find matching typeVariable for: print
-For node: print expected fqn: java.lang.String with type: Type96 got: java.lang.String
-For node: new Period(millis).normalizedStandard() expected fqn: org.joda.time.Period with type: Type94 got: org.joda.time.Period
+Did not find solution for node: print with type Type96
+Did not find solution for node: new Period(millis).normalizedStandard() with type Type94
 For node: new Period(millis) expected fqn: org.joda.time.Period with type: Type91 got: org.joda.time.Period
 For node: Period expected fqn: org.joda.time.Period with type: Type91 got: org.joda.time.Period
 For node: Period expected fqn: org.joda.time.Period with type: Type91 got: org.joda.time.Period
 For node: millis expected fqn: long with type: Type90 got: long
 Cannot find matching typeVariable for: normalizedStandard
-For node: normalizedStandard expected fqn: org.joda.time.Period with type: Type94 got: org.joda.time.Period
-{Checked=137, Analyzed=56, Unsolved=81, Incorrect=0, Correct=56}
+Did not find solution for node: normalizedStandard with type Type94
+{Checked=137, Analyzed=47, Unsolved=90, Incorrect=0, Correct=47}
 =MarkerAnnotation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 =SimpleName: {Checked=12, Analyzed=5, Unsolved=7, Incorrect=0, Correct=5}
 int=InfixExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
@@ -803,8 +803,8 @@ int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
 java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
@@ -812,15 +812,15 @@ long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 long=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-org.joda.time.=MethodInvocation: {Checked=12, Analyzed=3, Unsolved=9, Incorrect=0, Correct=3}
-org.joda.time.=SimpleName: {Checked=17, Analyzed=8, Unsolved=9, Incorrect=0, Correct=8}
-org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 void=MethodInvocation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 Total stats
-{Checked=137, Analyzed=56, Unsolved=81, Incorrect=0, Correct=56}
+{Checked=137, Analyzed=47, Unsolved=90, Incorrect=0, Correct=47}
 =MarkerAnnotation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 =SimpleName: {Checked=12, Analyzed=5, Unsolved=7, Incorrect=0, Correct=5}
 int=InfixExpression: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
@@ -830,8 +830,8 @@ int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
 java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
@@ -839,10 +839,10 @@ long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 long=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-org.joda.time.=MethodInvocation: {Checked=12, Analyzed=3, Unsolved=9, Incorrect=0, Correct=3}
-org.joda.time.=SimpleName: {Checked=17, Analyzed=8, Unsolved=9, Incorrect=0, Correct=8}
-org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=17, Analyzed=4, Unsolved=13, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 void=MethodInvocation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
@@ -855,8 +855,8 @@ int,PrimitiveType,0,2,0,0,2
 int,SimpleName,0,4,0,0,4
 int,VariableDeclarationFragment,0,2,0,0,2
 java,ArrayType,1,1,1,0,0
-java,MethodInvocation,1,6,1,0,5
-java,SimpleName,4,9,4,0,5
+java,MethodInvocation,0,6,0,0,6
+java,SimpleName,3,9,3,0,6
 java,SimpleType,2,2,2,0,0
 java,SingleVariableDeclaration,1,1,1,0,0
 java,StringLiteral,10,10,10,0,0
@@ -864,10 +864,10 @@ long,PrimitiveType,1,1,1,0,0
 long,SimpleName,2,2,2,0,0
 long,SingleVariableDeclaration,1,1,1,0,0
 org.joda.time.,ClassInstanceCreation,2,2,2,0,0
-org.joda.time.,MethodInvocation,3,12,3,0,9
-org.joda.time.,SimpleName,8,17,8,0,9
-org.joda.time.,SimpleType,3,3,3,0,0
-org.joda.time.,VariableDeclarationFragment,1,1,1,0,0
+org.joda.time.,MethodInvocation,2,12,2,0,10
+org.joda.time.,SimpleName,4,17,4,0,13
+org.joda.time.,SimpleType,2,3,2,0,1
+org.joda.time.,VariableDeclarationFragment,0,1,0,0,1
 void,MethodInvocation,0,5,0,0,5
 void,PrimitiveType,6,6,6,0,0
 void,SimpleName,0,5,0,0,5

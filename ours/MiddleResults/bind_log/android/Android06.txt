@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android06.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android06.java
 Expect check=42
 Cannot find matching typeVariable for: public class Android06 {
   public static void main(  String[] args){
@@ -66,20 +66,20 @@ For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.l
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: LinearLayout expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
-For node: LinearLayout expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
+Did not find solution for node: LinearLayout with type Type5
+Did not find solution for node: LinearLayout with type Type5
 Cannot find matching typeVariable for: zoomView=null
-For node: zoomView=null expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
-For node: zoomView expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
-For node: null expected fqn: null with type: Type6 got: android.widget.LinearLayout
-For node: zoomView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)) expected fqn: void with type: Type16 got: void
-For node: zoomView expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
+Did not find solution for node: zoomView=null with type Type5
+Did not find solution for node: zoomView with type Type5
+Did not find solution for node: null with type Type6
+Did not find solution for node: zoomView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT)) with type Type14
+Did not find solution for node: zoomView with type Type5
 Cannot find matching typeVariable for: setLayoutParams
-For node: setLayoutParams expected fqn: void with type: Type16 got: void
+Did not find solution for node: setLayoutParams with type Type14
 Did not find solution for node: new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT) with type Type7
 Did not find solution for node: ViewGroup.LayoutParams with type Type7
 Did not find solution for node: ViewGroup.LayoutParams with type Type7
-For node: ViewGroup expected fqn: android.view.ViewGroup with type: Type8 got: android.view.ViewGroup
+Did not find solution for node: ViewGroup with type Type8
 Cannot find matching typeVariable for: LayoutParams
 Did not find solution for node: LayoutParams with type Type7
 Cannot find matching typeVariable for: ViewGroup.LayoutParams.WRAP_CONTENT
@@ -87,78 +87,78 @@ Did not find solution for node: ViewGroup.LayoutParams.WRAP_CONTENT with type Ty
 Cannot find matching typeVariable for: ViewGroup.LayoutParams
 Cannot find matching typeVariable for: ViewGroup.LayoutParams.WRAP_CONTENT
 Did not find solution for node: ViewGroup.LayoutParams with type Type7
-For node: ViewGroup expected fqn: android.view.ViewGroup with type: Type8 got: android.view.ViewGroup
-For node: LayoutParams expected fqn: android.view.ViewGroup.LayoutParams with type: Type9 got: android.view.ViewGroup$LayoutParams
-For node: WRAP_CONTENT expected fqn: int with type: Type10 got: int
+Did not find solution for node: ViewGroup with type Type8
+Did not find solution for node: LayoutParams with type Type9
+Did not find solution for node: WRAP_CONTENT with type Type10
 Cannot find matching typeVariable for: ViewGroup.LayoutParams.WRAP_CONTENT
 Did not find solution for node: ViewGroup.LayoutParams.WRAP_CONTENT with type Type7
 Cannot find matching typeVariable for: ViewGroup.LayoutParams
 Cannot find matching typeVariable for: ViewGroup.LayoutParams.WRAP_CONTENT
 Did not find solution for node: ViewGroup.LayoutParams with type Type7
-For node: ViewGroup expected fqn: android.view.ViewGroup with type: Type8 got: android.view.ViewGroup
-For node: LayoutParams expected fqn: android.view.ViewGroup.LayoutParams with type: Type11 got: android.view.ViewGroup$LayoutParams
-For node: WRAP_CONTENT expected fqn: int with type: Type12 got: int
-For node: zoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL) expected fqn: void with type: Type22 got: void
-For node: zoomView expected fqn: android.widget.LinearLayout with type: Type5 got: android.widget.LinearLayout
+Did not find solution for node: ViewGroup with type Type8
+Did not find solution for node: LayoutParams with type Type9
+Did not find solution for node: WRAP_CONTENT with type Type10
+Did not find solution for node: zoomView.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL) with type Type20
+Did not find solution for node: zoomView with type Type5
 Cannot find matching typeVariable for: setGravity
-For node: setGravity expected fqn: void with type: Type22 got: void
-For node: Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL expected fqn: int with type: Type20 got: int
+Did not find solution for node: setGravity with type Type20
+Did not find solution for node: Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL with type Type18
 Cannot find matching typeVariable for: Gravity.BOTTOM
-For node: Gravity.BOTTOM expected fqn: int with type: Type20 got: int
-For node: Gravity expected fqn: android.view.Gravity with type: Type19 got: android.view.Gravity
-For node: BOTTOM expected fqn: int with type: Type20 got: int
+Did not find solution for node: Gravity.BOTTOM with type Type18
+For node: Gravity expected fqn: android.view.Gravity with type: Type17 got: android.view.Gravity
+Did not find solution for node: BOTTOM with type Type18
 Cannot find matching typeVariable for: Gravity.CENTER_HORIZONTAL
-For node: Gravity.CENTER_HORIZONTAL expected fqn: int with type: Type20 got: int
-For node: Gravity expected fqn: android.view.Gravity with type: Type19 got: android.view.Gravity
-For node: CENTER_HORIZONTAL expected fqn: int with type: Type21 got: int
-{Checked=39, Analyzed=31, Unsolved=8, Incorrect=3, Correct=28}
+Did not find solution for node: Gravity.CENTER_HORIZONTAL with type Type18
+For node: Gravity expected fqn: android.view.Gravity with type: Type17 got: android.view.Gravity
+Did not find solution for node: CENTER_HORIZONTAL with type Type19
+{Checked=39, Analyzed=8, Unsolved=31, Incorrect=0, Correct=8}
 android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=12, Analyzed=11, Unsolved=1, Incorrect=2, Correct=9}
-android.=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=QualifiedName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+android.=SimpleName: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=0, Correct=2}
+android.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 Total stats
-{Checked=39, Analyzed=31, Unsolved=8, Incorrect=3, Correct=28}
+{Checked=39, Analyzed=8, Unsolved=31, Incorrect=0, Correct=8}
 android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 android.=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-android.=SimpleName: {Checked=12, Analyzed=11, Unsolved=1, Incorrect=2, Correct=9}
-android.=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=QualifiedName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+android.=SimpleName: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=0, Correct=2}
+android.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 android.,ClassInstanceCreation,0,1,0,0,1
 android.,QualifiedName,0,3,0,0,3
-android.,SimpleName,11,12,9,2,1
-android.,SimpleType,1,2,1,0,1
-android.,VariableDeclarationFragment,1,1,1,0,0
-int,InfixExpression,1,1,1,0,0
-int,QualifiedName,2,4,2,0,2
-int,SimpleName,4,4,4,0,0
+android.,SimpleName,2,12,2,0,10
+android.,SimpleType,0,2,0,0,2
+android.,VariableDeclarationFragment,0,1,0,0,1
+int,InfixExpression,0,1,0,0,1
+int,QualifiedName,0,4,0,0,4
+int,SimpleName,0,4,0,0,4
 java,ArrayType,1,1,1,0,0
 java,SimpleName,2,2,2,0,0
 java,SimpleType,1,1,1,0,0
 java,SingleVariableDeclaration,1,1,1,0,0
-null,NullLiteral,1,1,0,1,0
-void,MethodInvocation,2,2,2,0,0
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,0,2,0,0,2
 void,PrimitiveType,1,1,1,0,0
-void,SimpleName,2,2,2,0,0
+void,SimpleName,0,2,0,0,2

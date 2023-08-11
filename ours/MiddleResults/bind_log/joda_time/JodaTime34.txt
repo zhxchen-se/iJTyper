@@ -1,0 +1,192 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime34.java
+Expect check=52
+Cannot find matching typeVariable for: public class JodaTime34 {
+  public static void main(  String[] args){
+    Locale.setDefault(Locale.GERMAN);
+    final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+    final Period period=new Period(6,5,4,3);
+    final String s=period.toString(periodFormatter);
+    System.out.println("s = " + s);
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime34
+Cannot find matching typeVariable for: public class JodaTime34 {
+  public static void main(  String[] args){
+    Locale.setDefault(Locale.GERMAN);
+    final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+    final Period period=new Period(6,5,4,3);
+    final String s=period.toString(periodFormatter);
+    System.out.println("s = " + s);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.format.PeriodFormat;
+import org.joda.time.format.PeriodFormatter;
+import java.util.Locale;
+public class JodaTime34 {
+  public static void main(  String[] args){
+    Locale.setDefault(Locale.GERMAN);
+    final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+    final Period period=new Period(6,5,4,3);
+    final String s=period.toString(periodFormatter);
+    System.out.println("s = " + s);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  Locale.setDefault(Locale.GERMAN);
+  final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+  final Period period=new Period(6,5,4,3);
+  final String s=period.toString(periodFormatter);
+  System.out.println("s = " + s);
+}
+
+Cannot find matching typeVariable for: public class JodaTime34 {
+  public static void main(  String[] args){
+    Locale.setDefault(Locale.GERMAN);
+    final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+    final Period period=new Period(6,5,4,3);
+    final String s=period.toString(periodFormatter);
+    System.out.println("s = " + s);
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.format.PeriodFormat;
+import org.joda.time.format.PeriodFormatter;
+import java.util.Locale;
+public class JodaTime34 {
+  public static void main(  String[] args){
+    Locale.setDefault(Locale.GERMAN);
+    final PeriodFormatter periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH);
+    final Period period=new Period(6,5,4,3);
+    final String s=period.toString(periodFormatter);
+    System.out.println("s = " + s);
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: Locale.setDefault(Locale.GERMAN) expected fqn: void with type: Type7 got: void
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+Cannot find matching typeVariable for: setDefault
+For node: setDefault expected fqn: void with type: Type7 got: void
+Cannot find matching typeVariable for: Locale.GERMAN
+For node: Locale.GERMAN expected fqn: java.util.Locale with type: Type7 got: void
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: GERMAN expected fqn: java.util.Locale with type: Type6 got: java.util.Locale
+Did not find solution for node: PeriodFormatter with type Type10
+Did not find solution for node: PeriodFormatter with type Type10
+Cannot find matching typeVariable for: periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH)
+Did not find solution for node: periodFormatter=PeriodFormat.wordBased(Locale.ENGLISH) with type Type10
+Did not find solution for node: periodFormatter with type Type10
+Did not find solution for node: PeriodFormat.wordBased(Locale.ENGLISH) with type Type13
+Did not find solution for node: PeriodFormat with type Type11
+Cannot find matching typeVariable for: wordBased
+Did not find solution for node: wordBased with type Type13
+Cannot find matching typeVariable for: Locale.ENGLISH
+Did not find solution for node: Locale.ENGLISH with type Type13
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: ENGLISH expected fqn: java.util.Locale with type: Type12 got: java.util.Locale
+Did not find solution for node: Period with type Type16
+Did not find solution for node: Period with type Type16
+Cannot find matching typeVariable for: period=new Period(6,5,4,3)
+Did not find solution for node: period=new Period(6,5,4,3) with type Type16
+Did not find solution for node: period with type Type16
+Did not find solution for node: new Period(6,5,4,3) with type Type16
+Did not find solution for node: Period with type Type16
+Did not find solution for node: Period with type Type16
+Did not find solution for node: 6 with type Type17
+Did not find solution for node: 5 with type Type17
+Did not find solution for node: 4 with type Type17
+Did not find solution for node: 3 with type Type17
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: s=period.toString(periodFormatter)
+For node: s=period.toString(periodFormatter) expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: s expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: period.toString(periodFormatter) expected fqn: java.lang.String with type: Type23 got: java.lang.String
+Did not find solution for node: period with type Type16
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type23 got: java.lang.String
+Did not find solution for node: periodFormatter with type Type10
+For node: System.out.println("s = " + s) expected fqn: void with type: Type29 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type29 got: void
+For node: System expected fqn: java.lang.System with type: Type27 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type28 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type29 got: void
+For node: "s = " + s expected fqn: java.lang.String with type: Type26 got: java.lang.String
+For node: "s = " expected fqn: java.lang.String with type: Type26 got: java.lang.String
+For node: s expected fqn: java.lang.String with type: Type3 got: java.lang.String
+{Checked=49, Analyzed=28, Unsolved=21, Incorrect=2, Correct=26}
+int=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=49, Analyzed=28, Unsolved=21, Incorrect=2, Correct=26}
+int=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int,NumberLiteral,0,4,0,0,4
+java,ArrayType,1,1,1,0,0
+java,InfixExpression,1,1,1,0,0
+java,MethodInvocation,1,1,1,0,0
+java,QualifiedName,2,3,0,2,1
+java,SimpleName,13,13,13,0,0
+java,SimpleType,2,2,2,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,0,1,0,0,1
+org.joda.time.,MethodInvocation,0,1,0,0,1
+org.joda.time.,SimpleName,0,9,0,0,9
+org.joda.time.,SimpleType,0,3,0,0,3
+org.joda.time.,VariableDeclarationFragment,0,2,0,0,2
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

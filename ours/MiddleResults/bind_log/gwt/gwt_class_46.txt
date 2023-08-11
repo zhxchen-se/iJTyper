@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_46.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_46.java
 Expect check=59
 Cannot find matching typeVariable for: public class gwt_class_46 {
   public static void main(  String arg[]){
@@ -53,7 +53,7 @@ public class gwt_class_46 {
   }
 }
 
-For node: void expected fqn: void with type: Type2 got: void
+Did not find solution for node: void with type Type2
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: public static void main(String arg[]){
   VerticalPanel eventDetailWindow=new VerticalPanel();
@@ -107,107 +107,107 @@ For node: String arg[] expected fqn: java.lang.String[] with type: Type3 got: ja
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: arg expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: VerticalPanel with type Type5
+Did not find solution for node: VerticalPanel with type Type5
 Cannot find matching typeVariable for: eventDetailWindow=new VerticalPanel()
-For node: eventDetailWindow=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: eventDetailWindow expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: DialogBox expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: DialogBox expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
+Did not find solution for node: eventDetailWindow=new VerticalPanel() with type Type5
+Did not find solution for node: eventDetailWindow with type Type5
+Did not find solution for node: new VerticalPanel() with type Type5
+Did not find solution for node: VerticalPanel with type Type5
+Did not find solution for node: VerticalPanel with type Type5
+Did not find solution for node: DialogBox with type Type7
+Did not find solution for node: DialogBox with type Type7
 Cannot find matching typeVariable for: dialogBox2=new DialogBox()
-For node: dialogBox2=new DialogBox() expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: dialogBox2 expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: new DialogBox() expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: DialogBox expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: DialogBox expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: dialogBox2.setText("Event Detail") expected fqn: void with type: Type10 got: void
-For node: dialogBox2 expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
+Did not find solution for node: dialogBox2=new DialogBox() with type Type7
+Did not find solution for node: dialogBox2 with type Type7
+Did not find solution for node: new DialogBox() with type Type7
+Did not find solution for node: DialogBox with type Type7
+Did not find solution for node: DialogBox with type Type7
+Did not find solution for node: dialogBox2.setText("Event Detail") with type Type10
+Did not find solution for node: dialogBox2 with type Type7
 Cannot find matching typeVariable for: setText
-For node: setText expected fqn: void with type: Type10 got: void
-For node: "Event Detail" expected fqn: java.lang.String with type: Type9 got: java.lang.String
-No match for actual type MethodInvocation: dialogBox2.setAnimationEnabled(true) with type: Type14 got: void
-For node: dialogBox2 expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
-For node: true expected fqn: boolean with type: Type13 got: boolean
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
+Did not find solution for node: setText with type Type10
+Did not find solution for node: "Event Detail" with type Type9
+No match for actual type MethodInvocation: dialogBox2.setAnimationEnabled(true) and also not find solution for: Type14
+Did not find solution for node: dialogBox2 with type Type7
+Did not find solution for node: true with type Type13
+Did not find solution for node: HTML with type Type17
+Did not find solution for node: HTML with type Type17
 Cannot find matching typeVariable for: serverResponse3=new HTML("<b> ok, this is working</b>")
-For node: serverResponse3=new HTML("<b> ok, this is working</b>") expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: serverResponse3 expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: new HTML("<b> ok, this is working</b>") expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: "<b> ok, this is working</b>" expected fqn: java.lang.String with type: Type9 got: java.lang.String
-For node: serverResponse3.addStyleName("detailView") expected fqn: void with type: Type20 got: void
-For node: serverResponse3 expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
+Did not find solution for node: serverResponse3=new HTML("<b> ok, this is working</b>") with type Type17
+Did not find solution for node: serverResponse3 with type Type17
+Did not find solution for node: new HTML("<b> ok, this is working</b>") with type Type17
+Did not find solution for node: HTML with type Type17
+Did not find solution for node: HTML with type Type17
+Did not find solution for node: "<b> ok, this is working</b>" with type Type9
+Did not find solution for node: serverResponse3.addStyleName("detailView") with type Type20
+Did not find solution for node: serverResponse3 with type Type17
 Cannot find matching typeVariable for: addStyleName
-For node: addStyleName expected fqn: void with type: Type20 got: void
-For node: "detailView" expected fqn: java.lang.String with type: Type9 got: java.lang.String
-For node: eventDetailWindow.add(serverResponse3) expected fqn: void with type: Type23 got: void
-For node: eventDetailWindow expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: addStyleName with type Type20
+Did not find solution for node: "detailView" with type Type9
+Did not find solution for node: eventDetailWindow.add(serverResponse3) with type Type23
+Did not find solution for node: eventDetailWindow with type Type5
 Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type23 got: void
-For node: serverResponse3 expected fqn: com.google.gwt.user.client.ui.HTML with type: Type17 got: com.google.gwt.user.client.ui.HTML
-For node: eventDetailWindow.addStyleName("detailWindow") expected fqn: void with type: Type26 got: void
-For node: eventDetailWindow expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: add with type Type23
+Did not find solution for node: serverResponse3 with type Type17
+Did not find solution for node: eventDetailWindow.addStyleName("detailWindow") with type Type26
+Did not find solution for node: eventDetailWindow with type Type5
 Cannot find matching typeVariable for: addStyleName
-For node: addStyleName expected fqn: void with type: Type26 got: void
-For node: "detailWindow" expected fqn: java.lang.String with type: Type9 got: java.lang.String
-For node: dialogBox2.setWidget(eventDetailWindow) expected fqn: void with type: Type29 got: void
-For node: dialogBox2 expected fqn: com.google.gwt.user.client.ui.DialogBox with type: Type7 got: com.google.gwt.user.client.ui.DialogBox
+Did not find solution for node: addStyleName with type Type26
+Did not find solution for node: "detailWindow" with type Type9
+Did not find solution for node: dialogBox2.setWidget(eventDetailWindow) with type Type29
+Did not find solution for node: dialogBox2 with type Type7
 Cannot find matching typeVariable for: setWidget
-For node: setWidget expected fqn: void with type: Type29 got: void
-For node: eventDetailWindow expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: RootPanel.get("detailWindow").add(eventDetailWindow) expected fqn: void with type: Type36 got: void
-For node: RootPanel.get("detailWindow") expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type33 got: com.google.gwt.user.client.ui.Panel
+Did not find solution for node: setWidget with type Type29
+Did not find solution for node: eventDetailWindow with type Type5
+Did not find solution for node: RootPanel.get("detailWindow").add(eventDetailWindow) with type Type36
+Did not find solution for node: RootPanel.get("detailWindow") with type Type33
 For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type32 got: com.google.gwt.user.client.ui.RootPanel
 Cannot find matching typeVariable for: get
-For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type33 got: com.google.gwt.user.client.ui.Panel
-For node: "detailWindow" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+Did not find solution for node: get with type Type33
+Did not find solution for node: "detailWindow" with type Type9
 Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type36 got: void
-For node: eventDetailWindow expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
-{Checked=56, Analyzed=56, Unsolved=0, Incorrect=3, Correct=53}
-boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=1, Correct=19}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Did not find solution for node: add with type Type36
+Did not find solution for node: eventDetailWindow with type Type5
+{Checked=56, Analyzed=5, Unsolved=51, Incorrect=1, Correct=4}
+boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=20, Analyzed=1, Unsolved=19, Incorrect=0, Correct=1}
+gwt.=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 Total stats
-{Checked=56, Analyzed=56, Unsolved=0, Incorrect=3, Correct=53}
-boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=1, Correct=19}
-gwt.=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+{Checked=56, Analyzed=5, Unsolved=51, Incorrect=1, Correct=4}
+boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=20, Analyzed=1, Unsolved=19, Incorrect=0, Correct=1}
+gwt.=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-boolean,BooleanLiteral,1,1,1,0,0
-gwt.,ClassInstanceCreation,3,3,3,0,0
-gwt.,MethodInvocation,1,1,0,1,0
-gwt.,SimpleName,20,20,19,1,0
-gwt.,SimpleType,6,6,6,0,0
-gwt.,VariableDeclarationFragment,3,3,3,0,0
+java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+boolean,BooleanLiteral,0,1,0,0,1
+gwt.,ClassInstanceCreation,0,3,0,0,3
+gwt.,MethodInvocation,0,1,0,0,1
+gwt.,SimpleName,1,20,1,0,19
+gwt.,SimpleType,0,6,0,0,6
+gwt.,VariableDeclarationFragment,0,3,0,0,3
 java,SimpleName,2,2,2,0,0
 java,SimpleType,1,1,1,0,0
 java,SingleVariableDeclaration,1,1,0,1,0
-java,StringLiteral,5,5,5,0,0
-void,MethodInvocation,6,6,6,0,0
-void,PrimitiveType,1,1,1,0,0
-void,SimpleName,6,6,6,0,0
+java,StringLiteral,0,5,0,0,5
+void,MethodInvocation,0,6,0,0,6
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,6,0,0,6

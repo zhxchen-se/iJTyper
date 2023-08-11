@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_43.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_43.java
 Expect check=198
 Cannot find matching typeVariable for: public class xstream_class_43 {
   public List<Book> books;
@@ -334,18 +334,18 @@ public static class Book {
   }
 }
 
-Did not find solution for node: StringBuilder with type Type36
-Did not find solution for node: StringBuilder with type Type36
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: b=new StringBuilder()
-Did not find solution for node: b=new StringBuilder() with type Type36
-Did not find solution for node: b with type Type36
-Did not find solution for node: new StringBuilder() with type Type36
-Did not find solution for node: StringBuilder with type Type36
-Did not find solution for node: StringBuilder with type Type36
-Did not find solution for node: b.append("Library with " + books.size() + " books:\n") with type Type43
-Did not find solution for node: b with type Type36
+For node: b=new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: b expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: b.append("Library with " + books.size() + " books:\n") expected fqn: java.lang.StringBuilder with type: Type43 got: java.lang.StringBuilder
+For node: b expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type43
+For node: append expected fqn: java.lang.StringBuilder with type: Type43 got: java.lang.StringBuilder
 For node: "Library with " + books.size() + " books:\n" expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: "Library with " expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: books.size() expected fqn: int with type: Type39 got: java.lang.String
@@ -466,21 +466,21 @@ public static class Book {
   }
 }
 
-Did not find solution for node: b.append(book.toString()) with type Type47
-Did not find solution for node: b with type Type36
+For node: b.append(book.toString()) expected fqn: java.lang.StringBuilder with type: Type47 got: java.lang.StringBuilder
+For node: b expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type47
-Did not find solution for node: book.toString() with type Type46
+For node: append expected fqn: java.lang.StringBuilder with type: Type47 got: java.lang.StringBuilder
+For node: book.toString() expected fqn: java.lang.String with type: Type46 got: java.lang.String
 Did not find solution for node: book with type Type1
 Cannot find matching typeVariable for: toString
-Did not find solution for node: toString with type Type46
-Did not find solution for node: b.append("\n") with type Type45
-Did not find solution for node: b with type Type36
+For node: toString expected fqn: java.lang.String with type: Type46 got: java.lang.String
+For node: b.append("\n") expected fqn: java.lang.StringBuilder with type: Type45 got: java.lang.StringBuilder
+For node: b expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: append
-Did not find solution for node: append with type Type45
+For node: append expected fqn: java.lang.StringBuilder with type: Type45 got: java.lang.StringBuilder
 For node: "\n" expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: b.toString() expected fqn: java.lang.String with type: Type50 got: java.lang.String
-Did not find solution for node: b with type Type36
+For node: b expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
 Cannot find matching typeVariable for: toString
 For node: toString expected fqn: java.lang.String with type: Type50 got: java.lang.String
 Cannot find matching typeVariable for: public static class Book {
@@ -931,7 +931,7 @@ For node: title expected fqn: java.lang.String with type: Type38 got: java.lang.
 For node: "\" by " expected fqn: java.lang.String with type: Type38 got: java.lang.String
 Cannot find matching typeVariable for: author
 For node: author expected fqn: java.lang.String with type: Type38 got: java.lang.String
-For node: void expected fqn: void with type: Type6 got: void
+Did not find solution for node: void with type Type6
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: public static void main(String[] args){
   List<Book> books=new ArrayList<Book>();
@@ -1066,26 +1066,26 @@ Did not find solution for node: new xstream_class_43(books) with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
 Did not find solution for node: books with type Type34=Type33<Type1>
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: XStream with type Type68
+Did not find solution for node: XStream with type Type68
 Cannot find matching typeVariable for: stream=new XStream(new DomDriver())
-For node: stream=new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
-For node: new DomDriver() expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type69 got: com.thoughtworks.xstream.io.xml.DomDriver
-For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type69 got: com.thoughtworks.xstream.io.xml.DomDriver
-For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type69 got: com.thoughtworks.xstream.io.xml.DomDriver
+Did not find solution for node: stream=new XStream(new DomDriver()) with type Type68
+Did not find solution for node: stream with type Type68
+Did not find solution for node: new XStream(new DomDriver()) with type Type68
+Did not find solution for node: XStream with type Type68
+Did not find solution for node: XStream with type Type68
+Did not find solution for node: new DomDriver() with type Type69
+Did not find solution for node: DomDriver with type Type69
+Did not find solution for node: DomDriver with type Type69
 For node: String expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type38 got: java.lang.String
 Cannot find matching typeVariable for: xml=stream.toXML(lib)
 For node: xml=stream.toXML(lib) expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: xml expected fqn: java.lang.String with type: Type38 got: java.lang.String
-For node: stream.toXML(lib) expected fqn: java.lang.String with type: Type73 got: java.lang.String
-For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: stream.toXML(lib) with type Type73
+Did not find solution for node: stream with type Type68
 Cannot find matching typeVariable for: toXML
-For node: toXML expected fqn: java.lang.String with type: Type73 got: java.lang.String
+Did not find solution for node: toXML with type Type73
 Did not find solution for node: lib with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
@@ -1095,15 +1095,15 @@ Did not find solution for node: lib2 with type Type2
 Did not find solution for node: (xstream_class_43)stream.fromXML(xml) with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
 Did not find solution for node: xstream_class_43 with type Type2
-For node: stream.fromXML(xml) expected fqn: java.lang.Object with type: Type76 got: java.lang.Object
-For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type68 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: stream.fromXML(xml) with type Type76
+Did not find solution for node: stream with type Type68
 Cannot find matching typeVariable for: fromXML
-For node: fromXML expected fqn: java.lang.Object with type: Type76 got: java.lang.Object
+Did not find solution for node: fromXML with type Type76
 For node: xml expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: System.out.println(xml) expected fqn: void with type: Type81 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type81 got: void
-Did not find solution for node: System with type Type79
+For node: System expected fqn: java.lang.System with type: Type79 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type80 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type81 got: void
@@ -1111,40 +1111,40 @@ For node: xml expected fqn: java.lang.String with type: Type38 got: java.lang.St
 For node: System.out.println(lib) expected fqn: void with type: Type84 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type84 got: void
-Did not find solution for node: System with type Type79
+For node: System expected fqn: java.lang.System with type: Type79 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type80 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type84 got: void
 Did not find solution for node: lib with type Type2
-For node: System.out.println(lib2) expected fqn: void with type: Type86 got: void
+Did not find solution for node: System.out.println(lib2) with type Type86
 Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type86 got: void
-Did not find solution for node: System with type Type79
+Did not find solution for node: System.out with type Type86
+For node: System expected fqn: java.lang.System with type: Type79 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type80 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type86 got: void
+Did not find solution for node: println with type Type86
 Did not find solution for node: lib2 with type Type2
 For node: System.out.println("Libraries equal: " + lib.toString().equals(lib2.toString())) expected fqn: void with type: Type83 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type83 got: void
-Did not find solution for node: System with type Type79
+For node: System expected fqn: java.lang.System with type: Type79 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type80 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type83 got: void
 For node: "Libraries equal: " + lib.toString().equals(lib2.toString()) expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: "Libraries equal: " expected fqn: java.lang.String with type: Type38 got: java.lang.String
 For node: lib.toString().equals(lib2.toString()) expected fqn: boolean with type: Type89 got: java.lang.String
-Did not find solution for node: lib.toString() with type Type87
+For node: lib.toString() expected fqn: java.lang.String with type: Type87 got: java.lang.String
 Did not find solution for node: lib with type Type2
 Cannot find matching typeVariable for: toString
-Did not find solution for node: toString with type Type87
+For node: toString expected fqn: java.lang.String with type: Type87 got: java.lang.String
 Cannot find matching typeVariable for: equals
 For node: equals expected fqn: boolean with type: Type89 got: java.lang.String
-Did not find solution for node: lib2.toString() with type Type88
+For node: lib2.toString() expected fqn: java.lang.String with type: Type88 got: java.lang.String
 Did not find solution for node: lib2 with type Type2
 Cannot find matching typeVariable for: toString
-Did not find solution for node: toString with type Type88
-{Checked=187, Analyzed=101, Unsolved=86, Incorrect=16, Correct=85}
+For node: toString expected fqn: java.lang.String with type: Type88 got: java.lang.String
+{Checked=187, Analyzed=108, Unsolved=79, Incorrect=15, Correct=93}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleName: {Checked=21, Analyzed=0, Unsolved=21, Incorrect=0, Correct=0}
@@ -1154,31 +1154,31 @@ Did not find solution for node: toString with type Type88
 =VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-com.thoughtworks.xstream.=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
 java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=57, Analyzed=33, Unsolved=24, Incorrect=4, Correct=29}
-java=SimpleType: {Checked=14, Analyzed=12, Unsolved=2, Incorrect=4, Correct=8}
+java=QualifiedName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=57, Analyzed=48, Unsolved=9, Incorrect=4, Correct=44}
+java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=4, Correct=10}
 java=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
-java=VariableDeclarationFragment: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
-void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 Total stats
-{Checked=187, Analyzed=101, Unsolved=86, Incorrect=16, Correct=85}
+{Checked=187, Analyzed=108, Unsolved=79, Incorrect=15, Correct=93}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 =SimpleName: {Checked=21, Analyzed=0, Unsolved=21, Incorrect=0, Correct=0}
@@ -1188,29 +1188,29 @@ Total stats
 =VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
 boolean=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-com.thoughtworks.xstream.=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=9, Analyzed=3, Unsolved=6, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
 java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=57, Analyzed=33, Unsolved=24, Incorrect=4, Correct=29}
-java=SimpleType: {Checked=14, Analyzed=12, Unsolved=2, Incorrect=4, Correct=8}
+java=QualifiedName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=57, Analyzed=48, Unsolved=9, Incorrect=4, Correct=44}
+java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=4, Correct=10}
 java=SingleVariableDeclaration: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
-java=VariableDeclarationFragment: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
-void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
 ,CastExpression,0,1,0,0,1
 ,ClassInstanceCreation,0,2,0,0,2
 ,SimpleName,0,21,0,0,21
@@ -1220,26 +1220,26 @@ void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
 ,VariableDeclarationFragment,0,2,0,0,2
 boolean,MethodInvocation,1,2,0,1,1
 boolean,SimpleName,1,2,0,1,1
-com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
-com.thoughtworks.xstream.,SimpleName,6,6,6,0,0
-com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
-com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,0,2,0,0,2
+com.thoughtworks.xstream.,SimpleName,0,6,0,0,6
+com.thoughtworks.xstream.,SimpleType,0,3,0,0,3
+com.thoughtworks.xstream.,VariableDeclarationFragment,0,1,0,0,1
 int,MethodInvocation,1,1,0,1,0
 int,SimpleName,1,1,0,1,0
 java,ArrayType,1,1,1,0,0
 java,Assignment,2,3,2,0,1
-java,ClassInstanceCreation,0,2,0,0,2
+java,ClassInstanceCreation,1,2,1,0,1
 java,FieldAccess,2,3,2,0,1
 java,InfixExpression,3,3,3,0,0
 java,MarkerAnnotation,2,2,2,0,0
-java,MethodInvocation,3,9,3,0,6
+java,MethodInvocation,7,9,7,0,2
 java,ParameterizedType,0,4,0,0,4
-java,QualifiedName,4,4,0,4,0
-java,SimpleName,33,57,29,4,24
-java,SimpleType,12,14,8,4,2
+java,QualifiedName,3,4,0,3,1
+java,SimpleName,48,57,44,4,9
+java,SimpleType,14,14,10,4,0
 java,SingleVariableDeclaration,3,4,3,0,1
 java,StringLiteral,8,8,8,0,0
-java,VariableDeclarationFragment,3,6,3,0,3
-void,MethodInvocation,4,4,4,0,0
-void,PrimitiveType,1,1,1,0,0
-void,SimpleName,4,4,4,0,0
+java,VariableDeclarationFragment,4,6,4,0,2
+void,MethodInvocation,3,4,3,0,1
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,3,4,3,0,1

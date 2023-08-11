@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_16.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_16.java
 Expect check=62
 Cannot find matching typeVariable for: /** 
  * This class represents the data mapper for an employee to the database.
@@ -403,27 +403,27 @@ public class Events {
   }
 }
 
-Did not find solution for node: List<Event> with type Type13=Type11<Type12>
+For node: List<Event> expected fqn: java.util.List<java.awt.Event> with type: Type13=Type11<Type12> got: java.util.List<java.lang.Object>
 For node: List expected fqn: java.util.List<java.awt.Event> with type: Type11 got: java.util.List
 For node: List expected fqn: java.util.List<java.awt.Event> with type: Type11 got: java.util.List
-Did not find solution for node: Event with type Type12
-Did not find solution for node: Event with type Type12
+For node: Event expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
+For node: Event expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
 Cannot find matching typeVariable for: events=hibernateSession.createQuery("from Event").list()
-Did not find solution for node: events=hibernateSession.createQuery("from Event").list() with type Type13=Type11<Type12>
-Did not find solution for node: events with type Type13=Type11<Type12>
-Did not find solution for node: hibernateSession.createQuery("from Event").list() with type Type17
+For node: events=hibernateSession.createQuery("from Event").list() expected fqn: java.util.List<java.awt.Event> with type: Type13=Type11<Type12> got: java.util.List<java.lang.Object>
+For node: events expected fqn: java.util.List<java.awt.Event> with type: Type13=Type11<Type12> got: java.util.List<java.lang.Object>
+For node: hibernateSession.createQuery("from Event").list() expected fqn: java.util.List with type: Type17 got: java.util.List
 Did not find solution for node: hibernateSession.createQuery("from Event") with type Type14
 Did not find solution for node: hibernateSession with type Type5
 Cannot find matching typeVariable for: createQuery
 Did not find solution for node: createQuery with type Type14
 For node: "from Event" expected fqn: java.lang.String with type: Type9 got: java.lang.String
 Cannot find matching typeVariable for: list
-Did not find solution for node: list with type Type17
+For node: list expected fqn: java.util.List with type: Type17 got: java.util.List
 Cannot find matching typeVariable for: Event theEvent
-Did not find solution for node: Event theEvent with type Type12
-Did not find solution for node: Event with type Type12
-Did not find solution for node: Event with type Type12
-Did not find solution for node: theEvent with type Type12
+For node: Event theEvent expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
+For node: Event expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
+For node: Event expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
+For node: theEvent expected fqn: java.awt.Event with type: Type12 got: java.lang.Object
 Cannot find matching typeVariable for: events
 Cannot find matching typeVariable for: for (Event theEvent : events) {
 }
@@ -504,17 +504,17 @@ public class Events {
 }
 
 For node: "success" expected fqn: java.lang.String with type: Type9 got: java.lang.String
-{Checked=54, Analyzed=15, Unsolved=39, Incorrect=2, Correct=13}
+{Checked=54, Analyzed=26, Unsolved=28, Incorrect=11, Correct=15}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ParameterizedType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=1, Correct=4}
-java=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=1, Correct=3}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=5, Correct=5}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=3, Correct=3}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 org.hibernate.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.hibernate.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.hibernate.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -525,17 +525,17 @@ org.hibernate.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, In
 org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 Total stats
-{Checked=54, Analyzed=15, Unsolved=39, Incorrect=2, Correct=13}
+{Checked=54, Analyzed=26, Unsolved=28, Incorrect=11, Correct=15}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=ParameterizedType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=1, Correct=4}
-java=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=1, Correct=3}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=5, Correct=5}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=3, Correct=3}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 org.hibernate.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.hibernate.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.hibernate.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -547,14 +547,14 @@ org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, 
 void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 ,SimpleName,0,1,0,0,1
 ,ThisExpression,0,2,0,0,2
-java,MethodInvocation,0,1,0,0,1
-java,ParameterizedType,0,1,0,0,1
-java,SimpleName,5,10,4,1,5
-java,SimpleType,4,6,3,1,2
+java,MethodInvocation,1,1,1,0,0
+java,ParameterizedType,1,1,0,1,0
+java,SimpleName,10,10,5,5,0
+java,SimpleType,6,6,3,3,0
 java,SingleMemberAnnotation,1,1,1,0,0
-java,SingleVariableDeclaration,0,1,0,0,1
+java,SingleVariableDeclaration,1,1,0,1,0
 java,StringLiteral,3,3,3,0,0
-java,VariableDeclarationFragment,0,1,0,0,1
+java,VariableDeclarationFragment,1,1,0,1,0
 org.hibernate.,Assignment,0,2,0,0,2
 org.hibernate.,FieldAccess,0,2,0,0,2
 org.hibernate.,MethodInvocation,0,1,0,0,1

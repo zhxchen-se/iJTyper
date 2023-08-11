@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime15.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime15.java
 Expect check=39
 Cannot find matching typeVariable for: public class JodaTime15 {
   public static void main(  String[] args){
@@ -82,82 +82,82 @@ For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.l
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
 For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: MutableDateTime expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: MutableDateTime expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: MutableDateTime with type Type5
+Did not find solution for node: MutableDateTime with type Type5
 Cannot find matching typeVariable for: now=new MutableDateTime()
-For node: now=new MutableDateTime() expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: new MutableDateTime() expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: MutableDateTime expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: MutableDateTime expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
-For node: now.setHourOfDay(2) expected fqn: void with type: Type8 got: void
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: now=new MutableDateTime() with type Type5
+Did not find solution for node: now with type Type5
+Did not find solution for node: new MutableDateTime() with type Type5
+Did not find solution for node: MutableDateTime with type Type5
+Did not find solution for node: MutableDateTime with type Type5
+Did not find solution for node: now.setHourOfDay(2) with type Type8
+Did not find solution for node: now with type Type5
 Cannot find matching typeVariable for: setHourOfDay
-For node: setHourOfDay expected fqn: void with type: Type8 got: void
-For node: 2 expected fqn: int with type: Type7 got: byte
-For node: now.setMinuteOfHour(0) expected fqn: void with type: Type11 got: void
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: setHourOfDay with type Type8
+Did not find solution for node: 2 with type Type7
+Did not find solution for node: now.setMinuteOfHour(0) with type Type11
+Did not find solution for node: now with type Type5
 Cannot find matching typeVariable for: setMinuteOfHour
-For node: setMinuteOfHour expected fqn: void with type: Type11 got: void
-For node: 0 expected fqn: int with type: Type7 got: byte
-For node: now.setSecondOfMinute(0) expected fqn: void with type: Type14 got: void
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: setMinuteOfHour with type Type11
+Did not find solution for node: 0 with type Type7
+Did not find solution for node: now.setSecondOfMinute(0) with type Type14
+Did not find solution for node: now with type Type5
 Cannot find matching typeVariable for: setSecondOfMinute
-For node: setSecondOfMinute expected fqn: void with type: Type14 got: void
-For node: 0 expected fqn: int with type: Type7 got: byte
-For node: now.setMillisOfSecond(0) expected fqn: void with type: Type17 got: void
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: setSecondOfMinute with type Type14
+Did not find solution for node: 0 with type Type7
+Did not find solution for node: now.setMillisOfSecond(0) with type Type17
+Did not find solution for node: now with type Type5
 Cannot find matching typeVariable for: setMillisOfSecond
-For node: setMillisOfSecond expected fqn: void with type: Type17 got: void
-For node: 0 expected fqn: int with type: Type7 got: byte
+Did not find solution for node: setMillisOfSecond with type Type17
+Did not find solution for node: 0 with type Type7
 For node: DateTime expected fqn: org.joda.time.DateTime with type: Type20 got: org.joda.time.DateTime
 For node: DateTime expected fqn: org.joda.time.DateTime with type: Type20 got: org.joda.time.DateTime
 Cannot find matching typeVariable for: myDate=now.toDateTime()
 For node: myDate=now.toDateTime() expected fqn: org.joda.time.DateTime with type: Type20 got: org.joda.time.DateTime
 For node: myDate expected fqn: org.joda.time.DateTime with type: Type20 got: org.joda.time.DateTime
 For node: now.toDateTime() expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
-For node: now expected fqn: org.joda.time.MutableDateTime with type: Type5 got: org.joda.time.MutableDateTime
+Did not find solution for node: now with type Type5
 Cannot find matching typeVariable for: toDateTime
 For node: toDateTime expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
-{Checked=36, Analyzed=36, Unsolved=0, Incorrect=4, Correct=32}
-int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+{Checked=36, Analyzed=12, Unsolved=24, Incorrect=0, Correct=12}
+int=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SimpleName: {Checked=11, Analyzed=3, Unsolved=8, Incorrect=0, Correct=3}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 Total stats
-{Checked=36, Analyzed=36, Unsolved=0, Incorrect=4, Correct=32}
-int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+{Checked=36, Analyzed=12, Unsolved=24, Incorrect=0, Correct=12}
+int=NumberLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.joda.time.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
-org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SimpleName: {Checked=11, Analyzed=3, Unsolved=8, Incorrect=0, Correct=3}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-int,NumberLiteral,4,4,0,4,0
+void=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int,NumberLiteral,0,4,0,0,4
 java,ArrayType,1,1,1,0,0
 java,SimpleName,2,2,2,0,0
 java,SimpleType,1,1,1,0,0
 java,SingleVariableDeclaration,1,1,1,0,0
-org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,0,1,0,0,1
 org.joda.time.,MethodInvocation,1,1,1,0,0
-org.joda.time.,SimpleName,11,11,11,0,0
-org.joda.time.,SimpleType,3,3,3,0,0
-org.joda.time.,VariableDeclarationFragment,2,2,2,0,0
-void,MethodInvocation,4,4,4,0,0
+org.joda.time.,SimpleName,3,11,3,0,8
+org.joda.time.,SimpleType,1,3,1,0,2
+org.joda.time.,VariableDeclarationFragment,1,2,1,0,1
+void,MethodInvocation,0,4,0,0,4
 void,PrimitiveType,1,1,1,0,0
-void,SimpleName,4,4,4,0,0
+void,SimpleName,0,4,0,0,4

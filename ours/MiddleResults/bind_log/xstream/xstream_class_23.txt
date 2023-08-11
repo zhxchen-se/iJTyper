@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_23.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_23.java
 Expect check=86
 Cannot find matching typeVariable for: public class xstream_class_23 {
 @XStreamAlias("test") public class TestObject {
@@ -222,7 +222,7 @@ Did not find solution for node: foo.toLowerCase() with type Type7
 Did not find solution for node: foo with type Type4
 Cannot find matching typeVariable for: toLowerCase
 Did not find solution for node: toLowerCase with type Type7
-For node: void expected fqn: void with type: Type3 got: void
+Did not find solution for node: void with type Type3
 Cannot find matching typeVariable for: setFoo
 Cannot find matching typeVariable for: public void setFoo(String foo){
   this.foo=foo;
@@ -298,7 +298,7 @@ Cannot find matching typeVariable for: foo
 Did not find solution for node: foo with type Type4
 Cannot find matching typeVariable for: foo
 Did not find solution for node: foo with type Type4
-For node: void expected fqn: void with type: Type3 got: void
+Did not find solution for node: void with type Type3
 Cannot find matching typeVariable for: test
 Cannot find matching typeVariable for: public void test() throws Exception {
   XStream x=new XStream(new XppDriver());
@@ -361,38 +361,38 @@ public class xstream_class_23 {
 
 For node: Exception expected fqn: java.lang.Exception with type: Type9 got: java.lang.Exception
 For node: Exception expected fqn: java.lang.Exception with type: Type9 got: java.lang.Exception
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: XStream with type Type10
+Did not find solution for node: XStream with type Type10
 Cannot find matching typeVariable for: x=new XStream(new XppDriver())
-For node: x=new XStream(new XppDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: new XStream(new XppDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
-For node: new XppDriver() expected fqn: com.thoughtworks.xstream.io.xml.XppDriver with type: Type11 got: com.thoughtworks.xstream.io.xml.XppDriver
-For node: XppDriver expected fqn: com.thoughtworks.xstream.io.xml.XppDriver with type: Type11 got: com.thoughtworks.xstream.io.xml.XppDriver
-For node: XppDriver expected fqn: com.thoughtworks.xstream.io.xml.XppDriver with type: Type11 got: com.thoughtworks.xstream.io.xml.XppDriver
+Did not find solution for node: x=new XStream(new XppDriver()) with type Type10
+Did not find solution for node: x with type Type10
+Did not find solution for node: new XStream(new XppDriver()) with type Type10
+Did not find solution for node: XStream with type Type10
+Did not find solution for node: XStream with type Type10
+Did not find solution for node: new XppDriver() with type Type11
+Did not find solution for node: XppDriver with type Type11
+Did not find solution for node: XppDriver with type Type11
 For node: x.autodetectAnnotations(true) expected fqn: void with type: Type16 got: void
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: x with type Type10
 Cannot find matching typeVariable for: autodetectAnnotations
 For node: autodetectAnnotations expected fqn: void with type: Type16 got: void
-For node: true expected fqn: boolean with type: Type15 got: boolean
-For node: x.processAnnotations(TestObject.class) expected fqn: void with type: Type20 got: void
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: true with type Type15
+Did not find solution for node: x.processAnnotations(TestObject.class) with type Type20
+Did not find solution for node: x with type Type10
 Cannot find matching typeVariable for: processAnnotations
-For node: processAnnotations expected fqn: void with type: Type20 got: void
-For node: TestObject.class expected fqn: java.lang.Class<xstream_class_23.TestObject> with type: Type19 got: java.lang.Class
+Did not find solution for node: processAnnotations with type Type20
+Did not find solution for node: TestObject.class with type Type19
 Did not find solution for node: TestObject with type Type2
 Did not find solution for node: TestObject with type Type2
-For node: x.registerConverter(new JavaBeanConverter(x.getMapper())) expected fqn: void with type: Type28 got: void
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: x.registerConverter(new JavaBeanConverter(x.getMapper())) with type Type28
+Did not find solution for node: x with type Type10
 Cannot find matching typeVariable for: registerConverter
-For node: registerConverter expected fqn: void with type: Type28 got: void
+Did not find solution for node: registerConverter with type Type28
 Did not find solution for node: new JavaBeanConverter(x.getMapper()) with type Type23
 Did not find solution for node: JavaBeanConverter with type Type23
 Did not find solution for node: JavaBeanConverter with type Type23
 Did not find solution for node: x.getMapper() with type Type24
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: x with type Type10
 Cannot find matching typeVariable for: getMapper
 Did not find solution for node: getMapper with type Type24
 Did not find solution for node: TestObject with type Type2
@@ -413,97 +413,97 @@ For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.
 Cannot find matching typeVariable for: xml=x.toXML(o)
 For node: xml=x.toXML(o) expected fqn: java.lang.String with type: Type5 got: java.lang.String
 For node: xml expected fqn: java.lang.String with type: Type5 got: java.lang.String
-For node: x.toXML(o) expected fqn: java.lang.String with type: Type35 got: java.lang.String
-For node: x expected fqn: com.thoughtworks.xstream.XStream with type: Type10 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: x.toXML(o) with type Type35
+Did not find solution for node: x with type Type10
 Cannot find matching typeVariable for: toXML
-For node: toXML expected fqn: java.lang.String with type: Type35 got: java.lang.String
+Did not find solution for node: toXML with type Type35
 Did not find solution for node: o with type Type2
 For node: System.out.println(xml) expected fqn: void with type: Type40 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type40 got: void
-Did not find solution for node: System with type Type38
+For node: System expected fqn: java.lang.System with type: Type38 got: java.lang.System
 For node: out expected fqn: java.io.PrintStream with type: Type39 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type40 got: void
 For node: xml expected fqn: java.lang.String with type: Type5 got: java.lang.String
-{Checked=79, Analyzed=44, Unsolved=35, Incorrect=2, Correct=42}
+{Checked=79, Analyzed=20, Unsolved=59, Incorrect=1, Correct=19}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=SimpleName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=0, Correct=9}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SingleMemberAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=SimpleName: {Checked=16, Analyzed=8, Unsolved=8, Incorrect=0, Correct=8}
 java=SimpleType: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 Total stats
-{Checked=79, Analyzed=44, Unsolved=35, Incorrect=2, Correct=42}
+{Checked=79, Analyzed=20, Unsolved=59, Incorrect=1, Correct=19}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=BooleanLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=SimpleName: {Checked=11, Analyzed=9, Unsolved=2, Incorrect=0, Correct=9}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SingleMemberAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=SimpleName: {Checked=16, Analyzed=8, Unsolved=8, Incorrect=0, Correct=8}
 java=SimpleType: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
 ,ClassInstanceCreation,0,1,0,0,1
 ,SimpleName,0,7,0,0,7
 ,SimpleType,0,3,0,0,3
 ,ThisExpression,0,1,0,0,1
 ,VariableDeclarationFragment,0,1,0,0,1
-boolean,BooleanLiteral,1,1,1,0,0
-com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+boolean,BooleanLiteral,0,1,0,0,1
+com.thoughtworks.xstream.,ClassInstanceCreation,0,2,0,0,2
 com.thoughtworks.xstream.,MethodInvocation,0,1,0,0,1
-com.thoughtworks.xstream.,SimpleName,9,11,9,0,2
-com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
+com.thoughtworks.xstream.,SimpleName,0,11,0,0,11
+com.thoughtworks.xstream.,SimpleType,0,3,0,0,3
 com.thoughtworks.xstream.,SingleMemberAnnotation,0,1,0,0,1
-com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,0,1,0,0,1
 java,Assignment,0,1,0,0,1
 java,ClassInstanceCreation,0,1,0,0,1
 java,FieldAccess,0,1,0,0,1
-java,MethodInvocation,1,2,1,0,1
+java,MethodInvocation,0,2,0,0,2
 java,QualifiedName,1,1,0,1,0
 java,SimpleName,8,16,8,0,8
 java,SimpleType,3,6,3,0,3
 java,SingleVariableDeclaration,1,1,1,0,0
 java,StringLiteral,2,2,2,0,0
-java,TypeLiteral,1,1,0,1,0
+java,TypeLiteral,0,1,0,0,1
 java,VariableDeclarationFragment,1,2,1,0,1
-void,MethodInvocation,4,5,4,0,1
-void,PrimitiveType,2,2,2,0,0
-void,SimpleName,4,5,4,0,1
+void,MethodInvocation,2,5,2,0,3
+void,PrimitiveType,0,2,0,0,2
+void,SimpleName,2,5,2,0,3

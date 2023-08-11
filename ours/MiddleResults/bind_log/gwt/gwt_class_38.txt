@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_38.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_38.java
 Expect check=54
 Cannot find matching typeVariable for: public class gwt_class_38 {
 public class AdminMenuAreaView extends Composite {
@@ -96,12 +96,12 @@ Cannot find matching typeVariable for: public class AdminMenuAreaView extends Co
 }
 
 Did not find solution for node: AdminMenuAreaView with type Type1
-For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
-For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: Composite with type Type2
+Did not find solution for node: Composite with type Type2
+Did not find solution for node: VerticalPanel with type Type18
+Did not find solution for node: VerticalPanel with type Type18
 Cannot find matching typeVariable for: vPanel
-For node: vPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vPanel with type Type18
 Cannot find matching typeVariable for: vPanel
 Cannot find matching typeVariable for: private VerticalPanel vPanel;
 
@@ -325,15 +325,15 @@ public class AdminMenuAreaView extends Composite {
   }
 }
 
-For node: vPanel=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: vPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
-For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vPanel=new VerticalPanel() with type Type18
+Did not find solution for node: vPanel with type Type18
+Did not find solution for node: new VerticalPanel() with type Type18
+Did not find solution for node: VerticalPanel with type Type18
+Did not find solution for node: VerticalPanel with type Type18
 For node: initWidget(vPanel) expected fqn: void with type: Type21 got: void
 Cannot find matching typeVariable for: initWidget
 For node: initWidget expected fqn: void with type: Type21 got: void
-For node: vPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vPanel with type Type18
 For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type6 got: com.google.gwt.user.client.ui.Widget
 For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type6 got: com.google.gwt.user.client.ui.Widget
 Cannot find matching typeVariable for: asWidget
@@ -501,10 +501,10 @@ For node: Hyperlink expected fqn: com.google.gwt.user.client.ui.Hyperlink with t
 For node: s expected fqn: java.lang.String with type: Type24 got: java.lang.String
 For node: "this is new target" expected fqn: java.lang.String with type: Type25 got: java.lang.String
 For node: this.vPanel.add(registerUserLink) expected fqn: void with type: Type29 got: void
-For node: this.vPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: this.vPanel with type Type18
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: vPanel
-For node: vPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Did not find solution for node: vPanel with type Type18
 Cannot find matching typeVariable for: add
 For node: add expected fqn: void with type: Type29 got: void
 For node: registerUserLink expected fqn: com.google.gwt.user.client.ui.Hyperlink with type: Type19 got: com.google.gwt.user.client.ui.Hyperlink
@@ -590,16 +590,16 @@ public class AdminMenuAreaView extends Composite {
 }
 
 For node: registerUserLink expected fqn: com.google.gwt.user.client.ui.Hyperlink with type: Type19 got: com.google.gwt.user.client.ui.Hyperlink
-{Checked=45, Analyzed=42, Unsolved=3, Incorrect=0, Correct=42}
+{Checked=45, Analyzed=29, Unsolved=16, Incorrect=0, Correct=29}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
-gwt.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+gwt.=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=14, Analyzed=8, Unsolved=6, Incorrect=0, Correct=8}
+gwt.=SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -608,16 +608,16 @@ void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 Total stats
-{Checked=45, Analyzed=42, Unsolved=3, Incorrect=0, Correct=42}
+{Checked=45, Analyzed=29, Unsolved=16, Incorrect=0, Correct=29}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-gwt.=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-gwt.=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
-gwt.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+gwt.=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=14, Analyzed=8, Unsolved=6, Incorrect=0, Correct=8}
+gwt.=SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -628,12 +628,12 @@ void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 ,SimpleName,0,1,0,0,1
 ,ThisExpression,0,2,0,0,2
 boolean,BooleanLiteral,1,1,1,0,0
-gwt.,Assignment,2,2,2,0,0
-gwt.,ClassInstanceCreation,2,2,2,0,0
-gwt.,FieldAccess,1,1,1,0,0
-gwt.,SimpleName,14,14,14,0,0
-gwt.,SimpleType,7,7,7,0,0
-gwt.,VariableDeclarationFragment,2,2,2,0,0
+gwt.,Assignment,1,2,1,0,1
+gwt.,ClassInstanceCreation,1,2,1,0,1
+gwt.,FieldAccess,0,1,0,0,1
+gwt.,SimpleName,8,14,8,0,6
+gwt.,SimpleType,4,7,4,0,3
+gwt.,VariableDeclarationFragment,1,2,1,0,1
 java,SimpleName,3,3,3,0,0
 java,SimpleType,1,1,1,0,0
 java,SingleVariableDeclaration,1,1,1,0,0

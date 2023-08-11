@@ -1,363 +1,90 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_16.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_16.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=95
-Cannot find matching typeVariable for: public class gwt_class_16 {
-  public static void main(  String arg[]){
-    try {
-      RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-      rb.sendRequest(null,new RequestCallback(){
-        public void onError(        Request request,        Throwable exception){
-          RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-        }
-        public void onResponseReceived(        Request request,        Response response){
-          RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-        }
-      }
-);
-    }
- catch (    Exception e) {
-      RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-    }
-  }
-}
-
-Cannot find matching typeVariable for: gwt_class_16
-Cannot find matching typeVariable for: public class gwt_class_16 {
-  public static void main(  String arg[]){
-    try {
-      RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-      rb.sendRequest(null,new RequestCallback(){
-        public void onError(        Request request,        Throwable exception){
-          RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-        }
-        public void onResponseReceived(        Request request,        Response response){
-          RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-        }
-      }
-);
-    }
- catch (    Exception e) {
-      RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-    }
-  }
-}
-
-Cannot find matching typeVariable for: import com.google.gwt.http.client.Request;
-import com.google.gwt.http.client.RequestBuilder;
-import com.google.gwt.http.client.RequestCallback;
-import com.google.gwt.http.client.Response;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.RootPanel;
-public class gwt_class_16 {
-  public static void main(  String arg[]){
-    try {
-      RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-      rb.sendRequest(null,new RequestCallback(){
-        public void onError(        Request request,        Throwable exception){
-          RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-        }
-        public void onResponseReceived(        Request request,        Response response){
-          RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-        }
-      }
-);
-    }
- catch (    Exception e) {
-      RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-    }
-  }
-}
-
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: main
-Cannot find matching typeVariable for: public static void main(String arg[]){
-  try {
-    RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-    rb.sendRequest(null,new RequestCallback(){
-      public void onError(      Request request,      Throwable exception){
-        RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-      }
-      public void onResponseReceived(      Request request,      Response response){
-        RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-      }
-    }
-);
-  }
- catch (  Exception e) {
-    RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-  }
-}
-
-Cannot find matching typeVariable for: public class gwt_class_16 {
-  public static void main(  String arg[]){
-    try {
-      RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-      rb.sendRequest(null,new RequestCallback(){
-        public void onError(        Request request,        Throwable exception){
-          RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-        }
-        public void onResponseReceived(        Request request,        Response response){
-          RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-        }
-      }
-);
-    }
- catch (    Exception e) {
-      RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-    }
-  }
-}
-
-Cannot find matching typeVariable for: import com.google.gwt.http.client.Request;
-import com.google.gwt.http.client.RequestBuilder;
-import com.google.gwt.http.client.RequestCallback;
-import com.google.gwt.http.client.Response;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.RootPanel;
-public class gwt_class_16 {
-  public static void main(  String arg[]){
-    try {
-      RequestBuilder rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html");
-      rb.sendRequest(null,new RequestCallback(){
-        public void onError(        Request request,        Throwable exception){
-          RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-        }
-        public void onResponseReceived(        Request request,        Response response){
-          RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-        }
-      }
-);
-    }
- catch (    Exception e) {
-      RootPanel.get().add(new HTML("Error sending request " + e.getMessage()));
-    }
-  }
-}
-
-Cannot find matching typeVariable for: String arg[]
-For node: String arg[] expected fqn: java.lang.String[] with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: arg expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-Cannot find matching typeVariable for: rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html")
-For node: rb=new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html") expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: new RequestBuilder(RequestBuilder.POST,"AuthenticationChecker.html") expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-Cannot find matching typeVariable for: RequestBuilder.POST
-For node: RequestBuilder.POST expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: RequestBuilder expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-For node: POST expected fqn: com.google.gwt.http.client.RequestBuilder.Method with type: Type7 got: com.google.gwt.http.client.RequestBuilder$Method
-For node: "AuthenticationChecker.html" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: rb.sendRequest(null,new RequestCallback(){
-  public void onError(  Request request,  Throwable exception){
-    RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-  }
-  public void onResponseReceived(  Request request,  Response response){
-    RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-  }
-}
-) expected fqn: com.google.gwt.http.client.Request with type: Type38 got: com.google.gwt.http.client.Request
-For node: rb expected fqn: com.google.gwt.http.client.RequestBuilder with type: Type5 got: com.google.gwt.http.client.RequestBuilder
-Cannot find matching typeVariable for: sendRequest
-For node: sendRequest expected fqn: com.google.gwt.http.client.Request with type: Type38 got: com.google.gwt.http.client.Request
-For node: null expected fqn: null with type: Type11 got: java.lang.String
-For node: new RequestCallback(){
-  public void onError(  Request request,  Throwable exception){
-    RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-  }
-  public void onResponseReceived(  Request request,  Response response){
-    RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-  }
-}
- expected fqn:  with type: Type12 got: com.google.gwt.http.client.RequestCallback
-For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type12 got: com.google.gwt.http.client.RequestCallback
-For node: RequestCallback expected fqn: com.google.gwt.http.client.RequestCallback with type: Type12 got: com.google.gwt.http.client.RequestCallback
-Cannot find matching typeVariable for: {
-  public void onError(  Request request,  Throwable exception){
-    RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-  }
-  public void onResponseReceived(  Request request,  Response response){
-    RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-  }
-}
-
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: onError
-Cannot find matching typeVariable for: public void onError(Request request,Throwable exception){
-  RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-}
-
-Cannot find matching typeVariable for: {
-  public void onError(  Request request,  Throwable exception){
-    RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-  }
-  public void onResponseReceived(  Request request,  Response response){
-    RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-  }
-}
-
-For node: onError expected fqn: void with type: Type12 got: com.google.gwt.http.client.RequestCallback
-Cannot find matching typeVariable for: Request request
-For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-Cannot find matching typeVariable for: Throwable exception
-Did not find solution for node: Throwable exception with type Type14
-Did not find solution for node: Throwable with type Type14
-Did not find solution for node: Throwable with type Type14
-Did not find solution for node: exception with type Type14
-For node: RootPanel.get().add(new HTML("[error]" + exception.getMessage())) expected fqn: void with type: Type23 got: void
-For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type16 got: com.google.gwt.user.client.ui.Panel
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type15 got: com.google.gwt.user.client.ui.RootPanel
-Cannot find matching typeVariable for: get
-For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type16 got: com.google.gwt.user.client.ui.Panel
-Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type23 got: void
-For node: new HTML("[error]" + exception.getMessage()) expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: "[error]" + exception.getMessage() expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: "[error]" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: exception.getMessage() expected fqn: java.lang.String with type: Type19 got: java.lang.String
-Did not find solution for node: exception with type Type14
-Cannot find matching typeVariable for: getMessage
-For node: getMessage expected fqn: java.lang.String with type: Type19 got: java.lang.String
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: onResponseReceived
-Cannot find matching typeVariable for: public void onResponseReceived(Request request,Response response){
-  RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-}
-
-Cannot find matching typeVariable for: {
-  public void onError(  Request request,  Throwable exception){
-    RootPanel.get().add(new HTML("[error]" + exception.getMessage()));
-  }
-  public void onResponseReceived(  Request request,  Response response){
-    RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]"));
-  }
-}
-
-For node: onResponseReceived expected fqn: void with type: Type12 got: com.google.gwt.http.client.RequestCallback
-Cannot find matching typeVariable for: Request request
-For node: Request request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: Request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-For node: request expected fqn: com.google.gwt.http.client.Request with type: Type13 got: com.google.gwt.http.client.Request
-Cannot find matching typeVariable for: Response response
-For node: Response response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-For node: Response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-For node: response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-For node: RootPanel.get().add(new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]")) expected fqn: void with type: Type34 got: void
-For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type28 got: com.google.gwt.user.client.ui.Panel
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type27 got: com.google.gwt.user.client.ui.RootPanel
-Cannot find matching typeVariable for: get
-For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type28 got: com.google.gwt.user.client.ui.Panel
-Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type34 got: void
-For node: new HTML("[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]") expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: "[success (" + response.getStatusCode() + ","+ response.getStatusText()+ ")]" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: "[success (" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: response.getStatusCode() expected fqn: int with type: Type30 got: java.lang.String
-For node: response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-Cannot find matching typeVariable for: getStatusCode
-For node: getStatusCode expected fqn: int with type: Type30 got: java.lang.String
-For node: "," expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: response.getStatusText() expected fqn: java.lang.String with type: Type32 got: java.lang.String
-For node: response expected fqn: com.google.gwt.http.client.Response with type: Type26 got: com.google.gwt.http.client.Response
-Cannot find matching typeVariable for: getStatusText
-For node: getStatusText expected fqn: java.lang.String with type: Type32 got: java.lang.String
-For node: ")]" expected fqn: java.lang.String with type: Type6 got: java.lang.String
-Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type42
-Did not find solution for node: Exception with type Type42
-Did not find solution for node: Exception with type Type42
-Did not find solution for node: e with type Type42
-For node: RootPanel.get().add(new HTML("Error sending request " + e.getMessage())) expected fqn: void with type: Type48 got: void
-For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type44 got: com.google.gwt.user.client.ui.Panel
-For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type43 got: com.google.gwt.user.client.ui.RootPanel
-Cannot find matching typeVariable for: get
-For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type44 got: com.google.gwt.user.client.ui.Panel
-Cannot find matching typeVariable for: add
-For node: add expected fqn: void with type: Type48 got: void
-For node: new HTML("Error sending request " + e.getMessage()) expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: HTML expected fqn: com.google.gwt.user.client.ui.HTML with type: Type18 got: com.google.gwt.user.client.ui.HTML
-For node: "Error sending request " + e.getMessage() expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: "Error sending request " expected fqn: java.lang.String with type: Type6 got: java.lang.String
-For node: e.getMessage() expected fqn: java.lang.String with type: Type46 got: java.lang.String
-Did not find solution for node: e with type Type42
-Cannot find matching typeVariable for: getMessage
-For node: getMessage expected fqn: java.lang.String with type: Type46 got: java.lang.String
-{Checked=91, Analyzed=81, Unsolved=10, Incorrect=15, Correct=66}
-=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-gwt.=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=3, Correct=1}
-gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=SimpleName: {Checked=25, Analyzed=25, Unsolved=0, Incorrect=4, Correct=21}
-gwt.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-gwt.=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=SimpleName: {Checked=11, Analyzed=5, Unsolved=6, Incorrect=0, Correct=5}
-java=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
+{Checked=95, Analyzed=0, Unsolved=95, Incorrect=0, Correct=0}
+=AnonymousClassDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 Total stats
-{Checked=91, Analyzed=81, Unsolved=10, Incorrect=15, Correct=66}
-=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-gwt.=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=3, Correct=1}
-gwt.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-gwt.=SimpleName: {Checked=25, Analyzed=25, Unsolved=0, Incorrect=4, Correct=21}
-gwt.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
-gwt.=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=SimpleName: {Checked=11, Analyzed=5, Unsolved=6, Incorrect=0, Correct=5}
-java=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=2, Correct=3}
-,ClassInstanceCreation,1,1,0,1,0
-gwt.,ClassInstanceCreation,4,4,4,0,0
-gwt.,MethodInvocation,4,4,1,3,0
-gwt.,QualifiedName,1,1,0,1,0
-gwt.,SimpleName,25,25,21,4,0
-gwt.,SimpleType,9,9,9,0,0
-gwt.,SingleVariableDeclaration,3,3,3,0,0
-gwt.,VariableDeclarationFragment,1,1,1,0,0
-int,MethodInvocation,1,1,0,1,0
-int,SimpleName,1,1,0,1,0
-java,InfixExpression,3,3,3,0,0
-java,MethodInvocation,3,3,3,0,0
-java,SimpleName,5,11,5,0,6
-java,SimpleType,1,3,1,0,2
-java,SingleVariableDeclaration,1,3,0,1,2
-java,StringLiteral,6,6,6,0,0
-null,NullLiteral,1,1,0,1,0
-void,MethodInvocation,3,3,3,0,0
-void,PrimitiveType,3,3,3,0,0
-void,SimpleName,5,5,3,2,0
+{Checked=95, Analyzed=0, Unsolved=95, Incorrect=0, Correct=0}
+=AnonymousClassDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+,AnonymousClassDeclaration,0,1,0,0,1
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+gwt.,ClassInstanceCreation,0,4,0,0,4
+gwt.,MethodInvocation,0,4,0,0,4
+gwt.,QualifiedName,0,1,0,0,1
+gwt.,SimpleName,0,25,0,0,25
+gwt.,SimpleType,0,9,0,0,9
+gwt.,SingleVariableDeclaration,0,3,0,0,3
+gwt.,VariableDeclarationFragment,0,1,0,0,1
+int,MethodInvocation,0,1,0,0,1
+int,SimpleName,0,1,0,0,1
+java,InfixExpression,0,3,0,0,3
+java,MethodInvocation,0,3,0,0,3
+java,SimpleName,0,11,0,0,11
+java,SimpleType,0,3,0,0,3
+java,SingleVariableDeclaration,0,3,0,0,3
+java,StringLiteral,0,6,0,0,6
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,0,3,0,0,3
+void,PrimitiveType,0,3,0,0,3
+void,SimpleName,0,6,0,0,6

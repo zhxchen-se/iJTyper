@@ -1,0 +1,176 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime38.java
+Expect check=47
+Cannot find matching typeVariable for: public class JodaTime38 {
+  public static void main(  String[] args){
+    String dateTime="11/15/2013 08:00:00";
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+    DateTime jodatime=dtf.parseDateTime(dateTime);
+    DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+    System.out.println(dtfOut.print(jodatime));
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime38
+Cannot find matching typeVariable for: public class JodaTime38 {
+  public static void main(  String[] args){
+    String dateTime="11/15/2013 08:00:00";
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+    DateTime jodatime=dtf.parseDateTime(dateTime);
+    DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+    System.out.println(dtfOut.print(jodatime));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime38 {
+  public static void main(  String[] args){
+    String dateTime="11/15/2013 08:00:00";
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+    DateTime jodatime=dtf.parseDateTime(dateTime);
+    DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+    System.out.println(dtfOut.print(jodatime));
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  String dateTime="11/15/2013 08:00:00";
+  DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+  DateTime jodatime=dtf.parseDateTime(dateTime);
+  DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+  System.out.println(dtfOut.print(jodatime));
+}
+
+Cannot find matching typeVariable for: public class JodaTime38 {
+  public static void main(  String[] args){
+    String dateTime="11/15/2013 08:00:00";
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+    DateTime jodatime=dtf.parseDateTime(dateTime);
+    DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+    System.out.println(dtfOut.print(jodatime));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime38 {
+  public static void main(  String[] args){
+    String dateTime="11/15/2013 08:00:00";
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+    DateTime jodatime=dtf.parseDateTime(dateTime);
+    DateTimeFormatter dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy");
+    System.out.println(dtfOut.print(jodatime));
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: dateTime="11/15/2013 08:00:00"
+Did not find solution for node: dateTime="11/15/2013 08:00:00" with type Type3
+Did not find solution for node: dateTime with type Type3
+For node: "11/15/2013 08:00:00" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Did not find solution for node: DateTimeFormatter with type Type6
+Did not find solution for node: DateTimeFormatter with type Type6
+Cannot find matching typeVariable for: dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss")
+Did not find solution for node: dtf=DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss") with type Type6
+Did not find solution for node: dtf with type Type6
+Did not find solution for node: DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss") with type Type8
+For node: DateTimeFormat expected fqn: org.joda.time.format.DateTimeFormat with type: Type7 got: org.joda.time.format.DateTimeFormat
+Cannot find matching typeVariable for: forPattern
+Did not find solution for node: forPattern with type Type8
+For node: "MM/dd/yyyy HH:mm:ss" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Did not find solution for node: DateTime with type Type11
+Did not find solution for node: DateTime with type Type11
+Cannot find matching typeVariable for: jodatime=dtf.parseDateTime(dateTime)
+Did not find solution for node: jodatime=dtf.parseDateTime(dateTime) with type Type11
+Did not find solution for node: jodatime with type Type11
+Did not find solution for node: dtf.parseDateTime(dateTime) with type Type12
+Did not find solution for node: dtf with type Type6
+Cannot find matching typeVariable for: parseDateTime
+Did not find solution for node: parseDateTime with type Type12
+Did not find solution for node: dateTime with type Type3
+Did not find solution for node: DateTimeFormatter with type Type6
+Did not find solution for node: DateTimeFormatter with type Type6
+Cannot find matching typeVariable for: dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy")
+Did not find solution for node: dtfOut=DateTimeFormat.forPattern("MM/dd/yyyy") with type Type6
+Did not find solution for node: dtfOut with type Type6
+Did not find solution for node: DateTimeFormat.forPattern("MM/dd/yyyy") with type Type10
+For node: DateTimeFormat expected fqn: org.joda.time.format.DateTimeFormat with type: Type7 got: org.joda.time.format.DateTimeFormat
+Cannot find matching typeVariable for: forPattern
+Did not find solution for node: forPattern with type Type10
+For node: "MM/dd/yyyy" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: System.out.println(dtfOut.print(jodatime)) expected fqn: void with type: Type20 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type20 got: void
+For node: System expected fqn: java.lang.System with type: Type18 got: java.lang.System
+Did not find solution for node: out with type Type19
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type20 got: void
+Did not find solution for node: dtfOut.print(jodatime) with type Type15
+Did not find solution for node: dtfOut with type Type6
+Cannot find matching typeVariable for: print
+Did not find solution for node: print with type Type15
+Did not find solution for node: jodatime with type Type11
+{Checked=44, Analyzed=13, Unsolved=31, Incorrect=1, Correct=12}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=14, Analyzed=2, Unsolved=12, Incorrect=0, Correct=2}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=44, Analyzed=13, Unsolved=31, Incorrect=1, Correct=12}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=14, Analyzed=2, Unsolved=12, Incorrect=0, Correct=2}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ArrayType,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,2,8,2,0,6
+java,SimpleType,0,2,0,0,2
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,0,1,0,0,1
+org.joda.time.,MethodInvocation,0,3,0,0,3
+org.joda.time.,SimpleName,2,14,2,0,12
+org.joda.time.,SimpleType,0,3,0,0,3
+org.joda.time.,VariableDeclarationFragment,0,3,0,0,3
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

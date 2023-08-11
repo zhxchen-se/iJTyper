@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_30.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_30.java
 Expect check=198
 Cannot find matching typeVariable for: public class xstream_class_30 implements Converter {
   @Override public void marshal(  Object o,  HierarchicalStreamWriter hierarchicalStreamWriter,  MarshallingContext marshallingContext){
@@ -477,21 +477,21 @@ For node: hierarchicalStreamReader.moveDown() expected fqn: void with type: Type
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: moveDown
 For node: moveDown expected fqn: void with type: Type15 got: void
-Did not find solution for node: String with type Type17
-Did not find solution for node: String with type Type17
+For node: String expected fqn: java.lang.String with type: Type17 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Cannot find matching typeVariable for: currentAttribute=hierarchicalStreamReader.getAttribute("name")
-Did not find solution for node: currentAttribute=hierarchicalStreamReader.getAttribute("name") with type Type17
-Did not find solution for node: currentAttribute with type Type17
-Did not find solution for node: hierarchicalStreamReader.getAttribute("name") with type Type19
+For node: currentAttribute=hierarchicalStreamReader.getAttribute("name") expected fqn: java.lang.String with type: Type17 got: java.lang.String
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
+For node: hierarchicalStreamReader.getAttribute("name") expected fqn: java.lang.String with type: Type19 got: java.lang.String
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getAttribute
-Did not find solution for node: getAttribute with type Type19
-Did not find solution for node: "name" with type Type18
-Did not find solution for node: "id".equals(currentAttribute) with type Type22
-Did not find solution for node: "id" with type Type18
+For node: getAttribute expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: "name" expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: "id".equals(currentAttribute) expected fqn: boolean with type: Type22 got: boolean
+For node: "id" expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type22
-Did not find solution for node: currentAttribute with type Type17
+For node: equals expected fqn: boolean with type: Type22 got: boolean
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Did not find solution for node: items.setId(hierarchicalStreamReader.getValue()) with type Type27
 Did not find solution for node: items with type Type1
 Cannot find matching typeVariable for: setId
@@ -500,11 +500,11 @@ Did not find solution for node: hierarchicalStreamReader.getValue() with type Ty
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
 Did not find solution for node: getValue with type Type25
-Did not find solution for node: "first-name".equals(currentAttribute) with type Type24
-Did not find solution for node: "first-name" with type Type18
+For node: "first-name".equals(currentAttribute) expected fqn: boolean with type: Type24 got: boolean
+For node: "first-name" expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type24
-Did not find solution for node: currentAttribute with type Type17
+For node: equals expected fqn: boolean with type: Type24 got: boolean
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Did not find solution for node: items.setFirstName(hierarchicalStreamReader.getValue()) with type Type30
 Did not find solution for node: items with type Type1
 Cannot find matching typeVariable for: setFirstName
@@ -513,11 +513,11 @@ Did not find solution for node: hierarchicalStreamReader.getValue() with type Ty
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
 Did not find solution for node: getValue with type Type26
-Did not find solution for node: "last-name".equals(currentAttribute) with type Type24
-Did not find solution for node: "last-name" with type Type18
+For node: "last-name".equals(currentAttribute) expected fqn: boolean with type: Type24 got: boolean
+For node: "last-name" expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type24
-Did not find solution for node: currentAttribute with type Type17
+For node: equals expected fqn: boolean with type: Type24 got: boolean
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Did not find solution for node: items.setLastName(hierarchicalStreamReader.getValue()) with type Type33
 Did not find solution for node: items with type Type1
 Cannot find matching typeVariable for: setLastName
@@ -526,11 +526,11 @@ Did not find solution for node: hierarchicalStreamReader.getValue() with type Ty
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
 Did not find solution for node: getValue with type Type26
-Did not find solution for node: "address".equals(currentAttribute) with type Type24
-Did not find solution for node: "address" with type Type18
+For node: "address".equals(currentAttribute) expected fqn: boolean with type: Type24 got: boolean
+For node: "address" expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type24
-Did not find solution for node: currentAttribute with type Type17
+For node: equals expected fqn: boolean with type: Type24 got: boolean
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Did not find solution for node: items.setAddress(hierarchicalStreamReader.getValue()) with type Type36
 Did not find solution for node: items with type Type1
 Cannot find matching typeVariable for: setAddress
@@ -539,11 +539,11 @@ Did not find solution for node: hierarchicalStreamReader.getValue() with type Ty
 For node: hierarchicalStreamReader expected fqn: com.thoughtworks.xstream.io.HierarchicalStreamReader with type: Type10 got: com.thoughtworks.xstream.io.HierarchicalStreamReader
 Cannot find matching typeVariable for: getValue
 Did not find solution for node: getValue with type Type26
-Did not find solution for node: "zip".equals(currentAttribute) with type Type24
-Did not find solution for node: "zip" with type Type18
+For node: "zip".equals(currentAttribute) expected fqn: boolean with type: Type24 got: boolean
+For node: "zip" expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: equals
-Did not find solution for node: equals with type Type24
-Did not find solution for node: currentAttribute with type Type17
+For node: equals expected fqn: boolean with type: Type24 got: boolean
+For node: currentAttribute expected fqn: java.lang.String with type: Type17 got: java.lang.String
 Did not find solution for node: items.setZip(hierarchicalStreamReader.getValue()) with type Type39
 Did not find solution for node: items with type Type1
 Cannot find matching typeVariable for: setZip
@@ -712,10 +712,10 @@ Cannot find matching typeVariable for: public class Items {
 }
 
 Did not find solution for node: Items with type Type1
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: id
-Did not find solution for node: id with type Type18
+For node: id expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: id
 Cannot find matching typeVariable for: private String id;
 
@@ -855,10 +855,10 @@ public class Items {
   }
 }
 
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: firstName
-Did not find solution for node: firstName with type Type18
+For node: firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: firstName
 Cannot find matching typeVariable for: private String firstName;
 
@@ -998,10 +998,10 @@ public class Items {
   }
 }
 
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: lastName
-Did not find solution for node: lastName with type Type18
+For node: lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: lastName
 Cannot find matching typeVariable for: private String lastName;
 
@@ -1141,10 +1141,10 @@ public class Items {
   }
 }
 
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: address
-Did not find solution for node: address with type Type18
+For node: address expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: address
 Cannot find matching typeVariable for: private String address;
 
@@ -1284,10 +1284,10 @@ public class Items {
   }
 }
 
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: zip
-Did not find solution for node: zip with type Type18
+For node: zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: zip
 Cannot find matching typeVariable for: private String zip;
 
@@ -1570,17 +1570,17 @@ public class Items {
 }
 
 Cannot find matching typeVariable for: String id
-Did not find solution for node: String id with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: id with type Type18
-Did not find solution for node: this.id=id with type Type18
-Did not find solution for node: this.id with type Type18
+For node: String id expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: id expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.id=id expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.id expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: id
-Did not find solution for node: id with type Type18
+For node: id expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: id
-Did not find solution for node: id with type Type18
+For node: id expected fqn: java.lang.String with type: Type18 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: setFirstName
 Cannot find matching typeVariable for: public void setFirstName(String firstName){
@@ -1724,17 +1724,17 @@ public class Items {
 }
 
 Cannot find matching typeVariable for: String firstName
-Did not find solution for node: String firstName with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: firstName with type Type18
-Did not find solution for node: this.firstName=firstName with type Type18
-Did not find solution for node: this.firstName with type Type18
+For node: String firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.firstName=firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: firstName
-Did not find solution for node: firstName with type Type18
+For node: firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: firstName
-Did not find solution for node: firstName with type Type18
+For node: firstName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: setLastName
 Cannot find matching typeVariable for: public void setLastName(String lastName){
@@ -1878,17 +1878,17 @@ public class Items {
 }
 
 Cannot find matching typeVariable for: String lastName
-Did not find solution for node: String lastName with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: lastName with type Type18
-Did not find solution for node: this.lastName=lastName with type Type18
-Did not find solution for node: this.lastName with type Type18
+For node: String lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.lastName=lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: lastName
-Did not find solution for node: lastName with type Type18
+For node: lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: lastName
-Did not find solution for node: lastName with type Type18
+For node: lastName expected fqn: java.lang.String with type: Type18 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: setAddress
 Cannot find matching typeVariable for: public void setAddress(String address){
@@ -2032,17 +2032,17 @@ public class Items {
 }
 
 Cannot find matching typeVariable for: String address
-Did not find solution for node: String address with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: address with type Type18
-Did not find solution for node: this.address=address with type Type18
-Did not find solution for node: this.address with type Type18
+For node: String address expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: address expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.address=address expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.address expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: address
-Did not find solution for node: address with type Type18
+For node: address expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: address
-Did not find solution for node: address with type Type18
+For node: address expected fqn: java.lang.String with type: Type18 got: java.lang.String
 For node: void expected fqn: void with type: Type4 got: void
 Cannot find matching typeVariable for: setZip
 Cannot find matching typeVariable for: public void setZip(String zip){
@@ -2186,67 +2186,67 @@ public class Items {
 }
 
 Cannot find matching typeVariable for: String zip
-Did not find solution for node: String zip with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: String with type Type18
-Did not find solution for node: zip with type Type18
-Did not find solution for node: this.zip=zip with type Type18
-Did not find solution for node: this.zip with type Type18
+For node: String zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.zip=zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
+For node: this.zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: zip
-Did not find solution for node: zip with type Type18
+For node: zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
 Cannot find matching typeVariable for: zip
-Did not find solution for node: zip with type Type18
-{Checked=182, Analyzed=59, Unsolved=123, Incorrect=1, Correct=58}
+For node: zip expected fqn: java.lang.String with type: Type18 got: java.lang.String
+{Checked=182, Analyzed=141, Unsolved=41, Incorrect=1, Correct=140}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
 =SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 com.thoughtworks.xstream.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
 com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=FieldAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=Assignment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
-java=SimpleName: {Checked=47, Analyzed=9, Unsolved=38, Incorrect=0, Correct=9}
-java=SimpleType: {Checked=14, Analyzed=3, Unsolved=11, Incorrect=0, Correct=3}
-java=SingleVariableDeclaration: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=47, Analyzed=42, Unsolved=5, Incorrect=0, Correct=42}
+java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=SimpleName: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 Total stats
-{Checked=182, Analyzed=59, Unsolved=123, Incorrect=1, Correct=58}
+{Checked=182, Analyzed=141, Unsolved=41, Incorrect=1, Correct=140}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
 =SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 com.thoughtworks.xstream.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
 com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=Assignment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=FieldAccess: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=Assignment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=FieldAccess: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
 java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
-java=SimpleName: {Checked=47, Analyzed=9, Unsolved=38, Incorrect=0, Correct=9}
-java=SimpleType: {Checked=14, Analyzed=3, Unsolved=11, Incorrect=0, Correct=3}
-java=SingleVariableDeclaration: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=47, Analyzed=42, Unsolved=5, Incorrect=0, Correct=42}
+java=SimpleType: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SingleVariableDeclaration: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 void=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
 void=SimpleName: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
@@ -2256,22 +2256,22 @@ void=SimpleName: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
 ,ThisExpression,0,5,0,0,5
 ,VariableDeclarationFragment,0,1,0,0,1
 boolean,InfixExpression,1,1,1,0,0
-boolean,MethodInvocation,1,6,1,0,5
+boolean,MethodInvocation,6,6,6,0,0
 boolean,PrimitiveType,1,1,1,0,0
-boolean,SimpleName,1,6,1,0,5
+boolean,SimpleName,6,6,6,0,0
 com.thoughtworks.xstream.,SimpleName,18,18,18,0,0
 com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
 com.thoughtworks.xstream.,SingleVariableDeclaration,4,4,4,0,0
-java,Assignment,0,5,0,0,5
-java,FieldAccess,0,5,0,0,5
+java,Assignment,5,5,5,0,0
+java,FieldAccess,5,5,5,0,0
 java,MarkerAnnotation,3,3,3,0,0
-java,MethodInvocation,0,6,0,0,6
-java,SimpleName,9,47,9,0,38
-java,SimpleType,3,14,3,0,11
-java,SingleVariableDeclaration,2,7,2,0,5
-java,StringLiteral,0,6,0,0,6
+java,MethodInvocation,1,6,1,0,5
+java,SimpleName,42,47,42,0,5
+java,SimpleType,14,14,14,0,0
+java,SingleVariableDeclaration,7,7,7,0,0
+java,StringLiteral,6,6,6,0,0
 java,TypeLiteral,1,1,0,1,0
-java,VariableDeclarationFragment,0,6,0,0,6
+java,VariableDeclarationFragment,6,6,6,0,0
 void,MethodInvocation,2,7,2,0,5
 void,PrimitiveType,6,6,6,0,0
 void,SimpleName,2,7,2,0,5

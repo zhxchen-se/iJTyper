@@ -1,7 +1,7 @@
 echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
-Processing snippet: /api-resolution/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_41.java
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_41.java
 Expect check=106
 Cannot find matching typeVariable for: public class xstream_class_41 {
   public static void main(  String arg[]){
@@ -82,7 +82,7 @@ public class Details {
   }
 }
 
-For node: void expected fqn: void with type: Type6 got: void
+Did not find solution for node: void with type Type6
 Cannot find matching typeVariable for: main
 Cannot find matching typeVariable for: public static void main(String arg[]){
   XStream xstream=new XStream(new StaxDriver());
@@ -151,31 +151,31 @@ For node: String arg[] expected fqn: java.lang.String[] with type: Type7 got: ja
 For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
 For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
 For node: arg expected fqn: java.lang.String[] with type: Type8 got: java.lang.String[]
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: XStream with type Type9
+Did not find solution for node: XStream with type Type9
 Cannot find matching typeVariable for: xstream=new XStream(new StaxDriver())
-For node: xstream=new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
-For node: new StaxDriver() expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type10 got: com.thoughtworks.xstream.io.xml.StaxDriver
-For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type10 got: com.thoughtworks.xstream.io.xml.StaxDriver
-For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type10 got: com.thoughtworks.xstream.io.xml.StaxDriver
+Did not find solution for node: xstream=new XStream(new StaxDriver()) with type Type9
+Did not find solution for node: xstream with type Type9
+Did not find solution for node: new XStream(new StaxDriver()) with type Type9
+Did not find solution for node: XStream with type Type9
+Did not find solution for node: XStream with type Type9
+Did not find solution for node: new StaxDriver() with type Type10
+Did not find solution for node: StaxDriver with type Type10
+Did not find solution for node: StaxDriver with type Type10
 For node: xstream.alias("data",DetList.class) expected fqn: void with type: Type16 got: void
-For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: xstream with type Type9
 Cannot find matching typeVariable for: alias
 For node: alias expected fqn: void with type: Type16 got: void
 For node: "data" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: DetList.class expected fqn: java.lang.Class<xstream_class_41.DetList> with type: Type15 got: java.lang.Class
+Did not find solution for node: DetList.class with type Type15
 Did not find solution for node: DetList with type Type2
 Did not find solution for node: DetList with type Type2
-For node: xstream.alias("i",Details.class) expected fqn: void with type: Type19 got: void
-For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: xstream.alias("i",Details.class) with type Type19
+Did not find solution for node: xstream with type Type9
 Cannot find matching typeVariable for: alias
-For node: alias expected fqn: void with type: Type19 got: void
+Did not find solution for node: alias with type Type19
 For node: "i" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: Details.class expected fqn: java.lang.Class<xstream_class_41.Details> with type: Type15 got: java.lang.Class
+Did not find solution for node: Details.class with type Type15
 For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
 For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
 For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
@@ -195,8 +195,8 @@ For node: "</data>" expected fqn: java.lang.String with type: Type14 got: java.l
 For node: System.out.println(s) expected fqn: void with type: Type24 got: void
 Cannot find matching typeVariable for: System.out
 For node: System.out expected fqn: java.io.PrintStream with type: Type24 got: void
-Did not find solution for node: System with type Type22
-For node: out expected fqn: java.io.PrintStream with type: Type23 got: java.io.PrintWriter
+For node: System expected fqn: java.lang.System with type: Type22 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type23 got: java.io.PrintStream
 Cannot find matching typeVariable for: println
 For node: println expected fqn: void with type: Type24 got: void
 For node: s expected fqn: java.lang.String with type: Type14 got: java.lang.String
@@ -209,7 +209,7 @@ Did not find solution for node: (DetList)xstream.fromXML(s) with type Type2
 Did not find solution for node: DetList with type Type2
 Did not find solution for node: DetList with type Type2
 For node: xstream.fromXML(s) expected fqn: java.lang.Object with type: Type27 got: java.lang.Object
-For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type9 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: xstream with type Type9
 Cannot find matching typeVariable for: fromXML
 For node: fromXML expected fqn: java.lang.Object with type: Type27 got: java.lang.Object
 For node: s expected fqn: java.lang.String with type: Type14 got: java.lang.String
@@ -371,7 +371,7 @@ public class Details {
 }
 
 For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: void expected fqn: void with type: Type6 got: void
+Did not find solution for node: void with type Type6
 Cannot find matching typeVariable for: setDetlist
 Cannot find matching typeVariable for: public void setDetlist(List<Details> detlist){
   this.detlist=detlist;
@@ -660,16 +660,16 @@ public class Details {
   }
 }
 
-{Checked=95, Analyzed=83, Unsolved=12, Incorrect=31, Correct=52}
+{Checked=95, Analyzed=65, Unsolved=30, Incorrect=28, Correct=37}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=5, Correct=0}
 =SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
@@ -677,26 +677,26 @@ java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1
 java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
 java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=20, Analyzed=19, Unsolved=1, Incorrect=8, Correct=11}
+java=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=7, Correct=13}
 java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=3, Correct=6}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=StringLiteral: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-java=TypeLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
-void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 Total stats
-{Checked=95, Analyzed=83, Unsolved=12, Incorrect=31, Correct=52}
+{Checked=95, Analyzed=65, Unsolved=30, Incorrect=28, Correct=37}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=5, Correct=0}
 =SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
@@ -704,24 +704,24 @@ java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1
 java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
 java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=20, Analyzed=19, Unsolved=1, Incorrect=8, Correct=11}
+java=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=7, Correct=13}
 java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=3, Correct=6}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
 java=StringLiteral: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-java=TypeLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
-void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 ,CastExpression,0,1,0,0,1
 ,SimpleName,5,10,0,5,5
 ,SimpleType,4,7,0,4,3
 ,ThisExpression,0,1,0,0,1
 ,VariableDeclarationFragment,0,1,0,0,1
-com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
-com.thoughtworks.xstream.,SimpleName,7,7,7,0,0
-com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
-com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,0,2,0,0,2
+com.thoughtworks.xstream.,SimpleName,0,7,0,0,7
+com.thoughtworks.xstream.,SimpleType,0,3,0,0,3
+com.thoughtworks.xstream.,VariableDeclarationFragment,0,1,0,0,1
 java,Assignment,1,1,0,1,0
 java,ClassInstanceCreation,1,1,1,0,0
 java,FieldAccess,1,1,0,1,0
@@ -729,12 +729,12 @@ java,InfixExpression,1,1,1,0,0
 java,MethodInvocation,1,1,1,0,0
 java,ParameterizedType,3,3,0,3,0
 java,QualifiedName,1,1,0,1,0
-java,SimpleName,19,20,11,8,1
+java,SimpleName,20,20,13,7,0
 java,SimpleType,9,9,6,3,0
 java,SingleVariableDeclaration,2,2,0,2,0
 java,StringLiteral,7,7,7,0,0
-java,TypeLiteral,2,2,0,2,0
+java,TypeLiteral,0,2,0,0,2
 java,VariableDeclarationFragment,5,5,4,1,0
-void,MethodInvocation,3,3,3,0,0
-void,PrimitiveType,2,2,2,0,0
-void,SimpleName,3,3,3,0,0
+void,MethodInvocation,2,3,2,0,1
+void,PrimitiveType,0,2,0,0,2
+void,SimpleName,2,3,2,0,1
