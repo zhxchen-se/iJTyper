@@ -632,7 +632,7 @@ def reset_database():
     db.copy_large_results_to_four_tables(results)
 
     end_time = time.time()
-    print(f'重置耗时：{end_time-start_time}')
+    print(f'reset time:{end_time-start_time}')
     db.close()
 
 

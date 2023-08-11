@@ -89,6 +89,7 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_
             dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,3,rule_node_pred_dict)
             dl_time += time.time()-dl_start_time
 
+            # print(f'debug92:{dl_node_pred_dict}')
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             if last_result:
                 result.combine_ans(last_result)
@@ -301,10 +302,10 @@ if __name__ == '__main__':
     # lib = 'jdk'    
     dataset = 'StatType-SO'
     # dataset = 'Short-SO'
-    # snippet_file_name = 'xstream_class_2.java'
-    # lib = 'xstream'
-    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
-    # result.show_csv()
+    snippet_file_name = 'gwt_class_12.java'
+    lib = 'gwt'
+    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
+    result.show_csv()
 
 
     # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,3,False)
@@ -314,19 +315,19 @@ if __name__ == '__main__':
 
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
-    libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
-    error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
-    open(error_log_file, "w").close() # clear log
-    for lib in libs:
-        try:
-            reset_database() # run pure baseline combine ans
-            run_lib(dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round=15)
-        except Exception as e:
-            with open(error_log_file, "a") as error_log:
-                error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
-                error_log.write(error_msg+ '\n')
-                error_log.write(traceback.format_exc())  # stack info
-                error_log.write("\n")
+    # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
+    # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
+    # open(error_log_file, "w").close() # clear log
+    # for lib in libs:
+    #     try:
+    #         reset_database() # run pure baseline combine ans
+    #         run_lib(dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round=15)
+    #     except Exception as e:
+    #         with open(error_log_file, "a") as error_log:
+    #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
+    #             error_log.write(error_msg+ '\n')
+    #             error_log.write(traceback.format_exc())  # stack info
+    #             error_log.write("\n")
 
 
     # start_time = time.time()

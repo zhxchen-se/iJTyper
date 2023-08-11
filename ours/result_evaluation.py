@@ -45,7 +45,7 @@ class Result:
         self.total_correct= 0
 
         self.simplify_dl_pred_dict() 
-
+        # print(f'debug48:dl_node_pred_dict = {self.dl_node_pred_dict}')
         for key in self.dl_node_pred_dict:
             node = key
 
@@ -78,11 +78,14 @@ class Result:
                 
                 #get final answer and respective correct number
                 dl_record_correct,rule_record_correct,total_record_correct,total_pred,total_truth = self.judge_correct(dl_pred,dl_truth,rule_pred,rule_truth)
+                # print(f'debug81:node = {node}, total_pred = {total_pred}')
                 self.rule_correct += rule_record_correct
                 self.dl_correct += dl_record_correct
                 self.total_correct += total_record_correct
                 self.total_node_pred_dict[node] = total_pred
                 self.total_node_truth_dict[node] = total_truth
+
+                # print(f'debug88:total_node_pred_dict = {self.total_node_pred_dict}')
                 #save result
                 result = (node,dl_pred,dl_truth,dl_record_correct,rule_pred,rule_truth,rule_record_correct,total_record_correct) #add one column:total correct
                 self.csv_result.append(result)
@@ -122,6 +125,8 @@ class Result:
                         
                         #get final answer and respective correct number
                         dl_record_correct,rule_record_correct,total_record_correct,total_pred,total_truth = self.judge_correct(dl_pred,dl_truth,rule_pred,rule_truth)
+                        # print(f'debug126:node = {node}, total_pred = {total_pred}')
+
                         self.rule_correct += rule_record_correct
                         self.dl_correct += dl_record_correct
                         self.total_correct += total_record_correct
@@ -145,9 +150,12 @@ class Result:
                     dl_record_correct = 1 if dl_pred == dl_truth else 0
                     total_record_correct = dl_record_correct
 
+                    total_pred = dl_pred
+                    total_truth = dl_truth
                     self.dl_correct += dl_record_correct
                     self.total_correct += dl_record_correct
-
+                    self.total_node_pred_dict[node] = total_pred
+                    self.total_node_truth_dict[node] = total_truth
                     #save result
                     result = (node,dl_pred,dl_truth,dl_record_correct,rule_pred,rule_truth,rule_record_correct,total_record_correct) #add one column:total correct
                     self.csv_result.append(result)
