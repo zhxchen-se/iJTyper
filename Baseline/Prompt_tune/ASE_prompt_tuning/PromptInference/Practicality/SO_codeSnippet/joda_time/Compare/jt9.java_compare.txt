@@ -1,0 +1,53 @@
+[
+  {
+    "codeStatement": "LocalDate today = LocalDate.now();",
+    "FQN_Pred": [
+      [
+        "java.time.LocalDate",
+        "org.joda.time.LocalDate",
+        "java.time.time.LocalDate"
+      ],
+      [
+        "java.time.LocalDate",
+        "org.joda.time.LocalDate",
+        "java.time.time.LocalDate"
+      ]
+    ],
+    "FQN_true": [
+      "java.time.LocalDate",
+      "java.time.LocalDate"
+    ]
+  },
+  {
+    "codeStatement": "ZonedDateTime zdt = today.atStartOfDay().atZone(ZoneId.systemDefault());",
+    "FQN_Pred": [
+      [
+        "java.time.ZonedDateTime",
+        "java.time.zone.ZonedDateTime",
+        "java.time.chrontime.ZonedDateTime"
+      ],
+      [
+        "java.time.ZoneId",
+        "java.time.format.ZoneId",
+        "org.joda.time.tz.ZoneId"
+      ]
+    ],
+    "FQN_true": [
+      "java.time.ZonedDateTime",
+      "java.time.ZoneId"
+    ]
+  },
+  {
+    "codeStatement": "OffsetDateTime odt = zdt.toOffsetDateTime();",
+    "FQN_Pred": [
+      [
+        "java.time.OffsetDateTime",
+        "java.time.zone.OffsetDateTime",
+        "org.time.zonetime.OffsetDateTime"
+      ]
+    ],
+    "FQN_true": [
+      "java.time.OffsetDateTime"
+    ]
+  }
+]

@@ -165,8 +165,8 @@ class Result:
         rule_precision = round(self.rule_correct/self.rule_checked,4) if self.rule_checked>0 else 0
         total_precision = round(self.total_correct/self.total_checked,4) if self.total_checked>0 else 0
 
-        pred_line = (f"dl_correct:{self.dl_correct}",f"dl_precision:{dl_precision}","",f"rule_correct:{self.rule_correct}",f"rule_checked:{self.rule_checked}",f"rule_precision:{rule_precision}",f"rule_recall:{rule_recall}")
-        total_line = (f"checked:{self.total_checked}",f"total correct:{self.total_correct}",f"total precision:{total_precision}")
+        pred_line = (f"dl_correct:{self.dl_correct}",f"dl_accuracy:{dl_precision}","",f"rule_correct:{self.rule_correct}",f"rule_checked:{self.rule_checked}",f"rule_accuracy:{rule_precision}",f"rule_recall:{rule_recall}")
+        total_line = (f"checked:{self.total_checked}",f"total correct:{self.total_correct}",f"total accuracy:{total_precision}")
         self.csv_result = self.csv_result +[pred_line,total_line]
         
         return self.total_node_pred_dict,self.total_node_truth_dict
@@ -338,7 +338,7 @@ def extract_info_from_lib_csv(dataset,lib): # evaluate csv_file/{lib}/{snippet_n
 
     with open(save_lib_csv_path, 'w', newline='', encoding='utf-8') as summary_csv:
         csv_writer = csv.writer(summary_csv)
-        csv_writer.writerow(['checked','dl_correct','rule_checked','rule_correct',  'total_correct','dl_recall','rule_precision','rule_recall','total_recall'])
+        csv_writer.writerow(['checked','dl_correct','rule_checked','rule_correct',  'total_correct','dl_recall','rule_accuracy','rule_recall','total_recall'])
         csv_writer.writerow([checked, dl_correct,rule_checked,rule_correct, total_correct,dl_recall,rule_precision,rule_recall,total_recall])
 
     print(f"lib summarize csv has been saved to {save_lib_csv_path}")
@@ -348,7 +348,7 @@ def extract_info_from_lib_csv(dataset,lib): # evaluate csv_file/{lib}/{snippet_n
 
 def create_table():
     all_lib_number = [0,0,0,0,0]
-    table = [["Lib", "DL Recall(precision)", "Rule Precision", "Rule Recall", "Total Recall"]]
+    table = [["Lib", "DL Recall(Accuracy)", "Rule Accuracy", "Rule Recall", "Total Recall"]]
     csv_directory = os.path.abspath(os.path.join(os.getcwd(),"MiddleResults","lib_csv_summary"))
     file_names = sorted(os.listdir(csv_directory))
     for file_name in file_names:
@@ -381,13 +381,13 @@ def get_total_summary():
     # calculate average
     df = pd.read_csv(sava_csv_path)
     # print(f"debug379:df['DL Recall(precision)']={df['DL Recall(precision)']}")
-    ase_mean = df['DL Recall(precision)'].mean()
-    precision_snr_mean = df['Rule Precision'].mean()  
+    ase_mean = df['DL Recall(Accuracy)'].mean()
+    precision_snr_mean = df['Rule Accuracy'].mean()  
     recall_snr_mean = df['Rule Recall'].mean()
     total_recall_mean = df['Total Recall'].mean()
     means_df = pd.DataFrame({'Lib':['Average'],
-                            'DL Recall(precision)': [ase_mean],
-                            'Rule Precision': [precision_snr_mean],
+                            'DL Recall(Accuracy)': [ase_mean],
+                            'Rule Accuracy': [precision_snr_mean],
                             'Rule Recall': [recall_snr_mean],
                             'Total Recall': [total_recall_mean]})
     combined_df = pd.concat([df, means_df]) 
@@ -398,8 +398,8 @@ def get_total_summary():
     total_rule_recall = round(all_lib_number[3]/all_lib_number[0],4)
     total_recall = round(all_lib_number[4]/all_lib_number[0],4)
     total_df = pd.DataFrame({'Lib':['Total'],
-                            'DL Recall(precision)': [total_dl_recall],
-                            'Rule Precision': [total_rule_precision],
+                            'DL Recall(Accuracy)': [total_dl_recall],
+                            'Rule Accuracy': [total_rule_precision],
                             'Rule Recall': [total_rule_recall],
                             'Total Recall': [total_recall]})
     combined_df = pd.concat([combined_df, total_df]) 
@@ -442,12 +442,157 @@ def get_lib_iter_rounds(lib):
 
 
 
+def extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round): # evaluate csv_file/{lib}/{snippet_name}_iter{i}.csv
+    tmp_dir = os.getcwd()
+    os.chdir(current_directory)
+
+    dataset_directory = os.path.abspath(os.path.join(os.getcwd(),"..","Datasets",dataset,lib))
+    file_names = os.listdir(dataset_directory) 
+
+    lib_csv_folder_path = os.path.abspath(os.path.join(tmp_dir,'MiddleResults',"csv_file",lib))
+    csv_file_names = os.listdir(lib_csv_folder_path) 
+    # some files may meet with some error so that will not appear
+    checked = 0
+    rule_checked = 0
+    dl_correct = 0
+    rule_correct = 0
+    total_correct = 0
+    pattern_dl_correct = r"dl_correct:(\d+)"
+    pattern_rule_correct = r"rule_correct:(\d+)"
+    pattern_rule_checked = r"rule_checked:(\d+)"
+    pattern_checked = r"^checked:(\d+)"
+    pattern_total_correct = r"total correct:(\d+)"
+
+    for file_name in file_names:
+        csv_file = file_name.replace('.java',f'_iter{iter_round}.csv')
+        csv_file_path = None
+        if csv_file in csv_file_names: # if exists
+            csv_file_path = os.path.abspath(os.path.join(tmp_dir,'MiddleResults',"csv_file",lib,csv_file))
+        else: # if not exists: error or lower iteration round exists
+            tmp = iter_round - 1
+            while tmp:
+                csv_file = file_name.replace('.java',f'_iter{tmp}.csv')
+                if csv_file in csv_file_names: # if exists
+                    csv_file_path = os.path.abspath(os.path.join(tmp_dir,'MiddleResults',"csv_file",lib,csv_file))
+                    break
+                tmp -= 1
+
+        if csv_file_path:
+            # print(f'debug481:csv_file_path = {csv_file_path}')
+            with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
+                    lines = csvfile.readlines()
+                    for line in lines:
+                        match_dl_correct = re.search(pattern_dl_correct, line)
+                        match_rule_correct = re.search(pattern_rule_correct, line)
+                        match_rule_checked = re.search(pattern_rule_checked, line)
+                        match_checked = re.search(pattern_checked, line)
+                        match_total_correct = re.search(pattern_total_correct, line)
+                        if match_dl_correct:
+                            dl_correct +=  int(match_dl_correct.group(1))
+                        if match_rule_correct:
+                            rule_correct += int(match_rule_correct.group(1))
+                        if match_rule_checked:
+                            rule_checked += int(match_rule_checked.group(1))
+                        if match_checked:
+                            checked += int(match_checked.group(1))
+                        if match_total_correct:
+                            total_correct += int(match_total_correct.group(1))
+
+    dl_recall = round(dl_correct/checked,4)
+    rule_precision = round(rule_correct/rule_checked,4)
+    rule_recall = round(rule_correct/checked,4)
+    total_recall = round(total_correct/checked,4)
+
+    save_lib_csv_folder = os.path.abspath(os.path.join(tmp_dir,'MiddleResults',f"lib_csv_summary_iter{iter_round}")) 
+    if not os.path.exists(save_lib_csv_folder):
+        os.makedirs(save_lib_csv_folder)
+
+    save_lib_csv_path = os.path.abspath(os.path.join(save_lib_csv_folder,f'{lib}_summary_iter{iter_round}.csv'))
+
+
+    with open(save_lib_csv_path, 'w', newline='', encoding='utf-8') as summary_csv:
+        csv_writer = csv.writer(summary_csv)
+        csv_writer.writerow(['checked','dl_correct','rule_checked','rule_correct',  'total_correct','dl_recall','rule_accuracy','rule_recall','total_recall'])
+        csv_writer.writerow([checked, dl_correct,rule_checked,rule_correct, total_correct,dl_recall,rule_precision,rule_recall,total_recall])
+
+    print(f"lib summarize csv of iteration {iter_round} has been saved to {save_lib_csv_path}")
+
+    os.chdir(tmp_dir)
+
+
+def create_table_specify_iteration_round(iter_round):
+    all_lib_number = [0,0,0,0,0]
+    table = [["Lib", "DL Recall(Accuracy)", "Rule Accuracy", "Rule Recall", "Total Recall"]]
+    csv_directory = os.path.abspath(os.path.join(os.getcwd(),"MiddleResults",f"lib_csv_summary_iter{iter_round}"))
+    file_names = sorted(os.listdir(csv_directory))
+    for file_name in file_names:
+        csv_file_path = os.path.abspath(os.path.join(csv_directory,file_name))
+        with open(csv_file_path, "r") as file:
+            csv_reader = csv.reader(file)
+            next(csv_reader)
+            second_row = next(csv_reader)
+            row = [file_name.replace('_summary.csv','')]
+            for i in range(0,5):
+                all_lib_number[i] += int(second_row[i])
+            for i in range(5,9):
+                row.append(second_row[i])
+            table.append(row)
+
+    return table,all_lib_number
+
+def get_summary_specify_iteration_round(iter_round):
+    tmp_dir = os.getcwd()
+    os.chdir(current_directory)
+
+    table,all_lib_number = create_table_specify_iteration_round(iter_round)
+    sava_csv_path = os.path.abspath(os.path.join(tmp_dir,"MiddleResults",f"summary_iter{iter_round}.csv"))
+    with open(sava_csv_path, 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerows(table)
+
+    # calculate average
+    df = pd.read_csv(sava_csv_path)
+    # print(f"debug379:df['DL Recall(precision)']={df['DL Recall(precision)']}")
+    ase_mean = df['DL Recall(Accuracy)'].mean()
+    precision_snr_mean = df['Rule Accuracy'].mean()  
+    recall_snr_mean = df['Rule Recall'].mean()
+    total_recall_mean = df['Total Recall'].mean()
+    means_df = pd.DataFrame({'Lib':['Average'],
+                            'DL Recall(Accuracy)': [ase_mean],
+                            'Rule Accuracy': [precision_snr_mean],
+                            'Rule Recall': [recall_snr_mean],
+                            'Total Recall': [total_recall_mean]})
+    combined_df = pd.concat([df, means_df]) 
+
+    # calculate total
+    total_dl_recall = round(all_lib_number[1]/all_lib_number[0],4)
+    total_rule_precision = round(all_lib_number[3]/all_lib_number[2],4)
+    total_rule_recall = round(all_lib_number[3]/all_lib_number[0],4)
+    total_recall = round(all_lib_number[4]/all_lib_number[0],4)
+    total_df = pd.DataFrame({'Lib':['Total'],
+                            'DL Recall(Accuracy)': [total_dl_recall],
+                            'Rule Accuracy': [total_rule_precision],
+                            'Rule Recall': [total_rule_recall],
+                            'Total Recall': [total_recall]})
+    combined_df = pd.concat([combined_df, total_df]) 
+    combined_df.to_csv(sava_csv_path, index=False)
+    print(f"Final summary of iteration {iter_round} has been saved to {sava_csv_path}")    
+
+    os.chdir(tmp_dir)
+
+
 if __name__ == '__main__':
     libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
+    dataset = "Short-SO"
+    # dataset = "StatType-SO"
+    iter_round = 1
     for lib in libs:
-        # extract_info_from_lib_csv("Short-SO",lib)
-        extract_info_from_lib_csv("StatType-SO",lib)
+        extract_info_from_lib_csv(dataset,lib)
         get_lib_iter_rounds(lib)
+        # specify iteration round
+        extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round)
     
     get_total_summary()
+    get_summary_specify_iteration_round(iter_round)
+
     

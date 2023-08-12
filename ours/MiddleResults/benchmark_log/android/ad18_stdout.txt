@@ -1,5 +1,5 @@
-01:57:44.994 [main] INFO snr.h - Building CompilationUnit takes 659 ms
-01:57:45.135 [main] INFO snr.e - Compilation takes 136 ms
+07:25:35.399 [main] INFO snr.h - Building CompilationUnit takes 621 ms
+07:25:35.570 [main] INFO snr.e - Compilation takes 166 ms
 Intent cannot be resolved to a type
 Intent cannot be resolved to a type
 Intent cannot be resolved to a variable
@@ -9,7 +9,7 @@ Adding candidates [android.content.Intent] to Type5
 Return without setting candidates for Type8
 Return without setting candidates for Type6
 Adding candidate void to Type2
-01:57:45.460 [main] INFO snr.G - Loading initial candidates takes 199 ms.
+07:25:37.896 [main] INFO snr.G - Loading initial candidates takes 2164 ms.
 Before TypeVariable: Type2, Candidates: 1
    0. simple name: void
    1. subtype: Type8
@@ -27,16 +27,16 @@ Before TypeVariable: Type7, Candidates: 0
 []
 Before TypeVariable: Type8, Candidates: 0
 []
-01:57:45.465 [main] INFO snr.G - Populate candidates for type variable Type2
-01:57:45.465 [main] INFO snr.G - Populate candidates for type constraint full name: void
-01:57:45.465 [main] INFO snr.G - Populate candidates for type variable Type2
-01:57:45.465 [main] INFO snr.G - Populate candidates for type constraint simple name: void
-01:57:45.465 [main] INFO snr.G - Populate candidates for type variable Type5
-01:57:45.465 [main] INFO snr.G - Populate candidates for type constraint simple name: Intent
-01:57:45.465 [main] INFO snr.G - Populate candidates for type variable Type5
-01:57:45.465 [main] INFO snr.G - Populate candidates for type constraint field: Type6 ACTION_VIEW;
-01:57:45.473 [main] INFO snr.G - Populate candidates for type variable Type5
-01:57:45.473 [main] INFO snr.G - Populate candidates for type constraint method: Type8 <init>(Type7);
+07:25:37.902 [main] INFO snr.G - Populate candidates for type variable Type2
+07:25:37.902 [main] INFO snr.G - Populate candidates for type constraint full name: void
+07:25:37.902 [main] INFO snr.G - Populate candidates for type variable Type2
+07:25:37.902 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+07:25:37.902 [main] INFO snr.G - Populate candidates for type variable Type5
+07:25:37.902 [main] INFO snr.G - Populate candidates for type constraint simple name: Intent
+07:25:37.902 [main] INFO snr.G - Populate candidates for type variable Type5
+07:25:37.902 [main] INFO snr.G - Populate candidates for type constraint field: Type6 ACTION_VIEW;
+07:25:37.906 [main] INFO snr.G - Populate candidates for type variable Type5
+07:25:37.906 [main] INFO snr.G - Populate candidates for type constraint method: Type8 <init>(Type7);
 Processing method constraint method: Type8 <init>(Type7); on Type5
 Current solution for c Type5 is uninit ? false [android.content.Intent]
 Current solution for r Type8 is uninit ? false []
@@ -46,10 +46,10 @@ Looking at method: public V <init>(Landroid/content/Intent;)
 updated solution for c Type5 [android.content.Intent]
 updated solution for r Type8 [void]
 updated solution for p0 Type7 [java.lang.String, android.content.Intent]
-01:57:45.481 [main] INFO snr.G - Populate candidates for type variable Type2
-01:57:45.481 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
-01:57:45.481 [main] INFO snr.G - Populate candidates for type variable Type7
-01:57:45.481 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+07:25:37.910 [main] INFO snr.G - Populate candidates for type variable Type2
+07:25:37.910 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+07:25:37.910 [main] INFO snr.G - Populate candidates for type variable Type7
+07:25:37.910 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
 After TypeVariable: Type2, Candidates: 1
    0. simple name: void
    1. subtype: Type8
@@ -127,13 +127,13 @@ Bind Type5 to android.content.Intent, dumping:
 Bind Type8 to void, dumping:
 Bind Type6 to java.lang.String, dumping:
 Bind Type2 to void, dumping:
-01:57:45.746 [main] INFO snr.k - Fixing Type5 with android.content.Intent
-01:57:45.747 [main] INFO snr.k - Fixing Type5 with android.content.Intent
-01:57:45.747 [main] INFO snr.k - Fixing Type5 with android.content.Intent
-01:57:45.793 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
-01:57:45.795 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
-01:57:45.795 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
-01:57:45.795 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+07:25:38.079 [main] INFO snr.k - Fixing Type5 with android.content.Intent
+07:25:38.080 [main] INFO snr.k - Fixing Type5 with android.content.Intent
+07:25:38.080 [main] INFO snr.k - Fixing Type5 with android.content.Intent
+07:25:38.130 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+07:25:38.132 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+07:25:38.132 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+07:25:38.132 [main] INFO org.javelus.snr.compile.SnRBuilder - 
 package java.android;
 
 import android.content.Intent;
@@ -144,5 +144,5 @@ public class ad18 {
 		Intent i = new Intent(Intent.ACTION_VIEW);
 	}
 }
-01:57:45.795 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
-01:57:45.851 [main] INFO snr.e - Compilation takes 56 ms
+07:25:38.132 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+07:25:38.190 [main] INFO snr.e - Compilation takes 57 ms

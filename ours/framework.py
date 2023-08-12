@@ -302,9 +302,9 @@ if __name__ == '__main__':
     # lib = 'jdk'    
     # dataset = 'StatType-SO'
     dataset = 'Short-SO'
-    # snippet_file_name = 'Class_2.java'
-    # lib = 'jdk'
-    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
+    # snippet_file_name = 'xt15.java'
+    # lib = 'xstream'
+    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=False,log_feed_back_flag=False,Maximum_iter_round = 15)
     # result.show_csv()
 
 
@@ -320,8 +320,8 @@ if __name__ == '__main__':
     open(error_log_file, "w").close() # clear log
     for lib in libs:
         try:
-            reset_database() # run pure baseline combine ans
-            run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
+            # reset_database() # run pure baseline combine ans
+            run_lib(dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=False,log_feed_back_flag=False,Maximum_iter_round=15)
         except Exception as e:
             with open(error_log_file, "a") as error_log:
                 error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
