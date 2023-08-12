@@ -2,893 +2,110 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_22.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=164
-Cannot find matching typeVariable for: public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Cannot find matching typeVariable for: hibernate_class_22
-Cannot find matching typeVariable for: public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Cannot find matching typeVariable for: import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.json.JSONObject;
-public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: check
-Cannot find matching typeVariable for: public JSONObject check(){
-  Session session=null;
-  JSONObject check=new JSONObject();
-  try {
-    SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-    session=sessionFactory.openSession();
-    String username=null;
-    boolean justusername=false;
-    if (justusername) {
-      String hquery="Select username from User user Where username = ? ";
-      Query query=session.createQuery(hquery);
-      query.setString(0,username);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase","false");
-      }
- else {
-        check.put("indatabase","true");
-      }
-      check.put("justusername",true);
-    }
- else {
-      String hquery="Select username from User user Where username = :user and password = :pass ";
-      Query query=session.createQuery(hquery);
-      query.setString("user",username);
-      String password=null;
-      query.setString("pass",password);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase",false);
-      }
- else {
-        check.put("indatabase",true);
-      }
-      check.put("justusername",false);
-    }
-  }
- catch (  Exception e) {
-    System.out.println(e.getMessage());
-  }
- finally {
-    session.flush();
-    session.close();
-  }
-  return check;
-}
-
-Cannot find matching typeVariable for: public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Cannot find matching typeVariable for: import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.json.JSONObject;
-public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Did not find solution for node: Session with type Type3
-Did not find solution for node: Session with type Type3
-Cannot find matching typeVariable for: session=null
-Did not find solution for node: session=null with type Type3
-Did not find solution for node: session with type Type3
-Did not find solution for node: null with type Type4
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: check=new JSONObject()
-For node: check=new JSONObject() expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: new JSONObject() expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: JSONObject expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-Cannot find matching typeVariable for: sessionFactory=new Configuration().configure().buildSessionFactory()
-For node: sessionFactory=new Configuration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: new Configuration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type12 got: org.hibernate.SessionFactory
-For node: new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
-For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-Cannot find matching typeVariable for: configure
-For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
-Cannot find matching typeVariable for: buildSessionFactory
-For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type12 got: org.hibernate.SessionFactory
-Did not find solution for node: session=sessionFactory.openSession() with type Type3
-Did not find solution for node: session with type Type3
-Did not find solution for node: sessionFactory.openSession() with type Type14
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-Cannot find matching typeVariable for: openSession
-Did not find solution for node: openSession with type Type14
-Did not find solution for node: String with type Type16
-Did not find solution for node: String with type Type16
-Cannot find matching typeVariable for: username=null
-Did not find solution for node: username=null with type Type16
-Did not find solution for node: username with type Type16
-For node: null expected fqn: null with type: Type17 got: java.lang.String
-For node: boolean expected fqn: boolean with type: Type18 got: boolean
-Cannot find matching typeVariable for: justusername=false
-For node: justusername=false expected fqn: boolean with type: Type18 got: boolean
-For node: justusername expected fqn: boolean with type: Type18 got: boolean
-For node: false expected fqn: boolean with type: Type18 got: boolean
-Cannot find matching typeVariable for: justusername
-Cannot find matching typeVariable for: if (justusername) {
-  String hquery="Select username from User user Where username = ? ";
-  Query query=session.createQuery(hquery);
-  query.setString(0,username);
-  String user=(String)query.uniqueResult();
-  if (user == null) {
-    check.put("indatabase","false");
-  }
- else {
-    check.put("indatabase","true");
-  }
-  check.put("justusername",true);
-}
- else {
-  String hquery="Select username from User user Where username = :user and password = :pass ";
-  Query query=session.createQuery(hquery);
-  query.setString("user",username);
-  String password=null;
-  query.setString("pass",password);
-  String user=(String)query.uniqueResult();
-  if (user == null) {
-    check.put("indatabase",false);
-  }
- else {
-    check.put("indatabase",true);
-  }
-  check.put("justusername",false);
-}
-
-Cannot find matching typeVariable for: {
-  SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-  session=sessionFactory.openSession();
-  String username=null;
-  boolean justusername=false;
-  if (justusername) {
-    String hquery="Select username from User user Where username = ? ";
-    Query query=session.createQuery(hquery);
-    query.setString(0,username);
-    String user=(String)query.uniqueResult();
-    if (user == null) {
-      check.put("indatabase","false");
-    }
- else {
-      check.put("indatabase","true");
-    }
-    check.put("justusername",true);
-  }
- else {
-    String hquery="Select username from User user Where username = :user and password = :pass ";
-    Query query=session.createQuery(hquery);
-    query.setString("user",username);
-    String password=null;
-    query.setString("pass",password);
-    String user=(String)query.uniqueResult();
-    if (user == null) {
-      check.put("indatabase",false);
-    }
- else {
-      check.put("indatabase",true);
-    }
-    check.put("justusername",false);
-  }
-}
-
-Cannot find matching typeVariable for: try {
-  SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-  session=sessionFactory.openSession();
-  String username=null;
-  boolean justusername=false;
-  if (justusername) {
-    String hquery="Select username from User user Where username = ? ";
-    Query query=session.createQuery(hquery);
-    query.setString(0,username);
-    String user=(String)query.uniqueResult();
-    if (user == null) {
-      check.put("indatabase","false");
-    }
- else {
-      check.put("indatabase","true");
-    }
-    check.put("justusername",true);
-  }
- else {
-    String hquery="Select username from User user Where username = :user and password = :pass ";
-    Query query=session.createQuery(hquery);
-    query.setString("user",username);
-    String password=null;
-    query.setString("pass",password);
-    String user=(String)query.uniqueResult();
-    if (user == null) {
-      check.put("indatabase",false);
-    }
- else {
-      check.put("indatabase",true);
-    }
-    check.put("justusername",false);
-  }
-}
- catch (Exception e) {
-  System.out.println(e.getMessage());
-}
- finally {
-  session.flush();
-  session.close();
-}
-
-Cannot find matching typeVariable for: {
-  Session session=null;
-  JSONObject check=new JSONObject();
-  try {
-    SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-    session=sessionFactory.openSession();
-    String username=null;
-    boolean justusername=false;
-    if (justusername) {
-      String hquery="Select username from User user Where username = ? ";
-      Query query=session.createQuery(hquery);
-      query.setString(0,username);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase","false");
-      }
- else {
-        check.put("indatabase","true");
-      }
-      check.put("justusername",true);
-    }
- else {
-      String hquery="Select username from User user Where username = :user and password = :pass ";
-      Query query=session.createQuery(hquery);
-      query.setString("user",username);
-      String password=null;
-      query.setString("pass",password);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase",false);
-      }
- else {
-        check.put("indatabase",true);
-      }
-      check.put("justusername",false);
-    }
-  }
- catch (  Exception e) {
-    System.out.println(e.getMessage());
-  }
- finally {
-    session.flush();
-    session.close();
-  }
-  return check;
-}
-
-Cannot find matching typeVariable for: public JSONObject check(){
-  Session session=null;
-  JSONObject check=new JSONObject();
-  try {
-    SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-    session=sessionFactory.openSession();
-    String username=null;
-    boolean justusername=false;
-    if (justusername) {
-      String hquery="Select username from User user Where username = ? ";
-      Query query=session.createQuery(hquery);
-      query.setString(0,username);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase","false");
-      }
- else {
-        check.put("indatabase","true");
-      }
-      check.put("justusername",true);
-    }
- else {
-      String hquery="Select username from User user Where username = :user and password = :pass ";
-      Query query=session.createQuery(hquery);
-      query.setString("user",username);
-      String password=null;
-      query.setString("pass",password);
-      String user=(String)query.uniqueResult();
-      if (user == null) {
-        check.put("indatabase",false);
-      }
- else {
-        check.put("indatabase",true);
-      }
-      check.put("justusername",false);
-    }
-  }
- catch (  Exception e) {
-    System.out.println(e.getMessage());
-  }
- finally {
-    session.flush();
-    session.close();
-  }
-  return check;
-}
-
-Cannot find matching typeVariable for: public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Cannot find matching typeVariable for: import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.json.JSONObject;
-public class hibernate_class_22 {
-  public JSONObject check(){
-    Session session=null;
-    JSONObject check=new JSONObject();
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      String username=null;
-      boolean justusername=false;
-      if (justusername) {
-        String hquery="Select username from User user Where username = ? ";
-        Query query=session.createQuery(hquery);
-        query.setString(0,username);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase","false");
-        }
- else {
-          check.put("indatabase","true");
-        }
-        check.put("justusername",true);
-      }
- else {
-        String hquery="Select username from User user Where username = :user and password = :pass ";
-        Query query=session.createQuery(hquery);
-        query.setString("user",username);
-        String password=null;
-        query.setString("pass",password);
-        String user=(String)query.uniqueResult();
-        if (user == null) {
-          check.put("indatabase",false);
-        }
- else {
-          check.put("indatabase",true);
-        }
-        check.put("justusername",false);
-      }
-    }
- catch (    Exception e) {
-      System.out.println(e.getMessage());
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-    return check;
-  }
-}
-
-Did not find solution for node: String with type Type16
-Did not find solution for node: String with type Type16
-Cannot find matching typeVariable for: hquery="Select username from User user Where username = ? "
-Did not find solution for node: hquery="Select username from User user Where username = ? " with type Type16
-Did not find solution for node: hquery with type Type16
-Did not find solution for node: "Select username from User user Where username = ? " with type Type19
-Did not find solution for node: Query with type Type20
-Did not find solution for node: Query with type Type20
-Cannot find matching typeVariable for: query=session.createQuery(hquery)
-Did not find solution for node: query=session.createQuery(hquery) with type Type20
-Did not find solution for node: query with type Type20
-Did not find solution for node: session.createQuery(hquery) with type Type21
-Did not find solution for node: session with type Type3
-Cannot find matching typeVariable for: createQuery
-Did not find solution for node: createQuery with type Type21
-Did not find solution for node: hquery with type Type16
-Did not find solution for node: query.setString(0,username) with type Type25
-Did not find solution for node: query with type Type20
-Cannot find matching typeVariable for: setString
-Did not find solution for node: setString with type Type25
-Did not find solution for node: 0 with type Type24
-Did not find solution for node: username with type Type16
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-Cannot find matching typeVariable for: user=(String)query.uniqueResult()
-Did not find solution for node: user=(String)query.uniqueResult() with type Type19
-Did not find solution for node: user with type Type19
-Did not find solution for node: (String)query.uniqueResult() with type Type19
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-For node: query.uniqueResult() expected fqn: java.lang.Object with type: Type29 got: java.lang.String
-Did not find solution for node: query with type Type20
-Cannot find matching typeVariable for: uniqueResult
-For node: uniqueResult expected fqn: java.lang.Object with type: Type29 got: java.lang.String
-For node: user == null expected fqn: boolean with type: Type18 got: boolean
-Did not find solution for node: user with type Type19
-Did not find solution for node: null with type Type31
-For node: check.put("indatabase","false") expected fqn: org.json.JSONObject with type: Type32 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type32 got: org.json.JSONObject
-Did not find solution for node: "indatabase" with type Type19
-Did not find solution for node: "false" with type Type19
-For node: check.put("indatabase","true") expected fqn: org.json.JSONObject with type: Type35 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type35 got: org.json.JSONObject
-Did not find solution for node: "indatabase" with type Type19
-Did not find solution for node: "true" with type Type19
-For node: check.put("justusername",true) expected fqn: org.json.JSONObject with type: Type36 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type36 got: org.json.JSONObject
-Did not find solution for node: "justusername" with type Type19
-For node: true expected fqn: boolean with type: Type18 got: boolean
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-Cannot find matching typeVariable for: hquery="Select username from User user Where username = :user and password = :pass "
-Did not find solution for node: hquery="Select username from User user Where username = :user and password = :pass " with type Type19
-Did not find solution for node: hquery with type Type19
-Did not find solution for node: "Select username from User user Where username = :user and password = :pass " with type Type19
-Did not find solution for node: Query with type Type20
-Did not find solution for node: Query with type Type20
-Cannot find matching typeVariable for: query=session.createQuery(hquery)
-Did not find solution for node: query=session.createQuery(hquery) with type Type20
-Did not find solution for node: query with type Type20
-Did not find solution for node: session.createQuery(hquery) with type Type40
-Did not find solution for node: session with type Type3
-Cannot find matching typeVariable for: createQuery
-Did not find solution for node: createQuery with type Type40
-Did not find solution for node: hquery with type Type19
-Did not find solution for node: query.setString("user",username) with type Type43
-Did not find solution for node: query with type Type20
-Cannot find matching typeVariable for: setString
-Did not find solution for node: setString with type Type43
-Did not find solution for node: "user" with type Type19
-Did not find solution for node: username with type Type16
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-Cannot find matching typeVariable for: password=null
-Did not find solution for node: password=null with type Type19
-Did not find solution for node: password with type Type19
-For node: null expected fqn: null with type: Type47 got: java.lang.String
-Did not find solution for node: query.setString("pass",password) with type Type48
-Did not find solution for node: query with type Type20
-Cannot find matching typeVariable for: setString
-Did not find solution for node: setString with type Type48
-Did not find solution for node: "pass" with type Type19
-Did not find solution for node: password with type Type19
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-Cannot find matching typeVariable for: user=(String)query.uniqueResult()
-Did not find solution for node: user=(String)query.uniqueResult() with type Type19
-Did not find solution for node: user with type Type19
-Did not find solution for node: (String)query.uniqueResult() with type Type19
-Did not find solution for node: String with type Type19
-Did not find solution for node: String with type Type19
-Did not find solution for node: query.uniqueResult() with type Type30
-Did not find solution for node: query with type Type20
-Cannot find matching typeVariable for: uniqueResult
-Did not find solution for node: uniqueResult with type Type30
-For node: user == null expected fqn: boolean with type: Type18 got: boolean
-Did not find solution for node: user with type Type19
-Did not find solution for node: null with type Type52
-For node: check.put("indatabase",false) expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-Did not find solution for node: "indatabase" with type Type19
-For node: false expected fqn: boolean with type: Type18 got: boolean
-For node: check.put("indatabase",true) expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-Did not find solution for node: "indatabase" with type Type19
-For node: true expected fqn: boolean with type: Type18 got: boolean
-For node: check.put("justusername",false) expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-Cannot find matching typeVariable for: put
-For node: put expected fqn: org.json.JSONObject with type: Type39 got: org.json.JSONObject
-Did not find solution for node: "justusername" with type Type19
-For node: false expected fqn: boolean with type: Type18 got: boolean
-Cannot find matching typeVariable for: Exception e
-Did not find solution for node: Exception e with type Type53
-Did not find solution for node: Exception with type Type53
-Did not find solution for node: Exception with type Type53
-Did not find solution for node: e with type Type53
-For node: System.out.println(e.getMessage()) expected fqn: void with type: Type58 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type58 got: void
-For node: System expected fqn: java.lang.System with type: Type56 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type57 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type58 got: void
-Did not find solution for node: e.getMessage() with type Type54
-Did not find solution for node: e with type Type53
-Cannot find matching typeVariable for: getMessage
-Did not find solution for node: getMessage with type Type54
-Did not find solution for node: session.flush() with type Type61
-Did not find solution for node: session with type Type3
-Cannot find matching typeVariable for: flush
-Did not find solution for node: flush with type Type61
-Did not find solution for node: session.close() with type Type63
-Did not find solution for node: session with type Type3
-Cannot find matching typeVariable for: close
-Did not find solution for node: close with type Type63
-For node: check expected fqn: org.json.JSONObject with type: Type2 got: org.json.JSONObject
-{Checked=160, Analyzed=59, Unsolved=101, Incorrect=5, Correct=54}
-boolean=BooleanLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+{Checked=164, Analyzed=0, Unsolved=164, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=29, Analyzed=3, Unsolved=26, Incorrect=1, Correct=2}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=29, Analyzed=0, Unsolved=29, Incorrect=0, Correct=0}
 java=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
-null=NullLiteral: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=2, Correct=0}
+null=NullLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=0, Correct=2}
-org.hibernate.=SimpleName: {Checked=28, Analyzed=6, Unsolved=22, Incorrect=0, Correct=6}
-org.hibernate.=SimpleType: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
-org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
-org.json.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.json.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-org.json.=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
-org.json.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.json.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=28, Analyzed=0, Unsolved=28, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.json.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.json.=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+org.json.=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
+org.json.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.json.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 Total stats
-{Checked=160, Analyzed=59, Unsolved=101, Incorrect=5, Correct=54}
-boolean=BooleanLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+{Checked=164, Analyzed=0, Unsolved=164, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=CastExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=29, Analyzed=3, Unsolved=26, Incorrect=1, Correct=2}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=29, Analyzed=0, Unsolved=29, Incorrect=0, Correct=0}
 java=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
 java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
 java=VariableDeclarationFragment: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
-null=NullLiteral: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=2, Correct=0}
+null=NullLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=0, Correct=2}
-org.hibernate.=SimpleName: {Checked=28, Analyzed=6, Unsolved=22, Incorrect=0, Correct=6}
-org.hibernate.=SimpleType: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
-org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
-org.json.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.json.=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-org.json.=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
-org.json.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-org.json.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-boolean,BooleanLiteral,5,5,5,0,0
-boolean,InfixExpression,2,2,2,0,0
-boolean,PrimitiveType,1,1,1,0,0
-boolean,SimpleName,1,1,1,0,0
-boolean,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=28, Analyzed=0, Unsolved=28, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.json.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.json.=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+org.json.=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
+org.json.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.json.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+boolean,BooleanLiteral,0,5,0,0,5
+boolean,InfixExpression,0,2,0,0,2
+boolean,PrimitiveType,0,1,0,0,1
+boolean,SimpleName,0,2,0,0,2
+boolean,VariableDeclarationFragment,0,1,0,0,1
 int,NumberLiteral,0,1,0,0,1
 java,CastExpression,0,2,0,0,2
-java,MethodInvocation,1,3,0,1,2
-java,QualifiedName,1,1,0,1,0
-java,SimpleName,3,29,2,1,26
+java,MethodInvocation,0,3,0,0,3
+java,QualifiedName,0,1,0,0,1
+java,SimpleName,0,29,0,0,29
 java,SimpleType,0,9,0,0,9
 java,SingleVariableDeclaration,0,1,0,0,1
 java,StringLiteral,0,12,0,0,12
 java,VariableDeclarationFragment,0,6,0,0,6
-null,NullLiteral,2,5,0,2,3
+null,NullLiteral,0,5,0,0,5
 org.hibernate.,Assignment,0,1,0,0,1
-org.hibernate.,ClassInstanceCreation,1,1,1,0,0
-org.hibernate.,MethodInvocation,2,8,2,0,6
-org.hibernate.,SimpleName,6,28,6,0,22
-org.hibernate.,SimpleType,2,5,2,0,3
-org.hibernate.,VariableDeclarationFragment,1,4,1,0,3
-org.json.,ClassInstanceCreation,1,1,1,0,0
-org.json.,MethodInvocation,6,6,6,0,0
-org.json.,SimpleName,17,17,17,0,0
-org.json.,SimpleType,3,3,3,0,0
-org.json.,VariableDeclarationFragment,1,1,1,0,0
-void,MethodInvocation,1,3,1,0,2
-void,SimpleName,1,3,1,0,2
+org.hibernate.,ClassInstanceCreation,0,1,0,0,1
+org.hibernate.,MethodInvocation,0,8,0,0,8
+org.hibernate.,SimpleName,0,28,0,0,28
+org.hibernate.,SimpleType,0,5,0,0,5
+org.hibernate.,VariableDeclarationFragment,0,4,0,0,4
+org.json.,ClassInstanceCreation,0,1,0,0,1
+org.json.,MethodInvocation,0,6,0,0,6
+org.json.,SimpleName,0,18,0,0,18
+org.json.,SimpleType,0,3,0,0,3
+org.json.,VariableDeclarationFragment,0,1,0,0,1
+void,MethodInvocation,0,3,0,0,3
+void,SimpleName,0,3,0,0,3

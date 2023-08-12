@@ -442,24 +442,24 @@ Did not find solution for node: annotConf with type Type26
 Did not find solution for node: new AnnotationConfiguration() with type Type26
 Did not find solution for node: AnnotationConfiguration with type Type26
 Did not find solution for node: AnnotationConfiguration with type Type26
-Did not find solution for node: annotConf.addAnnotatedClass(User.class) with type Type29
+For node: annotConf.addAnnotatedClass(User.class) expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type29 got: org.hibernate.cfg.AnnotationConfiguration
 Did not find solution for node: annotConf with type Type26
 Cannot find matching typeVariable for: addAnnotatedClass
-Did not find solution for node: addAnnotatedClass with type Type29
+For node: addAnnotatedClass expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type29 got: org.hibernate.cfg.AnnotationConfiguration
 Did not find solution for node: User.class with type Type28
 Did not find solution for node: User with type Type4
 Did not find solution for node: User with type Type4
-Did not find solution for node: annotConf.configure() with type Type32
+For node: annotConf.configure() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type32 got: org.hibernate.cfg.AnnotationConfiguration
 Did not find solution for node: annotConf with type Type26
 Cannot find matching typeVariable for: configure
-Did not find solution for node: configure with type Type32
+For node: configure expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type32 got: org.hibernate.cfg.AnnotationConfiguration
 Did not find solution for node: sessionFactory=annotConf.buildSessionFactory() with type Type25
 Did not find solution for node: sessionFactory with type Type25
 Did not find solution for node: annotConf.buildSessionFactory() with type Type34
 Did not find solution for node: annotConf with type Type26
 Cannot find matching typeVariable for: buildSessionFactory
 Did not find solution for node: buildSessionFactory with type Type34
-Did not find solution for node: void with type Type6
+For node: void expected fqn: void with type: Type6 got: void
 Cannot find matching typeVariable for: store
 Cannot find matching typeVariable for: public void store(User user){
   Session session=sessionFactory.openSession();
@@ -1394,7 +1394,7 @@ Did not find solution for node: User with type Type4
 Did not find solution for node: User with type Type4
 Did not find solution for node: arg0 with type Type4
 For node: 0 expected fqn: int with type: Type59 got: byte
-{Checked=104, Analyzed=44, Unsolved=60, Incorrect=1, Correct=43}
+{Checked=104, Analyzed=49, Unsolved=55, Incorrect=1, Correct=48}
 =SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
 =SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -1410,15 +1410,15 @@ java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
-org.hibernate.=SimpleName: {Checked=24, Analyzed=6, Unsolved=18, Incorrect=0, Correct=6}
+org.hibernate.=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=8, Unsolved=16, Incorrect=0, Correct=8}
 org.hibernate.=SimpleType: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
 void=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
 Total stats
-{Checked=104, Analyzed=44, Unsolved=60, Incorrect=1, Correct=43}
+{Checked=104, Analyzed=49, Unsolved=55, Incorrect=1, Correct=48}
 =SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
 =SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -1434,12 +1434,12 @@ java=TypeLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
-org.hibernate.=SimpleName: {Checked=24, Analyzed=6, Unsolved=18, Incorrect=0, Correct=6}
+org.hibernate.=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=8, Unsolved=16, Incorrect=0, Correct=8}
 org.hibernate.=SimpleType: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
 org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
 void=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
-void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
 ,SimpleName,0,11,0,0,11
 ,SimpleType,0,7,0,0,7
@@ -1456,10 +1456,10 @@ java,TypeLiteral,0,1,0,0,1
 null,NullLiteral,0,3,0,0,3
 org.hibernate.,Assignment,0,1,0,0,1
 org.hibernate.,ClassInstanceCreation,0,1,0,0,1
-org.hibernate.,MethodInvocation,1,5,1,0,4
-org.hibernate.,SimpleName,6,24,6,0,18
+org.hibernate.,MethodInvocation,3,5,3,0,2
+org.hibernate.,SimpleName,8,24,8,0,16
 org.hibernate.,SimpleType,1,5,1,0,4
 org.hibernate.,VariableDeclarationFragment,1,4,1,0,3
 void,MethodInvocation,3,5,3,0,2
-void,PrimitiveType,0,1,0,0,1
+void,PrimitiveType,1,1,1,0,0
 void,SimpleName,3,5,3,0,2

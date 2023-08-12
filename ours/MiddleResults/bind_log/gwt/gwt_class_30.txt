@@ -1,0 +1,283 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_30.java
+Expect check=93
+Cannot find matching typeVariable for: public class gwt_class_30 {
+  static TextBox firstName=new TextBox();
+  static TextBox surName=new TextBox();
+  static DialogBox box;
+  static public DialogBox buildNewElecPopup(){
+    DialogBox box=new DialogBox();
+    box.setAutoHideEnabled(true);
+    box.setText("Add a New Candidate");
+    box.setAnimationEnabled(true);
+    box.setGlassEnabled(true);
+    Grid dialogGrid=new Grid(2,3);
+    dialogGrid.setPixelSize(250,125);
+    dialogGrid.setCellPadding(10);
+    dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+    dialogGrid.setWidget(0,1,firstName);
+    dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+    dialogGrid.setWidget(1,1,surName);
+    box.add(dialogGrid);
+    return box;
+  }
+}
+
+Did not find solution for node: gwt_class_30 with type Type1
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: TextBox with type Type3
+Cannot find matching typeVariable for: firstName=new TextBox()
+Did not find solution for node: firstName=new TextBox() with type Type3
+Did not find solution for node: firstName with type Type3
+Did not find solution for node: new TextBox() with type Type3
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: TextBox with type Type3
+Cannot find matching typeVariable for: surName=new TextBox()
+Did not find solution for node: surName=new TextBox() with type Type3
+Did not find solution for node: surName with type Type3
+Did not find solution for node: new TextBox() with type Type3
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: TextBox with type Type3
+Did not find solution for node: DialogBox with type Type2
+Did not find solution for node: DialogBox with type Type2
+Cannot find matching typeVariable for: box
+Did not find solution for node: box with type Type2
+Cannot find matching typeVariable for: box
+Cannot find matching typeVariable for: static DialogBox box;
+
+Cannot find matching typeVariable for: public class gwt_class_30 {
+  static TextBox firstName=new TextBox();
+  static TextBox surName=new TextBox();
+  static DialogBox box;
+  static public DialogBox buildNewElecPopup(){
+    DialogBox box=new DialogBox();
+    box.setAutoHideEnabled(true);
+    box.setText("Add a New Candidate");
+    box.setAnimationEnabled(true);
+    box.setGlassEnabled(true);
+    Grid dialogGrid=new Grid(2,3);
+    dialogGrid.setPixelSize(250,125);
+    dialogGrid.setCellPadding(10);
+    dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+    dialogGrid.setWidget(0,1,firstName);
+    dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+    dialogGrid.setWidget(1,1,surName);
+    box.add(dialogGrid);
+    return box;
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.TextBox;
+public class gwt_class_30 {
+  static TextBox firstName=new TextBox();
+  static TextBox surName=new TextBox();
+  static DialogBox box;
+  static public DialogBox buildNewElecPopup(){
+    DialogBox box=new DialogBox();
+    box.setAutoHideEnabled(true);
+    box.setText("Add a New Candidate");
+    box.setAnimationEnabled(true);
+    box.setGlassEnabled(true);
+    Grid dialogGrid=new Grid(2,3);
+    dialogGrid.setPixelSize(250,125);
+    dialogGrid.setCellPadding(10);
+    dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+    dialogGrid.setWidget(0,1,firstName);
+    dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+    dialogGrid.setWidget(1,1,surName);
+    box.add(dialogGrid);
+    return box;
+  }
+}
+
+Did not find solution for node: DialogBox with type Type2
+Did not find solution for node: DialogBox with type Type2
+Cannot find matching typeVariable for: buildNewElecPopup
+Cannot find matching typeVariable for: static public DialogBox buildNewElecPopup(){
+  DialogBox box=new DialogBox();
+  box.setAutoHideEnabled(true);
+  box.setText("Add a New Candidate");
+  box.setAnimationEnabled(true);
+  box.setGlassEnabled(true);
+  Grid dialogGrid=new Grid(2,3);
+  dialogGrid.setPixelSize(250,125);
+  dialogGrid.setCellPadding(10);
+  dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+  dialogGrid.setWidget(0,1,firstName);
+  dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+  dialogGrid.setWidget(1,1,surName);
+  box.add(dialogGrid);
+  return box;
+}
+
+Cannot find matching typeVariable for: public class gwt_class_30 {
+  static TextBox firstName=new TextBox();
+  static TextBox surName=new TextBox();
+  static DialogBox box;
+  static public DialogBox buildNewElecPopup(){
+    DialogBox box=new DialogBox();
+    box.setAutoHideEnabled(true);
+    box.setText("Add a New Candidate");
+    box.setAnimationEnabled(true);
+    box.setGlassEnabled(true);
+    Grid dialogGrid=new Grid(2,3);
+    dialogGrid.setPixelSize(250,125);
+    dialogGrid.setCellPadding(10);
+    dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+    dialogGrid.setWidget(0,1,firstName);
+    dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+    dialogGrid.setWidget(1,1,surName);
+    box.add(dialogGrid);
+    return box;
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.TextBox;
+public class gwt_class_30 {
+  static TextBox firstName=new TextBox();
+  static TextBox surName=new TextBox();
+  static DialogBox box;
+  static public DialogBox buildNewElecPopup(){
+    DialogBox box=new DialogBox();
+    box.setAutoHideEnabled(true);
+    box.setText("Add a New Candidate");
+    box.setAnimationEnabled(true);
+    box.setGlassEnabled(true);
+    Grid dialogGrid=new Grid(2,3);
+    dialogGrid.setPixelSize(250,125);
+    dialogGrid.setCellPadding(10);
+    dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>"));
+    dialogGrid.setWidget(0,1,firstName);
+    dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>"));
+    dialogGrid.setWidget(1,1,surName);
+    box.add(dialogGrid);
+    return box;
+  }
+}
+
+Did not find solution for node: DialogBox with type Type2
+Did not find solution for node: DialogBox with type Type2
+Cannot find matching typeVariable for: box=new DialogBox()
+Did not find solution for node: box=new DialogBox() with type Type2
+Did not find solution for node: box with type Type2
+Did not find solution for node: new DialogBox() with type Type2
+Did not find solution for node: DialogBox with type Type2
+Did not find solution for node: DialogBox with type Type2
+No match for actual type MethodInvocation: box.setAutoHideEnabled(true) and also not find solution for: Type8
+Did not find solution for node: box with type Type2
+Did not find solution for node: true with type Type7
+Did not find solution for node: box.setText("Add a New Candidate") with type Type12
+Did not find solution for node: box with type Type2
+Cannot find matching typeVariable for: setText
+Did not find solution for node: setText with type Type12
+For node: "Add a New Candidate" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+No match for actual type MethodInvocation: box.setAnimationEnabled(true) and also not find solution for: Type15
+Did not find solution for node: box with type Type2
+Did not find solution for node: true with type Type7
+No match for actual type MethodInvocation: box.setGlassEnabled(true) and also not find solution for: Type18
+Did not find solution for node: box with type Type2
+Did not find solution for node: true with type Type7
+Did not find solution for node: Grid with type Type21
+Did not find solution for node: Grid with type Type21
+Cannot find matching typeVariable for: dialogGrid=new Grid(2,3)
+Did not find solution for node: dialogGrid=new Grid(2,3) with type Type21
+Did not find solution for node: dialogGrid with type Type21
+Did not find solution for node: new Grid(2,3) with type Type21
+Did not find solution for node: Grid with type Type21
+Did not find solution for node: Grid with type Type21
+Did not find solution for node: 2 with type Type22
+Did not find solution for node: 3 with type Type22
+Did not find solution for node: dialogGrid.setPixelSize(250,125) with type Type27
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setPixelSize
+Did not find solution for node: setPixelSize with type Type27
+Did not find solution for node: 250 with type Type26
+Did not find solution for node: 125 with type Type22
+Did not find solution for node: dialogGrid.setCellPadding(10) with type Type31
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setCellPadding
+Did not find solution for node: setCellPadding with type Type31
+Did not find solution for node: 10 with type Type22
+Did not find solution for node: dialogGrid.setWidget(0,0,new HTML("<strong>First Name</strong>")) with type Type37
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setWidget
+Did not find solution for node: setWidget with type Type37
+Did not find solution for node: 0 with type Type22
+Did not find solution for node: 0 with type Type22
+Did not find solution for node: new HTML("<strong>First Name</strong>") with type Type34
+Did not find solution for node: HTML with type Type34
+Did not find solution for node: HTML with type Type34
+For node: "<strong>First Name</strong>" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Did not find solution for node: dialogGrid.setWidget(0,1,firstName) with type Type42
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setWidget
+Did not find solution for node: setWidget with type Type42
+Did not find solution for node: 0 with type Type22
+Did not find solution for node: 1 with type Type22
+Did not find solution for node: firstName with type Type3
+Did not find solution for node: dialogGrid.setWidget(1,0,new HTML("<strong>Surname</strong>")) with type Type41
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setWidget
+Did not find solution for node: setWidget with type Type41
+Did not find solution for node: 1 with type Type22
+Did not find solution for node: 0 with type Type22
+Did not find solution for node: new HTML("<strong>Surname</strong>") with type Type34
+Did not find solution for node: HTML with type Type34
+Did not find solution for node: HTML with type Type34
+For node: "<strong>Surname</strong>" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Did not find solution for node: dialogGrid.setWidget(1,1,surName) with type Type46
+Did not find solution for node: dialogGrid with type Type21
+Cannot find matching typeVariable for: setWidget
+Did not find solution for node: setWidget with type Type46
+Did not find solution for node: 1 with type Type22
+Did not find solution for node: 1 with type Type22
+Did not find solution for node: surName with type Type3
+Did not find solution for node: box.add(dialogGrid) with type Type47
+Did not find solution for node: box with type Type2
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type47
+Did not find solution for node: dialogGrid with type Type21
+Did not find solution for node: box with type Type2
+{Checked=90, Analyzed=3, Unsolved=87, Incorrect=0, Correct=3}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+Total stats
+{Checked=90, Analyzed=3, Unsolved=87, Incorrect=0, Correct=3}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+boolean,BooleanLiteral,0,3,0,0,3
+gwt.,ClassInstanceCreation,0,6,0,0,6
+gwt.,SimpleName,0,31,0,0,31
+gwt.,SimpleType,0,12,0,0,12
+gwt.,VariableDeclarationFragment,0,5,0,0,5
+int,NumberLiteral,0,13,0,0,13
+java,StringLiteral,3,3,3,0,0
+void,MethodInvocation,0,8,0,0,8
+void,SimpleName,0,8,0,0,8

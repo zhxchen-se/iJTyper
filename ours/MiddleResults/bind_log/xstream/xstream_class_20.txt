@@ -384,10 +384,10 @@ For node: Class expected fqn: java.lang.Class with type: Type5 got: java.lang.Cl
 For node: Class expected fqn: java.lang.Class with type: Type5 got: java.lang.Class
 For node: c expected fqn: java.lang.Class with type: Type5 got: java.lang.Class
 Cannot find matching typeVariable for: File file
-For node: File file expected fqn: java.io.File with type: Type6 got: java.io.File
-For node: File expected fqn: java.io.File with type: Type6 got: java.io.File
-For node: File expected fqn: java.io.File with type: Type6 got: java.io.File
-For node: file expected fqn: java.io.File with type: Type6 got: java.io.File
+Did not find solution for node: File file with type Type6
+Did not find solution for node: File with type Type6
+Did not find solution for node: File with type Type6
+Did not find solution for node: file with type Type6
 For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
 For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
 Cannot find matching typeVariable for: xStream=new XStream()
@@ -410,14 +410,14 @@ For node: reader expected fqn: java.io.Reader with type: Type12 got: java.io.Rea
 For node: null expected fqn: null with type: Type13 got: java.io.Reader
 For node: inputStream=new java.io.FileInputStream(file) expected fqn: java.io.InputStream with type: Type10 got: java.io.InputStream
 For node: inputStream expected fqn: java.io.InputStream with type: Type10 got: java.io.InputStream
-For node: new java.io.FileInputStream(file) expected fqn: java.io.FileInputStream with type: Type14 got: java.io.FileInputStream
-For node: java.io.FileInputStream expected fqn: java.io.FileInputStream with type: Type14 got: java.io.FileInputStream
-For node: java.io.FileInputStream expected fqn: java.io.FileInputStream with type: Type14 got: java.io.FileInputStream
+Did not find solution for node: new java.io.FileInputStream(file) with type Type14
+Did not find solution for node: java.io.FileInputStream with type Type14
+Did not find solution for node: java.io.FileInputStream with type Type14
 No match for actual type QualifiedName: java.io and also not find solution for: Type15
 No match for actual type SimpleName: java and also not find solution for: Type16
 Cannot find matching typeVariable for: FileInputStream
-For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type14 got: java.io.FileInputStream
-For node: file expected fqn: java.io.File with type: Type6 got: java.io.File
+Did not find solution for node: FileInputStream with type Type14
+Did not find solution for node: file with type Type6
 For node: reader=new InputStreamReader(inputStream,Charset.forName("UTF-8")) expected fqn: java.io.Reader with type: Type12 got: java.io.Reader
 For node: reader expected fqn: java.io.Reader with type: Type12 got: java.io.Reader
 For node: new InputStreamReader(inputStream,Charset.forName("UTF-8")) expected fqn: java.io.InputStreamReader with type: Type19 got: java.io.InputStreamReader
@@ -464,7 +464,7 @@ For node: inputStream=null expected fqn: java.io.InputStream with type: Type10 g
 For node: inputStream expected fqn: java.io.InputStream with type: Type10 got: java.io.InputStream
 For node: null expected fqn: null with type: Type39 got: java.io.InputStream
 Did not find solution for node: null with type Type40
-{Checked=76, Analyzed=70, Unsolved=6, Incorrect=4, Correct=66}
+{Checked=76, Analyzed=61, Unsolved=15, Incorrect=4, Correct=57}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -476,18 +476,18 @@ com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorr
 com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=28, Analyzed=28, Unsolved=0, Incorrect=0, Correct=28}
-java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=28, Analyzed=24, Unsolved=4, Incorrect=0, Correct=24}
+java=SimpleType: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 null=NullLiteral: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
 Total stats
-{Checked=76, Analyzed=70, Unsolved=6, Incorrect=4, Correct=66}
+{Checked=76, Analyzed=61, Unsolved=15, Incorrect=4, Correct=57}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -499,13 +499,13 @@ com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorr
 com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 java=Assignment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
 java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=28, Analyzed=28, Unsolved=0, Incorrect=0, Correct=28}
-java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=28, Analyzed=24, Unsolved=4, Incorrect=0, Correct=24}
+java=SimpleType: {Checked=8, Analyzed=6, Unsolved=2, Incorrect=0, Correct=6}
 java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
 java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
 java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
 null=NullLiteral: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
@@ -520,13 +520,13 @@ com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
 com.thoughtworks.xstream.,SimpleType,2,2,2,0,0
 com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
 java,Assignment,4,4,4,0,0
-java,ClassInstanceCreation,2,2,2,0,0
+java,ClassInstanceCreation,1,2,1,0,1
 java,MethodInvocation,2,2,2,0,0
-java,QualifiedName,1,1,1,0,0
-java,SimpleName,28,28,28,0,0
-java,SimpleType,8,8,8,0,0
+java,QualifiedName,0,1,0,0,1
+java,SimpleName,24,28,24,0,4
+java,SimpleType,6,8,6,0,2
 java,SingleMemberAnnotation,1,1,1,0,0
-java,SingleVariableDeclaration,3,3,3,0,0
+java,SingleVariableDeclaration,2,3,2,0,1
 java,StringLiteral,2,2,2,0,0
 java,VariableDeclarationFragment,3,3,3,0,0
 null,NullLiteral,4,7,0,4,3

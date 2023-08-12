@@ -2,248 +2,71 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime06.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=67
-Cannot find matching typeVariable for: public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: JodaTime06
-Cannot find matching typeVariable for: public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import org.joda.time.Duration;
-import org.joda.time.PeriodType;
-import org.joda.time.format.PeriodFormatterBuilder;
-public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Did not find solution for node: void with type Type2
-Cannot find matching typeVariable for: main
-Cannot find matching typeVariable for: public static void main(String[] args){
-  printDuration(new Duration(5000));
-  printDuration(new Duration(4900));
-  printDuration(new Duration(1000));
-  printDuration(new Duration(900));
-  printDuration(new Duration(0));
-}
-
-Cannot find matching typeVariable for: public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import org.joda.time.Duration;
-import org.joda.time.PeriodType;
-import org.joda.time.format.PeriodFormatterBuilder;
-public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: String[] args
-For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-Did not find solution for node: printDuration(new Duration(5000)) with type Type2
-Cannot find matching typeVariable for: printDuration
-Did not find solution for node: printDuration with type Type2
-Did not find solution for node: new Duration(5000) with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: 5000 with type Type6
-Did not find solution for node: printDuration(new Duration(4900)) with type Type2
-Cannot find matching typeVariable for: printDuration
-Did not find solution for node: printDuration with type Type2
-Did not find solution for node: new Duration(4900) with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: 4900 with type Type6
-Did not find solution for node: printDuration(new Duration(1000)) with type Type2
-Cannot find matching typeVariable for: printDuration
-Did not find solution for node: printDuration with type Type2
-Did not find solution for node: new Duration(1000) with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: 1000 with type Type6
-Did not find solution for node: printDuration(new Duration(900)) with type Type2
-Cannot find matching typeVariable for: printDuration
-Did not find solution for node: printDuration with type Type2
-Did not find solution for node: new Duration(900) with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: 900 with type Type6
-Did not find solution for node: printDuration(new Duration(0)) with type Type2
-Cannot find matching typeVariable for: printDuration
-Did not find solution for node: printDuration with type Type2
-Did not find solution for node: new Duration(0) with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: 0 with type Type9
-Did not find solution for node: void with type Type2
-Cannot find matching typeVariable for: printDuration
-Cannot find matching typeVariable for: static void printDuration(Duration d){
-  System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-}
-
-Cannot find matching typeVariable for: public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import org.joda.time.Duration;
-import org.joda.time.PeriodType;
-import org.joda.time.format.PeriodFormatterBuilder;
-public class JodaTime06 {
-  public static void main(  String[] args){
-    printDuration(new Duration(5000));
-    printDuration(new Duration(4900));
-    printDuration(new Duration(1000));
-    printDuration(new Duration(900));
-    printDuration(new Duration(0));
-  }
-  static void printDuration(  Duration d){
-    System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()));
-  }
-}
-
-Cannot find matching typeVariable for: Duration d
-Did not find solution for node: Duration d with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: Duration with type Type5
-Did not find solution for node: d with type Type5
-For node: System.out.println(d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter())) expected fqn: void with type: Type31 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type31 got: void
-For node: System expected fqn: java.lang.System with type: Type29 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type30 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type31 got: void
-Did not find solution for node: d.toPeriod(PeriodType.time()).toString(new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter()) with type Type26
-Did not find solution for node: d.toPeriod(PeriodType.time()) with type Type15
-Did not find solution for node: d with type Type5
-Cannot find matching typeVariable for: toPeriod
-Did not find solution for node: toPeriod with type Type15
-Did not find solution for node: PeriodType.time() with type Type13
-For node: PeriodType expected fqn: org.joda.time.PeriodType with type: Type12 got: org.joda.time.PeriodType
-Cannot find matching typeVariable for: time
-Did not find solution for node: time with type Type13
-Cannot find matching typeVariable for: toString
-Did not find solution for node: toString with type Type26
-Did not find solution for node: new PeriodFormatterBuilder().printZeroAlways().appendSeconds().toFormatter() with type Type24
-Did not find solution for node: new PeriodFormatterBuilder().printZeroAlways().appendSeconds() with type Type22
-Did not find solution for node: new PeriodFormatterBuilder().printZeroAlways() with type Type20
-Did not find solution for node: new PeriodFormatterBuilder() with type Type18
-Did not find solution for node: PeriodFormatterBuilder with type Type18
-Did not find solution for node: PeriodFormatterBuilder with type Type18
-Cannot find matching typeVariable for: printZeroAlways
-Did not find solution for node: printZeroAlways with type Type20
-Cannot find matching typeVariable for: appendSeconds
-Did not find solution for node: appendSeconds with type Type22
-Cannot find matching typeVariable for: toFormatter
-Did not find solution for node: toFormatter with type Type24
-{Checked=63, Analyzed=11, Unsolved=52, Incorrect=1, Correct=10}
+{Checked=67, Analyzed=0, Unsolved=67, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-org.joda.time.=SimpleName: {Checked=15, Analyzed=1, Unsolved=14, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 org.joda.time.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
 Total stats
-{Checked=63, Analyzed=11, Unsolved=52, Incorrect=1, Correct=10}
+{Checked=67, Analyzed=0, Unsolved=67, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=NumberLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
-java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
-org.joda.time.=SimpleName: {Checked=15, Analyzed=1, Unsolved=14, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 org.joda.time.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
 int,NumberLiteral,0,5,0,0,5
-java,ArrayType,1,1,1,0,0
+java,ArrayType,0,1,0,0,1
 java,MethodInvocation,0,1,0,0,1
-java,QualifiedName,1,1,0,1,0
-java,SimpleName,4,5,4,0,1
-java,SimpleType,1,1,1,0,0
-java,SingleVariableDeclaration,1,1,1,0,0
+java,QualifiedName,0,1,0,0,1
+java,SimpleName,0,5,0,0,5
+java,SimpleType,0,1,0,0,1
+java,SingleVariableDeclaration,0,1,0,0,1
 org.joda.time.,ClassInstanceCreation,0,6,0,0,6
 org.joda.time.,MethodInvocation,0,5,0,0,5
-org.joda.time.,SimpleName,1,15,1,0,14
+org.joda.time.,SimpleName,0,15,0,0,15
 org.joda.time.,SimpleType,0,7,0,0,7
 org.joda.time.,SingleVariableDeclaration,0,1,0,0,1
-void,MethodInvocation,1,6,1,0,5
+void,MethodInvocation,0,6,0,0,6
 void,PrimitiveType,0,2,0,0,2
-void,SimpleName,1,6,1,0,5
+void,SimpleName,0,8,0,0,8

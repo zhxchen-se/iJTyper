@@ -2,184 +2,74 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime25.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=56
-Cannot find matching typeVariable for: public class JodaTime25 {
-  public static int getDaysBetweenTwoDates(  final LocalDateTime oldDate,  final LocalDateTime newDate){
-    System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-    Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-    System.out.println("----DIFF: " + days.size());
-    return days.size();
-  }
-}
-
-Cannot find matching typeVariable for: JodaTime25
-Cannot find matching typeVariable for: public class JodaTime25 {
-  public static int getDaysBetweenTwoDates(  final LocalDateTime oldDate,  final LocalDateTime newDate){
-    System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-    Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-    System.out.println("----DIFF: " + days.size());
-    return days.size();
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import org.joda.time.DateMidnight;
-import org.joda.time.Days;
-import org.joda.time.LocalDateTime;
-public class JodaTime25 {
-  public static int getDaysBetweenTwoDates(  final LocalDateTime oldDate,  final LocalDateTime newDate){
-    System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-    Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-    System.out.println("----DIFF: " + days.size());
-    return days.size();
-  }
-}
-
-Did not find solution for node: int with type Type2
-Cannot find matching typeVariable for: getDaysBetweenTwoDates
-Cannot find matching typeVariable for: public static int getDaysBetweenTwoDates(final LocalDateTime oldDate,final LocalDateTime newDate){
-  System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-  Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-  System.out.println("----DIFF: " + days.size());
-  return days.size();
-}
-
-Cannot find matching typeVariable for: public class JodaTime25 {
-  public static int getDaysBetweenTwoDates(  final LocalDateTime oldDate,  final LocalDateTime newDate){
-    System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-    Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-    System.out.println("----DIFF: " + days.size());
-    return days.size();
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import org.joda.time.DateMidnight;
-import org.joda.time.Days;
-import org.joda.time.LocalDateTime;
-public class JodaTime25 {
-  public static int getDaysBetweenTwoDates(  final LocalDateTime oldDate,  final LocalDateTime newDate){
-    System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate);
-    Days days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()));
-    System.out.println("----DIFF: " + days.size());
-    return days.size();
-  }
-}
-
-Cannot find matching typeVariable for: final LocalDateTime oldDate
-Did not find solution for node: final LocalDateTime oldDate with type Type3
-Did not find solution for node: LocalDateTime with type Type3
-Did not find solution for node: LocalDateTime with type Type3
-Did not find solution for node: oldDate with type Type3
-Cannot find matching typeVariable for: final LocalDateTime newDate
-Did not find solution for node: final LocalDateTime newDate with type Type3
-Did not find solution for node: LocalDateTime with type Type3
-Did not find solution for node: LocalDateTime with type Type3
-Did not find solution for node: newDate with type Type3
-For node: System.out.println("--Calculate days between: " + oldDate.toString() + "->"+ newDate) expected fqn: void with type: Type8 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type8 got: void
-For node: System expected fqn: java.lang.System with type: Type6 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type7 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type8 got: void
-For node: "--Calculate days between: " + oldDate.toString() + "->"+ newDate expected fqn: java.lang.String with type: Type4 got: java.lang.String
-For node: "--Calculate days between: " expected fqn: java.lang.String with type: Type4 got: java.lang.String
-For node: oldDate.toString() expected fqn: java.lang.String with type: Type5 got: java.lang.String
-Did not find solution for node: oldDate with type Type3
-Cannot find matching typeVariable for: toString
-For node: toString expected fqn: java.lang.String with type: Type5 got: java.lang.String
-For node: "->" expected fqn: java.lang.String with type: Type4 got: java.lang.String
-Cannot find matching typeVariable for: newDate
-For node: newDate expected fqn: org.joda.time.LocalDateTime with type: Type4 got: java.lang.String
-Did not find solution for node: Days with type Type11
-Did not find solution for node: Days with type Type11
-Cannot find matching typeVariable for: days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime()))
-Did not find solution for node: days=Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime())) with type Type11
-Did not find solution for node: days with type Type11
-Did not find solution for node: Days.daysBetween(new DateMidnight(oldDate.toDateTime()),new DateMidnight(newDate.toDateTime())) with type Type20
-Did not find solution for node: Days with type Type11
-Cannot find matching typeVariable for: daysBetween
-Did not find solution for node: daysBetween with type Type20
-Did not find solution for node: new DateMidnight(oldDate.toDateTime()) with type Type12
-Did not find solution for node: DateMidnight with type Type12
-Did not find solution for node: DateMidnight with type Type12
-Did not find solution for node: oldDate.toDateTime() with type Type13
-Did not find solution for node: oldDate with type Type3
-Cannot find matching typeVariable for: toDateTime
-Did not find solution for node: toDateTime with type Type13
-Did not find solution for node: new DateMidnight(newDate.toDateTime()) with type Type12
-Did not find solution for node: DateMidnight with type Type12
-Did not find solution for node: DateMidnight with type Type12
-Did not find solution for node: newDate.toDateTime() with type Type14
-Did not find solution for node: newDate with type Type3
-Cannot find matching typeVariable for: toDateTime
-Did not find solution for node: toDateTime with type Type14
-For node: System.out.println("----DIFF: " + days.size()) expected fqn: void with type: Type10 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type10 got: void
-For node: System expected fqn: java.lang.System with type: Type6 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type7 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type10 got: void
-For node: "----DIFF: " + days.size() expected fqn: java.lang.String with type: Type4 got: java.lang.String
-For node: "----DIFF: " expected fqn: java.lang.String with type: Type4 got: java.lang.String
-Did not find solution for node: days.size() with type Type24
-Did not find solution for node: days with type Type11
-Cannot find matching typeVariable for: size
-Did not find solution for node: size with type Type24
-Did not find solution for node: days.size() with type Type25
-Did not find solution for node: days with type Type11
-Cannot find matching typeVariable for: size
-Did not find solution for node: size with type Type25
-{Checked=53, Analyzed=18, Unsolved=35, Incorrect=3, Correct=15}
+{Checked=56, Analyzed=0, Unsolved=56, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-int=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-org.joda.time.=SimpleName: {Checked=18, Analyzed=1, Unsolved=17, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 Total stats
-{Checked=53, Analyzed=18, Unsolved=35, Incorrect=3, Correct=15}
+{Checked=56, Analyzed=0, Unsolved=56, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 int=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-int=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
-java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-org.joda.time.=SimpleName: {Checked=18, Analyzed=1, Unsolved=17, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
 int,MethodInvocation,0,2,0,0,2
 int,PrimitiveType,0,1,0,0,1
-int,SimpleName,0,2,0,0,2
-java,InfixExpression,2,2,2,0,0
-java,MethodInvocation,1,1,1,0,0
-java,QualifiedName,2,2,0,2,0
-java,SimpleName,5,5,5,0,0
-java,StringLiteral,3,3,3,0,0
+int,SimpleName,0,3,0,0,3
+java,InfixExpression,0,2,0,0,2
+java,MethodInvocation,0,1,0,0,1
+java,QualifiedName,0,2,0,0,2
+java,SimpleName,0,5,0,0,5
+java,StringLiteral,0,3,0,0,3
 org.joda.time.,ClassInstanceCreation,0,2,0,0,2
 org.joda.time.,MethodInvocation,0,3,0,0,3
-org.joda.time.,SimpleName,1,18,0,1,17
+org.joda.time.,SimpleName,0,18,0,0,18
 org.joda.time.,SimpleType,0,5,0,0,5
 org.joda.time.,SingleVariableDeclaration,0,2,0,0,2
 org.joda.time.,VariableDeclarationFragment,0,1,0,0,1
-void,MethodInvocation,2,2,2,0,0
-void,SimpleName,2,2,2,0,0
+void,MethodInvocation,0,2,0,0,2
+void,SimpleName,0,2,0,0,2

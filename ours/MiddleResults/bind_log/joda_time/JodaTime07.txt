@@ -2,276 +2,92 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime07.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=77
-Cannot find matching typeVariable for: public class JodaTime07 {
-  public static void main(  String[] args){
-    DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-    Date someDate=new Date();
-    Date today=Calendar.getInstance().getTime();
-    try {
-      someDate=formatter.parse("06/22/2010");
-    }
- catch (    ParseException pe) {
-      System.out.println("Parser Exception");
-    }
-    int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-    System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-  }
-}
-
-Cannot find matching typeVariable for: JodaTime07
-Cannot find matching typeVariable for: public class JodaTime07 {
-  public static void main(  String[] args){
-    DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-    Date someDate=new Date();
-    Date today=Calendar.getInstance().getTime();
-    try {
-      someDate=formatter.parse("06/22/2010");
-    }
- catch (    ParseException pe) {
-      System.out.println("Parser Exception");
-    }
-    int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-    System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import org.joda.time.DateTime;
-import org.joda.time.Days;
-public class JodaTime07 {
-  public static void main(  String[] args){
-    DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-    Date someDate=new Date();
-    Date today=Calendar.getInstance().getTime();
-    try {
-      someDate=formatter.parse("06/22/2010");
-    }
- catch (    ParseException pe) {
-      System.out.println("Parser Exception");
-    }
-    int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-    System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-  }
-}
-
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: main
-Cannot find matching typeVariable for: public static void main(String[] args){
-  DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-  Date someDate=new Date();
-  Date today=Calendar.getInstance().getTime();
-  try {
-    someDate=formatter.parse("06/22/2010");
-  }
- catch (  ParseException pe) {
-    System.out.println("Parser Exception");
-  }
-  int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-  System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-}
-
-Cannot find matching typeVariable for: public class JodaTime07 {
-  public static void main(  String[] args){
-    DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-    Date someDate=new Date();
-    Date today=Calendar.getInstance().getTime();
-    try {
-      someDate=formatter.parse("06/22/2010");
-    }
- catch (    ParseException pe) {
-      System.out.println("Parser Exception");
-    }
-    int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-    System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-  }
-}
-
-Cannot find matching typeVariable for: package jodatime;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import org.joda.time.DateTime;
-import org.joda.time.Days;
-public class JodaTime07 {
-  public static void main(  String[] args){
-    DateFormat formatter=new SimpleDateFormat("mm/dd/yyyy");
-    Date someDate=new Date();
-    Date today=Calendar.getInstance().getTime();
-    try {
-      someDate=formatter.parse("06/22/2010");
-    }
- catch (    ParseException pe) {
-      System.out.println("Parser Exception");
-    }
-    int days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays();
-    System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days);
-  }
-}
-
-Cannot find matching typeVariable for: String[] args
-For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: DateFormat expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
-For node: DateFormat expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
-Cannot find matching typeVariable for: formatter=new SimpleDateFormat("mm/dd/yyyy")
-For node: formatter=new SimpleDateFormat("mm/dd/yyyy") expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
-For node: formatter expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
-For node: new SimpleDateFormat("mm/dd/yyyy") expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type6 got: java.text.SimpleDateFormat
-For node: "mm/dd/yyyy" expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-Cannot find matching typeVariable for: someDate=new Date()
-For node: someDate=new Date() expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: someDate expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: new Date() expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Date expected fqn: java.util.Date with type: Type10 got: java.util.Date
-Cannot find matching typeVariable for: today=Calendar.getInstance().getTime()
-For node: today=Calendar.getInstance().getTime() expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: today expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: Calendar.getInstance().getTime() expected fqn: java.util.Date with type: Type15 got: java.util.Date
-For node: Calendar.getInstance() expected fqn: java.util.Calendar with type: Type13 got: java.util.Calendar
-For node: Calendar expected fqn: java.util.Calendar with type: Type12 got: java.util.Calendar
-Cannot find matching typeVariable for: getInstance
-For node: getInstance expected fqn: java.util.Calendar with type: Type13 got: java.util.Calendar
-Cannot find matching typeVariable for: getTime
-For node: getTime expected fqn: java.util.Date with type: Type15 got: java.util.Date
-For node: someDate=formatter.parse("06/22/2010") expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: someDate expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: formatter.parse("06/22/2010") expected fqn: java.util.Date with type: Type17 got: java.util.Date
-For node: formatter expected fqn: java.text.DateFormat with type: Type5 got: java.text.DateFormat
-Cannot find matching typeVariable for: parse
-For node: parse expected fqn: java.util.Date with type: Type17 got: java.util.Date
-For node: "06/22/2010" expected fqn: java.lang.String with type: Type7 got: java.lang.String
-Cannot find matching typeVariable for: ParseException pe
-For node: ParseException pe expected fqn: java.text.ParseException with type: Type20 got: java.text.ParseException
-For node: ParseException expected fqn: java.text.ParseException with type: Type20 got: java.text.ParseException
-For node: ParseException expected fqn: java.text.ParseException with type: Type20 got: java.text.ParseException
-For node: pe expected fqn: java.text.ParseException with type: Type20 got: java.text.ParseException
-For node: System.out.println("Parser Exception") expected fqn: void with type: Type23 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type23 got: void
-For node: System expected fqn: java.lang.System with type: Type21 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type22 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type23 got: void
-For node: "Parser Exception" expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: int expected fqn: int with type: Type26 got: int
-Cannot find matching typeVariable for: days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays()
-For node: days=Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays() expected fqn: int with type: Type26 got: int
-For node: days expected fqn: int with type: Type26 got: int
-For node: Days.daysBetween(new DateTime(someDate),new DateTime(today)).getDays() expected fqn: int with type: Type35 got: int
-Did not find solution for node: Days.daysBetween(new DateTime(someDate),new DateTime(today)) with type Type31
-Did not find solution for node: Days with type Type30
-Cannot find matching typeVariable for: daysBetween
-Did not find solution for node: daysBetween with type Type31
-Did not find solution for node: new DateTime(someDate) with type Type27
-Did not find solution for node: DateTime with type Type27
-Did not find solution for node: DateTime with type Type27
-For node: someDate expected fqn: java.util.Date with type: Type10 got: java.util.Date
-Did not find solution for node: new DateTime(today) with type Type27
-Did not find solution for node: DateTime with type Type27
-Did not find solution for node: DateTime with type Type27
-For node: today expected fqn: java.util.Date with type: Type10 got: java.util.Date
-Cannot find matching typeVariable for: getDays
-For node: getDays expected fqn: int with type: Type35 got: int
-For node: System.out.println(" Days Between " + someDate + " : "+ today+ " - "+ days) expected fqn: void with type: Type39 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type39 got: void
-For node: System expected fqn: java.lang.System with type: Type37 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type38 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type39 got: void
-For node: " Days Between " + someDate + " : "+ today+ " - "+ days expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: " Days Between " expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: someDate expected fqn: java.util.Date with type: Type10 got: java.util.Date
-For node: " : " expected fqn: java.lang.String with type: Type7 got: java.lang.String
-Cannot find matching typeVariable for: today
-For node: today expected fqn: java.util.Date with type: Type7 got: java.lang.String
-For node: " - " expected fqn: java.lang.String with type: Type7 got: java.lang.String
-Cannot find matching typeVariable for: days
-For node: days expected fqn: int with type: Type7 got: java.lang.String
-{Checked=74, Analyzed=65, Unsolved=9, Incorrect=4, Correct=61}
-int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
-int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=1, Correct=25}
-java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+{Checked=77, Analyzed=0, Unsolved=77, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=26, Analyzed=0, Unsolved=26, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 Total stats
-{Checked=74, Analyzed=65, Unsolved=9, Incorrect=4, Correct=61}
-int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
-int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=SimpleName: {Checked=26, Analyzed=26, Unsolved=0, Incorrect=1, Correct=25}
-java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+{Checked=77, Analyzed=0, Unsolved=77, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=26, Analyzed=0, Unsolved=26, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 org.joda.time.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.joda.time.=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 org.joda.time.=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-int,MethodInvocation,1,1,1,0,0
-int,PrimitiveType,1,1,1,0,0
-int,SimpleName,3,3,2,1,0
-int,VariableDeclarationFragment,1,1,1,0,0
-java,ArrayType,1,1,1,0,0
-java,Assignment,1,1,1,0,0
-java,ClassInstanceCreation,2,2,2,0,0
-java,InfixExpression,1,1,1,0,0
-java,MethodInvocation,3,3,3,0,0
-java,QualifiedName,2,2,0,2,0
-java,SimpleName,26,26,25,1,0
-java,SimpleType,7,7,7,0,0
-java,SingleVariableDeclaration,2,2,2,0,0
-java,StringLiteral,6,6,6,0,0
-java,VariableDeclarationFragment,3,3,3,0,0
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+int,MethodInvocation,0,1,0,0,1
+int,PrimitiveType,0,1,0,0,1
+int,SimpleName,0,3,0,0,3
+int,VariableDeclarationFragment,0,1,0,0,1
+java,ArrayType,0,1,0,0,1
+java,Assignment,0,1,0,0,1
+java,ClassInstanceCreation,0,2,0,0,2
+java,InfixExpression,0,1,0,0,1
+java,MethodInvocation,0,3,0,0,3
+java,QualifiedName,0,2,0,0,2
+java,SimpleName,0,26,0,0,26
+java,SimpleType,0,7,0,0,7
+java,SingleVariableDeclaration,0,2,0,0,2
+java,StringLiteral,0,6,0,0,6
+java,VariableDeclarationFragment,0,3,0,0,3
 org.joda.time.,ClassInstanceCreation,0,2,0,0,2
 org.joda.time.,MethodInvocation,0,1,0,0,1
 org.joda.time.,SimpleName,0,4,0,0,4
 org.joda.time.,SimpleType,0,2,0,0,2
-void,MethodInvocation,2,2,2,0,0
-void,PrimitiveType,1,1,1,0,0
-void,SimpleName,2,2,2,0,0
+void,MethodInvocation,0,2,0,0,2
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,3,0,0,3

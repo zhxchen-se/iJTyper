@@ -1,0 +1,86 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad15.java
+Expect check=21
+Cannot find matching typeVariable for: public class ad15 extends Activity {
+  private TextView mTextView=null;
+  public void h1(  Bundle savedInstanceState){
+    mTextView=new TextView(this);
+  }
+}
+
+Did not find solution for node: ad15 with type Type1
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Cannot find matching typeVariable for: mTextView=null
+For node: mTextView=null expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: null expected fqn: null with type: Type5 got: android.widget.TextView
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public void h1(Bundle savedInstanceState){
+  mTextView=new TextView(this);
+}
+
+Cannot find matching typeVariable for: public class ad15 extends Activity {
+  private TextView mTextView=null;
+  public void h1(  Bundle savedInstanceState){
+    mTextView=new TextView(this);
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+public class ad15 extends Activity {
+  private TextView mTextView=null;
+  public void h1(  Bundle savedInstanceState){
+    mTextView=new TextView(this);
+  }
+}
+
+Cannot find matching typeVariable for: Bundle savedInstanceState
+Did not find solution for node: Bundle savedInstanceState with type Type6
+Did not find solution for node: Bundle with type Type6
+Did not find solution for node: Bundle with type Type6
+Did not find solution for node: savedInstanceState with type Type6
+For node: mTextView=new TextView(this) expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: mTextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: new TextView(this) expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type4 got: android.widget.TextView
+Did not find solution for node: this with type Type1
+{Checked=19, Analyzed=13, Unsolved=6, Incorrect=1, Correct=12}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=19, Analyzed=13, Unsolved=6, Incorrect=1, Correct=12}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.,Assignment,1,1,1,0,0
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,SimpleName,5,8,5,0,3
+android.,SimpleType,3,4,3,0,1
+android.,SingleVariableDeclaration,0,1,0,0,1
+android.,ThisExpression,0,1,0,0,1
+android.,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,1,1,0,1,0
+void,PrimitiveType,1,1,1,0,0

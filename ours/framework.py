@@ -297,14 +297,14 @@ def run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,l
 if __name__ == '__main__':
     tmp_dir = os.getcwd()
 
-    Set_GPU(2)
+    Set_GPU(3)
     # snippet_file_name = 'Class_2.java'  
     # lib = 'jdk'    
-    dataset = 'StatType-SO'
-    # dataset = 'Short-SO'
-    # snippet_file_name = 'gwt_class_12.java'
-    # lib = 'gwt'
-    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round = 15)
+    # dataset = 'StatType-SO'
+    dataset = 'Short-SO'
+    # snippet_file_name = 'Class_2.java'
+    # lib = 'jdk'
+    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
     # result.show_csv()
 
 
@@ -315,13 +315,13 @@ if __name__ == '__main__':
 
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
-    libs = ["gwt","hibernate","joda_time","jdk","xstream"]
+    libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
     error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
     open(error_log_file, "w").close() # clear log
     for lib in libs:
         try:
             reset_database() # run pure baseline combine ans
-            run_lib(dataset,lib,topK=3,build_kb_with_extension=False,StartFromRule=True,log_feed_back_flag=False,Maximum_iter_round=15)
+            run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
         except Exception as e:
             with open(error_log_file, "a") as error_log:
                 error_msg = f"Error occurred for library '{lib}': {str(e)}\n"

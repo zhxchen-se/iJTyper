@@ -125,13 +125,13 @@ public class JodaTime12 {
 Cannot find matching typeVariable for: String[] args
 For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
 For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
 For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
 Cannot find matching typeVariable for: currentDate
-For node: currentDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: currentDate with type Type3
 Cannot find matching typeVariable for: currentDate
 Cannot find matching typeVariable for: String currentDate;
 
@@ -208,15 +208,15 @@ public class JodaTime12 {
   }
 }
 
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
+Did not find solution for node: SimpleDateFormat with type Type5
+Did not find solution for node: SimpleDateFormat with type Type5
 Cannot find matching typeVariable for: myFormat=new SimpleDateFormat("dd/MM/yyyy HH:mm")
-For node: myFormat=new SimpleDateFormat("dd/MM/yyyy HH:mm") expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: myFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: new SimpleDateFormat("dd/MM/yyyy HH:mm") expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
-For node: "dd/MM/yyyy HH:mm" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: myFormat=new SimpleDateFormat("dd/MM/yyyy HH:mm") with type Type5
+Did not find solution for node: myFormat with type Type5
+Did not find solution for node: new SimpleDateFormat("dd/MM/yyyy HH:mm") with type Type5
+Did not find solution for node: SimpleDateFormat with type Type5
+Did not find solution for node: SimpleDateFormat with type Type5
+Did not find solution for node: "dd/MM/yyyy HH:mm" with type Type6
 For node: Date expected fqn: java.util.Date with type: Type9 got: java.util.Date
 For node: Date expected fqn: java.util.Date with type: Type9 got: java.util.Date
 Cannot find matching typeVariable for: date1=null
@@ -303,16 +303,16 @@ public class JodaTime12 {
   }
 }
 
-For node: currentDate="27/12/2010 11:29" expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: currentDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: "27/12/2010 11:29" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: currentDate="27/12/2010 11:29" with type Type3
+Did not find solution for node: currentDate with type Type3
+Did not find solution for node: "27/12/2010 11:29" with type Type6
 For node: date1=myFormat.parse(currentDate) expected fqn: java.util.Date with type: Type9 got: java.util.Date
 For node: date1 expected fqn: java.util.Date with type: Type9 got: java.util.Date
 For node: myFormat.parse(currentDate) expected fqn: java.util.Date with type: Type12 got: java.util.Date
-For node: myFormat expected fqn: java.text.SimpleDateFormat with type: Type5 got: java.text.SimpleDateFormat
+Did not find solution for node: myFormat with type Type5
 Cannot find matching typeVariable for: parse
 For node: parse expected fqn: java.util.Date with type: Type12 got: java.util.Date
-For node: currentDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: currentDate with type Type3
 Cannot find matching typeVariable for: ParseException ex
 For node: ParseException ex expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
 For node: ParseException expected fqn: java.text.ParseException with type: Type15 got: java.text.ParseException
@@ -333,17 +333,17 @@ For node: dt expected fqn: org.joda.time.DateTime with type: Type11 got: org.jod
 Cannot find matching typeVariable for: plusMinutes
 For node: plusMinutes expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
 For node: 30 expected fqn: int with type: Type20 got: byte
-{Checked=51, Analyzed=51, Unsolved=0, Incorrect=2, Correct=49}
+{Checked=51, Analyzed=33, Unsolved=18, Incorrect=2, Correct=31}
 int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=17, Analyzed=9, Unsolved=8, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 org.joda.time.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -355,17 +355,17 @@ void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=
 void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 Total stats
-{Checked=51, Analyzed=51, Unsolved=0, Incorrect=2, Correct=49}
+{Checked=51, Analyzed=33, Unsolved=18, Incorrect=2, Correct=31}
 int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=SimpleName: {Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleName: {Checked=17, Analyzed=9, Unsolved=8, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=0, Correct=2}
 java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
 null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
 org.joda.time.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
@@ -378,14 +378,14 @@ void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
 int,NumberLiteral,1,1,0,1,0
 java,ArrayType,1,1,1,0,0
-java,Assignment,2,2,2,0,0
-java,ClassInstanceCreation,1,1,1,0,0
+java,Assignment,1,2,1,0,1
+java,ClassInstanceCreation,0,1,0,0,1
 java,MethodInvocation,1,1,1,0,0
-java,SimpleName,17,17,17,0,0
-java,SimpleType,6,6,6,0,0
+java,SimpleName,9,17,9,0,8
+java,SimpleType,2,6,2,0,4
 java,SingleVariableDeclaration,2,2,2,0,0
-java,StringLiteral,2,2,2,0,0
-java,VariableDeclarationFragment,3,3,3,0,0
+java,StringLiteral,0,2,0,0,2
+java,VariableDeclarationFragment,1,3,1,0,2
 null,NullLiteral,1,1,0,1,0
 org.joda.time.,Assignment,1,1,1,0,0
 org.joda.time.,ClassInstanceCreation,1,1,1,0,0

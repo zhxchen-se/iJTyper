@@ -1,0 +1,228 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_21.java
+Expect check=58
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_21
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: private static class PopUpPanel extends PopupPanel {
+  Button connect=new Button("Connect");
+  Button delete=new Button("Delete");
+  Button detail=new Button("Detail");
+  public PopUpPanel(  final Widget widget){
+    super(true);
+    VerticalPanel vp=new VerticalPanel();
+    vp.add(connect);
+    vp.add(delete);
+    vp.add(detail);
+    setWidget(vp);
+  }
+}
+
+Did not find solution for node: PopUpPanel with type Type1
+For node: PopupPanel expected fqn: com.google.gwt.user.client.ui.PopupPanel with type: Type2 got: com.google.gwt.user.client.ui.PopupPanel
+For node: PopupPanel expected fqn: com.google.gwt.user.client.ui.PopupPanel with type: Type2 got: com.google.gwt.user.client.ui.PopupPanel
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Cannot find matching typeVariable for: connect=new Button("Connect")
+Did not find solution for node: connect=new Button("Connect") with type Type9
+Did not find solution for node: connect with type Type9
+Did not find solution for node: new Button("Connect") with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: "Connect" with type Type10
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Cannot find matching typeVariable for: delete=new Button("Delete")
+Did not find solution for node: delete=new Button("Delete") with type Type9
+Did not find solution for node: delete with type Type9
+Did not find solution for node: new Button("Delete") with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: "Delete" with type Type10
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Cannot find matching typeVariable for: detail=new Button("Detail")
+Did not find solution for node: detail=new Button("Detail") with type Type9
+Did not find solution for node: detail with type Type9
+Did not find solution for node: new Button("Detail") with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: Button with type Type9
+Did not find solution for node: "Detail" with type Type10
+Cannot find matching typeVariable for: PopUpPanel
+Cannot find matching typeVariable for: public PopUpPanel(final Widget widget){
+  super(true);
+  VerticalPanel vp=new VerticalPanel();
+  vp.add(connect);
+  vp.add(delete);
+  vp.add(detail);
+  setWidget(vp);
+}
+
+Cannot find matching typeVariable for: private static class PopUpPanel extends PopupPanel {
+  Button connect=new Button("Connect");
+  Button delete=new Button("Delete");
+  Button detail=new Button("Detail");
+  public PopUpPanel(  final Widget widget){
+    super(true);
+    VerticalPanel vp=new VerticalPanel();
+    vp.add(connect);
+    vp.add(delete);
+    vp.add(detail);
+    setWidget(vp);
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: final Widget widget
+For node: final Widget widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: true expected fqn: boolean with type: Type15 got: boolean
+Did not find solution for node: VerticalPanel with type Type18
+Did not find solution for node: VerticalPanel with type Type18
+Cannot find matching typeVariable for: vp=new VerticalPanel()
+Did not find solution for node: vp=new VerticalPanel() with type Type18
+Did not find solution for node: vp with type Type18
+Did not find solution for node: new VerticalPanel() with type Type18
+Did not find solution for node: VerticalPanel with type Type18
+Did not find solution for node: VerticalPanel with type Type18
+For node: vp.add(connect) expected fqn: void with type: Type20 got: void
+Did not find solution for node: vp with type Type18
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type20 got: void
+Did not find solution for node: connect with type Type9
+Did not find solution for node: vp.add(delete) with type Type22
+Did not find solution for node: vp with type Type18
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type22
+Did not find solution for node: delete with type Type9
+Did not find solution for node: vp.add(detail) with type Type22
+Did not find solution for node: vp with type Type18
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type22
+Did not find solution for node: detail with type Type9
+For node: setWidget(vp) expected fqn: void with type: Type23 got: void
+Cannot find matching typeVariable for: setWidget
+For node: setWidget expected fqn: void with type: Type23 got: void
+Did not find solution for node: vp with type Type18
+{Checked=54, Analyzed=11, Unsolved=43, Incorrect=0, Correct=11}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=22, Analyzed=3, Unsolved=19, Incorrect=0, Correct=3}
+gwt.=SimpleType: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+Total stats
+{Checked=54, Analyzed=11, Unsolved=43, Incorrect=0, Correct=11}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=22, Analyzed=3, Unsolved=19, Incorrect=0, Correct=3}
+gwt.=SimpleType: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+boolean,BooleanLiteral,1,1,1,0,0
+gwt.,ClassInstanceCreation,0,4,0,0,4
+gwt.,SimpleName,3,22,3,0,19
+gwt.,SimpleType,2,10,2,0,8
+gwt.,SingleVariableDeclaration,1,1,1,0,0
+gwt.,VariableDeclarationFragment,0,4,0,0,4
+java,StringLiteral,0,3,0,0,3
+void,MethodInvocation,2,4,2,0,2
+void,SimpleName,2,4,2,0,2

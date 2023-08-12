@@ -300,6 +300,7 @@ def Rule_predict_one_snippet(file_name,dataset,lib): #Predicting for a single co
     # execute make binding
     max_retries = 3  # Maximum number of retries
     timeout_seconds = 60  # Timeout in seconds
+    binding_start_time = time.time()
     for attempt in range(max_retries + 1):
         print(f'Attempt {attempt + 1}...')
         with open(output_path, 'w') as outputfile:
@@ -319,13 +320,14 @@ def Rule_predict_one_snippet(file_name,dataset,lib): #Predicting for a single co
             print("Maximum number of retries reached. Exiting.")
             raise TimeoutError("Fail to execute make runcomparebindinganalysisandeclipsejdt:time out and reached maximum retries.")  # Throw a custom timeout error
             break
-
+    binding_time = time.time()-binding_start_time
     print(f'Bind log has been saved to {output_path}')
 
     # TODO execute make benchmark
+    benchmark_start_time = time.time()
     benchmark_log_path = pure_rule_execute_make_benchmark(file_name,lib)
     extra_types = extract_typeinfo_from_log(benchmark_log_path)
-
+    benchmark_time = time.time() - benchmark_start_time
     #extract log
     os.chdir('../') #~/Baseline
     node_pred_dict,node_truth_dict = Extract_binding_logs(output_path)
@@ -346,7 +348,7 @@ def Rule_predict_one_snippet(file_name,dataset,lib): #Predicting for a single co
 
 
     os.chdir(tmp_dir)
-    return node_pred_dict,node_truth_dict
+    return node_pred_dict,node_truth_dict,benchmark_time,binding_time
 
 
 if __name__ == '__main__':

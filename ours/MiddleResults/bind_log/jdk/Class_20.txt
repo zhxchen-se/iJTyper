@@ -2,863 +2,24 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_20.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=307
-Cannot find matching typeVariable for: class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: Class_20
-Cannot find matching typeVariable for: class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: package Class_;
-import java.io.File;
-import java.io.BufferedInputStream;
-import java.io.DataOutputStream;
-import java.io.DataInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: receive
-Cannot find matching typeVariable for: public static void receive(){
-  try {
-    DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-    DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-    int number=dis.readInt();
-    ArrayList<File> files=new ArrayList<File>(number);
-    System.out.println("Number of Files to be received: " + number);
-    for (int i=0; i < number; i++) {
-      File file=new File(dis.readUTF());
-      files.add(file);
-    }
-    int n=0;
-    byte[] buf=new byte[4092];
-    for (int i=0; i < files.size(); i++) {
-      System.out.println("Receiving file: " + files.get(i).getName());
-      FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-      while ((n=dis.read(buf)) != -1) {
-        fos.write(buf,0,n);
-        fos.flush();
-      }
-      fos.close();
-    }
-  }
- catch (  IOException e) {
-    e.printStackTrace();
-  }
-}
-
-Cannot find matching typeVariable for: class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: package Class_;
-import java.io.File;
-import java.io.BufferedInputStream;
-import java.io.DataOutputStream;
-import java.io.DataInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Cannot find matching typeVariable for: dis=new DataInputStream(new BufferedInputStream(null))
-Did not find solution for node: dis=new DataInputStream(new BufferedInputStream(null)) with type Type3
-Did not find solution for node: dis with type Type3
-Did not find solution for node: new DataInputStream(new BufferedInputStream(null)) with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: new BufferedInputStream(null) with type Type4
-Did not find solution for node: BufferedInputStream with type Type4
-Did not find solution for node: BufferedInputStream with type Type4
-Did not find solution for node: null with type Type5
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Cannot find matching typeVariable for: dos=new DataOutputStream(new BufferedOutputStream(null,0))
-Did not find solution for node: dos=new DataOutputStream(new BufferedOutputStream(null,0)) with type Type10
-Did not find solution for node: dos with type Type10
-Did not find solution for node: new DataOutputStream(new BufferedOutputStream(null,0)) with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: new BufferedOutputStream(null,0) with type Type11
-Did not find solution for node: BufferedOutputStream with type Type11
-Did not find solution for node: BufferedOutputStream with type Type11
-Did not find solution for node: null with type Type12
-Did not find solution for node: 0 with type Type13
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: number=dis.readInt()
-Did not find solution for node: number=dis.readInt() with type Type19
-Did not find solution for node: number with type Type19
-For node: dis.readInt() expected fqn: int with type: Type20 got: int
-Did not find solution for node: dis with type Type3
-Cannot find matching typeVariable for: readInt
-For node: readInt expected fqn: int with type: Type20 got: int
-For node: ArrayList<File> expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-Cannot find matching typeVariable for: files=new ArrayList<File>(number)
-For node: files=new ArrayList<File>(number) expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: new ArrayList<File>(number) expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: ArrayList<File> expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-Did not find solution for node: number with type Type19
-For node: System.out.println("Number of Files to be received: " + number) expected fqn: void with type: Type33 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type33 got: void
-For node: System expected fqn: java.lang.System with type: Type31 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type32 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type33 got: void
-For node: "Number of Files to be received: " + number expected fqn: java.lang.String with type: Type30 got: java.lang.String
-For node: "Number of Files to be received: " expected fqn: java.lang.String with type: Type30 got: java.lang.String
-Did not find solution for node: number with type Type19
-Cannot find matching typeVariable for: int i=0
-Did not find solution for node: int i=0 with type Type19
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: i=0
-Did not find solution for node: i=0 with type Type19
-Did not find solution for node: i with type Type19
-Did not find solution for node: 0 with type Type13
-For node: i < number expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: i with type Type19
-Did not find solution for node: number with type Type19
-Did not find solution for node: i++ with type Type19
-Did not find solution for node: i with type Type19
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-Cannot find matching typeVariable for: file=new File(dis.readUTF())
-For node: file=new File(dis.readUTF()) expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: file expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: new File(dis.readUTF()) expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-Did not find solution for node: dis.readUTF() with type Type38
-Did not find solution for node: dis with type Type3
-Cannot find matching typeVariable for: readUTF
-Did not find solution for node: readUTF with type Type38
-Did not find solution for node: files.add(file) with type Type42
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: add
-Did not find solution for node: add with type Type42
-For node: file expected fqn: java.io.File with type: Type23 got: java.lang.Object
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: n=0
-Did not find solution for node: n=0 with type Type19
-Did not find solution for node: n with type Type19
-Did not find solution for node: 0 with type Type13
-Did not find solution for node: byte[] with type Type48
-Did not find solution for node: byte with type Type13
-Cannot find matching typeVariable for: buf=new byte[4092]
-Did not find solution for node: buf=new byte[4092] with type Type48
-Did not find solution for node: buf with type Type48
-Did not find solution for node: new byte[4092] with type Type48
-Did not find solution for node: byte[] with type Type48
-Did not find solution for node: byte with type Type13
-For node: 4092 expected fqn: int with type: Type49 got: short
-Cannot find matching typeVariable for: int i=0
-Did not find solution for node: int i=0 with type Type19
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: i=0
-Did not find solution for node: i=0 with type Type19
-Did not find solution for node: i with type Type19
-Did not find solution for node: 0 with type Type13
-For node: i < files.size() expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: i with type Type19
-For node: files.size() expected fqn: int with type: Type50 got: int
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: size
-For node: size expected fqn: int with type: Type50 got: int
-Did not find solution for node: i++ with type Type19
-Did not find solution for node: i with type Type19
-For node: System.out.println("Receiving file: " + files.get(i).getName()) expected fqn: void with type: Type35 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type35 got: void
-For node: System expected fqn: java.lang.System with type: Type31 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type32 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type35 got: void
-For node: "Receiving file: " + files.get(i).getName() expected fqn: java.lang.String with type: Type30 got: java.lang.String
-For node: "Receiving file: " expected fqn: java.lang.String with type: Type30 got: java.lang.String
-For node: files.get(i).getName() expected fqn: java.lang.String with type: Type60 got: java.lang.String
-Did not find solution for node: files.get(i) with type Type54
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: get
-Did not find solution for node: get with type Type54
-Did not find solution for node: i with type Type19
-Cannot find matching typeVariable for: getName
-For node: getName expected fqn: java.lang.String with type: Type60 got: java.lang.String
-Did not find solution for node: FileOutputStream with type Type62
-Did not find solution for node: FileOutputStream with type Type62
-Cannot find matching typeVariable for: fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName())
-Did not find solution for node: fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName()) with type Type62
-Did not find solution for node: fos with type Type62
-Did not find solution for node: new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName()) with type Type62
-Did not find solution for node: FileOutputStream with type Type62
-Did not find solution for node: FileOutputStream with type Type62
-For node: "C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName() expected fqn: java.lang.String with type: Type30 got: java.lang.String
-For node: "C:\\users\\tom5\\desktop\\salestools\\" expected fqn: java.lang.String with type: Type30 got: java.lang.String
-For node: files.get(i).getName() expected fqn: java.lang.String with type: Type63 got: java.lang.String
-Did not find solution for node: files.get(i) with type Type59
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: get
-Did not find solution for node: get with type Type59
-Did not find solution for node: i with type Type19
-Cannot find matching typeVariable for: getName
-For node: getName expected fqn: java.lang.String with type: Type63 got: java.lang.String
-For node: (n=dis.read(buf)) != -1 expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: (n=dis.read(buf)) with type Type19
-Did not find solution for node: n=dis.read(buf) with type Type19
-Did not find solution for node: n with type Type19
-For node: dis.read(buf) expected fqn: int with type: Type67 got: int
-Did not find solution for node: dis with type Type3
-Cannot find matching typeVariable for: read
-For node: read expected fqn: int with type: Type67 got: int
-Did not find solution for node: buf with type Type48
-Did not find solution for node: -1 with type Type13
-Did not find solution for node: 1 with type Type13
-Did not find solution for node: fos.write(buf,0,n) with type Type70
-Did not find solution for node: fos with type Type62
-Cannot find matching typeVariable for: write
-Did not find solution for node: write with type Type70
-Did not find solution for node: buf with type Type48
-Did not find solution for node: 0 with type Type13
-Did not find solution for node: n with type Type19
-Did not find solution for node: fos.flush() with type Type75
-Did not find solution for node: fos with type Type62
-Cannot find matching typeVariable for: flush
-Did not find solution for node: flush with type Type75
-Did not find solution for node: fos.close() with type Type77
-Did not find solution for node: fos with type Type62
-Cannot find matching typeVariable for: close
-Did not find solution for node: close with type Type77
-Cannot find matching typeVariable for: IOException e
-For node: IOException e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: IOException expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: IOException expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: e.printStackTrace() expected fqn: void with type: Type80 got: void
-For node: e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-Cannot find matching typeVariable for: printStackTrace
-For node: printStackTrace expected fqn: void with type: Type80 got: void
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: send
-Cannot find matching typeVariable for: public void send(ArrayList<File> files){
-  try {
-    DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-    DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-    System.out.println(files.size());
-    dos.writeInt(files.size());
-    dos.flush();
-    for (int i=0; i < files.size(); i++) {
-      dos.writeUTF(files.get(i).getName());
-      dos.flush();
-    }
-    int n=0;
-    byte[] buf=new byte[4092];
-    for (int i=0; i < files.size(); i++) {
-      System.out.println(files.get(i).getName());
-      FileInputStream fis=new FileInputStream(files.get(i));
-      while ((n=fis.read(buf)) != -1) {
-        dos.write(buf,0,n);
-        dos.flush();
-      }
-    }
-    dos.close();
-  }
- catch (  IOException e) {
-    e.printStackTrace();
-  }
-}
-
-Cannot find matching typeVariable for: class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: package Class_;
-import java.io.File;
-import java.io.BufferedInputStream;
-import java.io.DataOutputStream;
-import java.io.DataInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-class Class_20 {
-  public static void receive(){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null,0));
-      int number=dis.readInt();
-      ArrayList<File> files=new ArrayList<File>(number);
-      System.out.println("Number of Files to be received: " + number);
-      for (int i=0; i < number; i++) {
-        File file=new File(dis.readUTF());
-        files.add(file);
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println("Receiving file: " + files.get(i).getName());
-        FileOutputStream fos=new FileOutputStream("C:\\users\\tom5\\desktop\\salestools\\" + files.get(i).getName());
-        while ((n=dis.read(buf)) != -1) {
-          fos.write(buf,0,n);
-          fos.flush();
-        }
-        fos.close();
-      }
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-  public void send(  ArrayList<File> files){
-    try {
-      DataInputStream dis=new DataInputStream(new BufferedInputStream(null));
-      DataOutputStream dos=new DataOutputStream(new BufferedOutputStream(null));
-      System.out.println(files.size());
-      dos.writeInt(files.size());
-      dos.flush();
-      for (int i=0; i < files.size(); i++) {
-        dos.writeUTF(files.get(i).getName());
-        dos.flush();
-      }
-      int n=0;
-      byte[] buf=new byte[4092];
-      for (int i=0; i < files.size(); i++) {
-        System.out.println(files.get(i).getName());
-        FileInputStream fis=new FileInputStream(files.get(i));
-        while ((n=fis.read(buf)) != -1) {
-          dos.write(buf,0,n);
-          dos.flush();
-        }
-      }
-      dos.close();
-    }
- catch (    IOException e) {
-      e.printStackTrace();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: ArrayList<File> files
-For node: ArrayList<File> files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: ArrayList<File> expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: ArrayList expected fqn: java.util.ArrayList<java.io.File> with type: Type22 got: java.util.ArrayList
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: File expected fqn: java.io.File with type: Type23 got: java.lang.Object
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Cannot find matching typeVariable for: dis=new DataInputStream(new BufferedInputStream(null))
-Did not find solution for node: dis=new DataInputStream(new BufferedInputStream(null)) with type Type3
-Did not find solution for node: dis with type Type3
-Did not find solution for node: new DataInputStream(new BufferedInputStream(null)) with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: DataInputStream with type Type3
-Did not find solution for node: new BufferedInputStream(null) with type Type4
-Did not find solution for node: BufferedInputStream with type Type4
-Did not find solution for node: BufferedInputStream with type Type4
-Did not find solution for node: null with type Type82
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Cannot find matching typeVariable for: dos=new DataOutputStream(new BufferedOutputStream(null))
-Did not find solution for node: dos=new DataOutputStream(new BufferedOutputStream(null)) with type Type10
-Did not find solution for node: dos with type Type10
-Did not find solution for node: new DataOutputStream(new BufferedOutputStream(null)) with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: DataOutputStream with type Type10
-Did not find solution for node: new BufferedOutputStream(null) with type Type11
-Did not find solution for node: BufferedOutputStream with type Type11
-Did not find solution for node: BufferedOutputStream with type Type11
-Did not find solution for node: null with type Type85
-For node: System.out.println(files.size()) expected fqn: void with type: Type90 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type90 got: void
-For node: System expected fqn: java.lang.System with type: Type88 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type89 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type90 got: void
-For node: files.size() expected fqn: int with type: Type53 got: int
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: size
-For node: size expected fqn: int with type: Type53 got: int
-Did not find solution for node: dos.writeInt(files.size()) with type Type93
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: writeInt
-Did not find solution for node: writeInt with type Type93
-For node: files.size() expected fqn: int with type: Type53 got: int
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: size
-For node: size expected fqn: int with type: Type53 got: int
-Did not find solution for node: dos.flush() with type Type96
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: flush
-Did not find solution for node: flush with type Type96
-Cannot find matching typeVariable for: int i=0
-Did not find solution for node: int i=0 with type Type19
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: i=0
-Did not find solution for node: i=0 with type Type19
-Did not find solution for node: i with type Type19
-Did not find solution for node: 0 with type Type13
-For node: i < files.size() expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: i with type Type19
-For node: files.size() expected fqn: int with type: Type53 got: int
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: size
-For node: size expected fqn: int with type: Type53 got: int
-Did not find solution for node: i++ with type Type19
-Did not find solution for node: i with type Type19
-Did not find solution for node: dos.writeUTF(files.get(i).getName()) with type Type98
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: writeUTF
-Did not find solution for node: writeUTF with type Type98
-Did not find solution for node: files.get(i).getName() with type Type64
-Did not find solution for node: files.get(i) with type Type59
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: get
-Did not find solution for node: get with type Type59
-Did not find solution for node: i with type Type19
-Cannot find matching typeVariable for: getName
-Did not find solution for node: getName with type Type64
-Did not find solution for node: dos.flush() with type Type97
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: flush
-Did not find solution for node: flush with type Type97
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: n=0
-Did not find solution for node: n=0 with type Type19
-Did not find solution for node: n with type Type19
-Did not find solution for node: 0 with type Type13
-Did not find solution for node: byte[] with type Type48
-Did not find solution for node: byte with type Type13
-Cannot find matching typeVariable for: buf=new byte[4092]
-Did not find solution for node: buf=new byte[4092] with type Type48
-Did not find solution for node: buf with type Type48
-Did not find solution for node: new byte[4092] with type Type48
-Did not find solution for node: byte[] with type Type48
-Did not find solution for node: byte with type Type13
-For node: 4092 expected fqn: int with type: Type49 got: short
-Cannot find matching typeVariable for: int i=0
-Did not find solution for node: int i=0 with type Type19
-Did not find solution for node: int with type Type19
-Cannot find matching typeVariable for: i=0
-Did not find solution for node: i=0 with type Type19
-Did not find solution for node: i with type Type19
-Did not find solution for node: 0 with type Type13
-For node: i < files.size() expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: i with type Type19
-For node: files.size() expected fqn: int with type: Type53 got: int
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: size
-For node: size expected fqn: int with type: Type53 got: int
-Did not find solution for node: i++ with type Type19
-Did not find solution for node: i with type Type19
-For node: System.out.println(files.get(i).getName()) expected fqn: void with type: Type101 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type101 got: void
-For node: System expected fqn: java.lang.System with type: Type88 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type89 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type101 got: void
-Did not find solution for node: files.get(i).getName() with type Type64
-Did not find solution for node: files.get(i) with type Type59
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: get
-Did not find solution for node: get with type Type59
-Did not find solution for node: i with type Type19
-Cannot find matching typeVariable for: getName
-Did not find solution for node: getName with type Type64
-Did not find solution for node: FileInputStream with type Type104
-Did not find solution for node: FileInputStream with type Type104
-Cannot find matching typeVariable for: fis=new FileInputStream(files.get(i))
-Did not find solution for node: fis=new FileInputStream(files.get(i)) with type Type104
-Did not find solution for node: fis with type Type104
-Did not find solution for node: new FileInputStream(files.get(i)) with type Type104
-Did not find solution for node: FileInputStream with type Type104
-Did not find solution for node: FileInputStream with type Type104
-Did not find solution for node: files.get(i) with type Type59
-For node: files expected fqn: java.util.ArrayList<java.io.File> with type: Type24=Type22<Type23> got: java.util.ArrayList<java.lang.Object>
-Cannot find matching typeVariable for: get
-Did not find solution for node: get with type Type59
-Did not find solution for node: i with type Type19
-For node: (n=fis.read(buf)) != -1 expected fqn: boolean with type: Type36 got: boolean
-Did not find solution for node: (n=fis.read(buf)) with type Type19
-Did not find solution for node: n=fis.read(buf) with type Type19
-Did not find solution for node: n with type Type19
-For node: fis.read(buf) expected fqn: int with type: Type107 got: int
-Did not find solution for node: fis with type Type104
-Cannot find matching typeVariable for: read
-For node: read expected fqn: int with type: Type107 got: int
-Did not find solution for node: buf with type Type48
-Did not find solution for node: -1 with type Type13
-Did not find solution for node: 1 with type Type13
-Did not find solution for node: dos.write(buf,0,n) with type Type110
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: write
-Did not find solution for node: write with type Type110
-Did not find solution for node: buf with type Type48
-Did not find solution for node: 0 with type Type13
-Did not find solution for node: n with type Type19
-Did not find solution for node: dos.flush() with type Type97
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: flush
-Did not find solution for node: flush with type Type97
-Did not find solution for node: dos.close() with type Type115
-Did not find solution for node: dos with type Type10
-Cannot find matching typeVariable for: close
-Did not find solution for node: close with type Type115
-Cannot find matching typeVariable for: IOException e
-For node: IOException e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: IOException expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: IOException expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-For node: e.printStackTrace() expected fqn: void with type: Type81 got: void
-For node: e expected fqn: java.io.IOException with type: Type79 got: java.io.IOException
-Cannot find matching typeVariable for: printStackTrace
-For node: printStackTrace expected fqn: void with type: Type81 got: void
-{Checked=303, Analyzed=109, Unsolved=194, Incorrect=45, Correct=64}
-boolean=InfixExpression: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+{Checked=307, Analyzed=0, Unsolved=307, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=ArrayCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -867,32 +28,34 @@ byte=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 byte=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 byte=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-int=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
-int=NumberLiteral: {Checked=13, Analyzed=2, Unsolved=11, Incorrect=2, Correct=0}
+int=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
 int=ParenthesizedExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PostfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=PrefixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
-int=SimpleName: {Checked=35, Analyzed=8, Unsolved=27, Incorrect=0, Correct=8}
+int=SimpleName: {Checked=35, Analyzed=0, Unsolved=35, Incorrect=0, Correct=0}
 int=VariableDeclarationExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=2, Correct=0}
-java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
-java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=83, Analyzed=39, Unsolved=44, Incorrect=23, Correct=16}
-java=SimpleType: {Checked=26, Analyzed=10, Unsolved=16, Incorrect=8, Correct=2}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
-java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=2, Correct=0}
+java=ClassInstanceCreation: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=83, Analyzed=0, Unsolved=83, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=26, Analyzed=0, Unsolved=26, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
+void=MethodInvocation: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
 Total stats
-{Checked=303, Analyzed=109, Unsolved=194, Incorrect=45, Correct=64}
-boolean=InfixExpression: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+{Checked=307, Analyzed=0, Unsolved=307, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 byte=ArrayCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
@@ -901,30 +64,32 @@ byte=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 byte=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
 byte=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-int=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
-int=NumberLiteral: {Checked=13, Analyzed=2, Unsolved=11, Incorrect=2, Correct=0}
+int=MethodInvocation: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
 int=ParenthesizedExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PostfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=PrefixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 int=PrimitiveType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
-int=SimpleName: {Checked=35, Analyzed=8, Unsolved=27, Incorrect=0, Correct=8}
+int=SimpleName: {Checked=35, Analyzed=0, Unsolved=35, Incorrect=0, Correct=0}
 int=VariableDeclarationExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
 int=VariableDeclarationFragment: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
-java=ClassInstanceCreation: {Checked=12, Analyzed=2, Unsolved=10, Incorrect=2, Correct=0}
-java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=MethodInvocation: {Checked=10, Analyzed=2, Unsolved=8, Incorrect=0, Correct=2}
-java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=QualifiedName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
-java=SimpleName: {Checked=83, Analyzed=39, Unsolved=44, Incorrect=23, Correct=16}
-java=SimpleType: {Checked=26, Analyzed=10, Unsolved=16, Incorrect=8, Correct=2}
-java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
-java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
-java=VariableDeclarationFragment: {Checked=8, Analyzed=2, Unsolved=6, Incorrect=2, Correct=0}
+java=ClassInstanceCreation: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=83, Analyzed=0, Unsolved=83, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=26, Analyzed=0, Unsolved=26, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
-void=MethodInvocation: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
-void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-void=SimpleName: {Checked=16, Analyzed=6, Unsolved=10, Incorrect=0, Correct=6}
-boolean,InfixExpression,6,6,6,0,0
+void=MethodInvocation: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+boolean,InfixExpression,0,6,0,0,6
 boolean,MethodInvocation,0,1,0,0,1
 boolean,SimpleName,0,1,0,0,1
 byte,ArrayCreation,0,2,0,0,2
@@ -933,26 +98,26 @@ byte,PrimitiveType,0,4,0,0,4
 byte,SimpleName,0,6,0,0,6
 byte,VariableDeclarationFragment,0,2,0,0,2
 int,Assignment,0,2,0,0,2
-int,MethodInvocation,8,8,8,0,0
-int,NumberLiteral,2,13,0,2,11
+int,MethodInvocation,0,8,0,0,8
+int,NumberLiteral,0,13,0,0,13
 int,ParenthesizedExpression,0,2,0,0,2
 int,PostfixExpression,0,4,0,0,4
 int,PrefixExpression,0,2,0,0,2
 int,PrimitiveType,0,7,0,0,7
-int,SimpleName,8,35,8,0,27
+int,SimpleName,0,35,0,0,35
 int,VariableDeclarationExpression,0,4,0,0,4
 int,VariableDeclarationFragment,0,7,0,0,7
-java,ClassInstanceCreation,2,12,0,2,10
-java,InfixExpression,3,3,3,0,0
-java,MethodInvocation,2,10,2,0,8
-java,ParameterizedType,3,3,0,3,0
-java,QualifiedName,4,4,0,4,0
-java,SimpleName,39,83,16,23,44
-java,SimpleType,10,26,2,8,16
-java,SingleVariableDeclaration,3,3,2,1,0
-java,StringLiteral,3,3,3,0,0
-java,VariableDeclarationFragment,2,8,0,2,6
+java,ClassInstanceCreation,0,12,0,0,12
+java,InfixExpression,0,3,0,0,3
+java,MethodInvocation,0,10,0,0,10
+java,ParameterizedType,0,3,0,0,3
+java,QualifiedName,0,4,0,0,4
+java,SimpleName,0,83,0,0,83
+java,SimpleType,0,26,0,0,26
+java,SingleVariableDeclaration,0,3,0,0,3
+java,StringLiteral,0,3,0,0,3
+java,VariableDeclarationFragment,0,8,0,0,8
 null,NullLiteral,0,4,0,0,4
-void,MethodInvocation,6,16,6,0,10
-void,PrimitiveType,2,2,2,0,0
-void,SimpleName,6,16,6,0,10
+void,MethodInvocation,0,16,0,0,16
+void,PrimitiveType,0,2,0,0,2
+void,SimpleName,0,18,0,0,18

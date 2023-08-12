@@ -1,5 +1,5 @@
 JodaTime01.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 ISODateTimeFormat,org.joda.time.format.ISODateTimeFormat,org.joda.time.format.ISODateTimeFormat,1,org.joda.time.format.ISODateTimeFormat,org.joda.time.format.ISODateTimeFormat,1,1
 TimeZone,java.util.TimeZone,java.util.TimeZone,1,-,-,0,1
@@ -10,7 +10,7 @@ dl_correct:6,dl_precision:1.0,,rule_correct:5,rule_checked:5,rule_precision:1.0,
 checked:6,total correct:6,total precision:1.0
 
 JodaTime02.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateMidnight,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,1
 DateMidnight,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,1
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,1
@@ -20,7 +20,7 @@ dl_correct:5,dl_precision:1.0,,rule_correct:5,rule_checked:5,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 JodaTime03.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Interval,org.joda.time.Interval,org.joda.time.Interval,1,org.joda.time.Interval,org.joda.time.Interval,1,1
 Interval,org.joda.time.Interval,org.joda.time.Interval,1,org.joda.time.Interval,org.joda.time.Interval,1,1
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,1
@@ -29,7 +29,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime04.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 ReadableInstant[],org.joda.time.ReadableInstant,org.joda.time.ReadableInstant,1,org.joda.time.ReadableInstant[],org.joda.time.ReadableInstant[],1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
@@ -37,7 +37,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime05.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,-,-,0,1
 Chronology,org.joda.time.Chronology,org.joda.time.Chronology,1,org.joda.time.Chronology,org.joda.time.Chronology,1,1
 GJChronology,org.joda.time.chrono.GJChronology,org.joda.time.chrono.GJChronology,1,org.joda.time.chrono.GJChronology,org.joda.time.chrono.GJChronology,1,1
@@ -47,16 +47,16 @@ dl_correct:5,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 JodaTime06.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Duration,java.time.Duration,org.joda.time.Duration,0,org.joda.time.Duration,org.joda.time.Duration,1,1
-Duration,org.joda.time.Duration,org.joda.time.Duration,1,org.joda.time.Duration,org.joda.time.Duration,1,1
-PeriodType,org.joda.time.PeriodType,org.joda.time.PeriodType,1,org.joda.time.PeriodType,org.joda.time.PeriodType,1,1
+Duration,java.time.Duration,org.joda.time.Duration,0,org.joda.time.Duration,org.joda.time.Duration,1,1
+PeriodType,org.joda.time.PeriodType,org.joda.time.PeriodType,1,-,-,0,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
-dl_correct:3,dl_precision:0.75,,rule_correct:4,rule_checked:4,rule_precision:1.0,rule_recall:1.0
+dl_correct:2,dl_precision:0.5,,rule_correct:3,rule_checked:3,rule_precision:1.0,rule_recall:0.75
 checked:4,total correct:4,total precision:1.0
 
 JodaTime07.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateFormat,java.text.DateFormat,java.text.DateFormat,1,java.text.DateFormat,java.text.DateFormat,1,1
 SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,1
 Date,java.util.Date,java.util.Date,1,java.util.Date,java.util.Date,1,1
@@ -69,7 +69,7 @@ dl_correct:8,dl_precision:1.0,,rule_correct:8,rule_checked:8,rule_precision:1.0,
 checked:8,total correct:8,total precision:1.0
 
 JodaTime08.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 TimeUnit,java.util.concurrent.TimeUnit,java.util.concurrent.TimeUnit,1,java.util.concurrent.TimeUnit,java.util.concurrent.TimeUnit,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
@@ -78,14 +78,14 @@ dl_correct:4,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime09.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 TimeZone,java.util.TimeZone,java.util.TimeZone,1,java.util.TimeZone,java.util.TimeZone,1,1
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,-,-,0,1
 dl_correct:2,dl_precision:1.0,,rule_correct:1,rule_checked:1,rule_precision:1.0,rule_recall:0.5
 checked:2,total correct:2,total precision:1.0
 
 JodaTime10.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Serializable,java.io.Serializable,java.io.Serializable,1,java.io.Serializable,java.io.Serializable,1,1
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,1
 ISOChronology,org.joda.time.chrono.ISOChronology,org.joda.time.chrono.ISOChronology,1,org.joda.time.chrono.ISOChronology,org.joda.time.chrono.ISOChronology,1,1
@@ -96,16 +96,16 @@ dl_correct:6,dl_precision:1.0,,rule_correct:6,rule_checked:6,rule_precision:1.0,
 checked:6,total correct:6,total precision:1.0
 
 JodaTime11.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,-,-,0,1
-DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
+DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,-,-,0,1
 SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,1
 ParseException,java.text.ParseException,java.text.ParseException,1,java.text.ParseException,java.text.ParseException,1,1
-dl_correct:4,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,rule_recall:0.75
+dl_correct:4,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:0.5
 checked:4,total correct:4,total precision:1.0
 
 JodaTime12.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,1
 SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,1
 Date,java.util.Date,java.util.Date,1,java.util.Date,java.util.Date,1,1
@@ -116,7 +116,7 @@ dl_correct:6,dl_precision:1.0,,rule_correct:6,rule_checked:6,rule_precision:1.0,
 checked:6,total correct:6,total precision:1.0
 
 JodaTime13.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Test,org.junit.Test,org.junit.Test,1,org.junit.Test,org.junit.Test,1,1
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
@@ -125,7 +125,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime14.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -133,7 +133,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime15.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 MutableDateTime,org.joda.time.MutableDateTime,org.joda.time.MutableDateTime,1,org.joda.time.MutableDateTime,org.joda.time.MutableDateTime,1,1
 new MutableDateTime(),org.joda.time.MutableDateTime,org.joda.time.MutableDateTime,1,org.joda.time.MutableDateTime,org.joda.time.MutableDateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -141,7 +141,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime17.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -149,7 +149,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime18.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,-,-,0,1
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 new DateTimeFormatterBuilder(),org.joda.time.format.DateTimeFormatterBuilder,org.joda.time.format.DateTimeFormatterBuilder,1,org.joda.time.format.DateTimeFormatterBuilder,org.joda.time.format.DateTimeFormatterBuilder,1,1
@@ -157,7 +157,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime19.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Instant,org.joda.time.Instant,org.joda.time.Instant,1,org.joda.time.Instant,org.joda.time.Instant,1,1
 Instant,org.joda.time.Instant,org.joda.time.Instant,1,org.joda.time.Instant,org.joda.time.Instant,1,1
 new Date(),java.util.Date,java.util.Date,1,java.util.Date,java.util.Date,1,1
@@ -168,47 +168,47 @@ dl_correct:6,dl_precision:1.0,,rule_correct:6,rule_checked:6,rule_precision:1.0,
 checked:6,total correct:6,total precision:1.0
 
 JodaTime20.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
-DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
-DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
+DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,-,-,0,1
+DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,-,-,0,1
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,-,-,0,1
-DateTime,.Local.format.DateTime,org.joda.time.DateTime,0,-,-,0,0
-dl_correct:3,dl_precision:0.75,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:0.5
+DateTime,java.time.DateTime,org.joda.time.DateTime,0,-,-,0,0
+dl_correct:3,dl_precision:0.75,,rule_correct:0,rule_checked:0,rule_precision:0,rule_recall:0.0
 checked:4,total correct:3,total precision:0.75
 
 JodaTime21.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
-DateFormat,java.text.DateFormat,java.text.DateFormat,1,java.text.DateFormat,java.text.DateFormat,1,1
-SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,1
-Date,java.util.Date,java.util.Date,1,java.util.Date,java.util.Date,1,1
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
+DateFormat,java.text.DateFormat,java.text.DateFormat,1,-,-,0,1
+new SimpleDateFormat,java.text.SimpleDateFormat,java.text.SimpleDateFormat,1,-,-,0,1
+Date,java.util.Date,java.util.Date,1,java.sql.Date,java.util.Date,0,0
 ParseException,java.text.ParseException,java.text.ParseException,1,java.text.ParseException,java.text.ParseException,1,1
-LocalDateTime,org.joda.time.LocalDateTime,org.joda.time.LocalDateTime,1,org.joda.time.LocalDateTime,org.joda.time.LocalDateTime,1,1
+LocalDateTime,java.time.LocalDateTime,org.joda.time.LocalDateTime,0,org.joda.time.LocalDateTime,org.joda.time.LocalDateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
-dl_correct:8,dl_precision:1.0,,rule_correct:8,rule_checked:8,rule_precision:1.0,rule_recall:1.0
-checked:8,total correct:8,total precision:1.0
+dl_correct:7,dl_precision:0.875,,rule_correct:5,rule_checked:6,rule_precision:0.8333,rule_recall:0.625
+checked:8,total correct:7,total precision:0.875
 
 JodaTime22.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
-Date,java.util.Date,java.util.Date,1,java.util.Date,java.util.Date,1,1
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
+Date,java.util.Date,java.util.Date,1,java.sql.Date,java.util.Date,0,0
 ParseException,java.text.ParseException,java.text.ParseException,1,java.text.ParseException,java.text.ParseException,1,1
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
-dl_correct:6,dl_precision:1.0,,rule_correct:6,rule_checked:6,rule_precision:1.0,rule_recall:1.0
-checked:6,total correct:6,total precision:1.0
+dl_correct:6,dl_precision:1.0,,rule_correct:5,rule_checked:6,rule_precision:0.8333,rule_recall:0.8333
+checked:6,total correct:5,total precision:0.8333
 
 JodaTime23.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 LocalDate,org.joda.time.LocalDate,org.joda.time.LocalDate,1,org.joda.time.LocalDate,org.joda.time.LocalDate,1,1
 DateTimeConstants,org.joda.time.DateTimeConstants,org.joda.time.DateTimeConstants,1,org.joda.time.DateTimeConstants,org.joda.time.DateTimeConstants,1,1
 dl_correct:2,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 JodaTime24.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
@@ -218,7 +218,7 @@ dl_correct:5,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 JodaTime25.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 LocalDateTime,java.time.LocalDateTime,org.joda.time.LocalDateTime,0,org.joda.time.LocalDateTime,org.joda.time.LocalDateTime,1,1
 Days,org.joda.time.Days,org.joda.time.Days,1,org.joda.time.Days,org.joda.time.Days,1,1
 DateMidnight,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,org.joda.time.DateMidnight,org.joda.time.DateMidnight,1,1
@@ -226,16 +226,16 @@ dl_correct:2,dl_precision:0.6667,,rule_correct:3,rule_checked:3,rule_precision:1
 checked:3,total correct:3,total precision:1.0
 
 JodaTime26.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
-Duration,org.joda.time.Duration,org.joda.time.Duration,1,org.joda.time.Duration,org.joda.time.Duration,1,1
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
+Duration,java.time.Duration,org.joda.time.Duration,0,org.joda.time.Duration,org.joda.time.Duration,1,1
 Duration,org.joda.time.Duration,org.joda.time.Duration,1,org.joda.time.Duration,org.joda.time.Duration,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
-dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,rule_recall:1.0
+dl_correct:3,dl_precision:0.75,,rule_correct:4,rule_checked:4,rule_precision:1.0,rule_recall:1.0
 checked:4,total correct:4,total precision:1.0
 
 JodaTime27.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 ArrayList,java.util.ArrayList,java.util.ArrayList,1,java.util.ArrayList,java.util.ArrayList,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 ArrayList,java.util.ArrayList,java.util.ArrayList,1,java.util.ArrayList,java.util.ArrayList,1,1
@@ -244,7 +244,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime28.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -256,7 +256,7 @@ dl_correct:6,dl_precision:0.8571,,rule_correct:6,rule_checked:7,rule_precision:0
 checked:7,total correct:6,total precision:0.8571
 
 JodaTime29.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 new DateTimeFormatter[20],org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter[],org.joda.time.format.DateTimeFormatter[],1,1
@@ -264,7 +264,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime30.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,-,-,0,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -272,7 +272,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime31.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 Weeks,.Pertime.Weeks,org.joda.time.Weeks,0,-,-,0,0
@@ -280,14 +280,14 @@ dl_correct:2,dl_precision:0.6667,,rule_correct:2,rule_checked:2,rule_precision:1
 checked:3,total correct:2,total precision:0.6667
 
 JodaTime32.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 dl_correct:2,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 JodaTime33.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,-,-,0,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
@@ -295,7 +295,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime34.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Locale,java.util.Locale,java.util.Locale,1,java.util.Locale,java.util.Locale,1,1
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,1
 PeriodFormat,org.joda.time.format.PeriodFormat,org.joda.time.format.PeriodFormat,1,org.joda.time.format.PeriodFormat,org.joda.time.format.PeriodFormat,1,1
@@ -305,7 +305,7 @@ dl_correct:4,dl_precision:0.8,,rule_correct:5,rule_checked:5,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 JodaTime35.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
 Date,java.util.Date,java.util.Date,1,java.sql.Date,java.util.Date,0,0
@@ -317,7 +317,7 @@ dl_correct:7,dl_precision:1.0,,rule_correct:2,rule_checked:3,rule_precision:0.66
 checked:7,total correct:6,total precision:0.8571
 
 JodaTime36.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
 ISOPeriodFormat,org.joda.time.format.ISOPeriodFormat,org.joda.time.format.ISOPeriodFormat,1,org.joda.time.format.ISOPeriodFormat,org.joda.time.format.ISOPeriodFormat,1,1
@@ -326,7 +326,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime37.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeZone,java.util.DateTimeZone,org.joda.time.DateTimeZone,0,-,-,0,0
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -334,7 +334,7 @@ dl_correct:2,dl_precision:0.6667,,rule_correct:2,rule_checked:2,rule_precision:1
 checked:3,total correct:2,total precision:0.6667
 
 JodaTime38.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,java.time.DateTime,org.joda.time.DateTime,0,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -342,14 +342,14 @@ dl_correct:2,dl_precision:0.6667,,rule_correct:3,rule_checked:3,rule_precision:1
 checked:3,total correct:3,total precision:1.0
 
 JodaTime39.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 new DateTime(),org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 dl_correct:2,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 JodaTime40.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Date,java.util.Date,java.util.Date,1,java.sql.Date,java.util.Date,0,0
 Date,java.util.Date,java.util.Date,1,java.sql.Date,java.util.Date,0,0
 Days,org.joda.time.Days,org.joda.time.Days,1,org.joda.time.Days,org.joda.time.Days,1,1
@@ -358,7 +358,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:2,rule_checked:4,rule_precision:0.5,
 checked:4,total correct:2,total precision:0.5
 
 JodaTime41.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
@@ -367,14 +367,14 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime42.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 LocalDate,java.time.LocalDate,org.joda.time.LocalDate,0,org.joda.time.LocalDate,org.joda.time.LocalDate,1,1
 LocalDate,java.time.LocalDate,org.joda.time.LocalDate,0,org.joda.time.LocalDate,org.joda.time.LocalDate,1,1
 dl_correct:0,dl_precision:0.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 JodaTime43.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeParser[],org.joda.time.format.DateTimeParser,org.joda.time.format.DateTimeParser,1,org.joda.time.format.DateTimeParser[],org.joda.time.format.DateTimeParser[],1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
@@ -384,7 +384,7 @@ dl_correct:5,dl_precision:1.0,,rule_correct:5,rule_checked:5,rule_precision:1.0,
 checked:5,total correct:5,total precision:1.0
 
 JodaTime44.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 PeriodFormatter,org.joda.time.format.PeriodFormatter,org.joda.time.format.PeriodFormatter,1,-,-,0,1
 new PeriodFormatterBuilder(),org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,org.joda.time.format.PeriodFormatterBuilder,org.joda.time.format.PeriodFormatterBuilder,1,1
 Period,org.joda.time.Period,org.joda.time.Period,1,org.joda.time.Period,org.joda.time.Period,1,1
@@ -393,7 +393,7 @@ dl_correct:4,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime45.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 Provider,java.security.Provider,org.joda.time.tz.Provider,0,java.security.Provider,org.joda.time.tz.Provider,0,0
 Set,java.util.Set,java.util.Set,1,java.util.Set,java.util.Set,1,1
 HashSet,java.util.HashSet,java.util.HashSet,1,java.util.HashSet,java.util.HashSet,1,1
@@ -404,7 +404,7 @@ dl_correct:5,dl_precision:0.8333,,rule_correct:4,rule_checked:5,rule_precision:0
 checked:6,total correct:5,total precision:0.8333
 
 JodaTime46.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeZone,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,org.joda.time.DateTimeZone,org.joda.time.DateTimeZone,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -412,7 +412,7 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime47.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -420,14 +420,14 @@ dl_correct:3,dl_precision:1.0,,rule_correct:3,rule_checked:3,rule_precision:1.0,
 checked:3,total correct:3,total precision:1.0
 
 JodaTime48.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 MillisProvider,org.joda.time.tz.MillisProvider,org.joda.time.DateTimeUtils.MillisProvider,0,org.joda.time.DateTimeUtils.MillisProvider,org.joda.time.DateTimeUtils.MillisProvider,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 dl_correct:1,dl_precision:0.5,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 JodaTime49.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTimeFormatter,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormatter,1,1
 DateTimeFormat,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,org.joda.time.format.DateTimeFormat,org.joda.time.format.DateTimeFormat,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
@@ -436,12 +436,12 @@ dl_correct:4,dl_precision:1.0,,rule_correct:4,rule_checked:4,rule_precision:1.0,
 checked:4,total correct:4,total precision:1.0
 
 JodaTime50.java,
-Node,ASE_pred,ASE_truth,ASE_correct,SNR_pred,SNR_truth,SNR_correct,Total_correct
+Node,DL_pred,DL_truth,DL_correct,Rule_pred,Rule_truth,Rule_correct,Total_correct
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 DateTime,org.joda.time.DateTime,org.joda.time.DateTime,1,org.joda.time.DateTime,org.joda.time.DateTime,1,1
 dl_correct:2,dl_precision:1.0,,rule_correct:2,rule_checked:2,rule_precision:1.0,rule_recall:1.0
 checked:2,total correct:2,total precision:1.0
 
 total status,
-total checked:199,rule correct:175,rule checked:180,dl correct:187,total correct:191
-dl precision:0.9397,rule precision:0.9722,rule recall:0.8794,total_precision:0.9598
+total checked:199,rule correct:167,rule checked:174,dl correct:184,total correct:189
+dl precision:0.9246,rule precision:0.9598,rule recall:0.8392,total_precision:0.9497

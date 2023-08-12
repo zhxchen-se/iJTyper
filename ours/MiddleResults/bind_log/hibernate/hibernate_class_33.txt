@@ -35,10 +35,10 @@ Cannot find matching typeVariable for: instance=null
 Did not find solution for node: instance=null with type Type1
 Did not find solution for node: instance with type Type1
 Did not find solution for node: null with type Type4
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: SessionFactory with type Type3
+Did not find solution for node: SessionFactory with type Type3
 Cannot find matching typeVariable for: sessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: sessionFactory with type Type3
 Cannot find matching typeVariable for: sessionFactory
 Cannot find matching typeVariable for: private SessionFactory sessionFactory;
 
@@ -247,8 +247,8 @@ public class hibernate_class_33 {
 
 Did not find solution for node: hibernate_class_33 with type Type1
 Did not find solution for node: instance with type Type1
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: SessionFactory with type Type3
+Did not find solution for node: SessionFactory with type Type3
 Cannot find matching typeVariable for: getSessionFactory
 Cannot find matching typeVariable for: public SessionFactory getSessionFactory(){
   return this.sessionFactory;
@@ -307,10 +307,10 @@ public class hibernate_class_33 {
   }
 }
 
-For node: this.sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: this.sessionFactory with type Type3
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: sessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: sessionFactory with type Type3
 For node: Session expected fqn: org.hibernate.Session with type: Type2 got: org.hibernate.Session
 For node: Session expected fqn: org.hibernate.Session with type: Type2 got: org.hibernate.Session
 Cannot find matching typeVariable for: getSession
@@ -371,13 +371,13 @@ public class hibernate_class_33 {
   }
 }
 
-For node: this.sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type11 got: org.hibernate.Session
-For node: this.sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: this.sessionFactory.openSession() with type Type11
+Did not find solution for node: this.sessionFactory with type Type3
 Did not find solution for node: this with type Type1
 Cannot find matching typeVariable for: sessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: sessionFactory with type Type3
 Cannot find matching typeVariable for: openSession
-For node: openSession expected fqn: org.hibernate.Session with type: Type11 got: org.hibernate.Session
+Did not find solution for node: openSession with type Type11
 Did not find solution for node: hibernate_class_33 with type Type1
 Did not find solution for node: hibernate_class_33 with type Type1
 Cannot find matching typeVariable for: init
@@ -463,26 +463,26 @@ For node: cfg.configure() expected fqn: org.hibernate.cfg.Configuration with typ
 Did not find solution for node: cfg with type Type13
 Cannot find matching typeVariable for: configure
 For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type21 got: org.hibernate.cfg.Configuration
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: SessionFactory with type Type3
+Did not find solution for node: SessionFactory with type Type3
 Cannot find matching typeVariable for: sessions=cfg.buildSessionFactory()
-For node: sessions=cfg.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: sessions expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Did not find solution for node: sessions=cfg.buildSessionFactory() with type Type3
+Did not find solution for node: sessions with type Type3
 Did not find solution for node: cfg.buildSessionFactory() with type Type23
 Did not find solution for node: cfg with type Type13
 Cannot find matching typeVariable for: buildSessionFactory
 Did not find solution for node: buildSessionFactory with type Type23
-For node: sessionFactory=cfg.configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
-For node: cfg.configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+Did not find solution for node: sessionFactory=cfg.configure().buildSessionFactory() with type Type3
+Did not find solution for node: sessionFactory with type Type3
+Did not find solution for node: cfg.configure().buildSessionFactory() with type Type25
 Did not find solution for node: cfg.configure() with type Type22
 Did not find solution for node: cfg with type Type13
 Cannot find matching typeVariable for: configure
 Did not find solution for node: configure with type Type22
 Cannot find matching typeVariable for: buildSessionFactory
-For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+Did not find solution for node: buildSessionFactory with type Type25
 Did not find solution for node: this with type Type1
-{Checked=72, Analyzed=25, Unsolved=47, Incorrect=1, Correct=24}
+{Checked=72, Analyzed=6, Unsolved=66, Incorrect=1, Correct=5}
 =Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -495,15 +495,15 @@ boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correc
 java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-org.hibernate.=MethodInvocation: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
-org.hibernate.=SimpleName: {Checked=21, Analyzed=11, Unsolved=10, Incorrect=0, Correct=11}
-org.hibernate.=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
-org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.hibernate.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=21, Analyzed=2, Unsolved=19, Incorrect=0, Correct=2}
+org.hibernate.=SimpleType: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 Total stats
-{Checked=72, Analyzed=25, Unsolved=47, Incorrect=1, Correct=24}
+{Checked=72, Analyzed=6, Unsolved=66, Incorrect=1, Correct=5}
 =Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 =MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
@@ -516,13 +516,13 @@ boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correc
 java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 java=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-org.hibernate.=MethodInvocation: {Checked=6, Analyzed=3, Unsolved=3, Incorrect=0, Correct=3}
-org.hibernate.=SimpleName: {Checked=21, Analyzed=11, Unsolved=10, Incorrect=0, Correct=11}
-org.hibernate.=SimpleType: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
-org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.hibernate.=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=21, Analyzed=2, Unsolved=19, Incorrect=0, Correct=2}
+org.hibernate.=SimpleType: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 ,Assignment,0,1,0,0,1
 ,ClassInstanceCreation,0,1,0,0,1
 ,MethodInvocation,0,1,0,0,1
@@ -535,10 +535,10 @@ boolean,InfixExpression,1,1,1,0,0
 java,MethodInvocation,0,1,0,0,1
 java,SimpleName,0,2,0,0,2
 null,NullLiteral,0,2,0,0,2
-org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,Assignment,0,1,0,0,1
 org.hibernate.,ClassInstanceCreation,0,1,0,0,1
-org.hibernate.,FieldAccess,2,2,2,0,0
-org.hibernate.,MethodInvocation,3,6,3,0,3
-org.hibernate.,SimpleName,11,21,11,0,10
-org.hibernate.,SimpleType,4,6,4,0,2
-org.hibernate.,VariableDeclarationFragment,2,3,2,0,1
+org.hibernate.,FieldAccess,0,2,0,0,2
+org.hibernate.,MethodInvocation,1,6,1,0,5
+org.hibernate.,SimpleName,2,21,2,0,19
+org.hibernate.,SimpleType,1,6,1,0,5
+org.hibernate.,VariableDeclarationFragment,0,3,0,0,3

@@ -2,739 +2,98 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_41.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=106
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: xstream_class_41
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Did not find solution for node: void with type Type6
-Cannot find matching typeVariable for: main
-Cannot find matching typeVariable for: public static void main(String arg[]){
-  XStream xstream=new XStream(new StaxDriver());
-  xstream.alias("data",DetList.class);
-  xstream.alias("i",Details.class);
-  String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-  System.out.println(s);
-  DetList data=(DetList)xstream.fromXML(s);
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: String arg[]
-For node: String arg[] expected fqn: java.lang.String[] with type: Type7 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
-For node: arg expected fqn: java.lang.String[] with type: Type8 got: java.lang.String[]
-Did not find solution for node: XStream with type Type9
-Did not find solution for node: XStream with type Type9
-Cannot find matching typeVariable for: xstream=new XStream(new StaxDriver())
-Did not find solution for node: xstream=new XStream(new StaxDriver()) with type Type9
-Did not find solution for node: xstream with type Type9
-Did not find solution for node: new XStream(new StaxDriver()) with type Type9
-Did not find solution for node: XStream with type Type9
-Did not find solution for node: XStream with type Type9
-Did not find solution for node: new StaxDriver() with type Type10
-Did not find solution for node: StaxDriver with type Type10
-Did not find solution for node: StaxDriver with type Type10
-For node: xstream.alias("data",DetList.class) expected fqn: void with type: Type16 got: void
-Did not find solution for node: xstream with type Type9
-Cannot find matching typeVariable for: alias
-For node: alias expected fqn: void with type: Type16 got: void
-For node: "data" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Did not find solution for node: DetList.class with type Type15
-Did not find solution for node: DetList with type Type2
-Did not find solution for node: DetList with type Type2
-Did not find solution for node: xstream.alias("i",Details.class) with type Type19
-Did not find solution for node: xstream with type Type9
-Cannot find matching typeVariable for: alias
-Did not find solution for node: alias with type Type19
-For node: "i" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Did not find solution for node: Details.class with type Type15
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>")
-For node: s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>") expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: s expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>") expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "<data>\n" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "\t<i Name='asia' type='continent' id='11'></i>\n" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "\t<i Name='africa' type='continent' id='12'></i>\n" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "\t<i Name='japan' type='country' id='13'></i>\n" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: "</data>" expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: System.out.println(s) expected fqn: void with type: Type24 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type24 got: void
-For node: System expected fqn: java.lang.System with type: Type22 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type23 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type24 got: void
-For node: s expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Did not find solution for node: DetList with type Type2
-Did not find solution for node: DetList with type Type2
-Cannot find matching typeVariable for: data=(DetList)xstream.fromXML(s)
-Did not find solution for node: data=(DetList)xstream.fromXML(s) with type Type2
-Did not find solution for node: data with type Type2
-Did not find solution for node: (DetList)xstream.fromXML(s) with type Type2
-Did not find solution for node: DetList with type Type2
-Did not find solution for node: DetList with type Type2
-For node: xstream.fromXML(s) expected fqn: java.lang.Object with type: Type27 got: java.lang.Object
-Did not find solution for node: xstream with type Type9
-Cannot find matching typeVariable for: fromXML
-For node: fromXML expected fqn: java.lang.Object with type: Type27 got: java.lang.Object
-For node: s expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: public class DetList {
-  private List<Details> detlist;
-  public List<Details> getDetlist(){
-    return detlist;
-  }
-  public void setDetlist(  List<Details> detlist){
-    this.detlist=detlist;
-  }
-}
-
-Did not find solution for node: DetList with type Type2
-For node: List<Details> expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-Cannot find matching typeVariable for: detlist
-For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-Cannot find matching typeVariable for: detlist
-Cannot find matching typeVariable for: private List<Details> detlist;
-
-Cannot find matching typeVariable for: public class DetList {
-  private List<Details> detlist;
-  public List<Details> getDetlist(){
-    return detlist;
-  }
-  public void setDetlist(  List<Details> detlist){
-    this.detlist=detlist;
-  }
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-For node: List<Details> expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-Cannot find matching typeVariable for: getDetlist
-Cannot find matching typeVariable for: public List<Details> getDetlist(){
-  return detlist;
-}
-
-Cannot find matching typeVariable for: public class DetList {
-  private List<Details> detlist;
-  public List<Details> getDetlist(){
-    return detlist;
-  }
-  public void setDetlist(  List<Details> detlist){
-    this.detlist=detlist;
-  }
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-Did not find solution for node: void with type Type6
-Cannot find matching typeVariable for: setDetlist
-Cannot find matching typeVariable for: public void setDetlist(List<Details> detlist){
-  this.detlist=detlist;
-}
-
-Cannot find matching typeVariable for: public class DetList {
-  private List<Details> detlist;
-  public List<Details> getDetlist(){
-    return detlist;
-  }
-  public void setDetlist(  List<Details> detlist){
-    this.detlist=detlist;
-  }
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: List<Details> detlist
-For node: List<Details> detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: List<Details> expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: List expected fqn: java.util.List<xstream_class_41.Details> with type: Type4 got: java.util.List
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: this.detlist=detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-For node: this.detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-Did not find solution for node: this with type Type2
-Cannot find matching typeVariable for: detlist
-For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-Cannot find matching typeVariable for: detlist
-For node: detlist expected fqn: java.util.List<xstream_class_41.Details> with type: Type5=Type4<Type1> got: java.util.List<java.lang.Object>
-Cannot find matching typeVariable for: public class Details {
-  private String Name;
-  private String type;
-  private String id;
-}
-
-For node: Details expected fqn: xstream_class_41.Details with type: Type1 got: java.lang.Object
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: Name
-For node: Name expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: Name
-Cannot find matching typeVariable for: private String Name;
-
-Cannot find matching typeVariable for: public class Details {
-  private String Name;
-  private String type;
-  private String id;
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: type
-For node: type expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: type
-Cannot find matching typeVariable for: private String type;
-
-Cannot find matching typeVariable for: public class Details {
-  private String Name;
-  private String type;
-  private String id;
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: id
-For node: id expected fqn: java.lang.String with type: Type14 got: java.lang.String
-Cannot find matching typeVariable for: id
-Cannot find matching typeVariable for: private String id;
-
-Cannot find matching typeVariable for: public class Details {
-  private String Name;
-  private String type;
-  private String id;
-}
-
-Cannot find matching typeVariable for: public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.List;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-public class xstream_class_41 {
-  public static void main(  String arg[]){
-    XStream xstream=new XStream(new StaxDriver());
-    xstream.alias("data",DetList.class);
-    xstream.alias("i",Details.class);
-    String s=new String("<data>\n" + "\t<i Name='asia' type='continent' id='11'></i>\n" + "\t<i Name='africa' type='continent' id='12'></i>\n"+ "\t<i Name='japan' type='country' id='13'></i>\n"+ "</data>");
-    System.out.println(s);
-    DetList data=(DetList)xstream.fromXML(s);
-  }
-public class DetList {
-    private List<Details> detlist;
-    public List<Details> getDetlist(){
-      return detlist;
-    }
-    public void setDetlist(    List<Details> detlist){
-      this.detlist=detlist;
-    }
-  }
-public class Details {
-    private String Name;
-    private String type;
-    private String id;
-  }
-}
-
-{Checked=95, Analyzed=65, Unsolved=30, Incorrect=28, Correct=37}
+{Checked=106, Analyzed=0, Unsolved=106, Incorrect=0, Correct=0}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=5, Correct=0}
-=SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=7, Correct=13}
-java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=3, Correct=6}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=StringLiteral: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
-void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 Total stats
-{Checked=95, Analyzed=65, Unsolved=30, Incorrect=28, Correct=37}
+{Checked=106, Analyzed=0, Unsolved=106, Incorrect=0, Correct=0}
 =CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-=SimpleName: {Checked=10, Analyzed=5, Unsolved=5, Incorrect=5, Correct=0}
-=SimpleType: {Checked=7, Analyzed=4, Unsolved=3, Incorrect=4, Correct=0}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 =ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 =VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=FieldAccess: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-java=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=7, Correct=13}
-java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=3, Correct=6}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
-java=StringLiteral: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-java=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
-void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
-void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
 ,CastExpression,0,1,0,0,1
-,SimpleName,5,10,0,5,5
-,SimpleType,4,7,0,4,3
+,SimpleName,0,11,0,0,11
+,SimpleType,0,7,0,0,7
 ,ThisExpression,0,1,0,0,1
+,TypeDeclaration,0,3,0,0,3
 ,VariableDeclarationFragment,0,1,0,0,1
 com.thoughtworks.xstream.,ClassInstanceCreation,0,2,0,0,2
 com.thoughtworks.xstream.,SimpleName,0,7,0,0,7
 com.thoughtworks.xstream.,SimpleType,0,3,0,0,3
 com.thoughtworks.xstream.,VariableDeclarationFragment,0,1,0,0,1
-java,Assignment,1,1,0,1,0
-java,ClassInstanceCreation,1,1,1,0,0
-java,FieldAccess,1,1,0,1,0
-java,InfixExpression,1,1,1,0,0
-java,MethodInvocation,1,1,1,0,0
-java,ParameterizedType,3,3,0,3,0
-java,QualifiedName,1,1,0,1,0
-java,SimpleName,20,20,13,7,0
-java,SimpleType,9,9,6,3,0
-java,SingleVariableDeclaration,2,2,0,2,0
-java,StringLiteral,7,7,7,0,0
+java,Assignment,0,1,0,0,1
+java,ClassInstanceCreation,0,1,0,0,1
+java,FieldAccess,0,1,0,0,1
+java,InfixExpression,0,1,0,0,1
+java,MethodInvocation,0,1,0,0,1
+java,ParameterizedType,0,3,0,0,3
+java,QualifiedName,0,1,0,0,1
+java,SimpleName,0,25,0,0,25
+java,SimpleType,0,9,0,0,9
+java,SingleVariableDeclaration,0,2,0,0,2
+java,StringLiteral,0,7,0,0,7
 java,TypeLiteral,0,2,0,0,2
-java,VariableDeclarationFragment,5,5,4,1,0
-void,MethodInvocation,2,3,2,0,1
+java,VariableDeclarationFragment,0,5,0,0,5
+void,MethodInvocation,0,3,0,0,3
 void,PrimitiveType,0,2,0,0,2
-void,SimpleName,2,3,2,0,1
+void,SimpleName,0,5,0,0,5

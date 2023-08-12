@@ -1,0 +1,638 @@
+[
+  {
+    "codeStatement": "final JFrame frame = new JFrame(\"Nested Layout Example\");",
+    "FQN_Pred": [
+      [
+        "javax.swing.JFrame",
+        "com.sun.codemodel.internal.JFrame",
+        "com.google.gwt.j.client.ui.JFrame"
+      ],
+      [
+        "javax.swing.JFrame",
+        "com.sun.codemodel.internal.JFrame",
+        "j.ax.cod.JFrame.JFrame"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JFrame",
+      "javax.swing.JFrame"
+    ]
+  },
+  {
+    "codeStatement": "frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JFrame",
+        "javax.swing.J.JFrame",
+        "javax.swing.JFrame.JFrame"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JFrame"
+    ]
+  },
+  {
+    "codeStatement": "final JPanel gui = new JPanel(new BorderLayout(5, 5));",
+    "FQN_Pred": [
+      [
+        "javax.swing.JPanel",
+        "javax.swing.JP.JPanel",
+        "javax.swing.JFrame.JPanel"
+      ],
+      [
+        "javax.swing.JPanel",
+        "javax.swing.JP.JPanel",
+        "javax.swing.JFrame.JPanel"
+      ],
+      [
+        "javax.swing.BorderLayout",
+        "javax.swing.JLayout.BorderLayout",
+        "java.awt.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JPanel",
+      "javax.swing.JPanel",
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "gui.setBorder(new TitledBorder(\"BorderLayout(5,5)\"));",
+    "FQN_Pred": [
+      [
+        "javax.swing.TitledBorder",
+        "javax.swing.border.TitledBorder",
+        "javax.jconsole.TitledBorder"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.border.TitledBorder"
+    ]
+  },
+  {
+    "codeStatement": "JPanel plafComponents = new JPanel(new FlowLayout(FlowLayout.RIGHT, 3, 3));",
+    "FQN_Pred": [
+      [
+        "javax.swing.JPanel",
+        "javax.swing.text.JPanel",
+        "javax.swing.JComponent.JPanel"
+      ],
+      [
+        "javax.swing.JPanel",
+        "javax.swing.text.JPanel",
+        "javax.swing.JComponent.JPanel"
+      ],
+      [
+        "javax.swing.FlowLayout",
+        "javax.swing.GroupLayout.FlowLayout",
+        "java.awt.FlowLayout"
+      ],
+      [
+        "javax.swing.LayoutLayout.FlowLayout",
+        "javax.swing.JP.el.FlowLayout",
+        "javax.swing.plaf.basic.Basic.flowUI.FlowLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JPanel",
+      "javax.swing.JPanel",
+      "java.awt.FlowLayout",
+      "java.awt.FlowLayout"
+    ]
+  },
+  {
+    "codeStatement": "plafComponents.setBorder(new TitledBorder(\"FlowLayout(FlowLayout.RIGHT, 3,3)\"));",
+    "FQN_Pred": [
+      [
+        "javax.swing.TitledBorder",
+        "javax.swing.border.TitledBorder",
+        "javax.jconsole.TitledBorder"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.border.TitledBorder"
+    ]
+  },
+  {
+    "codeStatement": "final UIManager.LookAndFeelInfo[] plafInfos = UIManager.getInstalledLookAndFeels();",
+    "FQN_Pred": [
+      [
+        "javax.swing.UIManager",
+        "javax.swing.plaf.UIManager",
+        "javax.swing.text.UIManager"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.UIManager"
+    ]
+  },
+  {
+    "codeStatement": "final JComboBox plafChooser = new JComboBox(plafNames);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JComboBox",
+        "javax.swing.text.JComboBox",
+        "com.sun.codemodel.internal.JComboBox"
+      ],
+      [
+        "javax.swing.JComboBox",
+        "javax.swing.box.JComboBox",
+        "com.sun.codemodel.internal.JComboBox"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JComboBox",
+      "javax.swing.JComboBox"
+    ]
+  },
+  {
+    "codeStatement": "final JCheckBox pack = new JCheckBox(\"Pack on PLAF change\", true);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JCheckBox",
+        "javax.swing.box.JCheckBox",
+        "javax.swing.JInternalFrame.JCheckBox"
+      ],
+      [
+        "javax.swing.JCheckBox",
+        "javax.swing.J.JCheckBox",
+        "javax.swing.JInternalFrame.JCheckBox"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JCheckBox",
+      "javax.swing.JCheckBox"
+    ]
+  },
+  {
+    "codeStatement": "plafChooser.addActionListener(new ActionListener()",
+    "FQN_Pred": [
+      [
+        "javax.swing.event.ActionListener",
+        "java.awt.event.ActionListener",
+        "javax.swing.Jevent.ActionListener"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.event.ActionListener"
+    ]
+  },
+  {
+    "codeStatement": "gui.add(plafComponents, BorderLayout.NORTH);",
+    "FQN_Pred": [
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.GroupLayout.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "JPanel dynamicLabels = new JPanel(new BorderLayout(4, 4));",
+    "FQN_Pred": [
+      [
+        "javax.swing.JPanel",
+        "javax.swing.text.JPanel",
+        "javax.swing.JComponent.JPanel"
+      ],
+      [
+        "javax.swing.JPanel",
+        "javax.swing.text.JPanel",
+        "javax.swing.Jel.JPanel"
+      ],
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.GroupLayout.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JPanel",
+      "javax.swing.JPanel",
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "dynamicLabels.setBorder(new TitledBorder(\"BorderLayout(4,4)\"));",
+    "FQN_Pred": [
+      [
+        "javax.swing.TitledBorder",
+        "javax.swing.border.TitledBorder",
+        "java.awt.TitledBorder"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.border.TitledBorder"
+    ]
+  },
+  {
+    "codeStatement": "gui.add(dynamicLabels, BorderLayout.WEST);",
+    "FQN_Pred": [
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.Jag.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "final JPanel labels = new JPanel(new GridLayout(0, 2, 3, 3));",
+    "FQN_Pred": [
+      [
+        "javax.swing.JPanel",
+        "javax.swing.JP.JPanel",
+        "android.widget.JPanel"
+      ],
+      [
+        "javax.swing.JPanel",
+        "javax.swing.JP.JPanel",
+        "android.widget.JPanel"
+      ],
+      [
+        "java.awt.GridLayout",
+        "android.widget.GridLayout",
+        "com.google.gwt.user.client.ui.GridLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JPanel",
+      "javax.swing.JPanel",
+      "java.awt.GridLayout"
+    ]
+  },
+  {
+    "codeStatement": "labels.setBorder(new TitledBorder(\"GridLayout(0,2,3,3)\"));",
+    "FQN_Pred": [
+      [
+        "javax.swing.TitledBorder",
+        "javax.swing.border.TitledBorder",
+        "java.awt.TitledBorder"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.border.TitledBorder"
+    ]
+  },
+  {
+    "codeStatement": "JButton addNew = new JButton(\"Add Another Label\");",
+    "FQN_Pred": [
+      [
+        "javax.swing.JButton",
+        "javax.swing.J.JButton",
+        "java.awt.JButton"
+      ],
+      [
+        "javax.swing.JButton",
+        "javax.swing.Default.JButton",
+        "java.awt.JButton"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JButton",
+      "javax.swing.JButton"
+    ]
+  },
+  {
+    "codeStatement": "dynamicLabels.add(addNew, BorderLayout.NORTH);",
+    "FQN_Pred": [
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.JLayout.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "addNew.addActionListener(new ActionListener()",
+    "FQN_Pred": [
+      [
+        "java.awt.event.ActionListener",
+        "javax.swing.ActionListener",
+        "javax.swing.JComponent.ActionListener"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.event.ActionListener"
+    ]
+  },
+  {
+    "codeStatement": "dynamicLabels.add(new JScrollPane(labels), BorderLayout.CENTER);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JScrollPane",
+        "javax.swing.text.JScrollPane",
+        "javax.swing.JJFrame.JScrollPane"
+      ],
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.JLayout.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JScrollPane",
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "DefaultTableModel model = new DefaultTableModel(data, header);",
+    "FQN_Pred": [
+      [
+        "javax.swing.table.DefaultTableModel",
+        "javax.swing.DefaultTableModel",
+        "javax.swing.table.J.Header.DefaultTableModel"
+      ],
+      [
+        "javax.swing.table.DefaultTableModel",
+        "javax.swing.DefaultTableModel",
+        "javax.swing.table.J.parser.DefaultTableModel"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.table.DefaultTableModel",
+      "javax.swing.table.DefaultTableModel"
+    ]
+  },
+  {
+    "codeStatement": "JTable table = new JTable(model);",
+    "FQN_Pred": [
+      [
+        "javax.swing.table.JTable",
+        "javax.swing.JTable",
+        "javax.swing.tableTable.JTable"
+      ],
+      [
+        "javax.swing.JTable",
+        "javax.swing.table.JTable",
+        "javax.swing.tableTable.JTable"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JTable",
+      "javax.swing.JTable"
+    ]
+  },
+  {
+    "codeStatement": "JScrollPane tableScroll = new JScrollPane(table);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JScrollPane",
+        "javax.swing.table.JScrollPane",
+        "javax.swing.JTable.JScrollPane"
+      ],
+      [
+        "javax.swing.JScrollPane",
+        "javax.swing.ane.JScrollPane",
+        "javax.swing.JFrame.JScrollPane"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JScrollPane",
+      "javax.swing.JScrollPane"
+    ]
+  },
+  {
+    "codeStatement": "Dimension tablePreferred = tableScroll.getPreferredSize();",
+    "FQN_Pred": [
+      [
+        "java.awt.Dimension",
+        "javax.swing.GroupTable.Dimension",
+        "javax.swing.Dimension"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.Dimension"
+    ]
+  },
+  {
+    "codeStatement": "tableScroll.setPreferredSize(new Dimension(tablePreferred.width, tablePreferred.height / 3));",
+    "FQN_Pred": [
+      [
+        "java.awt.Dimension",
+        "javax.swing.Dimension",
+        "javax.swing.GroupLayout.Dimension"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.Dimension"
+    ]
+  },
+  {
+    "codeStatement": "JPanel imagePanel = new JPanel(new GridBagLayout());",
+    "FQN_Pred": [
+      [
+        "javax.swing.JPanel",
+        "javax.swing.table.JPanel",
+        "javax.swing.JTable.JPanel"
+      ],
+      [
+        "javax.swing.JPanel",
+        "javax.swing.table.JPanel",
+        "javax.swing.JTable.JPanel"
+      ],
+      [
+        "java.awt.GridBagLayout",
+        "com.google.gwt.user.client.ui.GridBagLayout",
+        "android.widget.GridBagLayout"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JPanel",
+      "javax.swing.JPanel",
+      "java.awt.GridBagLayout"
+    ]
+  },
+  {
+    "codeStatement": "imagePanel.setBorder(new TitledBorder(\"GridBagLayout()\"));",
+    "FQN_Pred": [
+      [
+        "javax.swing.TitledBorder",
+        "javax.swing.border.TitledBorder",
+        "javax.jconsole.TitledBorder"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.border.TitledBorder"
+    ]
+  },
+  {
+    "codeStatement": "BufferedImage bi = new BufferedImage(200, 200, BufferedImage.TYPE_INT_ARGB);",
+    "FQN_Pred": [
+      [
+        "java.awt.image.BufferedImage",
+        "java.awt.BufferedImage",
+        "java.aw.BufferedImage"
+      ],
+      [
+        "java.awt.image.BufferedImage",
+        "java.awt.BufferedImage",
+        "java.awt.geimage.BufferedImage"
+      ],
+      [
+        "java.awt.image.BufferedImage",
+        "java.awt.BufferedImage",
+        "java.awt.Rectimage.BufferedImage"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.image.BufferedImage",
+      "java.awt.image.BufferedImage",
+      "java.awt.image.BufferedImage"
+    ]
+  },
+  {
+    "codeStatement": "Graphics2D g = bi.createGraphics();",
+    "FQN_Pred": [
+      [
+        "java.awt.Graphics",
+        "java.awt.image.Graphics",
+        "java.awt.geom.Graphics"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.Graphics"
+    ]
+  },
+  {
+    "codeStatement": "GradientPaint gp = new GradientPaint(20f, 20f, Color.red, 180f, 180f, Color.yellow);",
+    "FQN_Pred": [
+      [
+        "java.awt.image.GradientPaint",
+        "java.awt.GradientPaint",
+        "sun.print.GradientPaint"
+      ],
+      [
+        "java.awt.GradientPaint",
+        "java.awt.image.GradientPaint",
+        "javax.swing.plaf.nimbus.GradRegionPainter.GradientPaint"
+      ],
+      [
+        "java.awt.Color",
+        "java.awt.Color.Color",
+        "java.aw.Color"
+      ],
+      [
+        "java.awt.Color",
+        "java.awt.Color.Color",
+        "java.awt.MultipleColor.Color"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.GradientPaint",
+      "java.awt.GradientPaint",
+      "java.awt.Color",
+      "java.awt.Color"
+    ]
+  },
+  {
+    "codeStatement": "ImageIcon ii = new ImageIcon(bi);",
+    "FQN_Pred": [
+      [
+        "javax.swing.ImageIcon",
+        "javax.swing.image.ImageIcon",
+        "java.awt.ImageIcon"
+      ],
+      [
+        "javax.swing.ImageIcon",
+        "javax.swing.Icon.ImageIcon",
+        "j.awt.ImageIcon"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.ImageIcon",
+      "javax.swing.ImageIcon"
+    ]
+  },
+  {
+    "codeStatement": "JLabel imageLabel = new JLabel(ii);",
+    "FQN_Pred": [
+      [
+        "javax.swing.JLabel",
+        "javax.swing.J.JLabel",
+        "javax.swing.JLabel.JLabel"
+      ],
+      [
+        "javax.swing.JLabel",
+        "javax.swing.J.JLabel",
+        "javax.jconsole.JLabel"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JLabel",
+      "javax.swing.JLabel"
+    ]
+  },
+  {
+    "codeStatement": "JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, tableScroll,",
+    "FQN_Pred": [
+      [
+        "javax.swing.JSplitPane",
+        "javax.swing.JFrame.JSplitPane",
+        "javax.swing.table.JSplitPane"
+      ],
+      [
+        "javax.swing.JSplitPane",
+        "javax.swing.plaf.JSplitPane",
+        "sun.swing.JSplitPane"
+      ],
+      [
+        "javax.swing.JSplitPane",
+        "javax.swing.plaf.JSplitPane",
+        "sun.swing.JSplitPane"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JSplitPane",
+      "javax.swing.JSplitPane",
+      "javax.swing.JSplitPane"
+    ]
+  },
+  {
+    "codeStatement": "new JScrollPane(imagePanel));",
+    "FQN_Pred": [
+      [
+        "javax.swing.JScrollPane",
+        "javax.swing.ane.JScrollPane",
+        "javax.swing.JJFrame.JScrollPane"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.JScrollPane"
+    ]
+  },
+  {
+    "codeStatement": "gui.add(splitPane, BorderLayout.CENTER);",
+    "FQN_Pred": [
+      [
+        "java.awt.BorderLayout",
+        "javax.swing.BorderLayout",
+        "javax.swing.JLayout.BorderLayout"
+      ]
+    ],
+    "FQN_true": [
+      "java.awt.BorderLayout"
+    ]
+  },
+  {
+    "codeStatement": "SwingUtilities.invokeLater(r);",
+    "FQN_Pred": [
+      [
+        "javax.swing.SwingUtilities",
+        "sun.swing.SwingUtilities",
+        "javax.swing.text.SwingUtilities"
+      ]
+    ],
+    "FQN_true": [
+      "javax.swing.SwingUtilities"
+    ]
+  }
+]

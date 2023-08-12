@@ -2,365 +2,98 @@ echo package -Dmaven.test.skip=True
 package -Dmaven.test.skip=True
 echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
 Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_40.java
+Exception repair: java.lang.NullPointerException
+java.lang.NullPointerException
+	at snr.ax.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
 Expect check=100
-Cannot find matching typeVariable for: public class hibernate_class_40 {
-  public static void main(  String[] args){
-    Session session=null;
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      System.out.println("selecting records");
-      Query q=session.getNamedQuery("getRecordsSP");
-      System.out.print("Done");
-      List l=q.list();
-      for (Iterator it=l.iterator(); it.hasNext(); ) {
-        Object row[]=(Object[])it.next();
-        System.out.println(row.length);
-      }
-    }
- catch (    Exception e) {
-      e.printStackTrace();
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: hibernate_class_40
-Cannot find matching typeVariable for: public class hibernate_class_40 {
-  public static void main(  String[] args){
-    Session session=null;
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      System.out.println("selecting records");
-      Query q=session.getNamedQuery("getRecordsSP");
-      System.out.print("Done");
-      List l=q.list();
-      for (Iterator it=l.iterator(); it.hasNext(); ) {
-        Object row[]=(Object[])it.next();
-        System.out.println(row.length);
-      }
-    }
- catch (    Exception e) {
-      e.printStackTrace();
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.Iterator;
-import java.util.List;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-public class hibernate_class_40 {
-  public static void main(  String[] args){
-    Session session=null;
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      System.out.println("selecting records");
-      Query q=session.getNamedQuery("getRecordsSP");
-      System.out.print("Done");
-      List l=q.list();
-      for (Iterator it=l.iterator(); it.hasNext(); ) {
-        Object row[]=(Object[])it.next();
-        System.out.println(row.length);
-      }
-    }
- catch (    Exception e) {
-      e.printStackTrace();
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-  }
-}
-
-For node: void expected fqn: void with type: Type2 got: void
-Cannot find matching typeVariable for: main
-Cannot find matching typeVariable for: public static void main(String[] args){
-  Session session=null;
-  try {
-    SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-    session=sessionFactory.openSession();
-    System.out.println("selecting records");
-    Query q=session.getNamedQuery("getRecordsSP");
-    System.out.print("Done");
-    List l=q.list();
-    for (Iterator it=l.iterator(); it.hasNext(); ) {
-      Object row[]=(Object[])it.next();
-      System.out.println(row.length);
-    }
-  }
- catch (  Exception e) {
-    e.printStackTrace();
-  }
- finally {
-    session.flush();
-    session.close();
-  }
-}
-
-Cannot find matching typeVariable for: public class hibernate_class_40 {
-  public static void main(  String[] args){
-    Session session=null;
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      System.out.println("selecting records");
-      Query q=session.getNamedQuery("getRecordsSP");
-      System.out.print("Done");
-      List l=q.list();
-      for (Iterator it=l.iterator(); it.hasNext(); ) {
-        Object row[]=(Object[])it.next();
-        System.out.println(row.length);
-      }
-    }
- catch (    Exception e) {
-      e.printStackTrace();
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: import java.util.Iterator;
-import java.util.List;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-public class hibernate_class_40 {
-  public static void main(  String[] args){
-    Session session=null;
-    try {
-      SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
-      session=sessionFactory.openSession();
-      System.out.println("selecting records");
-      Query q=session.getNamedQuery("getRecordsSP");
-      System.out.print("Done");
-      List l=q.list();
-      for (Iterator it=l.iterator(); it.hasNext(); ) {
-        Object row[]=(Object[])it.next();
-        System.out.println(row.length);
-      }
-    }
- catch (    Exception e) {
-      e.printStackTrace();
-    }
- finally {
-      session.flush();
-      session.close();
-    }
-  }
-}
-
-Cannot find matching typeVariable for: String[] args
-For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
-For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
-Did not find solution for node: Session with type Type5
-Did not find solution for node: Session with type Type5
-Cannot find matching typeVariable for: session=null
-Did not find solution for node: session=null with type Type5
-Did not find solution for node: session with type Type5
-Did not find solution for node: null with type Type6
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-Cannot find matching typeVariable for: sessionFactory=new Configuration().configure().buildSessionFactory()
-For node: sessionFactory=new Configuration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-For node: new Configuration().configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type12 got: org.hibernate.SessionFactory
-For node: new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
-For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type8 got: org.hibernate.cfg.Configuration
-Cannot find matching typeVariable for: configure
-For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
-Cannot find matching typeVariable for: buildSessionFactory
-For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type12 got: org.hibernate.SessionFactory
-Did not find solution for node: session=sessionFactory.openSession() with type Type5
-Did not find solution for node: session with type Type5
-Did not find solution for node: sessionFactory.openSession() with type Type14
-For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
-Cannot find matching typeVariable for: openSession
-Did not find solution for node: openSession with type Type14
-For node: System.out.println("selecting records") expected fqn: void with type: Type19 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type19 got: void
-For node: System expected fqn: java.lang.System with type: Type17 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type18 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type19 got: void
-Did not find solution for node: "selecting records" with type Type16
-Did not find solution for node: Query with type Type22
-Did not find solution for node: Query with type Type22
-Cannot find matching typeVariable for: q=session.getNamedQuery("getRecordsSP")
-Did not find solution for node: q=session.getNamedQuery("getRecordsSP") with type Type22
-Did not find solution for node: q with type Type22
-Did not find solution for node: session.getNamedQuery("getRecordsSP") with type Type23
-Did not find solution for node: session with type Type5
-Cannot find matching typeVariable for: getNamedQuery
-Did not find solution for node: getNamedQuery with type Type23
-Did not find solution for node: "getRecordsSP" with type Type16
-For node: System.out.print("Done") expected fqn: void with type: Type26 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type26 got: void
-For node: System expected fqn: java.lang.System with type: Type17 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type18 got: java.io.PrintStream
-Cannot find matching typeVariable for: print
-For node: print expected fqn: void with type: Type26 got: void
-Did not find solution for node: "Done" with type Type16
-For node: List expected fqn: java.util.List with type: Type29 got: java.util.List
-For node: List expected fqn: java.util.List with type: Type29 got: java.util.List
-Cannot find matching typeVariable for: l=q.list()
-For node: l=q.list() expected fqn: java.util.List with type: Type29 got: java.util.List
-For node: l expected fqn: java.util.List with type: Type29 got: java.util.List
-For node: q.list() expected fqn: java.util.List with type: Type30 got: java.util.List
-Did not find solution for node: q with type Type22
-Cannot find matching typeVariable for: list
-For node: list expected fqn: java.util.List with type: Type30 got: java.util.List
-Cannot find matching typeVariable for: Iterator it=l.iterator()
-For node: Iterator it=l.iterator() expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-For node: Iterator expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-For node: Iterator expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-Cannot find matching typeVariable for: it=l.iterator()
-For node: it=l.iterator() expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-For node: it expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-For node: l.iterator() expected fqn: java.util.Iterator with type: Type33 got: java.util.Iterator
-For node: l expected fqn: java.util.List with type: Type29 got: java.util.List
-Cannot find matching typeVariable for: iterator
-For node: iterator expected fqn: java.util.Iterator with type: Type33 got: java.util.Iterator
-For node: it.hasNext() expected fqn: boolean with type: Type35 got: boolean
-For node: it expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-Cannot find matching typeVariable for: hasNext
-For node: hasNext expected fqn: boolean with type: Type35 got: boolean
-For node: Object expected fqn: java.lang.Object with type: Type37 got: java.lang.Object
-For node: Object expected fqn: java.lang.Object with type: Type37 got: java.lang.Object
-Cannot find matching typeVariable for: row[]=(Object[])it.next()
-For node: row[]=(Object[])it.next() expected fqn: java.lang.Object[] with type: Type38 got: java.lang.Object[]
-For node: row expected fqn: java.lang.Object[] with type: Type38 got: java.lang.Object[]
-For node: (Object[])it.next() expected fqn: java.lang.Object[] with type: Type38 got: java.lang.Object[]
-For node: Object[] expected fqn: java.lang.Object[] with type: Type38 got: java.lang.Object[]
-For node: Object expected fqn: java.lang.Object with type: Type37 got: java.lang.Object
-For node: Object expected fqn: java.lang.Object with type: Type37 got: java.lang.Object
-Did not find solution for node: it.next() with type Type39
-For node: it expected fqn: java.util.Iterator with type: Type32 got: java.util.Iterator
-Cannot find matching typeVariable for: next
-Did not find solution for node: next with type Type39
-For node: System.out.println(row.length) expected fqn: void with type: Type42 got: void
-Cannot find matching typeVariable for: System.out
-For node: System.out expected fqn: java.io.PrintStream with type: Type42 got: void
-For node: System expected fqn: java.lang.System with type: Type17 got: java.lang.System
-For node: out expected fqn: java.io.PrintStream with type: Type18 got: java.io.PrintStream
-Cannot find matching typeVariable for: println
-For node: println expected fqn: void with type: Type42 got: void
-Cannot find matching typeVariable for: row.length
-For node: row.length expected fqn: int with type: Type42 got: void
-For node: row expected fqn: java.lang.Object[] with type: Type38 got: java.lang.Object[]
-For node: length expected fqn: int with type: Type41 got: int
-Cannot find matching typeVariable for: Exception e
-For node: Exception e expected fqn: java.lang.Exception with type: Type45 got: java.lang.Exception
-For node: Exception expected fqn: java.lang.Exception with type: Type45 got: java.lang.Exception
-For node: Exception expected fqn: java.lang.Exception with type: Type45 got: java.lang.Exception
-For node: e expected fqn: java.lang.Exception with type: Type45 got: java.lang.Exception
-For node: e.printStackTrace() expected fqn: void with type: Type46 got: void
-For node: e expected fqn: java.lang.Exception with type: Type45 got: java.lang.Exception
-Cannot find matching typeVariable for: printStackTrace
-For node: printStackTrace expected fqn: void with type: Type46 got: void
-For node: session.flush() expected fqn: void with type: Type48 got: void
-Did not find solution for node: session with type Type5
-Cannot find matching typeVariable for: flush
-For node: flush expected fqn: void with type: Type48 got: void
-Did not find solution for node: session.close() with type Type50
-Did not find solution for node: session with type Type5
-Cannot find matching typeVariable for: close
-Did not find solution for node: close with type Type50
-{Checked=97, Analyzed=71, Unsolved=26, Incorrect=4, Correct=67}
-boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=SimpleName: {Checked=25, Analyzed=24, Unsolved=1, Incorrect=0, Correct=24}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+{Checked=100, Analyzed=0, Unsolved=100, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-java=VariableDeclarationExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-org.hibernate.=SimpleName: {Checked=17, Analyzed=6, Unsolved=11, Incorrect=0, Correct=6}
-org.hibernate.=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=17, Analyzed=0, Unsolved=17, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
 Total stats
-{Checked=97, Analyzed=71, Unsolved=26, Incorrect=4, Correct=67}
-boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
-int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=ArrayType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
-java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
-java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
-java=SimpleName: {Checked=25, Analyzed=24, Unsolved=1, Incorrect=0, Correct=24}
-java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
-java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+{Checked=100, Analyzed=0, Unsolved=100, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=25, Analyzed=0, Unsolved=25, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
 java=StringLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
-java=VariableDeclarationExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
 null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
 org.hibernate.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
-org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-org.hibernate.=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-org.hibernate.=SimpleName: {Checked=17, Analyzed=6, Unsolved=11, Incorrect=0, Correct=6}
-org.hibernate.=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
-org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
-void=MethodInvocation: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
-void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
-void=SimpleName: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
-boolean,MethodInvocation,1,1,1,0,0
-boolean,SimpleName,1,1,1,0,0
-int,QualifiedName,1,1,0,1,0
-int,SimpleName,1,1,1,0,0
-java,ArrayType,2,2,2,0,0
-java,CastExpression,1,1,1,0,0
-java,MethodInvocation,2,3,2,0,1
-java,QualifiedName,3,3,0,3,0
-java,SimpleName,24,25,24,0,1
-java,SimpleType,6,6,6,0,0
-java,SingleVariableDeclaration,2,2,2,0,0
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=17, Analyzed=0, Unsolved=17, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+boolean,MethodInvocation,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+int,QualifiedName,0,1,0,0,1
+int,SimpleName,0,1,0,0,1
+java,ArrayType,0,2,0,0,2
+java,CastExpression,0,1,0,0,1
+java,MethodInvocation,0,3,0,0,3
+java,QualifiedName,0,3,0,0,3
+java,SimpleName,0,25,0,0,25
+java,SimpleType,0,6,0,0,6
+java,SingleVariableDeclaration,0,2,0,0,2
 java,StringLiteral,0,3,0,0,3
-java,VariableDeclarationExpression,1,1,1,0,0
-java,VariableDeclarationFragment,3,3,3,0,0
+java,VariableDeclarationExpression,0,1,0,0,1
+java,VariableDeclarationFragment,0,3,0,0,3
 null,NullLiteral,0,1,0,0,1
 org.hibernate.,Assignment,0,1,0,0,1
-org.hibernate.,ClassInstanceCreation,1,1,1,0,0
-org.hibernate.,MethodInvocation,2,4,2,0,2
-org.hibernate.,SimpleName,6,17,6,0,11
-org.hibernate.,SimpleType,2,4,2,0,2
-org.hibernate.,VariableDeclarationFragment,1,3,1,0,2
-void,MethodInvocation,5,6,5,0,1
-void,PrimitiveType,1,1,1,0,0
-void,SimpleName,5,6,5,0,1
+org.hibernate.,ClassInstanceCreation,0,1,0,0,1
+org.hibernate.,MethodInvocation,0,4,0,0,4
+org.hibernate.,SimpleName,0,17,0,0,17
+org.hibernate.,SimpleType,0,4,0,0,4
+org.hibernate.,VariableDeclarationFragment,0,3,0,0,3
+void,MethodInvocation,0,6,0,0,6
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,7,0,0,7
