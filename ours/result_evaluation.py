@@ -302,6 +302,8 @@ def extract_info_from_lib_csv(dataset,lib): # evaluate csv_file/{lib}/{snippet_n
     pattern_total_correct = r"total correct:(\d+)"
 
     for file_name in file_names:
+        # print(f'debug305:file_name = {file_name}')
+
         csv_file = file_name.replace('.java','.csv')
         if csv_file in csv_file_names: # if exists
             csv_file_path = os.path.abspath(os.path.join(tmp_dir,'MiddleResults',"csv_file",lib,csv_file))
@@ -590,9 +592,9 @@ if __name__ == '__main__':
         extract_info_from_lib_csv(dataset,lib)
         get_lib_iter_rounds(lib)
         # specify iteration round
-        extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round)
+        # extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round)
     
     get_total_summary()
-    get_summary_specify_iteration_round(iter_round)
+    # get_summary_specify_iteration_round(iter_round)
 
     

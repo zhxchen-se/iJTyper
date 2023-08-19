@@ -26,7 +26,7 @@ class Pred_with_Prompt_Augmented(DL.Itera_Pred):
         DL.boolean(os.path.join(filePath, self.codeSnippet_Name, 'FQN_pred'))
         DL.boolean(os.path.join(filePath, self.codeSnippet_Name,'Prompt_data'))
 
-        self.Topk = 3  # 为每个 simple name 的 API 推荐 两个候选的
+        self.Topk = 20  # 为每个 simple name 的 API 推荐 两个候选的
         self.Count_Number = 8 # 向下走几步
 
         # self.errorType = ['错误: 找不到符号']

@@ -49,7 +49,7 @@ def copy_all_codes_from_Dataset_to_SnR(dataset):
             copy_file(file, target_path)   
 
 
-def extract_results_from_DL(snippet_name,lib_name,topK=3):
+def extract_results_from_DL(snippet_name,lib_name,topK):
     '''
     work_dir:~/Baseline/
     work_dir should be changed before the function is called
