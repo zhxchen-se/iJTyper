@@ -49,7 +49,7 @@ def copy_all_codes_from_Dataset_to_SnR(dataset):
             copy_file(file, target_path)   
 
 
-def extract_results_from_DL(snippet_name,lib_name,topK):
+def extract_results_from_DL(snippet_name,lib_name,topK,check_knowledge_base=True):
     '''
     work_dir:~/Baseline/
     work_dir should be changed before the function is called
@@ -99,20 +99,23 @@ def extract_results_from_DL(snippet_name,lib_name,topK):
                     # print(f"debug83:count = {count}")
                     token_pre = []
 
-                    # for i in range(0,topK):# without knowledgebase check
-                    #     token_pre.append(pre_fqn[count][i])
 
-                    for i in range(0,len(pre_fqn[count])):
-                        if complete_database.check_if_entry_exists_in_four_tables(pre_fqn[count][i]): # knowledgebase check
-                            token_pre.append(pre_fqn[count][i])
-                        if len(token_pre) >= topK:
-                            break
-                    if len(token_pre) < topK: 
+                    if check_knowledge_base:
                         for i in range(0,len(pre_fqn[count])):
-                            if pre_fqn[count][i] not in token_pre:
+                            if complete_database.check_if_entry_exists_in_four_tables(pre_fqn[count][i]): # knowledgebase check
                                 token_pre.append(pre_fqn[count][i])
                             if len(token_pre) >= topK:
-                                break 
+                                break
+                        if len(token_pre) < topK: 
+                            for i in range(0,len(pre_fqn[count])):
+                                if pre_fqn[count][i] not in token_pre:
+                                    token_pre.append(pre_fqn[count][i])
+                                if len(token_pre) >= topK:
+                                    break 
+                    else:
+                        for i in range(0,topK):# without knowledgebase check
+                            if len(pre_fqn[count]) > i:
+                                token_pre.append(pre_fqn[count][i])
                         
 
 
@@ -127,6 +130,7 @@ def extract_results_from_DL(snippet_name,lib_name,topK):
                 count += 1
 
     os.chdir(tmp_dir)
+    # print(f'debug130:exacted_records = {exacted_records}')
     return exacted_records
 
 def Extract_binding_logs(log_file):
@@ -167,7 +171,7 @@ def Extract_binding_logs(log_file):
     return node_pred_dict,node_truth_dict 
         
 
-def DL_predict_one_snippet(file_name,dataset,lib,topK): 
+def DL_predict_one_snippet(file_name,dataset,lib,topK,check_knowledge_base=True): 
     '''
     returns dl_ans and dl_truth
     {'node':['fqn1','fqn2','...']}
@@ -200,7 +204,7 @@ def DL_predict_one_snippet(file_name,dataset,lib,topK):
     DL.Metric(lib)
 
     os.chdir(current_directory)
-    record_entries = extract_results_from_DL(file_name,lib,topK)
+    record_entries = extract_results_from_DL(file_name,lib,topK,check_knowledge_base)
     node_pred_dict = {}
     node_truth_dict = {}
     for entry in record_entries:

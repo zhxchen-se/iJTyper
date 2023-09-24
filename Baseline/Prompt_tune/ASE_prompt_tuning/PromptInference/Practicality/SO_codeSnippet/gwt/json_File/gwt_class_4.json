@@ -26,44 +26,49 @@
                   ]
                 },
                 {
-                  "label": "MyView",
-                  "type": "Class",
+                  "label": "main",
+                  "type": "Method",
                   "children": [
                     {
+                      "label": "java.lang.String",
+                      "type": "RETURN_TYPE",
+                      "children": []
+                    },
+                    {
                       "label": "",
-                      "type": "Modifiers_Class",
+                      "type": "Modifiers_Method",
                       "children": [
                         {
                           "label": "public",
+                          "type": "Modifier",
+                          "children": []
+                        },
+                        {
+                          "label": "static",
                           "type": "Modifier",
                           "children": []
                         }
                       ]
                     },
                     {
-                      "label": "com.google.gwt.user.client.ui.Composite",
-                      "type": "SUPER_TYPE",
-                      "children": []
+                      "label": "args",
+                      "type": "Parameter",
+                      "children": [
+                        {
+                          "label": "java.lang.String[]",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "label": "mainPanel",
-                      "type": "Field",
+                      "type": "LocalVariable",
                       "children": [
                         {
                           "label": "com.google.gwt.user.client.ui.VerticalSplitPanel",
                           "type": "VARIABLE_TYPE",
                           "children": []
-                        },
-                        {
-                          "label": "",
-                          "type": "Modifiers_Field",
-                          "children": [
-                            {
-                              "label": "private",
-                              "type": "Modifier",
-                              "children": []
-                            }
-                          ]
                         },
                         {
                           "label": "com.google.gwt.user.client.ui.VerticalSplitPanel()",
@@ -73,225 +78,44 @@
                       ]
                     },
                     {
-                      "label": "CountryFilterView",
-                      "type": "Method",
+                      "label": "setTopWidget",
+                      "type": "Invocation",
                       "children": [
                         {
-                          "label": "void",
-                          "type": "RETURN_TYPE",
+                          "label": "mainPanel",
+                          "type": "VariableRead",
                           "children": []
                         },
                         {
-                          "label": "",
-                          "type": "Modifiers_Method",
+                          "label": "java.lang.Object()",
+                          "type": "ConstructorCall",
                           "children": [
                             {
-                              "label": "public",
-                              "type": "Modifier",
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "label": "setSize",
-                          "type": "Invocation",
-                          "children": [
-                            {
-                              "label": "mainPanel",
+                              "label": "randomText",
                               "type": "FieldRead",
-                              "children": [
-                                {
-                                  "label": "gwt_class_4$MyView",
-                                  "type": "TypeAccess",
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "label": "\"100%\"",
-                              "type": "Literal",
-                              "children": []
-                            },
-                            {
-                              "label": "\"100%\"",
-                              "type": "Literal",
                               "children": []
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "label": "str",
+                      "type": "LocalVariable",
+                      "children": [
+                        {
+                          "label": "java.lang.String",
+                          "type": "VARIABLE_TYPE",
+                          "children": []
                         },
                         {
-                          "label": "setSplitPosition",
-                          "type": "Invocation",
+                          "label": "SERVER_HOST",
+                          "type": "FieldRead",
                           "children": [
                             {
-                              "label": "mainPanel",
-                              "type": "FieldRead",
-                              "children": [
-                                {
-                                  "label": "gwt_class_4$MyView",
-                                  "type": "TypeAccess",
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "label": "\"50%\"",
-                              "type": "Literal",
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "label": "randomText",
-                          "type": "LocalVariable",
-                          "children": [
-                            {
-                              "label": "java.lang.String",
-                              "type": "VARIABLE_TYPE",
-                              "children": []
-                            },
-                            {
-                              "label": "PLUS",
-                              "type": "BinaryOperator",
-                              "children": [
-                                {
-                                  "label": "\"This is some text to show how the contents on either \"",
-                                  "type": "Literal",
-                                  "children": []
-                                },
-                                {
-                                  "label": "PLUS",
-                                  "type": "BinaryOperator",
-                                  "children": [
-                                    {
-                                      "label": "PLUS",
-                                      "type": "BinaryOperator",
-                                      "children": [
-                                        {
-                                          "label": "PLUS",
-                                          "type": "BinaryOperator",
-                                          "children": [
-                                            {
-                                              "label": "PLUS",
-                                              "type": "BinaryOperator",
-                                              "children": [
-                                                {
-                                                  "label": "\"side of the splitter flow.   \"",
-                                                  "type": "Literal",
-                                                  "children": []
-                                                },
-                                                {
-                                                  "label": "\"This is some text to show how the contents on either \"",
-                                                  "type": "Literal",
-                                                  "children": []
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "label": "\"side of the splitter flow.   \"",
-                                              "type": "Literal",
-                                              "children": []
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "label": "\"This is some text to show how the contents on either \"",
-                                          "type": "Literal",
-                                          "children": []
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "label": "\"side of the splitter flow.   \"",
-                                      "type": "Literal",
-                                      "children": []
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "label": "Add some content",
-                              "type": "Comment",
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "label": "setTopWidget",
-                          "type": "Invocation",
-                          "children": [
-                            {
-                              "label": "mainPanel",
-                              "type": "FieldRead",
-                              "children": [
-                                {
-                                  "label": "gwt_class_4$MyView",
-                                  "type": "TypeAccess",
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "label": "com.google.gwt.user.client.ui.HTML(java.lang.String)",
-                              "type": "ConstructorCall",
-                              "children": [
-                                {
-                                  "label": "randomText",
-                                  "type": "VariableRead",
-                                  "children": []
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "label": "setBottomWidget",
-                          "type": "Invocation",
-                          "children": [
-                            {
-                              "label": "mainPanel",
-                              "type": "FieldRead",
-                              "children": [
-                                {
-                                  "label": "gwt_class_4$MyView",
-                                  "type": "TypeAccess",
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "label": "com.google.gwt.user.client.ui.HTML(java.lang.String)",
-                              "type": "ConstructorCall",
-                              "children": [
-                                {
-                                  "label": "randomText",
-                                  "type": "VariableRead",
-                                  "children": []
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "label": "initWidget",
-                          "type": "Invocation",
-                          "children": [
-                            {
-                              "label": "gwt_class_4$MyView",
+                              "label": "ServiceWrapper",
                               "type": "TypeAccess",
                               "children": []
-                            },
-                            {
-                              "label": "mainPanel",
-                              "type": "FieldRead",
-                              "children": [
-                                {
-                                  "label": "gwt_class_4$MyView",
-                                  "type": "TypeAccess",
-                                  "children": []
-                                }
-                              ]
                             }
                           ]
                         }

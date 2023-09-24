@@ -587,14 +587,15 @@ if __name__ == '__main__':
     libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
     dataset = "Short-SO"
     # dataset = "StatType-SO"
-    iter_round = 1
-    for lib in libs:
-        extract_info_from_lib_csv(dataset,lib)
-        get_lib_iter_rounds(lib)
-        # specify iteration round
-        # extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round)
-    
-    get_total_summary()
-    # get_summary_specify_iteration_round(iter_round)
+    for iter_round in range(1,7):
+        # print(f'debug591:{iter_round}')
+        for lib in libs:
+            extract_info_from_lib_csv(dataset,lib)
+            get_lib_iter_rounds(lib)
+            # specify iteration round
+            # extract_info_from_lib_csv_specify_iteration_round(dataset,lib,iter_round)
+        
+        get_total_summary()
+        # get_summary_specify_iteration_round(iter_round)
 
     

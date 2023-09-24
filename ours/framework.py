@@ -16,7 +16,8 @@ from deeplearning import *
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))
 from Baseline import run_baseline
-
+err_files = ['gwt_class_17.java','Android12.java','Android15.java','Android20.java','Android22.java','Android24.java','Android29.java','Android31.java','Android33.java','Android41.java','Android42.java','Android45.java','Android49.java',
+            'gwt_class_2.java','gwt_class_25.java','gwt_class_26.java','gwt_class_33.java','gwt_class_34.java','hibernate_class_2.java','hibernate_class_6.java','hibernate_class_11.java','hibernate_class_13.java','hibernate_class_14.java','hibernate_class_27.java','hibernate_class_31.java','hibernate_class_32.java','hibernate_class_35.java','hibernate_class_41.java','hibernate_class_44.java','hibernate_class_46.java','hibernate_class_47.java','Class_6.java','Class_8.java','JodaTime16.java','xstream_class_7.java','xstream_class_15.java','xstream_class_22.java','xstream_class_28.java','xstream_class_29.java','xstream_class_31.java','xstream_class_34.java']
 def Set_GPU(gpu_index):
     if torch.cuda.is_available():
         print("CUDA is available!")
@@ -86,10 +87,12 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK,build_kb_wi
                 all_binding_time += binding_time
 
             dl_start_time = time.time()
+            # print(f'debug90:rule_node_pred_dict = {rule_node_pred_dict}')
             dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,topK,rule_node_pred_dict)
             dl_time += time.time()-dl_start_time
 
-            # print(f'debug92:{dl_node_pred_dict}')
+            print(f'debug93:iter{iter_round},dl_node_pred:{dl_node_pred_dict}')
+            print(f'debug94:iter{iter_round},rule_node_pred:{rule_node_pred_dict}')
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             if last_result:
                 result.combine_ans(last_result)
@@ -162,8 +165,8 @@ def execute_baseline_only_combine_ans(snippet_file_name,dataset,lib,topK):
     returns a Result object
     '''
     tmp_dir = os.getcwd()
-    rule_node_pred_dict,rule_node_truth_dict = run_baseline.Rule_predict_one_snippet(snippet_file_name,dataset,lib)
-    dl_node_pred_dict,dl_node_truth_dict = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK)
+    rule_node_pred_dict,rule_node_truth_dict,_,_ = run_baseline.Rule_predict_one_snippet(snippet_file_name,dataset,lib)
+    dl_node_pred_dict,dl_node_truth_dict = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK,check_knowledge_base=False)
 
     result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
     result.combine_ans(Result())
@@ -236,7 +239,7 @@ def run_lib(dataset,lib,topK,build_kb_with_extension=True,StartFromRule=True,log
         try:
             with time_limit(360): # if subprocess timeout, unable to track
                 result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,build_kb_with_extension,StartFromRule,log_feed_back_flag,Maximum_iter_round)
-                # result,iter_round = execute_baseline_only_combine_ans(file_name,dataset,lib,topK)
+                # result,iter_round= execute_baseline_only_combine_ans(file_name,dataset,lib,topK) #TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             result.show_csv() # save file_name.csv
             iter_round_dict[file_name] = iter_round # count iter_round
             all_results.extend(result.csv_result)
@@ -302,22 +305,29 @@ if __name__ == '__main__':
     # lib = 'jdk'    
     dataset = 'StatType-SO'
     # dataset = 'Short-SO'
-    snippet_file_name = 'Class_20.java'
-    lib = 'jdk'
-    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=1,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
+    snippet_file_name = 'gwt_class_49.java'
+    lib = 'gwt'
+    reset_database()
+    # result,iter_round= execute_baseline_only_combine_ans(snippet_file_name,dataset,lib,topK=3)
+    
+    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=False,log_feed_back_flag=True,Maximum_iter_round = 15)
     result.show_csv()
-
+    # reset_database() 
+    # dl_node_pred_dict,_ = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK=1,True)
+    # print(f'debug314:{dl_node_pred_dict}\n')
+    # print(Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,True,True))
     
 
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
+   
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
     # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
     # open(error_log_file, "w").close() # clear log
     # for lib in libs:
     #     try:
-    #         # reset_database() # run pure baseline combine ans
-    #         run_lib(dataset,lib,topK=1,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
+    #         reset_database() # run pure baseline combine ans
+    #         run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
     #     except Exception as e:
     #         with open(error_log_file, "a") as error_log:
     #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
