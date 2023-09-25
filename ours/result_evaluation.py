@@ -584,9 +584,10 @@ def get_summary_specify_iteration_round(iter_round):
 
 
 if __name__ == '__main__':
-    libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
-    dataset = "Short-SO"
-    # dataset = "StatType-SO"
+    # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
+    libs = ["gwt"]
+    # dataset = "Short-SO"
+    dataset = "StatType-SO"
     for iter_round in range(1,7):
         # print(f'debug591:{iter_round}')
         for lib in libs:

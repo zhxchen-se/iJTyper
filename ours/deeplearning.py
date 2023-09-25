@@ -34,7 +34,7 @@ class Pred_with_Prompt_Augmented(DL.Itera_Pred):
         self.tokenizer = RobertaTokenizer.from_pretrained(model_name)
         self.model = RobertaForMaskedLM.from_pretrained(model_name)
 
-        self.device = torch.device("cpu")
+        self.device = torch.device("cuda")
         self.model.to(self.device) 
 
         self.file_read()

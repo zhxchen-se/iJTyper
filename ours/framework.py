@@ -101,7 +101,7 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK,build_kb_wi
             
             combine_start_time = time.time()
             if last_result:
-                result.combine_ans(last_result)
+                result.combine_ans(Result()) #TODO
             else:
                 result.combine_ans(Result())
             all_combine_time += time.time()-combine_start_time
@@ -307,18 +307,18 @@ def run_lib(dataset,lib,topK,build_kb_with_extension=True,StartFromRule=True,log
 if __name__ == '__main__':
     tmp_dir = os.getcwd()
 
-    Set_GPU(0)
+    Set_GPU(2)
     # snippet_file_name = 'Class_2.java'  
     # lib = 'jdk'    
     dataset = 'StatType-SO'
     # dataset = 'Short-SO'
-    snippet_file_name = 'gwt_class_28.java'
-    lib = 'gwt'
-    reset_database()
+    # snippet_file_name = 'gwt_class_28.java'
+    # lib = 'gwt'
+    # reset_database()
     # result,iter_round= execute_baseline_only_combine_ans(snippet_file_name,dataset,lib,topK=3)
     
-    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
-    result.show_csv()
+    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
+    # result.show_csv()
     # reset_database() 
     # dl_node_pred_dict,_ = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK=1,True)
     # print(f'debug314:{dl_node_pred_dict}\n')
@@ -328,19 +328,19 @@ if __name__ == '__main__':
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
    
-    # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
-    # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
-    # open(error_log_file, "w").close() # clear log
-    # for lib in libs:
-    #     try:
-    #         reset_database() # run pure baseline combine ans
-    #         run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
-    #     except Exception as e:
-    #         with open(error_log_file, "a") as error_log:
-    #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
-    #             error_log.write(error_msg+ '\n')
-    #             error_log.write(traceback.format_exc())  # stack info
-    #             error_log.write("\n")
+    libs = ["gwt"]
+    error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
+    open(error_log_file, "w").close() # clear log
+    for lib in libs:
+        try:
+            reset_database() # run pure baseline combine ans
+            run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
+        except Exception as e:
+            with open(error_log_file, "a") as error_log:
+                error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
+                error_log.write(error_msg+ '\n')
+                error_log.write(traceback.format_exc())  # stack info
+                error_log.write("\n")
 
 
     # start_time = time.time()

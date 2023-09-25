@@ -44,7 +44,7 @@ def execute_make_benchmark(file_name,lib):
         #     p.wait()
 
         max_retries = 3  # Maximum number of retries
-        timeout_seconds = 60  # Timeout in seconds
+        timeout_seconds = 100  # Timeout in seconds
         for attempt in range(max_retries + 1):
             print(f'Attempt {attempt + 1} of make benchmark...')
             with open(output_path, 'w') as outputfile:
