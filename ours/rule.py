@@ -145,7 +145,25 @@ def add_text_to_file(file_path,text):
     except Exception as e:
         print(f"add text to {file_path} error:", str(e))
 
-def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_with_extension,log_feed_back_flag): #DL -> Rule
+
+def update_dl_node_by_check_legal_topk(dl_node_pred_dict,original_snr_node_pred_dict):
+    complete_db = DB(isComplete=True)
+    for node in dl_node_pred_dict.keys():
+        flag = False
+        for fqn in dl_node_pred_dict[node]:
+            if complete_db.check_if_entry_exists_in_four_tables(fqn):
+                flag = True
+                break
+        
+        if flag == False:
+            snr_fqn = original_snr_node_pred_dict.get(node)
+            if snr_fqn:
+                dl_node_pred_dict[node].insert(0,snr_fqn)
+    
+    return dl_node_pred_dict
+
+
+def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_with_extension,log_feed_back_flag,original_snr_node_pred_dict): #DL -> Rule
     '''
     returns Rule_ans and Rule_truth
     {'node':['fqn']}
@@ -166,8 +184,12 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_w
     if p.poll() is None:
         p.wait()
 
+    kb_reduction_start_time = time.time()
     # 2.get api_pool 
-    # print(f"debug111:dl_node_pred_dict = {dl_node_pred_dict}")
+    # TODO: update dl_node_pred_dict by check if legal answer exists. if not, add constraint-based answer
+    # print(f"debug189 before update by SnR:dl_node_pred_dict = {dl_node_pred_dict}\n")
+    dl_node_pred_dict = update_dl_node_by_check_legal_topk(dl_node_pred_dict,original_snr_node_pred_dict)
+    # print(f"debug190 after update by SnR:dl_node_pred_dict = {dl_node_pred_dict}")
     api_pool = get_api_pool(dl_node_pred_dict)
     # print(f'debug113:api_pool = {api_pool}')
 
@@ -186,6 +208,7 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_w
     simplified_database.clear_four_tables()
     simplified_database.copy_results_to_four_tables(results)
     insert_results_time = time.time()-insert_results_start_time
+    kb_reduction_time = time.time()-kb_reduction_start_time
     
     os.chdir("./SnR")
     match_str = ''
@@ -263,4 +286,4 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_w
 
     os.chdir(tmp_dir)
 
-    return node_pred_dict,node_truth_dict,queryapipool_time,insert_results_time,all_benchmark_time,all_binding_time
+    return node_pred_dict,node_truth_dict,queryapipool_time,insert_results_time,all_benchmark_time,all_binding_time,kb_reduction_time
