@@ -1,0 +1,89 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt6.java
+Expect check=19
+Cannot find matching typeVariable for: public class xt6 {
+  public static void h1(){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+  }
+}
+
+Cannot find matching typeVariable for: xt6
+Cannot find matching typeVariable for: public class xt6 {
+  public static void h1(){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+public class xt6 {
+  public static void h1(){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+  XStream xstream=new XStream(xmlDriver);
+}
+
+Cannot find matching typeVariable for: public class xt6 {
+  public static void h1(){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+public class xt6 {
+  public static void h1(){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+  }
+}
+
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+Cannot find matching typeVariable for: xmlDriver=new JettisonMappedXmlDriver()
+For node: xmlDriver=new JettisonMappedXmlDriver() expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: xmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: new JettisonMappedXmlDriver() expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream=new XStream(xmlDriver)
+For node: xstream=new XStream(xmlDriver) expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: new XStream(xmlDriver) expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type5 got: com.thoughtworks.xstream.XStream
+For node: xmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type3 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+{Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+com.thoughtworks.xstream.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+com.thoughtworks.xstream.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,7,7,7,0,0
+com.thoughtworks.xstream.,SimpleType,4,4,4,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

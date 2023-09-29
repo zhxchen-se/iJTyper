@@ -1,0 +1,98 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt4.java
+Expect check=16
+Cannot find matching typeVariable for: public class gt4 {
+  public static void h1(){
+    final Date dueDate=new Date();
+    CalendarUtil.addDaysToDate(dueDate,21);
+  }
+}
+
+Cannot find matching typeVariable for: gt4
+Cannot find matching typeVariable for: public class gt4 {
+  public static void h1(){
+    final Date dueDate=new Date();
+    CalendarUtil.addDaysToDate(dueDate,21);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.user.datepicker.client.CalendarUtil;
+import java.util.Date;
+public class gt4 {
+  public static void h1(){
+    final Date dueDate=new Date();
+    CalendarUtil.addDaysToDate(dueDate,21);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  final Date dueDate=new Date();
+  CalendarUtil.addDaysToDate(dueDate,21);
+}
+
+Cannot find matching typeVariable for: public class gt4 {
+  public static void h1(){
+    final Date dueDate=new Date();
+    CalendarUtil.addDaysToDate(dueDate,21);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.user.datepicker.client.CalendarUtil;
+import java.util.Date;
+public class gt4 {
+  public static void h1(){
+    final Date dueDate=new Date();
+    CalendarUtil.addDaysToDate(dueDate,21);
+  }
+}
+
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: dueDate=new Date()
+For node: dueDate=new Date() expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: dueDate expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: new Date() expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: CalendarUtil.addDaysToDate(dueDate,21) expected fqn: void with type: Type7 got: void
+For node: CalendarUtil expected fqn: com.google.gwt.user.datepicker.client.CalendarUtil with type: Type6 got: com.google.gwt.user.datepicker.client.CalendarUtil
+Cannot find matching typeVariable for: addDaysToDate
+For node: addDaysToDate expected fqn: void with type: Type7 got: void
+For node: dueDate expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: 21 expected fqn: int with type: Type5 got: byte
+{Checked=13, Analyzed=13, Unsolved=0, Incorrect=1, Correct=12}
+gwt.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=13, Analyzed=13, Unsolved=0, Incorrect=1, Correct=12}
+gwt.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.,SimpleName,1,1,1,0,0
+int,NumberLiteral,1,1,0,1,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,SimpleName,4,4,4,0,0
+java,SimpleType,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

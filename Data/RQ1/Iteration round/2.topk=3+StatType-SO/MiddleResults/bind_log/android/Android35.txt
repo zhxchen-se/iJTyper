@@ -1,0 +1,99 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android35.java
+Exception repair: java.lang.IllegalArgumentException: Comparison method violates its general contract!
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.TimSort.mergeHi(TimSort.java:899)
+	at java.util.TimSort.mergeAt(TimSort.java:516)
+	at java.util.TimSort.mergeForceCollapse(TimSort.java:457)
+	at java.util.TimSort.sort(TimSort.java:254)
+	at java.util.Arrays.sort(Arrays.java:1512)
+	at java.util.ArrayList.sort(ArrayList.java:1464)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=118
+{Checked=118, Analyzed=0, Unsolved=118, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=28, Analyzed=0, Unsolved=28, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+Total stats
+{Checked=118, Analyzed=0, Unsolved=118, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=28, Analyzed=0, Unsolved=28, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=15, Analyzed=0, Unsolved=15, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+android.,Assignment,0,1,0,0,1
+android.,ClassInstanceCreation,0,2,0,0,2
+android.,QualifiedName,0,5,0,0,5
+android.,SimpleName,0,28,0,0,28
+android.,SimpleType,0,3,0,0,3
+android.,VariableDeclarationFragment,0,1,0,0,1
+boolean,InfixExpression,0,1,0,0,1
+boolean,MethodInvocation,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+int,NumberLiteral,0,3,0,0,3
+int,QualifiedName,0,5,0,0,5
+int,SimpleName,0,5,0,0,5
+java,ClassInstanceCreation,0,1,0,0,1
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,0,15,0,0,15
+java,SimpleType,0,5,0,0,5
+java,SingleVariableDeclaration,0,3,0,0,3
+java,StringLiteral,0,1,0,0,1
+java,VariableDeclarationFragment,0,1,0,0,1
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,0,15,0,0,15
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,16,0,0,16

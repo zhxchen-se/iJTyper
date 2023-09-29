@@ -1,0 +1,126 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk7.java
+Expect check=29
+Cannot find matching typeVariable for: public class jdk7 {
+  public static void h1() throws ParseException {
+    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+    Date date=formatter.parse("");
+  }
+}
+
+Cannot find matching typeVariable for: jdk7
+Cannot find matching typeVariable for: public class jdk7 {
+  public static void h1() throws ParseException {
+    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+    Date date=formatter.parse("");
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import jdk.nashorn.internal.runtime.options.Options;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+public class jdk7 {
+  public static void h1() throws ParseException {
+    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+    Date date=formatter.parse("");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1() throws ParseException {
+  SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+  formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+  Date date=formatter.parse("");
+}
+
+Cannot find matching typeVariable for: public class jdk7 {
+  public static void h1() throws ParseException {
+    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+    Date date=formatter.parse("");
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import jdk.nashorn.internal.runtime.options.Options;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+public class jdk7 {
+  public static void h1() throws ParseException {
+    SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+    Date date=formatter.parse("");
+  }
+}
+
+For node: ParseException expected fqn: java.text.ParseException with type: Type3 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type3 got: java.text.ParseException
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+Cannot find matching typeVariable for: formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+For node: formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS") expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: formatter expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS") expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: "yyyy-MM-dd HH:mm:ss.SSS" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: formatter.setTimeZone(TimeZone.getTimeZone("UTC")) expected fqn: void with type: Type12 got: void
+For node: formatter expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+Cannot find matching typeVariable for: setTimeZone
+For node: setTimeZone expected fqn: void with type: Type12 got: void
+For node: TimeZone.getTimeZone("UTC") expected fqn: java.util.TimeZone with type: Type9 got: java.util.TimeZone
+For node: TimeZone expected fqn: java.util.TimeZone with type: Type8 got: java.util.TimeZone
+Cannot find matching typeVariable for: getTimeZone
+For node: getTimeZone expected fqn: java.util.TimeZone with type: Type9 got: java.util.TimeZone
+For node: "UTC" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: Date expected fqn: java.util.Date with type: Type15 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type15 got: java.util.Date
+Cannot find matching typeVariable for: date=formatter.parse("")
+For node: date=formatter.parse("") expected fqn: java.util.Date with type: Type15 got: java.util.Date
+For node: date expected fqn: java.util.Date with type: Type15 got: java.util.Date
+For node: formatter.parse("") expected fqn: java.util.Date with type: Type16 got: java.util.Date
+For node: formatter expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+Cannot find matching typeVariable for: parse
+For node: parse expected fqn: java.util.Date with type: Type16 got: java.util.Date
+For node: "" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+{Checked=26, Analyzed=26, Unsolved=0, Incorrect=0, Correct=26}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=26, Analyzed=26, Unsolved=0, Incorrect=0, Correct=26}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,1,1,1,0,0
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,11,11,11,0,0
+java,SimpleType,4,4,4,0,0
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

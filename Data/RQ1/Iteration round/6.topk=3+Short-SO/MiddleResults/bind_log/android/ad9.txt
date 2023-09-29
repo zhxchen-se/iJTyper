@@ -1,0 +1,116 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad9.java
+Expect check=24
+Cannot find matching typeVariable for: public class ad9 {
+  public static void h1(){
+    String languageToLoad="fa";
+    Locale locale=new Locale(languageToLoad);
+    Configuration config=new Configuration();
+  }
+}
+
+Cannot find matching typeVariable for: ad9
+Cannot find matching typeVariable for: public class ad9 {
+  public static void h1(){
+    String languageToLoad="fa";
+    Locale locale=new Locale(languageToLoad);
+    Configuration config=new Configuration();
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.content.res.Configuration;
+import java.util.Locale;
+public class ad9 {
+  public static void h1(){
+    String languageToLoad="fa";
+    Locale locale=new Locale(languageToLoad);
+    Configuration config=new Configuration();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  String languageToLoad="fa";
+  Locale locale=new Locale(languageToLoad);
+  Configuration config=new Configuration();
+}
+
+Cannot find matching typeVariable for: public class ad9 {
+  public static void h1(){
+    String languageToLoad="fa";
+    Locale locale=new Locale(languageToLoad);
+    Configuration config=new Configuration();
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.content.res.Configuration;
+import java.util.Locale;
+public class ad9 {
+  public static void h1(){
+    String languageToLoad="fa";
+    Locale locale=new Locale(languageToLoad);
+    Configuration config=new Configuration();
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: languageToLoad="fa"
+For node: languageToLoad="fa" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: languageToLoad expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: "fa" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+Cannot find matching typeVariable for: locale=new Locale(languageToLoad)
+For node: locale=new Locale(languageToLoad) expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: new Locale(languageToLoad) expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: Locale expected fqn: java.util.Locale with type: Type5 got: java.util.Locale
+For node: languageToLoad expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: Configuration expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+For node: Configuration expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+Cannot find matching typeVariable for: config=new Configuration()
+For node: config=new Configuration() expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+For node: config expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+For node: new Configuration() expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+For node: Configuration expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+For node: Configuration expected fqn: android.content.res.Configuration with type: Type8 got: javax.security.auth.login.Configuration
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=7, Correct=14}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+android.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=7, Correct=14}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+android.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.,ClassInstanceCreation,1,1,0,1,0
+android.,SimpleName,3,3,0,3,0
+android.,SimpleType,2,2,0,2,0
+android.,VariableDeclarationFragment,1,1,0,1,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,SimpleName,6,6,6,0,0
+java,SimpleType,3,3,3,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

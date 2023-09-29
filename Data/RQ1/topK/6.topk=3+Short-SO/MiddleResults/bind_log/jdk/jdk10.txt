@@ -1,0 +1,140 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk10.java
+Expect check=24
+Cannot find matching typeVariable for: public class jdk10 {
+  public void h1(){
+    File is=null;
+    try {
+      FileInputStream input=new FileInputStream(is);
+    }
+ catch (    FileNotFoundException e1) {
+      e1.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: jdk10
+Cannot find matching typeVariable for: public class jdk10 {
+  public void h1(){
+    File is=null;
+    try {
+      FileInputStream input=new FileInputStream(is);
+    }
+ catch (    FileNotFoundException e1) {
+      e1.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+public class jdk10 {
+  public void h1(){
+    File is=null;
+    try {
+      FileInputStream input=new FileInputStream(is);
+    }
+ catch (    FileNotFoundException e1) {
+      e1.printStackTrace();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public void h1(){
+  File is=null;
+  try {
+    FileInputStream input=new FileInputStream(is);
+  }
+ catch (  FileNotFoundException e1) {
+    e1.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class jdk10 {
+  public void h1(){
+    File is=null;
+    try {
+      FileInputStream input=new FileInputStream(is);
+    }
+ catch (    FileNotFoundException e1) {
+      e1.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+public class jdk10 {
+  public void h1(){
+    File is=null;
+    try {
+      FileInputStream input=new FileInputStream(is);
+    }
+ catch (    FileNotFoundException e1) {
+      e1.printStackTrace();
+    }
+  }
+}
+
+For node: File expected fqn: java.io.File with type: Type3 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type3 got: java.io.File
+Cannot find matching typeVariable for: is=null
+For node: is=null expected fqn: java.io.File with type: Type3 got: java.io.File
+For node: is expected fqn: java.io.File with type: Type3 got: java.io.File
+For node: null expected fqn: null with type: Type4 got: java.io.File
+For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+Cannot find matching typeVariable for: input=new FileInputStream(is)
+For node: input=new FileInputStream(is) expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: input expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: new FileInputStream(is) expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: FileInputStream expected fqn: java.io.FileInputStream with type: Type5 got: java.io.FileInputStream
+For node: is expected fqn: java.io.File with type: Type3 got: java.io.File
+Cannot find matching typeVariable for: FileNotFoundException e1
+For node: FileNotFoundException e1 expected fqn: java.io.FileNotFoundException with type: Type8 got: java.io.FileNotFoundException
+For node: FileNotFoundException expected fqn: java.io.FileNotFoundException with type: Type8 got: java.io.FileNotFoundException
+For node: FileNotFoundException expected fqn: java.io.FileNotFoundException with type: Type8 got: java.io.FileNotFoundException
+For node: e1 expected fqn: java.io.FileNotFoundException with type: Type8 got: java.io.FileNotFoundException
+For node: e1.printStackTrace() expected fqn: void with type: Type9 got: void
+For node: e1 expected fqn: java.io.FileNotFoundException with type: Type8 got: java.io.FileNotFoundException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type9 got: void
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=1, Correct=20}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=1, Correct=20}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,1,1,1,0,0
+java,SimpleName,9,9,9,0,0
+java,SimpleType,4,4,4,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+null,NullLiteral,1,1,0,1,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

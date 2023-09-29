@@ -1,0 +1,107 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk20.java
+Expect check=25
+Cannot find matching typeVariable for: public class jdk20 {
+  private static InputStream inputStream;
+  public static void h1() throws IOException {
+    BufferedInputStream bis=new BufferedInputStream(inputStream);
+    ByteArrayOutputStream buf=new ByteArrayOutputStream();
+  }
+}
+
+Did not find solution for node: jdk20 with type Type1
+For node: InputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+For node: InputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+Cannot find matching typeVariable for: inputStream
+For node: inputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+Cannot find matching typeVariable for: inputStream
+Cannot find matching typeVariable for: private static InputStream inputStream;
+
+Cannot find matching typeVariable for: public class jdk20 {
+  private static InputStream inputStream;
+  public static void h1() throws IOException {
+    BufferedInputStream bis=new BufferedInputStream(inputStream);
+    ByteArrayOutputStream buf=new ByteArrayOutputStream();
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+public class jdk20 {
+  private static InputStream inputStream;
+  public static void h1() throws IOException {
+    BufferedInputStream bis=new BufferedInputStream(inputStream);
+    ByteArrayOutputStream buf=new ByteArrayOutputStream();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1() throws IOException {
+  BufferedInputStream bis=new BufferedInputStream(inputStream);
+  ByteArrayOutputStream buf=new ByteArrayOutputStream();
+}
+
+Cannot find matching typeVariable for: public class jdk20 {
+  private static InputStream inputStream;
+  public static void h1() throws IOException {
+    BufferedInputStream bis=new BufferedInputStream(inputStream);
+    ByteArrayOutputStream buf=new ByteArrayOutputStream();
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+public class jdk20 {
+  private static InputStream inputStream;
+  public static void h1() throws IOException {
+    BufferedInputStream bis=new BufferedInputStream(inputStream);
+    ByteArrayOutputStream buf=new ByteArrayOutputStream();
+  }
+}
+
+For node: IOException expected fqn: java.io.IOException with type: Type4 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type4 got: java.io.IOException
+For node: BufferedInputStream expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: BufferedInputStream expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+Cannot find matching typeVariable for: bis=new BufferedInputStream(inputStream)
+For node: bis=new BufferedInputStream(inputStream) expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: bis expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: new BufferedInputStream(inputStream) expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: BufferedInputStream expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: BufferedInputStream expected fqn: java.io.BufferedInputStream with type: Type5 got: java.io.BufferedInputStream
+For node: inputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+For node: ByteArrayOutputStream expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+For node: ByteArrayOutputStream expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+Cannot find matching typeVariable for: buf=new ByteArrayOutputStream()
+For node: buf=new ByteArrayOutputStream() expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+For node: buf expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+For node: new ByteArrayOutputStream() expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+For node: ByteArrayOutputStream expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+For node: ByteArrayOutputStream expected fqn: java.io.ByteArrayOutputStream with type: Type8 got: java.io.ByteArrayOutputStream
+{Checked=22, Analyzed=21, Unsolved=1, Incorrect=0, Correct=21}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=22, Analyzed=21, Unsolved=1, Incorrect=0, Correct=21}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,2,2,2,0,0
+java,SimpleName,9,10,9,0,1
+java,SimpleType,6,6,6,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0

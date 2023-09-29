@@ -1,0 +1,131 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt8.java
+Expect check=27
+Cannot find matching typeVariable for: public class gt8 {
+  public Date parse(  String dateString){
+    try {
+      return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+    }
+ catch (    Exception ex) {
+      throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gt8
+Cannot find matching typeVariable for: public class gt8 {
+  public Date parse(  String dateString){
+    try {
+      return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+    }
+ catch (    Exception ex) {
+      throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class gt8 {
+  public Date parse(  String dateString){
+    try {
+      return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+    }
+ catch (    Exception ex) {
+      throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+    }
+  }
+}
+
+For node: Date expected fqn: java.util.Date with type: Type2 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type2 got: java.util.Date
+Cannot find matching typeVariable for: parse
+Cannot find matching typeVariable for: public Date parse(String dateString){
+  try {
+    return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+  }
+ catch (  Exception ex) {
+    throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+  }
+}
+
+Cannot find matching typeVariable for: public class gt8 {
+  public Date parse(  String dateString){
+    try {
+      return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+    }
+ catch (    Exception ex) {
+      throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class gt8 {
+  public Date parse(  String dateString){
+    try {
+      return (new SimpleDateFormat("yyyyMMdd")).parse(dateString);
+    }
+ catch (    Exception ex) {
+      throw new IllegalArgumentException("Cannot convert to date: " + dateString);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String dateString
+For node: String dateString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: dateString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: (new SimpleDateFormat("yyyyMMdd")).parse(dateString) expected fqn: java.util.Date with type: Type9 got: java.util.Date
+For node: (new SimpleDateFormat("yyyyMMdd")) expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: new SimpleDateFormat("yyyyMMdd") expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type4 got: java.text.SimpleDateFormat
+For node: "yyyyMMdd" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: parse
+For node: parse expected fqn: java.util.Date with type: Type9 got: java.util.Date
+For node: dateString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: Exception ex
+For node: Exception ex expected fqn: java.lang.Exception with type: Type12 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type12 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type12 got: java.lang.Exception
+For node: ex expected fqn: java.lang.Exception with type: Type12 got: java.lang.Exception
+For node: new IllegalArgumentException("Cannot convert to date: " + dateString) expected fqn: java.lang.IllegalArgumentException with type: Type13 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type13 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type13 got: java.lang.IllegalArgumentException
+For node: "Cannot convert to date: " + dateString expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "Cannot convert to date: " expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: dateString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+{Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParenthesizedExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java,ClassInstanceCreation,2,2,2,0,0
+java,InfixExpression,1,1,1,0,0
+java,MethodInvocation,1,1,1,0,0
+java,ParenthesizedExpression,1,1,1,0,0
+java,SimpleName,10,10,10,0,0
+java,SimpleType,5,5,5,0,0
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,2,2,2,0,0

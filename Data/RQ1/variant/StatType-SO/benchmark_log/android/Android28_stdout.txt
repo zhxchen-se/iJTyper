@@ -1,0 +1,137 @@
+16:52:38.150 [main] INFO snr.h - Building CompilationUnit takes 597 ms
+16:52:38.323 [main] INFO snr.e - Compilation takes 167 ms
+android cannot be resolved to a type
+Context cannot be resolved to a type
+Finding class definition name: Context isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [android.content.Context] to Type6
+Finding class definition name: Android28 isfull? true fields: [instance] methods: [] argument sizes: []
+Adding candidates [] to Type1
+16:52:38.495 [main] INFO snr.G - Cannot find class definition for Android28 with full name: true, with fields: [instance], with methods: [], and argument sizes:[]
+16:52:38.495 [main] INFO snr.G - Cannot load candidates for Type1.
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+Finding class definition name: android/app/Application isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [] to Type2
+16:52:38.498 [main] INFO snr.G - Cannot find class definition for android/app/Application with full name: true, with fields: [], with methods: [], and argument sizes:[]
+16:52:38.498 [main] INFO snr.G - Cannot load candidates for Type2.
+   0. simple name: Application
+   1. full name: android.app.Application
+Finding class definition name: android isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [] to Type4
+16:52:38.500 [main] INFO snr.G - Cannot find class definition for android with full name: false, with fields: [], with methods: [], and argument sizes:[]
+16:52:38.500 [main] INFO snr.G - Cannot load candidates for Type4.
+   0. simple name: android
+16:52:38.500 [main] INFO snr.G - Loading initial candidates takes 33 ms.
+Before TypeVariable: Type6, Candidates: 1
+   0. simple name: Context
+   1. subtype: Type1
+[android.content.Context]
+Before TypeVariable: Type1, Candidates: 0 declared
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+[]
+Before TypeVariable: Type2, Candidates: 0
+   0. simple name: Application
+   1. full name: android.app.Application
+[]
+Before TypeVariable: Type4, Candidates: 0
+   0. simple name: android
+[]
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type1
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint full name: Android28
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type2
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint full name: android.app.Application
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type1
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint simple name: Android28
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type2
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint simple name: Application
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type4
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint simple name: android
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type6
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint simple name: Context
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type1
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint field: Type1 instance;
+16:52:38.503 [main] INFO snr.G - Populate candidates for type variable Type6
+16:52:38.503 [main] INFO snr.G - Populate candidates for type constraint subtype: Type1
+16:52:38.504 [main] INFO snr.G - Populate candidates for type variable Type1
+16:52:38.504 [main] INFO snr.G - Populate candidates for type constraint extends: Type2
+After TypeVariable: Type1, Candidates: 1 declared
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+[android.content.Context]
+After TypeVariable: Type6, Candidates: 1
+   0. simple name: Context
+   1. subtype: Type1
+[android.content.Context]
+After TypeVariable: Type2, Candidates: 0
+   0. simple name: Application
+   1. full name: android.app.Application
+[]
+After TypeVariable: Type4, Candidates: 0
+   0. simple name: android
+[]
+Printing: jclass.facts
+	jar:android-13.jar:1:android.content.Context	android.content.Context	Context
+Printing: jclasssuper.facts
+Printing: jfqlname.facts
+	Type2	android.app.Application
+	Type1	Android28
+Printing: type.facts
+	Type2
+	Type4
+	Type6
+	Type1
+Printing: candidate.facts
+	Type6	jar:android-13.jar:1:android.content.Context
+Printing: jmethod_dependency.facts
+Printing: jsimplename.facts
+	Type6	Context
+	Type4	android
+	Type1	Android28
+	Type2	Application
+Printing: jmethod.facts
+Printing: jsupertype_dependency.facts
+	Type1	Type6
+	Type1	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+Printing: jmethod_param_dependency.facts
+All artifact rank: [jar:android-13.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type6 -> android.content.Context
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type6 to android.content.Context, dumping:
+16:52:38.663 [main] WARN snr.k - Failed to solve type 'Type4' for android
+16:52:38.664 [main] INFO snr.k - Fixing Type6 with android.content.Context
+16:52:38.706 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+16:52:38.710 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+16:52:38.710 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+16:52:38.710 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package androidExamples;
+
+import android.content.Context;
+
+public class Android28 extends android.app.Application {
+
+	private static Android28 instance;
+
+	public Android28() {
+		instance = this;
+	}
+
+	public static Context getContext() {
+		return instance;
+	}
+
+}
+16:52:38.710 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+16:52:38.789 [main] INFO snr.e - Compilation takes 78 ms

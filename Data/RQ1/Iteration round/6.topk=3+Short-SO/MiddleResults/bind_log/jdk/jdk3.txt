@@ -1,0 +1,137 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk3.java
+Expect check=42
+Cannot find matching typeVariable for: public class jdk3 {
+  public static void h1(  String oldDate,  String format) throws ParseException {
+    DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+    LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+    ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+  }
+}
+
+Cannot find matching typeVariable for: jdk3
+Cannot find matching typeVariable for: public class jdk3 {
+  public static void h1(  String oldDate,  String format) throws ParseException {
+    DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+    LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+    ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+public class jdk3 {
+  public static void h1(  String oldDate,  String format) throws ParseException {
+    DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+    LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+    ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(String oldDate,String format) throws ParseException {
+  DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+  LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+  ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+}
+
+Cannot find matching typeVariable for: public class jdk3 {
+  public static void h1(  String oldDate,  String format) throws ParseException {
+    DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+    LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+    ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.text.ParseException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+public class jdk3 {
+  public static void h1(  String oldDate,  String format) throws ParseException {
+    DateTimeFormatter dtf=DateTimeFormatter.ofPattern(format);
+    LocalDateTime dt=LocalDateTime.parse(oldDate,dtf);
+    ZonedDateTime zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"));
+  }
+}
+
+Cannot find matching typeVariable for: String oldDate
+For node: String oldDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: oldDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: String format
+For node: String format expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: format expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: ParseException expected fqn: java.text.ParseException with type: Type4 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type4 got: java.text.ParseException
+Did not find solution for node: DateTimeFormatter with type Type5
+Did not find solution for node: DateTimeFormatter with type Type5
+Cannot find matching typeVariable for: dtf=DateTimeFormatter.ofPattern(format)
+Did not find solution for node: dtf=DateTimeFormatter.ofPattern(format) with type Type5
+Did not find solution for node: dtf with type Type5
+Did not find solution for node: DateTimeFormatter.ofPattern(format) with type Type6
+Did not find solution for node: DateTimeFormatter with type Type5
+Cannot find matching typeVariable for: ofPattern
+Did not find solution for node: ofPattern with type Type6
+For node: format expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: dt=LocalDateTime.parse(oldDate,dtf)
+For node: dt=LocalDateTime.parse(oldDate,dtf) expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+For node: dt expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+For node: LocalDateTime.parse(oldDate,dtf) expected fqn: java.time.LocalDateTime with type: Type10 got: java.time.LocalDateTime
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: parse
+For node: parse expected fqn: java.time.LocalDateTime with type: Type10 got: java.time.LocalDateTime
+For node: oldDate expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: dtf with type Type5
+For node: ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type14 got: java.time.ZonedDateTime
+For node: ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type14 got: java.time.ZonedDateTime
+Cannot find matching typeVariable for: zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles"))
+For node: zdtzone=dt.atZone(ZoneId.of("America/Los_Angeles")) expected fqn: java.time.ZonedDateTime with type: Type14 got: java.time.ZonedDateTime
+For node: zdtzone expected fqn: java.time.ZonedDateTime with type: Type14 got: java.time.ZonedDateTime
+For node: dt.atZone(ZoneId.of("America/Los_Angeles")) expected fqn: java.time.ZonedDateTime with type: Type20 got: java.time.ZonedDateTime
+For node: dt expected fqn: java.time.LocalDateTime with type: Type9 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: atZone
+For node: atZone expected fqn: java.time.ZonedDateTime with type: Type20 got: java.time.ZonedDateTime
+For node: ZoneId.of("America/Los_Angeles") expected fqn: java.time.ZoneId with type: Type17 got: java.time.ZoneId
+For node: ZoneId expected fqn: java.time.ZoneId with type: Type16 got: java.time.ZoneId
+Cannot find matching typeVariable for: of
+For node: of expected fqn: java.time.ZoneId with type: Type17 got: java.time.ZoneId
+For node: "America/Los_Angeles" expected fqn: java.lang.String with type: Type15 got: java.lang.String
+{Checked=39, Analyzed=31, Unsolved=8, Incorrect=0, Correct=31}
+java=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=22, Analyzed=17, Unsolved=5, Incorrect=0, Correct=17}
+java=SimpleType: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=39, Analyzed=31, Unsolved=8, Incorrect=0, Correct=31}
+java=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=22, Analyzed=17, Unsolved=5, Incorrect=0, Correct=17}
+java=SimpleType: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,3,4,3,0,1
+java,SimpleName,17,22,17,0,5
+java,SimpleType,5,6,5,0,1
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,3,2,0,1
+void,PrimitiveType,1,1,1,0,0

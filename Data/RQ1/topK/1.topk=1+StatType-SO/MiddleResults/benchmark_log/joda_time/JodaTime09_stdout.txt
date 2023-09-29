@@ -1,0 +1,621 @@
+22:40:35.812 [main] INFO snr.h - Building CompilationUnit takes 522 ms
+22:40:35.965 [main] INFO snr.e - Compilation takes 149 ms
+TimeZone cannot be resolved
+DateTimeZone cannot be resolved
+Finding class definition name: null isfull? false fields: [] methods: [println, println] argument sizes: [1, 1]
+Adding candidates [] to Type11
+22:40:36.181 [main] INFO snr.G - Cannot find class definition for null with full name: false, with fields: [], with methods: [println, println], and argument sizes:[1, 1]
+22:40:36.181 [main] INFO snr.G - Cannot load candidates for Type11.
+   0. method: Type21 println(Type20);
+   1. method: Type14 println(Type13);
+Return without setting candidates for Type13
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type3
+Return without setting candidates for Type21
+Return without setting candidates for Type9
+Return without setting candidates for Type20
+Finding class definition name: TimeZone isfull? false fields: [] methods: [getTimeZone] argument sizes: [1]
+Adding candidates [java.util.TimeZone, java.util.TimeZone] to Type6
+Return without setting candidates for Type8
+Return without setting candidates for Type12
+Return without setting candidates for Type4
+Return without setting candidates for Type14
+Return without setting candidates for Type19
+Finding class definition name: DateTimeZone isfull? false fields: [] methods: [forID] argument sizes: [1]
+Adding candidates [org.joda.time.DateTimeZone] to Type15
+Return without setting candidates for Type18
+Return without setting candidates for Type17
+Return without setting candidates for Type16
+Finding class definition name: System isfull? false fields: [out] methods: [] argument sizes: []
+Adding candidates [java.lang.System, java.lang.System] to Type10
+Return without setting candidates for Type7
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type5
+22:40:36.550 [main] INFO snr.G - Loading initial candidates takes 434 ms.
+Before TypeVariable: Type15, Candidates: 1
+   0. method: Type18 forID(Type17);
+   1. simple name: DateTimeZone
+[org.joda.time.DateTimeZone]
+Before TypeVariable: Type3, Candidates: 2
+   0. array type: Type4
+   1. subtype: Type5
+   2. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type6, Candidates: 2
+   0. method: Type9 getTimeZone(Type8);
+   1. simple name: TimeZone
+[java.util.TimeZone, java.util.TimeZone]
+Before TypeVariable: Type10, Candidates: 2
+   0. simple name: System
+   1. field: Type11 out;
+[java.lang.System, java.lang.System]
+Before TypeVariable: Type4, Candidates: 0
+[]
+Before TypeVariable: Type7, Candidates: 0
+   0. subtype: Type9
+[]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. method: Type21 println(Type20);
+   1. method: Type14 println(Type13);
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type14
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type14, Candidates: 0
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type18
+[]
+Before TypeVariable: Type17, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type18, Candidates: 0
+[]
+Before TypeVariable: Type19, Candidates: 0
+   0. subtype: Type21
+[]
+Before TypeVariable: Type20, Candidates: 0
+   0. subtype: Type16
+[]
+Before TypeVariable: Type21, Candidates: 0
+[]
+22:40:36.564 [main] INFO snr.G - Populate candidates for type variable Type5
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type3
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type5
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type6
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint simple name: TimeZone
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type10
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint simple name: System
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type15
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTimeZone
+22:40:36.565 [main] INFO snr.G - Populate candidates for type variable Type10
+22:40:36.565 [main] INFO snr.G - Populate candidates for type constraint field: Type11 out;
+22:40:36.570 [main] INFO snr.G - Populate candidates for type variable Type6
+22:40:36.570 [main] INFO snr.G - Populate candidates for type constraint method: Type9 getTimeZone(Type8);
+Processing method constraint method: Type9 getTimeZone(Type8); on Type6
+Current solution for c Type6 is uninit ? false [java.util.TimeZone, java.util.TimeZone]
+Current solution for r Type9 is uninit ? false []
+Current solution for p0 Type8 is uninit ? false []
+Looking at method: public static synchronized Ljava/util/TimeZone; getTimeZone(Ljava/lang/String;)
+Looking at method: public static Ljava/util/TimeZone; getTimeZone(Ljava/time/ZoneId;)
+Looking at method: public static synchronized Ljava/util/TimeZone; getTimeZone(Ljava/lang/String;)
+Looking at method: public static Ljava/util/TimeZone; getTimeZone(Ljava/time/ZoneId;)
+updated solution for c Type6 [java.util.TimeZone, java.util.TimeZone]
+updated solution for r Type9 [java.util.TimeZone, java.util.TimeZone]
+updated solution for p0 Type8 [java.lang.String, java.lang.String, java.time.ZoneId]
+22:40:36.578 [main] INFO snr.G - Populate candidates for type variable Type11
+22:40:36.578 [main] INFO snr.G - Populate candidates for type constraint method: Type14 println(Type13);
+Processing method constraint method: Type14 println(Type13); on Type11
+Current solution for c Type11 is uninit ? false [java.io.PrintStream, java.io.PrintStream]
+Current solution for r Type14 is uninit ? false []
+Current solution for p0 Type13 is uninit ? false []
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+updated solution for c Type11 [java.io.PrintStream, java.io.PrintStream]
+updated solution for r Type14 [void]
+updated solution for p0 Type13 [int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+22:40:36.590 [main] INFO snr.G - Populate candidates for type variable Type11
+22:40:36.590 [main] INFO snr.G - Populate candidates for type constraint method: Type21 println(Type20);
+Processing method constraint method: Type21 println(Type20); on Type11
+Current solution for c Type11 is uninit ? false [java.io.PrintStream, java.io.PrintStream]
+Current solution for r Type21 is uninit ? false []
+Current solution for p0 Type20 is uninit ? false []
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+Looking at method: public V println(F)
+Looking at method: public V println(D)
+Looking at method: public V println(C)
+Looking at method: public V println(Ljava/lang/Object;)
+Looking at method: public V println([C)
+Looking at method: public V println(Ljava/lang/String;)
+Looking at method: public V println(Z)
+Looking at method: public V println(J)
+Looking at method: public V println(I)
+updated solution for c Type11 [java.io.PrintStream, java.io.PrintStream]
+updated solution for r Type21 [void]
+updated solution for p0 Type20 [int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+22:40:36.591 [main] INFO snr.G - Populate candidates for type variable Type15
+22:40:36.591 [main] INFO snr.G - Populate candidates for type constraint method: Type18 forID(Type17);
+Processing method constraint method: Type18 forID(Type17); on Type15
+Current solution for c Type15 is uninit ? false [org.joda.time.DateTimeZone]
+Current solution for r Type18 is uninit ? false []
+Current solution for p0 Type17 is uninit ? false []
+Looking at method: public static Lorg/joda/time/DateTimeZone; forID(Ljava/lang/String;)
+updated solution for c Type15 [org.joda.time.DateTimeZone]
+updated solution for r Type18 [org.joda.time.DateTimeZone]
+updated solution for p0 Type17 [java.lang.String]
+22:40:36.593 [main] INFO snr.G - Populate candidates for type variable Type3
+22:40:36.593 [main] INFO snr.G - Populate candidates for type constraint array type: Type4
+22:40:36.594 [main] INFO snr.G - Populate candidates for type variable Type3
+22:40:36.594 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+22:40:36.594 [main] INFO snr.G - Populate candidates for type variable Type7
+22:40:36.594 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+22:40:36.594 [main] INFO snr.G - Populate candidates for type variable Type8
+22:40:36.594 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type12
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type14
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type13
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type16
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type17
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type19
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type21
+22:40:36.600 [main] INFO snr.G - Populate candidates for type variable Type20
+22:40:36.600 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type14
+[void]
+After TypeVariable: Type14, Candidates: 1
+[void]
+After TypeVariable: Type15, Candidates: 1
+   0. method: Type18 forID(Type17);
+   1. simple name: DateTimeZone
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type17, Candidates: 1
+   0. subtype: Type3
+[java.lang.String]
+After TypeVariable: Type18, Candidates: 1
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type19, Candidates: 1
+   0. subtype: Type21
+[void]
+After TypeVariable: Type21, Candidates: 1
+[void]
+After TypeVariable: Type3, Candidates: 2
+   0. array type: Type4
+   1. subtype: Type5
+   2. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type4, Candidates: 2
+[java.lang.String[], java.lang.String[]]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type6, Candidates: 2
+   0. method: Type9 getTimeZone(Type8);
+   1. simple name: TimeZone
+[java.util.TimeZone, java.util.TimeZone]
+After TypeVariable: Type8, Candidates: 2
+   0. subtype: Type3
+[java.lang.String, java.lang.String]
+After TypeVariable: Type9, Candidates: 2
+[java.util.TimeZone, java.util.TimeZone]
+After TypeVariable: Type10, Candidates: 2
+   0. simple name: System
+   1. field: Type11 out;
+[java.lang.System, java.lang.System]
+After TypeVariable: Type11, Candidates: 2
+   0. method: Type21 println(Type20);
+   1. method: Type14 println(Type13);
+[java.io.PrintStream, java.io.PrintStream]
+After TypeVariable: Type16, Candidates: 8
+   0. subtype: Type18
+[int, org.joda.time.DateTimeZone, double, char[], char, long, boolean, float]
+After TypeVariable: Type7, Candidates: 9
+   0. subtype: Type9
+[int, double, char[], char, long, java.util.TimeZone, boolean, float, java.util.TimeZone]
+After TypeVariable: Type13, Candidates: 11
+   0. subtype: Type7
+[int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+After TypeVariable: Type20, Candidates: 11
+   0. subtype: Type16
+[int, java.lang.Object, java.lang.String, double, java.lang.String, char[], char, long, java.lang.Object, boolean, float]
+Printing: jclass.facts
+	jar:android-13.jar:1:java.io.PrintStream	java.io.PrintStream	PrintStream
+	openjdk:jdk:1.8.0:double	double	double
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	jar:android-13.jar:1:java.lang.Object	java.lang.Object	Object
+	openjdk:jdk:1.8.0:java.lang.System	java.lang.System	System
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:float	float	float
+	jar:android-13.jar:1:java.util.TimeZone	java.util.TimeZone	TimeZone
+	openjdk:jdk:1.8.0:java.io.PrintStream	java.io.PrintStream	PrintStream
+	openjdk:jdk:1.8.0:char	char	char
+	openjdk:jdk:1.8.0:java.lang.Object	java.lang.Object	Object
+	jar:android-13.jar:1:java.lang.String[]	java.lang.String[]	String[]
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	org.joda.time.DateTimeZone	DateTimeZone
+	jar:android-13.jar:1:java.lang.System	java.lang.System	System
+	openjdk:jdk:1.8.0:boolean	boolean	boolean
+	openjdk:jdk:1.8.0:java.lang.String[]	java.lang.String[]	String[]
+	openjdk:jdk:1.8.0:long	long	long
+	openjdk:jdk:1.8.0:char[]	char[]	char[]
+	openjdk:jdk:1.8.0:java.util.TimeZone	java.util.TimeZone	TimeZone
+	openjdk:jdk:1.8.0:java.time.ZoneId	java.time.ZoneId	ZoneId
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:double
+	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.System	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.TimeZone	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.System	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:float	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.time.ZoneId	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.io.PrintStream
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.io.PrintStream
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:float
+	openjdk:jdk:1.8.0:java.time.ZoneId	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.System	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:double	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:double
+	openjdk:jdk:1.8.0:java.lang.String[]	jar:android-13.jar:1:java.lang.String[]
+	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String[]
+	jar:android-13.jar:1:java.io.PrintStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:boolean	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.System	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:char[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:long
+	openjdk:jdk:1.8.0:long	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone
+	openjdk:jdk:1.8.0:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.System	openjdk:jdk:1.8.0:java.lang.System
+	openjdk:jdk:1.8.0:java.lang.System	jar:android-13.jar:1:java.lang.System
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:long
+	openjdk:jdk:1.8.0:java.lang.Object	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.System	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.System	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:double
+	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.PrintStream	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.String[]	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:float
+	openjdk:jdk:1.8.0:float	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.time.ZoneId	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.time.ZoneId	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:float
+	openjdk:jdk:1.8.0:double	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.System	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.TimeZone	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.System	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:boolean	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:float	openjdk:jdk:1.8.0:double
+	openjdk:jdk:1.8.0:char[]	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String[]	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.PrintStream	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:char	openjdk:jdk:1.8.0:int
+	openjdk:jdk:1.8.0:char	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type5	java.lang.String
+Printing: type.facts
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type15
+	Type16
+	Type20
+	Type21
+	Type10
+	Type11
+	Type12
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type16	openjdk:jdk:1.8.0:int
+	Type13	openjdk:jdk:1.8.0:int
+	Type13	jar:android-13.jar:1:java.lang.String
+	Type8	jar:android-13.jar:1:java.lang.String
+	Type7	openjdk:jdk:1.8.0:int
+	Type11	openjdk:jdk:1.8.0:java.io.PrintStream
+	Type5	jar:android-13.jar:1:java.lang.String
+	Type3	jar:android-13.jar:1:java.lang.String
+	Type20	openjdk:jdk:1.8.0:char[]
+	Type20	jar:android-13.jar:1:java.lang.Object
+	Type20	openjdk:jdk:1.8.0:char
+	Type6	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type7	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type9	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type7	openjdk:jdk:1.8.0:double
+	Type9	jar:android-13.jar:1:java.util.TimeZone
+	Type20	openjdk:jdk:1.8.0:java.lang.String
+	Type6	jar:android-13.jar:1:java.util.TimeZone
+	Type7	jar:android-13.jar:1:java.util.TimeZone
+	Type7	openjdk:jdk:1.8.0:boolean
+	Type21	openjdk:jdk:1.8.0:void
+	Type16	openjdk:jdk:1.8.0:boolean
+	Type13	openjdk:jdk:1.8.0:boolean
+	Type10	openjdk:jdk:1.8.0:java.lang.System
+	Type11	jar:android-13.jar:1:java.io.PrintStream
+	Type13	openjdk:jdk:1.8.0:double
+	Type16	openjdk:jdk:1.8.0:double
+	Type19	openjdk:jdk:1.8.0:void
+	Type7	openjdk:jdk:1.8.0:long
+	Type15	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type20	openjdk:jdk:1.8.0:float
+	Type13	openjdk:jdk:1.8.0:java.lang.Object
+	Type16	openjdk:jdk:1.8.0:long
+	Type13	openjdk:jdk:1.8.0:long
+	Type13	openjdk:jdk:1.8.0:java.lang.String
+	Type20	openjdk:jdk:1.8.0:double
+	Type18	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type12	openjdk:jdk:1.8.0:void
+	Type8	openjdk:jdk:1.8.0:java.lang.String
+	Type3	openjdk:jdk:1.8.0:java.lang.String
+	Type14	openjdk:jdk:1.8.0:void
+	Type5	openjdk:jdk:1.8.0:java.lang.String
+	Type20	openjdk:jdk:1.8.0:boolean
+	Type7	openjdk:jdk:1.8.0:float
+	Type4	openjdk:jdk:1.8.0:java.lang.String[]
+	Type20	openjdk:jdk:1.8.0:long
+	Type13	openjdk:jdk:1.8.0:float
+	Type16	openjdk:jdk:1.8.0:float
+	Type20	openjdk:jdk:1.8.0:java.lang.Object
+	Type20	openjdk:jdk:1.8.0:int
+	Type20	jar:android-13.jar:1:java.lang.String
+	Type10	jar:android-13.jar:1:java.lang.System
+	Type16	openjdk:jdk:1.8.0:char[]
+	Type7	openjdk:jdk:1.8.0:char
+	Type13	openjdk:jdk:1.8.0:char[]
+	Type13	openjdk:jdk:1.8.0:char
+	Type17	jar:android-13.jar:1:java.lang.String
+	Type16	openjdk:jdk:1.8.0:char
+	Type7	openjdk:jdk:1.8.0:char[]
+	Type13	jar:android-13.jar:1:java.lang.Object
+	Type4	jar:android-13.jar:1:java.lang.String[]
+Printing: jmethod_dependency.facts
+	9	Type15	Type18	forID
+	1	Type11	Type14	println
+	4	Type6	Type9	getTimeZone
+	0	Type11	Type21	println
+Printing: jsimplename.facts
+	Type10	System
+	Type15	DateTimeZone
+	Type6	TimeZone
+	Type5	String
+	Type3	String
+Printing: jmethod.facts
+	1	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	17	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	8	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	13	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	10	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	15	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	72	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone	getTimeZone	1
+	2	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	11	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	12	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	0	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	5	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	74	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone	getTimeZone	1
+	75	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone	getTimeZone	1
+	3	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	9	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	16	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	4	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	7	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	73	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone	getTimeZone	1
+	120	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	forID	1
+	14	openjdk:jdk:1.8.0:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+	6	jar:android-13.jar:1:java.io.PrintStream	openjdk:jdk:1.8.0:void	println	1
+Printing: jsupertype_dependency.facts
+	Type5	Type3
+	Type9	Type7
+	Type3	Type17
+	Type14	Type12
+	Type3	Type8
+	Type16	Type20
+	Type21	Type19
+	Type7	Type13
+	Type18	Type16
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	openjdk:jdk:1.8.0:double
+	17	0	openjdk:jdk:1.8.0:int
+	8	0	openjdk:jdk:1.8.0:int
+	13	0	openjdk:jdk:1.8.0:char[]
+	10	0	openjdk:jdk:1.8.0:double
+	15	0	openjdk:jdk:1.8.0:boolean
+	72	0	openjdk:jdk:1.8.0:java.lang.String
+	2	0	openjdk:jdk:1.8.0:char
+	11	0	openjdk:jdk:1.8.0:char
+	12	0	openjdk:jdk:1.8.0:java.lang.Object
+	0	0	openjdk:jdk:1.8.0:float
+	5	0	jar:android-13.jar:1:java.lang.String
+	74	0	jar:android-13.jar:1:java.lang.String
+	75	0	openjdk:jdk:1.8.0:java.time.ZoneId
+	3	0	jar:android-13.jar:1:java.lang.Object
+	9	0	openjdk:jdk:1.8.0:float
+	16	0	openjdk:jdk:1.8.0:long
+	4	0	openjdk:jdk:1.8.0:char[]
+	7	0	openjdk:jdk:1.8.0:long
+	73	0	openjdk:jdk:1.8.0:java.time.ZoneId
+	120	0	jar:android-13.jar:1:java.lang.String
+	14	0	openjdk:jdk:1.8.0:java.lang.String
+	6	0	openjdk:jdk:1.8.0:boolean
+Printing: jmethod_param_dependency.facts
+	9	0	Type17
+	1	0	Type13
+	4	0	Type8
+	0	0	Type20
+All artifact rank: [jar:android-13.jar:1, jar:joda-time-2.0.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type13 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type4 -> java.lang.String[]
+Added artifact: jar:android-13.jar:1
+Found Type19 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type17 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type10 -> java.lang.System
+Added artifact: jar:android-13.jar:1
+Found Type20 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type8 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type12 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type3 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type21 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Found Type14 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type16 -> org.joda.time.DateTimeZone
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type18 -> org.joda.time.DateTimeZone
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type7 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type11 -> java.io.PrintStream
+Added artifact: jar:android-13.jar:1
+Found Type6 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Found Type15 -> org.joda.time.DateTimeZone
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type5 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type11 to java.io.PrintStream, dumping:
+Bind Type13 to java.lang.String, dumping:
+Bind Type3 to java.lang.String, dumping:
+Bind Type21 to void, dumping:
+Bind Type9 to java.util.TimeZone, dumping:
+Bind Type20 to java.lang.String, dumping:
+Bind Type8 to java.lang.String, dumping:
+Bind Type12 to void, dumping:
+Bind Type6 to java.util.TimeZone, dumping:
+Bind Type4 to java.lang.String[], dumping:
+Bind Type14 to void, dumping:
+Bind Type19 to void, dumping:
+Bind Type15 to org.joda.time.DateTimeZone, dumping:
+Bind Type17 to java.lang.String, dumping:
+Bind Type10 to java.lang.System, dumping:
+Bind Type16 to org.joda.time.DateTimeZone, dumping:
+Bind Type18 to org.joda.time.DateTimeZone, dumping:
+Bind Type7 to java.util.TimeZone, dumping:
+Bind Type5 to java.lang.String, dumping:
+22:40:36.810 [main] INFO snr.k - Fixing Type6 with java.util.TimeZone
+22:40:36.811 [main] INFO snr.k - Fixing Type15 with org.joda.time.DateTimeZone
+22:40:36.855 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+22:40:36.857 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+22:40:36.857 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+22:40:36.857 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+22:40:36.857 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package jodatime;
+
+import org.joda.time.DateTimeZone;
+import java.util.TimeZone;
+
+//ID = 4057816
+public class JodaTime09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		final String string_from_3rd_party = "GMT+08:00";
+		// Works for standard Java TimeZone!
+		System.out.println(TimeZone.getTimeZone(string_from_3rd_party));
+		// Exception in thread "main" java.lang.IllegalArgumentException: The datetime zone id is not recognised: GMT+08:00
+		System.out.println(DateTimeZone.forID(string_from_3rd_party));
+	}
+
+}
+22:40:36.857 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+22:40:36.891 [main] INFO snr.e - Compilation takes 34 ms

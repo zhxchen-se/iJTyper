@@ -1,0 +1,141 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt2.java
+Expect check=32
+Cannot find matching typeVariable for: public class gt2 {
+  public final void onValueChange(  final ValueChangeEvent<String> event){
+    String token=event.getValue();
+    if (token != null) {
+      String[] tokens=History.getToken().split(":");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gt2
+Cannot find matching typeVariable for: public class gt2 {
+  public final void onValueChange(  final ValueChangeEvent<String> event){
+    String token=event.getValue();
+    if (token != null) {
+      String[] tokens=History.getToken().split(":");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.user.client.History;
+import java.awt.*;
+public class gt2 {
+  public final void onValueChange(  final ValueChangeEvent<String> event){
+    String token=event.getValue();
+    if (token != null) {
+      String[] tokens=History.getToken().split(":");
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onValueChange
+Cannot find matching typeVariable for: public final void onValueChange(final ValueChangeEvent<String> event){
+  String token=event.getValue();
+  if (token != null) {
+    String[] tokens=History.getToken().split(":");
+  }
+}
+
+Cannot find matching typeVariable for: public class gt2 {
+  public final void onValueChange(  final ValueChangeEvent<String> event){
+    String token=event.getValue();
+    if (token != null) {
+      String[] tokens=History.getToken().split(":");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.user.client.History;
+import java.awt.*;
+public class gt2 {
+  public final void onValueChange(  final ValueChangeEvent<String> event){
+    String token=event.getValue();
+    if (token != null) {
+      String[] tokens=History.getToken().split(":");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: final ValueChangeEvent<String> event
+For node: final ValueChangeEvent<String> event expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type5=Type3<Type4> got: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String>
+For node: ValueChangeEvent<String> expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type5=Type3<Type4> got: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String>
+For node: ValueChangeEvent expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type3 got: com.google.gwt.event.logical.shared.ValueChangeEvent
+For node: ValueChangeEvent expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type3 got: com.google.gwt.event.logical.shared.ValueChangeEvent
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: event expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type5=Type3<Type4> got: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String>
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: token=event.getValue()
+For node: token=event.getValue() expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: token expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: event.getValue() expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: event expected fqn: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String> with type: Type5=Type3<Type4> got: com.google.gwt.event.logical.shared.ValueChangeEvent<java.lang.String>
+Cannot find matching typeVariable for: getValue
+For node: getValue expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: token != null expected fqn: boolean with type: Type11 got: boolean
+For node: token expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Did not find solution for node: null with type Type10
+For node: String[] expected fqn: java.lang.String[] with type: Type12 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: tokens=History.getToken().split(":")
+For node: tokens=History.getToken().split(":") expected fqn: java.lang.String[] with type: Type12 got: java.lang.String[]
+For node: tokens expected fqn: java.lang.String[] with type: Type12 got: java.lang.String[]
+For node: History.getToken().split(":") expected fqn: java.lang.String[] with type: Type17 got: java.lang.String[]
+For node: History.getToken() expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: History expected fqn: com.google.gwt.user.client.History with type: Type13 got: com.google.gwt.user.client.History
+Cannot find matching typeVariable for: getToken
+For node: getToken expected fqn: java.lang.String with type: Type14 got: java.lang.String
+Cannot find matching typeVariable for: split
+For node: split expected fqn: java.lang.String[] with type: Type17 got: java.lang.String[]
+For node: ":" expected fqn: java.lang.String with type: Type16 got: java.lang.String
+{Checked=29, Analyzed=28, Unsolved=1, Incorrect=2, Correct=26}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=1, Correct=11}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=1, Correct=3}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=29, Analyzed=28, Unsolved=1, Incorrect=2, Correct=26}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=1, Correct=11}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=1, Correct=3}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,InfixExpression,1,1,1,0,0
+gwt.,SimpleName,1,1,1,0,0
+java,ArrayType,1,1,1,0,0
+java,MethodInvocation,3,3,3,0,0
+java,ParameterizedType,1,1,1,0,0
+java,SimpleName,12,12,11,1,0
+java,SimpleType,4,4,3,1,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+null,NullLiteral,0,1,0,0,1
+void,PrimitiveType,1,1,1,0,0

@@ -1,0 +1,706 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_43.java
+Expect check=124
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Did not find solution for node: hibernate_class_43 with type Type1
+For node: Logger expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+For node: Logger expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+Cannot find matching typeVariable for: log=Logger.getLogger(hibernate_class_43.class)
+For node: log=Logger.getLogger(hibernate_class_43.class) expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+For node: log expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+For node: Logger.getLogger(hibernate_class_43.class) expected fqn: org.apache.log4j.Logger with type: Type28 got: org.apache.log4j.Logger
+For node: Logger expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+Cannot find matching typeVariable for: getLogger
+For node: getLogger expected fqn: org.apache.log4j.Logger with type: Type28 got: org.apache.log4j.Logger
+For node: hibernate_class_43.class expected fqn: java.lang.Class<hibernate_class_43> with type: Type27 got: java.lang.Class
+Did not find solution for node: hibernate_class_43 with type Type1
+Did not find solution for node: hibernate_class_43 with type Type1
+For node: org.hibernate.SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: org.hibernate.SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+No match for actual type QualifiedName: org.hibernate and also not find solution for: Type22
+No match for actual type SimpleName: org and also not find solution for: Type23
+Cannot find matching typeVariable for: SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private static org.hibernate.SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Properties;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type24 got: java.lang.String
+Cannot find matching typeVariable for: confFile="hibernate-test.properties"
+For node: confFile="hibernate-test.properties" expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: confFile expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: "hibernate-test.properties" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: ThreadLocal<Session> expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type26=Type25<Type3> got: java.lang.ThreadLocal<org.hibernate.Session>
+For node: ThreadLocal expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type25 got: java.lang.ThreadLocal
+For node: ThreadLocal expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type25 got: java.lang.ThreadLocal
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+Cannot find matching typeVariable for: threadSession=new ThreadLocal<Session>()
+For node: threadSession=new ThreadLocal<Session>() expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type26=Type25<Type3> got: java.lang.ThreadLocal<org.hibernate.Session>
+For node: threadSession expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type26=Type25<Type3> got: java.lang.ThreadLocal<org.hibernate.Session>
+For node: new ThreadLocal<Session>() expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type26=Type25<Type3> got: java.lang.ThreadLocal<org.hibernate.Session>
+For node: ThreadLocal<Session> expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type26=Type25<Type3> got: java.lang.ThreadLocal<org.hibernate.Session>
+For node: ThreadLocal expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type25 got: java.lang.ThreadLocal
+For node: ThreadLocal expected fqn: java.lang.ThreadLocal<org.hibernate.Session> with type: Type25 got: java.lang.ThreadLocal
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+Cannot find matching typeVariable for: hibernate_class_43
+Cannot find matching typeVariable for: private hibernate_class_43(){
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Properties;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: buildSessionFactory
+Cannot find matching typeVariable for: public static void buildSessionFactory(){
+  Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+    if (sessionFactory == null) {
+      try {
+        Properties properties=new Properties();
+        properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+        configuration.setProperties(properties);
+      }
+ catch (      Exception e) {
+        log.fatal("cannot load the specified hibernate properties file: " + confFile);
+        throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+      }
+      sessionFactory=configuration.configure().buildSessionFactory();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Properties;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration=new Configuration()
+For node: configuration=new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+For node: hibernate_class_43.class expected fqn: java.lang.Class<hibernate_class_43> with type: Type27 got: java.lang.Class
+Did not find solution for node: hibernate_class_43 with type Type1
+Did not find solution for node: hibernate_class_43 with type Type1
+For node: sessionFactory == null expected fqn: boolean with type: Type38 got: boolean
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Did not find solution for node: null with type Type37
+For node: Properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+Cannot find matching typeVariable for: properties=new Properties()
+For node: properties=new Properties() expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: new Properties() expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+For node: properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile)) expected fqn: void with type: Type46 got: void
+For node: properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+Cannot find matching typeVariable for: load
+For node: load expected fqn: void with type: Type46 got: void
+For node: hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile) expected fqn: java.io.InputStream with type: Type43 got: java.io.Reader
+For node: hibernate_class_43.class.getClassLoader() expected fqn: java.lang.ClassLoader with type: Type41 got: java.lang.ClassLoader
+For node: hibernate_class_43.class expected fqn: java.lang.Class<hibernate_class_43> with type: Type27 got: java.lang.Class
+Did not find solution for node: hibernate_class_43 with type Type1
+Did not find solution for node: hibernate_class_43 with type Type1
+Cannot find matching typeVariable for: getClassLoader
+For node: getClassLoader expected fqn: java.lang.ClassLoader with type: Type41 got: java.lang.ClassLoader
+Cannot find matching typeVariable for: getResourceAsStream
+For node: getResourceAsStream expected fqn: java.io.InputStream with type: Type43 got: java.io.Reader
+For node: confFile expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: configuration.setProperties(properties) expected fqn: org.hibernate.cfg.Configuration with type: Type49 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: setProperties
+For node: setProperties expected fqn: org.hibernate.cfg.Configuration with type: Type49 got: org.hibernate.cfg.Configuration
+For node: properties expected fqn: java.util.Properties with type: Type39 got: java.util.Properties
+Cannot find matching typeVariable for: Exception e
+For node: Exception e expected fqn: java.lang.Exception with type: Type52 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type52 got: java.lang.Exception
+For node: Exception expected fqn: java.lang.Exception with type: Type52 got: java.lang.Exception
+For node: e expected fqn: java.lang.Exception with type: Type52 got: java.lang.Exception
+For node: log.fatal("cannot load the specified hibernate properties file: " + confFile) expected fqn: void with type: Type53 got: void
+For node: log expected fqn: org.apache.log4j.Logger with type: Type20 got: org.apache.log4j.Logger
+Cannot find matching typeVariable for: fatal
+For node: fatal expected fqn: void with type: Type53 got: void
+For node: "cannot load the specified hibernate properties file: " + confFile expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "cannot load the specified hibernate properties file: " expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: confFile expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e) expected fqn: java.lang.RuntimeException with type: Type56 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type56 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type56 got: java.lang.RuntimeException
+For node: "cannot load the specified hibernate properties file : " + confFile expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "cannot load the specified hibernate properties file : " expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: confFile expected fqn: java.lang.String with type: Type24 got: java.lang.String
+For node: e expected fqn: java.lang.Exception with type: Type52 got: java.lang.Exception
+For node: sessionFactory=configuration.configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: configuration.configure().buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type62 got: org.hibernate.SessionFactory
+For node: configuration.configure() expected fqn: org.hibernate.cfg.Configuration with type: Type60 got: org.hibernate.cfg.Configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type35 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type60 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type62 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+Cannot find matching typeVariable for: public static SessionFactory getSessionFactory(){
+  if (sessionFactory == null) {
+    buildSessionFactory();
+  }
+  return sessionFactory;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Properties;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+For node: sessionFactory == null expected fqn: boolean with type: Type38 got: boolean
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+Did not find solution for node: null with type Type64
+For node: buildSessionFactory() expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: void with type: Type2 got: void
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type21 got: org.hibernate.SessionFactory
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type3 got: org.hibernate.Session
+Cannot find matching typeVariable for: getCurrentSession
+Cannot find matching typeVariable for: public static Session getCurrentSession(){
+  if (!getSessionFactory().getCurrentSession().isOpen())   getSessionFactory().openSession();
+  return getSessionFactory().getCurrentSession();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Properties;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hibernate_class_43 {
+  private static Logger log=Logger.getLogger(hibernate_class_43.class);
+  private static org.hibernate.SessionFactory sessionFactory;
+  private static String confFile="hibernate-test.properties";
+  private static final ThreadLocal<Session> threadSession=new ThreadLocal<Session>();
+  private hibernate_class_43(){
+  }
+  public static void buildSessionFactory(){
+    Configuration configuration=new Configuration();
+synchronized (hibernate_class_43.class) {
+      if (sessionFactory == null) {
+        try {
+          Properties properties=new Properties();
+          properties.load(hibernate_class_43.class.getClassLoader().getResourceAsStream(confFile));
+          configuration.setProperties(properties);
+        }
+ catch (        Exception e) {
+          log.fatal("cannot load the specified hibernate properties file: " + confFile);
+          throw new RuntimeException("cannot load the specified hibernate properties file : " + confFile,e);
+        }
+        sessionFactory=configuration.configure().buildSessionFactory();
+      }
+    }
+  }
+  public static SessionFactory getSessionFactory(){
+    if (sessionFactory == null) {
+      buildSessionFactory();
+    }
+    return sessionFactory;
+  }
+  public static Session getCurrentSession(){
+    if (!getSessionFactory().getCurrentSession().isOpen())     getSessionFactory().openSession();
+    return getSessionFactory().getCurrentSession();
+  }
+}
+
+Did not find solution for node: !getSessionFactory().getCurrentSession().isOpen() with type Type67
+Did not find solution for node: getSessionFactory().getCurrentSession().isOpen() with type Type67
+Did not find solution for node: getSessionFactory().getCurrentSession() with type Type65
+For node: getSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+For node: getSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getCurrentSession
+Did not find solution for node: getCurrentSession with type Type65
+Cannot find matching typeVariable for: isOpen
+Did not find solution for node: isOpen with type Type67
+For node: getSessionFactory().openSession() expected fqn: org.hibernate.Session with type: Type70 got: org.hibernate.classic.Session
+For node: getSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+For node: getSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: openSession
+For node: openSession expected fqn: org.hibernate.Session with type: Type70 got: org.hibernate.classic.Session
+For node: getSessionFactory().getCurrentSession() expected fqn: org.hibernate.Session with type: Type66 got: org.hibernate.classic.Session
+For node: getSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+For node: getSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type5 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getCurrentSession
+For node: getCurrentSession expected fqn: org.hibernate.Session with type: Type66 got: org.hibernate.classic.Session
+{Checked=118, Analyzed=104, Unsolved=14, Incorrect=13, Correct=91}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=3, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=2, Correct=5}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=TypeLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.apache.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.apache.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=2, Correct=6}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=23, Analyzed=22, Unsolved=1, Incorrect=2, Correct=20}
+org.hibernate.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=118, Analyzed=104, Unsolved=14, Incorrect=13, Correct=91}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=3, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=2, Correct=5}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=TypeLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.apache.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.apache.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=2, Correct=6}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=23, Analyzed=22, Unsolved=1, Incorrect=2, Correct=20}
+org.hibernate.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+,SimpleName,0,4,0,0,4
+,SimpleType,0,3,0,0,3
+boolean,InfixExpression,2,2,2,0,0
+boolean,MethodInvocation,0,1,0,0,1
+boolean,PrefixExpression,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+java,ClassInstanceCreation,3,3,3,0,0
+java,InfixExpression,2,2,2,0,0
+java,MethodInvocation,2,2,1,1,0
+java,ParameterizedType,2,2,2,0,0
+java,SimpleName,19,19,16,3,0
+java,SimpleType,7,7,5,2,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,3,3,3,0,0
+java,TypeLiteral,3,3,0,3,0
+java,VariableDeclarationFragment,3,3,3,0,0
+null,NullLiteral,0,2,0,0,2
+org.apache.,MethodInvocation,1,1,1,0,0
+org.apache.,SimpleName,5,5,5,0,0
+org.apache.,SimpleType,1,1,1,0,0
+org.apache.,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,ClassInstanceCreation,1,1,1,0,0
+org.hibernate.,MethodInvocation,8,9,6,2,1
+org.hibernate.,QualifiedName,1,1,1,0,0
+org.hibernate.,SimpleName,22,23,20,2,1
+org.hibernate.,SimpleType,7,7,7,0,0
+org.hibernate.,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

@@ -1,0 +1,520 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_22.java
+Expect check=73
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: gwt_class_22 expected fqn: gwt_class_22 with type: Type4 got: java.lang.Object
+For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type6 got: com.google.gwt.user.client.ui.Composite
+For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type6 got: com.google.gwt.user.client.ui.Composite
+Did not find solution for node: TestViewUiBinder with type Type1
+Did not find solution for node: TestViewUiBinder with type Type1
+Cannot find matching typeVariable for: uiBinder=GWT.create(TestViewUiBinder.class)
+Did not find solution for node: uiBinder=GWT.create(TestViewUiBinder.class) with type Type1
+Did not find solution for node: uiBinder with type Type1
+For node: GWT.create(TestViewUiBinder.class) expected fqn: java.lang.Object with type: Type19 got: T
+For node: GWT expected fqn: com.google.gwt.core.client.GWT with type: Type18 got: com.google.gwt.core.client.GWT
+Cannot find matching typeVariable for: create
+For node: create expected fqn: java.lang.Object with type: Type19 got: T
+For node: TestViewUiBinder.class expected fqn: java.lang.Class<gwt_class_22.TestViewUiBinder> with type: Type17 got: java.lang.Class
+Did not find solution for node: TestViewUiBinder with type Type1
+Did not find solution for node: TestViewUiBinder with type Type1
+Cannot find matching typeVariable for: interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+}
+
+Cannot find matching typeVariable for: TestViewUiBinder
+Cannot find matching typeVariable for: interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+}
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: UiBinder<VerticalPanel,gwt_class_22> expected fqn: com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.VerticalPanel,gwt_class_22> with type: Type5=Type2<Type3,Type4> got: com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.VerticalPanel,java.lang.Object>
+For node: UiBinder expected fqn: com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.VerticalPanel,gwt_class_22> with type: Type2 got: com.google.gwt.uibinder.client.UiBinder
+For node: UiBinder expected fqn: com.google.gwt.uibinder.client.UiBinder<com.google.gwt.user.client.ui.VerticalPanel,gwt_class_22> with type: Type2 got: com.google.gwt.uibinder.client.UiBinder
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: gwt_class_22 expected fqn: gwt_class_22 with type: Type4 got: java.lang.Object
+For node: gwt_class_22 expected fqn: gwt_class_22 with type: Type4 got: java.lang.Object
+For node: @UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: testObjectStringLabel
+For node: testObjectStringLabel expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: testObjectStringLabel
+Cannot find matching typeVariable for: @UiField Label testObjectStringLabel;
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: @UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: innerObjectStringLabel
+For node: innerObjectStringLabel expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: innerObjectStringLabel
+Cannot find matching typeVariable for: @UiField Label innerObjectStringLabel;
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: @UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: listObjectsPanel
+For node: listObjectsPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type3 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: listObjectsPanel
+Cannot find matching typeVariable for: @UiField VerticalPanel listObjectsPanel;
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: @UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type16 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type16 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: button
+For node: button expected fqn: com.google.gwt.user.client.ui.Button with type: Type16 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: button
+Cannot find matching typeVariable for: @UiField Button button;
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+For node: @UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: UiField expected fqn: com.google.gwt.uibinder.client.UiField with type: Type22 got: com.google.gwt.uibinder.client.UiField
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: errorMessageLabel
+For node: errorMessageLabel expected fqn: com.google.gwt.user.client.ui.Label with type: Type15 got: com.google.gwt.user.client.ui.Label
+Cannot find matching typeVariable for: errorMessageLabel
+Cannot find matching typeVariable for: @UiField Label errorMessageLabel;
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_22
+Cannot find matching typeVariable for: public gwt_class_22(String firstName){
+  initWidget(uiBinder.createAndBindUi(this));
+}
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: String firstName
+For node: String firstName expected fqn: java.lang.String with type: Type23 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type23 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type23 got: java.lang.String
+For node: firstName expected fqn: java.lang.String with type: Type23 got: java.lang.String
+For node: initWidget(uiBinder.createAndBindUi(this)) expected fqn: void with type: Type27 got: void
+Cannot find matching typeVariable for: initWidget
+For node: initWidget expected fqn: void with type: Type27 got: void
+For node: uiBinder.createAndBindUi(this) expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type24 got: com.google.gwt.user.client.ui.Widget
+Did not find solution for node: uiBinder with type Type1
+Cannot find matching typeVariable for: createAndBindUi
+For node: createAndBindUi expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type24 got: com.google.gwt.user.client.ui.Widget
+For node: this expected fqn: gwt_class_22 with type: Type4 got: java.lang.Object
+For node: @UiHandler("button") expected fqn: com.google.gwt.uibinder.client.UiHandler with type: Type31 got: com.google.gwt.uibinder.client.UiHandler
+For node: UiHandler expected fqn: com.google.gwt.uibinder.client.UiHandler with type: Type31 got: com.google.gwt.uibinder.client.UiHandler
+For node: "button" expected fqn: java.lang.String with type: Type30 got: java.lang.String
+For node: void expected fqn: void with type: Type7 got: void
+Cannot find matching typeVariable for: onClick
+Cannot find matching typeVariable for: @UiHandler("button") void onClick(ClickEvent e){
+}
+
+Cannot find matching typeVariable for: public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.VerticalPanel;
+public class gwt_class_22 extends Composite {
+  private static TestViewUiBinder uiBinder=GWT.create(TestViewUiBinder.class);
+interface TestViewUiBinder extends UiBinder<VerticalPanel,gwt_class_22> {
+  }
+  @UiField Label testObjectStringLabel;
+  @UiField Label innerObjectStringLabel;
+  @UiField VerticalPanel listObjectsPanel;
+  @UiField Button button;
+  @UiField Label errorMessageLabel;
+  public gwt_class_22(  String firstName){
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+  @UiHandler("button") void onClick(  ClickEvent e){
+  }
+}
+
+Cannot find matching typeVariable for: ClickEvent e
+For node: ClickEvent e expected fqn: com.google.gwt.event.dom.client.ClickEvent with type: Type32 got: com.google.gwt.event.dom.client.ClickEvent
+For node: ClickEvent expected fqn: com.google.gwt.event.dom.client.ClickEvent with type: Type32 got: com.google.gwt.event.dom.client.ClickEvent
+For node: ClickEvent expected fqn: com.google.gwt.event.dom.client.ClickEvent with type: Type32 got: com.google.gwt.event.dom.client.ClickEvent
+For node: e expected fqn: com.google.gwt.event.dom.client.ClickEvent with type: Type32 got: com.google.gwt.event.dom.client.ClickEvent
+{Checked=63, Analyzed=56, Unsolved=7, Incorrect=12, Correct=44}
+=SimpleName: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=2, Correct=0}
+=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=MarkerAnnotation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=2, Correct=16}
+gwt.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=1, Correct=8}
+gwt.=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=63, Analyzed=56, Unsolved=7, Incorrect=12, Correct=44}
+=SimpleName: {Checked=6, Analyzed=2, Unsolved=4, Incorrect=2, Correct=0}
+=SimpleType: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=1, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=MarkerAnnotation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=2, Correct=16}
+gwt.=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=1, Correct=8}
+gwt.=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,2,6,0,2,4
+,SimpleType,1,3,0,1,2
+,ThisExpression,1,1,0,1,0
+,VariableDeclarationFragment,0,1,0,0,1
+gwt.,MarkerAnnotation,5,5,5,0,0
+gwt.,MethodInvocation,1,1,0,1,0
+gwt.,ParameterizedType,1,1,0,1,0
+gwt.,SimpleName,18,18,16,2,0
+gwt.,SimpleType,9,9,8,1,0
+gwt.,SingleMemberAnnotation,1,1,1,0,0
+gwt.,SingleVariableDeclaration,1,1,1,0,0
+gwt.,VariableDeclarationFragment,5,5,5,0,0
+java,MethodInvocation,1,1,0,1,0
+java,SimpleName,3,3,2,1,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+java,TypeLiteral,1,1,0,1,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

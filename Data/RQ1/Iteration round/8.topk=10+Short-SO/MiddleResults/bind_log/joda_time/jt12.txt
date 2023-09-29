@@ -1,0 +1,102 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt12.java
+Expect check=25
+Cannot find matching typeVariable for: public class jt12 {
+  public static void h1(  DateTime end,  DateTime start){
+    Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: jt12
+Cannot find matching typeVariable for: public class jt12 {
+  public static void h1(  DateTime end,  DateTime start){
+    Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+public class jt12 {
+  public static void h1(  DateTime end,  DateTime start){
+    Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(DateTime end,DateTime start){
+  Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+}
+
+Cannot find matching typeVariable for: public class jt12 {
+  public static void h1(  DateTime end,  DateTime start){
+    Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+public class jt12 {
+  public static void h1(  DateTime end,  DateTime start){
+    Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: DateTime end
+For node: DateTime end expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: end expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: DateTime start
+For node: DateTime start expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: start expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: Days.daysBetween(new LocalDate(start),new LocalDate(end)).getDays() expected fqn: int with type: Type12 got: int
+For node: Days.daysBetween(new LocalDate(start),new LocalDate(end)) expected fqn: org.joda.time.Days with type: Type8 got: org.joda.time.Days
+For node: Days expected fqn: org.joda.time.Days with type: Type7 got: org.joda.time.Days
+Cannot find matching typeVariable for: daysBetween
+For node: daysBetween expected fqn: org.joda.time.Days with type: Type8 got: org.joda.time.Days
+For node: new LocalDate(start) expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: start expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+For node: new LocalDate(end) expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type4 got: org.joda.time.LocalDate
+For node: end expected fqn: org.joda.time.DateTime with type: Type3 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: getDays
+For node: getDays expected fqn: int with type: Type12 got: int
+{Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+org.joda.time.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int,MethodInvocation,1,1,1,0,0
+int,SimpleName,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,2,2,2,0,0
+org.joda.time.,MethodInvocation,1,1,1,0,0
+org.joda.time.,SimpleName,10,10,10,0,0
+org.joda.time.,SimpleType,4,4,4,0,0
+org.joda.time.,SingleVariableDeclaration,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

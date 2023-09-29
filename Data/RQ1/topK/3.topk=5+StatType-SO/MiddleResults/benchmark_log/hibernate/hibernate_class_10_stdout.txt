@@ -1,0 +1,723 @@
+15:13:57.070 [main] INFO snr.h - Building CompilationUnit takes 472 ms
+15:13:57.181 [main] INFO snr.e - Compilation takes 108 ms
+Serializable cannot be resolved to a type
+Session cannot be resolved to a type
+List cannot be resolved to a type
+Return without setting candidates for Type19
+Return without setting candidates for Type27
+Return without setting candidates for Type24
+Return without setting candidates for Type26
+Finding class definition name: Serializable isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.Serializable, java.io.Serializable] to Type2
+Finding class definition name: List isfull? false fields: [] methods: [get] argument sizes: [1]
+Adding candidates [java.util.List, java.util.List] to Type8
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type4
+Adding candidate int to Type6
+Adding candidate void to Type3
+Return without setting candidates for Type15
+Return without setting candidates for Type22
+Return without setting candidates for Type23
+Return without setting candidates for Type17
+Return without setting candidates for Type12
+Return without setting candidates for Type9=Type8<Type4>
+Return without setting candidates for Type25
+Finding class definition name: hibernate_class_10 isfull? true fields: [serialVersionUID, providerId, providerName] methods: [<init>, setProviderName, setProviderId] argument sizes: [0, 1, 1]
+Adding candidates [] to Type1
+15:13:57.659 [main] INFO snr.G - Cannot find class definition for hibernate_class_10 with full name: true, with fields: [serialVersionUID, providerId, providerName], with methods: [<init>, setProviderName, setProviderId], and argument sizes:[0, 1, 1]
+15:13:57.659 [main] INFO snr.G - Cannot load candidates for Type1.
+   0. method: Type20 setProviderId(Type19);
+   1. full name: hibernate_class_10
+   2. field: Type5 serialVersionUID;
+   3. field: Type4 providerId;
+   4. method: Type10 <init>();
+   5. method: Type23 setProviderName(Type22);
+   6. simple name: hibernate_class_10
+   7. field: Type4 providerName;
+   8. implements: Type2
+Adding candidate long to Type5
+Return without setting candidates for Type14
+Adding candidate byte to Type11
+Finding class definition name: Session isfull? false fields: [] methods: [save] argument sizes: [1]
+Adding candidates [org.hibernate.Session, org.hibernate.classic.Session] to Type7
+Return without setting candidates for Type16
+Return without setting candidates for Type21
+Return without setting candidates for Type10
+Return without setting candidates for Type18
+Return without setting candidates for Type13
+Return without setting candidates for Type20
+15:13:57.775 [main] INFO snr.G - Loading initial candidates takes 509 ms.
+Before TypeVariable: Type3, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type10
+[void]
+Before TypeVariable: Type5, Candidates: 1
+   0. subtype: Type6
+   1. simple name: long
+   2. full name: long
+[long]
+Before TypeVariable: Type6, Candidates: 1
+   0. simple name: int
+   1. full name: int
+[int]
+Before TypeVariable: Type11, Candidates: 1
+   0. full name: byte
+   1. simple name: byte
+[byte]
+Before TypeVariable: Type2, Candidates: 2
+   0. simple name: Serializable
+[java.io.Serializable, java.io.Serializable]
+Before TypeVariable: Type4, Candidates: 2
+   0. simple name: String
+   1. array type: Type27
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type7, Candidates: 2
+   0. simple name: Session
+   1. method: Type26 save(Type25);
+[org.hibernate.classic.Session, org.hibernate.Session]
+Before TypeVariable: Type8, Candidates: 2
+   0. parameterized: Type9=Type8<Type4>
+   1. method: Type15 get(Type14);
+   2. simple name: List
+[java.util.List, java.util.List]
+Before TypeVariable: Type9=Type8<Type4>, Candidates: 0
+   0. method: Type17 get(Type16);
+[]
+Before TypeVariable: Type1, Candidates: 0 declared
+   0. method: Type20 setProviderId(Type19);
+   1. full name: hibernate_class_10
+   2. field: Type5 serialVersionUID;
+   3. field: Type4 providerId;
+   4. method: Type10 <init>();
+   5. method: Type23 setProviderName(Type22);
+   6. simple name: hibernate_class_10
+   7. field: Type4 providerName;
+   8. implements: Type2
+[]
+Before TypeVariable: Type10, Candidates: 0
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type17
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type12
+   1. subtype: Type15
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type11
+[]
+Before TypeVariable: Type15, Candidates: 0
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type11
+[]
+Before TypeVariable: Type17, Candidates: 0
+[]
+Before TypeVariable: Type18, Candidates: 0
+   0. subtype: Type20
+[]
+Before TypeVariable: Type19, Candidates: 0
+   0. subtype: Type12
+[]
+Before TypeVariable: Type20, Candidates: 0
+[]
+Before TypeVariable: Type21, Candidates: 0
+   0. subtype: Type23
+[]
+Before TypeVariable: Type22, Candidates: 0
+   0. subtype: Type17
+[]
+Before TypeVariable: Type23, Candidates: 0
+[]
+Before TypeVariable: Type24, Candidates: 0
+   0. subtype: Type26
+[]
+Before TypeVariable: Type25, Candidates: 0
+   0. subtype: Type1
+[]
+Before TypeVariable: Type26, Candidates: 0
+[]
+Before TypeVariable: Type27, Candidates: 0
+[]
+15:13:57.789 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint full name: hibernate_class_10
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type3
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint full name: void
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type5
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint full name: long
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type6
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint full name: int
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type11
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint full name: byte
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: hibernate_class_10
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type2
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: Serializable
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type3
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type4
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type5
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: long
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type6
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: int
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type7
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: Session
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type8
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: List
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type11
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint simple name: byte
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint field: Type4 providerName;
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint field: Type4 providerId;
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.790 [main] INFO snr.G - Populate candidates for type constraint field: Type5 serialVersionUID;
+15:13:57.790 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type constraint method: Type10 <init>();
+Processing method constraint method: Type10 <init>(); on Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type constraint method: Type23 setProviderName(Type22);
+Processing method constraint method: Type23 setProviderName(Type22); on Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type constraint method: Type20 setProviderId(Type19);
+Processing method constraint method: Type20 setProviderId(Type19); on Type1
+15:13:57.791 [main] INFO snr.G - Populate candidates for type variable Type7
+15:13:57.791 [main] INFO snr.G - Populate candidates for type constraint method: Type26 save(Type25);
+Processing method constraint method: Type26 save(Type25); on Type7
+Current solution for c Type7 is uninit ? false [org.hibernate.classic.Session, org.hibernate.Session]
+Current solution for r Type26 is uninit ? false []
+Current solution for p0 Type25 is uninit ? false []
+Looking at method: public abstract Ljava/io/Serializable; save(Ljava/lang/Object;)
+Looking at method: public abstract Ljava/io/Serializable; save(Ljava/lang/Object;)
+updated solution for c Type7 [org.hibernate.classic.Session, org.hibernate.Session]
+updated solution for r Type26 [java.io.Serializable]
+updated solution for p0 Type25 [java.lang.Object]
+15:13:57.794 [main] INFO snr.G - Populate candidates for type variable Type8
+15:13:57.795 [main] INFO snr.G - Populate candidates for type constraint method: Type15 get(Type14);
+Processing method constraint method: Type15 get(Type14); on Type8
+Current solution for c Type8 is uninit ? false [java.util.List, java.util.List]
+Current solution for r Type15 is uninit ? false []
+Current solution for p0 Type14 is uninit ? false []
+Looking at method: public abstract Ljava/lang/Object; get(I) (I)TE;
+Looking at method: public abstract Ljava/lang/Object; get(I) (I)TE;
+updated solution for c Type8 [java.util.List, java.util.List]
+updated solution for r Type15 [E, E]
+updated solution for p0 Type14 [int]
+15:13:57.795 [main] INFO snr.G - Populate candidates for type variable Type9=Type8<Type4>
+15:13:57.795 [main] INFO snr.G - Populate candidates for type constraint method: Type17 get(Type16);
+Processing method constraint method: Type17 get(Type16); on Type9=Type8<Type4>
+15:13:57.795 [main] INFO snr.G - Populate candidates for type variable Type8
+15:13:57.796 [main] INFO snr.G - Populate candidates for type constraint parameterized: Type9=Type8<Type4>
+15:13:57.796 [main] INFO snr.G - Populate candidates for type variable Type4
+15:13:57.796 [main] INFO snr.G - Populate candidates for type constraint array type: Type27
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type3
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type5
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type12
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type13
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type13
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type14
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type16
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type18
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type20
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type19
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type21
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type23
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type22
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type24
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type26
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type25
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint subtype: Type1
+15:13:57.797 [main] INFO snr.G - Populate candidates for type variable Type1
+15:13:57.797 [main] INFO snr.G - Populate candidates for type constraint implements: Type2
+After TypeVariable: Type1, Candidates: 1 declared
+   0. method: Type20 setProviderId(Type19);
+   1. full name: hibernate_class_10
+   2. field: Type5 serialVersionUID;
+   3. field: Type4 providerId;
+   4. method: Type10 <init>();
+   5. method: Type23 setProviderName(Type22);
+   6. simple name: hibernate_class_10
+   7. field: Type4 providerName;
+   8. implements: Type2
+[java.lang.Object]
+After TypeVariable: Type3, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type10
+[void]
+After TypeVariable: Type5, Candidates: 1
+   0. subtype: Type6
+   1. simple name: long
+   2. full name: long
+[long]
+After TypeVariable: Type6, Candidates: 1
+   0. simple name: int
+   1. full name: int
+[int]
+After TypeVariable: Type10, Candidates: 1
+[void]
+After TypeVariable: Type11, Candidates: 1
+   0. full name: byte
+   1. simple name: byte
+[byte]
+After TypeVariable: Type14, Candidates: 1
+   0. subtype: Type11
+[int]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type11
+[byte]
+After TypeVariable: Type24, Candidates: 1
+   0. subtype: Type26
+[java.io.Serializable]
+After TypeVariable: Type25, Candidates: 1
+   0. subtype: Type1
+[java.lang.Object]
+After TypeVariable: Type26, Candidates: 1
+[java.io.Serializable]
+After TypeVariable: Type2, Candidates: 2
+   0. simple name: Serializable
+[java.io.Serializable, java.io.Serializable]
+After TypeVariable: Type4, Candidates: 2
+   0. simple name: String
+   1. array type: Type27
+[java.lang.String, java.lang.String]
+After TypeVariable: Type7, Candidates: 2
+   0. simple name: Session
+   1. method: Type26 save(Type25);
+[org.hibernate.classic.Session, org.hibernate.Session]
+After TypeVariable: Type8, Candidates: 2
+   0. parameterized: Type9=Type8<Type4>
+   1. method: Type15 get(Type14);
+   2. simple name: List
+[java.util.List, java.util.List]
+After TypeVariable: Type13, Candidates: 2
+   0. subtype: Type12
+   1. subtype: Type15
+[E, E]
+After TypeVariable: Type15, Candidates: 2
+[E, E]
+After TypeVariable: Type27, Candidates: 2
+[java.lang.String[], java.lang.String[]]
+After TypeVariable: Type9=Type8<Type4>, Candidates: 4
+   0. method: Type17 get(Type16);
+[java.util.List<java.lang.String>, java.util.List<java.lang.String>, java.util.List<java.lang.String>, java.util.List<java.lang.String>]
+After TypeVariable: Type12, Candidates: 0
+   0. subtype: Type17
+[]
+After TypeVariable: Type17, Candidates: 0
+[]
+After TypeVariable: Type18, Candidates: 0
+   0. subtype: Type20
+[]
+After TypeVariable: Type19, Candidates: 0
+   0. subtype: Type12
+[]
+After TypeVariable: Type20, Candidates: 0
+[]
+After TypeVariable: Type21, Candidates: 0
+   0. subtype: Type23
+[]
+After TypeVariable: Type22, Candidates: 0
+   0. subtype: Type17
+[]
+After TypeVariable: Type23, Candidates: 0
+[]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	jar:android-13.jar:1:java.lang.Object	java.lang.Object	Object
+	jar:android-13.jar:1:E	E	E
+	openjdk:jdk:1.8.0:java.io.Serializable	java.io.Serializable	Serializable
+	jar:android-13.jar:1:java.util.List	java.util.List	List
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	java.util.List<java.lang.String>	List<String>
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	java.util.List<java.lang.String>	List<String>
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	org.hibernate.Session	Session
+	openjdk:jdk:1.8.0:java.util.List	java.util.List	List
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	java.util.List<java.lang.String>	List<String>
+	jar:android-13.jar:1:java.lang.String[]	java.lang.String[]	String[]
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	org.hibernate.classic.Session	Session
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:E	E	E
+	openjdk:jdk:1.8.0:java.lang.String[]	java.lang.String[]	String[]
+	openjdk:jdk:1.8.0:long	long	long
+	jar:android-13.jar:1:java.io.Serializable	java.io.Serializable	Serializable
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	java.util.List<java.lang.String>	List<String>
+	openjdk:jdk:1.8.0:byte	byte	byte
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:java.util.List
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:java.io.Serializable	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.util.List
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.io.Serializable
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.String[]	jar:android-13.jar:1:java.lang.String[]
+	jar:android-13.jar:1:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String[]
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:byte	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:int
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:java.io.Serializable	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.util.List
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.util.List
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.io.Serializable	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.io.Serializable	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Serializable	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	jar:android-13.jar:1:java.util.List
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:E	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:long
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	openjdk:jdk:1.8.0:java.util.List
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.io.Serializable
+	jar:android-13.jar:1:java.io.Serializable	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:java.io.Serializable	jar:android-13.jar:1:java.io.Serializable
+	jar:android-13.jar:1:java.lang.String[]	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:E
+	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:E
+	jar:android-13.jar:1:E	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:java.io.Serializable
+	jar:android-13.jar:1:java.io.Serializable	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:long
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:long	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.Object
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	jar:android-13.jar:1:java.io.Serializable	jar:android-13.jar:1:E
+	openjdk:jdk:1.8.0:E	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.Serializable	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:E
+	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	openjdk:jdk:1.8.0:E
+	openjdk:jdk:1.8.0:java.io.Serializable	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String[]	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:E
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.String[]	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.io.Serializable
+	jar:android-13.jar:1:java.io.Serializable	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type1	hibernate_class_10
+	Type3	void
+	Type11	byte
+	Type6	int
+	Type5	long
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type13
+	Type14
+	Type15
+	Type16
+	Type10
+	Type11
+	Type12
+	Type1
+	Type9=Type8<Type4>
+	Type24
+	Type25
+	Type26
+	Type27
+	Type20
+	Type21
+	Type22
+	Type23
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type9=Type8<Type4>	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>
+	Type8	jar:android-13.jar:1:java.util.List
+	Type3	openjdk:jdk:1.8.0:void
+	Type13	openjdk:jdk:1.8.0:E
+	Type15	openjdk:jdk:1.8.0:E
+	Type14	openjdk:jdk:1.8.0:int
+	Type10	openjdk:jdk:1.8.0:void
+	Type6	openjdk:jdk:1.8.0:int
+	Type4	jar:android-13.jar:1:java.lang.String
+	Type9=Type8<Type4>	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>
+	Type4	openjdk:jdk:1.8.0:java.lang.String
+	Type24	jar:android-13.jar:1:java.io.Serializable
+	Type26	jar:android-13.jar:1:java.io.Serializable
+	Type27	jar:android-13.jar:1:java.lang.String[]
+	Type9=Type8<Type4>	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>
+	Type2	openjdk:jdk:1.8.0:java.io.Serializable
+	Type8	openjdk:jdk:1.8.0:java.util.List
+	Type25	jar:android-13.jar:1:java.lang.Object
+	Type7	jar:hibernate-3.5.3.jar:1:org.hibernate.Session
+	Type7	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session
+	Type9=Type8<Type4>	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>
+	Type11	openjdk:jdk:1.8.0:byte
+	Type13	jar:android-13.jar:1:E
+	Type15	jar:android-13.jar:1:E
+	Type5	openjdk:jdk:1.8.0:long
+	Type16	openjdk:jdk:1.8.0:byte
+	Type2	jar:android-13.jar:1:java.io.Serializable
+	Type27	openjdk:jdk:1.8.0:java.lang.String[]
+Printing: jmethod_dependency.facts
+	10	Type1	Type10	<init>
+	0	Type1	Type20	setProviderId
+	6	Type9=Type8<Type4>	Type17	get
+	1	Type7	Type26	save
+	4	Type1	Type23	setProviderName
+	2	Type8	Type15	get
+Printing: jsimplename.facts
+	Type1	hibernate_class_10
+	Type2	Serializable
+	Type3	void
+	Type11	byte
+	Type4	String
+	Type6	int
+	Type7	Session
+	Type8	List
+	Type5	long
+Printing: jmethod.facts
+	6	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:E	get	1
+	1	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	openjdk:jdk:1.8.0:void	<init>	0
+	12	jar:android-13.jar:1:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.String	get	1
+	24	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:void	<init>	0
+	13	jar:android-13.jar:1:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String	get	1
+	14	openjdk:jdk:1.8.0:java.util.List<openjdk:jdk:1.8.0:java.lang.String>	openjdk:jdk:1.8.0:java.lang.String	get	1
+	2	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	jar:android-13.jar:1:java.io.Serializable	save	1
+	4	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:E	get	1
+	0	jar:hibernate-3.5.3.jar:1:org.hibernate.classic.Session	jar:android-13.jar:1:java.io.Serializable	save	1
+	3	jar:hibernate-3.5.3.jar:1:org.hibernate.Session	openjdk:jdk:1.8.0:void	<init>	0
+	5	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:void	<init>	0
+	7	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:void	<init>	0
+	15	openjdk:jdk:1.8.0:java.util.List<jar:android-13.jar:1:java.lang.String>	jar:android-13.jar:1:java.lang.String	get	1
+Printing: jsupertype_dependency.facts
+	Type26	Type24
+	Type15	Type13
+	Type23	Type21
+	Type11	Type16
+	Type1	Type25
+	Type6	Type5
+	Type12	Type13
+	Type11	Type14
+	Type10	Type3
+	Type12	Type19
+	Type20	Type18
+	Type17	Type22
+	Type17	Type12
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	6	0	openjdk:jdk:1.8.0:int
+	12	0	openjdk:jdk:1.8.0:int
+	13	0	openjdk:jdk:1.8.0:int
+	14	0	openjdk:jdk:1.8.0:int
+	2	0	jar:android-13.jar:1:java.lang.Object
+	4	0	openjdk:jdk:1.8.0:int
+	0	0	jar:android-13.jar:1:java.lang.Object
+	15	0	openjdk:jdk:1.8.0:int
+Printing: jmethod_param_dependency.facts
+	0	0	Type19
+	6	0	Type16
+	1	0	Type25
+	4	0	Type22
+	2	0	Type14
+All artifact rank: [jar:android-13.jar:1, jar:hibernate-3.5.3.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type9=Type8<Type4> -> java.util.List<java.lang.String>
+Added artifact: jar:android-13.jar:1
+Found Type3 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type25 -> java.lang.Object
+Added artifact: jar:android-13.jar:1
+Found Type5 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type24 -> java.io.Serializable
+Added artifact: jar:android-13.jar:1
+Found Type27 -> java.lang.String[]
+Added artifact: jar:android-13.jar:1
+Found Type2 -> java.io.Serializable
+Added artifact: jar:android-13.jar:1
+Found Type13 -> E
+Added artifact: jar:android-13.jar:1
+Found Type14 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> java.util.List
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type26 -> java.io.Serializable
+Added artifact: jar:android-13.jar:1
+Found Type11 -> byte
+Added artifact: openjdk:jdk:1.8.0
+Found Type6 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type15 -> E
+Added artifact: jar:android-13.jar:1
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> org.hibernate.Session
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Quiting souffle
+Bind Type9=Type8<Type4> to java.util.List<java.lang.String>, dumping:
+Bind Type25 to java.lang.Object, dumping:
+Bind Type5 to long, dumping:
+Bind Type24 to java.io.Serializable, dumping:
+Bind Type27 to java.lang.String[], dumping:
+Bind Type26 to java.io.Serializable, dumping:
+Bind Type2 to java.io.Serializable, dumping:
+Bind Type14 to int, dumping:
+Bind Type11 to byte, dumping:
+Bind Type7 to org.hibernate.Session, dumping:
+Bind Type8 to java.util.List, dumping:
+Bind Type3 to void, dumping:
+Bind Type4 to java.lang.String, dumping:
+Bind Type6 to int, dumping:
+Bind Type15 to E, dumping:
+Bind Type10 to void, dumping:
+Bind Type13 to E, dumping:
+15:13:58.000 [main] INFO snr.k - Fixing Type2 with java.io.Serializable
+15:13:58.000 [main] INFO snr.k - Fixing Type7 with org.hibernate.Session
+15:13:58.000 [main] INFO snr.k - Fixing Type8 with java.util.List
+15:13:58.045 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+15:13:58.046 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+15:13:58.046 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+15:13:58.046 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+15:13:58.046 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+
+import java.util.List;
+import org.hibernate.Session;
+import java.io.Serializable;//ID = 1262298
+
+public class hibernate_class_10 implements Serializable {
+	private String providerId;
+	private String providerName;
+
+	//private int patientId;
+	//private int providerSpec; 
+
+	private static final long serialVersionUID = 81073;
+
+	public static void load(Session session, List<String> values) {
+		hibernate_class_10 ProviderInfo = new hibernate_class_10();
+
+		ProviderInfo.setProviderId(values.get(0));
+		ProviderInfo.setProviderName(values.get(1));
+		//ProviderInfo.setProviderSpec( Integer.parseInt(values.get(2)) );
+
+		session.save(ProviderInfo);
+	}
+
+	/**
+	* @return the ProviderName
+	*/
+	public String getProviderName() {
+		return providerName;
+	}
+
+	/**
+	* @param ProviderName the ProviderName to set
+	*/
+	public void setProviderName(String name) {
+		this.providerName = name;
+	}
+
+	/**
+	* @return the ProvId
+	*/
+	public String getProviderId() {
+		return this.providerId;
+	}
+
+	/**
+	* @param id the ProvId to set
+	*/
+	public void setProviderId(String id) {
+		this.providerId = id;
+	}
+
+	/*
+	public int getPatientId() {
+	    return this.patientId;
+	}
+	
+	public void setPatientId( int id ) {
+	    this.patientId = id;
+	}
+	*/
+
+	/**
+	* @param args
+	*/
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+}
+15:13:58.046 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+15:13:58.091 [main] INFO snr.e - Compilation takes 45 ms

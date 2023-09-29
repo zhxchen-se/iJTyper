@@ -1,0 +1,173 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad6.java
+Expect check=23
+Cannot find matching typeVariable for: public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+Cannot find matching typeVariable for: ad6
+Cannot find matching typeVariable for: public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.util.DisplayMetrics;
+public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public void h1(){
+  DisplayMetrics displayMetrics=new DisplayMetrics();
+  int height=displayMetrics.heightPixels;
+  int width=displayMetrics.widthPixels;
+}
+
+Cannot find matching typeVariable for: public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.util.DisplayMetrics;
+public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+For node: DisplayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: DisplayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+Cannot find matching typeVariable for: displayMetrics=new DisplayMetrics()
+For node: displayMetrics=new DisplayMetrics() expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: displayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: new DisplayMetrics() expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: DisplayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: DisplayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: int expected fqn: int with type: Type5 got: int
+Cannot find matching typeVariable for: height=displayMetrics.heightPixels
+For node: height=displayMetrics.heightPixels expected fqn: int with type: Type5 got: int
+For node: height expected fqn: int with type: Type5 got: int
+Cannot find matching typeVariable for: displayMetrics.heightPixels
+Cannot find matching typeVariable for: height=displayMetrics.heightPixels
+Cannot find matching typeVariable for: int height=displayMetrics.heightPixels;
+
+Cannot find matching typeVariable for: {
+  DisplayMetrics displayMetrics=new DisplayMetrics();
+  int height=displayMetrics.heightPixels;
+  int width=displayMetrics.widthPixels;
+}
+
+Cannot find matching typeVariable for: public void h1(){
+  DisplayMetrics displayMetrics=new DisplayMetrics();
+  int height=displayMetrics.heightPixels;
+  int width=displayMetrics.widthPixels;
+}
+
+Cannot find matching typeVariable for: public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.util.DisplayMetrics;
+public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+For node: displayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: heightPixels expected fqn: int with type: Type6 got: int
+For node: int expected fqn: int with type: Type5 got: int
+Cannot find matching typeVariable for: width=displayMetrics.widthPixels
+For node: width=displayMetrics.widthPixels expected fqn: int with type: Type5 got: int
+For node: width expected fqn: int with type: Type5 got: int
+Cannot find matching typeVariable for: displayMetrics.widthPixels
+Cannot find matching typeVariable for: width=displayMetrics.widthPixels
+Cannot find matching typeVariable for: int width=displayMetrics.widthPixels;
+
+Cannot find matching typeVariable for: {
+  DisplayMetrics displayMetrics=new DisplayMetrics();
+  int height=displayMetrics.heightPixels;
+  int width=displayMetrics.widthPixels;
+}
+
+Cannot find matching typeVariable for: public void h1(){
+  DisplayMetrics displayMetrics=new DisplayMetrics();
+  int height=displayMetrics.heightPixels;
+  int width=displayMetrics.widthPixels;
+}
+
+Cannot find matching typeVariable for: public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.util.DisplayMetrics;
+public class ad6 {
+  public void h1(){
+    DisplayMetrics displayMetrics=new DisplayMetrics();
+    int height=displayMetrics.heightPixels;
+    int width=displayMetrics.widthPixels;
+  }
+}
+
+For node: displayMetrics expected fqn: android.util.DisplayMetrics with type: Type3 got: android.util.DisplayMetrics
+For node: widthPixels expected fqn: int with type: Type7 got: int
+{Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,SimpleName,5,5,5,0,0
+android.,SimpleType,2,2,2,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+int,PrimitiveType,2,2,2,0,0
+int,SimpleName,4,4,4,0,0
+int,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

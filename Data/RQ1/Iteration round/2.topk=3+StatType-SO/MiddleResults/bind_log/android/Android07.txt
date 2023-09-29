@@ -1,0 +1,109 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android07.java
+Exception repair: java.lang.UnsupportedOperationException: R.layout.main could not be a valid type name or a variable name.
+java.lang.UnsupportedOperationException: R.layout.main could not be a valid type name or a variable name.
+	at snr.o.a(Unknown Source)
+	at snr.a.a(Unknown Source)
+	at snr.a.a(Unknown Source)
+	at snr.a.endVisit(Unknown Source)
+	at org.eclipse.jdt.core.dom.MethodInvocation.accept0(MethodInvocation.java:230)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.ExpressionStatement.accept0(ExpressionStatement.java:136)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:128)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.MethodDeclaration.accept0(MethodDeclaration.java:698)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:447)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:258)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at snr.a.<init>(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=59
+{Checked=59, Analyzed=0, Unsolved=59, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+android.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=SuperMethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=59, Analyzed=0, Unsolved=59, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+android.=SimpleType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+android.=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=SuperMethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+android.,ClassInstanceCreation,0,1,0,0,1
+android.,MethodInvocation,0,1,0,0,1
+android.,ParameterizedType,0,2,0,0,2
+android.,QualifiedName,0,2,0,0,2
+android.,SimpleName,0,12,0,0,12
+android.,SimpleType,0,5,0,0,5
+android.,SingleVariableDeclaration,0,2,0,0,2
+int,QualifiedName,0,1,0,0,1
+int,SimpleName,0,1,0,0,1
+java,ArrayInitializer,0,1,0,0,1
+java,ArrayType,0,1,0,0,1
+java,MarkerAnnotation,0,1,0,0,1
+java,SimpleName,0,6,0,0,6
+java,SimpleType,0,3,0,0,3
+java,StringLiteral,0,4,0,0,4
+java,VariableDeclarationFragment,0,1,0,0,1
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,0,2,0,0,2
+void,PrimitiveType,0,2,0,0,2
+void,SimpleName,0,6,0,0,6
+void,SuperMethodInvocation,0,1,0,0,1

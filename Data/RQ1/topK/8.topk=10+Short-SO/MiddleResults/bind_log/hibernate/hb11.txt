@@ -1,0 +1,132 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb11.java
+Expect check=18
+Cannot find matching typeVariable for: public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+Did not find solution for node: hb11 with type Type1
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type2 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type2 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration
+For node: configuration expected fqn: org.hibernate.cfg.Configuration with type: Type2 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configuration
+Cannot find matching typeVariable for: private Configuration configuration;
+
+Cannot find matching typeVariable for: public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type3 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: session
+For node: session expected fqn: org.hibernate.Session with type: Type4 got: org.hibernate.Session
+Cannot find matching typeVariable for: session
+Cannot find matching typeVariable for: private Session session;
+
+Cannot find matching typeVariable for: public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type5 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type5 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: transaction
+For node: transaction expected fqn: org.hibernate.Transaction with type: Type5 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: transaction
+Cannot find matching typeVariable for: private Transaction transaction;
+
+Cannot find matching typeVariable for: public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+public class hb11 {
+  private Configuration configuration;
+  private SessionFactory sessionFactory;
+  private Session session;
+  private Transaction transaction;
+}
+
+{Checked=13, Analyzed=12, Unsolved=1, Incorrect=0, Correct=12}
+java=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+Total stats
+{Checked=13, Analyzed=12, Unsolved=1, Incorrect=0, Correct=12}
+java=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java,SimpleName,0,1,0,0,1
+org.hibernate.,SimpleName,4,4,4,0,0
+org.hibernate.,SimpleType,4,4,4,0,0
+org.hibernate.,VariableDeclarationFragment,4,4,4,0,0

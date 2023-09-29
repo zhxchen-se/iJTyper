@@ -1,0 +1,169 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime40.java
+Expect check=48
+Cannot find matching typeVariable for: public class JodaTime40 {
+  public static void main(  String[] args){
+    @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+    Date today=new Date(110,6,24);
+    int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime40
+Cannot find matching typeVariable for: public class JodaTime40 {
+  public static void main(  String[] args){
+    @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+    Date today=new Date(110,6,24);
+    int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+public class JodaTime40 {
+  public static void main(  String[] args){
+    @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+    Date today=new Date(110,6,24);
+    int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+  Date today=new Date(110,6,24);
+  int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+}
+
+Cannot find matching typeVariable for: public class JodaTime40 {
+  public static void main(  String[] args){
+    @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+    Date today=new Date(110,6,24);
+    int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+public class JodaTime40 {
+  public static void main(  String[] args){
+    @SuppressWarnings("deprecation") Date past=new Date(110,5,20);
+    Date today=new Date(110,6,24);
+    int days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: @SuppressWarnings("deprecation") expected fqn: java.lang.SuppressWarnings with type: Type6 got: java.lang.SuppressWarnings
+For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type6 got: java.lang.SuppressWarnings
+For node: "deprecation" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+Cannot find matching typeVariable for: past=new Date(110,5,20)
+For node: past=new Date(110,5,20) expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: past expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: new Date(110,5,20) expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: 110 expected fqn: int with type: Type8 got: byte
+For node: 5 expected fqn: int with type: Type8 got: byte
+For node: 20 expected fqn: int with type: Type8 got: byte
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+Cannot find matching typeVariable for: today=new Date(110,6,24)
+For node: today=new Date(110,6,24) expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: today expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: new Date(110,6,24) expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: Date expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: 110 expected fqn: int with type: Type8 got: byte
+For node: 6 expected fqn: int with type: Type8 got: byte
+For node: 24 expected fqn: int with type: Type8 got: byte
+For node: int expected fqn: int with type: Type13 got: int
+Cannot find matching typeVariable for: days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays()
+For node: days=Days.daysBetween(new DateTime(past),new DateTime(today)).getDays() expected fqn: int with type: Type13 got: int
+For node: days expected fqn: int with type: Type13 got: int
+For node: Days.daysBetween(new DateTime(past),new DateTime(today)).getDays() expected fqn: int with type: Type22 got: int
+For node: Days.daysBetween(new DateTime(past),new DateTime(today)) expected fqn: org.joda.time.Days with type: Type18 got: org.joda.time.Days
+For node: Days expected fqn: org.joda.time.Days with type: Type17 got: org.joda.time.Days
+Cannot find matching typeVariable for: daysBetween
+For node: daysBetween expected fqn: org.joda.time.Days with type: Type18 got: org.joda.time.Days
+For node: new DateTime(past) expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: past expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+For node: new DateTime(today) expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: today expected fqn: java.util.Date with type: Type7 got: java.sql.Date
+Cannot find matching typeVariable for: getDays
+For node: getDays expected fqn: int with type: Type22 got: int
+{Checked=45, Analyzed=45, Unsolved=0, Incorrect=22, Correct=23}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=8, Correct=3}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=4, Correct=1}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=45, Analyzed=45, Unsolved=0, Incorrect=22, Correct=23}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=8, Correct=3}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=4, Correct=1}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int,MethodInvocation,1,1,1,0,0
+int,NumberLiteral,6,6,0,6,0
+int,PrimitiveType,1,1,1,0,0
+int,SimpleName,2,2,2,0,0
+int,VariableDeclarationFragment,1,1,1,0,0
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,2,2,0,2,0
+java,SimpleName,11,11,3,8,0
+java,SimpleType,5,5,1,4,0
+java,SingleMemberAnnotation,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,0,2,0
+org.joda.time.,ClassInstanceCreation,2,2,2,0,0
+org.joda.time.,MethodInvocation,1,1,1,0,0
+org.joda.time.,SimpleName,4,4,4,0,0
+org.joda.time.,SimpleType,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

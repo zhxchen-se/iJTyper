@@ -1,0 +1,478 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android09.java
+Expect check=58
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Did not find solution for node: Android09 with type Type1
+For node: float expected fqn: float with type: Type4 got: float
+Cannot find matching typeVariable for: seconds
+For node: seconds expected fqn: float with type: Type4 got: float
+Cannot find matching typeVariable for: seconds
+Cannot find matching typeVariable for: float seconds;
+
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Bundle;
+import android.widget.TextView;
+import gen.R;
+public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+For node: Timer expected fqn: java.util.Timer with type: Type5 got: java.util.Timer
+For node: Timer expected fqn: java.util.Timer with type: Type5 got: java.util.Timer
+Cannot find matching typeVariable for: gametimer
+For node: gametimer expected fqn: java.util.Timer with type: Type5 got: java.util.Timer
+Cannot find matching typeVariable for: gametimer
+Cannot find matching typeVariable for: public Timer gametimer;
+
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Bundle;
+import android.widget.TextView;
+import gen.R;
+public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: updatecount
+Cannot find matching typeVariable for: void updatecount(){
+  TextView t=(TextView)findViewById(R.id.topscore);
+  t.setText("Score: 10 - Time: " + seconds + " seconds");
+  t.postInvalidate();
+}
+
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Bundle;
+import android.widget.TextView;
+import gen.R;
+public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: t=(TextView)findViewById(R.id.topscore)
+For node: t=(TextView)findViewById(R.id.topscore) expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: t expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: (TextView)findViewById(R.id.topscore) expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+No match for actual type MethodInvocation: findViewById(R.id.topscore) with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: findViewById
+For node: findViewById expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: t.setText("Score: 10 - Time: " + seconds + " seconds") expected fqn: void with type: Type7 got: void
+For node: t expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: setText
+For node: setText expected fqn: void with type: Type7 got: void
+For node: "Score: 10 - Time: " + seconds + " seconds" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "Score: 10 - Time: " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: seconds expected fqn: float with type: Type4 got: float
+For node: " seconds" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: t.postInvalidate() expected fqn: void with type: Type10 got: void
+For node: t expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: postInvalidate
+For node: postInvalidate expected fqn: void with type: Type10 got: void
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: findViewById
+Cannot find matching typeVariable for: private TextView findViewById(int topscore){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Bundle;
+import android.widget.TextView;
+import gen.R;
+public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: int topscore
+For node: int topscore expected fqn: int with type: Type12 got: int
+For node: int expected fqn: int with type: Type12 got: int
+For node: topscore expected fqn: int with type: Type12 got: int
+For node: null expected fqn: null with type: Type13 got: android.widget.TextView
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onCreate
+Cannot find matching typeVariable for: public void onCreate(Bundle sis){
+  gametimer.schedule(new TimerTask(){
+    public void run(){
+      seconds+=0.1;
+      updatecount();
+    }
+  }
+,100,100);
+}
+
+Cannot find matching typeVariable for: public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.Bundle;
+import android.widget.TextView;
+import gen.R;
+public class Android09 {
+  float seconds;
+  public Timer gametimer;
+  void updatecount(){
+    TextView t=(TextView)findViewById(R.id.topscore);
+    t.setText("Score: 10 - Time: " + seconds + " seconds");
+    t.postInvalidate();
+  }
+  private TextView findViewById(  int topscore){
+    return null;
+  }
+  public void onCreate(  Bundle sis){
+    gametimer.schedule(new TimerTask(){
+      public void run(){
+        seconds+=0.1;
+        updatecount();
+      }
+    }
+,100,100);
+  }
+}
+
+Cannot find matching typeVariable for: Bundle sis
+Did not find solution for node: Bundle sis with type Type14
+Did not find solution for node: Bundle with type Type14
+Did not find solution for node: Bundle with type Type14
+Did not find solution for node: sis with type Type14
+For node: gametimer.schedule(new TimerTask(){
+  public void run(){
+    seconds+=0.1;
+    updatecount();
+  }
+}
+,100,100) expected fqn: void with type: Type18 got: void
+For node: gametimer expected fqn: java.util.Timer with type: Type5 got: java.util.Timer
+Cannot find matching typeVariable for: schedule
+For node: schedule expected fqn: void with type: Type18 got: void
+For node: new TimerTask(){
+  public void run(){
+    seconds+=0.1;
+    updatecount();
+  }
+}
+ expected fqn:  with type: Type15 got: java.util.TimerTask
+For node: TimerTask expected fqn: java.util.TimerTask with type: Type15 got: java.util.TimerTask
+For node: TimerTask expected fqn: java.util.TimerTask with type: Type15 got: java.util.TimerTask
+Cannot find matching typeVariable for: {
+  public void run(){
+    seconds+=0.1;
+    updatecount();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: run
+Cannot find matching typeVariable for: public void run(){
+  seconds+=0.1;
+  updatecount();
+}
+
+Cannot find matching typeVariable for: {
+  public void run(){
+    seconds+=0.1;
+    updatecount();
+  }
+}
+
+For node: run expected fqn: void with type: Type15 got: java.util.TimerTask
+For node: seconds+=0.1 expected fqn: float with type: Type4 got: float
+For node: seconds expected fqn: float with type: Type4 got: float
+For node: 0.1 expected fqn: double with type: Type4 got: float
+For node: updatecount() expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: updatecount
+For node: updatecount expected fqn: void with type: Type2 got: void
+For node: 100 expected fqn: int with type: Type17 got: byte
+For node: 100 expected fqn: int with type: Type17 got: byte
+{Checked=51, Analyzed=46, Unsolved=5, Incorrect=6, Correct=40}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+float=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+float=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+Total stats
+{Checked=51, Analyzed=46, Unsolved=5, Incorrect=6, Correct=40}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=9, Analyzed=7, Unsolved=2, Incorrect=0, Correct=7}
+android.=SimpleType: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+float=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+float=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+float=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+,ClassInstanceCreation,1,1,0,1,0
+,SimpleName,0,1,0,0,1
+android.,CastExpression,1,1,1,0,0
+android.,SimpleName,7,9,7,0,2
+android.,SimpleType,3,4,3,0,1
+android.,SingleVariableDeclaration,0,1,0,0,1
+android.,VariableDeclarationFragment,1,1,1,0,0
+double,NumberLiteral,1,1,0,1,0
+float,Assignment,1,1,1,0,0
+float,PrimitiveType,1,1,1,0,0
+float,SimpleName,2,2,2,0,0
+float,VariableDeclarationFragment,1,1,1,0,0
+int,NumberLiteral,2,2,0,2,0
+int,PrimitiveType,1,1,1,0,0
+int,SimpleName,1,1,1,0,0
+int,SingleVariableDeclaration,1,1,1,0,0
+java,InfixExpression,1,1,1,0,0
+java,SimpleName,3,3,3,0,0
+java,SimpleType,2,2,2,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,1,1,0,1,0
+void,MethodInvocation,4,4,4,0,0
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,5,5,4,1,0

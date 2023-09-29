@@ -1,0 +1,388 @@
+12:56:00.568 [main] INFO snr.h - Building CompilationUnit takes 556 ms
+12:56:00.729 [main] INFO snr.e - Compilation takes 157 ms
+Logger cannot be resolved to a type
+Logger cannot be resolved
+Level cannot be resolved to a variable
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type4
+Return without setting candidates for Type13
+Return without setting candidates for Type12
+Finding class definition name: Logger isfull? false fields: [] methods: [getLogger, log] argument sizes: [1, 2]
+Adding candidates [com.sun.istack.internal.logging.Logger, java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger] to Type3
+Return without setting candidates for Type9
+Finding class definition name: Level isfull? false fields: [SEVERE] methods: [] argument sizes: []
+Adding candidates [java.util.logging.Level, java.util.logging.Level, sun.util.logging.PlatformLogger$Level] to Type8
+Return without setting candidates for Type11
+Return without setting candidates for Type6
+Return without setting candidates for Type5
+Return without setting candidates for Type10
+Return without setting candidates for Type7
+12:56:01.795 [main] INFO snr.G - Loading initial candidates takes 943 ms.
+Before TypeVariable: Type4, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type8, Candidates: 3
+   0. field: Type9 SEVERE;
+   1. simple name: Level
+[java.util.logging.Level, sun.util.logging.PlatformLogger$Level, java.util.logging.Level]
+Before TypeVariable: Type3, Candidates: 5
+   0. method: Type13 log(Type11,Type12);
+   1. method: Type7 getLogger(Type6);
+   2. simple name: Logger
+   3. subtype: Type5
+[java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+Before TypeVariable: Type5, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type4
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type9
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type4
+[]
+Before TypeVariable: Type13, Candidates: 0
+[]
+12:56:01.807 [main] INFO snr.G - Populate candidates for type variable Type4
+12:56:01.807 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+12:56:01.807 [main] INFO snr.G - Populate candidates for type variable Type3
+12:56:01.807 [main] INFO snr.G - Populate candidates for type constraint simple name: Logger
+12:56:01.807 [main] INFO snr.G - Populate candidates for type variable Type4
+12:56:01.807 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+12:56:01.807 [main] INFO snr.G - Populate candidates for type variable Type8
+12:56:01.807 [main] INFO snr.G - Populate candidates for type constraint simple name: Level
+12:56:01.807 [main] INFO snr.G - Populate candidates for type variable Type8
+12:56:01.807 [main] INFO snr.G - Populate candidates for type constraint field: Type9 SEVERE;
+12:56:01.809 [main] INFO snr.G - Populate candidates for type variable Type3
+12:56:01.809 [main] INFO snr.G - Populate candidates for type constraint method: Type13 log(Type11,Type12);
+Processing method constraint method: Type13 log(Type11,Type12); on Type3
+Current solution for c Type3 is uninit ? false [java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+Current solution for r Type13 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Current solution for p1 Type12 is uninit ? false []
+Looking at method: public V log(Ljava/util/logging/Level;Ljava/util/function/Supplier;) (Ljava/util/logging/Level;Ljava/util/function/Supplier<Ljava/lang/String;>;)V
+Looking at method: public V log(Ljava/util/logging/Level;Ljava/lang/String;)
+Looking at method: public V log(Lorg/apache/log4j/Priority;Ljava/lang/Object;)
+Looking at method: public V log(Ljava/util/logging/Level;Ljava/util/function/Supplier;) (Ljava/util/logging/Level;Ljava/util/function/Supplier<Ljava/lang/String;>;)V
+Looking at method: public V log(Ljava/util/logging/Level;Ljava/lang/String;)
+Looking at method: public V log(Lorg/apache/log4j/Priority;Ljava/lang/Object;)
+Looking at method: public V log(Ljava/util/logging/Level;Ljava/lang/String;)
+updated solution for c Type3 [java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+updated solution for r Type13 [void]
+updated solution for p0 Type11 [java.util.logging.Level, org.apache.log4j.Priority, org.apache.log4j.Priority, java.util.logging.Level]
+updated solution for p1 Type12 [java.util.function.Supplier, java.lang.Object, java.lang.String, java.lang.String]
+12:56:01.817 [main] INFO snr.G - Populate candidates for type variable Type3
+12:56:01.817 [main] INFO snr.G - Populate candidates for type constraint method: Type7 getLogger(Type6);
+Processing method constraint method: Type7 getLogger(Type6); on Type3
+Current solution for c Type3 is uninit ? false [java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+Current solution for r Type7 is uninit ? false []
+Current solution for p0 Type6 is uninit ? false []
+Looking at method: public static Ljava/util/logging/Logger; getLogger(Ljava/lang/String;)
+Looking at method: public static Lorg/apache/log4j/Logger; getLogger(Ljava/lang/Class;)
+Looking at method: public static Lorg/apache/log4j/Logger; getLogger(Ljava/lang/String;)
+Looking at method: public static Ljava/util/logging/Logger; getLogger(Ljava/lang/String;)
+Looking at method: public static Lorg/apache/log4j/Logger; getLogger(Ljava/lang/Class;)
+Looking at method: public static Lorg/apache/log4j/Logger; getLogger(Ljava/lang/String;)
+Looking at method: public static Lcom/sun/istack/internal/logging/Logger; getLogger(Ljava/lang/Class;) (Ljava/lang/Class<*>;)Lcom/sun/istack/internal/logging/Logger;
+updated solution for c Type3 [java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+updated solution for r Type7 [java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+updated solution for p0 Type6 [java.lang.String, java.lang.Class, java.lang.String, java.lang.Class]
+12:56:01.824 [main] INFO snr.G - Populate candidates for type variable Type3
+12:56:01.824 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+12:56:01.824 [main] INFO snr.G - Populate candidates for type variable Type5
+12:56:01.824 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+12:56:01.824 [main] INFO snr.G - Populate candidates for type variable Type6
+12:56:01.824 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+12:56:01.827 [main] INFO snr.G - Populate candidates for type variable Type10
+12:56:01.827 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+12:56:01.827 [main] INFO snr.G - Populate candidates for type variable Type11
+12:56:01.827 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+12:56:01.829 [main] INFO snr.G - Populate candidates for type variable Type12
+12:56:01.829 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+After TypeVariable: Type10, Candidates: 1
+   0. subtype: Type13
+[void]
+After TypeVariable: Type13, Candidates: 1
+[void]
+After TypeVariable: Type4, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type6, Candidates: 2
+   0. subtype: Type4
+[java.lang.String, java.lang.String]
+After TypeVariable: Type9, Candidates: 2
+[java.util.logging.Level, java.util.logging.Level]
+After TypeVariable: Type11, Candidates: 2
+   0. subtype: Type9
+[java.util.logging.Level, java.util.logging.Level]
+After TypeVariable: Type8, Candidates: 3
+   0. field: Type9 SEVERE;
+   1. simple name: Level
+[java.util.logging.Level, sun.util.logging.PlatformLogger$Level, java.util.logging.Level]
+After TypeVariable: Type12, Candidates: 3
+   0. subtype: Type4
+[java.lang.Object, java.lang.String, java.lang.String]
+After TypeVariable: Type3, Candidates: 5
+   0. method: Type13 log(Type11,Type12);
+   1. method: Type7 getLogger(Type6);
+   2. simple name: Logger
+   3. subtype: Type5
+[java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+After TypeVariable: Type5, Candidates: 5
+   0. subtype: Type7
+[java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+After TypeVariable: Type7, Candidates: 5
+[java.util.logging.Logger, org.apache.log4j.Logger, java.util.logging.Logger, org.apache.log4j.Logger, com.sun.istack.internal.logging.Logger]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level	sun.util.logging.PlatformLogger$Level	Level
+	openjdk:jdk:1.8.0:java.util.function.Supplier	java.util.function.Supplier	Supplier
+	jar:android-13.jar:1:java.lang.Object	java.lang.Object	Object
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.util.logging.Level	java.util.logging.Level	Level
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	org.apache.log4j.Logger	Logger
+	openjdk:jdk:1.8.0:java.util.logging.Logger	java.util.logging.Logger	Logger
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority	org.apache.log4j.Priority	Priority
+	jar:android-13.jar:1:java.lang.Class	java.lang.Class	Class
+	openjdk:jdk:1.8.0:java.util.logging.Level	java.util.logging.Level	Level
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.lang.Class	java.lang.Class	Class
+	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	com.sun.istack.internal.logging.Logger	Logger
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	org.apache.log4j.Logger	Logger
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority	org.apache.log4j.Priority	Priority
+	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level	sun.util.logging.PlatformLogger$Level	PlatformLogger$Level
+	jar:android-13.jar:1:java.util.logging.Logger	java.util.logging.Logger	Logger
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:java.util.logging.Level	jar:android-13.jar:1:java.util.logging.Level
+	jar:android-13.jar:1:java.util.logging.Level	openjdk:jdk:1.8.0:java.util.logging.Level
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.logging.Logger	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.logging.Logger	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Class	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.logging.Level	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.logging.Level	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	jar:android-13.jar:1:java.lang.Object
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	jar:android-13.jar:1:java.lang.Object
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.Class	jar:android-13.jar:1:java.lang.Class
+	jar:android-13.jar:1:java.lang.Class	openjdk:jdk:1.8.0:java.lang.Class
+	jar:android-13.jar:1:java.util.logging.Logger	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.logging.Logger	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.Class	jar:android-13.jar:1:java.lang.Object
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.logging.Logger	openjdk:jdk:1.8.0:java.util.logging.Logger
+	openjdk:jdk:1.8.0:java.util.logging.Logger	jar:android-13.jar:1:java.util.logging.Logger
+	openjdk:jdk:1.8.0:java.util.function.Supplier	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.function.Supplier	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.logging.Logger	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.Class	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.logging.Level	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.logging.Level	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level	jar:android-13.jar:1:java.lang.Object
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority
+	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	jar:android-13.jar:1:java.lang.Object
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority
+	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.logging.Level	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.util.logging.Level	jar:android-13.jar:1:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.logging.Logger	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.function.Supplier	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	jar:android-13.jar:1:java.lang.Object
+	jar:android-13.jar:1:java.lang.Object	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority	jar:android-13.jar:1:java.lang.Object
+Printing: jfqlname.facts
+	Type4	java.lang.String
+Printing: type.facts
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type12	jar:android-13.jar:1:java.lang.String
+	Type7	jar:android-13.jar:1:java.util.logging.Logger
+	Type12	openjdk:jdk:1.8.0:java.lang.String
+	Type3	jar:android-13.jar:1:java.util.logging.Logger
+	Type5	jar:android-13.jar:1:java.util.logging.Logger
+	Type10	openjdk:jdk:1.8.0:void
+	Type6	openjdk:jdk:1.8.0:java.lang.String
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type4	jar:android-13.jar:1:java.lang.String
+	Type13	openjdk:jdk:1.8.0:void
+	Type4	openjdk:jdk:1.8.0:java.lang.String
+	Type11	openjdk:jdk:1.8.0:java.util.logging.Level
+	Type11	jar:android-13.jar:1:java.util.logging.Level
+	Type7	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger
+	Type3	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger
+	Type9	jar:android-13.jar:1:java.util.logging.Level
+	Type8	openjdk:jdk:1.8.0:java.util.logging.Level
+	Type9	openjdk:jdk:1.8.0:java.util.logging.Level
+	Type8	jar:android-13.jar:1:java.util.logging.Level
+	Type5	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger
+	Type5	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger
+	Type5	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger
+	Type3	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger
+	Type3	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger
+	Type8	openjdk:jdk:1.8.0:sun.util.logging.PlatformLogger$Level
+	Type7	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger
+	Type7	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger
+	Type12	jar:android-13.jar:1:java.lang.Object
+	Type7	openjdk:jdk:1.8.0:java.util.logging.Logger
+	Type5	openjdk:jdk:1.8.0:java.util.logging.Logger
+	Type3	openjdk:jdk:1.8.0:java.util.logging.Logger
+Printing: jmethod_dependency.facts
+	3	Type3	Type7	getLogger
+	0	Type3	Type13	log
+Printing: jsimplename.facts
+	Type4	String
+	Type8	Level
+	Type3	Logger
+Printing: jmethod.facts
+	2	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	openjdk:jdk:1.8.0:void	log	2
+	6	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	openjdk:jdk:1.8.0:void	log	2
+	3	jar:android-13.jar:1:java.util.logging.Logger	openjdk:jdk:1.8.0:void	log	2
+	4	jar:android-13.jar:1:java.util.logging.Logger	openjdk:jdk:1.8.0:void	log	2
+	23	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	getLogger	1
+	5	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	openjdk:jdk:1.8.0:void	log	2
+	0	openjdk:jdk:1.8.0:java.util.logging.Logger	openjdk:jdk:1.8.0:void	log	2
+	21	openjdk:jdk:1.8.0:java.util.logging.Logger	openjdk:jdk:1.8.0:java.util.logging.Logger	getLogger	1
+	24	jar:android-13.jar:1:java.util.logging.Logger	jar:android-13.jar:1:java.util.logging.Logger	getLogger	1
+	27	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	openjdk:jdk:1.8.0:com.sun.istack.internal.logging.Logger	getLogger	1
+	22	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.15.jar:1:org.apache.log4j.Logger	getLogger	1
+	25	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	getLogger	1
+	26	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	jar:log4j-1.2.17.jar:1:org.apache.log4j.Logger	getLogger	1
+	1	openjdk:jdk:1.8.0:java.util.logging.Logger	openjdk:jdk:1.8.0:void	log	2
+Printing: jsupertype_dependency.facts
+	Type5	Type3
+	Type13	Type10
+	Type4	Type6
+	Type7	Type5
+	Type9	Type11
+	Type4	Type12
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	2	0	jar:log4j-1.2.15.jar:1:org.apache.log4j.Priority
+	2	1	jar:android-13.jar:1:java.lang.Object
+	6	0	openjdk:jdk:1.8.0:java.util.logging.Level
+	6	1	openjdk:jdk:1.8.0:java.lang.String
+	3	0	jar:android-13.jar:1:java.util.logging.Level
+	3	1	openjdk:jdk:1.8.0:java.util.function.Supplier
+	4	0	jar:android-13.jar:1:java.util.logging.Level
+	4	1	jar:android-13.jar:1:java.lang.String
+	23	0	jar:android-13.jar:1:java.lang.String
+	5	0	jar:log4j-1.2.17.jar:1:org.apache.log4j.Priority
+	5	1	jar:android-13.jar:1:java.lang.Object
+	0	0	openjdk:jdk:1.8.0:java.util.logging.Level
+	0	1	openjdk:jdk:1.8.0:java.util.function.Supplier
+	21	0	openjdk:jdk:1.8.0:java.lang.String
+	24	0	jar:android-13.jar:1:java.lang.String
+	27	0	openjdk:jdk:1.8.0:java.lang.Class
+	22	0	jar:android-13.jar:1:java.lang.Class
+	25	0	jar:android-13.jar:1:java.lang.Class
+	26	0	jar:android-13.jar:1:java.lang.String
+	1	0	openjdk:jdk:1.8.0:java.util.logging.Level
+	1	1	openjdk:jdk:1.8.0:java.lang.String
+Printing: jmethod_param_dependency.facts
+	3	0	Type6
+	0	0	Type11
+	0	1	Type12
+All artifact rank: [openjdk:jdk:1.8.0, jar:android-13.jar:1, jar:log4j-1.2.15.jar:1, jar:log4j-1.2.17.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type12 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type6 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> java.util.logging.Level
+Added artifact: openjdk:jdk:1.8.0
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type4 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type11 -> java.util.logging.Level
+Added artifact: openjdk:jdk:1.8.0
+Found Type7 -> java.util.logging.Logger
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type3 -> java.util.logging.Logger
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> java.util.logging.Level
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type5 -> java.util.logging.Logger
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type4 to java.lang.String, dumping:
+Bind Type13 to void, dumping:
+Bind Type12 to java.lang.String, dumping:
+Bind Type3 to java.util.logging.Logger, dumping:
+Bind Type9 to java.util.logging.Level, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type8 to java.util.logging.Level, dumping:
+Bind Type10 to void, dumping:
+Bind Type11 to java.util.logging.Level, dumping:
+Bind Type5 to java.util.logging.Logger, dumping:
+Bind Type7 to java.util.logging.Logger, dumping:
+12:56:02.067 [main] INFO snr.k - Fixing Type3 with java.util.logging.Logger
+12:56:02.068 [main] INFO snr.k - Fixing Type3 with java.util.logging.Logger
+12:56:02.068 [main] INFO snr.k - Fixing Type8 with java.util.logging.Level
+12:56:02.125 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:56:02.128 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+12:56:02.128 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:56:02.128 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.gwt;
+
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
+public class gt11 {
+
+	public static void h1() {
+		Logger logger = Logger.getLogger("NameOfYourLogger");
+		logger.log(Level.SEVERE, "this message should get logged");
+	}
+
+}
+12:56:02.128 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:56:02.171 [main] INFO snr.e - Compilation takes 42 ms

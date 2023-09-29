@@ -1,0 +1,106 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt5.java
+Expect check=17
+Cannot find matching typeVariable for: public class xt5 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.processAnnotations(Properties.class);
+  }
+}
+
+Cannot find matching typeVariable for: xt5
+Cannot find matching typeVariable for: public class xt5 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.processAnnotations(Properties.class);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import org.hibernate.envers.tools.query.Parameters;
+import java.io.FileReader;
+import java.util.Properties;
+public class xt5 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.processAnnotations(Properties.class);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  XStream xstream=new XStream();
+  xstream.processAnnotations(Properties.class);
+}
+
+Cannot find matching typeVariable for: public class xt5 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.processAnnotations(Properties.class);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import org.hibernate.envers.tools.query.Parameters;
+import java.io.FileReader;
+import java.util.Properties;
+public class xt5 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.processAnnotations(Properties.class);
+  }
+}
+
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream=new XStream()
+For node: xstream=new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: xstream.processAnnotations(Properties.class) expected fqn: void with type: Type7 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: processAnnotations
+For node: processAnnotations expected fqn: void with type: Type7 got: void
+For node: Properties.class expected fqn: java.lang.Class<java.util.Properties> with type: Type6 got: java.lang.Class
+For node: Properties expected fqn: java.util.Properties with type: Type5 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type5 got: java.util.Properties
+{Checked=14, Analyzed=14, Unsolved=0, Incorrect=1, Correct=13}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=14, Analyzed=14, Unsolved=0, Incorrect=1, Correct=13}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.,ClassInstanceCreation,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
+com.thoughtworks.xstream.,SimpleType,2,2,2,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+java,SimpleName,1,1,1,0,0
+java,SimpleType,1,1,1,0,0
+java,TypeLiteral,1,1,0,1,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

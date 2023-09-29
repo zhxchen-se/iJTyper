@@ -1,0 +1,999 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_8.java
+Expect check=118
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: @MappedSuperclass expected fqn: javax.persistence.MappedSuperclass with type: Type6 got: javax.persistence.MappedSuperclass
+For node: MappedSuperclass expected fqn: javax.persistence.MappedSuperclass with type: Type6 got: javax.persistence.MappedSuperclass
+Did not find solution for node: hibernate_class_8 with type Type1
+For node: long expected fqn: long with type: Type5 got: long
+Cannot find matching typeVariable for: serialVersionUID=1L
+For node: serialVersionUID=1L expected fqn: long with type: Type5 got: long
+For node: serialVersionUID expected fqn: long with type: Type5 got: long
+For node: 1L expected fqn: long with type: Type5 got: long
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: from
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: from
+Cannot find matching typeVariable for: private Date from;
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: thru
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: thru
+Cannot find matching typeVariable for: private Date thru;
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: @Transient expected fqn: javax.persistence.Transient with type: Type7 got: java.beans.Transient
+For node: Transient expected fqn: javax.persistence.Transient with type: Type7 got: java.beans.Transient
+For node: boolean expected fqn: boolean with type: Type4 got: boolean
+Cannot find matching typeVariable for: isActive
+Cannot find matching typeVariable for: /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+@Transient public boolean isActive(){
+  Date now=new Date();
+  boolean afterFrom=from.before(now) || from.equals(now);
+  boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+  return afterFrom && beforeThru;
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: now=new Date()
+For node: now=new Date() expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: now expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: new Date() expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: boolean expected fqn: boolean with type: Type4 got: boolean
+Cannot find matching typeVariable for: afterFrom=from.before(now) || from.equals(now)
+For node: afterFrom=from.before(now) || from.equals(now) expected fqn: boolean with type: Type4 got: boolean
+For node: afterFrom expected fqn: boolean with type: Type4 got: boolean
+For node: from.before(now) || from.equals(now) expected fqn: boolean with type: Type9 got: boolean
+For node: from.before(now) expected fqn: boolean with type: Type9 got: boolean
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: before
+For node: before expected fqn: boolean with type: Type9 got: boolean
+For node: now expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: from.equals(now) expected fqn: boolean with type: Type12 got: boolean
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: equals
+For node: equals expected fqn: boolean with type: Type12 got: boolean
+For node: now expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: boolean expected fqn: boolean with type: Type4 got: boolean
+Cannot find matching typeVariable for: beforeThru=thru == null || thru.after(now) || thru.equals(now)
+For node: beforeThru=thru == null || thru.after(now) || thru.equals(now) expected fqn: boolean with type: Type4 got: boolean
+For node: beforeThru expected fqn: boolean with type: Type4 got: boolean
+For node: thru == null || thru.after(now) || thru.equals(now) expected fqn: boolean with type: Type4 got: boolean
+For node: thru == null || thru.after(now) expected fqn: boolean with type: Type4 got: boolean
+For node: thru == null expected fqn: boolean with type: Type4 got: boolean
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Did not find solution for node: null with type Type15
+For node: thru.after(now) expected fqn: boolean with type: Type16 got: boolean
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: after
+For node: after expected fqn: boolean with type: Type16 got: boolean
+For node: now expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: thru.equals(now) expected fqn: boolean with type: Type14 got: boolean
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: equals
+For node: equals expected fqn: boolean with type: Type14 got: boolean
+For node: now expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: afterFrom && beforeThru expected fqn: boolean with type: Type4 got: boolean
+For node: afterFrom expected fqn: boolean with type: Type4 got: boolean
+For node: beforeThru expected fqn: boolean with type: Type4 got: boolean
+For node: @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") expected fqn: org.hibernate.validator.AssertTrue with type: Type20 got: org.hibernate.validator.AssertTrue
+For node: AssertTrue expected fqn: org.hibernate.validator.AssertTrue with type: Type20 got: org.hibernate.validator.AssertTrue
+Cannot find matching typeVariable for: message
+Cannot find matching typeVariable for: message="Dates are not valid the thru date must be empty, or after the fromdate."
+For node: message expected fqn: java.lang.String with type: Type20 got: org.hibernate.validator.AssertTrue
+For node: "Dates are not valid the thru date must be empty, or after the fromdate." expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: boolean expected fqn: boolean with type: Type4 got: boolean
+Cannot find matching typeVariable for: areDatesValid
+Cannot find matching typeVariable for: @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+  if (thru == null) {
+    return true;
+  }
+ else {
+    return thru.after(from);
+  }
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: thru == null expected fqn: boolean with type: Type4 got: boolean
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Did not find solution for node: null with type Type21
+For node: true expected fqn: boolean with type: Type4 got: boolean
+For node: thru.after(from) expected fqn: boolean with type: Type18 got: boolean
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: after
+For node: after expected fqn: boolean with type: Type18 got: boolean
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: @Temporal(TemporalType.TIMESTAMP) expected fqn: javax.persistence.Temporal with type: Type22 got: javax.persistence.Temporal
+For node: Temporal expected fqn: javax.persistence.Temporal with type: Type22 got: javax.persistence.Temporal
+For node: TemporalType.TIMESTAMP expected fqn: javax.persistence.TemporalType with type: Type24 got: javax.persistence.TemporalType
+For node: TemporalType expected fqn: javax.persistence.TemporalType with type: Type23 got: javax.persistence.TemporalType
+For node: TIMESTAMP expected fqn: javax.persistence.TemporalType with type: Type24 got: javax.persistence.TemporalType
+For node: @NotNull expected fqn: org.hibernate.validator.NotNull with type: Type25 got: com.sun.istack.internal.NotNull
+For node: NotNull expected fqn: org.hibernate.validator.NotNull with type: Type25 got: com.sun.istack.internal.NotNull
+For node: @Column(name="fromDate") expected fqn: javax.persistence.Column with type: Type26 got: javax.persistence.Column
+For node: Column expected fqn: javax.persistence.Column with type: Type26 got: javax.persistence.Column
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="fromDate"
+For node: name expected fqn: java.lang.String with type: Type26 got: javax.persistence.Column
+For node: "fromDate" expected fqn: java.lang.String with type: Type19 got: java.lang.String
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: getFrom
+Cannot find matching typeVariable for: @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+  return from;
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setFrom
+Cannot find matching typeVariable for: public void setFrom(Date from){
+  this.from=from;
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: Date from
+For node: Date from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: this.from=from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: this.from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: from
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: from
+For node: from expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: @Temporal(TemporalType.TIMESTAMP) expected fqn: javax.persistence.Temporal with type: Type22 got: javax.persistence.Temporal
+For node: Temporal expected fqn: javax.persistence.Temporal with type: Type22 got: javax.persistence.Temporal
+For node: TemporalType.TIMESTAMP expected fqn: javax.persistence.TemporalType with type: Type28 got: javax.persistence.TemporalType
+For node: TemporalType expected fqn: javax.persistence.TemporalType with type: Type27 got: javax.persistence.TemporalType
+For node: TIMESTAMP expected fqn: javax.persistence.TemporalType with type: Type28 got: javax.persistence.TemporalType
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: getThru
+Cannot find matching typeVariable for: @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+  return thru;
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: setThru
+Cannot find matching typeVariable for: public void setThru(Date thru){
+  this.thru=thru;
+}
+
+Cannot find matching typeVariable for: /** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import org.hibernate.validator.AssertTrue;
+import org.hibernate.validator.NotNull;
+/** 
+ * Several models are date range sensitive, this base class provides that basic functionality.
+ * @author jim
+ */
+@MappedSuperclass public abstract class hibernate_class_8 {
+  private static final long serialVersionUID=1L;
+  private Date from;
+  private Date thru;
+  /** 
+ * Determines if a model is active. A model is active if now is after or equal to from , and thru is either null, or after now, or equal to now.
+ */
+  @Transient public boolean isActive(){
+    Date now=new Date();
+    boolean afterFrom=from.before(now) || from.equals(now);
+    boolean beforeThru=thru == null || thru.after(now) || thru.equals(now);
+    return afterFrom && beforeThru;
+  }
+  @AssertTrue(message="Dates are not valid the thru date must be empty, or after the fromdate.") public boolean areDatesValid(){
+    if (thru == null) {
+      return true;
+    }
+ else {
+      return thru.after(from);
+    }
+  }
+  @Temporal(TemporalType.TIMESTAMP) @NotNull @Column(name="fromDate") public Date getFrom(){
+    return from;
+  }
+  public void setFrom(  Date from){
+    this.from=from;
+  }
+  @Temporal(TemporalType.TIMESTAMP) public Date getThru(){
+    return thru;
+  }
+  public void setThru(  Date thru){
+    this.thru=thru;
+  }
+}
+
+Cannot find matching typeVariable for: Date thru
+For node: Date thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: Date expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: this.thru=thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+For node: this.thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: thru
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+Cannot find matching typeVariable for: thru
+For node: thru expected fqn: java.util.Date with type: Type3 got: java.util.Date
+{Checked=109, Analyzed=104, Unsolved=5, Incorrect=6, Correct=98}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+boolean=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+boolean=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+boolean=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=NormalAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=40, Analyzed=40, Unsolved=0, Incorrect=3, Correct=37}
+java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=109, Analyzed=104, Unsolved=5, Incorrect=6, Correct=98}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+boolean=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+boolean=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+boolean=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=Assignment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=FieldAccess: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MarkerAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=NormalAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=40, Analyzed=40, Unsolved=0, Incorrect=3, Correct=37}
+java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=SingleMemberAnnotation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,2,0,0,2
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,InfixExpression,6,6,6,0,0
+boolean,MethodInvocation,5,5,5,0,0
+boolean,PrimitiveType,4,4,4,0,0
+boolean,SimpleName,9,9,9,0,0
+boolean,VariableDeclarationFragment,2,2,2,0,0
+java,Assignment,2,2,2,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,FieldAccess,2,2,2,0,0
+java,MarkerAnnotation,2,2,1,1,0
+java,NormalAnnotation,1,1,1,0,0
+java,QualifiedName,2,2,2,0,0
+java,SimpleName,40,40,37,3,0
+java,SimpleType,8,8,8,0,0
+java,SingleMemberAnnotation,2,2,2,0,0
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+long,NumberLiteral,1,1,1,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,1,1,1,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,0,2,0,0,2
+org.hibernate.,MarkerAnnotation,1,1,0,1,0
+org.hibernate.,NormalAnnotation,1,1,1,0,0
+org.hibernate.,SimpleName,2,2,1,1,0
+void,PrimitiveType,2,2,2,0,0

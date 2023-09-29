@@ -1,0 +1,124 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk18.java
+Expect check=27
+Cannot find matching typeVariable for: public class jdk18 {
+  private static InputStream inputStream;
+  public static String h1() throws IOException {
+    StringWriter writer=new StringWriter();
+    IOUtils.copy(inputStream,writer,"UTF-8");
+    return writer.toString();
+  }
+}
+
+Did not find solution for node: jdk18 with type Type1
+For node: InputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+For node: InputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+Cannot find matching typeVariable for: inputStream
+For node: inputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+Cannot find matching typeVariable for: inputStream
+Cannot find matching typeVariable for: private static InputStream inputStream;
+
+Cannot find matching typeVariable for: public class jdk18 {
+  private static InputStream inputStream;
+  public static String h1() throws IOException {
+    StringWriter writer=new StringWriter();
+    IOUtils.copy(inputStream,writer,"UTF-8");
+    return writer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import org.apache.commons.io.IOUtils;
+import java.io.*;
+public class jdk18 {
+  private static InputStream inputStream;
+  public static String h1() throws IOException {
+    StringWriter writer=new StringWriter();
+    IOUtils.copy(inputStream,writer,"UTF-8");
+    return writer.toString();
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static String h1() throws IOException {
+  StringWriter writer=new StringWriter();
+  IOUtils.copy(inputStream,writer,"UTF-8");
+  return writer.toString();
+}
+
+Cannot find matching typeVariable for: public class jdk18 {
+  private static InputStream inputStream;
+  public static String h1() throws IOException {
+    StringWriter writer=new StringWriter();
+    IOUtils.copy(inputStream,writer,"UTF-8");
+    return writer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import org.apache.commons.io.IOUtils;
+import java.io.*;
+public class jdk18 {
+  private static InputStream inputStream;
+  public static String h1() throws IOException {
+    StringWriter writer=new StringWriter();
+    IOUtils.copy(inputStream,writer,"UTF-8");
+    return writer.toString();
+  }
+}
+
+For node: IOException expected fqn: java.io.IOException with type: Type4 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type4 got: java.io.IOException
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Cannot find matching typeVariable for: writer=new StringWriter()
+For node: writer=new StringWriter() expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: new StringWriter() expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: IOUtils.copy(inputStream,writer,"UTF-8") expected fqn: void with type: Type10 got: void
+For node: IOUtils expected fqn: org.apache.commons.io.IOUtils with type: Type9 got: org.apache.directory.api.util.IOUtils
+Cannot find matching typeVariable for: copy
+For node: copy expected fqn: void with type: Type10 got: void
+For node: inputStream expected fqn: java.io.InputStream with type: Type3 got: java.io.InputStream
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Did not find solution for node: "UTF-8" with type Type8
+For node: writer.toString() expected fqn: java.lang.String with type: Type15 got: java.lang.String
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type15 got: java.lang.String
+{Checked=24, Analyzed=22, Unsolved=2, Incorrect=1, Correct=21}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.apache.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=24, Analyzed=22, Unsolved=2, Incorrect=1, Correct=21}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.apache.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,1,1,1,0,0
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,10,11,10,0,1
+java,SimpleType,5,5,5,0,0
+java,StringLiteral,0,1,0,0,1
+java,VariableDeclarationFragment,2,2,2,0,0
+org.apache.,SimpleName,1,1,0,1,0
+void,MethodInvocation,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

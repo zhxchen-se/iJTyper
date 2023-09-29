@@ -1,0 +1,732 @@
+00:25:52.688 [main] INFO snr.h - Building CompilationUnit takes 566 ms
+00:25:52.828 [main] INFO snr.e - Compilation takes 136 ms
+Provider cannot be resolved to a type
+Set cannot be resolved to a type
+HashSet cannot be resolved to a type
+DateTimeZone cannot be resolved to a type
+DateTimeZone cannot be resolved to a variable
+TimeZone cannot be resolved to a type
+TimeZone cannot be resolved
+DateTimeZone cannot be resolved to a variable
+Date cannot be resolved to a type
+DateTimeZone cannot be resolved
+Set cannot be resolved to a type
+Set cannot be resolved to a type
+Return without setting candidates for Type32
+Adding candidate int to Type22
+Return without setting candidates for Type29
+Return without setting candidates for Type11
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type6
+Return without setting candidates for Type30
+Finding class definition name: TimeZone isfull? false fields: [] methods: [getRawOffset, inDaylightTime, getDSTSavings, getTimeZone] argument sizes: [0, 1, 0, 1]
+Adding candidates [java.util.TimeZone, java.util.TimeZone] to Type17
+Return without setting candidates for Type16
+Return without setting candidates for Type18
+Return without setting candidates for Type24
+Return without setting candidates for Type33
+Return without setting candidates for Type31
+Adding candidate void to Type10
+Return without setting candidates for Type34
+Finding class definition name: Provider isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.security.Provider, org.joda.time.tz.Provider, java.security.Provider] to Type2
+Return without setting candidates for Type13
+Return without setting candidates for Type9=Type8<Type6>
+Finding class definition name: Set isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.util.Set, java.util.Set] to Type5
+Return without setting candidates for Type7=Type5<Type6>
+Return without setting candidates for Type28
+Return without setting candidates for Type19
+Return without setting candidates for Type12
+Finding class definition name: HashSet isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [java.util.HashSet, java.util.HashSet] to Type8
+Return without setting candidates for Type26
+Return without setting candidates for Type20
+Return without setting candidates for Type27
+Finding class definition name: DateTimeZone isfull? false fields: [UTC] methods: [forOffsetMillis] argument sizes: [1]
+Adding candidates [org.joda.time.DateTimeZone] to Type4
+Finding class definition name: Date isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [java.util.Date, java.util.Date] to Type25
+Return without setting candidates for Type23
+00:25:53.980 [main] INFO snr.G - Loading initial candidates takes 1015 ms.
+Before TypeVariable: Type4, Candidates: 1
+   0. field: Type16 UTC;
+   1. subtype: Type16
+   2. subtype: Type32
+   3. method: Type34 forOffsetMillis(Type33);
+   4. simple name: DateTimeZone
+   5. subtype: Type16
+[org.joda.time.DateTimeZone]
+Before TypeVariable: Type10, Candidates: 1
+   0. subtype: Type13
+   1. full name: void
+   2. subtype: Type26
+   3. simple name: void
+[void]
+Before TypeVariable: Type22, Candidates: 1
+   0. subtype: Type30
+   1. subtype: Type23
+   2. full name: int
+   3. simple name: int
+[int]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: Set
+   1. parameterized: Type7=Type5<Type6>
+   2. subtype: Type7=Type5<Type6>
+[java.util.Set, java.util.Set]
+Before TypeVariable: Type6, Candidates: 2
+   0. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type8, Candidates: 2
+   0. simple name: HashSet
+   1. method: Type12 <init>();
+   2. parameterized: Type9=Type8<Type6>
+[java.util.HashSet, java.util.HashSet]
+Before TypeVariable: Type17, Candidates: 2
+   0. method: Type24 getRawOffset();
+   1. method: Type20 getTimeZone(Type19);
+   2. method: Type31 getDSTSavings();
+   3. method: Type29 inDaylightTime(Type28);
+   4. simple name: TimeZone
+   5. subtype: Type18
+[java.util.TimeZone, java.util.TimeZone]
+Before TypeVariable: Type25, Candidates: 2
+   0. simple name: Date
+   1. method: Type26 <init>();
+[java.util.Date, java.util.Date]
+Before TypeVariable: Type2, Candidates: 3
+   0. simple name: Provider
+[org.joda.time.tz.Provider, java.security.Provider, java.security.Provider]
+Before TypeVariable: Type7=Type5<Type6>, Candidates: 0
+   0. subtype: Type9=Type8<Type6>
+[]
+Before TypeVariable: Type9=Type8<Type6>, Candidates: 0
+   0. method: Type13 <init>();
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type12
+   1. subtype: Type10
+[]
+Before TypeVariable: Type12, Candidates: 0
+[]
+Before TypeVariable: Type13, Candidates: 0
+[]
+Before TypeVariable: Type16, Candidates: 0
+[]
+Before TypeVariable: Type18, Candidates: 0
+   0. subtype: Type20
+[]
+Before TypeVariable: Type19, Candidates: 0
+   0. subtype: Type6
+[]
+Before TypeVariable: Type20, Candidates: 0
+[]
+Before TypeVariable: Type23, Candidates: 0
+   0. subtype: Type24
+[]
+Before TypeVariable: Type24, Candidates: 0
+[]
+Before TypeVariable: Type26, Candidates: 0
+[]
+Before TypeVariable: Type27, Candidates: 0
+   0. subtype: Type29
+[]
+Before TypeVariable: Type28, Candidates: 0
+   0. subtype: Type25
+[]
+Before TypeVariable: Type29, Candidates: 0
+[]
+Before TypeVariable: Type30, Candidates: 0
+   0. subtype: Type31
+[]
+Before TypeVariable: Type31, Candidates: 0
+[]
+Before TypeVariable: Type32, Candidates: 0
+   0. subtype: Type34
+[]
+Before TypeVariable: Type33, Candidates: 0
+   0. subtype: Type22
+[]
+Before TypeVariable: Type34, Candidates: 0
+[]
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type10
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint full name: void
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type22
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint full name: int
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type2
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: Provider
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTimeZone
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type5
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: Set
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type6
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type8
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: HashSet
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type10
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: TimeZone
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type22
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: int
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type25
+00:25:53.999 [main] INFO snr.G - Populate candidates for type constraint simple name: Date
+00:25:53.999 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:54.000 [main] INFO snr.G - Populate candidates for type constraint field: Type16 UTC;
+00:25:54.003 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:54.003 [main] INFO snr.G - Populate candidates for type constraint method: Type34 forOffsetMillis(Type33);
+Processing method constraint method: Type34 forOffsetMillis(Type33); on Type4
+Current solution for c Type4 is uninit ? false [org.joda.time.DateTimeZone]
+Current solution for r Type34 is uninit ? false []
+Current solution for p0 Type33 is uninit ? false []
+Looking at method: public static Lorg/joda/time/DateTimeZone; forOffsetMillis(I)
+updated solution for c Type4 [org.joda.time.DateTimeZone]
+updated solution for r Type34 [org.joda.time.DateTimeZone]
+updated solution for p0 Type33 [int]
+00:25:54.006 [main] INFO snr.G - Populate candidates for type variable Type8
+00:25:54.006 [main] INFO snr.G - Populate candidates for type constraint method: Type12 <init>();
+Processing method constraint method: Type12 <init>(); on Type8
+Current solution for c Type8 is uninit ? false [java.util.HashSet, java.util.HashSet]
+Current solution for r Type12 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type8 [java.util.HashSet, java.util.HashSet]
+updated solution for r Type12 [void]
+00:25:54.006 [main] INFO snr.G - Populate candidates for type variable Type9=Type8<Type6>
+00:25:54.006 [main] INFO snr.G - Populate candidates for type constraint method: Type13 <init>();
+Processing method constraint method: Type13 <init>(); on Type9=Type8<Type6>
+00:25:54.006 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:54.006 [main] INFO snr.G - Populate candidates for type constraint method: Type24 getRawOffset();
+Processing method constraint method: Type24 getRawOffset(); on Type17
+Current solution for c Type17 is uninit ? false [java.util.TimeZone, java.util.TimeZone]
+Current solution for r Type24 is uninit ? false []
+Looking at method: public abstract I getRawOffset()
+Looking at method: public abstract I getRawOffset()
+updated solution for c Type17 [java.util.TimeZone, java.util.TimeZone]
+updated solution for r Type24 [int]
+00:25:54.006 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:54.006 [main] INFO snr.G - Populate candidates for type constraint method: Type29 inDaylightTime(Type28);
+Processing method constraint method: Type29 inDaylightTime(Type28); on Type17
+Current solution for c Type17 is uninit ? false [java.util.TimeZone, java.util.TimeZone]
+Current solution for r Type29 is uninit ? false []
+Current solution for p0 Type28 is uninit ? false []
+Looking at method: public abstract Z inDaylightTime(Ljava/util/Date;)
+Looking at method: public abstract Z inDaylightTime(Ljava/util/Date;)
+updated solution for c Type17 [java.util.TimeZone, java.util.TimeZone]
+updated solution for r Type29 [boolean]
+updated solution for p0 Type28 [java.util.Date, java.util.Date]
+00:25:54.008 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:54.009 [main] INFO snr.G - Populate candidates for type constraint method: Type31 getDSTSavings();
+Processing method constraint method: Type31 getDSTSavings(); on Type17
+Current solution for c Type17 is uninit ? false [java.util.TimeZone, java.util.TimeZone]
+Current solution for r Type31 is uninit ? false []
+Looking at method: public I getDSTSavings()
+Looking at method: public I getDSTSavings()
+updated solution for c Type17 [java.util.TimeZone, java.util.TimeZone]
+updated solution for r Type31 [int]
+00:25:54.009 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:54.009 [main] INFO snr.G - Populate candidates for type constraint method: Type20 getTimeZone(Type19);
+Processing method constraint method: Type20 getTimeZone(Type19); on Type17
+Current solution for c Type17 is uninit ? false [java.util.TimeZone, java.util.TimeZone]
+Current solution for r Type20 is uninit ? false []
+Current solution for p0 Type19 is uninit ? false []
+Looking at method: public static synchronized Ljava/util/TimeZone; getTimeZone(Ljava/lang/String;)
+Looking at method: public static Ljava/util/TimeZone; getTimeZone(Ljava/time/ZoneId;)
+Looking at method: public static synchronized Ljava/util/TimeZone; getTimeZone(Ljava/lang/String;)
+Looking at method: public static Ljava/util/TimeZone; getTimeZone(Ljava/time/ZoneId;)
+updated solution for c Type17 [java.util.TimeZone, java.util.TimeZone]
+updated solution for r Type20 [java.util.TimeZone, java.util.TimeZone]
+updated solution for p0 Type19 [java.lang.String, java.lang.String, java.time.ZoneId]
+00:25:54.015 [main] INFO snr.G - Populate candidates for type variable Type25
+00:25:54.015 [main] INFO snr.G - Populate candidates for type constraint method: Type26 <init>();
+Processing method constraint method: Type26 <init>(); on Type25
+Current solution for c Type25 is uninit ? false [java.util.Date, java.util.Date]
+Current solution for r Type26 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type25 [java.util.Date, java.util.Date]
+updated solution for r Type26 [void]
+00:25:54.015 [main] INFO snr.G - Populate candidates for type variable Type5
+00:25:54.015 [main] INFO snr.G - Populate candidates for type constraint parameterized: Type7=Type5<Type6>
+00:25:54.017 [main] INFO snr.G - Populate candidates for type variable Type8
+00:25:54.017 [main] INFO snr.G - Populate candidates for type constraint parameterized: Type9=Type8<Type6>
+00:25:54.017 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:54.017 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+00:25:54.017 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:54.017 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+00:25:54.018 [main] INFO snr.G - Populate candidates for type variable Type4
+00:25:54.018 [main] INFO snr.G - Populate candidates for type constraint subtype: Type32
+00:25:54.018 [main] INFO snr.G - Populate candidates for type variable Type5
+00:25:54.018 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7=Type5<Type6>
+00:25:54.025 [main] INFO snr.G - Populate candidates for type variable Type7=Type5<Type6>
+00:25:54.025 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9=Type8<Type6>
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type10
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type10
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type26
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type11
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type11
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type17
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type18
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type20
+00:25:54.044 [main] INFO snr.G - Populate candidates for type variable Type19
+00:25:54.044 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+00:25:54.050 [main] INFO snr.G - Populate candidates for type variable Type22
+00:25:54.050 [main] INFO snr.G - Populate candidates for type constraint subtype: Type23
+00:25:54.050 [main] INFO snr.G - Populate candidates for type variable Type22
+00:25:54.050 [main] INFO snr.G - Populate candidates for type constraint subtype: Type30
+00:25:54.050 [main] INFO snr.G - Populate candidates for type variable Type23
+00:25:54.050 [main] INFO snr.G - Populate candidates for type constraint subtype: Type24
+00:25:54.050 [main] INFO snr.G - Populate candidates for type variable Type27
+00:25:54.050 [main] INFO snr.G - Populate candidates for type constraint subtype: Type29
+00:25:54.050 [main] INFO snr.G - Populate candidates for type variable Type28
+00:25:54.050 [main] INFO snr.G - Populate candidates for type constraint subtype: Type25
+00:25:54.051 [main] INFO snr.G - Populate candidates for type variable Type30
+00:25:54.051 [main] INFO snr.G - Populate candidates for type constraint subtype: Type31
+00:25:54.051 [main] INFO snr.G - Populate candidates for type variable Type32
+00:25:54.051 [main] INFO snr.G - Populate candidates for type constraint subtype: Type34
+00:25:54.051 [main] INFO snr.G - Populate candidates for type variable Type33
+00:25:54.051 [main] INFO snr.G - Populate candidates for type constraint subtype: Type22
+After TypeVariable: Type4, Candidates: 1
+   0. field: Type16 UTC;
+   1. subtype: Type16
+   2. subtype: Type32
+   3. method: Type34 forOffsetMillis(Type33);
+   4. simple name: DateTimeZone
+   5. subtype: Type16
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type10, Candidates: 1
+   0. subtype: Type13
+   1. full name: void
+   2. subtype: Type26
+   3. simple name: void
+[void]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type12
+   1. subtype: Type10
+[void]
+After TypeVariable: Type12, Candidates: 1
+[void]
+After TypeVariable: Type13, Candidates: 1
+[void]
+After TypeVariable: Type16, Candidates: 1
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type22, Candidates: 1
+   0. subtype: Type30
+   1. subtype: Type23
+   2. full name: int
+   3. simple name: int
+[int]
+After TypeVariable: Type23, Candidates: 1
+   0. subtype: Type24
+[int]
+After TypeVariable: Type24, Candidates: 1
+[int]
+After TypeVariable: Type26, Candidates: 1
+[void]
+After TypeVariable: Type27, Candidates: 1
+   0. subtype: Type29
+[boolean]
+After TypeVariable: Type29, Candidates: 1
+[boolean]
+After TypeVariable: Type30, Candidates: 1
+   0. subtype: Type31
+[int]
+After TypeVariable: Type31, Candidates: 1
+[int]
+After TypeVariable: Type32, Candidates: 1
+   0. subtype: Type34
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type33, Candidates: 1
+   0. subtype: Type22
+[int]
+After TypeVariable: Type34, Candidates: 1
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: Set
+   1. parameterized: Type7=Type5<Type6>
+   2. subtype: Type7=Type5<Type6>
+[java.util.Set, java.util.Set]
+After TypeVariable: Type6, Candidates: 2
+   0. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type8, Candidates: 2
+   0. simple name: HashSet
+   1. method: Type12 <init>();
+   2. parameterized: Type9=Type8<Type6>
+[java.util.HashSet, java.util.HashSet]
+After TypeVariable: Type17, Candidates: 2
+   0. method: Type24 getRawOffset();
+   1. method: Type20 getTimeZone(Type19);
+   2. method: Type31 getDSTSavings();
+   3. method: Type29 inDaylightTime(Type28);
+   4. simple name: TimeZone
+   5. subtype: Type18
+[java.util.TimeZone, java.util.TimeZone]
+After TypeVariable: Type18, Candidates: 2
+   0. subtype: Type20
+[java.util.TimeZone, java.util.TimeZone]
+After TypeVariable: Type19, Candidates: 2
+   0. subtype: Type6
+[java.lang.String, java.lang.String]
+After TypeVariable: Type20, Candidates: 2
+[java.util.TimeZone, java.util.TimeZone]
+After TypeVariable: Type25, Candidates: 2
+   0. simple name: Date
+   1. method: Type26 <init>();
+[java.util.Date, java.util.Date]
+After TypeVariable: Type28, Candidates: 2
+   0. subtype: Type25
+[java.util.Date, java.util.Date]
+After TypeVariable: Type2, Candidates: 3
+   0. simple name: Provider
+[org.joda.time.tz.Provider, java.security.Provider, java.security.Provider]
+After TypeVariable: Type7=Type5<Type6>, Candidates: 0
+   0. subtype: Type9=Type8<Type6>
+[]
+After TypeVariable: Type9=Type8<Type6>, Candidates: 0
+   0. method: Type13 <init>();
+[]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	openjdk:jdk:1.8.0:java.security.Provider	java.security.Provider	Provider
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.util.Date	java.util.Date	Date
+	jar:android-13.jar:1:java.util.TimeZone	java.util.TimeZone	TimeZone
+	openjdk:jdk:1.8.0:java.util.Date	java.util.Date	Date
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.util.Set	java.util.Set	Set
+	openjdk:jdk:1.8.0:java.util.HashSet	java.util.HashSet	HashSet
+	jar:android-13.jar:1:java.security.Provider	java.security.Provider	Provider
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	org.joda.time.DateTimeZone	DateTimeZone
+	jar:android-13.jar:1:java.util.HashSet	java.util.HashSet	HashSet
+	openjdk:jdk:1.8.0:boolean	boolean	boolean
+	openjdk:jdk:1.8.0:java.util.TimeZone	java.util.TimeZone	TimeZone
+	openjdk:jdk:1.8.0:java.time.ZoneId	java.time.ZoneId	ZoneId
+	jar:joda-time-2.0.jar:1:org.joda.time.tz.Provider	org.joda.time.tz.Provider	Provider
+	jar:android-13.jar:1:java.util.Set	java.util.Set	Set
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.HashSet	openjdk:jdk:1.8.0:java.util.Set
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.HashSet	jar:android-13.jar:1:java.util.Set
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Date	jar:android-13.jar:1:java.util.Date
+	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:java.util.Date
+	openjdk:jdk:1.8.0:java.util.Set	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.HashSet	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.TimeZone	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.HashSet	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Set	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.security.Provider	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.security.Provider	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.time.ZoneId	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.time.ZoneId	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.tz.Provider	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.tz.Provider	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.HashSet	jar:android-13.jar:1:java.util.HashSet
+	jar:android-13.jar:1:java.util.HashSet	openjdk:jdk:1.8.0:java.util.HashSet
+	openjdk:jdk:1.8.0:java.util.Set	jar:android-13.jar:1:java.util.Set
+	jar:android-13.jar:1:java.util.Set	openjdk:jdk:1.8.0:java.util.Set
+	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.security.Provider	jar:android-13.jar:1:java.security.Provider
+	jar:android-13.jar:1:java.security.Provider	openjdk:jdk:1.8.0:java.security.Provider
+	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Date	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:boolean	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:boolean	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.Date	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.HashSet	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.security.Provider	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.Set	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.HashSet	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.security.Provider	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.Set	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone
+	openjdk:jdk:1.8.0:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone
+	jar:android-13.jar:1:java.util.Date	jar:android-13.jar:1:java.lang.String
+Printing: jfqlname.facts
+	Type22	int
+	Type10	void
+Printing: type.facts
+	Type2
+	Type4
+	Type30
+	Type5
+	Type6
+	Type8
+	Type13
+	Type16
+	Type31
+	Type32
+	Type10
+	Type11
+	Type33
+	Type34
+	Type12
+	Type28
+	Type29
+	Type7=Type5<Type6>
+	Type24
+	Type25
+	Type9=Type8<Type6>
+	Type26
+	Type27
+	Type20
+	Type22
+	Type23
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type33	openjdk:jdk:1.8.0:int
+	Type31	openjdk:jdk:1.8.0:int
+	Type10	openjdk:jdk:1.8.0:void
+	Type27	openjdk:jdk:1.8.0:boolean
+	Type25	openjdk:jdk:1.8.0:java.util.Date
+	Type6	openjdk:jdk:1.8.0:java.lang.String
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type12	openjdk:jdk:1.8.0:void
+	Type20	jar:android-13.jar:1:java.util.TimeZone
+	Type11	openjdk:jdk:1.8.0:void
+	Type30	openjdk:jdk:1.8.0:int
+	Type13	openjdk:jdk:1.8.0:void
+	Type17	jar:android-13.jar:1:java.util.TimeZone
+	Type18	jar:android-13.jar:1:java.util.TimeZone
+	Type2	openjdk:jdk:1.8.0:java.security.Provider
+	Type25	jar:android-13.jar:1:java.util.Date
+	Type5	openjdk:jdk:1.8.0:java.util.Set
+	Type8	openjdk:jdk:1.8.0:java.util.HashSet
+	Type22	openjdk:jdk:1.8.0:int
+	Type23	openjdk:jdk:1.8.0:int
+	Type28	jar:android-13.jar:1:java.util.Date
+	Type24	openjdk:jdk:1.8.0:int
+	Type17	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type2	jar:joda-time-2.0.jar:1:org.joda.time.tz.Provider
+	Type18	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type26	openjdk:jdk:1.8.0:void
+	Type32	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type34	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type20	openjdk:jdk:1.8.0:java.util.TimeZone
+	Type28	openjdk:jdk:1.8.0:java.util.Date
+	Type29	openjdk:jdk:1.8.0:boolean
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type19	jar:android-13.jar:1:java.lang.String
+	Type8	jar:android-13.jar:1:java.util.HashSet
+	Type19	openjdk:jdk:1.8.0:java.lang.String
+	Type5	jar:android-13.jar:1:java.util.Set
+	Type4	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type2	jar:android-13.jar:1:java.security.Provider
+Printing: jmethod_dependency.facts
+	6	Type4	Type34	forOffsetMillis
+	0	Type17	Type29	inDaylightTime
+	9	Type9=Type8<Type6>	Type13	<init>
+	14	Type25	Type26	<init>
+	2	Type17	Type20	getTimeZone
+	13	Type8	Type12	<init>
+	1	Type17	Type24	getRawOffset
+	3	Type17	Type31	getDSTSavings
+Printing: jsimplename.facts
+	Type22	int
+	Type5	Set
+	Type17	TimeZone
+	Type25	Date
+	Type8	HashSet
+	Type4	DateTimeZone
+	Type10	void
+	Type6	String
+	Type2	Provider
+Printing: jmethod.facts
+	0	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:boolean	inDaylightTime	1
+	8	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:int	getDSTSavings	0
+	24	jar:android-13.jar:1:java.util.HashSet	openjdk:jdk:1.8.0:void	<init>	0
+	25	openjdk:jdk:1.8.0:java.util.HashSet	openjdk:jdk:1.8.0:void	<init>	0
+	4	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone	getTimeZone	1
+	14	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	forOffsetMillis	1
+	3	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:int	getRawOffset	0
+	9	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:int	getDSTSavings	0
+	2	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:int	getRawOffset	0
+	6	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone	getTimeZone	1
+	7	jar:android-13.jar:1:java.util.TimeZone	jar:android-13.jar:1:java.util.TimeZone	getTimeZone	1
+	1	jar:android-13.jar:1:java.util.TimeZone	openjdk:jdk:1.8.0:boolean	inDaylightTime	1
+	5	openjdk:jdk:1.8.0:java.util.TimeZone	openjdk:jdk:1.8.0:java.util.TimeZone	getTimeZone	1
+	26	openjdk:jdk:1.8.0:java.util.Date	openjdk:jdk:1.8.0:void	<init>	0
+	27	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type22	Type33
+	Type23	Type22
+	Type12	Type11
+	Type18	Type17
+	Type34	Type32
+	Type10	Type11
+	Type13	Type10
+	Type24	Type23
+	Type26	Type10
+	Type16	Type4
+	Type30	Type22
+	Type32	Type4
+	Type31	Type30
+	Type6	Type19
+	Type7=Type5<Type6>	Type5
+	Type20	Type18
+	Type9=Type8<Type6>	Type7=Type5<Type6>
+	Type25	Type28
+	Type29	Type27
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	0	0	openjdk:jdk:1.8.0:java.util.Date
+	4	0	openjdk:jdk:1.8.0:java.lang.String
+	14	0	openjdk:jdk:1.8.0:int
+	6	0	jar:android-13.jar:1:java.lang.String
+	7	0	openjdk:jdk:1.8.0:java.time.ZoneId
+	1	0	jar:android-13.jar:1:java.util.Date
+	5	0	openjdk:jdk:1.8.0:java.time.ZoneId
+Printing: jmethod_param_dependency.facts
+	6	0	Type33
+	0	0	Type28
+	2	0	Type19
+All artifact rank: [jar:android-13.jar:1, openjdk:jdk:1.8.0, jar:joda-time-2.0.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type5 -> java.util.Set
+Added artifact: jar:android-13.jar:1
+Found Type28 -> java.util.Date
+Added artifact: jar:android-13.jar:1
+Found Type27 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type33 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type19 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type2 -> java.security.Provider
+Added artifact: jar:android-13.jar:1
+Found Type11 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type22 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type29 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type12 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type6 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type20 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Found Type25 -> java.util.Date
+Added artifact: jar:android-13.jar:1
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type30 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> java.util.HashSet
+Added artifact: jar:android-13.jar:1
+Found Type26 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type17 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Found Type23 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type18 -> java.util.TimeZone
+Added artifact: jar:android-13.jar:1
+Found Type24 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type31 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type5 to java.util.Set, dumping:
+Bind Type22 to int, dumping:
+Bind Type28 to java.util.Date, dumping:
+Bind Type29 to boolean, dumping:
+Bind Type19 to java.lang.String, dumping:
+Bind Type11 to void, dumping:
+Bind Type12 to void, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type30 to int, dumping:
+Bind Type8 to java.util.HashSet, dumping:
+Bind Type26 to void, dumping:
+Bind Type17 to java.util.TimeZone, dumping:
+Bind Type18 to java.util.TimeZone, dumping:
+Bind Type24 to int, dumping:
+Bind Type20 to java.util.TimeZone, dumping:
+Bind Type27 to boolean, dumping:
+Bind Type33 to int, dumping:
+Bind Type25 to java.util.Date, dumping:
+Bind Type10 to void, dumping:
+Bind Type23 to int, dumping:
+Bind Type31 to int, dumping:
+Bind Type2 to java.security.Provider, dumping:
+Bind Type13 to void, dumping:
+00:25:54.689 [main] INFO snr.k - Fixing Type2 with java.security.Provider
+00:25:54.690 [main] INFO snr.k - Fixing Type5 with java.util.Set
+00:25:54.690 [main] INFO snr.k - Fixing Type8 with java.util.HashSet
+00:25:54.690 [main] WARN snr.k - Failed to solve type 'Type4' for DateTimeZone
+00:25:54.690 [main] WARN snr.k - Failed to solve type 'Type4' for DateTimeZone
+00:25:54.690 [main] INFO snr.k - Fixing Type17 with java.util.TimeZone
+00:25:54.690 [main] INFO snr.k - Fixing Type17 with java.util.TimeZone
+00:25:54.690 [main] WARN snr.k - Failed to solve type 'Type4' for DateTimeZone
+00:25:54.690 [main] INFO snr.k - Fixing Type25 with java.util.Date
+00:25:54.690 [main] WARN snr.k - Failed to solve type 'Type4' for DateTimeZone
+00:25:54.690 [main] INFO snr.k - Fixing Type5 with java.util.Set
+00:25:54.690 [main] WARN snr.k - Failed to solve type 'Type7=Type5<Type6>' for AVAILABLE_IDS
+00:25:54.745 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+00:25:54.746 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+00:25:54.746 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+00:25:54.746 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package jodatime;
+//id = 5059663
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.TimeZone;
+import java.util.Set;
+import java.security.Provider;
+
+public class JodaTime45 {
+
+	public class FastDateTimeZoneProvider implements Provider {
+		public final Set<String> AVAILABLE_IDS = new HashSet<String>();
+
+		public DateTimeZone getZone(String id) {
+			if (id == null) {
+				return DateTimeZone.UTC;
+			}
+
+			TimeZone tz = TimeZone.getTimeZone(id);
+			if (tz == null) {
+				return DateTimeZone.UTC;
+			}
+
+			int rawOffset = tz.getRawOffset();
+
+			//sub-optimal. could be improved to only create a new Date every few minutes
+			if (tz.inDaylightTime(new Date())) {
+				rawOffset += tz.getDSTSavings();
+			}
+
+			return DateTimeZone.forOffsetMillis(rawOffset);
+		}
+
+		public Set getAvailableIDs() {
+			return AVAILABLE_IDS;
+		}
+	}
+}
+00:25:54.746 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+00:25:54.790 [main] INFO snr.e - Compilation takes 44 ms

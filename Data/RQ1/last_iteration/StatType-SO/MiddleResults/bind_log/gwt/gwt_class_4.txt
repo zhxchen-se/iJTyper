@@ -1,0 +1,152 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_4.java
+Expect check=50
+Cannot find matching typeVariable for: public class MyView extends Composite {
+  private VerticalSplitPanel mainPanel=new VerticalSplitPanel();
+  public void CountryFilterView(){
+    mainPanel.setSize("100%","100%");
+    mainPanel.setSplitPosition("50%");
+    String randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   ";
+    mainPanel.setTopWidget(new HTML(randomText));
+    mainPanel.setBottomWidget(new HTML(randomText));
+    initWidget(mainPanel);
+  }
+}
+
+Did not find solution for node: MyView with type Type1
+For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
+For node: Composite expected fqn: com.google.gwt.user.client.ui.Composite with type: Type2 got: com.google.gwt.user.client.ui.Composite
+Did not find solution for node: VerticalSplitPanel with type Type4
+Did not find solution for node: VerticalSplitPanel with type Type4
+Cannot find matching typeVariable for: mainPanel=new VerticalSplitPanel()
+Did not find solution for node: mainPanel=new VerticalSplitPanel() with type Type4
+Did not find solution for node: mainPanel with type Type4
+Did not find solution for node: new VerticalSplitPanel() with type Type4
+Did not find solution for node: VerticalSplitPanel with type Type4
+Did not find solution for node: VerticalSplitPanel with type Type4
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: CountryFilterView
+Cannot find matching typeVariable for: public void CountryFilterView(){
+  mainPanel.setSize("100%","100%");
+  mainPanel.setSplitPosition("50%");
+  String randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   ";
+  mainPanel.setTopWidget(new HTML(randomText));
+  mainPanel.setBottomWidget(new HTML(randomText));
+  initWidget(mainPanel);
+}
+
+Cannot find matching typeVariable for: public class MyView extends Composite {
+  private VerticalSplitPanel mainPanel=new VerticalSplitPanel();
+  public void CountryFilterView(){
+    mainPanel.setSize("100%","100%");
+    mainPanel.setSplitPosition("50%");
+    String randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   ";
+    mainPanel.setTopWidget(new HTML(randomText));
+    mainPanel.setBottomWidget(new HTML(randomText));
+    initWidget(mainPanel);
+  }
+}
+
+Cannot find matching typeVariable for: package shell_structure;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.VerticalSplitPanel;
+public class MyView extends Composite {
+  private VerticalSplitPanel mainPanel=new VerticalSplitPanel();
+  public void CountryFilterView(){
+    mainPanel.setSize("100%","100%");
+    mainPanel.setSplitPosition("50%");
+    String randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   ";
+    mainPanel.setTopWidget(new HTML(randomText));
+    mainPanel.setBottomWidget(new HTML(randomText));
+    initWidget(mainPanel);
+  }
+}
+
+Did not find solution for node: mainPanel.setSize("100%","100%") with type Type7
+Did not find solution for node: mainPanel with type Type4
+Cannot find matching typeVariable for: setSize
+Did not find solution for node: setSize with type Type7
+For node: "100%" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "100%" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: mainPanel.setSplitPosition("50%") with type Type11
+Did not find solution for node: mainPanel with type Type4
+Cannot find matching typeVariable for: setSplitPosition
+Did not find solution for node: setSplitPosition with type Type11
+For node: "50%" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   "
+For node: randomText="This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: randomText expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "This is some text to show how the contents on either " + "side of the splitter flow.   " + "This is some text to show how the contents on either "+ "side of the splitter flow.   "+ "This is some text to show how the contents on either "+ "side of the splitter flow.   " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "This is some text to show how the contents on either " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "side of the splitter flow.   " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "This is some text to show how the contents on either " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "side of the splitter flow.   " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "This is some text to show how the contents on either " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: "side of the splitter flow.   " expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: mainPanel.setTopWidget(new HTML(randomText)) with type Type17
+Did not find solution for node: mainPanel with type Type4
+Cannot find matching typeVariable for: setTopWidget
+Did not find solution for node: setTopWidget with type Type17
+Did not find solution for node: new HTML(randomText) with type Type14
+Did not find solution for node: HTML with type Type14
+Did not find solution for node: HTML with type Type14
+For node: randomText expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: mainPanel.setBottomWidget(new HTML(randomText)) with type Type20
+Did not find solution for node: mainPanel with type Type4
+Cannot find matching typeVariable for: setBottomWidget
+Did not find solution for node: setBottomWidget with type Type20
+Did not find solution for node: new HTML(randomText) with type Type14
+Did not find solution for node: HTML with type Type14
+Did not find solution for node: HTML with type Type14
+For node: randomText expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: initWidget(mainPanel) expected fqn: void with type: Type23 got: void
+Cannot find matching typeVariable for: initWidget
+For node: initWidget expected fqn: void with type: Type23 got: void
+Did not find solution for node: mainPanel with type Type4
+{Checked=48, Analyzed=21, Unsolved=27, Incorrect=0, Correct=21}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=11, Analyzed=1, Unsolved=10, Incorrect=0, Correct=1}
+gwt.=SimpleType: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+Total stats
+{Checked=48, Analyzed=21, Unsolved=27, Incorrect=0, Correct=21}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=11, Analyzed=1, Unsolved=10, Incorrect=0, Correct=1}
+gwt.=SimpleType: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=1, Unsolved=4, Incorrect=0, Correct=1}
+,SimpleName,0,1,0,0,1
+gwt.,ClassInstanceCreation,0,3,0,0,3
+gwt.,SimpleName,1,11,1,0,10
+gwt.,SimpleType,1,5,1,0,4
+gwt.,VariableDeclarationFragment,0,1,0,0,1
+java,InfixExpression,1,1,1,0,0
+java,SimpleName,4,4,4,0,0
+java,SimpleType,1,1,1,0,0
+java,StringLiteral,9,9,9,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,5,1,0,4
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,5,1,0,4

@@ -1,0 +1,77 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt14.java
+Expect check=14
+Cannot find matching typeVariable for: public abstract class xt14 {
+  public static void h1(){
+    final XStream stream=new XStream(new DomDriver());
+  }
+}
+
+Cannot find matching typeVariable for: xt14
+Cannot find matching typeVariable for: public abstract class xt14 {
+  public static void h1(){
+    final XStream stream=new XStream(new DomDriver());
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+public abstract class xt14 {
+  public static void h1(){
+    final XStream stream=new XStream(new DomDriver());
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  final XStream stream=new XStream(new DomDriver());
+}
+
+Cannot find matching typeVariable for: public abstract class xt14 {
+  public static void h1(){
+    final XStream stream=new XStream(new DomDriver());
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+public abstract class xt14 {
+  public static void h1(){
+    final XStream stream=new XStream(new DomDriver());
+  }
+}
+
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: stream=new XStream(new DomDriver())
+For node: stream=new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: new DomDriver() expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type4 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type4 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type4 got: com.thoughtworks.xstream.io.xml.DomDriver
+{Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
+com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0

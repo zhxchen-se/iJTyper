@@ -1,0 +1,256 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android10.java
+Expect check=50
+Cannot find matching typeVariable for: public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: Android10
+Cannot find matching typeVariable for: public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.os.SystemClock;
+import android.util.Log;
+import android.widget.Chronometer;
+import gen.R;
+public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  Chronometer t=(Chronometer)findViewById(R.id.toptime);
+  long time=SystemClock.elapsedRealtime() - t.getBase();
+  Log.d(null,"Was: " + time);
+  t.setBase(SystemClock.elapsedRealtime());
+  t.start();
+}
+
+Cannot find matching typeVariable for: public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.os.SystemClock;
+import android.util.Log;
+import android.widget.Chronometer;
+import gen.R;
+public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type5 got: java.lang.String[]
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: t=(Chronometer)findViewById(R.id.toptime)
+For node: t=(Chronometer)findViewById(R.id.toptime) expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: t expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: (Chronometer)findViewById(R.id.toptime) expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+No match for actual type MethodInvocation: findViewById(R.id.toptime) with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: findViewById
+For node: findViewById expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: long expected fqn: long with type: Type6 got: long
+Cannot find matching typeVariable for: time=SystemClock.elapsedRealtime() - t.getBase()
+For node: time=SystemClock.elapsedRealtime() - t.getBase() expected fqn: long with type: Type6 got: long
+For node: time expected fqn: long with type: Type6 got: long
+For node: SystemClock.elapsedRealtime() - t.getBase() expected fqn: long with type: Type8 got: long
+For node: SystemClock.elapsedRealtime() expected fqn: long with type: Type8 got: long
+For node: SystemClock expected fqn: android.os.SystemClock with type: Type7 got: android.os.SystemClock
+Cannot find matching typeVariable for: elapsedRealtime
+For node: elapsedRealtime expected fqn: long with type: Type8 got: long
+For node: t.getBase() expected fqn: long with type: Type10 got: long
+For node: t expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: getBase
+For node: getBase expected fqn: long with type: Type10 got: long
+For node: Log.d(null,"Was: " + time) expected fqn: int with type: Type15 got: int
+For node: Log expected fqn: android.util.Log with type: Type14 got: android.util.Log
+Cannot find matching typeVariable for: d
+For node: d expected fqn: int with type: Type15 got: int
+For node: null expected fqn: null with type: Type12 got: java.lang.String
+For node: "Was: " + time expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "Was: " expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: time expected fqn: long with type: Type6 got: long
+For node: t.setBase(SystemClock.elapsedRealtime()) expected fqn: void with type: Type19 got: void
+For node: t expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: setBase
+For node: setBase expected fqn: void with type: Type19 got: void
+For node: SystemClock.elapsedRealtime() expected fqn: long with type: Type9 got: long
+For node: SystemClock expected fqn: android.os.SystemClock with type: Type7 got: android.os.SystemClock
+Cannot find matching typeVariable for: elapsedRealtime
+For node: elapsedRealtime expected fqn: long with type: Type9 got: long
+For node: t.start() expected fqn: void with type: Type22 got: void
+For node: t expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: start
+For node: start expected fqn: void with type: Type22 got: void
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+For node: Chronometer expected fqn: android.widget.Chronometer with type: Type2 got: android.widget.Chronometer
+Cannot find matching typeVariable for: findViewById
+Cannot find matching typeVariable for: private static Chronometer findViewById(int toptime){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.os.SystemClock;
+import android.util.Log;
+import android.widget.Chronometer;
+import gen.R;
+public class Android10 {
+  public static void main(  String[] args){
+    Chronometer t=(Chronometer)findViewById(R.id.toptime);
+    long time=SystemClock.elapsedRealtime() - t.getBase();
+    Log.d(null,"Was: " + time);
+    t.setBase(SystemClock.elapsedRealtime());
+    t.start();
+  }
+  private static Chronometer findViewById(  int toptime){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: int toptime
+For node: int toptime expected fqn: int with type: Type24 got: int
+For node: int expected fqn: int with type: Type24 got: int
+For node: toptime expected fqn: int with type: Type24 got: int
+For node: null expected fqn: null with type: Type25 got: android.widget.Chronometer
+{Checked=46, Analyzed=46, Unsolved=0, Incorrect=2, Correct=44}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=46, Analyzed=46, Unsolved=0, Incorrect=2, Correct=44}
+android.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.,CastExpression,1,1,1,0,0
+android.,SimpleName,11,11,11,0,0
+android.,SimpleType,3,3,3,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+int,MethodInvocation,1,1,1,0,0
+int,PrimitiveType,1,1,1,0,0
+int,SimpleName,2,2,2,0,0
+int,SingleVariableDeclaration,1,1,1,0,0
+java,ArrayType,1,1,1,0,0
+java,InfixExpression,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,1,1,1,0,0
+long,InfixExpression,1,1,1,0,0
+long,MethodInvocation,3,3,3,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,5,5,5,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,2,2,0,2,0
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

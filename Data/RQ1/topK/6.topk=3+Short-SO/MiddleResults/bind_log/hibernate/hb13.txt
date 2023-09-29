@@ -1,0 +1,108 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb13.java
+Expect check=23
+Cannot find matching typeVariable for: public class hb13 {
+  private Type h1(  Class clazz) throws HibernateException {
+    String typename=clazz.getName();
+    return (Type)Hibernate.entity(clazz);
+  }
+}
+
+Cannot find matching typeVariable for: hb13
+Cannot find matching typeVariable for: public class hb13 {
+  private Type h1(  Class clazz) throws HibernateException {
+    String typename=clazz.getName();
+    return (Type)Hibernate.entity(clazz);
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Hibernate;
+import org.hibernate.HibernateException;
+import org.hibernate.annotations.Type;
+import org.hibernate.type.TypeFactory;
+public class hb13 {
+  private Type h1(  Class clazz) throws HibernateException {
+    String typename=clazz.getName();
+    return (Type)Hibernate.entity(clazz);
+  }
+}
+
+For node: Type expected fqn: org.hibernate.annotations.Type with type: Type2 got: org.hibernate.type.Type
+For node: Type expected fqn: org.hibernate.annotations.Type with type: Type2 got: org.hibernate.type.Type
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: private Type h1(Class clazz) throws HibernateException {
+  String typename=clazz.getName();
+  return (Type)Hibernate.entity(clazz);
+}
+
+Cannot find matching typeVariable for: public class hb13 {
+  private Type h1(  Class clazz) throws HibernateException {
+    String typename=clazz.getName();
+    return (Type)Hibernate.entity(clazz);
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.Hibernate;
+import org.hibernate.HibernateException;
+import org.hibernate.annotations.Type;
+import org.hibernate.type.TypeFactory;
+public class hb13 {
+  private Type h1(  Class clazz) throws HibernateException {
+    String typename=clazz.getName();
+    return (Type)Hibernate.entity(clazz);
+  }
+}
+
+Cannot find matching typeVariable for: Class clazz
+For node: Class clazz expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+For node: clazz expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type4 got: org.hibernate.HibernateException
+For node: HibernateException expected fqn: org.hibernate.HibernateException with type: Type4 got: org.hibernate.HibernateException
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: typename=clazz.getName()
+For node: typename=clazz.getName() expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: typename expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: clazz.getName() expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: clazz expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+Cannot find matching typeVariable for: getName
+For node: getName expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: (Type)Hibernate.entity(clazz) expected fqn: org.hibernate.annotations.Type with type: Type2 got: org.hibernate.type.Type
+For node: Type expected fqn: org.hibernate.annotations.Type with type: Type2 got: org.hibernate.type.Type
+For node: Type expected fqn: org.hibernate.annotations.Type with type: Type2 got: org.hibernate.type.Type
+No match for actual type MethodInvocation: Hibernate.entity(clazz) with type: Type9 got: org.hibernate.type.Type
+For node: Hibernate expected fqn: org.hibernate.Hibernate with type: Type8 got: org.hibernate.Hibernate
+For node: clazz expected fqn: java.lang.Class with type: Type3 got: java.lang.Class
+{Checked=20, Analyzed=20, Unsolved=0, Incorrect=5, Correct=15}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=2, Correct=2}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+Total stats
+{Checked=20, Analyzed=20, Unsolved=0, Incorrect=5, Correct=15}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=2, Correct=2}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,7,7,7,0,0
+java,SimpleType,2,2,2,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.,CastExpression,1,1,0,1,0
+org.hibernate.,SimpleName,4,4,2,2,0
+org.hibernate.,SimpleType,3,3,1,2,0

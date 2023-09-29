@@ -1,0 +1,180 @@
+12:05:16.720 [main] INFO snr.h - Building CompilationUnit takes 530 ms
+12:05:16.864 [main] INFO snr.e - Compilation takes 139 ms
+EntryPoint cannot be resolved to a type
+Window cannot be resolved
+Finding class definition name: EntryPoint isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [com.google.gwt.core.client.EntryPoint, com.google.gwt.core.client.EntryPoint] to Type2
+Return without setting candidates for Type7
+Return without setting candidates for Type8
+Finding class definition name: Window isfull? false fields: [] methods: [alert] argument sizes: [1]
+Adding candidates [com.google.gwt.user.client.Window, com.google.gwt.user.client.Window] to Type5
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type4
+Return without setting candidates for Type6
+12:05:17.267 [main] INFO snr.G - Loading initial candidates takes 265 ms.
+Before TypeVariable: Type2, Candidates: 2
+   0. simple name: EntryPoint
+[com.google.gwt.core.client.EntryPoint, com.google.gwt.core.client.EntryPoint]
+Before TypeVariable: Type4, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: Window
+   1. method: Type8 alert(Type7);
+[com.google.gwt.user.client.Window, com.google.gwt.user.client.Window]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type8
+[]
+Before TypeVariable: Type7, Candidates: 0
+   0. subtype: Type4
+[]
+Before TypeVariable: Type8, Candidates: 0
+[]
+12:05:17.277 [main] INFO snr.G - Populate candidates for type variable Type4
+12:05:17.277 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+12:05:17.277 [main] INFO snr.G - Populate candidates for type variable Type2
+12:05:17.277 [main] INFO snr.G - Populate candidates for type constraint simple name: EntryPoint
+12:05:17.277 [main] INFO snr.G - Populate candidates for type variable Type4
+12:05:17.277 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+12:05:17.277 [main] INFO snr.G - Populate candidates for type variable Type5
+12:05:17.277 [main] INFO snr.G - Populate candidates for type constraint simple name: Window
+12:05:17.277 [main] INFO snr.G - Populate candidates for type variable Type5
+12:05:17.277 [main] INFO snr.G - Populate candidates for type constraint method: Type8 alert(Type7);
+Processing method constraint method: Type8 alert(Type7); on Type5
+Current solution for c Type5 is uninit ? false [com.google.gwt.user.client.Window, com.google.gwt.user.client.Window]
+Current solution for r Type8 is uninit ? false []
+Current solution for p0 Type7 is uninit ? false []
+Looking at method: public static native V alert(Ljava/lang/String;)
+Looking at method: public static native V alert(Ljava/lang/String;)
+updated solution for c Type5 [com.google.gwt.user.client.Window, com.google.gwt.user.client.Window]
+updated solution for r Type8 [void]
+updated solution for p0 Type7 [java.lang.String]
+12:05:17.284 [main] INFO snr.G - Populate candidates for type variable Type6
+12:05:17.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+12:05:17.284 [main] INFO snr.G - Populate candidates for type variable Type7
+12:05:17.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+After TypeVariable: Type6, Candidates: 1
+   0. subtype: Type8
+[void]
+After TypeVariable: Type7, Candidates: 1
+   0. subtype: Type4
+[java.lang.String]
+After TypeVariable: Type8, Candidates: 1
+[void]
+After TypeVariable: Type2, Candidates: 2
+   0. simple name: EntryPoint
+[com.google.gwt.core.client.EntryPoint, com.google.gwt.core.client.EntryPoint]
+After TypeVariable: Type4, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: Window
+   1. method: Type8 alert(Type7);
+[com.google.gwt.user.client.Window, com.google.gwt.user.client.Window]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Window	com.google.gwt.user.client.Window	Window
+	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint	com.google.gwt.core.client.EntryPoint	EntryPoint
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint	com.google.gwt.core.client.EntryPoint	EntryPoint
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window	com.google.gwt.user.client.Window	Window
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window	openjdk:jdk:1.8.0:java.lang.String
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Window	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Window	openjdk:jdk:1.8.0:java.lang.String
+	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Window	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window	jar:gwt-user.jar:1:com.google.gwt.user.client.Window
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint	jar:android-13.jar:1:java.lang.String
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint	openjdk:jdk:1.8.0:java.lang.String
+	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint	jar:android-13.jar:1:java.lang.String
+	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type4	java.lang.String
+Printing: type.facts
+	Type2
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+Printing: candidate.facts
+	Type6	openjdk:jdk:1.8.0:void
+	Type8	openjdk:jdk:1.8.0:void
+	Type5	jar:gwt-user.jar:1:com.google.gwt.user.client.Window
+	Type2	jar:gwt-user.jar:1:com.google.gwt.core.client.EntryPoint
+	Type2	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.core.client.EntryPoint
+	Type7	jar:android-13.jar:1:java.lang.String
+	Type5	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window
+	Type4	jar:android-13.jar:1:java.lang.String
+	Type4	openjdk:jdk:1.8.0:java.lang.String
+Printing: jmethod_dependency.facts
+	0	Type5	Type8	alert
+Printing: jsimplename.facts
+	Type5	Window
+	Type2	EntryPoint
+	Type4	String
+Printing: jmethod.facts
+	1	jar:gwt-user.jar:1:com.google.gwt.user.client.Window	openjdk:jdk:1.8.0:void	alert	1
+	0	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Window	openjdk:jdk:1.8.0:void	alert	1
+Printing: jsupertype_dependency.facts
+	Type8	Type6
+	Type4	Type7
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	jar:android-13.jar:1:java.lang.String
+	0	0	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_param_dependency.facts
+	0	0	Type7
+All artifact rank: [jar:gwt-servlet-1.4.62.jar:1, jar:gwt-user.jar:1, jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type2 -> com.google.gwt.core.client.EntryPoint
+Added artifact: jar:gwt-servlet-1.4.62.jar:1
+Found Type7 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type6 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type8 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type5 -> com.google.gwt.user.client.Window
+Added artifact: jar:gwt-servlet-1.4.62.jar:1
+Solved...
+Quiting souffle
+Bind Type2 to com.google.gwt.core.client.EntryPoint, dumping:
+Bind Type7 to java.lang.String, dumping:
+Bind Type8 to void, dumping:
+Bind Type4 to java.lang.String, dumping:
+Bind Type5 to com.google.gwt.user.client.Window, dumping:
+Bind Type6 to void, dumping:
+12:05:17.478 [main] INFO snr.k - Fixing Type2 with com.google.gwt.core.client.EntryPoint
+12:05:17.479 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.Window
+12:05:17.528 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:05:17.530 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:gwt-servlet-1.4.62.jar:1
+12:05:17.530 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:05:17.530 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.gwt;
+
+import com.google.gwt.user.client.Window;
+import com.google.gwt.core.client.EntryPoint;
+
+public class gt20 implements EntryPoint {
+	public void onModuleLoad() {
+		Window.alert("Area is 4.0");
+	}
+}
+12:05:17.530 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:05:17.572 [main] INFO snr.e - Compilation takes 41 ms

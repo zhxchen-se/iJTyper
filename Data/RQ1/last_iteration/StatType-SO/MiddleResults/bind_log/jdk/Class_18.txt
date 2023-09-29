@@ -1,0 +1,845 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_18.java
+Expect check=307
+Cannot find matching typeVariable for: public class Class_18 {
+  public static String dump(  Object o,  int callCount){
+    callCount++;
+    StringBuffer tabs=new StringBuffer();
+    for (int k=0; k < callCount; k++) {
+      tabs.append("\t");
+    }
+    StringBuffer buffer=new StringBuffer();
+    Class oClass=o.getClass();
+    if (oClass.isArray()) {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("[");
+      for (int i=0; i < Array.getLength(o); i++) {
+        if (i < 0)         buffer.append(",");
+        Object value=Array.get(o,i);
+        if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+          buffer.append(value);
+        }
+ else {
+          buffer.append(dump(value,callCount));
+        }
+      }
+      buffer.append(tabs.toString());
+      buffer.append("]\n");
+    }
+ else {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("{\n");
+      while (oClass != null) {
+        Field[] fields=oClass.getDeclaredFields();
+        for (int i=0; i < fields.length; i++) {
+          buffer.append(tabs.toString());
+          fields[i].setAccessible(true);
+          buffer.append(fields[i].getName());
+          buffer.append("=");
+          try {
+            Object value=fields[i].get(o);
+            if (value != null) {
+              if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+                buffer.append(value);
+              }
+ else {
+                buffer.append(dump(value,callCount));
+              }
+            }
+          }
+ catch (          IllegalAccessException e) {
+            buffer.append(e.getMessage());
+          }
+          buffer.append("\n");
+        }
+        oClass=oClass.getSuperclass();
+      }
+      buffer.append(tabs.toString());
+      buffer.append("}\n");
+    }
+    return buffer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: Class_18
+Cannot find matching typeVariable for: public class Class_18 {
+  public static String dump(  Object o,  int callCount){
+    callCount++;
+    StringBuffer tabs=new StringBuffer();
+    for (int k=0; k < callCount; k++) {
+      tabs.append("\t");
+    }
+    StringBuffer buffer=new StringBuffer();
+    Class oClass=o.getClass();
+    if (oClass.isArray()) {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("[");
+      for (int i=0; i < Array.getLength(o); i++) {
+        if (i < 0)         buffer.append(",");
+        Object value=Array.get(o,i);
+        if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+          buffer.append(value);
+        }
+ else {
+          buffer.append(dump(value,callCount));
+        }
+      }
+      buffer.append(tabs.toString());
+      buffer.append("]\n");
+    }
+ else {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("{\n");
+      while (oClass != null) {
+        Field[] fields=oClass.getDeclaredFields();
+        for (int i=0; i < fields.length; i++) {
+          buffer.append(tabs.toString());
+          fields[i].setAccessible(true);
+          buffer.append(fields[i].getName());
+          buffer.append("=");
+          try {
+            Object value=fields[i].get(o);
+            if (value != null) {
+              if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+                buffer.append(value);
+              }
+ else {
+                buffer.append(dump(value,callCount));
+              }
+            }
+          }
+ catch (          IllegalAccessException e) {
+            buffer.append(e.getMessage());
+          }
+          buffer.append("\n");
+        }
+        oClass=oClass.getSuperclass();
+      }
+      buffer.append(tabs.toString());
+      buffer.append("}\n");
+    }
+    return buffer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+public class Class_18 {
+  public static String dump(  Object o,  int callCount){
+    callCount++;
+    StringBuffer tabs=new StringBuffer();
+    for (int k=0; k < callCount; k++) {
+      tabs.append("\t");
+    }
+    StringBuffer buffer=new StringBuffer();
+    Class oClass=o.getClass();
+    if (oClass.isArray()) {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("[");
+      for (int i=0; i < Array.getLength(o); i++) {
+        if (i < 0)         buffer.append(",");
+        Object value=Array.get(o,i);
+        if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+          buffer.append(value);
+        }
+ else {
+          buffer.append(dump(value,callCount));
+        }
+      }
+      buffer.append(tabs.toString());
+      buffer.append("]\n");
+    }
+ else {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("{\n");
+      while (oClass != null) {
+        Field[] fields=oClass.getDeclaredFields();
+        for (int i=0; i < fields.length; i++) {
+          buffer.append(tabs.toString());
+          fields[i].setAccessible(true);
+          buffer.append(fields[i].getName());
+          buffer.append("=");
+          try {
+            Object value=fields[i].get(o);
+            if (value != null) {
+              if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+                buffer.append(value);
+              }
+ else {
+                buffer.append(dump(value,callCount));
+              }
+            }
+          }
+ catch (          IllegalAccessException e) {
+            buffer.append(e.getMessage());
+          }
+          buffer.append("\n");
+        }
+        oClass=oClass.getSuperclass();
+      }
+      buffer.append(tabs.toString());
+      buffer.append("}\n");
+    }
+    return buffer.toString();
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: dump
+Cannot find matching typeVariable for: public static String dump(Object o,int callCount){
+  callCount++;
+  StringBuffer tabs=new StringBuffer();
+  for (int k=0; k < callCount; k++) {
+    tabs.append("\t");
+  }
+  StringBuffer buffer=new StringBuffer();
+  Class oClass=o.getClass();
+  if (oClass.isArray()) {
+    buffer.append("\n");
+    buffer.append(tabs.toString());
+    buffer.append("[");
+    for (int i=0; i < Array.getLength(o); i++) {
+      if (i < 0)       buffer.append(",");
+      Object value=Array.get(o,i);
+      if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+        buffer.append(value);
+      }
+ else {
+        buffer.append(dump(value,callCount));
+      }
+    }
+    buffer.append(tabs.toString());
+    buffer.append("]\n");
+  }
+ else {
+    buffer.append("\n");
+    buffer.append(tabs.toString());
+    buffer.append("{\n");
+    while (oClass != null) {
+      Field[] fields=oClass.getDeclaredFields();
+      for (int i=0; i < fields.length; i++) {
+        buffer.append(tabs.toString());
+        fields[i].setAccessible(true);
+        buffer.append(fields[i].getName());
+        buffer.append("=");
+        try {
+          Object value=fields[i].get(o);
+          if (value != null) {
+            if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+              buffer.append(value);
+            }
+ else {
+              buffer.append(dump(value,callCount));
+            }
+          }
+        }
+ catch (        IllegalAccessException e) {
+          buffer.append(e.getMessage());
+        }
+        buffer.append("\n");
+      }
+      oClass=oClass.getSuperclass();
+    }
+    buffer.append(tabs.toString());
+    buffer.append("}\n");
+  }
+  return buffer.toString();
+}
+
+Cannot find matching typeVariable for: public class Class_18 {
+  public static String dump(  Object o,  int callCount){
+    callCount++;
+    StringBuffer tabs=new StringBuffer();
+    for (int k=0; k < callCount; k++) {
+      tabs.append("\t");
+    }
+    StringBuffer buffer=new StringBuffer();
+    Class oClass=o.getClass();
+    if (oClass.isArray()) {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("[");
+      for (int i=0; i < Array.getLength(o); i++) {
+        if (i < 0)         buffer.append(",");
+        Object value=Array.get(o,i);
+        if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+          buffer.append(value);
+        }
+ else {
+          buffer.append(dump(value,callCount));
+        }
+      }
+      buffer.append(tabs.toString());
+      buffer.append("]\n");
+    }
+ else {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("{\n");
+      while (oClass != null) {
+        Field[] fields=oClass.getDeclaredFields();
+        for (int i=0; i < fields.length; i++) {
+          buffer.append(tabs.toString());
+          fields[i].setAccessible(true);
+          buffer.append(fields[i].getName());
+          buffer.append("=");
+          try {
+            Object value=fields[i].get(o);
+            if (value != null) {
+              if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+                buffer.append(value);
+              }
+ else {
+                buffer.append(dump(value,callCount));
+              }
+            }
+          }
+ catch (          IllegalAccessException e) {
+            buffer.append(e.getMessage());
+          }
+          buffer.append("\n");
+        }
+        oClass=oClass.getSuperclass();
+      }
+      buffer.append(tabs.toString());
+      buffer.append("}\n");
+    }
+    return buffer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+public class Class_18 {
+  public static String dump(  Object o,  int callCount){
+    callCount++;
+    StringBuffer tabs=new StringBuffer();
+    for (int k=0; k < callCount; k++) {
+      tabs.append("\t");
+    }
+    StringBuffer buffer=new StringBuffer();
+    Class oClass=o.getClass();
+    if (oClass.isArray()) {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("[");
+      for (int i=0; i < Array.getLength(o); i++) {
+        if (i < 0)         buffer.append(",");
+        Object value=Array.get(o,i);
+        if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+          buffer.append(value);
+        }
+ else {
+          buffer.append(dump(value,callCount));
+        }
+      }
+      buffer.append(tabs.toString());
+      buffer.append("]\n");
+    }
+ else {
+      buffer.append("\n");
+      buffer.append(tabs.toString());
+      buffer.append("{\n");
+      while (oClass != null) {
+        Field[] fields=oClass.getDeclaredFields();
+        for (int i=0; i < fields.length; i++) {
+          buffer.append(tabs.toString());
+          fields[i].setAccessible(true);
+          buffer.append(fields[i].getName());
+          buffer.append("=");
+          try {
+            Object value=fields[i].get(o);
+            if (value != null) {
+              if (value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class) {
+                buffer.append(value);
+              }
+ else {
+                buffer.append(dump(value,callCount));
+              }
+            }
+          }
+ catch (          IllegalAccessException e) {
+            buffer.append(e.getMessage());
+          }
+          buffer.append("\n");
+        }
+        oClass=oClass.getSuperclass();
+      }
+      buffer.append(tabs.toString());
+      buffer.append("}\n");
+    }
+    return buffer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: Object o
+For node: Object o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: int callCount
+Did not find solution for node: int callCount with type Type4
+Did not find solution for node: int with type Type4
+Did not find solution for node: callCount with type Type4
+Did not find solution for node: callCount++ with type Type4
+Did not find solution for node: callCount with type Type4
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: tabs=new StringBuffer()
+For node: tabs=new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: int k=0
+Did not find solution for node: int k=0 with type Type4
+Did not find solution for node: int with type Type4
+Cannot find matching typeVariable for: k=0
+Did not find solution for node: k=0 with type Type4
+Did not find solution for node: k with type Type4
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: k < callCount expected fqn: boolean with type: Type10 got: boolean
+Did not find solution for node: k with type Type4
+Did not find solution for node: callCount with type Type4
+Did not find solution for node: k++ with type Type4
+Did not find solution for node: k with type Type4
+For node: tabs.append("\t") expected fqn: java.lang.StringBuffer with type: Type12 got: java.lang.StringBuffer
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type12 got: java.lang.StringBuffer
+For node: "\t" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: buffer=new StringBuffer()
+For node: buffer=new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: new StringBuffer() expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: StringBuffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+For node: Class expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Cannot find matching typeVariable for: oClass=o.getClass()
+For node: oClass=o.getClass() expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+For node: o.getClass() expected fqn: java.lang.Class<> with type: Type16 got: java.lang.Class
+For node: o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type16 got: java.lang.Class
+For node: oClass.isArray() expected fqn: boolean with type: Type18 got: boolean
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Cannot find matching typeVariable for: isArray
+For node: isArray expected fqn: boolean with type: Type18 got: boolean
+For node: buffer.append("\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: buffer.append(tabs.toString()) expected fqn: java.lang.StringBuffer with type: Type21 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type21 got: java.lang.StringBuffer
+For node: tabs.toString() expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: buffer.append("[") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "[" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+Cannot find matching typeVariable for: int i=0
+Did not find solution for node: int i=0 with type Type4
+Did not find solution for node: int with type Type4
+Cannot find matching typeVariable for: i=0
+Did not find solution for node: i=0 with type Type4
+Did not find solution for node: i with type Type4
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: i < Array.getLength(o) expected fqn: boolean with type: Type10 got: boolean
+Did not find solution for node: i with type Type4
+For node: Array.getLength(o) expected fqn: int with type: Type25 got: int
+For node: Array expected fqn: java.lang.reflect.Array with type: Type24 got: java.lang.reflect.Array
+Cannot find matching typeVariable for: getLength
+For node: getLength expected fqn: int with type: Type25 got: int
+For node: o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Did not find solution for node: i++ with type Type4
+Did not find solution for node: i with type Type4
+For node: i < 0 expected fqn: boolean with type: Type10 got: boolean
+Did not find solution for node: i with type Type4
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: buffer.append(",") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "," expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: value=Array.get(o,i)
+For node: value=Array.get(o,i) expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Array.get(o,i) expected fqn: java.lang.Object with type: Type28 got: java.lang.Object
+For node: Array expected fqn: java.lang.reflect.Array with type: Type24 got: java.lang.reflect.Array
+Cannot find matching typeVariable for: get
+For node: get expected fqn: java.lang.Object with type: Type28 got: java.lang.Object
+For node: o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Did not find solution for node: i with type Type4
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass().isPrimitive() expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+Cannot find matching typeVariable for: isPrimitive
+For node: isPrimitive expected fqn: boolean with type: Type32 got: boolean
+For node: value.getClass() == Long.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Long.class expected fqn: java.lang.Class<java.lang.Long> with type: Type35 got: java.lang.Class
+For node: Long expected fqn: java.lang.Long with type: Type34 got: java.lang.Long
+For node: Long expected fqn: java.lang.Long with type: Type34 got: java.lang.Long
+For node: value.getClass() == String.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: String.class expected fqn: java.lang.Class<java.lang.String> with type: Type35 got: java.lang.Class
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: value.getClass() == Integer.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Integer.class expected fqn: java.lang.Class<java.lang.Integer> with type: Type35 got: java.lang.Class
+For node: Integer expected fqn: java.lang.Integer with type: Type36 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type36 got: java.lang.Integer
+For node: value.getClass() == Boolean.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Boolean.class expected fqn: java.lang.Class<java.lang.Boolean> with type: Type35 got: java.lang.Class
+For node: Boolean expected fqn: java.lang.Boolean with type: Type37 got: java.lang.Boolean
+For node: Boolean expected fqn: java.lang.Boolean with type: Type37 got: java.lang.Boolean
+For node: buffer.append(value) expected fqn: java.lang.StringBuffer with type: Type38 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type38 got: java.lang.StringBuffer
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: buffer.append(dump(value,callCount)) expected fqn: java.lang.StringBuffer with type: Type41 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type41 got: java.lang.StringBuffer
+For node: dump(value,callCount) expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: dump
+For node: dump expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: value
+For node: value expected fqn: java.lang.Object with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: callCount
+For node: callCount expected fqn: int with type: Type2 got: java.lang.String
+For node: buffer.append(tabs.toString()) expected fqn: java.lang.StringBuffer with type: Type45 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type45 got: java.lang.StringBuffer
+For node: tabs.toString() expected fqn: java.lang.String with type: Type44 got: java.lang.String
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type44 got: java.lang.String
+For node: buffer.append("]\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "]\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: buffer.append("\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: buffer.append(tabs.toString()) expected fqn: java.lang.StringBuffer with type: Type49 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type49 got: java.lang.StringBuffer
+For node: tabs.toString() expected fqn: java.lang.String with type: Type48 got: java.lang.String
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type48 got: java.lang.String
+For node: buffer.append("{\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "{\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: oClass != null expected fqn: boolean with type: Type10 got: boolean
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Did not find solution for node: null with type Type52
+For node: Field[] expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+For node: Field expected fqn: java.lang.reflect.Field with type: Type53 got: java.lang.reflect.Field
+For node: Field expected fqn: java.lang.reflect.Field with type: Type53 got: java.lang.reflect.Field
+Cannot find matching typeVariable for: fields=oClass.getDeclaredFields()
+For node: fields=oClass.getDeclaredFields() expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+For node: fields expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+For node: oClass.getDeclaredFields() expected fqn: java.lang.reflect.Field[] with type: Type55 got: java.lang.reflect.Field[]
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Cannot find matching typeVariable for: getDeclaredFields
+For node: getDeclaredFields expected fqn: java.lang.reflect.Field[] with type: Type55 got: java.lang.reflect.Field[]
+Cannot find matching typeVariable for: int i=0
+Did not find solution for node: int i=0 with type Type4
+Did not find solution for node: int with type Type4
+Cannot find matching typeVariable for: i=0
+Did not find solution for node: i=0 with type Type4
+Did not find solution for node: i with type Type4
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: i < fields.length expected fqn: boolean with type: Type10 got: boolean
+Did not find solution for node: i with type Type4
+Cannot find matching typeVariable for: fields.length
+For node: fields.length expected fqn: int with type: Type10 got: boolean
+For node: fields expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+For node: length expected fqn: int with type: Type57 got: int
+Did not find solution for node: i++ with type Type4
+Did not find solution for node: i with type Type4
+For node: buffer.append(tabs.toString()) expected fqn: java.lang.StringBuffer with type: Type59 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type59 got: java.lang.StringBuffer
+For node: tabs.toString() expected fqn: java.lang.String with type: Type58 got: java.lang.String
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type58 got: java.lang.String
+For node: fields[i].setAccessible(true) expected fqn: void with type: Type62 got: void
+For node: fields[i] expected fqn: java.lang.reflect.Field with type: Type53 got: java.lang.reflect.Field
+For node: fields expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+Cannot find matching typeVariable for: i
+For node: i expected fqn: int with type: Type53 got: java.lang.reflect.Field
+Cannot find matching typeVariable for: setAccessible
+For node: setAccessible expected fqn: void with type: Type62 got: void
+For node: true expected fqn: boolean with type: Type10 got: boolean
+For node: buffer.append(fields[i].getName()) expected fqn: java.lang.StringBuffer with type: Type67 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type67 got: java.lang.StringBuffer
+Did not find solution for node: fields[i].getName() with type Type65
+For node: fields[i] expected fqn: java.lang.reflect.Field with type: Type53 got: java.lang.reflect.Field
+For node: fields expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+Cannot find matching typeVariable for: i
+For node: i expected fqn: int with type: Type53 got: java.lang.reflect.Field
+Cannot find matching typeVariable for: getName
+Did not find solution for node: getName with type Type65
+For node: buffer.append("=") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "=" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: value=fields[i].get(o)
+For node: value=fields[i].get(o) expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: fields[i].get(o) expected fqn: java.lang.Object with type: Type70 got: java.lang.Object
+For node: fields[i] expected fqn: java.lang.reflect.Field with type: Type53 got: java.lang.reflect.Field
+For node: fields expected fqn: java.lang.reflect.Field[] with type: Type54 got: java.lang.reflect.Field[]
+Cannot find matching typeVariable for: i
+For node: i expected fqn: int with type: Type53 got: java.lang.reflect.Field
+Cannot find matching typeVariable for: get
+For node: get expected fqn: java.lang.Object with type: Type70 got: java.lang.Object
+For node: o expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: value != null expected fqn: boolean with type: Type10 got: boolean
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Did not find solution for node: null with type Type73
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class || value.getClass() == Boolean.class expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class || value.getClass() == Integer.class expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class || value.getClass() == String.class expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass().isPrimitive() || value.getClass() == Long.class expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass().isPrimitive() expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+Cannot find matching typeVariable for: isPrimitive
+For node: isPrimitive expected fqn: boolean with type: Type33 got: boolean
+For node: value.getClass() == Long.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Long.class expected fqn: java.lang.Class<java.lang.Long> with type: Type35 got: java.lang.Class
+For node: Long expected fqn: java.lang.Long with type: Type34 got: java.lang.Long
+For node: Long expected fqn: java.lang.Long with type: Type34 got: java.lang.Long
+For node: value.getClass() == String.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: String.class expected fqn: java.lang.Class<java.lang.String> with type: Type35 got: java.lang.Class
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: value.getClass() == Integer.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Integer.class expected fqn: java.lang.Class<java.lang.Integer> with type: Type35 got: java.lang.Class
+For node: Integer expected fqn: java.lang.Integer with type: Type36 got: java.lang.Integer
+For node: Integer expected fqn: java.lang.Integer with type: Type36 got: java.lang.Integer
+For node: value.getClass() == Boolean.class expected fqn: boolean with type: Type10 got: boolean
+For node: value.getClass() expected fqn: java.lang.Class<> with type: Type17 got: java.lang.Class
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getClass
+For node: getClass expected fqn: java.lang.Class<? extends java.lang.Object> with type: Type17 got: java.lang.Class
+For node: Boolean.class expected fqn: java.lang.Class<java.lang.Boolean> with type: Type35 got: java.lang.Class
+For node: Boolean expected fqn: java.lang.Boolean with type: Type37 got: java.lang.Boolean
+For node: Boolean expected fqn: java.lang.Boolean with type: Type37 got: java.lang.Boolean
+For node: buffer.append(value) expected fqn: java.lang.StringBuffer with type: Type40 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type40 got: java.lang.StringBuffer
+For node: value expected fqn: java.lang.Object with type: Type3 got: java.lang.Object
+For node: buffer.append(dump(value,callCount)) expected fqn: java.lang.StringBuffer with type: Type43 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type43 got: java.lang.StringBuffer
+For node: dump(value,callCount) expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: dump
+For node: dump expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: value
+For node: value expected fqn: java.lang.Object with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: callCount
+For node: callCount expected fqn: int with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: IllegalAccessException e
+Did not find solution for node: IllegalAccessException e with type Type74
+Did not find solution for node: IllegalAccessException with type Type74
+Did not find solution for node: IllegalAccessException with type Type74
+Did not find solution for node: e with type Type74
+For node: buffer.append(e.getMessage()) expected fqn: java.lang.StringBuffer with type: Type77 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type77 got: java.lang.StringBuffer
+Did not find solution for node: e.getMessage() with type Type75
+Did not find solution for node: e with type Type74
+Cannot find matching typeVariable for: getMessage
+Did not find solution for node: getMessage with type Type75
+For node: buffer.append("\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: oClass=oClass.getSuperclass() expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+For node: oClass.getSuperclass() expected fqn: java.lang.Class with type: Type80 got: java.lang.Class
+For node: oClass expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Cannot find matching typeVariable for: getSuperclass
+For node: getSuperclass expected fqn: java.lang.Class with type: Type80 got: java.lang.Class
+For node: buffer.append(tabs.toString()) expected fqn: java.lang.StringBuffer with type: Type83 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type83 got: java.lang.StringBuffer
+For node: tabs.toString() expected fqn: java.lang.String with type: Type82 got: java.lang.String
+For node: tabs expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type82 got: java.lang.String
+For node: buffer.append("}\n") expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuffer with type: Type14 got: java.lang.StringBuffer
+For node: "}\n" expected fqn: java.lang.String with type: Type11 got: java.lang.String
+For node: buffer.toString() expected fqn: java.lang.String with type: Type86 got: java.lang.String
+For node: buffer expected fqn: java.lang.StringBuffer with type: Type6 got: java.lang.StringBuffer
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type86 got: java.lang.String
+{Checked=304, Analyzed=264, Unsolved=40, Incorrect=42, Correct=222}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+boolean=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+int=PostfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=21, Analyzed=7, Unsolved=14, Incorrect=5, Correct=2}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ArrayAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=46, Analyzed=44, Unsolved=2, Incorrect=11, Correct=33}
+java=SimpleName: {Checked=131, Analyzed=126, Unsolved=5, Incorrect=13, Correct=113}
+java=SimpleType: {Checked=19, Analyzed=18, Unsolved=1, Incorrect=0, Correct=18}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=TypeLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=304, Analyzed=264, Unsolved=40, Incorrect=42, Correct=222}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+boolean=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+int=PostfixExpression: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=SimpleName: {Checked=21, Analyzed=7, Unsolved=14, Incorrect=5, Correct=2}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=ArrayAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=46, Analyzed=44, Unsolved=2, Incorrect=11, Correct=33}
+java=SimpleName: {Checked=131, Analyzed=126, Unsolved=5, Incorrect=13, Correct=113}
+java=SimpleType: {Checked=19, Analyzed=18, Unsolved=1, Incorrect=0, Correct=18}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=TypeLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
+java=VariableDeclarationFragment: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,InfixExpression,22,22,22,0,0
+boolean,MethodInvocation,3,3,3,0,0
+boolean,SimpleName,3,3,3,0,0
+int,MethodInvocation,1,1,1,0,0
+int,NumberLiteral,4,4,0,4,0
+int,PostfixExpression,0,4,0,0,4
+int,PrimitiveType,0,4,0,0,4
+int,QualifiedName,1,1,0,1,0
+int,SimpleName,7,21,2,5,14
+int,SingleVariableDeclaration,0,1,0,0,1
+int,VariableDeclarationExpression,0,3,0,0,3
+int,VariableDeclarationFragment,0,3,0,0,3
+java,ArrayAccess,3,3,3,0,0
+java,ArrayType,1,1,1,0,0
+java,Assignment,1,1,1,0,0
+java,ClassInstanceCreation,2,2,2,0,0
+java,MethodInvocation,44,46,33,11,2
+java,SimpleName,126,131,113,13,5
+java,SimpleType,18,19,18,0,1
+java,SingleVariableDeclaration,1,2,1,0,1
+java,StringLiteral,10,10,10,0,0
+java,TypeLiteral,8,8,0,8,0
+java,VariableDeclarationFragment,6,6,6,0,0
+null,NullLiteral,0,2,0,0,2
+void,MethodInvocation,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

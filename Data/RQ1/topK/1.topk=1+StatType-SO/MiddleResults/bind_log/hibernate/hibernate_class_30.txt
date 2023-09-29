@@ -1,0 +1,360 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_30.java
+Expect check=98
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+For node: @Entity expected fqn: javax.persistence.Entity with type: Type9 got: org.hibernate.annotations.Entity
+For node: Entity expected fqn: javax.persistence.Entity with type: Type9 got: org.hibernate.annotations.Entity
+For node: @Table(name="basic_user") expected fqn: javax.persistence.Table with type: Type11 got: org.hibernate.annotations.Table
+For node: Table expected fqn: javax.persistence.Table with type: Type11 got: org.hibernate.annotations.Table
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="basic_user"
+For node: name expected fqn: java.lang.String with type: Type11 got: org.hibernate.annotations.Table
+For node: "basic_user" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) expected fqn: org.hibernate.annotations.NamedQueries with type: Type15 got: org.hibernate.annotations.NamedQueries
+For node: NamedQueries expected fqn: org.hibernate.annotations.NamedQueries with type: Type15 got: org.hibernate.annotations.NamedQueries
+Did not find solution for node: {@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")} with type Type13
+Did not find solution for node: @NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b") with type Type12
+Did not find solution for node: NamedQuery with type Type12
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="BasicUser.findAll"
+Did not find solution for node: name with type Type12
+For node: "BasicUser.findAll" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: query
+Cannot find matching typeVariable for: query="SELECT b FROM BasicUser b"
+Did not find solution for node: query with type Type12
+For node: "SELECT b FROM BasicUser b" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: @NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName") with type Type12
+Did not find solution for node: NamedQuery with type Type12
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="BasicUser.findByFirstName"
+Did not find solution for node: name with type Type12
+For node: "BasicUser.findByFirstName" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: query
+Cannot find matching typeVariable for: query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"
+Did not find solution for node: query with type Type12
+For node: "SELECT b FROM BasicUser b WHERE b.firstName = :firstName" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: @NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName") with type Type12
+Did not find solution for node: NamedQuery with type Type12
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="BasicUser.findByLastName"
+Did not find solution for node: name with type Type12
+For node: "BasicUser.findByLastName" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: query
+Cannot find matching typeVariable for: query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"
+Did not find solution for node: query with type Type12
+For node: "SELECT b FROM BasicUser b WHERE b.lastName = :lastName" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: @NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email") with type Type12
+Did not find solution for node: NamedQuery with type Type12
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="BasicUser.findByEmail"
+Did not find solution for node: name with type Type12
+For node: "BasicUser.findByEmail" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: query
+Cannot find matching typeVariable for: query="SELECT b FROM BasicUser b WHERE b.email = :email"
+Did not find solution for node: query with type Type12
+For node: "SELECT b FROM BasicUser b WHERE b.email = :email" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: @NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password") with type Type12
+Did not find solution for node: NamedQuery with type Type12
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="BasicUser.findByPassword"
+Did not find solution for node: name with type Type12
+For node: "BasicUser.findByPassword" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: query
+Cannot find matching typeVariable for: query="SELECT b FROM BasicUser b WHERE b.password = :password"
+Did not find solution for node: query with type Type12
+For node: "SELECT b FROM BasicUser b WHERE b.password = :password" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Did not find solution for node: hibernate_class_30 with type Type1
+For node: Serializable expected fqn: java.io.Serializable with type: Type2 got: java.io.Serializable
+For node: Serializable expected fqn: java.io.Serializable with type: Type2 got: java.io.Serializable
+For node: long expected fqn: long with type: Type7 got: long
+Cannot find matching typeVariable for: serialVersionUID=1L
+For node: serialVersionUID=1L expected fqn: long with type: Type7 got: long
+For node: serialVersionUID expected fqn: long with type: Type7 got: long
+For node: 1L expected fqn: long with type: Type7 got: long
+Did not find solution for node: @Basic(optional=false) with type Type17
+Did not find solution for node: Basic with type Type17
+Cannot find matching typeVariable for: optional
+Cannot find matching typeVariable for: optional=false
+Did not find solution for node: optional with type Type17
+For node: false expected fqn: boolean with type: Type16 got: boolean
+Did not find solution for node: @Column(name="First_Name") with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="First_Name"
+Did not find solution for node: name with type Type18
+For node: "First_Name" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: firstName
+For node: firstName expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: firstName
+Cannot find matching typeVariable for: @Basic(optional=false) @Column(name="First_Name") private String firstName;
+
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+import javax.persistence.Table;
+@Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Did not find solution for node: @Basic(optional=false) with type Type17
+Did not find solution for node: Basic with type Type17
+Cannot find matching typeVariable for: optional
+Cannot find matching typeVariable for: optional=false
+Did not find solution for node: optional with type Type17
+For node: false expected fqn: boolean with type: Type16 got: boolean
+Did not find solution for node: @Column(name="Last_Name") with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="Last_Name"
+Did not find solution for node: name with type Type18
+For node: "Last_Name" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: lastName
+For node: lastName expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: lastName
+Cannot find matching typeVariable for: @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+import javax.persistence.Table;
+@Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Did not find solution for node: @Id with type Type19
+Did not find solution for node: Id with type Type19
+Did not find solution for node: @Basic(optional=false) with type Type17
+Did not find solution for node: Basic with type Type17
+Cannot find matching typeVariable for: optional
+Cannot find matching typeVariable for: optional=false
+Did not find solution for node: optional with type Type17
+For node: false expected fqn: boolean with type: Type16 got: boolean
+Did not find solution for node: @Column(name="Email") with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="Email"
+Did not find solution for node: name with type Type18
+For node: "Email" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: email
+For node: email expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: email
+Cannot find matching typeVariable for: @Id @Basic(optional=false) @Column(name="Email") private String email;
+
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+import javax.persistence.Table;
+@Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Did not find solution for node: @Basic(optional=false) with type Type17
+Did not find solution for node: Basic with type Type17
+Cannot find matching typeVariable for: optional
+Cannot find matching typeVariable for: optional=false
+Did not find solution for node: optional with type Type17
+For node: false expected fqn: boolean with type: Type16 got: boolean
+Did not find solution for node: @Column(name="Password") with type Type18
+Did not find solution for node: Column with type Type18
+Cannot find matching typeVariable for: name
+Cannot find matching typeVariable for: name="Password"
+Did not find solution for node: name with type Type18
+For node: "Password" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: password
+For node: password expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: password
+Cannot find matching typeVariable for: @Basic(optional=false) @Column(name="Password") private String password;
+
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+import javax.persistence.Table;
+@Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_30
+Cannot find matching typeVariable for: public hibernate_class_30(){
+}
+
+Cannot find matching typeVariable for: @Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+import javax.persistence.Table;
+@Entity @Table(name="basic_user") @NamedQueries({@NamedQuery(name="BasicUser.findAll",query="SELECT b FROM BasicUser b"),@NamedQuery(name="BasicUser.findByFirstName",query="SELECT b FROM BasicUser b WHERE b.firstName = :firstName"),@NamedQuery(name="BasicUser.findByLastName",query="SELECT b FROM BasicUser b WHERE b.lastName = :lastName"),@NamedQuery(name="BasicUser.findByEmail",query="SELECT b FROM BasicUser b WHERE b.email = :email"),@NamedQuery(name="BasicUser.findByPassword",query="SELECT b FROM BasicUser b WHERE b.password = :password")}) public class hibernate_class_30 implements Serializable {
+  private static final long serialVersionUID=1L;
+  @Basic(optional=false) @Column(name="First_Name") private String firstName;
+  @Basic(optional=false) @Column(name="Last_Name") private String lastName;
+  @Id @Basic(optional=false) @Column(name="Email") private String email;
+  @Basic(optional=false) @Column(name="Password") private String password;
+  public hibernate_class_30(){
+  }
+}
+
+{Checked=92, Analyzed=44, Unsolved=48, Incorrect=5, Correct=39}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+java=NormalAnnotation: {Checked=9, Analyzed=1, Unsolved=8, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=31, Analyzed=8, Unsolved=23, Incorrect=3, Correct=5}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=StringLiteral: {Checked=15, Analyzed=15, Unsolved=0, Incorrect=0, Correct=15}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=92, Analyzed=44, Unsolved=48, Incorrect=5, Correct=39}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+boolean=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+java=NormalAnnotation: {Checked=9, Analyzed=1, Unsolved=8, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=31, Analyzed=8, Unsolved=23, Incorrect=3, Correct=5}
+java=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=StringLiteral: {Checked=15, Analyzed=15, Unsolved=0, Incorrect=0, Correct=15}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+long=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=NormalAnnotation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=6, Analyzed=1, Unsolved=5, Incorrect=0, Correct=1}
+org.hibernate.=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,0,1,0,0,1
+boolean,BooleanLiteral,4,4,4,0,0
+boolean,SimpleName,0,4,0,0,4
+java,MarkerAnnotation,1,2,0,1,1
+java,NormalAnnotation,1,9,0,1,8
+java,SimpleName,8,31,5,3,23
+java,SimpleType,5,5,5,0,0
+java,StringLiteral,15,15,15,0,0
+java,VariableDeclarationFragment,4,4,4,0,0
+long,NumberLiteral,1,1,1,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,1,1,1,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+org.hibernate.,ArrayInitializer,0,1,0,0,1
+org.hibernate.,NormalAnnotation,0,5,0,0,5
+org.hibernate.,SimpleName,1,6,1,0,5
+org.hibernate.,SingleMemberAnnotation,1,1,1,0,0

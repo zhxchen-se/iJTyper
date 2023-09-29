@@ -1,0 +1,2876 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_3.java
+Expect check=337
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Did not find solution for node: Class_3 with type Type1
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: SYMBOL_INFINITE="\u221e"
+Did not find solution for node: SYMBOL_INFINITE="\u221e" with type Type3
+Did not find solution for node: SYMBOL_INFINITE with type Type3
+For node: "\u221e" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: char expected fqn: char with type: Type5 got: char
+Cannot find matching typeVariable for: SYMBOL_MINUS='-'
+For node: SYMBOL_MINUS='-' expected fqn: char with type: Type5 got: char
+For node: SYMBOL_MINUS expected fqn: char with type: Type5 got: char
+For node: '-' expected fqn: char with type: Type5 got: char
+For node: char expected fqn: char with type: Type5 got: char
+Cannot find matching typeVariable for: SYMBOL_ZERO='0'
+For node: SYMBOL_ZERO='0' expected fqn: char with type: Type5 got: char
+For node: SYMBOL_ZERO expected fqn: char with type: Type5 got: char
+For node: '0' expected fqn: char with type: Type5 got: char
+Did not find solution for node: int with type Type6
+Cannot find matching typeVariable for: DECIMAL_LEADING_GROUPS=10
+Did not find solution for node: DECIMAL_LEADING_GROUPS=10 with type Type6
+Did not find solution for node: DECIMAL_LEADING_GROUPS with type Type6
+For node: 10 expected fqn: int with type: Type9 got: byte
+Did not find solution for node: int with type Type6
+Cannot find matching typeVariable for: EXPONENTIAL_INT_THRESHOLD=1000000000
+Did not find solution for node: EXPONENTIAL_INT_THRESHOLD=1000000000 with type Type6
+Did not find solution for node: EXPONENTIAL_INT_THRESHOLD with type Type6
+Did not find solution for node: 1000000000 with type Type6
+For node: double expected fqn: double with type: Type4 got: double
+Cannot find matching typeVariable for: EXPONENTIAL_DEC_THRESHOLD=0.0001
+For node: EXPONENTIAL_DEC_THRESHOLD=0.0001 expected fqn: double with type: Type4 got: double
+For node: EXPONENTIAL_DEC_THRESHOLD expected fqn: double with type: Type4 got: double
+For node: 0.0001 expected fqn: double with type: Type10 got: float
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: decimalFormat
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: decimalFormat
+Cannot find matching typeVariable for: private DecimalFormat decimalFormat;
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: decimalFormatLong
+For node: decimalFormatLong expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: decimalFormatLong
+Cannot find matching typeVariable for: private DecimalFormat decimalFormatLong;
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: exponentialFormat
+For node: exponentialFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: exponentialFormat
+Cannot find matching typeVariable for: private DecimalFormat exponentialFormat;
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+For node: char expected fqn: char with type: Type5 got: char
+Cannot find matching typeVariable for: groupSeparator
+For node: groupSeparator expected fqn: char with type: Type5 got: char
+Cannot find matching typeVariable for: groupSeparator
+Cannot find matching typeVariable for: private char groupSeparator;
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: NumberFormatter
+Cannot find matching typeVariable for: public void NumberFormatter(int decimalPlaces){
+  configureDecimalPlaces(decimalPlaces);
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: int decimalPlaces
+Did not find solution for node: int decimalPlaces with type Type6
+Did not find solution for node: int with type Type6
+Did not find solution for node: decimalPlaces with type Type6
+For node: configureDecimalPlaces(decimalPlaces) expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: configureDecimalPlaces
+For node: configureDecimalPlaces expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: decimalPlaces
+For node: decimalPlaces expected fqn: int with type: Type2 got: void
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: configureDecimalPlaces
+Cannot find matching typeVariable for: public void configureDecimalPlaces(int decimalPlaces){
+  if (decimalPlaces <= 0) {
+    throw new IllegalArgumentException("Invalid decimal places");
+  }
+  DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+  separators.setMinusSign(SYMBOL_MINUS);
+  separators.setZeroDigit(SYMBOL_ZERO);
+  groupSeparator=separators.getGroupingSeparator();
+  StringBuilder decimal=new StringBuilder();
+  StringBuilder exponential=new StringBuilder("0.");
+  for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+    decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+  }
+  for (int i=0; i < decimalPlaces; i++) {
+    decimal.append("#");
+    exponential.append("0");
+  }
+  exponential.append("E0");
+  decimalFormat=new DecimalFormat(decimal.toString(),separators);
+  decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+  exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+  decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+  decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+  exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: int decimalPlaces
+Did not find solution for node: int decimalPlaces with type Type6
+Did not find solution for node: int with type Type6
+Did not find solution for node: decimalPlaces with type Type6
+For node: decimalPlaces <= 0 expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: decimalPlaces with type Type6
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: new IllegalArgumentException("Invalid decimal places") expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
+For node: IllegalArgumentException expected fqn: java.lang.IllegalArgumentException with type: Type12 got: java.lang.IllegalArgumentException
+For node: "Invalid decimal places" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+Cannot find matching typeVariable for: separators=new DecimalFormatSymbols(Locale.getDefault())
+For node: separators=new DecimalFormatSymbols(Locale.getDefault()) expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: new DecimalFormatSymbols(Locale.getDefault()) expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: Locale.getDefault() expected fqn: java.util.Locale with type: Type17 got: java.util.Locale
+For node: Locale expected fqn: java.util.Locale with type: Type16 got: java.util.Locale
+Cannot find matching typeVariable for: getDefault
+For node: getDefault expected fqn: java.util.Locale with type: Type17 got: java.util.Locale
+For node: separators.setMinusSign(SYMBOL_MINUS) expected fqn: void with type: Type21 got: void
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+Cannot find matching typeVariable for: setMinusSign
+For node: setMinusSign expected fqn: void with type: Type21 got: void
+For node: SYMBOL_MINUS expected fqn: char with type: Type5 got: char
+For node: separators.setZeroDigit(SYMBOL_ZERO) expected fqn: void with type: Type24 got: void
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+Cannot find matching typeVariable for: setZeroDigit
+For node: setZeroDigit expected fqn: void with type: Type24 got: void
+For node: SYMBOL_ZERO expected fqn: char with type: Type5 got: char
+For node: groupSeparator=separators.getGroupingSeparator() expected fqn: char with type: Type5 got: char
+For node: groupSeparator expected fqn: char with type: Type5 got: char
+For node: separators.getGroupingSeparator() expected fqn: char with type: Type27 got: char
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+Cannot find matching typeVariable for: getGroupingSeparator
+For node: getGroupingSeparator expected fqn: char with type: Type27 got: char
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: decimal=new StringBuilder()
+For node: decimal=new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: new StringBuilder() expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: exponential=new StringBuilder("0.")
+For node: exponential=new StringBuilder("0.") expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: new StringBuilder("0.") expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: StringBuilder expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+For node: "0." expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: int i=0
+Did not find solution for node: int i=0 with type Type6
+Did not find solution for node: int with type Type6
+Cannot find matching typeVariable for: i=0
+Did not find solution for node: i=0 with type Type6
+Did not find solution for node: i with type Type6
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: i < DECIMAL_LEADING_GROUPS expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: i with type Type6
+Did not find solution for node: DECIMAL_LEADING_GROUPS with type Type6
+Did not find solution for node: i++ with type Type6
+Did not find solution for node: i with type Type6
+Did not find solution for node: decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",") with type Type38
+For node: decimal.append("###") expected fqn: java.lang.StringBuilder with type: Type34 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuilder with type: Type34 got: java.lang.StringBuilder
+For node: "###" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: append
+Did not find solution for node: append with type Type38
+Did not find solution for node: i == DECIMAL_LEADING_GROUPS - 1 ? "." : "," with type Type37
+For node: i == DECIMAL_LEADING_GROUPS - 1 expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: i with type Type6
+Did not find solution for node: DECIMAL_LEADING_GROUPS - 1 with type Type6
+Did not find solution for node: DECIMAL_LEADING_GROUPS with type Type6
+For node: 1 expected fqn: int with type: Type9 got: byte
+For node: "." expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "," expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: int i=0
+Did not find solution for node: int i=0 with type Type6
+Did not find solution for node: int with type Type6
+Cannot find matching typeVariable for: i=0
+Did not find solution for node: i=0 with type Type6
+Did not find solution for node: i with type Type6
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: i < decimalPlaces expected fqn: boolean with type: Type11 got: boolean
+Did not find solution for node: i with type Type6
+Did not find solution for node: decimalPlaces with type Type6
+Did not find solution for node: i++ with type Type6
+Did not find solution for node: i with type Type6
+For node: decimal.append("#") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: "#" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: exponential.append("0") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: "0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: exponential.append("E0") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: "E0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: decimalFormat=new DecimalFormat(decimal.toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: new DecimalFormat(decimal.toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: decimal.toString() expected fqn: java.lang.String with type: Type41 got: java.lang.String
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type41 got: java.lang.String
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: decimalFormatLong expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: new DecimalFormat(decimal.append("####").toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: decimal.append("####").toString() expected fqn: java.lang.String with type: Type45 got: java.lang.String
+For node: decimal.append("####") expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: decimal expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: java.lang.StringBuilder with type: Type36 got: java.lang.StringBuilder
+For node: "####" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type45 got: java.lang.String
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: exponentialFormat=new DecimalFormat(exponential.toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: exponentialFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: new DecimalFormat(exponential.toString(),separators) expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+For node: exponential.toString() expected fqn: java.lang.String with type: Type49 got: java.lang.String
+For node: exponential expected fqn: java.lang.StringBuilder with type: Type29 got: java.lang.StringBuilder
+Cannot find matching typeVariable for: toString
+For node: toString expected fqn: java.lang.String with type: Type49 got: java.lang.String
+For node: separators expected fqn: java.text.DecimalFormatSymbols with type: Type15 got: java.text.DecimalFormatSymbols
+For node: decimalFormat.setRoundingMode(RoundingMode.HALF_UP) expected fqn: void with type: Type55 got: void
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: setRoundingMode
+For node: setRoundingMode expected fqn: void with type: Type55 got: void
+Cannot find matching typeVariable for: RoundingMode.HALF_UP
+For node: RoundingMode.HALF_UP expected fqn: java.math.RoundingMode with type: Type55 got: void
+For node: RoundingMode expected fqn: java.math.RoundingMode with type: Type53 got: java.math.RoundingMode
+For node: HALF_UP expected fqn: java.math.RoundingMode with type: Type54 got: java.math.RoundingMode
+For node: decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP) expected fqn: void with type: Type57 got: void
+For node: decimalFormatLong expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: setRoundingMode
+For node: setRoundingMode expected fqn: void with type: Type57 got: void
+Cannot find matching typeVariable for: RoundingMode.HALF_UP
+For node: RoundingMode.HALF_UP expected fqn: java.math.RoundingMode with type: Type57 got: void
+For node: RoundingMode expected fqn: java.math.RoundingMode with type: Type53 got: java.math.RoundingMode
+For node: HALF_UP expected fqn: java.math.RoundingMode with type: Type54 got: java.math.RoundingMode
+For node: exponentialFormat.setRoundingMode(RoundingMode.HALF_UP) expected fqn: void with type: Type57 got: void
+For node: exponentialFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: setRoundingMode
+For node: setRoundingMode expected fqn: void with type: Type57 got: void
+Cannot find matching typeVariable for: RoundingMode.HALF_UP
+For node: RoundingMode.HALF_UP expected fqn: java.math.RoundingMode with type: Type57 got: void
+For node: RoundingMode expected fqn: java.math.RoundingMode with type: Type53 got: java.math.RoundingMode
+For node: HALF_UP expected fqn: java.math.RoundingMode with type: Type54 got: java.math.RoundingMode
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: format
+Cannot find matching typeVariable for: public String format(double value){
+  String result;
+  if (Double.isNaN(value)) {
+    result="";
+  }
+ else   if (Double.isInfinite(value)) {
+    result=String.valueOf(SYMBOL_INFINITE);
+  }
+ else {
+    double absValue=Math.abs(value);
+    if (absValue >= 1) {
+      if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+        value=Math.floor(value);
+        result=exponentialFormat.format(value);
+      }
+ else {
+        result=decimalFormat.format(value);
+      }
+    }
+ else     if (absValue < 1 && absValue > 0) {
+      if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+        result=decimalFormat.format(value);
+        if (result.equalsIgnoreCase("0")) {
+          result=decimalFormatLong.format(value);
+        }
+      }
+ else {
+        result=exponentialFormat.format(value);
+      }
+    }
+ else {
+      result="0";
+    }
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: double value
+For node: double value expected fqn: double with type: Type4 got: double
+For node: double expected fqn: double with type: Type4 got: double
+For node: value expected fqn: double with type: Type4 got: double
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: result
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: result
+Cannot find matching typeVariable for: String result;
+
+Cannot find matching typeVariable for: {
+  String result;
+  if (Double.isNaN(value)) {
+    result="";
+  }
+ else   if (Double.isInfinite(value)) {
+    result=String.valueOf(SYMBOL_INFINITE);
+  }
+ else {
+    double absValue=Math.abs(value);
+    if (absValue >= 1) {
+      if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+        value=Math.floor(value);
+        result=exponentialFormat.format(value);
+      }
+ else {
+        result=decimalFormat.format(value);
+      }
+    }
+ else     if (absValue < 1 && absValue > 0) {
+      if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+        result=decimalFormat.format(value);
+        if (result.equalsIgnoreCase("0")) {
+          result=decimalFormatLong.format(value);
+        }
+      }
+ else {
+        result=exponentialFormat.format(value);
+      }
+    }
+ else {
+      result="0";
+    }
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public String format(double value){
+  String result;
+  if (Double.isNaN(value)) {
+    result="";
+  }
+ else   if (Double.isInfinite(value)) {
+    result=String.valueOf(SYMBOL_INFINITE);
+  }
+ else {
+    double absValue=Math.abs(value);
+    if (absValue >= 1) {
+      if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+        value=Math.floor(value);
+        result=exponentialFormat.format(value);
+      }
+ else {
+        result=decimalFormat.format(value);
+      }
+    }
+ else     if (absValue < 1 && absValue > 0) {
+      if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+        result=decimalFormat.format(value);
+        if (result.equalsIgnoreCase("0")) {
+          result=decimalFormatLong.format(value);
+        }
+      }
+ else {
+        result=exponentialFormat.format(value);
+      }
+    }
+ else {
+      result="0";
+    }
+  }
+  return result;
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+For node: Double.isNaN(value) expected fqn: boolean with type: Type59 got: boolean
+For node: Double expected fqn: java.lang.Double with type: Type58 got: java.lang.Double
+Cannot find matching typeVariable for: isNaN
+For node: isNaN expected fqn: boolean with type: Type59 got: boolean
+For node: value expected fqn: double with type: Type4 got: double
+For node: result="" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: Double.isInfinite(value) expected fqn: boolean with type: Type62 got: boolean
+For node: Double expected fqn: java.lang.Double with type: Type58 got: java.lang.Double
+Cannot find matching typeVariable for: isInfinite
+For node: isInfinite expected fqn: boolean with type: Type62 got: boolean
+For node: value expected fqn: double with type: Type4 got: double
+For node: result=String.valueOf(SYMBOL_INFINITE) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String.valueOf(SYMBOL_INFINITE) expected fqn: java.lang.String with type: Type65 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: valueOf
+For node: valueOf expected fqn: java.lang.String with type: Type65 got: java.lang.String
+Did not find solution for node: SYMBOL_INFINITE with type Type3
+For node: double expected fqn: double with type: Type4 got: double
+Cannot find matching typeVariable for: absValue=Math.abs(value)
+For node: absValue=Math.abs(value) expected fqn: double with type: Type4 got: double
+For node: absValue expected fqn: double with type: Type4 got: double
+For node: Math.abs(value) expected fqn: double with type: Type69 got: double
+For node: Math expected fqn: java.lang.Math with type: Type68 got: java.lang.Math
+Cannot find matching typeVariable for: abs
+For node: abs expected fqn: double with type: Type69 got: double
+For node: value expected fqn: double with type: Type4 got: double
+For node: absValue >= 1 expected fqn: boolean with type: Type11 got: boolean
+For node: absValue expected fqn: double with type: Type4 got: double
+For node: 1 expected fqn: int with type: Type9 got: byte
+For node: absValue >= EXPONENTIAL_INT_THRESHOLD expected fqn: boolean with type: Type11 got: boolean
+For node: absValue expected fqn: double with type: Type4 got: double
+Did not find solution for node: EXPONENTIAL_INT_THRESHOLD with type Type6
+For node: value=Math.floor(value) expected fqn: double with type: Type4 got: double
+For node: value expected fqn: double with type: Type4 got: double
+For node: Math.floor(value) expected fqn: double with type: Type72 got: double
+For node: Math expected fqn: java.lang.Math with type: Type68 got: java.lang.Math
+Cannot find matching typeVariable for: floor
+For node: floor expected fqn: double with type: Type72 got: double
+For node: value expected fqn: double with type: Type4 got: double
+For node: result=exponentialFormat.format(value) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: exponentialFormat.format(value) expected fqn: java.lang.String with type: Type75 got: java.lang.String
+For node: exponentialFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type75 got: java.lang.String
+For node: value expected fqn: double with type: Type4 got: double
+For node: result=decimalFormat.format(value) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: decimalFormat.format(value) expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: value expected fqn: double with type: Type4 got: double
+For node: absValue < 1 && absValue > 0 expected fqn: boolean with type: Type11 got: boolean
+For node: absValue < 1 expected fqn: boolean with type: Type11 got: boolean
+For node: absValue expected fqn: double with type: Type4 got: double
+For node: 1 expected fqn: int with type: Type9 got: byte
+For node: absValue > 0 expected fqn: boolean with type: Type11 got: boolean
+For node: absValue expected fqn: double with type: Type4 got: double
+For node: 0 expected fqn: int with type: Type9 got: byte
+For node: absValue >= EXPONENTIAL_DEC_THRESHOLD expected fqn: boolean with type: Type11 got: boolean
+For node: absValue expected fqn: double with type: Type4 got: double
+For node: EXPONENTIAL_DEC_THRESHOLD expected fqn: double with type: Type4 got: double
+For node: result=decimalFormat.format(value) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: decimalFormat.format(value) expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: value expected fqn: double with type: Type4 got: double
+Did not find solution for node: result.equalsIgnoreCase("0") with type Type78
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: equalsIgnoreCase
+Did not find solution for node: equalsIgnoreCase with type Type78
+For node: "0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result=decimalFormatLong.format(value) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: decimalFormatLong.format(value) expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: decimalFormatLong expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: value expected fqn: double with type: Type4 got: double
+For node: result=exponentialFormat.format(value) expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: exponentialFormat.format(value) expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: exponentialFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type77 got: java.lang.String
+For node: value expected fqn: double with type: Type4 got: double
+For node: result="0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: "0" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: result expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: formatWithoutGroupSeparators
+Cannot find matching typeVariable for: public String formatWithoutGroupSeparators(double value){
+  return removeGroupSeparators(format(value));
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: double value
+For node: double value expected fqn: double with type: Type4 got: double
+For node: double expected fqn: double with type: Type4 got: double
+For node: value expected fqn: double with type: Type4 got: double
+Did not find solution for node: removeGroupSeparators(format(value)) with type Type3
+Cannot find matching typeVariable for: removeGroupSeparators
+Did not find solution for node: removeGroupSeparators with type Type3
+Did not find solution for node: format(value) with type Type3
+Cannot find matching typeVariable for: format
+Did not find solution for node: format with type Type3
+Cannot find matching typeVariable for: value
+Did not find solution for node: value with type Type3
+For node: double expected fqn: double with type: Type4 got: double
+Cannot find matching typeVariable for: parse
+Cannot find matching typeVariable for: public double parse(String value,double defValue){
+  try {
+    return decimalFormat.parse(value).doubleValue();
+  }
+ catch (  ParseException e) {
+    e.printStackTrace();
+  }
+  return defValue;
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: String value
+For node: String value expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: value expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: double defValue
+For node: double defValue expected fqn: double with type: Type4 got: double
+For node: double expected fqn: double with type: Type4 got: double
+For node: defValue expected fqn: double with type: Type4 got: double
+For node: decimalFormat.parse(value).doubleValue() expected fqn: double with type: Type84 got: double
+For node: decimalFormat.parse(value) expected fqn: java.lang.Number with type: Type81 got: java.lang.Number
+For node: decimalFormat expected fqn: java.text.DecimalFormat with type: Type7 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: parse
+For node: parse expected fqn: java.lang.Number with type: Type81 got: java.lang.Number
+For node: value expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: doubleValue
+For node: doubleValue expected fqn: double with type: Type84 got: double
+Cannot find matching typeVariable for: ParseException e
+For node: ParseException e expected fqn: java.text.ParseException with type: Type86 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type86 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type86 got: java.text.ParseException
+For node: e expected fqn: java.text.ParseException with type: Type86 got: java.text.ParseException
+For node: e.printStackTrace() expected fqn: void with type: Type87 got: void
+For node: e expected fqn: java.text.ParseException with type: Type86 got: java.text.ParseException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type87 got: void
+For node: defValue expected fqn: double with type: Type4 got: double
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: removeGroupSeparators
+Cannot find matching typeVariable for: private String removeGroupSeparators(String number){
+  return number.replace(String.valueOf(groupSeparator),"");
+}
+
+Cannot find matching typeVariable for: public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.math.RoundingMode;
+public class Class_3 {
+  private static final String SYMBOL_INFINITE="\u221e";
+  private static final char SYMBOL_MINUS='-';
+  private static final char SYMBOL_ZERO='0';
+  private static final int DECIMAL_LEADING_GROUPS=10;
+  private static final int EXPONENTIAL_INT_THRESHOLD=1000000000;
+  private static final double EXPONENTIAL_DEC_THRESHOLD=0.0001;
+  private DecimalFormat decimalFormat;
+  private DecimalFormat decimalFormatLong;
+  private DecimalFormat exponentialFormat;
+  private char groupSeparator;
+  public void NumberFormatter(  int decimalPlaces){
+    configureDecimalPlaces(decimalPlaces);
+  }
+  public void configureDecimalPlaces(  int decimalPlaces){
+    if (decimalPlaces <= 0) {
+      throw new IllegalArgumentException("Invalid decimal places");
+    }
+    DecimalFormatSymbols separators=new DecimalFormatSymbols(Locale.getDefault());
+    separators.setMinusSign(SYMBOL_MINUS);
+    separators.setZeroDigit(SYMBOL_ZERO);
+    groupSeparator=separators.getGroupingSeparator();
+    StringBuilder decimal=new StringBuilder();
+    StringBuilder exponential=new StringBuilder("0.");
+    for (int i=0; i < DECIMAL_LEADING_GROUPS; i++) {
+      decimal.append("###").append(i == DECIMAL_LEADING_GROUPS - 1 ? "." : ",");
+    }
+    for (int i=0; i < decimalPlaces; i++) {
+      decimal.append("#");
+      exponential.append("0");
+    }
+    exponential.append("E0");
+    decimalFormat=new DecimalFormat(decimal.toString(),separators);
+    decimalFormatLong=new DecimalFormat(decimal.append("####").toString(),separators);
+    exponentialFormat=new DecimalFormat(exponential.toString(),separators);
+    decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    decimalFormatLong.setRoundingMode(RoundingMode.HALF_UP);
+    exponentialFormat.setRoundingMode(RoundingMode.HALF_UP);
+  }
+  public String format(  double value){
+    String result;
+    if (Double.isNaN(value)) {
+      result="";
+    }
+ else     if (Double.isInfinite(value)) {
+      result=String.valueOf(SYMBOL_INFINITE);
+    }
+ else {
+      double absValue=Math.abs(value);
+      if (absValue >= 1) {
+        if (absValue >= EXPONENTIAL_INT_THRESHOLD) {
+          value=Math.floor(value);
+          result=exponentialFormat.format(value);
+        }
+ else {
+          result=decimalFormat.format(value);
+        }
+      }
+ else       if (absValue < 1 && absValue > 0) {
+        if (absValue >= EXPONENTIAL_DEC_THRESHOLD) {
+          result=decimalFormat.format(value);
+          if (result.equalsIgnoreCase("0")) {
+            result=decimalFormatLong.format(value);
+          }
+        }
+ else {
+          result=exponentialFormat.format(value);
+        }
+      }
+ else {
+        result="0";
+      }
+    }
+    return result;
+  }
+  public String formatWithoutGroupSeparators(  double value){
+    return removeGroupSeparators(format(value));
+  }
+  public double parse(  String value,  double defValue){
+    try {
+      return decimalFormat.parse(value).doubleValue();
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+    return defValue;
+  }
+  private String removeGroupSeparators(  String number){
+    return number.replace(String.valueOf(groupSeparator),"");
+  }
+}
+
+Cannot find matching typeVariable for: String number
+For node: String number expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: number expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Did not find solution for node: number.replace(String.valueOf(groupSeparator),"") with type Type92
+For node: number expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: replace
+Did not find solution for node: replace with type Type92
+Did not find solution for node: String.valueOf(groupSeparator) with type Type89
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+Cannot find matching typeVariable for: valueOf
+Did not find solution for node: valueOf with type Type89
+For node: groupSeparator expected fqn: char with type: Type5 got: char
+For node: "" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+{Checked=325, Analyzed=265, Unsolved=60, Incorrect=13, Correct=252}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+boolean=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+char=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+char=CharacterLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+char=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+char=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+char=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+char=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+double=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+double=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=0, Correct=25}
+double=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=8, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=17, Analyzed=1, Unsolved=16, Incorrect=1, Correct=0}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=Assignment: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=21, Analyzed=16, Unsolved=5, Incorrect=0, Correct=16}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=101, Analyzed=90, Unsolved=11, Incorrect=0, Correct=90}
+java=SimpleType: {Checked=21, Analyzed=17, Unsolved=4, Incorrect=0, Correct=17}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+Total stats
+{Checked=325, Analyzed=265, Unsolved=60, Incorrect=13, Correct=252}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+boolean=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+boolean=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+char=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+char=CharacterLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+char=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+char=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+char=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+char=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+double=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+double=PrimitiveType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+double=SimpleName: {Checked=26, Analyzed=25, Unsolved=1, Incorrect=0, Correct=25}
+double=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+double=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=8, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=17, Analyzed=1, Unsolved=16, Incorrect=1, Correct=0}
+int=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=Assignment: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=ClassInstanceCreation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=ConditionalExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=21, Analyzed=16, Unsolved=5, Incorrect=0, Correct=16}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=101, Analyzed=90, Unsolved=11, Incorrect=0, Correct=90}
+java=SimpleType: {Checked=21, Analyzed=17, Unsolved=4, Incorrect=0, Correct=17}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=7, Unsolved=1, Incorrect=0, Correct=7}
+void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+,SimpleName,0,1,0,0,1
+boolean,InfixExpression,10,10,10,0,0
+boolean,MethodInvocation,2,3,2,0,1
+boolean,SimpleName,2,3,2,0,1
+char,Assignment,1,1,1,0,0
+char,CharacterLiteral,2,2,2,0,0
+char,MethodInvocation,1,1,1,0,0
+char,PrimitiveType,3,3,3,0,0
+char,SimpleName,7,7,7,0,0
+char,VariableDeclarationFragment,3,3,3,0,0
+double,Assignment,1,1,1,0,0
+double,MethodInvocation,3,3,3,0,0
+double,NumberLiteral,1,1,0,1,0
+double,PrimitiveType,6,6,6,0,0
+double,SimpleName,25,26,25,0,1
+double,SingleVariableDeclaration,3,3,3,0,0
+double,VariableDeclarationFragment,2,2,2,0,0
+int,InfixExpression,0,1,0,0,1
+int,NumberLiteral,8,9,0,8,1
+int,PostfixExpression,0,2,0,0,2
+int,PrimitiveType,0,6,0,0,6
+int,SimpleName,1,17,0,1,16
+int,SingleVariableDeclaration,0,2,0,0,2
+int,VariableDeclarationExpression,0,2,0,0,2
+int,VariableDeclarationFragment,0,4,0,0,4
+java,Assignment,11,11,11,0,0
+java,ClassInstanceCreation,7,7,7,0,0
+java,ConditionalExpression,0,1,0,0,1
+java,MethodInvocation,16,21,16,0,5
+java,QualifiedName,3,3,0,3,0
+java,SimpleName,90,101,90,0,11
+java,SimpleType,17,21,17,0,4
+java,SingleVariableDeclaration,3,3,3,0,0
+java,StringLiteral,14,14,14,0,0
+java,VariableDeclarationFragment,7,8,7,0,1
+void,MethodInvocation,7,7,7,0,0
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,7,7,7,0,0

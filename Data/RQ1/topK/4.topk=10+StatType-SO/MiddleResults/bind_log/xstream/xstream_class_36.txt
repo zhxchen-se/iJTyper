@@ -1,0 +1,513 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_36.java
+Expect check=103
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_36
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.HashMap;
+import java.util.Map;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: public class MapTest {
+  private Map<String,String> mapList;
+  public MapTest(){
+    mapList=new HashMap<String,String>();
+  }
+  public void setServicesHealth(  String id,  String name){
+    mapList.put(id,name);
+  }
+}
+
+Did not find solution for node: MapTest with type Type1
+Did not find solution for node: Map<String,String> with type Type15=Type13<Type14,Type14>
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type13 got: java.util.Map
+For node: Map expected fqn: java.util.Map<java.lang.String,java.lang.String> with type: Type13 got: java.util.Map
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+Cannot find matching typeVariable for: mapList
+Did not find solution for node: mapList with type Type15=Type13<Type14,Type14>
+Cannot find matching typeVariable for: mapList
+Cannot find matching typeVariable for: private Map<String,String> mapList;
+
+Cannot find matching typeVariable for: public class MapTest {
+  private Map<String,String> mapList;
+  public MapTest(){
+    mapList=new HashMap<String,String>();
+  }
+  public void setServicesHealth(  String id,  String name){
+    mapList.put(id,name);
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.HashMap;
+import java.util.Map;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: MapTest
+Cannot find matching typeVariable for: public MapTest(){
+  mapList=new HashMap<String,String>();
+}
+
+Cannot find matching typeVariable for: public class MapTest {
+  private Map<String,String> mapList;
+  public MapTest(){
+    mapList=new HashMap<String,String>();
+  }
+  public void setServicesHealth(  String id,  String name){
+    mapList.put(id,name);
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.HashMap;
+import java.util.Map;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Did not find solution for node: mapList=new HashMap<String,String>() with type Type15=Type13<Type14,Type14>
+Did not find solution for node: mapList with type Type15=Type13<Type14,Type14>
+Did not find solution for node: new HashMap<String,String>() with type Type17=Type16<Type14,Type14>
+Did not find solution for node: HashMap<String,String> with type Type17=Type16<Type14,Type14>
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.String> with type: Type16 got: java.util.HashMap
+For node: HashMap expected fqn: java.util.HashMap<java.lang.String,java.lang.String> with type: Type16 got: java.util.HashMap
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: setServicesHealth
+Cannot find matching typeVariable for: public void setServicesHealth(String id,String name){
+  mapList.put(id,name);
+}
+
+Cannot find matching typeVariable for: public class MapTest {
+  private Map<String,String> mapList;
+  public MapTest(){
+    mapList=new HashMap<String,String>();
+  }
+  public void setServicesHealth(  String id,  String name){
+    mapList.put(id,name);
+  }
+}
+
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.HashMap;
+import java.util.Map;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: String id
+For node: String id expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: id expected fqn: java.lang.String with type: Type14 got: java.lang.String
+Cannot find matching typeVariable for: String name
+For node: String name expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: name expected fqn: java.lang.String with type: Type14 got: java.lang.String
+Did not find solution for node: mapList.put(id,name) with type Type21
+Did not find solution for node: mapList with type Type15=Type13<Type14,Type14>
+Cannot find matching typeVariable for: put
+Did not find solution for node: put with type Type21
+For node: id expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: name expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String arg[]){
+  MapTest services=null;
+  services.setServicesHealth("ID01","Jack");
+  services.setServicesHealth("ID02","Neil");
+  XStream stream=new XStream(new StaxDriver());
+  stream.alias("MapTest",MapTest.class);
+  stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+  String xmlStr=stream.toXML(services);
+  System.out.println(xmlStr);
+}
+
+Cannot find matching typeVariable for: public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.HashMap;
+import java.util.Map;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+public class xstream_class_36 {
+public class MapTest {
+    private Map<String,String> mapList;
+    public MapTest(){
+      mapList=new HashMap<String,String>();
+    }
+    public void setServicesHealth(    String id,    String name){
+      mapList.put(id,name);
+    }
+  }
+  public static void main(  String arg[]){
+    MapTest services=null;
+    services.setServicesHealth("ID01","Jack");
+    services.setServicesHealth("ID02","Neil");
+    XStream stream=new XStream(new StaxDriver());
+    stream.alias("MapTest",MapTest.class);
+    stream.addImplicitMap(MapTest.class,"map","id",String.class,"name");
+    String xmlStr=stream.toXML(services);
+    System.out.println(xmlStr);
+  }
+}
+
+Cannot find matching typeVariable for: String arg[]
+For node: String arg[] expected fqn: java.lang.String[] with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type14 got: java.lang.String
+For node: arg expected fqn: java.lang.String[] with type: Type29 got: java.lang.String[]
+Did not find solution for node: MapTest with type Type1
+Did not find solution for node: MapTest with type Type1
+Cannot find matching typeVariable for: services=null
+Did not find solution for node: services=null with type Type1
+Did not find solution for node: services with type Type1
+Did not find solution for node: null with type Type30
+Did not find solution for node: services.setServicesHealth("ID01","Jack") with type Type32
+Did not find solution for node: services with type Type1
+Cannot find matching typeVariable for: setServicesHealth
+Did not find solution for node: setServicesHealth with type Type32
+For node: "ID01" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "Jack" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+Did not find solution for node: services.setServicesHealth("ID02","Neil") with type Type35
+Did not find solution for node: services with type Type1
+Cannot find matching typeVariable for: setServicesHealth
+Did not find solution for node: setServicesHealth with type Type35
+For node: "ID02" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "Neil" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: stream=new XStream(new StaxDriver())
+For node: stream=new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+For node: new StaxDriver() expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type37 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type37 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type37 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: stream.alias("MapTest",MapTest.class) expected fqn: void with type: Type42 got: void
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type42 got: void
+For node: "MapTest" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: MapTest.class expected fqn: java.lang.Class<xstream_class_36.MapTest> with type: Type41 got: java.lang.Class
+Did not find solution for node: MapTest with type Type1
+Did not find solution for node: MapTest with type Type1
+For node: stream.addImplicitMap(MapTest.class,"map","id",String.class,"name") expected fqn: void with type: Type46 got: void
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: addImplicitMap
+For node: addImplicitMap expected fqn: void with type: Type46 got: void
+For node: MapTest.class expected fqn: java.lang.Class<xstream_class_36.MapTest> with type: Type41 got: java.lang.Class
+Did not find solution for node: MapTest with type Type1
+Did not find solution for node: MapTest with type Type1
+For node: "map" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "id" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: String.class expected fqn: java.lang.Class<java.lang.String> with type: Type41 got: java.lang.Class
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "name" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+Cannot find matching typeVariable for: xmlStr=stream.toXML(services)
+For node: xmlStr=stream.toXML(services) expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: xmlStr expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: stream.toXML(services) expected fqn: java.lang.String with type: Type53 got: java.lang.String
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type36 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: toXML
+For node: toXML expected fqn: java.lang.String with type: Type53 got: java.lang.String
+Did not find solution for node: services with type Type1
+For node: System.out.println(xmlStr) expected fqn: void with type: Type58 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type58 got: void
+For node: System expected fqn: java.lang.System with type: Type56 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type57 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type58 got: void
+For node: xmlStr expected fqn: java.lang.String with type: Type31 got: java.lang.String
+{Checked=96, Analyzed=70, Unsolved=26, Incorrect=9, Correct=61}
+=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=24, Analyzed=21, Unsolved=3, Incorrect=2, Correct=19}
+java=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=2, Correct=9}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=TypeLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+Total stats
+{Checked=96, Analyzed=70, Unsolved=26, Incorrect=9, Correct=61}
+=SimpleName: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=24, Analyzed=21, Unsolved=3, Incorrect=2, Correct=19}
+java=SimpleType: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=2, Correct=9}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=TypeLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+,SimpleName,0,8,0,0,8
+,SimpleType,0,3,0,0,3
+,VariableDeclarationFragment,0,1,0,0,1
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,7,7,7,0,0
+com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+java,Assignment,0,1,0,0,1
+java,ClassInstanceCreation,0,1,0,0,1
+java,MethodInvocation,1,2,1,0,1
+java,ParameterizedType,0,2,0,0,2
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,21,24,19,2,3
+java,SimpleType,11,11,9,2,0
+java,SingleVariableDeclaration,3,3,2,1,0
+java,StringLiteral,8,8,8,0,0
+java,TypeLiteral,3,3,0,3,0
+java,VariableDeclarationFragment,1,2,1,0,1
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,3,5,3,0,2
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,3,5,3,0,2

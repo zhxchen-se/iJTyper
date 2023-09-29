@@ -1,0 +1,339 @@
+12:54:01.787 [main] INFO snr.h - Building CompilationUnit takes 443 ms
+12:54:01.890 [main] INFO snr.e - Compilation takes 100 ms
+View cannot be resolved to a type
+Context cannot be resolved to a type
+Color cannot be resolved to a variable
+TextView cannot be resolved to a type
+TextView cannot be resolved to a type
+TextView cannot be resolved to a type
+Return without setting candidates for Type15
+Return without setting candidates for Type20
+Return without setting candidates for Type12
+Finding class definition name: Color isfull? false fields: [RED] methods: [] argument sizes: []
+Adding candidates [java.awt.Color, android.graphics.Color] to Type14
+Adding candidate void to Type4
+Finding class definition name: View isfull? false fields: [] methods: [setBackgroundColor, <init>] argument sizes: [1, 1]
+Adding candidates [android.view.View] to Type2
+Finding class definition name: Context isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [com.sun.xml.internal.bind.CycleRecoverable$Context, javax.naming.Context, com.google.gwt.dev.jjs.ast.Context, org.omg.CORBA.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, com.google.gwt.resources.css.ast.Context, org.jaxen.Context, com.google.gwt.dev.js.rhino.Context, org.hibernate.jdbc.JDBCContext$Context, android.content.Context, org.hibernate.transaction.TransactionFactory$Context] to Type11
+Return without setting candidates for Type17
+Return without setting candidates for Type21
+Return without setting candidates for Type22
+Return without setting candidates for Type16
+Return without setting candidates for Type18
+Finding class definition name: TextView isfull? false fields: [VISIBLE] methods: [setVisibility] argument sizes: [1]
+Adding candidates [android.widget.TextView] to Type10
+Return without setting candidates for Type13
+Return without setting candidates for Type19
+12:54:02.156 [main] INFO snr.G - Loading initial candidates takes 182 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. method: Type18 setBackgroundColor(Type17);
+   1. simple name: View
+   2. method: Type13 <init>(Type12);
+[android.view.View]
+Before TypeVariable: Type4, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type13
+[void]
+Before TypeVariable: Type10, Candidates: 1
+   0. method: Type22 setVisibility(Type21);
+   1. simple name: TextView
+   2. field: Type19 VISIBLE;
+[android.widget.TextView]
+Before TypeVariable: Type14, Candidates: 2
+   0. field: Type15 RED;
+   1. simple name: Color
+[java.awt.Color, android.graphics.Color]
+Before TypeVariable: Type11, Candidates: 11
+   0. simple name: Context
+[com.google.gwt.resources.css.ast.Context, com.google.gwt.dev.js.rhino.Context, javax.naming.Context, android.content.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, org.omg.CORBA.Context, com.google.gwt.dev.jjs.ast.Context, org.hibernate.transaction.TransactionFactory$Context, com.sun.xml.internal.bind.CycleRecoverable$Context, org.hibernate.jdbc.JDBCContext$Context, org.jaxen.Context]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type11
+[]
+Before TypeVariable: Type13, Candidates: 0
+[]
+Before TypeVariable: Type15, Candidates: 0
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type18
+[]
+Before TypeVariable: Type17, Candidates: 0
+   0. subtype: Type15
+[]
+Before TypeVariable: Type18, Candidates: 0
+[]
+Before TypeVariable: Type19, Candidates: 0
+[]
+Before TypeVariable: Type20, Candidates: 0
+   0. subtype: Type22
+[]
+Before TypeVariable: Type21, Candidates: 0
+   0. subtype: Type19
+[]
+Before TypeVariable: Type22, Candidates: 0
+[]
+12:54:02.172 [main] INFO snr.G - Populate candidates for type variable Type4
+12:54:02.172 [main] INFO snr.G - Populate candidates for type constraint full name: void
+12:54:02.172 [main] INFO snr.G - Populate candidates for type variable Type2
+12:54:02.172 [main] INFO snr.G - Populate candidates for type constraint simple name: View
+12:54:02.172 [main] INFO snr.G - Populate candidates for type variable Type4
+12:54:02.172 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+12:54:02.173 [main] INFO snr.G - Populate candidates for type variable Type10
+12:54:02.173 [main] INFO snr.G - Populate candidates for type constraint simple name: TextView
+12:54:02.173 [main] INFO snr.G - Populate candidates for type variable Type11
+12:54:02.173 [main] INFO snr.G - Populate candidates for type constraint simple name: Context
+12:54:02.173 [main] INFO snr.G - Populate candidates for type variable Type14
+12:54:02.173 [main] INFO snr.G - Populate candidates for type constraint simple name: Color
+12:54:02.173 [main] INFO snr.G - Populate candidates for type variable Type10
+12:54:02.173 [main] INFO snr.G - Populate candidates for type constraint field: Type19 VISIBLE;
+12:54:02.174 [main] INFO snr.G - Populate candidates for type variable Type14
+12:54:02.174 [main] INFO snr.G - Populate candidates for type constraint field: Type15 RED;
+12:54:02.175 [main] INFO snr.G - Populate candidates for type variable Type2
+12:54:02.175 [main] INFO snr.G - Populate candidates for type constraint method: Type13 <init>(Type12);
+Processing method constraint method: Type13 <init>(Type12); on Type2
+Current solution for c Type2 is uninit ? false [android.view.View]
+Current solution for r Type13 is uninit ? false []
+Current solution for p0 Type12 is uninit ? false []
+Looking at method: public V <init>(Landroid/content/Context;)
+updated solution for c Type2 [android.view.View]
+updated solution for r Type13 [void]
+updated solution for p0 Type12 [android.content.Context]
+12:54:02.178 [main] INFO snr.G - Populate candidates for type variable Type2
+12:54:02.178 [main] INFO snr.G - Populate candidates for type constraint method: Type18 setBackgroundColor(Type17);
+Processing method constraint method: Type18 setBackgroundColor(Type17); on Type2
+Current solution for c Type2 is uninit ? false [android.view.View]
+Current solution for r Type18 is uninit ? false []
+Current solution for p0 Type17 is uninit ? false []
+Looking at method: public V setBackgroundColor(I)
+updated solution for c Type2 [android.view.View]
+updated solution for r Type18 [void]
+updated solution for p0 Type17 [int]
+12:54:02.179 [main] INFO snr.G - Populate candidates for type variable Type10
+12:54:02.179 [main] INFO snr.G - Populate candidates for type constraint method: Type22 setVisibility(Type21);
+Processing method constraint method: Type22 setVisibility(Type21); on Type10
+Current solution for c Type10 is uninit ? false [android.widget.TextView]
+Current solution for r Type22 is uninit ? false []
+Current solution for p0 Type21 is uninit ? false []
+Looking at method: public V setVisibility(I)
+updated solution for c Type10 [android.widget.TextView]
+updated solution for r Type22 [void]
+updated solution for p0 Type21 [int]
+12:54:02.180 [main] INFO snr.G - Populate candidates for type variable Type4
+12:54:02.180 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+12:54:02.180 [main] INFO snr.G - Populate candidates for type variable Type12
+12:54:02.180 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+12:54:02.183 [main] INFO snr.G - Populate candidates for type variable Type16
+12:54:02.183 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+12:54:02.183 [main] INFO snr.G - Populate candidates for type variable Type17
+12:54:02.183 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+12:54:02.183 [main] INFO snr.G - Populate candidates for type variable Type20
+12:54:02.183 [main] INFO snr.G - Populate candidates for type constraint subtype: Type22
+12:54:02.183 [main] INFO snr.G - Populate candidates for type variable Type21
+12:54:02.183 [main] INFO snr.G - Populate candidates for type constraint subtype: Type19
+After TypeVariable: Type2, Candidates: 1
+   0. method: Type18 setBackgroundColor(Type17);
+   1. simple name: View
+   2. method: Type13 <init>(Type12);
+[android.view.View]
+After TypeVariable: Type4, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type13
+[void]
+After TypeVariable: Type10, Candidates: 1
+   0. method: Type22 setVisibility(Type21);
+   1. simple name: TextView
+   2. field: Type19 VISIBLE;
+[android.widget.TextView]
+After TypeVariable: Type11, Candidates: 1
+   0. simple name: Context
+[android.content.Context]
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type11
+[android.content.Context]
+After TypeVariable: Type13, Candidates: 1
+[void]
+After TypeVariable: Type15, Candidates: 1
+[int]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type18
+[void]
+After TypeVariable: Type17, Candidates: 1
+   0. subtype: Type15
+[int]
+After TypeVariable: Type18, Candidates: 1
+[void]
+After TypeVariable: Type19, Candidates: 1
+[int]
+After TypeVariable: Type20, Candidates: 1
+   0. subtype: Type22
+[void]
+After TypeVariable: Type21, Candidates: 1
+   0. subtype: Type19
+[int]
+After TypeVariable: Type22, Candidates: 1
+[void]
+After TypeVariable: Type14, Candidates: 2
+   0. field: Type15 RED;
+   1. simple name: Color
+[java.awt.Color, android.graphics.Color]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:android-13.jar:1:android.view.View	android.view.View	View
+	openjdk:jdk:1.8.0:int	int	int
+	jar:android-13.jar:1:android.content.Context	android.content.Context	Context
+	openjdk:jdk:1.8.0:java.awt.Color	java.awt.Color	Color
+	jar:android-13.jar:1:android.widget.TextView	android.widget.TextView	TextView
+	jar:android-13.jar:1:android.graphics.Color	android.graphics.Color	Color
+Printing: jclasssuper.facts
+	jar:android-13.jar:1:android.widget.TextView	jar:android-13.jar:1:android.view.View
+Printing: jfqlname.facts
+	Type4	void
+Printing: type.facts
+	Type2
+	Type4
+	Type13
+	Type14
+	Type15
+	Type16
+	Type20
+	Type21
+	Type10
+	Type11
+	Type22
+	Type12
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type11	jar:android-13.jar:1:android.content.Context
+	Type12	jar:android-13.jar:1:android.content.Context
+	Type21	openjdk:jdk:1.8.0:int
+	Type15	openjdk:jdk:1.8.0:int
+	Type4	openjdk:jdk:1.8.0:void
+	Type20	openjdk:jdk:1.8.0:void
+	Type2	jar:android-13.jar:1:android.view.View
+	Type22	openjdk:jdk:1.8.0:void
+	Type14	openjdk:jdk:1.8.0:java.awt.Color
+	Type13	openjdk:jdk:1.8.0:void
+	Type16	openjdk:jdk:1.8.0:void
+	Type18	openjdk:jdk:1.8.0:void
+	Type10	jar:android-13.jar:1:android.widget.TextView
+	Type14	jar:android-13.jar:1:android.graphics.Color
+	Type19	openjdk:jdk:1.8.0:int
+	Type17	openjdk:jdk:1.8.0:int
+Printing: jmethod_dependency.facts
+	0	Type2	Type13	<init>
+	1	Type2	Type18	setBackgroundColor
+	4	Type10	Type22	setVisibility
+Printing: jsimplename.facts
+	Type4	void
+	Type10	TextView
+	Type2	View
+	Type14	Color
+	Type11	Context
+Printing: jmethod.facts
+	1	jar:android-13.jar:1:android.view.View	openjdk:jdk:1.8.0:void	setBackgroundColor	1
+	0	jar:android-13.jar:1:android.view.View	openjdk:jdk:1.8.0:void	<init>	1
+	4	jar:android-13.jar:1:android.widget.TextView	openjdk:jdk:1.8.0:void	setVisibility	1
+Printing: jsupertype_dependency.facts
+	Type11	Type12
+	Type22	Type20
+	Type13	Type4
+	Type19	Type21
+	Type15	Type17
+	Type18	Type16
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	openjdk:jdk:1.8.0:int
+	0	0	jar:android-13.jar:1:android.content.Context
+	4	0	openjdk:jdk:1.8.0:int
+Printing: jmethod_param_dependency.facts
+	0	0	Type12
+	1	0	Type17
+	4	0	Type21
+All artifact rank: [jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type20 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type12 -> android.content.Context
+Added artifact: jar:android-13.jar:1
+Found Type4 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type14 -> android.graphics.Color
+Added artifact: jar:android-13.jar:1
+Found Type17 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type21 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type16 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type15 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type11 -> android.content.Context
+Added artifact: jar:android-13.jar:1
+Found Type22 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type18 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type19 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type2 -> android.view.View
+Added artifact: jar:android-13.jar:1
+Found Type10 -> android.widget.TextView
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type15 to int, dumping:
+Bind Type20 to void, dumping:
+Bind Type12 to android.content.Context, dumping:
+Bind Type4 to void, dumping:
+Bind Type14 to android.graphics.Color, dumping:
+Bind Type2 to android.view.View, dumping:
+Bind Type17 to int, dumping:
+Bind Type11 to android.content.Context, dumping:
+Bind Type21 to int, dumping:
+Bind Type16 to void, dumping:
+Bind Type22 to void, dumping:
+Bind Type18 to void, dumping:
+Bind Type13 to void, dumping:
+Bind Type10 to android.widget.TextView, dumping:
+Bind Type19 to int, dumping:
+12:54:02.357 [main] INFO snr.k - Fixing Type2 with android.view.View
+12:54:02.357 [main] INFO snr.k - Fixing Type11 with android.content.Context
+12:54:02.357 [main] INFO snr.k - Fixing Type14 with android.graphics.Color
+12:54:02.358 [main] INFO snr.k - Fixing Type10 with android.widget.TextView
+12:54:02.358 [main] INFO snr.k - Fixing Type10 with android.widget.TextView
+12:54:02.404 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:54:02.406 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+12:54:02.406 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:54:02.406 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package androidExamples;
+//ID = 1182620
+
+import android.content.Context;
+import android.graphics.Color;
+import android.widget.TextView;
+import android.view.View;
+
+public class Android41 extends View {
+	public Android41(Context context) {
+		super(context);
+		setBackgroundColor(Color.RED);
+	}
+
+	TextView tv;
+
+	public void adText(TextView tv) {
+		this.tv = tv;
+		tv.setVisibility(tv.VISIBLE);
+	}
+}
+12:54:02.406 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:54:02.457 [main] INFO snr.e - Compilation takes 51 ms

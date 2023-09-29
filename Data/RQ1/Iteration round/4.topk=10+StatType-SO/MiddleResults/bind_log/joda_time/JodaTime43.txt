@@ -1,0 +1,182 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime43.java
+Expect check=56
+Cannot find matching typeVariable for: public class JodaTime43 {
+  public static void main(  String[] args){
+    DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+    DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+    DateTime date1=formatter.parseDateTime("2010-01-01");
+    DateTime date2=formatter.parseDateTime("2010-01-01 01");
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime43
+Cannot find matching typeVariable for: public class JodaTime43 {
+  public static void main(  String[] args){
+    DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+    DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+    DateTime date1=formatter.parseDateTime("2010-01-01");
+    DateTime date2=formatter.parseDateTime("2010-01-01 01");
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatterBuilder;
+import org.joda.time.format.DateTimeParser;
+public class JodaTime43 {
+  public static void main(  String[] args){
+    DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+    DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+    DateTime date1=formatter.parseDateTime("2010-01-01");
+    DateTime date2=formatter.parseDateTime("2010-01-01 01");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+  DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+  DateTime date1=formatter.parseDateTime("2010-01-01");
+  DateTime date2=formatter.parseDateTime("2010-01-01 01");
+}
+
+Cannot find matching typeVariable for: public class JodaTime43 {
+  public static void main(  String[] args){
+    DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+    DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+    DateTime date1=formatter.parseDateTime("2010-01-01");
+    DateTime date2=formatter.parseDateTime("2010-01-01 01");
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatterBuilder;
+import org.joda.time.format.DateTimeParser;
+public class JodaTime43 {
+  public static void main(  String[] args){
+    DateTimeParser[] parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()};
+    DateTimeFormatter formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter();
+    DateTime date1=formatter.parseDateTime("2010-01-01");
+    DateTime date2=formatter.parseDateTime("2010-01-01 01");
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: DateTimeParser[] expected fqn: org.joda.time.format.DateTimeParser[] with type: Type6 got: org.joda.time.format.DateTimeParser[]
+For node: DateTimeParser expected fqn: org.joda.time.format.DateTimeParser with type: Type5 got: org.joda.time.format.DateTimeParser
+For node: DateTimeParser expected fqn: org.joda.time.format.DateTimeParser with type: Type5 got: org.joda.time.format.DateTimeParser
+Cannot find matching typeVariable for: parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()}
+For node: parsers={DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()} expected fqn: org.joda.time.format.DateTimeParser[] with type: Type6 got: org.joda.time.format.DateTimeParser[]
+For node: parsers expected fqn: org.joda.time.format.DateTimeParser[] with type: Type6 got: org.joda.time.format.DateTimeParser[]
+For node: {DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser(),DateTimeFormat.forPattern("yyyy-MM-dd").getParser()} expected fqn: org.joda.time.format.DateTimeParser[] with type: Type16 got: org.joda.time.format.DateTimeParser[]
+For node: DateTimeFormat.forPattern("yyyy-MM-dd HH").getParser() expected fqn: org.joda.time.format.DateTimeParser with type: Type12 got: org.joda.time.format.DateTimeParser
+For node: DateTimeFormat.forPattern("yyyy-MM-dd HH") expected fqn: org.joda.time.format.DateTimeFormatter with type: Type9 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormat expected fqn: org.joda.time.format.DateTimeFormat with type: Type8 got: org.joda.time.format.DateTimeFormat
+Cannot find matching typeVariable for: forPattern
+For node: forPattern expected fqn: org.joda.time.format.DateTimeFormatter with type: Type9 got: org.joda.time.format.DateTimeFormatter
+For node: "yyyy-MM-dd HH" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: getParser
+For node: getParser expected fqn: org.joda.time.format.DateTimeParser with type: Type12 got: org.joda.time.format.DateTimeParser
+For node: DateTimeFormat.forPattern("yyyy-MM-dd").getParser() expected fqn: org.joda.time.format.DateTimeParser with type: Type14 got: org.joda.time.format.DateTimeParser
+For node: DateTimeFormat.forPattern("yyyy-MM-dd") expected fqn: org.joda.time.format.DateTimeFormatter with type: Type11 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormat expected fqn: org.joda.time.format.DateTimeFormat with type: Type8 got: org.joda.time.format.DateTimeFormat
+Cannot find matching typeVariable for: forPattern
+For node: forPattern expected fqn: org.joda.time.format.DateTimeFormatter with type: Type11 got: org.joda.time.format.DateTimeFormatter
+For node: "yyyy-MM-dd" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: getParser
+For node: getParser expected fqn: org.joda.time.format.DateTimeParser with type: Type14 got: org.joda.time.format.DateTimeParser
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter()
+For node: formatter=new DateTimeFormatterBuilder().append(null,parsers).toFormatter() expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+For node: formatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+For node: new DateTimeFormatterBuilder().append(null,parsers).toFormatter() expected fqn: org.joda.time.format.DateTimeFormatter with type: Type26 got: org.joda.time.format.DateTimeFormatter
+For node: new DateTimeFormatterBuilder().append(null,parsers) expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type22 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: new DateTimeFormatterBuilder() expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type19 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: DateTimeFormatterBuilder expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type19 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: DateTimeFormatterBuilder expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type19 got: org.joda.time.format.DateTimeFormatterBuilder
+Cannot find matching typeVariable for: append
+For node: append expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type22 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: null expected fqn: null with type: Type21 got: org.joda.time.format.DateTimePrinter
+For node: parsers expected fqn: org.joda.time.format.DateTimeParser[] with type: Type6 got: org.joda.time.format.DateTimeParser[]
+Cannot find matching typeVariable for: toFormatter
+For node: toFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type26 got: org.joda.time.format.DateTimeFormatter
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: date1=formatter.parseDateTime("2010-01-01")
+For node: date1=formatter.parseDateTime("2010-01-01") expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: date1 expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: formatter.parseDateTime("2010-01-01") expected fqn: org.joda.time.DateTime with type: Type29 got: org.joda.time.DateTime
+For node: formatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: parseDateTime
+For node: parseDateTime expected fqn: org.joda.time.DateTime with type: Type29 got: org.joda.time.DateTime
+For node: "2010-01-01" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: date2=formatter.parseDateTime("2010-01-01 01")
+For node: date2=formatter.parseDateTime("2010-01-01 01") expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: date2 expected fqn: org.joda.time.DateTime with type: Type28 got: org.joda.time.DateTime
+For node: formatter.parseDateTime("2010-01-01 01") expected fqn: org.joda.time.DateTime with type: Type31 got: org.joda.time.DateTime
+For node: formatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: parseDateTime
+For node: parseDateTime expected fqn: org.joda.time.DateTime with type: Type31 got: org.joda.time.DateTime
+For node: "2010-01-01 01" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+{Checked=53, Analyzed=53, Unsolved=0, Incorrect=1, Correct=52}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+org.joda.time.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=53, Analyzed=53, Unsolved=0, Incorrect=1, Correct=52}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.joda.time.=ArrayInitializer: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+org.joda.time.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ArrayType,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,4,4,4,0,0
+null,NullLiteral,1,1,0,1,0
+org.joda.time.,ArrayInitializer,1,1,1,0,0
+org.joda.time.,ArrayType,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,MethodInvocation,8,8,8,0,0
+org.joda.time.,SimpleName,22,22,22,0,0
+org.joda.time.,SimpleType,5,5,5,0,0
+org.joda.time.,VariableDeclarationFragment,4,4,4,0,0
+void,PrimitiveType,1,1,1,0,0

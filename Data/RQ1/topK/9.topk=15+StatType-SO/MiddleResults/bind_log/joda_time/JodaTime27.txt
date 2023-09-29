@@ -1,0 +1,226 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime27.java
+Expect check=61
+Cannot find matching typeVariable for: public class JodaTime27 {
+  public static void main(  String[] args){
+    ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+    int firstYear=0;
+    int lastYear=0;
+    for (int y=firstYear; y <= lastYear; y++) {
+      for (int m=1; m <= 12; m++) {
+        monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime27
+Cannot find matching typeVariable for: public class JodaTime27 {
+  public static void main(  String[] args){
+    ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+    int firstYear=0;
+    int lastYear=0;
+    for (int y=firstYear; y <= lastYear; y++) {
+      for (int m=1; m <= 12; m++) {
+        monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+public class JodaTime27 {
+  public static void main(  String[] args){
+    ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+    int firstYear=0;
+    int lastYear=0;
+    for (int y=firstYear; y <= lastYear; y++) {
+      for (int m=1; m <= 12; m++) {
+        monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+      }
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+  int firstYear=0;
+  int lastYear=0;
+  for (int y=firstYear; y <= lastYear; y++) {
+    for (int m=1; m <= 12; m++) {
+      monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class JodaTime27 {
+  public static void main(  String[] args){
+    ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+    int firstYear=0;
+    int lastYear=0;
+    for (int y=firstYear; y <= lastYear; y++) {
+      for (int m=1; m <= 12; m++) {
+        monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+public class JodaTime27 {
+  public static void main(  String[] args){
+    ArrayList<DateTime> monthStarts=new ArrayList<DateTime>();
+    int firstYear=0;
+    int lastYear=0;
+    for (int y=firstYear; y <= lastYear; y++) {
+      for (int m=1; m <= 12; m++) {
+        monthStarts.add(new DateTime(y + "-" + m+ "-01"));
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: ArrayList<DateTime> expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type5 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type5 got: java.util.ArrayList
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: monthStarts=new ArrayList<DateTime>()
+For node: monthStarts=new ArrayList<DateTime>() expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+For node: monthStarts expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+For node: new ArrayList<DateTime>() expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+For node: ArrayList<DateTime> expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type5 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type5 got: java.util.ArrayList
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+Did not find solution for node: int with type Type11
+Cannot find matching typeVariable for: firstYear=0
+Did not find solution for node: firstYear=0 with type Type11
+Did not find solution for node: firstYear with type Type11
+For node: 0 expected fqn: int with type: Type12 got: byte
+Did not find solution for node: int with type Type11
+Cannot find matching typeVariable for: lastYear=0
+Did not find solution for node: lastYear=0 with type Type11
+Did not find solution for node: lastYear with type Type11
+For node: 0 expected fqn: int with type: Type12 got: byte
+Cannot find matching typeVariable for: int y=firstYear
+Did not find solution for node: int y=firstYear with type Type11
+Did not find solution for node: int with type Type11
+Cannot find matching typeVariable for: y=firstYear
+Did not find solution for node: y=firstYear with type Type11
+Did not find solution for node: y with type Type11
+Did not find solution for node: firstYear with type Type11
+For node: y <= lastYear expected fqn: boolean with type: Type13 got: boolean
+Did not find solution for node: y with type Type11
+Did not find solution for node: lastYear with type Type11
+Did not find solution for node: y++ with type Type11
+Did not find solution for node: y with type Type11
+Cannot find matching typeVariable for: int m=1
+Did not find solution for node: int m=1 with type Type11
+Did not find solution for node: int with type Type11
+Cannot find matching typeVariable for: m=1
+Did not find solution for node: m=1 with type Type11
+Did not find solution for node: m with type Type11
+For node: 1 expected fqn: int with type: Type12 got: byte
+For node: m <= 12 expected fqn: boolean with type: Type13 got: boolean
+Did not find solution for node: m with type Type11
+For node: 12 expected fqn: int with type: Type12 got: byte
+Did not find solution for node: m++ with type Type11
+Did not find solution for node: m with type Type11
+Did not find solution for node: monthStarts.add(new DateTime(y + "-" + m+ "-01")) with type Type18
+For node: monthStarts expected fqn: java.util.ArrayList<org.joda.time.DateTime> with type: Type7=Type5<Type6> got: java.util.ArrayList<org.joda.time.DateTime>
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type18
+For node: new DateTime(y + "-" + m+ "-01") expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type6 got: org.joda.time.DateTime
+Did not find solution for node: y + "-" + m+ "-01" with type Type11
+Did not find solution for node: y with type Type11
+Did not find solution for node: "-" with type Type15
+Cannot find matching typeVariable for: m
+Did not find solution for node: m with type Type11
+Did not find solution for node: "-01" with type Type15
+{Checked=58, Analyzed=29, Unsolved=29, Incorrect=8, Correct=21}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=2, Correct=4}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=58, Analyzed=29, Unsolved=29, Incorrect=8, Correct=21}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=2, Correct=4}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,InfixExpression,2,2,2,0,0
+boolean,MethodInvocation,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+int,NumberLiteral,4,4,0,4,0
+int,PostfixExpression,0,2,0,0,2
+int,PrimitiveType,0,4,0,0,4
+int,SimpleName,0,12,0,0,12
+int,VariableDeclarationExpression,0,2,0,0,2
+int,VariableDeclarationFragment,0,4,0,0,4
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,InfixExpression,0,1,0,0,1
+java,ParameterizedType,2,2,2,0,0
+java,SimpleName,6,6,4,2,0
+java,SimpleType,3,3,1,2,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,0,2,0,0,2
+java,VariableDeclarationFragment,1,1,1,0,0
+org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,SimpleName,3,3,3,0,0
+org.joda.time.,SimpleType,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0

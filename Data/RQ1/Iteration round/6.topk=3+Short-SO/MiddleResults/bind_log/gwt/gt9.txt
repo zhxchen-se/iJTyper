@@ -1,0 +1,87 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt9.java
+Expect check=16
+Cannot find matching typeVariable for: public class gt9 {
+  public String format(  Date date){
+    return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+  }
+}
+
+Cannot find matching typeVariable for: gt9
+Cannot find matching typeVariable for: public class gt9 {
+  public String format(  Date date){
+    return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.i18n.client.DateTimeFormat;
+import java.util.Date;
+public class gt9 {
+  public String format(  Date date){
+    return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type2 got: java.lang.String
+Cannot find matching typeVariable for: format
+Cannot find matching typeVariable for: public String format(Date date){
+  return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+}
+
+Cannot find matching typeVariable for: public class gt9 {
+  public String format(  Date date){
+    return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.i18n.client.DateTimeFormat;
+import java.util.Date;
+public class gt9 {
+  public String format(  Date date){
+    return DateTimeFormat.getFormat("yyyyMMdd").format(date);
+  }
+}
+
+Cannot find matching typeVariable for: Date date
+Did not find solution for node: Date date with type Type3
+Did not find solution for node: Date with type Type3
+Did not find solution for node: Date with type Type3
+Did not find solution for node: date with type Type3
+For node: DateTimeFormat.getFormat("yyyyMMdd").format(date) expected fqn: java.lang.String with type: Type9 got: java.lang.String
+Did not find solution for node: DateTimeFormat.getFormat("yyyyMMdd") with type Type6
+Did not find solution for node: DateTimeFormat with type Type5
+Cannot find matching typeVariable for: getFormat
+Did not find solution for node: getFormat with type Type6
+Did not find solution for node: "yyyyMMdd" with type Type4
+Cannot find matching typeVariable for: format
+For node: format expected fqn: java.lang.String with type: Type9 got: java.lang.String
+Did not find solution for node: date with type Type3
+{Checked=13, Analyzed=4, Unsolved=9, Incorrect=0, Correct=4}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=13, Analyzed=4, Unsolved=9, Incorrect=0, Correct=4}
+gwt.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.,MethodInvocation,0,1,0,0,1
+gwt.,SimpleName,0,2,0,0,2
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,2,5,2,0,3
+java,SimpleType,1,2,1,0,1
+java,SingleVariableDeclaration,0,1,0,0,1
+java,StringLiteral,0,1,0,0,1

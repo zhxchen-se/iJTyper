@@ -1,0 +1,407 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android37.java
+Expect check=76
+Cannot find matching typeVariable for: public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+Did not find solution for node: Android37 with type Type1
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: Activity expected fqn: android.app.Activity with type: Type2 got: android.app.Activity
+For node: Runnable expected fqn: java.lang.Runnable with type: Type3 got: java.lang.Runnable
+For node: Runnable expected fqn: java.lang.Runnable with type: Type3 got: java.lang.Runnable
+For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Cannot find matching typeVariable for: mProgress
+For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Cannot find matching typeVariable for: mProgress
+Cannot find matching typeVariable for: public ProgressDialog mProgress;
+
+Cannot find matching typeVariable for: public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.Handler;
+import android.os.Message;
+public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: send
+Cannot find matching typeVariable for: public void send(){
+  mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+  Thread thread=new Thread(this);
+  thread.start();
+}
+
+Cannot find matching typeVariable for: public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.Handler;
+import android.os.Message;
+public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+For node: mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true) expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+For node: ProgressDialog.show(this,"Please wait","Please wait",true,true) expected fqn: android.app.ProgressDialog with type: Type9 got: android.app.ProgressDialog
+For node: ProgressDialog expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Cannot find matching typeVariable for: show
+For node: show expected fqn: android.app.ProgressDialog with type: Type9 got: android.app.ProgressDialog
+Did not find solution for node: this with type Type1
+For node: "Please wait" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "Please wait" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: true expected fqn: boolean with type: Type8 got: boolean
+For node: true expected fqn: boolean with type: Type8 got: boolean
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+Cannot find matching typeVariable for: thread=new Thread(this)
+For node: thread=new Thread(this) expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: new Thread(this) expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+Did not find solution for node: this with type Type1
+For node: thread.start() expected fqn: void with type: Type19 got: void
+For node: thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+Cannot find matching typeVariable for: start
+For node: start expected fqn: void with type: Type19 got: void
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: run
+Cannot find matching typeVariable for: public void run(){
+  try {
+    Thread.sleep(10000);
+  }
+ catch (  InterruptedException e) {
+    e.printStackTrace();
+  }
+  Message msg=new Message();
+  mHandler.sendMessage(msg);
+}
+
+Cannot find matching typeVariable for: public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.Handler;
+import android.os.Message;
+public class Android37 extends Activity implements Runnable {
+  public ProgressDialog mProgress;
+  public void send(){
+    mProgress=ProgressDialog.show(this,"Please wait","Please wait",true,true);
+    Thread thread=new Thread(this);
+    thread.start();
+  }
+  public void run(){
+    try {
+      Thread.sleep(10000);
+    }
+ catch (    InterruptedException e) {
+      e.printStackTrace();
+    }
+    Message msg=new Message();
+    mHandler.sendMessage(msg);
+  }
+  private final Handler mHandler=new Handler(){
+    @Override public void handleMessage(    Message msg){
+      mProgress.dismiss();
+    }
+  }
+;
+}
+
+For node: Thread.sleep(10000) expected fqn: void with type: Type22 got: void
+For node: Thread expected fqn: java.lang.Thread with type: Type16 got: java.lang.Thread
+Cannot find matching typeVariable for: sleep
+For node: sleep expected fqn: void with type: Type22 got: void
+For node: 10000 expected fqn: int with type: Type21 got: short
+Cannot find matching typeVariable for: InterruptedException e
+For node: InterruptedException e expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
+For node: InterruptedException expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
+For node: InterruptedException expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
+For node: e expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
+For node: e.printStackTrace() expected fqn: void with type: Type26 got: void
+For node: e expected fqn: java.lang.InterruptedException with type: Type25 got: java.lang.InterruptedException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type26 got: void
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+Cannot find matching typeVariable for: msg=new Message()
+For node: msg=new Message() expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: msg expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: new Message() expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: mHandler.sendMessage(msg) expected fqn: boolean with type: Type30 got: boolean
+For node: mHandler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+Cannot find matching typeVariable for: sendMessage
+For node: sendMessage expected fqn: boolean with type: Type30 got: boolean
+For node: msg expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Handler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+For node: Handler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+Cannot find matching typeVariable for: mHandler=new Handler(){
+  @Override public void handleMessage(  Message msg){
+    mProgress.dismiss();
+  }
+}
+
+For node: mHandler=new Handler(){
+  @Override public void handleMessage(  Message msg){
+    mProgress.dismiss();
+  }
+}
+ expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+For node: mHandler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+For node: new Handler(){
+  @Override public void handleMessage(  Message msg){
+    mProgress.dismiss();
+  }
+}
+ expected fqn:  with type: Type6 got: android.os.Handler
+For node: Handler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+For node: Handler expected fqn: android.os.Handler with type: Type6 got: android.os.Handler
+Cannot find matching typeVariable for: {
+  @Override public void handleMessage(  Message msg){
+    mProgress.dismiss();
+  }
+}
+
+For node: @Override expected fqn: java.lang.Override with type: Type33 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type33 got: java.lang.Override
+For node: void expected fqn: void with type: Type4 got: void
+Cannot find matching typeVariable for: handleMessage
+Cannot find matching typeVariable for: @Override public void handleMessage(Message msg){
+  mProgress.dismiss();
+}
+
+Cannot find matching typeVariable for: {
+  @Override public void handleMessage(  Message msg){
+    mProgress.dismiss();
+  }
+}
+
+For node: handleMessage expected fqn: void with type: Type6 got: android.os.Handler
+Cannot find matching typeVariable for: Message msg
+For node: Message msg expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: Message expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: msg expected fqn: android.os.Message with type: Type28 got: android.os.Message
+For node: mProgress.dismiss() expected fqn: void with type: Type34 got: void
+For node: mProgress expected fqn: android.app.ProgressDialog with type: Type5 got: android.app.ProgressDialog
+Cannot find matching typeVariable for: dismiss
+For node: dismiss expected fqn: void with type: Type34 got: void
+{Checked=71, Analyzed=68, Unsolved=3, Incorrect=3, Correct=65}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+android.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+Total stats
+{Checked=71, Analyzed=68, Unsolved=3, Incorrect=3, Correct=65}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+android.=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=BooleanLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+,ClassInstanceCreation,1,1,0,1,0
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,2,0,0,2
+android.,Assignment,1,1,1,0,0
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,MethodInvocation,1,1,1,0,0
+android.,SimpleName,16,16,16,0,0
+android.,SimpleType,7,7,7,0,0
+android.,SingleVariableDeclaration,1,1,1,0,0
+android.,VariableDeclarationFragment,3,3,3,0,0
+boolean,BooleanLiteral,2,2,2,0,0
+boolean,MethodInvocation,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+int,NumberLiteral,1,1,0,1,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,MarkerAnnotation,1,1,1,0,0
+java,SimpleName,10,10,10,0,0
+java,SimpleType,4,4,4,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,4,4,4,0,0
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,5,5,4,1,0

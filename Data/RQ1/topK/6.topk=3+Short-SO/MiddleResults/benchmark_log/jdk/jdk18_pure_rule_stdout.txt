@@ -1,0 +1,410 @@
+03:37:28.619 [main] INFO snr.h - Building CompilationUnit takes 442 ms
+03:37:28.747 [main] INFO snr.e - Compilation takes 125 ms
+InputStream cannot be resolved to a type
+IOException cannot be resolved to a type
+StringWriter cannot be resolved to a type
+StringWriter cannot be resolved to a type
+IOUtils cannot be resolved
+InputStream cannot be resolved to a type
+Finding class definition name: IOException isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.IOException, java.io.IOException] to Type4
+Return without setting candidates for Type7
+Finding class definition name: StringWriter isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [java.io.StringWriter, java.io.StringWriter] to Type5
+Finding class definition name: IOUtils isfull? false fields: [] methods: [copy] argument sizes: [3]
+Adding candidates [org.apache.commons.io.IOUtils, org.apache.directory.api.util.IOUtils] to Type9
+Return without setting candidates for Type12
+Finding class definition name: InputStream isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.omg.CORBA.portable.InputStream, org.omg.CORBA_2_3.portable.InputStream, java.io.InputStream, java.io.InputStream] to Type3
+Return without setting candidates for Type13
+Return without setting candidates for Type14
+Adding candidate void to Type6
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type8
+Return without setting candidates for Type10
+Return without setting candidates for Type11
+03:37:29.162 [main] INFO snr.G - Loading initial candidates takes 317 ms.
+Before TypeVariable: Type6, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type7
+[void]
+Before TypeVariable: Type4, Candidates: 2
+   0. simple name: IOException
+[java.io.IOException, java.io.IOException]
+Before TypeVariable: Type5, Candidates: 2
+   0. method: Type7 <init>();
+   1. simple name: StringWriter
+[java.io.StringWriter, java.io.StringWriter]
+Before TypeVariable: Type8, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type9, Candidates: 2
+   0. simple name: IOUtils
+   1. method: Type14 copy(Type11,Type12,Type13);
+[org.apache.commons.io.IOUtils, org.apache.directory.api.util.IOUtils]
+Before TypeVariable: Type3, Candidates: 4
+   0. simple name: InputStream
+[java.io.InputStream, org.omg.CORBA_2_3.portable.InputStream, org.omg.CORBA.portable.InputStream, java.io.InputStream]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type14
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type5
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type8
+[]
+Before TypeVariable: Type14, Candidates: 0
+[]
+03:37:29.176 [main] INFO snr.G - Populate candidates for type variable Type6
+03:37:29.176 [main] INFO snr.G - Populate candidates for type constraint full name: void
+03:37:29.176 [main] INFO snr.G - Populate candidates for type variable Type8
+03:37:29.176 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+03:37:29.176 [main] INFO snr.G - Populate candidates for type variable Type3
+03:37:29.176 [main] INFO snr.G - Populate candidates for type constraint simple name: InputStream
+03:37:29.176 [main] INFO snr.G - Populate candidates for type variable Type4
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint simple name: IOException
+03:37:29.177 [main] INFO snr.G - Populate candidates for type variable Type5
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint simple name: StringWriter
+03:37:29.177 [main] INFO snr.G - Populate candidates for type variable Type6
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+03:37:29.177 [main] INFO snr.G - Populate candidates for type variable Type8
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+03:37:29.177 [main] INFO snr.G - Populate candidates for type variable Type9
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint simple name: IOUtils
+03:37:29.177 [main] INFO snr.G - Populate candidates for type variable Type5
+03:37:29.177 [main] INFO snr.G - Populate candidates for type constraint method: Type7 <init>();
+Processing method constraint method: Type7 <init>(); on Type5
+Current solution for c Type5 is uninit ? false [java.io.StringWriter, java.io.StringWriter]
+Current solution for r Type7 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type5 [java.io.StringWriter, java.io.StringWriter]
+updated solution for r Type7 [void]
+03:37:29.180 [main] INFO snr.G - Populate candidates for type variable Type9
+03:37:29.180 [main] INFO snr.G - Populate candidates for type constraint method: Type14 copy(Type11,Type12,Type13);
+Processing method constraint method: Type14 copy(Type11,Type12,Type13); on Type9
+Current solution for c Type9 is uninit ? false [org.apache.commons.io.IOUtils, org.apache.directory.api.util.IOUtils]
+Current solution for r Type14 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Current solution for p1 Type12 is uninit ? false []
+Current solution for p2 Type13 is uninit ? false []
+Looking at method: public static J copy(Ljava/io/InputStream;Ljava/io/OutputStream;I)
+Looking at method: public static V copy(Ljava/io/Reader;Ljava/io/OutputStream;Ljava/lang/String;)
+Looking at method: public static V copy(Ljava/io/InputStream;Ljava/io/Writer;Ljava/lang/String;)
+Looking at method: public static V copy(Ljava/io/InputStream;Ljava/io/Writer;Ljava/nio/charset/Charset;)
+Looking at method: public static V copy(Ljava/io/Reader;Ljava/io/OutputStream;Ljava/nio/charset/Charset;)
+Looking at method: public static J copy(Ljava/io/Reader;Ljava/lang/Appendable;Ljava/nio/CharBuffer;)
+Looking at method: public static J copy(Ljava/io/InputStream;Ljava/io/OutputStream;I)
+Looking at method: public static V copy(Ljava/io/InputStream;Ljava/io/Writer;Ljava/nio/charset/Charset;)
+updated solution for c Type9 [org.apache.commons.io.IOUtils, org.apache.directory.api.util.IOUtils]
+updated solution for r Type14 [long, void]
+updated solution for p0 Type11 [java.io.Reader, java.io.InputStream]
+updated solution for p1 Type12 [java.io.Writer, java.io.OutputStream, java.lang.Appendable]
+updated solution for p2 Type13 [int, java.nio.charset.Charset, java.lang.String, java.nio.CharBuffer]
+03:37:29.189 [main] INFO snr.G - Populate candidates for type variable Type6
+03:37:29.189 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+03:37:29.189 [main] INFO snr.G - Populate candidates for type variable Type10
+03:37:29.190 [main] INFO snr.G - Populate candidates for type constraint subtype: Type14
+03:37:29.190 [main] INFO snr.G - Populate candidates for type variable Type11
+03:37:29.190 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+03:37:29.194 [main] INFO snr.G - Populate candidates for type variable Type12
+03:37:29.194 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+03:37:29.195 [main] INFO snr.G - Populate candidates for type variable Type13
+03:37:29.196 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+After TypeVariable: Type6, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type7
+[void]
+After TypeVariable: Type7, Candidates: 1
+[void]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type3
+[java.io.InputStream]
+After TypeVariable: Type13, Candidates: 1
+   0. subtype: Type8
+[java.lang.String]
+After TypeVariable: Type4, Candidates: 2
+   0. simple name: IOException
+[java.io.IOException, java.io.IOException]
+After TypeVariable: Type5, Candidates: 2
+   0. method: Type7 <init>();
+   1. simple name: StringWriter
+[java.io.StringWriter, java.io.StringWriter]
+After TypeVariable: Type8, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type9, Candidates: 2
+   0. simple name: IOUtils
+   1. method: Type14 copy(Type11,Type12,Type13);
+[org.apache.commons.io.IOUtils, org.apache.directory.api.util.IOUtils]
+After TypeVariable: Type10, Candidates: 2
+   0. subtype: Type14
+[long, void]
+After TypeVariable: Type12, Candidates: 2
+   0. subtype: Type5
+[java.io.Writer, java.lang.Appendable]
+After TypeVariable: Type14, Candidates: 2
+[long, void]
+After TypeVariable: Type3, Candidates: 4
+   0. simple name: InputStream
+[java.io.InputStream, org.omg.CORBA_2_3.portable.InputStream, org.omg.CORBA.portable.InputStream, java.io.InputStream]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	jar:android-13.jar:1:java.io.Writer	java.io.Writer	Writer
+	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream	org.omg.CORBA.portable.InputStream	InputStream
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.io.InputStream	java.io.InputStream	InputStream
+	jar:android-13.jar:1:java.io.IOException	java.io.IOException	IOException
+	jar:android-13.jar:1:java.lang.Appendable	java.lang.Appendable	Appendable
+	openjdk:jdk:1.8.0:java.io.StringWriter	java.io.StringWriter	StringWriter
+	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils	org.apache.directory.api.util.IOUtils	IOUtils
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	org.omg.CORBA_2_3.portable.InputStream	InputStream
+	openjdk:jdk:1.8.0:java.io.IOException	java.io.IOException	IOException
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.io.OutputStream	java.io.OutputStream	OutputStream
+	jar:android-13.jar:1:java.nio.charset.Charset	java.nio.charset.Charset	Charset
+	jar:android-13.jar:1:java.nio.CharBuffer	java.nio.CharBuffer	CharBuffer
+	jar:android-13.jar:1:java.io.StringWriter	java.io.StringWriter	StringWriter
+	openjdk:jdk:1.8.0:long	long	long
+	jar:android-13.jar:1:java.io.Reader	java.io.Reader	Reader
+	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	org.apache.commons.io.IOUtils	IOUtils
+	jar:android-13.jar:1:java.io.InputStream	java.io.InputStream	InputStream
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream
+	openjdk:jdk:1.8.0:java.io.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Reader	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	openjdk:jdk:1.8.0:java.lang.String
+	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.StringWriter	jar:android-13.jar:1:java.io.Writer
+	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.StringWriter	openjdk:jdk:1.8.0:java.io.StringWriter
+	openjdk:jdk:1.8.0:java.io.StringWriter	jar:android-13.jar:1:java.io.StringWriter
+	jar:android-13.jar:1:java.lang.Appendable	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.nio.charset.Charset	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.StringWriter	jar:android-13.jar:1:java.io.Writer
+	jar:android-13.jar:1:java.io.InputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.StringWriter	jar:android-13.jar:1:java.lang.Appendable
+	jar:android-13.jar:1:java.io.StringWriter	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.IOException	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.nio.CharBuffer	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.Writer	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.OutputStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.StringWriter	jar:android-13.jar:1:java.lang.Appendable
+	openjdk:jdk:1.8.0:java.io.StringWriter	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:long
+	openjdk:jdk:1.8.0:long	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	openjdk:jdk:1.8.0:java.io.InputStream
+	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream	openjdk:jdk:1.8.0:java.io.InputStream
+	jar:android-13.jar:1:java.nio.CharBuffer	jar:android-13.jar:1:java.lang.Appendable
+	jar:android-13.jar:1:java.io.Writer	jar:android-13.jar:1:java.lang.Appendable
+	openjdk:jdk:1.8.0:java.io.InputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Reader	openjdk:jdk:1.8.0:java.lang.String
+	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Appendable	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	jar:android-13.jar:1:java.io.InputStream
+	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream	jar:android-13.jar:1:java.io.InputStream
+	jar:android-13.jar:1:java.nio.charset.Charset	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	jar:android-13.jar:1:java.io.IOException
+	jar:android-13.jar:1:java.io.IOException	openjdk:jdk:1.8.0:java.io.IOException
+	jar:android-13.jar:1:java.io.InputStream	openjdk:jdk:1.8.0:java.io.InputStream
+	openjdk:jdk:1.8.0:java.io.InputStream	jar:android-13.jar:1:java.io.InputStream
+	jar:android-13.jar:1:java.io.StringWriter	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Writer	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.nio.CharBuffer	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.IOException	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.OutputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.StringWriter	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type6	void
+	Type8	java.lang.String
+Printing: type.facts
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type7	openjdk:jdk:1.8.0:void
+	Type9	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils
+	Type6	openjdk:jdk:1.8.0:void
+	Type11	jar:android-13.jar:1:java.io.InputStream
+	Type4	jar:android-13.jar:1:java.io.IOException
+	Type9	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils
+	Type4	openjdk:jdk:1.8.0:java.io.IOException
+	Type13	jar:android-13.jar:1:java.lang.String
+	Type8	jar:android-13.jar:1:java.lang.String
+	Type10	openjdk:jdk:1.8.0:void
+	Type5	jar:android-13.jar:1:java.io.StringWriter
+	Type12	jar:android-13.jar:1:java.io.Writer
+	Type8	openjdk:jdk:1.8.0:java.lang.String
+	Type3	jar:android-13.jar:1:java.io.InputStream
+	Type14	openjdk:jdk:1.8.0:void
+	Type3	openjdk:jdk:1.8.0:java.io.InputStream
+	Type12	jar:android-13.jar:1:java.lang.Appendable
+	Type3	openjdk:jdk:1.8.0:org.omg.CORBA_2_3.portable.InputStream
+	Type3	openjdk:jdk:1.8.0:org.omg.CORBA.portable.InputStream
+	Type5	openjdk:jdk:1.8.0:java.io.StringWriter
+	Type10	openjdk:jdk:1.8.0:long
+	Type14	openjdk:jdk:1.8.0:long
+Printing: jmethod_dependency.facts
+	0	Type5	Type7	<init>
+	2	Type9	Type14	copy
+Printing: jsimplename.facts
+	Type9	IOUtils
+	Type5	StringWriter
+	Type3	InputStream
+	Type6	void
+	Type4	IOException
+	Type8	String
+Printing: jmethod.facts
+	4	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:long	copy	3
+	8	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:void	copy	3
+	5	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:void	copy	3
+	9	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:long	copy	3
+	11	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils	openjdk:jdk:1.8.0:void	copy	3
+	6	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:void	copy	3
+	0	jar:android-13.jar:1:java.io.StringWriter	openjdk:jdk:1.8.0:void	<init>	0
+	7	jar:commons-io-2.4.jar:1:org.apache.commons.io.IOUtils	openjdk:jdk:1.8.0:void	copy	3
+	1	openjdk:jdk:1.8.0:java.io.StringWriter	openjdk:jdk:1.8.0:void	<init>	0
+	10	jar:api-all-2.0.1.jar:1:org.apache.directory.api.util.IOUtils	openjdk:jdk:1.8.0:long	copy	3
+Printing: jsupertype_dependency.facts
+	Type7	Type6
+	Type14	Type10
+	Type5	Type12
+	Type8	Type13
+	Type3	Type11
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	4	0	jar:android-13.jar:1:java.io.InputStream
+	4	1	jar:android-13.jar:1:java.io.OutputStream
+	4	2	openjdk:jdk:1.8.0:int
+	8	0	jar:android-13.jar:1:java.io.Reader
+	8	1	jar:android-13.jar:1:java.io.OutputStream
+	8	2	jar:android-13.jar:1:java.nio.charset.Charset
+	5	0	jar:android-13.jar:1:java.io.Reader
+	5	1	jar:android-13.jar:1:java.io.OutputStream
+	5	2	jar:android-13.jar:1:java.lang.String
+	9	0	jar:android-13.jar:1:java.io.Reader
+	9	1	jar:android-13.jar:1:java.lang.Appendable
+	9	2	jar:android-13.jar:1:java.nio.CharBuffer
+	11	0	jar:android-13.jar:1:java.io.InputStream
+	11	1	jar:android-13.jar:1:java.io.Writer
+	11	2	jar:android-13.jar:1:java.nio.charset.Charset
+	6	0	jar:android-13.jar:1:java.io.InputStream
+	6	1	jar:android-13.jar:1:java.io.Writer
+	6	2	jar:android-13.jar:1:java.lang.String
+	7	0	jar:android-13.jar:1:java.io.InputStream
+	7	1	jar:android-13.jar:1:java.io.Writer
+	7	2	jar:android-13.jar:1:java.nio.charset.Charset
+	10	0	jar:android-13.jar:1:java.io.InputStream
+	10	1	jar:android-13.jar:1:java.io.OutputStream
+	10	2	openjdk:jdk:1.8.0:int
+Printing: jmethod_param_dependency.facts
+	2	0	Type11
+	2	1	Type12
+	2	2	Type13
+All artifact rank: [openjdk:jdk:1.8.0, jar:android-13.jar:1, jar:api-all-2.0.1.jar:1, jar:commons-io-2.4.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type4 -> java.io.IOException
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type6 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type12 -> java.io.Writer
+Added artifact: jar:android-13.jar:1
+Found Type8 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type14 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type5 -> java.io.StringWriter
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> org.apache.directory.api.util.IOUtils
+Added artifact: jar:api-all-2.0.1.jar:1
+Found Type11 -> java.io.InputStream
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type3 -> java.io.InputStream
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type4 to java.io.IOException, dumping:
+Bind Type7 to void, dumping:
+Bind Type5 to java.io.StringWriter, dumping:
+Bind Type9 to org.apache.directory.api.util.IOUtils, dumping:
+Bind Type12 to java.io.Writer, dumping:
+Bind Type13 to java.lang.String, dumping:
+Bind Type3 to java.io.InputStream, dumping:
+Bind Type6 to void, dumping:
+Bind Type10 to void, dumping:
+Bind Type8 to java.lang.String, dumping:
+Bind Type14 to void, dumping:
+Bind Type11 to java.io.InputStream, dumping:
+03:37:29.407 [main] INFO snr.k - Fixing Type3 with java.io.InputStream
+03:37:29.408 [main] INFO snr.k - Fixing Type4 with java.io.IOException
+03:37:29.408 [main] INFO snr.k - Fixing Type5 with java.io.StringWriter
+03:37:29.409 [main] INFO snr.k - Fixing Type5 with java.io.StringWriter
+03:37:29.409 [main] INFO snr.k - Fixing Type9 with org.apache.directory.api.util.IOUtils
+03:37:29.455 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+03:37:29.456 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+03:37:29.456 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:api-all-2.0.1.jar:1
+03:37:29.456 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+03:37:29.456 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.jdk;
+
+import java.io.StringWriter;
+import org.apache.directory.api.util.IOUtils;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class jdk18 {
+	private static InputStream inputStream;
+
+	public static String h1() throws IOException {
+		StringWriter writer = new StringWriter();
+		IOUtils.copy(inputStream, writer, "UTF-8");
+		return writer.toString();
+
+	}
+}
+03:37:29.456 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+03:37:29.491 [main] INFO snr.e - Compilation takes 35 ms

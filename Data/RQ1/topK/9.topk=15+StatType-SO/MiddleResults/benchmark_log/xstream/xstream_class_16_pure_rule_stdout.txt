@@ -1,0 +1,216 @@
+01:37:35.448 [main] INFO snr.h - Building CompilationUnit takes 569 ms
+01:37:35.605 [main] INFO snr.e - Compilation takes 153 ms
+XStream cannot be resolved to a type
+XStream cannot be resolved to a type
+MapperWrapper cannot be resolved to a type
+MapperWrapper cannot be resolved to a type
+MapperWrapper cannot be resolved to a type
+The method shouldSerializeMember(Class, String) of type new MapperWrapper(){} must override or implement a supertype method
+Class is a raw type. References to generic type Class<T> should be parameterized
+MapperWrapper cannot be resolved to a type
+01:37:35.619 [main] INFO snr.k - Cannot find AST node for Pb(634) The method shouldSerializeMember(Class, String) of type new MapperWrapper(){} must override or implement a supertype method with range: snr.j@2c2a
+Class is a raw type. References to generic type Class<T> should be parameterized
+01:37:35.619 [main] INFO snr.k - Cannot find AST node for Pb(2) MapperWrapper cannot be resolved to a type with range: snr.j@377d
+Adding candidate void to Type4
+Finding class definition name: MapperWrapper isfull? false fields: [] methods: [<init>] argument sizes: [1]
+Adding candidates [com.thoughtworks.xstream.mapper.MapperWrapper, com.thoughtworks.xstream.mapper.MapperWrapper] to Type2
+Return without setting candidates for Type18
+Return without setting candidates for Type19
+Return without setting candidates for Type17
+Finding class definition name: XStream isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream] to Type7
+01:37:35.771 [main] INFO snr.G - Loading initial candidates takes 54 ms.
+Before TypeVariable: Type4, Candidates: 1
+   0. subtype: Type19
+   1. simple name: void
+   2. subtype: Type18
+   3. full name: void
+[void]
+Before TypeVariable: Type2, Candidates: 2
+   0. simple name: MapperWrapper
+   1. method: Type18 <init>(Type17);
+[com.thoughtworks.xstream.mapper.MapperWrapper, com.thoughtworks.xstream.mapper.MapperWrapper]
+Before TypeVariable: Type7, Candidates: 2
+   0. simple name: XStream
+   1. method: Type19 <init>();
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Before TypeVariable: Type17, Candidates: 0
+   0. subtype: Type2
+[]
+Before TypeVariable: Type18, Candidates: 0
+[]
+Before TypeVariable: Type19, Candidates: 0
+[]
+01:37:35.775 [main] INFO snr.G - Populate candidates for type variable Type4
+01:37:35.776 [main] INFO snr.G - Populate candidates for type constraint full name: void
+01:37:35.776 [main] INFO snr.G - Populate candidates for type variable Type2
+01:37:35.776 [main] INFO snr.G - Populate candidates for type constraint simple name: MapperWrapper
+01:37:35.776 [main] INFO snr.G - Populate candidates for type variable Type4
+01:37:35.776 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+01:37:35.776 [main] INFO snr.G - Populate candidates for type variable Type7
+01:37:35.776 [main] INFO snr.G - Populate candidates for type constraint simple name: XStream
+01:37:35.776 [main] INFO snr.G - Populate candidates for type variable Type2
+01:37:35.776 [main] INFO snr.G - Populate candidates for type constraint method: Type18 <init>(Type17);
+Processing method constraint method: Type18 <init>(Type17); on Type2
+Current solution for c Type2 is uninit ? false [com.thoughtworks.xstream.mapper.MapperWrapper, com.thoughtworks.xstream.mapper.MapperWrapper]
+Current solution for r Type18 is uninit ? false []
+Current solution for p0 Type17 is uninit ? false []
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/mapper/Mapper;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/mapper/Mapper;)
+updated solution for c Type2 [com.thoughtworks.xstream.mapper.MapperWrapper, com.thoughtworks.xstream.mapper.MapperWrapper]
+updated solution for r Type18 [void]
+updated solution for p0 Type17 [com.thoughtworks.xstream.mapper.Mapper, com.thoughtworks.xstream.mapper.Mapper]
+01:37:35.780 [main] INFO snr.G - Populate candidates for type variable Type7
+01:37:35.780 [main] INFO snr.G - Populate candidates for type constraint method: Type19 <init>();
+Processing method constraint method: Type19 <init>(); on Type7
+Current solution for c Type7 is uninit ? false [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Current solution for r Type19 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type7 [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+updated solution for r Type19 [void]
+01:37:35.780 [main] INFO snr.G - Populate candidates for type variable Type4
+01:37:35.780 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+01:37:35.780 [main] INFO snr.G - Populate candidates for type variable Type4
+01:37:35.780 [main] INFO snr.G - Populate candidates for type constraint subtype: Type19
+01:37:35.780 [main] INFO snr.G - Populate candidates for type variable Type17
+01:37:35.780 [main] INFO snr.G - Populate candidates for type constraint subtype: Type2
+After TypeVariable: Type4, Candidates: 1
+   0. subtype: Type19
+   1. simple name: void
+   2. subtype: Type18
+   3. full name: void
+[void]
+After TypeVariable: Type18, Candidates: 1
+[void]
+After TypeVariable: Type19, Candidates: 1
+[void]
+After TypeVariable: Type2, Candidates: 2
+   0. simple name: MapperWrapper
+   1. method: Type18 <init>(Type17);
+[com.thoughtworks.xstream.mapper.MapperWrapper, com.thoughtworks.xstream.mapper.MapperWrapper]
+After TypeVariable: Type7, Candidates: 2
+   0. simple name: XStream
+   1. method: Type19 <init>();
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+After TypeVariable: Type17, Candidates: 2
+   0. subtype: Type2
+[com.thoughtworks.xstream.mapper.Mapper, com.thoughtworks.xstream.mapper.Mapper]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper	com.thoughtworks.xstream.mapper.Mapper	Mapper
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	com.thoughtworks.xstream.mapper.MapperWrapper	MapperWrapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	com.thoughtworks.xstream.mapper.MapperWrapper	MapperWrapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper	com.thoughtworks.xstream.mapper.Mapper	Mapper
+Printing: jclasssuper.facts
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper
+Printing: jfqlname.facts
+	Type4	void
+Printing: type.facts
+	Type2
+	Type4
+	Type17
+	Type18
+	Type7
+	Type19
+Printing: candidate.facts
+	Type18	openjdk:jdk:1.8.0:void
+	Type7	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	Type19	openjdk:jdk:1.8.0:void
+	Type17	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	Type7	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	Type2	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper
+	Type4	openjdk:jdk:1.8.0:void
+	Type17	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	Type2	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper
+Printing: jmethod_dependency.facts
+	2	Type7	Type19	<init>
+	0	Type2	Type18	<init>
+Printing: jsimplename.facts
+	Type4	void
+	Type2	MapperWrapper
+	Type7	XStream
+Printing: jmethod.facts
+	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	openjdk:jdk:1.8.0:void	<init>	1
+	1	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.MapperWrapper	openjdk:jdk:1.8.0:void	<init>	1
+	5	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	0
+	4	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type19	Type4
+	Type2	Type17
+	Type18	Type4
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	0	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.mapper.Mapper
+	1	0	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.mapper.Mapper
+Printing: jmethod_param_dependency.facts
+	0	0	Type17
+All artifact rank: [jar:com.thoughtworks.xstream.jar:1, jar:xstream-1.4.4.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type4 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type17 -> com.thoughtworks.xstream.mapper.Mapper
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Solved...
+Found Type2 -> com.thoughtworks.xstream.mapper.MapperWrapper
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type18 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type19 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> com.thoughtworks.xstream.XStream
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Solved...
+Quiting souffle
+Bind Type4 to void, dumping:
+Bind Type2 to com.thoughtworks.xstream.mapper.MapperWrapper, dumping:
+Bind Type18 to void, dumping:
+Bind Type19 to void, dumping:
+Bind Type17 to com.thoughtworks.xstream.mapper.Mapper, dumping:
+Bind Type7 to com.thoughtworks.xstream.XStream, dumping:
+01:37:36.007 [main] INFO snr.k - Fixing Type7 with com.thoughtworks.xstream.XStream
+01:37:36.007 [main] INFO snr.k - Fixing Type7 with com.thoughtworks.xstream.XStream
+01:37:36.008 [main] INFO snr.k - Fixing Type2 with com.thoughtworks.xstream.mapper.MapperWrapper
+01:37:36.008 [main] INFO snr.k - Fixing Type2 with com.thoughtworks.xstream.mapper.MapperWrapper
+01:37:36.008 [main] INFO snr.k - Fixing Type2 with com.thoughtworks.xstream.mapper.MapperWrapper
+01:37:36.052 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+01:37:36.053 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:com.thoughtworks.xstream.jar:1
+01:37:36.053 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+01:37:36.053 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.mapper.MapperWrapper;//ID = 5377380
+
+public class xstream_class_16 {
+	public static void main(String arg[]) {
+		XStream xstream = new XStream() {
+			@Override
+			protected MapperWrapper wrapMapper(MapperWrapper next) {
+				return new MapperWrapper(next) {
+					@Override
+					public boolean shouldSerializeMember(Class definedIn, String fieldName) {
+						if (definedIn == Object.class) {
+							return false;
+						}
+						return super.shouldSerializeMember(definedIn, fieldName);
+					}
+				};
+			}
+		};
+	}
+}
+01:37:36.053 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+01:37:36.099 [main] INFO snr.e - Compilation takes 45 ms

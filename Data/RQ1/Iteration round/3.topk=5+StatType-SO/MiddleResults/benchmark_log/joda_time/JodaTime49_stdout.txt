@@ -1,0 +1,326 @@
+18:09:11.119 [main] INFO snr.h - Building CompilationUnit takes 435 ms
+18:09:11.232 [main] INFO snr.e - Compilation takes 109 ms
+DateTimeFormatter cannot be resolved to a type
+DateTimeFormat cannot be resolved
+DateTime cannot be resolved to a type
+LocalDate cannot be resolved to a type
+Finding class definition name: DateTime isfull? false fields: [] methods: [toLocalDate] argument sizes: [0]
+Adding candidates [org.joda.time.DateTime] to Type11
+Return without setting candidates for Type17
+Return without setting candidates for Type16
+Finding class definition name: DateTimeFormat isfull? false fields: [] methods: [forPattern] argument sizes: [1]
+Adding candidates [org.joda.time.format.DateTimeFormat] to Type7
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type6
+Finding class definition name: DateTimeFormatter isfull? false fields: [] methods: [parseDateTime] argument sizes: [1]
+Adding candidates [org.joda.time.format.DateTimeFormatter] to Type5
+Return without setting candidates for Type12
+Return without setting candidates for Type14
+Return without setting candidates for Type10
+Finding class definition name: LocalDate isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.joda.time.LocalDate, java.time.LocalDate] to Type15
+Return without setting candidates for Type8
+Return without setting candidates for Type9
+Return without setting candidates for Type13
+18:09:11.781 [main] INFO snr.G - Loading initial candidates takes 462 ms.
+Before TypeVariable: Type5, Candidates: 1
+   0. subtype: Type8
+   1. method: Type14 parseDateTime(Type13);
+   2. simple name: DateTimeFormatter
+[org.joda.time.format.DateTimeFormatter]
+Before TypeVariable: Type7, Candidates: 1
+   0. method: Type10 forPattern(Type9);
+   1. simple name: DateTimeFormat
+[org.joda.time.format.DateTimeFormat]
+Before TypeVariable: Type11, Candidates: 1
+   0. subtype: Type12
+   1. simple name: DateTime
+   2. method: Type17 toLocalDate();
+[org.joda.time.DateTime]
+Before TypeVariable: Type6, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type15, Candidates: 2
+   0. subtype: Type16
+   1. simple name: LocalDate
+[java.time.LocalDate, org.joda.time.LocalDate]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type9, Candidates: 0
+   0. subtype: Type6
+[]
+Before TypeVariable: Type10, Candidates: 0
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type14
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type6
+[]
+Before TypeVariable: Type14, Candidates: 0
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type17
+[]
+Before TypeVariable: Type17, Candidates: 0
+[]
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type6
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type5
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTimeFormatter
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type6
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type7
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTimeFormat
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type11
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTime
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type15
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint simple name: LocalDate
+18:09:11.795 [main] INFO snr.G - Populate candidates for type variable Type5
+18:09:11.795 [main] INFO snr.G - Populate candidates for type constraint method: Type14 parseDateTime(Type13);
+Processing method constraint method: Type14 parseDateTime(Type13); on Type5
+Current solution for c Type5 is uninit ? false [org.joda.time.format.DateTimeFormatter]
+Current solution for r Type14 is uninit ? false []
+Current solution for p0 Type13 is uninit ? false []
+Looking at method: public Lorg/joda/time/DateTime; parseDateTime(Ljava/lang/String;)
+updated solution for c Type5 [org.joda.time.format.DateTimeFormatter]
+updated solution for r Type14 [org.joda.time.DateTime]
+updated solution for p0 Type13 [java.lang.String]
+18:09:11.800 [main] INFO snr.G - Populate candidates for type variable Type7
+18:09:11.800 [main] INFO snr.G - Populate candidates for type constraint method: Type10 forPattern(Type9);
+Processing method constraint method: Type10 forPattern(Type9); on Type7
+Current solution for c Type7 is uninit ? false [org.joda.time.format.DateTimeFormat]
+Current solution for r Type10 is uninit ? false []
+Current solution for p0 Type9 is uninit ? false []
+Looking at method: public static Lorg/joda/time/format/DateTimeFormatter; forPattern(Ljava/lang/String;)
+updated solution for c Type7 [org.joda.time.format.DateTimeFormat]
+updated solution for r Type10 [org.joda.time.format.DateTimeFormatter]
+updated solution for p0 Type9 [java.lang.String]
+18:09:11.801 [main] INFO snr.G - Populate candidates for type variable Type11
+18:09:11.801 [main] INFO snr.G - Populate candidates for type constraint method: Type17 toLocalDate();
+Processing method constraint method: Type17 toLocalDate(); on Type11
+Current solution for c Type11 is uninit ? false [org.joda.time.DateTime]
+Current solution for r Type17 is uninit ? false []
+Looking at method: public Lorg/joda/time/LocalDate; toLocalDate()
+updated solution for c Type11 [org.joda.time.DateTime]
+updated solution for r Type17 [org.joda.time.LocalDate]
+18:09:11.802 [main] INFO snr.G - Populate candidates for type variable Type5
+18:09:11.802 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+18:09:11.802 [main] INFO snr.G - Populate candidates for type variable Type8
+18:09:11.802 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+18:09:11.802 [main] INFO snr.G - Populate candidates for type variable Type9
+18:09:11.802 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+18:09:11.803 [main] INFO snr.G - Populate candidates for type variable Type11
+18:09:11.803 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+18:09:11.803 [main] INFO snr.G - Populate candidates for type variable Type12
+18:09:11.803 [main] INFO snr.G - Populate candidates for type constraint subtype: Type14
+18:09:11.803 [main] INFO snr.G - Populate candidates for type variable Type13
+18:09:11.803 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+18:09:11.803 [main] INFO snr.G - Populate candidates for type variable Type15
+18:09:11.803 [main] INFO snr.G - Populate candidates for type constraint subtype: Type16
+18:09:11.803 [main] INFO snr.G - Populate candidates for type variable Type16
+18:09:11.803 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+After TypeVariable: Type5, Candidates: 1
+   0. subtype: Type8
+   1. method: Type14 parseDateTime(Type13);
+   2. simple name: DateTimeFormatter
+[org.joda.time.format.DateTimeFormatter]
+After TypeVariable: Type7, Candidates: 1
+   0. method: Type10 forPattern(Type9);
+   1. simple name: DateTimeFormat
+[org.joda.time.format.DateTimeFormat]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type10
+[org.joda.time.format.DateTimeFormatter]
+After TypeVariable: Type9, Candidates: 1
+   0. subtype: Type6
+[java.lang.String]
+After TypeVariable: Type10, Candidates: 1
+[org.joda.time.format.DateTimeFormatter]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type12
+   1. simple name: DateTime
+   2. method: Type17 toLocalDate();
+[org.joda.time.DateTime]
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type14
+[org.joda.time.DateTime]
+After TypeVariable: Type13, Candidates: 1
+   0. subtype: Type6
+[java.lang.String]
+After TypeVariable: Type14, Candidates: 1
+[org.joda.time.DateTime]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type17
+[org.joda.time.LocalDate]
+After TypeVariable: Type17, Candidates: 1
+[org.joda.time.LocalDate]
+After TypeVariable: Type6, Candidates: 2
+   0. full name: java.lang.String
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type15, Candidates: 2
+   0. subtype: Type16
+   1. simple name: LocalDate
+[java.time.LocalDate, org.joda.time.LocalDate]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:java.time.LocalDate	java.time.LocalDate	LocalDate
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	org.joda.time.DateTime	DateTime
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormat	org.joda.time.format.DateTimeFormat	DateTimeFormat
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter	org.joda.time.format.DateTimeFormatter	DateTimeFormatter
+	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate	org.joda.time.LocalDate	LocalDate
+Printing: jclasssuper.facts
+	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormat	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormat	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.time.LocalDate	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.time.LocalDate	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	jar:android-13.jar:1:java.lang.String
+Printing: jfqlname.facts
+	Type6	java.lang.String
+Printing: type.facts
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type15
+	Type16
+	Type10
+	Type11
+	Type12
+	Type17
+Printing: candidate.facts
+	Type13	jar:android-13.jar:1:java.lang.String
+	Type6	openjdk:jdk:1.8.0:java.lang.String
+	Type9	jar:android-13.jar:1:java.lang.String
+	Type17	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type15	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate
+	Type10	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter
+	Type5	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter
+	Type14	jar:joda-time-2.0.jar:1:org.joda.time.DateTime
+	Type8	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter
+	Type15	openjdk:jdk:1.8.0:java.time.LocalDate
+	Type11	jar:joda-time-2.0.jar:1:org.joda.time.DateTime
+	Type7	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormat
+	Type12	jar:joda-time-2.0.jar:1:org.joda.time.DateTime
+Printing: jmethod_dependency.facts
+	3	Type5	Type14	parseDateTime
+	0	Type11	Type17	toLocalDate
+	2	Type7	Type10	forPattern
+Printing: jsimplename.facts
+	Type11	DateTime
+	Type15	LocalDate
+	Type7	DateTimeFormat
+	Type5	DateTimeFormatter
+	Type6	String
+Printing: jmethod.facts
+	2	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormat	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter	forPattern	1
+	3	jar:joda-time-2.0.jar:1:org.joda.time.format.DateTimeFormatter	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	parseDateTime	1
+	0	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	jar:joda-time-2.0.jar:1:org.joda.time.LocalDate	toLocalDate	0
+Printing: jsupertype_dependency.facts
+	Type12	Type11
+	Type16	Type15
+	Type6	Type9
+	Type8	Type5
+	Type14	Type12
+	Type10	Type8
+	Type6	Type13
+	Type17	Type16
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	2	0	jar:android-13.jar:1:java.lang.String
+	3	0	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_param_dependency.facts
+	3	0	Type13
+	2	0	Type9
+All artifact rank: [jar:joda-time-2.0.jar:1, openjdk:jdk:1.8.0, jar:android-13.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type15 -> org.joda.time.LocalDate
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type9 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type13 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type14 -> org.joda.time.DateTime
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type16 -> org.joda.time.LocalDate
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type10 -> org.joda.time.format.DateTimeFormatter
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type6 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type5 -> org.joda.time.format.DateTimeFormatter
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type17 -> org.joda.time.LocalDate
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type7 -> org.joda.time.format.DateTimeFormat
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Found Type11 -> org.joda.time.DateTime
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type8 -> org.joda.time.format.DateTimeFormatter
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Found Type12 -> org.joda.time.DateTime
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Quiting souffle
+Bind Type11 to org.joda.time.DateTime, dumping:
+Bind Type17 to org.joda.time.LocalDate, dumping:
+Bind Type16 to org.joda.time.LocalDate, dumping:
+Bind Type7 to org.joda.time.format.DateTimeFormat, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type5 to org.joda.time.format.DateTimeFormatter, dumping:
+Bind Type12 to org.joda.time.DateTime, dumping:
+Bind Type14 to org.joda.time.DateTime, dumping:
+Bind Type10 to org.joda.time.format.DateTimeFormatter, dumping:
+Bind Type15 to org.joda.time.LocalDate, dumping:
+Bind Type8 to org.joda.time.format.DateTimeFormatter, dumping:
+Bind Type9 to java.lang.String, dumping:
+Bind Type13 to java.lang.String, dumping:
+18:09:12.016 [main] INFO snr.k - Fixing Type5 with org.joda.time.format.DateTimeFormatter
+18:09:12.017 [main] INFO snr.k - Fixing Type7 with org.joda.time.format.DateTimeFormat
+18:09:12.018 [main] INFO snr.k - Fixing Type11 with org.joda.time.DateTime
+18:09:12.018 [main] INFO snr.k - Fixing Type15 with org.joda.time.LocalDate
+18:09:12.067 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+18:09:12.069 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+18:09:12.069 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+18:09:12.069 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package jodatime;
+//ID = 8746084
+
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.DateTime;
+
+public class JodaTime49 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DateTimeFormatter FORMATTER = DateTimeFormat.forPattern("yyyy-MMM-dd");
+		DateTime dateTime = FORMATTER.parseDateTime("2005-nov-12");
+		LocalDate localDate = dateTime.toLocalDate();
+	}
+
+}
+18:09:12.069 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+18:09:12.105 [main] INFO snr.e - Compilation takes 35 ms

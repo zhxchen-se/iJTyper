@@ -1,0 +1,301 @@
+20:32:00.785 [main] INFO snr.h - Building CompilationUnit takes 616 ms
+20:32:00.938 [main] INFO snr.e - Compilation takes 147 ms
+Appender cannot be resolved to a type
+Type cannot be resolved to a type
+Type cannot be resolved to a type
+TypeFactory cannot be resolved
+SerializableType cannot be resolved to a type
+Return without setting candidates for Type4
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type5
+Return without setting candidates for Type6
+Return without setting candidates for Type7
+Finding class definition name: Type isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, java.lang.reflect.Type, org.hibernate.type.Type] to Type8
+Return without setting candidates for Type11
+Finding class definition name: TypeFactory isfull? false fields: [] methods: [heuristicType] argument sizes: [1]
+Adding candidates [org.hibernate.type.TypeFactory] to Type9
+Return without setting candidates for Type12
+Finding class definition name: SerializableType isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.hibernate.type.SerializableType] to Type15
+Return without setting candidates for Type10
+Finding class definition name: Appender isfull? false fields: [] methods: [getName] argument sizes: [0]
+Adding candidates [org.apache.log4j.Appender, org.apache.log4j.Appender] to Type3
+20:32:01.612 [main] INFO snr.G - Loading initial candidates takes 545 ms.
+Before TypeVariable: Type9, Candidates: 1
+   0. method: Type12 heuristicType(Type11);
+   1. simple name: TypeFactory
+[org.hibernate.type.TypeFactory]
+Before TypeVariable: Type15, Candidates: 1
+   0. simple name: SerializableType
+[org.hibernate.type.SerializableType]
+Before TypeVariable: Type3, Candidates: 2
+   0. subtype: Type4
+   1. method: Type7 getName();
+   2. simple name: Appender
+[org.apache.log4j.Appender, org.apache.log4j.Appender]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. subtype: Type6
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type8, Candidates: 4
+   0. simple name: Type
+[java.lang.reflect.Type, java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, org.hibernate.type.Type]
+Before TypeVariable: Type4, Candidates: 0
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type12
+   1. subtype: Type8
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type5
+[]
+Before TypeVariable: Type12, Candidates: 0
+[]
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type3
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint simple name: Appender
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type5
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type8
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint simple name: Type
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type9
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint simple name: TypeFactory
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type15
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint simple name: SerializableType
+20:32:01.621 [main] INFO snr.G - Populate candidates for type variable Type3
+20:32:01.621 [main] INFO snr.G - Populate candidates for type constraint method: Type7 getName();
+Processing method constraint method: Type7 getName(); on Type3
+Current solution for c Type3 is uninit ? false [org.apache.log4j.Appender, org.apache.log4j.Appender]
+Current solution for r Type7 is uninit ? false []
+Looking at method: public abstract Ljava/lang/String; getName()
+Looking at method: public abstract Ljava/lang/String; getName()
+updated solution for c Type3 [org.apache.log4j.Appender, org.apache.log4j.Appender]
+updated solution for r Type7 [java.lang.String]
+20:32:01.631 [main] INFO snr.G - Populate candidates for type variable Type9
+20:32:01.631 [main] INFO snr.G - Populate candidates for type constraint method: Type12 heuristicType(Type11);
+Processing method constraint method: Type12 heuristicType(Type11); on Type9
+Current solution for c Type9 is uninit ? false [org.hibernate.type.TypeFactory]
+Current solution for r Type12 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Looking at method: public static Lorg/hibernate/type/Type; heuristicType(Ljava/lang/String;)
+updated solution for c Type9 [org.hibernate.type.TypeFactory]
+updated solution for r Type12 [org.hibernate.type.Type]
+updated solution for p0 Type11 [java.lang.String]
+20:32:01.634 [main] INFO snr.G - Populate candidates for type variable Type3
+20:32:01.635 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+20:32:01.635 [main] INFO snr.G - Populate candidates for type variable Type5
+20:32:01.635 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+20:32:01.635 [main] INFO snr.G - Populate candidates for type variable Type6
+20:32:01.635 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+20:32:01.635 [main] INFO snr.G - Populate candidates for type variable Type10
+20:32:01.635 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+20:32:01.635 [main] INFO snr.G - Populate candidates for type variable Type10
+20:32:01.635 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+20:32:01.639 [main] INFO snr.G - Populate candidates for type variable Type11
+20:32:01.639 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+After TypeVariable: Type7, Candidates: 1
+[java.lang.String]
+After TypeVariable: Type9, Candidates: 1
+   0. method: Type12 heuristicType(Type11);
+   1. simple name: TypeFactory
+[org.hibernate.type.TypeFactory]
+After TypeVariable: Type10, Candidates: 1
+   0. subtype: Type12
+   1. subtype: Type8
+[org.hibernate.type.Type]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type5
+[java.lang.String]
+After TypeVariable: Type12, Candidates: 1
+[org.hibernate.type.Type]
+After TypeVariable: Type15, Candidates: 1
+   0. simple name: SerializableType
+[org.hibernate.type.SerializableType]
+After TypeVariable: Type3, Candidates: 2
+   0. subtype: Type4
+   1. method: Type7 getName();
+   2. simple name: Appender
+[org.apache.log4j.Appender, org.apache.log4j.Appender]
+After TypeVariable: Type4, Candidates: 2
+[org.apache.log4j.Appender, org.apache.log4j.Appender]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. subtype: Type6
+[java.lang.String, java.lang.String]
+After TypeVariable: Type6, Candidates: 2
+   0. subtype: Type7
+[java.lang.String, java.lang.String]
+After TypeVariable: Type8, Candidates: 4
+   0. simple name: Type
+[java.lang.reflect.Type, java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, org.hibernate.type.Type]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.reflect.Type	java.lang.reflect.Type	Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.TypeFactory	org.hibernate.type.TypeFactory	TypeFactory
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	java.lang.ProcessBuilder$Redirect$Type	ProcessBuilder$Redirect$Type
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	java.lang.reflect.Type	Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.SerializableType	org.hibernate.type.SerializableType	SerializableType
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	org.apache.log4j.Appender	Appender
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	org.apache.log4j.Appender	Appender
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	java.lang.ProcessBuilder$Redirect$Type	Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	org.hibernate.type.Type	Type
+Printing: jclasssuper.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.reflect.Type
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.reflect.Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.SerializableType	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.String
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.SerializableType	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.SerializableType	openjdk:jdk:1.8.0:java.lang.String
+	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender
+	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.TypeFactory	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.TypeFactory	jar:android-13.jar:1:java.lang.String
+Printing: jfqlname.facts
+Printing: type.facts
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type15
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type8	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type
+	Type11	jar:android-13.jar:1:java.lang.String
+	Type10	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type12	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type4	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender
+	Type6	openjdk:jdk:1.8.0:java.lang.String
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type8	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type7	jar:android-13.jar:1:java.lang.String
+	Type3	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender
+	Type5	jar:android-13.jar:1:java.lang.String
+	Type5	openjdk:jdk:1.8.0:java.lang.String
+	Type8	jar:android-13.jar:1:java.lang.reflect.Type
+	Type9	jar:hibernate-3.5.3.jar:1:org.hibernate.type.TypeFactory
+	Type15	jar:hibernate-3.5.3.jar:1:org.hibernate.type.SerializableType
+	Type8	openjdk:jdk:1.8.0:java.lang.reflect.Type
+	Type3	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender
+	Type4	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender
+Printing: jmethod_dependency.facts
+	0	Type3	Type7	getName
+	1	Type9	Type12	heuristicType
+Printing: jsimplename.facts
+	Type3	Appender
+	Type8	Type
+	Type5	String
+	Type9	TypeFactory
+	Type15	SerializableType
+Printing: jmethod.facts
+	3	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	openjdk:jdk:1.8.0:void	<init>	0
+	1	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	openjdk:jdk:1.8.0:void	<init>	0
+	4	jar:hibernate-3.5.3.jar:1:org.hibernate.type.TypeFactory	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	heuristicType	1
+	2	jar:log4j-1.2.17.jar:1:org.apache.log4j.Appender	jar:android-13.jar:1:java.lang.String	getName	0
+	0	jar:log4j-1.2.15.jar:1:org.apache.log4j.Appender	jar:android-13.jar:1:java.lang.String	getName	0
+Printing: jsupertype_dependency.facts
+	Type7	Type6
+	Type12	Type10
+	Type4	Type3
+	Type6	Type5
+	Type8	Type10
+	Type5	Type11
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	4	0	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_param_dependency.facts
+	1	0	Type11
+All artifact rank: [jar:hibernate-3.5.3.jar:1, openjdk:jdk:1.8.0, jar:android-13.jar:1, jar:log4j-1.2.15.jar:1, jar:log4j-1.2.17.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type11 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type15 -> org.hibernate.type.SerializableType
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type10 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type5 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type8 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type12 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type6 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type9 -> org.hibernate.type.TypeFactory
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type7 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type3 -> org.apache.log4j.Appender
+Added artifact: jar:log4j-1.2.15.jar:1
+Solved...
+Found Type4 -> org.apache.log4j.Appender
+Added artifact: jar:log4j-1.2.15.jar:1
+Solved...
+Quiting souffle
+Bind Type4 to org.apache.log4j.Appender, dumping:
+Bind Type5 to java.lang.String, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type7 to java.lang.String, dumping:
+Bind Type11 to java.lang.String, dumping:
+Bind Type8 to org.hibernate.type.Type, dumping:
+Bind Type9 to org.hibernate.type.TypeFactory, dumping:
+Bind Type12 to org.hibernate.type.Type, dumping:
+Bind Type15 to org.hibernate.type.SerializableType, dumping:
+Bind Type10 to org.hibernate.type.Type, dumping:
+Bind Type3 to org.apache.log4j.Appender, dumping:
+20:32:01.957 [main] INFO snr.k - Fixing Type3 with org.apache.log4j.Appender
+20:32:01.959 [main] INFO snr.k - Fixing Type8 with org.hibernate.type.Type
+20:32:01.959 [main] INFO snr.k - Fixing Type8 with org.hibernate.type.Type
+20:32:01.959 [main] INFO snr.k - Fixing Type9 with org.hibernate.type.TypeFactory
+20:32:01.959 [main] INFO snr.k - Fixing Type15 with org.hibernate.type.SerializableType
+20:32:02.014 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+20:32:02.016 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+20:32:02.016 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:log4j-1.2.15.jar:1
+20:32:02.016 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+20:32:02.016 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.hibernate;
+
+import org.hibernate.type.TypeFactory;
+import org.hibernate.type.Type;
+import org.apache.log4j.Appender;
+import org.hibernate.type.SerializableType;
+
+public class hb17 {
+	public static void h1() {
+		Appender clazz = null;
+		String typename = clazz.getName();
+		Type type = (Type) TypeFactory.heuristicType(typename);
+		boolean serializable = type != null && type instanceof SerializableType;
+	}
+
+}
+20:32:02.016 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+20:32:02.066 [main] INFO snr.e - Compilation takes 50 ms

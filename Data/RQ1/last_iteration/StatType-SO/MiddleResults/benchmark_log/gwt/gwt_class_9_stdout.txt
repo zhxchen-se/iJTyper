@@ -1,0 +1,319 @@
+11:56:07.532 [main] INFO snr.h - Building CompilationUnit takes 569 ms
+11:56:07.671 [main] INFO snr.e - Compilation takes 134 ms
+VerticalPanel cannot be resolved to a type
+VerticalPanel cannot be resolved to a type
+Command cannot be resolved to a type
+Command cannot be resolved to a type
+The method execute() of type new Command(){} must override or implement a supertype method
+MenuBar cannot be resolved to a type
+MenuBar cannot be resolved to a type
+MenuBar cannot be resolved to a type
+MenuBar cannot be resolved to a type
+MenuBar cannot be resolved to a type
+MenuBar cannot be resolved to a type
+11:56:07.684 [main] INFO snr.k - Cannot find AST node for Pb(634) The method execute() of type new Command(){} must override or implement a supertype method with range: snr.j@1679
+Finding class definition name: MenuBar isfull? false fields: [] methods: [<init>, <init>] argument sizes: [0, 1]
+Adding candidates [com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar] to Type5
+Adding candidate boolean to Type10
+Return without setting candidates for Type12
+Return without setting candidates for Type9
+Return without setting candidates for Type6
+Finding class definition name: VerticalPanel isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [com.google.gwt.user.client.ui.VerticalPanel, com.google.gwt.user.client.ui.VerticalPanel] to Type3
+Return without setting candidates for Type8
+Finding class definition name: Command isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [com.google.gwt.user.client.Command, com.google.gwt.user.client.Command] to Type4
+Adding candidate void to Type2
+Return without setting candidates for Type11
+11:56:08.835 [main] INFO snr.G - Loading initial candidates takes 998 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. subtype: Type8
+   2. simple name: void
+   3. subtype: Type6
+   4. subtype: Type9
+   5. subtype: Type12
+[void]
+Before TypeVariable: Type10, Candidates: 1
+   0. simple name: boolean
+   1. full name: boolean
+[boolean]
+Before TypeVariable: Type3, Candidates: 2
+   0. simple name: VerticalPanel
+   1. method: Type6 <init>();
+[com.google.gwt.user.client.ui.VerticalPanel, com.google.gwt.user.client.ui.VerticalPanel]
+Before TypeVariable: Type4, Candidates: 2
+   0. simple name: Command
+   1. method: Type8 <init>();
+[com.google.gwt.user.client.Command, com.google.gwt.user.client.Command]
+Before TypeVariable: Type5, Candidates: 2
+   0. method: Type12 <init>(Type11);
+   1. simple name: MenuBar
+   2. method: Type9 <init>();
+[com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+Before TypeVariable: Type6, Candidates: 0
+[]
+Before TypeVariable: Type8, Candidates: 0
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type12, Candidates: 0
+[]
+11:56:08.844 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.844 [main] INFO snr.G - Populate candidates for type constraint full name: void
+11:56:08.844 [main] INFO snr.G - Populate candidates for type variable Type10
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint full name: boolean
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type3
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint simple name: VerticalPanel
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type4
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint simple name: Command
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type5
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint simple name: MenuBar
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type10
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint simple name: boolean
+11:56:08.845 [main] INFO snr.G - Populate candidates for type variable Type3
+11:56:08.845 [main] INFO snr.G - Populate candidates for type constraint method: Type6 <init>();
+Processing method constraint method: Type6 <init>(); on Type3
+Current solution for c Type3 is uninit ? false [com.google.gwt.user.client.ui.VerticalPanel, com.google.gwt.user.client.ui.VerticalPanel]
+Current solution for r Type6 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type3 [com.google.gwt.user.client.ui.VerticalPanel, com.google.gwt.user.client.ui.VerticalPanel]
+updated solution for r Type6 [void]
+11:56:08.849 [main] INFO snr.G - Populate candidates for type variable Type4
+11:56:08.849 [main] INFO snr.G - Populate candidates for type constraint method: Type8 <init>();
+Processing method constraint method: Type8 <init>(); on Type4
+Current solution for c Type4 is uninit ? false [com.google.gwt.user.client.Command, com.google.gwt.user.client.Command]
+Current solution for r Type8 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type4 [com.google.gwt.user.client.Command, com.google.gwt.user.client.Command]
+updated solution for r Type8 [void]
+11:56:08.849 [main] INFO snr.G - Populate candidates for type variable Type5
+11:56:08.849 [main] INFO snr.G - Populate candidates for type constraint method: Type12 <init>(Type11);
+Processing method constraint method: Type12 <init>(Type11); on Type5
+Current solution for c Type5 is uninit ? false [com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+Current solution for r Type12 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Looking at method: public V <init>(Z)
+Looking at method: public V <init>(Z)
+Looking at method: public V <init>(Lcom/google/gwt/user/client/ui/MenuBar$MenuBarImages;)
+Looking at method: public V <init>(Lcom/google/gwt/user/client/ui/MenuBar$Resources;)
+updated solution for c Type5 [com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+updated solution for r Type12 [void]
+updated solution for p0 Type11 [com.google.gwt.user.client.ui.MenuBar$Resources, boolean, com.google.gwt.user.client.ui.MenuBar$MenuBarImages]
+11:56:08.853 [main] INFO snr.G - Populate candidates for type variable Type5
+11:56:08.853 [main] INFO snr.G - Populate candidates for type constraint method: Type9 <init>();
+Processing method constraint method: Type9 <init>(); on Type5
+Current solution for c Type5 is uninit ? false [com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+Current solution for r Type9 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type5 [com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+updated solution for r Type9 [void]
+11:56:08.853 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.853 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+11:56:08.854 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.854 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+11:56:08.854 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.854 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+11:56:08.854 [main] INFO snr.G - Populate candidates for type variable Type2
+11:56:08.854 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+11:56:08.854 [main] INFO snr.G - Populate candidates for type variable Type11
+11:56:08.854 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+After TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. subtype: Type8
+   2. simple name: void
+   3. subtype: Type6
+   4. subtype: Type9
+   5. subtype: Type12
+[void]
+After TypeVariable: Type6, Candidates: 1
+[void]
+After TypeVariable: Type8, Candidates: 1
+[void]
+After TypeVariable: Type9, Candidates: 1
+[void]
+After TypeVariable: Type10, Candidates: 1
+   0. simple name: boolean
+   1. full name: boolean
+[boolean]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type10
+[boolean]
+After TypeVariable: Type12, Candidates: 1
+[void]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: VerticalPanel
+   1. method: Type6 <init>();
+[com.google.gwt.user.client.ui.VerticalPanel, com.google.gwt.user.client.ui.VerticalPanel]
+After TypeVariable: Type4, Candidates: 2
+   0. simple name: Command
+   1. method: Type8 <init>();
+[com.google.gwt.user.client.Command, com.google.gwt.user.client.Command]
+After TypeVariable: Type5, Candidates: 2
+   0. method: Type12 <init>(Type11);
+   1. simple name: MenuBar
+   2. method: Type9 <init>();
+[com.google.gwt.user.client.ui.MenuBar, com.google.gwt.user.client.ui.MenuBar]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Command	com.google.gwt.user.client.Command	Command
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar	com.google.gwt.user.client.ui.MenuBar	MenuBar
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	com.google.gwt.user.client.ui.MenuBar	MenuBar
+	openjdk:jdk:1.8.0:boolean	boolean	boolean
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.VerticalPanel	com.google.gwt.user.client.ui.VerticalPanel	VerticalPanel
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$Resources	com.google.gwt.user.client.ui.MenuBar$Resources	MenuBar$Resources
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$MenuBarImages	com.google.gwt.user.client.ui.MenuBar$MenuBarImages	MenuBarImages
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Command	com.google.gwt.user.client.Command	Command
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$Resources	com.google.gwt.user.client.ui.MenuBar$Resources	Resources
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$MenuBarImages	com.google.gwt.user.client.ui.MenuBar$MenuBarImages	MenuBar$MenuBarImages
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.VerticalPanel	com.google.gwt.user.client.ui.VerticalPanel	VerticalPanel
+Printing: jclasssuper.facts
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Command	jar:gwt-user.jar:1:com.google.gwt.user.client.Command
+	jar:gwt-user.jar:1:com.google.gwt.user.client.Command	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Command
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.VerticalPanel	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.VerticalPanel
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.VerticalPanel	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.VerticalPanel
+	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar
+Printing: jfqlname.facts
+	Type2	void
+	Type10	boolean
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type8
+	Type9
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type6	openjdk:jdk:1.8.0:void
+	Type9	openjdk:jdk:1.8.0:void
+	Type8	openjdk:jdk:1.8.0:void
+	Type4	jar:gwt-user.jar:1:com.google.gwt.user.client.Command
+	Type5	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar
+	Type2	openjdk:jdk:1.8.0:void
+	Type4	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Command
+	Type12	openjdk:jdk:1.8.0:void
+	Type11	openjdk:jdk:1.8.0:boolean
+	Type10	openjdk:jdk:1.8.0:boolean
+	Type3	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.VerticalPanel
+	Type3	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.VerticalPanel
+	Type5	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar
+Printing: jmethod_dependency.facts
+	0	Type5	Type12	<init>
+	4	Type3	Type6	<init>
+	6	Type4	Type8	<init>
+	1	Type5	Type9	<init>
+Printing: jsimplename.facts
+	Type3	VerticalPanel
+	Type2	void
+	Type4	Command
+	Type5	MenuBar
+	Type10	boolean
+Printing: jmethod.facts
+	5	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	0
+	1	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	1
+	3	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	1
+	4	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	0
+	18	jar:gwt-user.jar:1:com.google.gwt.user.client.Command	openjdk:jdk:1.8.0:void	<init>	0
+	2	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	1
+	16	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.Command	openjdk:jdk:1.8.0:void	<init>	0
+	0	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.MenuBar	openjdk:jdk:1.8.0:void	<init>	1
+	13	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.VerticalPanel	openjdk:jdk:1.8.0:void	<init>	0
+	12	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.user.client.ui.VerticalPanel	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type10	Type11
+	Type6	Type2
+	Type8	Type2
+	Type9	Type2
+	Type12	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	openjdk:jdk:1.8.0:boolean
+	3	0	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$Resources
+	2	0	jar:gwt-user.jar:1:com.google.gwt.user.client.ui.MenuBar$MenuBarImages
+	0	0	openjdk:jdk:1.8.0:boolean
+Printing: jmethod_param_dependency.facts
+	0	0	Type11
+All artifact rank: [jar:gwt-servlet-1.4.62.jar:1, jar:gwt-user.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type11 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type10 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type12 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type6 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type5 -> com.google.gwt.user.client.ui.MenuBar
+Added artifact: jar:gwt-servlet-1.4.62.jar:1
+Found Type3 -> com.google.gwt.user.client.ui.VerticalPanel
+Added artifact: jar:gwt-servlet-1.4.62.jar:1
+Found Type4 -> com.google.gwt.user.client.Command
+Added artifact: jar:gwt-servlet-1.4.62.jar:1
+Solved...
+Quiting souffle
+Bind Type10 to boolean, dumping:
+Bind Type5 to com.google.gwt.user.client.ui.MenuBar, dumping:
+Bind Type12 to void, dumping:
+Bind Type9 to void, dumping:
+Bind Type6 to void, dumping:
+Bind Type3 to com.google.gwt.user.client.ui.VerticalPanel, dumping:
+Bind Type8 to void, dumping:
+Bind Type4 to com.google.gwt.user.client.Command, dumping:
+Bind Type2 to void, dumping:
+Bind Type11 to boolean, dumping:
+11:56:09.139 [main] INFO snr.k - Fixing Type3 with com.google.gwt.user.client.ui.VerticalPanel
+11:56:09.141 [main] INFO snr.k - Fixing Type3 with com.google.gwt.user.client.ui.VerticalPanel
+11:56:09.141 [main] INFO snr.k - Fixing Type4 with com.google.gwt.user.client.Command
+11:56:09.141 [main] INFO snr.k - Fixing Type4 with com.google.gwt.user.client.Command
+11:56:09.141 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.141 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.141 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.141 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.142 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.142 [main] INFO snr.k - Fixing Type5 with com.google.gwt.user.client.ui.MenuBar
+11:56:09.201 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+11:56:09.203 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:gwt-servlet-1.4.62.jar:1
+11:56:09.203 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+11:56:09.203 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.Command;
+import com.google.gwt.user.client.ui.MenuBar;//ID = 1624218
+
+public class gwt_class_9 {
+	VerticalPanel v1 = new VerticalPanel();
+	Command comm = new Command() {
+		@Override
+		public void execute() {
+			// How i know that which menu item is cliked
+		}
+	};
+
+	MenuBar menu = new MenuBar();
+	MenuBar fileBar = new MenuBar(true);
+	MenuBar editBar = new MenuBar(true);
+}
+11:56:09.203 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+11:56:09.257 [main] INFO snr.e - Compilation takes 54 ms

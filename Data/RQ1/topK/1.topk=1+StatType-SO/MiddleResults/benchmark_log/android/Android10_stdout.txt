@@ -1,0 +1,467 @@
+16:07:05.454 [main] INFO snr.h - Building CompilationUnit takes 541 ms
+16:07:05.606 [main] INFO snr.e - Compilation takes 146 ms
+Chronometer cannot be resolved to a type
+Chronometer cannot be resolved to a type
+R cannot be resolved to a variable
+SystemClock cannot be resolved
+Log cannot be resolved
+SystemClock cannot be resolved
+Chronometer cannot be resolved to a type
+16:07:05.721 [main] INFO snr.k - Cannot find a type for node R
+Return without setting candidates for Type11
+Finding class definition name: Chronometer isfull? false fields: [] methods: [getBase, setBase, start] argument sizes: [0, 1, 0]
+Adding candidates [android.widget.Chronometer] to Type2
+Return without setting candidates for Type15
+Return without setting candidates for Type19
+Return without setting candidates for Type17
+Return without setting candidates for Type20
+Return without setting candidates for Type9
+Finding class definition name: Log isfull? false fields: [] methods: [d] argument sizes: [2]
+Adding candidates [android.util.Log] to Type14
+Return without setting candidates for Type23
+Return without setting candidates for Type12
+Return without setting candidates for Type16
+Return without setting candidates for Type25
+Return without setting candidates for Type10
+Return without setting candidates for Type8
+Adding candidate long to Type6
+Finding class definition name: SystemClock isfull? false fields: [] methods: [elapsedRealtime] argument sizes: [0]
+Adding candidates [android.os.SystemClock] to Type7
+Return without setting candidates for Type18
+Return without setting candidates for Type22
+Return without setting candidates for Type21
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type13
+16:07:06.382 [main] INFO snr.G - Loading initial candidates takes 655 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. method: Type11 getBase();
+   1. simple name: Chronometer
+   2. subtype: Type25
+   3. method: Type23 start();
+   4. method: Type21 setBase(Type20);
+[android.widget.Chronometer]
+Before TypeVariable: Type6, Candidates: 1
+   0. full name: long
+   1. simple name: long
+   2. subtype: Type8
+[long]
+Before TypeVariable: Type7, Candidates: 1
+   0. simple name: SystemClock
+   1. method: Type9 elapsedRealtime();
+[android.os.SystemClock]
+Before TypeVariable: Type14, Candidates: 1
+   0. simple name: Log
+   1. method: Type18 d(Type16,Type17);
+[android.util.Log]
+Before TypeVariable: Type13, Candidates: 2
+   0. full name: java.lang.String
+   1. subtype: Type6
+   2. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type9
+   1. subtype: Type10
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type11
+[]
+Before TypeVariable: Type11, Candidates: 0
+[]
+Before TypeVariable: Type12, Candidates: 0
+[]
+Before TypeVariable: Type15, Candidates: 0
+   0. subtype: Type18
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type12
+[]
+Before TypeVariable: Type17, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type18, Candidates: 0
+[]
+Before TypeVariable: Type19, Candidates: 0
+   0. subtype: Type21
+[]
+Before TypeVariable: Type20, Candidates: 0
+   0. subtype: Type9
+[]
+Before TypeVariable: Type21, Candidates: 0
+[]
+Before TypeVariable: Type22, Candidates: 0
+   0. subtype: Type23
+[]
+Before TypeVariable: Type23, Candidates: 0
+[]
+Before TypeVariable: Type25, Candidates: 0
+[]
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type6
+16:07:06.398 [main] INFO snr.G - Populate candidates for type constraint full name: long
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type13
+16:07:06.398 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type2
+16:07:06.398 [main] INFO snr.G - Populate candidates for type constraint simple name: Chronometer
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type6
+16:07:06.398 [main] INFO snr.G - Populate candidates for type constraint simple name: long
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type7
+16:07:06.398 [main] INFO snr.G - Populate candidates for type constraint simple name: SystemClock
+16:07:06.398 [main] INFO snr.G - Populate candidates for type variable Type13
+16:07:06.399 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+16:07:06.399 [main] INFO snr.G - Populate candidates for type variable Type14
+16:07:06.399 [main] INFO snr.G - Populate candidates for type constraint simple name: Log
+16:07:06.399 [main] INFO snr.G - Populate candidates for type variable Type2
+16:07:06.399 [main] INFO snr.G - Populate candidates for type constraint method: Type23 start();
+Processing method constraint method: Type23 start(); on Type2
+Current solution for c Type2 is uninit ? false [android.widget.Chronometer]
+Current solution for r Type23 is uninit ? false []
+Looking at method: public V start()
+updated solution for c Type2 [android.widget.Chronometer]
+updated solution for r Type23 [void]
+16:07:06.402 [main] INFO snr.G - Populate candidates for type variable Type2
+16:07:06.402 [main] INFO snr.G - Populate candidates for type constraint method: Type21 setBase(Type20);
+Processing method constraint method: Type21 setBase(Type20); on Type2
+Current solution for c Type2 is uninit ? false [android.widget.Chronometer]
+Current solution for r Type21 is uninit ? false []
+Current solution for p0 Type20 is uninit ? false []
+Looking at method: public V setBase(J)
+updated solution for c Type2 [android.widget.Chronometer]
+updated solution for r Type21 [void]
+updated solution for p0 Type20 [long]
+16:07:06.403 [main] INFO snr.G - Populate candidates for type variable Type2
+16:07:06.403 [main] INFO snr.G - Populate candidates for type constraint method: Type11 getBase();
+Processing method constraint method: Type11 getBase(); on Type2
+Current solution for c Type2 is uninit ? false [android.widget.Chronometer]
+Current solution for r Type11 is uninit ? false []
+Looking at method: public J getBase()
+updated solution for c Type2 [android.widget.Chronometer]
+updated solution for r Type11 [long]
+16:07:06.403 [main] INFO snr.G - Populate candidates for type variable Type7
+16:07:06.403 [main] INFO snr.G - Populate candidates for type constraint method: Type9 elapsedRealtime();
+Processing method constraint method: Type9 elapsedRealtime(); on Type7
+Current solution for c Type7 is uninit ? false [android.os.SystemClock]
+Current solution for r Type9 is uninit ? false []
+Looking at method: public static native J elapsedRealtime()
+updated solution for c Type7 [android.os.SystemClock]
+updated solution for r Type9 [long]
+16:07:06.403 [main] INFO snr.G - Populate candidates for type variable Type14
+16:07:06.403 [main] INFO snr.G - Populate candidates for type constraint method: Type18 d(Type16,Type17);
+Processing method constraint method: Type18 d(Type16,Type17); on Type14
+Current solution for c Type14 is uninit ? false [android.util.Log]
+Current solution for r Type18 is uninit ? false []
+Current solution for p0 Type16 is uninit ? false []
+Current solution for p1 Type17 is uninit ? false []
+Looking at method: public static I d(Ljava/lang/String;Ljava/lang/String;)
+updated solution for c Type14 [android.util.Log]
+updated solution for r Type18 [int]
+updated solution for p0 Type16 [java.lang.String]
+updated solution for p1 Type17 [java.lang.String]
+16:07:06.404 [main] INFO snr.G - Populate candidates for type variable Type2
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type25
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type6
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type8
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type8
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type10
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type13
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type15
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type16
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type17
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type19
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type21
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type20
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+16:07:06.405 [main] INFO snr.G - Populate candidates for type variable Type22
+16:07:06.405 [main] INFO snr.G - Populate candidates for type constraint subtype: Type23
+After TypeVariable: Type2, Candidates: 1
+   0. method: Type11 getBase();
+   1. simple name: Chronometer
+   2. subtype: Type25
+   3. method: Type23 start();
+   4. method: Type21 setBase(Type20);
+[android.widget.Chronometer]
+After TypeVariable: Type6, Candidates: 1
+   0. full name: long
+   1. simple name: long
+   2. subtype: Type8
+[long]
+After TypeVariable: Type7, Candidates: 1
+   0. simple name: SystemClock
+   1. method: Type9 elapsedRealtime();
+[android.os.SystemClock]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type9
+   1. subtype: Type10
+[long]
+After TypeVariable: Type9, Candidates: 1
+[long]
+After TypeVariable: Type10, Candidates: 1
+   0. subtype: Type11
+[long]
+After TypeVariable: Type11, Candidates: 1
+[long]
+After TypeVariable: Type12, Candidates: 1
+[java.lang.String]
+After TypeVariable: Type14, Candidates: 1
+   0. simple name: Log
+   1. method: Type18 d(Type16,Type17);
+[android.util.Log]
+After TypeVariable: Type15, Candidates: 1
+   0. subtype: Type18
+[int]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type12
+[java.lang.String]
+After TypeVariable: Type17, Candidates: 1
+   0. subtype: Type13
+[java.lang.String]
+After TypeVariable: Type18, Candidates: 1
+[int]
+After TypeVariable: Type19, Candidates: 1
+   0. subtype: Type21
+[void]
+After TypeVariable: Type20, Candidates: 1
+   0. subtype: Type9
+[long]
+After TypeVariable: Type21, Candidates: 1
+[void]
+After TypeVariable: Type22, Candidates: 1
+   0. subtype: Type23
+[void]
+After TypeVariable: Type23, Candidates: 1
+[void]
+After TypeVariable: Type25, Candidates: 1
+[android.widget.Chronometer]
+After TypeVariable: Type13, Candidates: 2
+   0. full name: java.lang.String
+   1. subtype: Type6
+   2. simple name: String
+[java.lang.String, java.lang.String]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:android.widget.Chronometer	android.widget.Chronometer	Chronometer
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:android.os.SystemClock	android.os.SystemClock	SystemClock
+	openjdk:jdk:1.8.0:long	long	long
+	jar:android-13.jar:1:android.util.Log	android.util.Log	Log
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:android.os.SystemClock	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:android.os.SystemClock	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:long	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:long
+	jar:android-13.jar:1:android.widget.Chronometer	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:android.widget.Chronometer	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:long	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:android.util.Log	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:android.util.Log	jar:android-13.jar:1:java.lang.String
+Printing: jfqlname.facts
+	Type13	java.lang.String
+	Type6	long
+Printing: type.facts
+	Type2
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type25
+	Type15
+	Type16
+	Type20
+	Type10
+	Type21
+	Type11
+	Type22
+	Type23
+	Type12
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type12	jar:android-13.jar:1:java.lang.String
+	Type15	openjdk:jdk:1.8.0:int
+	Type16	jar:android-13.jar:1:java.lang.String
+	Type13	openjdk:jdk:1.8.0:java.lang.String
+	Type13	jar:android-13.jar:1:java.lang.String
+	Type21	openjdk:jdk:1.8.0:void
+	Type23	openjdk:jdk:1.8.0:void
+	Type22	openjdk:jdk:1.8.0:void
+	Type8	openjdk:jdk:1.8.0:long
+	Type9	openjdk:jdk:1.8.0:long
+	Type6	openjdk:jdk:1.8.0:long
+	Type19	openjdk:jdk:1.8.0:void
+	Type2	jar:android-13.jar:1:android.widget.Chronometer
+	Type11	openjdk:jdk:1.8.0:long
+	Type7	jar:android-13.jar:1:android.os.SystemClock
+	Type14	jar:android-13.jar:1:android.util.Log
+	Type17	jar:android-13.jar:1:java.lang.String
+	Type20	openjdk:jdk:1.8.0:long
+	Type10	openjdk:jdk:1.8.0:long
+	Type18	openjdk:jdk:1.8.0:int
+	Type25	jar:android-13.jar:1:android.widget.Chronometer
+Printing: jmethod_dependency.facts
+	3	Type2	Type21	setBase
+	6	Type7	Type9	elapsedRealtime
+	4	Type14	Type18	d
+	0	Type2	Type11	getBase
+	2	Type2	Type23	start
+Printing: jsimplename.facts
+	Type7	SystemClock
+	Type13	String
+	Type2	Chronometer
+	Type6	long
+	Type14	Log
+Printing: jmethod.facts
+	6	jar:android-13.jar:1:android.os.SystemClock	openjdk:jdk:1.8.0:long	elapsedRealtime	0
+	0	jar:android-13.jar:1:android.widget.Chronometer	openjdk:jdk:1.8.0:long	getBase	0
+	2	jar:android-13.jar:1:android.widget.Chronometer	openjdk:jdk:1.8.0:void	start	0
+	3	jar:android-13.jar:1:android.widget.Chronometer	openjdk:jdk:1.8.0:void	setBase	1
+	4	jar:android-13.jar:1:android.util.Log	openjdk:jdk:1.8.0:int	d	2
+Printing: jsupertype_dependency.facts
+	Type9	Type8
+	Type23	Type22
+	Type8	Type6
+	Type11	Type10
+	Type12	Type16
+	Type25	Type2
+	Type21	Type19
+	Type9	Type20
+	Type10	Type8
+	Type13	Type17
+	Type6	Type13
+	Type18	Type15
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	3	0	openjdk:jdk:1.8.0:long
+	4	0	jar:android-13.jar:1:java.lang.String
+	4	1	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_param_dependency.facts
+	3	0	Type20
+	4	0	Type16
+	4	1	Type17
+All artifact rank: [jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type20 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type19 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type15 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type22 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type17 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type9 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type23 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type16 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type18 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type21 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type2 -> android.widget.Chronometer
+Added artifact: jar:android-13.jar:1
+Found Type14 -> android.util.Log
+Added artifact: jar:android-13.jar:1
+Found Type12 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type6 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type7 -> android.os.SystemClock
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type25 -> android.widget.Chronometer
+Added artifact: jar:android-13.jar:1
+Found Type8 -> long
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type10 -> long
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type11 -> long
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type11 to long, dumping:
+Bind Type2 to android.widget.Chronometer, dumping:
+Bind Type19 to void, dumping:
+Bind Type15 to int, dumping:
+Bind Type17 to java.lang.String, dumping:
+Bind Type20 to long, dumping:
+Bind Type9 to long, dumping:
+Bind Type14 to android.util.Log, dumping:
+Bind Type23 to void, dumping:
+Bind Type12 to java.lang.String, dumping:
+Bind Type16 to java.lang.String, dumping:
+Bind Type25 to android.widget.Chronometer, dumping:
+Bind Type10 to long, dumping:
+Bind Type8 to long, dumping:
+Bind Type6 to long, dumping:
+Bind Type22 to void, dumping:
+Bind Type18 to int, dumping:
+Bind Type7 to android.os.SystemClock, dumping:
+Bind Type21 to void, dumping:
+Bind Type13 to java.lang.String, dumping:
+16:07:06.699 [main] INFO snr.k - Fixing Type2 with android.widget.Chronometer
+16:07:06.700 [main] INFO snr.k - Fixing Type2 with android.widget.Chronometer
+16:07:06.701 [main] WARN snr.k - Failed to solve type 'null' for R
+16:07:06.701 [main] INFO snr.k - Fixing Type7 with android.os.SystemClock
+16:07:06.701 [main] INFO snr.k - Fixing Type14 with android.util.Log
+16:07:06.701 [main] INFO snr.k - Fixing Type7 with android.os.SystemClock
+16:07:06.701 [main] INFO snr.k - Fixing Type2 with android.widget.Chronometer
+16:07:06.752 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+16:07:06.754 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+16:07:06.754 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+16:07:06.754 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package androidExamples;
+
+import android.widget.Chronometer;
+import android.os.SystemClock;
+import android.util.Log;
+
+//ID = 526524
+public class Android10 {
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+		Chronometer t = (Chronometer) findViewById(R.id.toptime);
+		long time = SystemClock.elapsedRealtime() - t.getBase();
+		Log.d(null, "Was: " + time); //time is not the proper time for some reason - it is a random number between 0 and 50
+		t.setBase(SystemClock.elapsedRealtime());
+		t.start();
+
+	}
+
+	private static Chronometer findViewById(int toptime) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+16:07:06.754 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+16:07:06.795 [main] INFO snr.e - Compilation takes 40 ms

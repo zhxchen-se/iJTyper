@@ -1,0 +1,429 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_50.java
+Expect check=81
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Did not find solution for node: hibernate_class_50 with type Type1
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import java.util.jar.Attributes.Name;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+For node: void expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: setSessionFactory
+Cannot find matching typeVariable for: public void setSessionFactory(SessionFactory sessionFactory){
+  this.sessionFactory=sessionFactory;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import java.util.jar.Attributes.Name;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: SessionFactory sessionFactory
+For node: SessionFactory sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: this.sessionFactory=sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: this.sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getSessionFactory
+Cannot find matching typeVariable for: public SessionFactory getSessionFactory(){
+  return sessionFactory;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import java.util.jar.Attributes.Name;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: @SuppressWarnings("unchecked") expected fqn: java.lang.SuppressWarnings with type: Type8 got: java.lang.SuppressWarnings
+For node: SuppressWarnings expected fqn: java.lang.SuppressWarnings with type: Type8 got: java.lang.SuppressWarnings
+For node: "unchecked" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: List<Name> expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: getAll
+Cannot find matching typeVariable for: @SuppressWarnings("unchecked") public List<Name> getAll(){
+  Session session=this.sessionFactory.getCurrentSession();
+  List<Name> names=(List<Name>)session.createQuery("from Name").list();
+  return names;
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import java.util.jar.Attributes.Name;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: session=this.sessionFactory.getCurrentSession()
+For node: session=this.sessionFactory.getCurrentSession() expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: this.sessionFactory.getCurrentSession() expected fqn: org.hibernate.Session with type: Type10 got: org.hibernate.Session
+For node: this.sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getCurrentSession
+For node: getCurrentSession expected fqn: org.hibernate.Session with type: Type10 got: org.hibernate.Session
+For node: List<Name> expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+Cannot find matching typeVariable for: names=(List<Name>)session.createQuery("from Name").list()
+For node: names=(List<Name>)session.createQuery("from Name").list() expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: names expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: (List<Name>)session.createQuery("from Name").list() expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: List<Name> expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: List expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type2 got: java.util.List
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: session.createQuery("from Name").list() expected fqn: java.util.List with type: Type15 got: java.util.List
+For node: session.createQuery("from Name") expected fqn: org.hibernate.query.Query with type: Type12 got: org.hibernate.Query
+For node: session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: createQuery
+For node: createQuery expected fqn: org.hibernate.query.Query with type: Type12 got: org.hibernate.Query
+For node: "from Name" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: list
+For node: list expected fqn: java.util.List with type: Type15 got: java.util.List
+For node: names expected fqn: java.util.List<java.util.jar.Attributes.Name> with type: Type4=Type2<Type3> got: java.util.List<java.lang.Object>
+For node: void expected fqn: void with type: Type5 got: void
+Cannot find matching typeVariable for: save
+Cannot find matching typeVariable for: public void save(Name name){
+  Session session=this.sessionFactory.getCurrentSession();
+  session.saveOrUpdate(name);
+  session.flush();
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.List;
+import java.util.jar.Attributes.Name;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+public class hibernate_class_50 {
+  private SessionFactory sessionFactory;
+  public void setSessionFactory(  SessionFactory sessionFactory){
+    this.sessionFactory=sessionFactory;
+  }
+  public SessionFactory getSessionFactory(){
+    return sessionFactory;
+  }
+  @SuppressWarnings("unchecked") public List<Name> getAll(){
+    Session session=this.sessionFactory.getCurrentSession();
+    List<Name> names=(List<Name>)session.createQuery("from Name").list();
+    return names;
+  }
+  public void save(  Name name){
+    Session session=this.sessionFactory.getCurrentSession();
+    session.saveOrUpdate(name);
+    session.flush();
+  }
+}
+
+Cannot find matching typeVariable for: Name name
+For node: Name name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: session=this.sessionFactory.getCurrentSession()
+For node: session=this.sessionFactory.getCurrentSession() expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+For node: this.sessionFactory.getCurrentSession() expected fqn: org.hibernate.Session with type: Type11 got: org.hibernate.classic.Session
+For node: this.sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Did not find solution for node: this with type Type1
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: getCurrentSession
+For node: getCurrentSession expected fqn: org.hibernate.Session with type: Type11 got: org.hibernate.classic.Session
+For node: session.saveOrUpdate(name) expected fqn: void with type: Type17 got: void
+For node: session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: saveOrUpdate
+For node: saveOrUpdate expected fqn: void with type: Type17 got: void
+For node: name expected fqn: java.util.jar.Attributes.Name with type: Type3 got: java.lang.Object
+For node: session.flush() expected fqn: void with type: Type20 got: void
+For node: session expected fqn: org.hibernate.Session with type: Type9 got: org.hibernate.Session
+Cannot find matching typeVariable for: flush
+For node: flush expected fqn: void with type: Type20 got: void
+{Checked=75, Analyzed=71, Unsolved=4, Incorrect=28, Correct=43}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=11, Correct=2}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=7, Correct=0}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+org.hibernate.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=2, Correct=17}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=75, Analyzed=71, Unsolved=4, Incorrect=28, Correct=43}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=11, Correct=2}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=7, Correct=0}
+java=SingleMemberAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=FieldAccess: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+org.hibernate.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=2, Correct=17}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,3,0,0,3
+java,CastExpression,1,1,0,1,0
+java,MethodInvocation,1,1,1,0,0
+java,ParameterizedType,3,3,0,3,0
+java,SimpleName,13,13,2,11,0
+java,SimpleType,7,7,0,7,0
+java,SingleMemberAnnotation,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,0,1,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,0,1,0
+org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,FieldAccess,3,3,3,0,0
+org.hibernate.,MethodInvocation,3,3,1,2,0
+org.hibernate.,SimpleName,19,19,17,2,0
+org.hibernate.,SimpleType,5,5,5,0,0
+org.hibernate.,SingleVariableDeclaration,1,1,1,0,0
+org.hibernate.,VariableDeclarationFragment,3,3,3,0,0
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,2,2,2,0,0
+void,SimpleName,2,2,2,0,0

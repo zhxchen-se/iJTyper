@@ -1,0 +1,139 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt17.java
+Expect check=35
+Cannot find matching typeVariable for: public class jt17 {
+  public static void h1(){
+    String dateTime="2015-07-18T13:32:56.971-0400";
+    DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+    DateTime dt=formatter.parseDateTime(dateTime);
+  }
+}
+
+Cannot find matching typeVariable for: jt17
+Cannot find matching typeVariable for: public class jt17 {
+  public static void h1(){
+    String dateTime="2015-07-18T13:32:56.971-0400";
+    DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+    DateTime dt=formatter.parseDateTime(dateTime);
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.chrono.ISOChronology;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import java.util.Locale;
+public class jt17 {
+  public static void h1(){
+    String dateTime="2015-07-18T13:32:56.971-0400";
+    DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+    DateTime dt=formatter.parseDateTime(dateTime);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  String dateTime="2015-07-18T13:32:56.971-0400";
+  DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+  DateTime dt=formatter.parseDateTime(dateTime);
+}
+
+Cannot find matching typeVariable for: public class jt17 {
+  public static void h1(){
+    String dateTime="2015-07-18T13:32:56.971-0400";
+    DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+    DateTime dt=formatter.parseDateTime(dateTime);
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.chrono.ISOChronology;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import java.util.Locale;
+public class jt17 {
+  public static void h1(){
+    String dateTime="2015-07-18T13:32:56.971-0400";
+    DateTimeFormatter formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC());
+    DateTime dt=formatter.parseDateTime(dateTime);
+  }
+}
+
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: dateTime="2015-07-18T13:32:56.971-0400"
+For node: dateTime="2015-07-18T13:32:56.971-0400" expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: dateTime expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: "2015-07-18T13:32:56.971-0400" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC())
+For node: formatter=DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC()) expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: formatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT).withChronology(ISOChronology.getInstanceUTC()) expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+Did not find solution for node: DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ").withLocale(Locale.ROOT) with type Type12
+Did not find solution for node: DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZZ") with type Type7
+Did not find solution for node: DateTimeFormat with type Type6
+Cannot find matching typeVariable for: forPattern
+Did not find solution for node: forPattern with type Type7
+For node: "yyyy-MM-dd'T'HH:mm:ss.SSSZZ" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+Cannot find matching typeVariable for: withLocale
+Did not find solution for node: withLocale with type Type12
+Cannot find matching typeVariable for: Locale.ROOT
+Did not find solution for node: Locale.ROOT with type Type12
+For node: Locale expected fqn: java.util.Locale with type: Type10 got: java.util.Locale
+For node: ROOT expected fqn: java.util.Locale with type: Type11 got: java.util.Locale
+Cannot find matching typeVariable for: withChronology
+For node: withChronology expected fqn: org.joda.time.format.DateTimeFormatter with type: Type18 got: org.joda.time.format.DateTimeFormatter
+Did not find solution for node: ISOChronology.getInstanceUTC() with type Type16
+Did not find solution for node: ISOChronology with type Type15
+Cannot find matching typeVariable for: getInstanceUTC
+Did not find solution for node: getInstanceUTC with type Type16
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: dt=formatter.parseDateTime(dateTime)
+For node: dt=formatter.parseDateTime(dateTime) expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
+For node: dt expected fqn: org.joda.time.DateTime with type: Type21 got: org.joda.time.DateTime
+For node: formatter.parseDateTime(dateTime) expected fqn: org.joda.time.DateTime with type: Type22 got: org.joda.time.DateTime
+For node: formatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: parseDateTime
+For node: parseDateTime expected fqn: org.joda.time.DateTime with type: Type22 got: org.joda.time.DateTime
+For node: dateTime expected fqn: java.lang.String with type: Type3 got: java.lang.String
+{Checked=32, Analyzed=23, Unsolved=9, Incorrect=0, Correct=23}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=12, Analyzed=7, Unsolved=5, Incorrect=0, Correct=7}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=32, Analyzed=23, Unsolved=9, Incorrect=0, Correct=23}
+java=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=12, Analyzed=7, Unsolved=5, Incorrect=0, Correct=7}
+org.joda.time.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,QualifiedName,0,1,0,0,1
+java,SimpleName,5,5,5,0,0
+java,SimpleType,1,1,1,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+org.joda.time.,MethodInvocation,2,5,2,0,3
+org.joda.time.,SimpleName,7,12,7,0,5
+org.joda.time.,SimpleType,2,2,2,0,0
+org.joda.time.,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

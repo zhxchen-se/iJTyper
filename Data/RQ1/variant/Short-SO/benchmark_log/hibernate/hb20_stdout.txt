@@ -1,0 +1,158 @@
+07:58:24.864 [main] INFO snr.h - Building CompilationUnit takes 659 ms
+07:58:25.030 [main] INFO snr.e - Compilation takes 158 ms
+HibernateUtil cannot be resolved to a type
+Transaction cannot be resolved to a type
+FragmentManager cannot be resolved to a type
+Transaction cannot be resolved to a type
+Finding class definition name: Transaction isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.hibernate.Transaction] to Type4
+Return without setting candidates for Type7
+Return without setting candidates for Type9
+Return without setting candidates for Type8
+Return without setting candidates for Type5
+Finding class definition name: HibernateUtil isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [] to Type3
+07:58:25.188 [main] INFO snr.G - Cannot find class definition for HibernateUtil with full name: false, with fields: [], with methods: [], and argument sizes:[]
+07:58:25.188 [main] INFO snr.G - Cannot load candidates for Type3.
+   0. simple name: HibernateUtil
+Finding class definition name: FragmentManager isfull? false fields: [] methods: [beginTransaction] argument sizes: [0]
+Adding candidates [] to Type6
+07:58:25.192 [main] INFO snr.G - Cannot find class definition for FragmentManager with full name: false, with fields: [], with methods: [beginTransaction], and argument sizes:[0]
+07:58:25.192 [main] INFO snr.G - Cannot load candidates for Type6.
+   0. simple name: FragmentManager
+   1. subtype: Type7
+   2. method: Type9 beginTransaction();
+07:58:25.193 [main] INFO snr.G - Loading initial candidates takes 28 ms.
+Before TypeVariable: Type4, Candidates: 1
+   0. simple name: Transaction
+   1. subtype: Type5
+[org.hibernate.Transaction]
+Before TypeVariable: Type3, Candidates: 0
+   0. simple name: HibernateUtil
+[]
+Before TypeVariable: Type5, Candidates: 0
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. simple name: FragmentManager
+   1. subtype: Type7
+   2. method: Type9 beginTransaction();
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type4
+   1. subtype: Type9
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type3
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint simple name: HibernateUtil
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type4
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint simple name: Transaction
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type6
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint simple name: FragmentManager
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type6
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint method: Type9 beginTransaction();
+Processing method constraint method: Type9 beginTransaction(); on Type6
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type4
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type6
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type8
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+07:58:25.197 [main] INFO snr.G - Populate candidates for type variable Type8
+07:58:25.197 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+After TypeVariable: Type4, Candidates: 1
+   0. simple name: Transaction
+   1. subtype: Type5
+[org.hibernate.Transaction]
+After TypeVariable: Type5, Candidates: 1
+[org.hibernate.Transaction]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type4
+   1. subtype: Type9
+[org.hibernate.Transaction]
+After TypeVariable: Type9, Candidates: 1
+[org.hibernate.Transaction]
+After TypeVariable: Type3, Candidates: 0
+   0. simple name: HibernateUtil
+[]
+After TypeVariable: Type6, Candidates: 0
+   0. simple name: FragmentManager
+   1. subtype: Type7
+   2. method: Type9 beginTransaction();
+[]
+After TypeVariable: Type7, Candidates: 0
+[]
+Printing: jclass.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Transaction	org.hibernate.Transaction	Transaction
+Printing: jclasssuper.facts
+Printing: jfqlname.facts
+Printing: type.facts
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+Printing: candidate.facts
+	Type8	jar:hibernate-3.5.3.jar:1:org.hibernate.Transaction
+	Type9	jar:hibernate-3.5.3.jar:1:org.hibernate.Transaction
+	Type4	jar:hibernate-3.5.3.jar:1:org.hibernate.Transaction
+	Type5	jar:hibernate-3.5.3.jar:1:org.hibernate.Transaction
+Printing: jmethod_dependency.facts
+	0	Type6	Type9	beginTransaction
+Printing: jsimplename.facts
+	Type6	FragmentManager
+	Type4	Transaction
+	Type3	HibernateUtil
+Printing: jmethod.facts
+Printing: jsupertype_dependency.facts
+	Type5	Type4
+	Type9	Type8
+	Type7	Type6
+	Type4	Type8
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+Printing: jmethod_param_dependency.facts
+All artifact rank: [jar:hibernate-3.5.3.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type8 -> org.hibernate.Transaction
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type4 -> org.hibernate.Transaction
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type5 -> org.hibernate.Transaction
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Quiting souffle
+Bind Type4 to org.hibernate.Transaction, dumping:
+Bind Type8 to org.hibernate.Transaction, dumping:
+Bind Type5 to org.hibernate.Transaction, dumping:
+07:58:25.415 [main] WARN snr.k - Failed to solve type 'Type3' for HibernateUtil
+07:58:25.415 [main] INFO snr.k - Fixing Type4 with org.hibernate.Transaction
+07:58:25.416 [main] WARN snr.k - Failed to solve type 'Type6' for FragmentManager
+07:58:25.417 [main] INFO snr.k - Fixing Type4 with org.hibernate.Transaction
+07:58:25.465 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+07:58:25.466 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+07:58:25.466 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+07:58:25.467 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.hibernate;
+
+import org.hibernate.Transaction;
+
+public class hb20 {
+	private static HibernateUtil HibernateUtils;
+
+	public static void h1() {
+		Transaction tx = null;
+		FragmentManager session = null;
+		tx = (Transaction) session.beginTransaction();
+
+	}
+}
+07:58:25.467 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+07:58:25.491 [main] INFO snr.e - Compilation takes 24 ms

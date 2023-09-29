@@ -1,0 +1,95 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb6.java
+Expect check=20
+Cannot find matching typeVariable for: public class hb6 {
+  public static void h1(){
+    Configuration config=new Configuration().configure();
+    SessionFactory sessionFactory=config.buildSessionFactory();
+  }
+}
+
+Cannot find matching typeVariable for: hb6
+Cannot find matching typeVariable for: public class hb6 {
+  public static void h1(){
+    Configuration config=new Configuration().configure();
+    SessionFactory sessionFactory=config.buildSessionFactory();
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hb6 {
+  public static void h1(){
+    Configuration config=new Configuration().configure();
+    SessionFactory sessionFactory=config.buildSessionFactory();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  Configuration config=new Configuration().configure();
+  SessionFactory sessionFactory=config.buildSessionFactory();
+}
+
+Cannot find matching typeVariable for: public class hb6 {
+  public static void h1(){
+    Configuration config=new Configuration().configure();
+    SessionFactory sessionFactory=config.buildSessionFactory();
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+public class hb6 {
+  public static void h1(){
+    Configuration config=new Configuration().configure();
+    SessionFactory sessionFactory=config.buildSessionFactory();
+  }
+}
+
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: config=new Configuration().configure()
+For node: config=new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: new Configuration().configure() expected fqn: org.hibernate.cfg.Configuration with type: Type5 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type5 got: org.hibernate.cfg.Configuration
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory=config.buildSessionFactory()
+For node: sessionFactory=config.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type7 got: org.hibernate.SessionFactory
+For node: config.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type8 got: org.hibernate.SessionFactory
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type3 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type8 got: org.hibernate.SessionFactory
+{Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=SimpleName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=17, Analyzed=17, Unsolved=0, Incorrect=0, Correct=17}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=SimpleName: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.hibernate.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.,ClassInstanceCreation,1,1,1,0,0
+org.hibernate.,MethodInvocation,2,2,2,0,0
+org.hibernate.,SimpleName,8,8,8,0,0
+org.hibernate.,SimpleType,3,3,3,0,0
+org.hibernate.,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

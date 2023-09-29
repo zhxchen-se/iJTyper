@@ -1,0 +1,229 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_27.java
+Expect check=57
+Cannot find matching typeVariable for: public class gwt_class_27 {
+  public static void main(  String arg[]){
+    final Button sendButton=new Button("Send");
+    sendButton.getElement().setId("button");
+    RootPanel.get().getElement().appendChild(sendButton.getElement());
+    NodeList buttonElement=Document.get().getElementsByTagName("button");
+    if (buttonElement != null && buttonElement.getLength() > 0) {
+      buttonElement.getItem(0).setNodeValue("Changed");
+    }
+ else {
+      GWT.log("Can't select button");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_27
+Cannot find matching typeVariable for: public class gwt_class_27 {
+  public static void main(  String arg[]){
+    final Button sendButton=new Button("Send");
+    sendButton.getElement().setId("button");
+    RootPanel.get().getElement().appendChild(sendButton.getElement());
+    NodeList buttonElement=Document.get().getElementsByTagName("button");
+    if (buttonElement != null && buttonElement.getLength() > 0) {
+      buttonElement.getItem(0).setNodeValue("Changed");
+    }
+ else {
+      GWT.log("Can't select button");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.dom.client.NodeList;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.RootPanel;
+public class gwt_class_27 {
+  public static void main(  String arg[]){
+    final Button sendButton=new Button("Send");
+    sendButton.getElement().setId("button");
+    RootPanel.get().getElement().appendChild(sendButton.getElement());
+    NodeList buttonElement=Document.get().getElementsByTagName("button");
+    if (buttonElement != null && buttonElement.getLength() > 0) {
+      buttonElement.getItem(0).setNodeValue("Changed");
+    }
+ else {
+      GWT.log("Can't select button");
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String arg[]){
+  final Button sendButton=new Button("Send");
+  sendButton.getElement().setId("button");
+  RootPanel.get().getElement().appendChild(sendButton.getElement());
+  NodeList buttonElement=Document.get().getElementsByTagName("button");
+  if (buttonElement != null && buttonElement.getLength() > 0) {
+    buttonElement.getItem(0).setNodeValue("Changed");
+  }
+ else {
+    GWT.log("Can't select button");
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_27 {
+  public static void main(  String arg[]){
+    final Button sendButton=new Button("Send");
+    sendButton.getElement().setId("button");
+    RootPanel.get().getElement().appendChild(sendButton.getElement());
+    NodeList buttonElement=Document.get().getElementsByTagName("button");
+    if (buttonElement != null && buttonElement.getLength() > 0) {
+      buttonElement.getItem(0).setNodeValue("Changed");
+    }
+ else {
+      GWT.log("Can't select button");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.dom.client.NodeList;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.RootPanel;
+public class gwt_class_27 {
+  public static void main(  String arg[]){
+    final Button sendButton=new Button("Send");
+    sendButton.getElement().setId("button");
+    RootPanel.get().getElement().appendChild(sendButton.getElement());
+    NodeList buttonElement=Document.get().getElementsByTagName("button");
+    if (buttonElement != null && buttonElement.getLength() > 0) {
+      buttonElement.getItem(0).setNodeValue("Changed");
+    }
+ else {
+      GWT.log("Can't select button");
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String arg[]
+For node: String arg[] expected fqn: java.lang.String[] with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: arg expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: sendButton=new Button("Send")
+For node: sendButton=new Button("Send") expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: sendButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: new Button("Send") expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+For node: "Send" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+No match for actual type MethodInvocation: sendButton.getElement().setId("button") with type: Type11 got: void
+For node: sendButton.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type9 got: com.google.gwt.dom.client.Element
+For node: sendButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type9 got: com.google.gwt.dom.client.Element
+For node: "button" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+No match for actual type MethodInvocation: RootPanel.get().getElement().appendChild(sendButton.getElement()) with type: Type19 got: T
+For node: RootPanel.get().getElement() expected fqn: com.google.gwt.user.client.Element with type: Type17 got: com.google.gwt.user.client.Element
+For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type15 got: com.google.gwt.user.client.ui.Panel
+For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type14 got: com.google.gwt.user.client.ui.RootPanel
+Cannot find matching typeVariable for: get
+For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type15 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type17 got: com.google.gwt.user.client.Element
+For node: sendButton.getElement() expected fqn: com.google.gwt.user.client.Element with type: Type10 got: com.google.gwt.user.client.Element
+For node: sendButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type5 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: getElement
+For node: getElement expected fqn: com.google.gwt.user.client.Element with type: Type10 got: com.google.gwt.user.client.Element
+For node: NodeList expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+For node: NodeList expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+Cannot find matching typeVariable for: buttonElement=Document.get().getElementsByTagName("button")
+For node: buttonElement=Document.get().getElementsByTagName("button") expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+For node: buttonElement expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+For node: Document.get().getElementsByTagName("button") expected fqn: com.google.gwt.dom.client.NodeList<com.google.gwt.dom.client.Element> with type: Type26 got: com.google.gwt.dom.client.NodeList
+For node: Document.get() expected fqn: com.google.gwt.dom.client.Document with type: Type24 got: com.google.gwt.dom.client.Document
+For node: Document expected fqn: com.google.gwt.dom.client.Document with type: Type23 got: com.google.gwt.dom.client.Document
+Cannot find matching typeVariable for: get
+For node: get expected fqn: com.google.gwt.dom.client.Document with type: Type24 got: com.google.gwt.dom.client.Document
+Cannot find matching typeVariable for: getElementsByTagName
+For node: getElementsByTagName expected fqn: com.google.gwt.dom.client.NodeList<com.google.gwt.dom.client.Element> with type: Type26 got: com.google.gwt.dom.client.NodeList
+For node: "button" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: buttonElement != null && buttonElement.getLength() > 0 expected fqn: boolean with type: Type30 got: boolean
+For node: buttonElement != null expected fqn: boolean with type: Type30 got: boolean
+For node: buttonElement expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+Did not find solution for node: null with type Type29
+For node: buttonElement.getLength() > 0 expected fqn: boolean with type: Type30 got: boolean
+For node: buttonElement.getLength() expected fqn: int with type: Type31 got: int
+For node: buttonElement expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+Cannot find matching typeVariable for: getLength
+For node: getLength expected fqn: int with type: Type31 got: int
+For node: 0 expected fqn: int with type: Type33 got: byte
+For node: buttonElement.getItem(0).setNodeValue("Changed") expected fqn: void with type: Type37 got: void
+For node: buttonElement.getItem(0) expected fqn: com.google.gwt.dom.client.Node with type: Type34 got: com.google.gwt.dom.client.Node
+For node: buttonElement expected fqn: com.google.gwt.dom.client.NodeList with type: Type22 got: com.google.gwt.dom.client.NodeList
+Cannot find matching typeVariable for: getItem
+For node: getItem expected fqn: com.google.gwt.dom.client.Node with type: Type34 got: com.google.gwt.dom.client.Node
+For node: 0 expected fqn: int with type: Type33 got: byte
+Cannot find matching typeVariable for: setNodeValue
+For node: setNodeValue expected fqn: void with type: Type37 got: void
+For node: "Changed" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+No match for actual type MethodInvocation: GWT.log("Can't select button") with type: Type41 got: void
+For node: GWT expected fqn: com.google.gwt.core.client.GWT with type: Type40 got: com.google.gwt.core.client.GWT
+Cannot find matching typeVariable for: log
+For node: log expected fqn: void with type: Type41 got: void
+For node: "Can't select button" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+{Checked=54, Analyzed=53, Unsolved=1, Incorrect=9, Correct=44}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=3, Correct=4}
+gwt.=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=3, Correct=17}
+gwt.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=54, Analyzed=53, Unsolved=1, Incorrect=9, Correct=44}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=3, Correct=4}
+gwt.=SimpleName: {Checked=20, Analyzed=20, Unsolved=0, Incorrect=3, Correct=17}
+gwt.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean,InfixExpression,3,3,3,0,0
+gwt.,ClassInstanceCreation,1,1,1,0,0
+gwt.,MethodInvocation,7,7,4,3,0
+gwt.,SimpleName,20,20,17,3,0
+gwt.,SimpleType,3,3,3,0,0
+gwt.,VariableDeclarationFragment,2,2,2,0,0
+int,MethodInvocation,1,1,1,0,0
+int,NumberLiteral,2,2,0,2,0
+int,SimpleName,1,1,1,0,0
+java,SimpleName,2,2,2,0,0
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,0,1,0
+java,StringLiteral,5,5,5,0,0
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

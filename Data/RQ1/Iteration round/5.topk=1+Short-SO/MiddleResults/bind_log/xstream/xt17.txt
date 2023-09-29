@@ -1,0 +1,142 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt17.java
+Expect check=36
+Cannot find matching typeVariable for: public class xt17 {
+  public static void h1(  String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    File FileIn=new File(xmlPath);
+    DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder=factory.newDocumentBuilder();
+  }
+}
+
+Cannot find matching typeVariable for: xt17
+Cannot find matching typeVariable for: public class xt17 {
+  public static void h1(  String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    File FileIn=new File(xmlPath);
+    DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder=factory.newDocumentBuilder();
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.google.android.gms.plus.model.people.Person;
+import com.thoughtworks.xstream.XStream;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
+public class xt17 {
+  public static void h1(  String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    File FileIn=new File(xmlPath);
+    DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder=factory.newDocumentBuilder();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+  File FileIn=new File(xmlPath);
+  DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+  DocumentBuilder builder=factory.newDocumentBuilder();
+}
+
+Cannot find matching typeVariable for: public class xt17 {
+  public static void h1(  String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    File FileIn=new File(xmlPath);
+    DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder=factory.newDocumentBuilder();
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.google.android.gms.plus.model.people.Person;
+import com.thoughtworks.xstream.XStream;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
+public class xt17 {
+  public static void h1(  String xmlPath) throws ParserConfigurationException, IOException, SAXException {
+    File FileIn=new File(xmlPath);
+    DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder=factory.newDocumentBuilder();
+  }
+}
+
+Cannot find matching typeVariable for: String xmlPath
+For node: String xmlPath expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: xmlPath expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: ParserConfigurationException expected fqn: javax.xml.parsers.ParserConfigurationException with type: Type4 got: javax.xml.parsers.ParserConfigurationException
+For node: ParserConfigurationException expected fqn: javax.xml.parsers.ParserConfigurationException with type: Type4 got: javax.xml.parsers.ParserConfigurationException
+For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
+For node: IOException expected fqn: java.io.IOException with type: Type5 got: java.io.IOException
+For node: SAXException expected fqn: org.xml.sax.SAXException with type: Type6 got: org.xml.sax.SAXException
+For node: SAXException expected fqn: org.xml.sax.SAXException with type: Type6 got: org.xml.sax.SAXException
+For node: File expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type7 got: java.io.File
+Cannot find matching typeVariable for: FileIn=new File(xmlPath)
+For node: FileIn=new File(xmlPath) expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: FileIn expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: new File(xmlPath) expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type7 got: java.io.File
+For node: xmlPath expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: DocumentBuilderFactory expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+For node: DocumentBuilderFactory expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+Cannot find matching typeVariable for: factory=DocumentBuilderFactory.newInstance()
+For node: factory=DocumentBuilderFactory.newInstance() expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+For node: factory expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+For node: DocumentBuilderFactory.newInstance() expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type11 got: javax.xml.parsers.DocumentBuilderFactory
+For node: DocumentBuilderFactory expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+Cannot find matching typeVariable for: newInstance
+For node: newInstance expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type11 got: javax.xml.parsers.DocumentBuilderFactory
+For node: DocumentBuilder expected fqn: javax.xml.parsers.DocumentBuilder with type: Type13 got: javax.xml.parsers.DocumentBuilder
+For node: DocumentBuilder expected fqn: javax.xml.parsers.DocumentBuilder with type: Type13 got: javax.xml.parsers.DocumentBuilder
+Cannot find matching typeVariable for: builder=factory.newDocumentBuilder()
+For node: builder=factory.newDocumentBuilder() expected fqn: javax.xml.parsers.DocumentBuilder with type: Type13 got: javax.xml.parsers.DocumentBuilder
+For node: builder expected fqn: javax.xml.parsers.DocumentBuilder with type: Type13 got: javax.xml.parsers.DocumentBuilder
+For node: factory.newDocumentBuilder() expected fqn: javax.xml.parsers.DocumentBuilder with type: Type14 got: javax.xml.parsers.DocumentBuilder
+For node: factory expected fqn: javax.xml.parsers.DocumentBuilderFactory with type: Type10 got: javax.xml.parsers.DocumentBuilderFactory
+Cannot find matching typeVariable for: newDocumentBuilder
+For node: newDocumentBuilder expected fqn: javax.xml.parsers.DocumentBuilder with type: Type14 got: javax.xml.parsers.DocumentBuilder
+{Checked=33, Analyzed=33, Unsolved=0, Incorrect=0, Correct=33}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=33, Analyzed=33, Unsolved=0, Incorrect=0, Correct=33}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=16, Analyzed=16, Unsolved=0, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,1,1,1,0,0
+,SimpleType,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,16,16,16,0,0
+java,SimpleType,7,7,7,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0

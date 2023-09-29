@@ -1,0 +1,368 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_3.java
+Expect check=135
+Cannot find matching typeVariable for: public class xstream_class_3 {
+  public static void main(  String[] args){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+    List messages=new ArrayList();
+    Object mock1=null;
+    messages.add(mock1);
+    Object mock2=null;
+    messages.add(mock2);
+    Object mock3=null;
+    messages.add(mock3);
+    String jsonString=xstream.toXML(messages);
+    System.out.println(jsonString);
+    List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+    System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+    String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+    List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+    System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+  }
+}
+
+Cannot find matching typeVariable for: xstream_class_3
+Cannot find matching typeVariable for: public class xstream_class_3 {
+  public static void main(  String[] args){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+    List messages=new ArrayList();
+    Object mock1=null;
+    messages.add(mock1);
+    Object mock2=null;
+    messages.add(mock2);
+    Object mock3=null;
+    messages.add(mock3);
+    String jsonString=xstream.toXML(messages);
+    System.out.println(jsonString);
+    List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+    System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+    String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+    List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+    System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+public class xstream_class_3 {
+  public static void main(  String[] args){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+    List messages=new ArrayList();
+    Object mock1=null;
+    messages.add(mock1);
+    Object mock2=null;
+    messages.add(mock2);
+    Object mock3=null;
+    messages.add(mock3);
+    String jsonString=xstream.toXML(messages);
+    System.out.println(jsonString);
+    List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+    System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+    String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+    List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+    System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+  XStream xstream=new XStream(xmlDriver);
+  List messages=new ArrayList();
+  Object mock1=null;
+  messages.add(mock1);
+  Object mock2=null;
+  messages.add(mock2);
+  Object mock3=null;
+  messages.add(mock3);
+  String jsonString=xstream.toXML(messages);
+  System.out.println(jsonString);
+  List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+  System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+  String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+  List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+  System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+}
+
+Cannot find matching typeVariable for: public class xstream_class_3 {
+  public static void main(  String[] args){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+    List messages=new ArrayList();
+    Object mock1=null;
+    messages.add(mock1);
+    Object mock2=null;
+    messages.add(mock2);
+    Object mock3=null;
+    messages.add(mock3);
+    String jsonString=xstream.toXML(messages);
+    System.out.println(jsonString);
+    List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+    System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+    String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+    List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+    System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+public class xstream_class_3 {
+  public static void main(  String[] args){
+    JettisonMappedXmlDriver xmlDriver=new JettisonMappedXmlDriver();
+    XStream xstream=new XStream(xmlDriver);
+    List messages=new ArrayList();
+    Object mock1=null;
+    messages.add(mock1);
+    Object mock2=null;
+    messages.add(mock2);
+    Object mock3=null;
+    messages.add(mock3);
+    String jsonString=xstream.toXML(messages);
+    System.out.println(jsonString);
+    List xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString);
+    System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size());
+    String jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};";
+    List unmarshalledMessages=(List)xstream.fromXML(jsonTest);
+    System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size());
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+Cannot find matching typeVariable for: xmlDriver=new JettisonMappedXmlDriver()
+For node: xmlDriver=new JettisonMappedXmlDriver() expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: xmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: new JettisonMappedXmlDriver() expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: JettisonMappedXmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream=new XStream(xmlDriver)
+For node: xstream=new XStream(xmlDriver) expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: new XStream(xmlDriver) expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: xmlDriver expected fqn: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver with type: Type5 got: com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: messages=new ArrayList()
+For node: messages=new ArrayList() expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: messages expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: new ArrayList() expected fqn: java.util.ArrayList with type: Type11 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList with type: Type11 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList with type: Type11 got: java.util.ArrayList
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+Cannot find matching typeVariable for: mock1=null
+For node: mock1=null expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: mock1 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: null expected fqn: null with type: Type14 got: java.lang.Object
+For node: messages.add(mock1) expected fqn: boolean with type: Type15 got: boolean
+For node: messages expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: add
+For node: add expected fqn: boolean with type: Type15 got: boolean
+For node: mock1 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+Cannot find matching typeVariable for: mock2=null
+For node: mock2=null expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: mock2 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: null expected fqn: null with type: Type18 got: java.lang.Object
+For node: messages.add(mock2) expected fqn: boolean with type: Type17 got: boolean
+For node: messages expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: add
+For node: add expected fqn: boolean with type: Type17 got: boolean
+For node: mock2 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+Cannot find matching typeVariable for: mock3=null
+For node: mock3=null expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: mock3 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: null expected fqn: null with type: Type19 got: java.lang.Object
+For node: messages.add(mock3) expected fqn: boolean with type: Type17 got: boolean
+For node: messages expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: add
+For node: add expected fqn: boolean with type: Type17 got: boolean
+For node: mock3 expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: jsonString=xstream.toXML(messages)
+For node: jsonString=xstream.toXML(messages) expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: jsonString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: xstream.toXML(messages) expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: toXML
+For node: toXML expected fqn: java.lang.String with type: Type20 got: java.lang.String
+For node: messages expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: System.out.println(jsonString) expected fqn: void with type: Type25 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type25 got: void
+For node: System expected fqn: java.lang.System with type: Type23 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type24 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type25 got: void
+For node: jsonString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString)
+For node: xstreamJSONUnmarshalledMessages=(List)xstream.fromXML(jsonString) expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: xstreamJSONUnmarshalledMessages expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: (List)xstream.fromXML(jsonString) expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+Did not find solution for node: xstream.fromXML(jsonString) with type Type28
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: fromXML
+Did not find solution for node: fromXML with type Type28
+For node: jsonString expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: System.out.println("XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size()) expected fqn: void with type: Type34 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type34 got: void
+For node: System expected fqn: java.lang.System with type: Type23 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type24 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type34 got: void
+For node: "XStream format JSON Number of messages unmarshalled: " + xstreamJSONUnmarshalledMessages.size() expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "XStream format JSON Number of messages unmarshalled: " expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: xstreamJSONUnmarshalledMessages.size() expected fqn: int with type: Type32 got: java.lang.String
+For node: xstreamJSONUnmarshalledMessages expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: size
+For node: size expected fqn: int with type: Type32 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type31 got: java.lang.String
+Cannot find matching typeVariable for: jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};"
+For node: jsonTest="{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: jsonTest expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "{" + "\"list\" : [" + "{"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessage\" : {"+ "\"val\" : 1"+ "}"+ "}, {"+ "\"MockMessageOther\" : {"+ "\"otherVal\" : 1"+ "}"+ "} ]"+ "};" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "{" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"list\" : [" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "{" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"MockMessage\" : {" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"val\" : 1" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "}" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "}, {" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"MockMessage\" : {" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"val\" : 1" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "}" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "}, {" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"MockMessageOther\" : {" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "\"otherVal\" : 1" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "}" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "} ]" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "};" expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: unmarshalledMessages=(List)xstream.fromXML(jsonTest)
+For node: unmarshalledMessages=(List)xstream.fromXML(jsonTest) expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: unmarshalledMessages expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: (List)xstream.fromXML(jsonTest) expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+For node: List expected fqn: java.util.List with type: Type10 got: java.util.List
+Did not find solution for node: xstream.fromXML(jsonTest) with type Type37
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: fromXML
+Did not find solution for node: fromXML with type Type37
+For node: jsonTest expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: System.out.println("Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size()) expected fqn: void with type: Type36 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type36 got: void
+For node: System expected fqn: java.lang.System with type: Type23 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type24 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type36 got: void
+For node: "Normal format JSON Number of messages unmarshalled: " + unmarshalledMessages.size() expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: "Normal format JSON Number of messages unmarshalled: " expected fqn: java.lang.String with type: Type31 got: java.lang.String
+For node: unmarshalledMessages.size() expected fqn: int with type: Type33 got: int
+For node: unmarshalledMessages expected fqn: java.util.List with type: Type10 got: java.util.List
+Cannot find matching typeVariable for: size
+For node: size expected fqn: int with type: Type33 got: int
+{Checked=132, Analyzed=128, Unsolved=4, Incorrect=8, Correct=120}
+boolean=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+com.thoughtworks.xstream.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=CastExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=42, Analyzed=40, Unsolved=2, Incorrect=0, Correct=40}
+java=SimpleType: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+null=NullLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=132, Analyzed=128, Unsolved=4, Incorrect=8, Correct=120}
+boolean=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+com.thoughtworks.xstream.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=CastExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=MethodInvocation: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+java=SimpleName: {Checked=42, Analyzed=40, Unsolved=2, Incorrect=0, Correct=40}
+java=SimpleType: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=18, Analyzed=18, Unsolved=0, Incorrect=0, Correct=18}
+java=VariableDeclarationFragment: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+null=NullLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=3, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+boolean,MethodInvocation,3,3,3,0,0
+boolean,SimpleName,3,3,3,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,10,10,10,0,0
+com.thoughtworks.xstream.,SimpleType,4,4,4,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,2,2,2,0,0
+int,MethodInvocation,2,2,1,1,0
+int,SimpleName,2,2,1,1,0
+java,ArrayType,1,1,1,0,0
+java,CastExpression,2,2,2,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,InfixExpression,3,3,3,0,0
+java,MethodInvocation,1,3,1,0,2
+java,QualifiedName,3,3,0,3,0
+java,SimpleName,40,42,40,0,2
+java,SimpleType,12,12,12,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,18,18,18,0,0
+java,VariableDeclarationFragment,8,8,8,0,0
+null,NullLiteral,3,3,0,3,0
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

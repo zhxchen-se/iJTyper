@@ -1,0 +1,117 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk8.java
+Expect check=27
+Cannot find matching typeVariable for: public class jdk8 {
+  public static void h1(){
+    DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+    System.out.println(df.format(""));
+  }
+}
+
+Cannot find matching typeVariable for: jdk8
+Cannot find matching typeVariable for: public class jdk8 {
+  public static void h1(){
+    DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+    System.out.println(df.format(""));
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+public class jdk8 {
+  public static void h1(){
+    DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+    System.out.println(df.format(""));
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+  System.out.println(df.format(""));
+}
+
+Cannot find matching typeVariable for: public class jdk8 {
+  public static void h1(){
+    DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+    System.out.println(df.format(""));
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
+public class jdk8 {
+  public static void h1(){
+    DecimalFormat df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE));
+    System.out.println(df.format(""));
+  }
+}
+
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE))
+For node: df=new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE)) expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: df expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: new DecimalFormat("0.00",new DecimalFormatSymbols(Locale.FRANCE)) expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: DecimalFormat expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+For node: "0.00" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: new DecimalFormatSymbols(Locale.FRANCE) expected fqn: java.text.DecimalFormatSymbols with type: Type5 got: java.text.DecimalFormatSymbols
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type5 got: java.text.DecimalFormatSymbols
+For node: DecimalFormatSymbols expected fqn: java.text.DecimalFormatSymbols with type: Type5 got: java.text.DecimalFormatSymbols
+Cannot find matching typeVariable for: Locale.FRANCE
+For node: Locale.FRANCE expected fqn: java.util.Locale with type: Type5 got: java.text.DecimalFormatSymbols
+For node: Locale expected fqn: java.util.Locale with type: Type6 got: java.util.Locale
+For node: FRANCE expected fqn: java.util.Locale with type: Type7 got: java.util.Locale
+For node: System.out.println(df.format("")) expected fqn: void with type: Type18 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type18 got: void
+For node: System expected fqn: java.lang.System with type: Type16 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type17 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type18 got: void
+Did not find solution for node: df.format("") with type Type13
+For node: df expected fqn: java.text.DecimalFormat with type: Type3 got: java.text.DecimalFormat
+Cannot find matching typeVariable for: format
+Did not find solution for node: format with type Type13
+For node: "" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+{Checked=24, Analyzed=22, Unsolved=2, Incorrect=2, Correct=20}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=24, Analyzed=22, Unsolved=2, Incorrect=2, Correct=20}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=10, Analyzed=9, Unsolved=1, Incorrect=0, Correct=9}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,2,2,2,0,0
+java,MethodInvocation,0,1,0,0,1
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,9,10,9,0,1
+java,SimpleType,3,3,3,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

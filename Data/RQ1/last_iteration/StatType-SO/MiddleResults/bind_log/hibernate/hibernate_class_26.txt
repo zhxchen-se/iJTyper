@@ -1,0 +1,171 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_26.java
+Exception repair: java.lang.UnsupportedOperationException: FetchMode.JOIN could not be a valid type name or a variable name.
+java.lang.UnsupportedOperationException: FetchMode.JOIN could not be a valid type name or a variable name.
+	at snr.o.a(Unknown Source)
+	at snr.a.a(Unknown Source)
+	at snr.a.endVisit(Unknown Source)
+	at org.eclipse.jdt.core.dom.SingleMemberAnnotation.accept0(SingleMemberAnnotation.java:157)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.MethodDeclaration.accept0(MethodDeclaration.java:681)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:447)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:447)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:258)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at snr.a.<init>(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=293
+{Checked=293, Analyzed=0, Unsolved=293, Incorrect=0, Correct=0}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
+=SimpleType: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=NormalAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=45, Analyzed=0, Unsolved=45, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=49, Analyzed=0, Unsolved=49, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+org.hibernate.=SingleMemberAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
+Total stats
+{Checked=293, Analyzed=0, Unsolved=293, Incorrect=0, Correct=0}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=FieldAccess: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=31, Analyzed=0, Unsolved=31, Incorrect=0, Correct=0}
+=SimpleType: {Checked=13, Analyzed=0, Unsolved=13, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=PostfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+int=VariableDeclarationExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=FieldAccess: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=NormalAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=45, Analyzed=0, Unsolved=45, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=8, Analyzed=0, Unsolved=8, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=TypeLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.hibernate.=MethodInvocation: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+org.hibernate.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=49, Analyzed=0, Unsolved=49, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+org.hibernate.=SingleMemberAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SingleVariableDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=9, Analyzed=0, Unsolved=9, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=18, Analyzed=0, Unsolved=18, Incorrect=0, Correct=0}
+,Assignment,0,1,0,0,1
+,CastExpression,0,1,0,0,1
+,ClassInstanceCreation,0,3,0,0,3
+,FieldAccess,0,1,0,0,1
+,SimpleName,0,31,0,0,31
+,SimpleType,0,13,0,0,13
+,SingleVariableDeclaration,0,1,0,0,1
+,ThisExpression,0,3,0,0,3
+,TypeDeclaration,0,3,0,0,3
+,VariableDeclarationFragment,0,5,0,0,5
+boolean,BooleanLiteral,0,2,0,0,2
+boolean,InfixExpression,0,3,0,0,3
+int,MethodInvocation,0,1,0,0,1
+int,NumberLiteral,0,3,0,0,3
+int,PostfixExpression,0,2,0,0,2
+int,PrimitiveType,0,2,0,0,2
+int,SimpleName,0,10,0,0,10
+int,VariableDeclarationExpression,0,2,0,0,2
+int,VariableDeclarationFragment,0,2,0,0,2
+java,ArrayType,0,1,0,0,1
+java,Assignment,0,2,0,0,2
+java,FieldAccess,0,2,0,0,2
+java,InfixExpression,0,2,0,0,2
+java,MarkerAnnotation,0,5,0,0,5
+java,MethodInvocation,0,4,0,0,4
+java,NormalAnnotation,0,1,0,0,1
+java,QualifiedName,0,5,0,0,5
+java,SimpleName,0,45,0,0,45
+java,SimpleType,0,8,0,0,8
+java,SingleVariableDeclaration,0,3,0,0,3
+java,StringLiteral,0,5,0,0,5
+java,TypeLiteral,0,2,0,0,2
+java,VariableDeclarationFragment,0,3,0,0,3
+null,NullLiteral,0,1,0,0,1
+org.hibernate.,Assignment,0,2,0,0,2
+org.hibernate.,ClassInstanceCreation,0,2,0,0,2
+org.hibernate.,MethodInvocation,0,12,0,0,12
+org.hibernate.,QualifiedName,0,1,0,0,1
+org.hibernate.,SimpleName,0,49,0,0,49
+org.hibernate.,SimpleType,0,9,0,0,9
+org.hibernate.,SingleMemberAnnotation,0,1,0,0,1
+org.hibernate.,SingleVariableDeclaration,0,1,0,0,1
+org.hibernate.,VariableDeclarationFragment,0,5,0,0,5
+void,MethodInvocation,0,9,0,0,9
+void,PrimitiveType,0,6,0,0,6
+void,SimpleName,0,18,0,0,18

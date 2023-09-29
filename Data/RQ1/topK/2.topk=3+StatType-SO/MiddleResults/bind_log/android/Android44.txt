@@ -1,0 +1,646 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android44.java
+Expect check=86
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Did not find solution for node: Android44 with type Type1
+For node: Service expected fqn: android.app.Service with type: Type2 got: android.app.Service
+For node: Service expected fqn: android.app.Service with type: Type2 got: android.app.Service
+Did not find solution for node: Thread with type Type5
+Did not find solution for node: Thread with type Type5
+Cannot find matching typeVariable for: runner
+Did not find solution for node: runner with type Type5
+Cannot find matching typeVariable for: runner
+Cannot find matching typeVariable for: public volatile Thread runner;
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+For node: @Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: IBinder expected fqn: android.os.IBinder with type: Type4 got: android.os.IBinder
+For node: IBinder expected fqn: android.os.IBinder with type: Type4 got: android.os.IBinder
+Cannot find matching typeVariable for: onBind
+Cannot find matching typeVariable for: @Override public IBinder onBind(Intent intent){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: Intent intent
+For node: Intent intent expected fqn: android.content.Intent with type: Type7 got: android.content.Intent
+For node: Intent expected fqn: android.content.Intent with type: Type7 got: android.content.Intent
+For node: Intent expected fqn: android.content.Intent with type: Type7 got: android.content.Intent
+For node: intent expected fqn: android.content.Intent with type: Type7 got: android.content.Intent
+For node: null expected fqn: null with type: Type8 got: android.os.IBinder
+For node: @Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: onCreate
+Cannot find matching typeVariable for: @Override public void onCreate(){
+  super.onCreate();
+  startThread();
+}
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+For node: super.onCreate() expected fqn: void with type: Type9 got: void
+Cannot find matching typeVariable for: onCreate
+For node: onCreate expected fqn: void with type: Type9 got: void
+For node: startThread() expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: startThread
+For node: startThread expected fqn: void with type: Type3 got: void
+For node: @Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type6 got: java.lang.Override
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: onDestroy
+Cannot find matching typeVariable for: @Override public void onDestroy(){
+  super.onDestroy();
+  android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+  stopThread();
+}
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+For node: super.onDestroy() expected fqn: void with type: Type11 got: void
+Cannot find matching typeVariable for: onDestroy
+For node: onDestroy expected fqn: void with type: Type11 got: void
+For node: android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy") expected fqn: int with type: Type15 got: int
+Cannot find matching typeVariable for: android.util.Log
+For node: android.util.Log expected fqn: android.util.Log with type: Type15 got: int
+No match for actual type SimpleName: android and also not find solution for: Type14
+No match for actual type SimpleName: util and also not find solution for: Type14
+Did not find solution for node: Log with type Type14
+Cannot find matching typeVariable for: v
+For node: v expected fqn: int with type: Type15 got: int
+For node: "@@@@@@@@@@@@@@@@@@@@" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "DoScan.onDestroy" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: stopThread() expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: stopThread
+For node: stopThread expected fqn: void with type: Type3 got: void
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: startThread
+Cannot find matching typeVariable for: public synchronized void startThread(){
+  if (runner == null) {
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+    runner.start();
+  }
+}
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+For node: runner == null expected fqn: boolean with type: Type20 got: boolean
+Did not find solution for node: runner with type Type5
+Did not find solution for node: null with type Type19
+For node: android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread") expected fqn: int with type: Type22 got: int
+Cannot find matching typeVariable for: android.util.Log
+For node: android.util.Log expected fqn: android.util.Log with type: Type22 got: int
+No match for actual type SimpleName: android and also not find solution for: Type21
+No match for actual type SimpleName: util and also not find solution for: Type21
+Did not find solution for node: Log with type Type21
+Cannot find matching typeVariable for: v
+For node: v expected fqn: int with type: Type22 got: int
+For node: "@@@@@@@@@@@@@@@@@@@@" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "DoScan.startthread" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: runner.start() with type Type26
+Did not find solution for node: runner with type Type5
+Cannot find matching typeVariable for: start
+Did not find solution for node: start with type Type26
+For node: void expected fqn: void with type: Type3 got: void
+Cannot find matching typeVariable for: stopThread
+Cannot find matching typeVariable for: public synchronized void stopThread(){
+  if (runner != null) {
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+    Thread moribund=runner;
+    runner=null;
+    moribund.interrupt();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+  }
+}
+
+Cannot find matching typeVariable for: public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+public class Android44 extends Service {
+  public volatile Thread runner;
+  @Override public IBinder onBind(  Intent intent){
+    return null;
+  }
+  @Override public void onCreate(){
+    super.onCreate();
+    startThread();
+  }
+  @Override public void onDestroy(){
+    super.onDestroy();
+    android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.onDestroy");
+    stopThread();
+  }
+  public synchronized void startThread(){
+    if (runner == null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.startthread");
+      runner.start();
+    }
+  }
+  public synchronized void stopThread(){
+    if (runner != null) {
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread");
+      Thread moribund=runner;
+      runner=null;
+      moribund.interrupt();
+      android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted());
+    }
+  }
+}
+
+For node: runner != null expected fqn: boolean with type: Type20 got: boolean
+Did not find solution for node: runner with type Type5
+Did not find solution for node: null with type Type28
+Did not find solution for node: android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","DoScan.stopthread") with type Type30
+Cannot find matching typeVariable for: android.util.Log
+Did not find solution for node: android.util.Log with type Type30
+No match for actual type SimpleName: android and also not find solution for: Type29
+No match for actual type SimpleName: util and also not find solution for: Type29
+Did not find solution for node: Log with type Type29
+Cannot find matching typeVariable for: v
+Did not find solution for node: v with type Type30
+For node: "@@@@@@@@@@@@@@@@@@@@" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "DoScan.stopthread" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+Did not find solution for node: Thread with type Type5
+Did not find solution for node: Thread with type Type5
+Cannot find matching typeVariable for: moribund=runner
+Did not find solution for node: moribund=runner with type Type5
+Did not find solution for node: moribund with type Type5
+Did not find solution for node: runner with type Type5
+Did not find solution for node: runner=null with type Type5
+Did not find solution for node: runner with type Type5
+Did not find solution for node: null with type Type34
+Did not find solution for node: moribund.interrupt() with type Type35
+Did not find solution for node: moribund with type Type5
+Cannot find matching typeVariable for: interrupt
+Did not find solution for node: interrupt with type Type35
+For node: android.util.Log.v("@@@@@@@@@@@@@@@@@@@@","interrupted?" + moribund.isInterrupted()) expected fqn: int with type: Type41 got: int
+Cannot find matching typeVariable for: android.util.Log
+For node: android.util.Log expected fqn: android.util.Log with type: Type41 got: int
+No match for actual type SimpleName: android and also not find solution for: Type29
+No match for actual type SimpleName: util and also not find solution for: Type39
+For node: Log expected fqn: android.util.Log with type: Type40 got: android.util.Log
+Cannot find matching typeVariable for: v
+For node: v expected fqn: int with type: Type41 got: int
+For node: "@@@@@@@@@@@@@@@@@@@@" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "interrupted?" + moribund.isInterrupted() expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: "interrupted?" expected fqn: java.lang.String with type: Type13 got: java.lang.String
+For node: moribund.isInterrupted() expected fqn: boolean with type: Type37 got: java.lang.String
+Did not find solution for node: moribund with type Type5
+Cannot find matching typeVariable for: isInterrupted
+For node: isInterrupted expected fqn: boolean with type: Type37 got: java.lang.String
+{Checked=79, Analyzed=50, Unsolved=29, Incorrect=6, Correct=44}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
+android.=SimpleName: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+int=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=13, Analyzed=3, Unsolved=10, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=SuperMethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=79, Analyzed=50, Unsolved=29, Incorrect=6, Correct=44}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=3, Correct=0}
+android.=SimpleName: {Checked=8, Analyzed=5, Unsolved=3, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=InfixExpression: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+int=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+java=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SimpleName: {Checked=13, Analyzed=3, Unsolved=10, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=6, Analyzed=4, Unsolved=2, Incorrect=0, Correct=4}
+void=SuperMethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+android.,QualifiedName,3,4,0,3,1
+android.,SimpleName,5,8,5,0,3
+android.,SimpleType,3,3,3,0,0
+android.,SingleVariableDeclaration,1,1,1,0,0
+boolean,InfixExpression,2,2,2,0,0
+boolean,MethodInvocation,1,1,0,1,0
+boolean,SimpleName,1,1,0,1,0
+int,MethodInvocation,3,4,3,0,1
+int,SimpleName,3,4,3,0,1
+java,Assignment,0,1,0,0,1
+java,InfixExpression,1,1,1,0,0
+java,MarkerAnnotation,3,3,3,0,0
+java,SimpleName,3,13,3,0,10
+java,SimpleType,0,2,0,0,2
+java,StringLiteral,8,8,8,0,0
+java,VariableDeclarationFragment,0,2,0,0,2
+null,NullLiteral,1,4,0,1,3
+void,MethodInvocation,2,4,2,0,2
+void,PrimitiveType,4,4,4,0,0
+void,SimpleName,4,6,4,0,2
+void,SuperMethodInvocation,2,2,2,0,0

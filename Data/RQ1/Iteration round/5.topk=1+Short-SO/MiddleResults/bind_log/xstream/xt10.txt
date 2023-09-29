@@ -1,0 +1,130 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt10.java
+Expect check=26
+Cannot find matching typeVariable for: public class xt10 {
+  public static void h1(){
+    XStream stream=new XStream(new StaxDriver());
+    stream.toXML(messages,out);
+    StringWriter out=new StringWriter();
+  }
+}
+
+Cannot find matching typeVariable for: xt10
+Cannot find matching typeVariable for: public class xt10 {
+  public static void h1(){
+    XStream stream=new XStream(new StaxDriver());
+    stream.toXML(messages,out);
+    StringWriter out=new StringWriter();
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.StringWriter;
+import static com.sun.org.apache.xml.internal.serializer.utils.Utils.messages;
+import static java.lang.System.out;
+public class xt10 {
+  public static void h1(){
+    XStream stream=new XStream(new StaxDriver());
+    stream.toXML(messages,out);
+    StringWriter out=new StringWriter();
+  }
+}
+
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  XStream stream=new XStream(new StaxDriver());
+  stream.toXML(messages,out);
+  StringWriter out=new StringWriter();
+}
+
+Cannot find matching typeVariable for: public class xt10 {
+  public static void h1(){
+    XStream stream=new XStream(new StaxDriver());
+    stream.toXML(messages,out);
+    StringWriter out=new StringWriter();
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.StringWriter;
+import static com.sun.org.apache.xml.internal.serializer.utils.Utils.messages;
+import static java.lang.System.out;
+public class xt10 {
+  public static void h1(){
+    XStream stream=new XStream(new StaxDriver());
+    stream.toXML(messages,out);
+    StringWriter out=new StringWriter();
+  }
+}
+
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: stream=new XStream(new StaxDriver())
+For node: stream=new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: new XStream(new StaxDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+For node: new StaxDriver() expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type8 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type8 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: StaxDriver expected fqn: com.thoughtworks.xstream.io.xml.StaxDriver with type: Type8 got: com.thoughtworks.xstream.io.xml.StaxDriver
+For node: stream.toXML(messages,out) expected fqn: void with type: Type12 got: void
+For node: stream expected fqn: com.thoughtworks.xstream.XStream with type: Type7 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: toXML
+For node: toXML expected fqn: void with type: Type12 got: void
+For node: messages expected fqn: com.sun.org.apache.xml.internal.serializer.utils.Messages with type: Type2 got: java.lang.Object
+For node: out expected fqn: java.io.PrintStream with type: Type4 got: java.io.Writer
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+Cannot find matching typeVariable for: out=new StringWriter()
+For node: out=new StringWriter() expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+For node: out expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+For node: new StringWriter() expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type16 got: java.io.StringWriter
+{Checked=23, Analyzed=23, Unsolved=0, Incorrect=2, Correct=21}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=1, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=23, Analyzed=23, Unsolved=0, Incorrect=2, Correct=21}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=1, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.apache.=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,SimpleName,5,5,5,0,0
+com.thoughtworks.xstream.,SimpleType,3,3,3,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,SimpleName,4,4,3,1,0
+java,SimpleType,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+org.apache.,SimpleName,1,1,0,1,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

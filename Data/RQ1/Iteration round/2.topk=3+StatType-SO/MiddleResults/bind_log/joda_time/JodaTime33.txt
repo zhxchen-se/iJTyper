@@ -1,0 +1,178 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime33.java
+Expect check=60
+Cannot find matching typeVariable for: public class JodaTime33 {
+  public static void main(  String[] args){
+    PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+    System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime33
+Cannot find matching typeVariable for: public class JodaTime33 {
+  public static void main(  String[] args){
+    PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+    System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.format.PeriodFormatter;
+import org.joda.time.format.PeriodFormatterBuilder;
+public class JodaTime33 {
+  public static void main(  String[] args){
+    PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+    System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+  System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+}
+
+Cannot find matching typeVariable for: public class JodaTime33 {
+  public static void main(  String[] args){
+    PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+    System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import org.joda.time.Period;
+import org.joda.time.format.PeriodFormatter;
+import org.joda.time.format.PeriodFormatterBuilder;
+public class JodaTime33 {
+  public static void main(  String[] args){
+    PeriodFormatter hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter();
+    System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500)));
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Did not find solution for node: PeriodFormatter with type Type5
+Did not find solution for node: PeriodFormatter with type Type5
+Cannot find matching typeVariable for: hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter()
+Did not find solution for node: hoursMinutesSeconds=new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter() with type Type5
+Did not find solution for node: hoursMinutesSeconds with type Type5
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds").toFormatter() with type Type36
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds().appendSuffix(" second"," seconds") with type Type32
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst().appendSeconds() with type Type30
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ").printZeroRarelyFirst() with type Type28
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes").appendSeparator(" and ") with type Type25
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes().appendSuffix(" minute"," minutes") with type Type21
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ").appendMinutes() with type Type19
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours").appendSeparator(", "," and ") with type Type15
+Did not find solution for node: new PeriodFormatterBuilder().appendHours().appendSuffix(" hour"," hours") with type Type11
+Did not find solution for node: new PeriodFormatterBuilder().appendHours() with type Type8
+For node: new PeriodFormatterBuilder() expected fqn: org.joda.time.format.PeriodFormatterBuilder with type: Type6 got: org.joda.time.format.PeriodFormatterBuilder
+For node: PeriodFormatterBuilder expected fqn: org.joda.time.format.PeriodFormatterBuilder with type: Type6 got: org.joda.time.format.PeriodFormatterBuilder
+For node: PeriodFormatterBuilder expected fqn: org.joda.time.format.PeriodFormatterBuilder with type: Type6 got: org.joda.time.format.PeriodFormatterBuilder
+Cannot find matching typeVariable for: appendHours
+Did not find solution for node: appendHours with type Type8
+Cannot find matching typeVariable for: appendSuffix
+Did not find solution for node: appendSuffix with type Type11
+For node: " hour" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: " hours" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: appendSeparator
+Did not find solution for node: appendSeparator with type Type15
+For node: ", " expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: " and " expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: appendMinutes
+Did not find solution for node: appendMinutes with type Type19
+Cannot find matching typeVariable for: appendSuffix
+Did not find solution for node: appendSuffix with type Type21
+For node: " minute" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: " minutes" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: appendSeparator
+Did not find solution for node: appendSeparator with type Type25
+For node: " and " expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: printZeroRarelyFirst
+Did not find solution for node: printZeroRarelyFirst with type Type28
+Cannot find matching typeVariable for: appendSeconds
+Did not find solution for node: appendSeconds with type Type30
+Cannot find matching typeVariable for: appendSuffix
+Did not find solution for node: appendSuffix with type Type32
+For node: " second" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: " seconds" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: toFormatter
+Did not find solution for node: toFormatter with type Type36
+For node: System.out.println(hoursMinutesSeconds.print(new Period(0,0,0,500))) expected fqn: void with type: Type51 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type51 got: void
+For node: System expected fqn: java.lang.System with type: Type49 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type50 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type51 got: void
+Did not find solution for node: hoursMinutesSeconds.print(new Period(0,0,0,500)) with type Type46
+Did not find solution for node: hoursMinutesSeconds with type Type5
+Cannot find matching typeVariable for: print
+Did not find solution for node: print with type Type46
+For node: new Period(0,0,0,500) expected fqn: org.joda.time.Period with type: Type38 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type38 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type38 got: org.joda.time.Period
+For node: 0 expected fqn: int with type: Type39 got: byte
+For node: 0 expected fqn: int with type: Type39 got: byte
+For node: 0 expected fqn: int with type: Type39 got: byte
+For node: 500 expected fqn: int with type: Type40 got: short
+{Checked=57, Analyzed=30, Unsolved=27, Incorrect=5, Correct=25}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=15, Analyzed=2, Unsolved=13, Incorrect=0, Correct=2}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=57, Analyzed=30, Unsolved=27, Incorrect=5, Correct=25}
+int=NumberLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=4, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=0, Correct=9}
+org.joda.time.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=MethodInvocation: {Checked=10, Analyzed=0, Unsolved=10, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=15, Analyzed=2, Unsolved=13, Incorrect=0, Correct=2}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int,NumberLiteral,4,4,0,4,0
+java,ArrayType,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,4,5,4,0,1
+java,SimpleType,1,1,1,0,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,9,9,9,0,0
+org.joda.time.,ClassInstanceCreation,2,2,2,0,0
+org.joda.time.,MethodInvocation,0,10,0,0,10
+org.joda.time.,SimpleName,2,15,2,0,13
+org.joda.time.,SimpleType,2,3,2,0,1
+org.joda.time.,VariableDeclarationFragment,0,1,0,0,1
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

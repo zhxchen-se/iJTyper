@@ -1,0 +1,151 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt12.java
+Expect check=27
+Cannot find matching typeVariable for: public class xt12 {
+  public static void h1(){
+    ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+    try {
+      Transformer t=TransformerFactory.newInstance().newTransformer();
+    }
+ catch (    TransformerConfigurationException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: xt12
+Cannot find matching typeVariable for: public class xt12 {
+  public static void h1(){
+    ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+    try {
+      Transformer t=TransformerFactory.newInstance().newTransformer();
+    }
+ catch (    TransformerConfigurationException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import javax.xml.transform.Result;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import java.io.ByteArrayOutputStream;
+public class xt12 {
+  public static void h1(){
+    ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+    try {
+      Transformer t=TransformerFactory.newInstance().newTransformer();
+    }
+ catch (    TransformerConfigurationException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+  try {
+    Transformer t=TransformerFactory.newInstance().newTransformer();
+  }
+ catch (  TransformerConfigurationException e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class xt12 {
+  public static void h1(){
+    ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+    try {
+      Transformer t=TransformerFactory.newInstance().newTransformer();
+    }
+ catch (    TransformerConfigurationException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import javax.xml.transform.Result;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import java.io.ByteArrayOutputStream;
+public class xt12 {
+  public static void h1(){
+    ByteArrayOutputStream outputStream=new ByteArrayOutputStream();
+    try {
+      Transformer t=TransformerFactory.newInstance().newTransformer();
+    }
+ catch (    TransformerConfigurationException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Did not find solution for node: ByteArrayOutputStream with type Type3
+Did not find solution for node: ByteArrayOutputStream with type Type3
+Cannot find matching typeVariable for: outputStream=new ByteArrayOutputStream()
+Did not find solution for node: outputStream=new ByteArrayOutputStream() with type Type3
+Did not find solution for node: outputStream with type Type3
+Did not find solution for node: new ByteArrayOutputStream() with type Type3
+Did not find solution for node: ByteArrayOutputStream with type Type3
+Did not find solution for node: ByteArrayOutputStream with type Type3
+For node: Transformer expected fqn: javax.xml.transform.Transformer with type: Type5 got: javax.xml.transform.Transformer
+For node: Transformer expected fqn: javax.xml.transform.Transformer with type: Type5 got: javax.xml.transform.Transformer
+Cannot find matching typeVariable for: t=TransformerFactory.newInstance().newTransformer()
+For node: t=TransformerFactory.newInstance().newTransformer() expected fqn: javax.xml.transform.Transformer with type: Type5 got: javax.xml.transform.Transformer
+For node: t expected fqn: javax.xml.transform.Transformer with type: Type5 got: javax.xml.transform.Transformer
+For node: TransformerFactory.newInstance().newTransformer() expected fqn: javax.xml.transform.Transformer with type: Type9 got: javax.xml.transform.Transformer
+For node: TransformerFactory.newInstance() expected fqn: javax.xml.transform.TransformerFactory with type: Type7 got: javax.xml.transform.TransformerFactory
+For node: TransformerFactory expected fqn: javax.xml.transform.TransformerFactory with type: Type6 got: javax.xml.transform.TransformerFactory
+Cannot find matching typeVariable for: newInstance
+For node: newInstance expected fqn: javax.xml.transform.TransformerFactory with type: Type7 got: javax.xml.transform.TransformerFactory
+Cannot find matching typeVariable for: newTransformer
+For node: newTransformer expected fqn: javax.xml.transform.Transformer with type: Type9 got: javax.xml.transform.Transformer
+Cannot find matching typeVariable for: TransformerConfigurationException e
+For node: TransformerConfigurationException e expected fqn: javax.xml.transform.TransformerConfigurationException with type: Type11 got: javax.xml.transform.TransformerConfigurationException
+For node: TransformerConfigurationException expected fqn: javax.xml.transform.TransformerConfigurationException with type: Type11 got: javax.xml.transform.TransformerConfigurationException
+For node: TransformerConfigurationException expected fqn: javax.xml.transform.TransformerConfigurationException with type: Type11 got: javax.xml.transform.TransformerConfigurationException
+For node: e expected fqn: javax.xml.transform.TransformerConfigurationException with type: Type11 got: javax.xml.transform.TransformerConfigurationException
+For node: e.printStackTrace() expected fqn: void with type: Type12 got: void
+For node: e expected fqn: javax.xml.transform.TransformerConfigurationException with type: Type11 got: javax.xml.transform.TransformerConfigurationException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type12 got: void
+{Checked=24, Analyzed=17, Unsolved=7, Incorrect=0, Correct=17}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=24, Analyzed=17, Unsolved=7, Incorrect=0, Correct=17}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=4, Analyzed=2, Unsolved=2, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ClassInstanceCreation,0,1,0,0,1
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,8,11,8,0,3
+java,SimpleType,2,4,2,0,2
+java,SingleVariableDeclaration,1,1,1,0,0
+java,VariableDeclarationFragment,1,2,1,0,1
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

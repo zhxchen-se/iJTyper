@@ -1,0 +1,126 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_8.java
+Exception repair: java.lang.UnsupportedOperationException: Window could not be a valid type name or a variable name.
+java.lang.UnsupportedOperationException: Window could not be a valid type name or a variable name.
+	at snr.o.a(Unknown Source)
+	at snr.a.a(Unknown Source)
+	at snr.a.endVisit(Unknown Source)
+	at org.eclipse.jdt.core.dom.MethodInvocation.accept0(MethodInvocation.java:230)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.ExpressionStatement.accept0(ExpressionStatement.java:136)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:128)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.MethodDeclaration.accept0(MethodDeclaration.java:698)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.AnonymousClassDeclaration.accept0(AnonymousClassDeclaration.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.ClassInstanceCreation.accept0(ClassInstanceCreation.java:305)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.MethodInvocation.accept0(MethodInvocation.java:228)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.ExpressionStatement.accept0(ExpressionStatement.java:136)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:128)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.MethodDeclaration.accept0(MethodDeclaration.java:698)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:447)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:258)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at snr.a.<init>(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=143
+{Checked=143, Analyzed=0, Unsolved=143, Incorrect=0, Correct=0}
+=AnonymousClassDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+gwt.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=37, Analyzed=0, Unsolved=37, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+Total stats
+{Checked=143, Analyzed=0, Unsolved=143, Incorrect=0, Correct=0}
+=AnonymousClassDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+gwt.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=37, Analyzed=0, Unsolved=37, Incorrect=0, Correct=0}
+gwt.=SimpleType: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+gwt.=SingleVariableDeclaration: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+gwt.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+int=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=InfixExpression: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=16, Analyzed=0, Unsolved=16, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+,AnonymousClassDeclaration,0,1,0,0,1
+,ClassInstanceCreation,0,1,0,0,1
+,SimpleName,0,1,0,0,1
+,TypeDeclaration,0,1,0,0,1
+gwt.,ClassInstanceCreation,0,2,0,0,2
+gwt.,QualifiedName,0,1,0,0,1
+gwt.,SimpleName,0,37,0,0,37
+gwt.,SimpleType,0,11,0,0,11
+gwt.,SingleVariableDeclaration,0,6,0,0,6
+gwt.,VariableDeclarationFragment,0,1,0,0,1
+int,MethodInvocation,0,3,0,0,3
+int,NumberLiteral,0,2,0,0,2
+int,SimpleName,0,3,0,0,3
+java,InfixExpression,0,6,0,0,6
+java,MarkerAnnotation,0,2,0,0,2
+java,MethodInvocation,0,3,0,0,3
+java,SimpleName,0,16,0,0,16
+java,SimpleType,0,4,0,0,4
+java,SingleVariableDeclaration,0,2,0,0,2
+java,StringLiteral,0,16,0,0,16
+java,VariableDeclarationFragment,0,2,0,0,2
+void,MethodInvocation,0,6,0,0,6
+void,PrimitiveType,0,5,0,0,5
+void,SimpleName,0,11,0,0,11

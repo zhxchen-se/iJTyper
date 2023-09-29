@@ -1,0 +1,138 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Android28.java
+Expect check=17
+Cannot find matching typeVariable for: public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Did not find solution for node: Android28 with type Type1
+Did not find solution for node: android.app.Application with type Type2
+Did not find solution for node: android.app.Application with type Type2
+No match for actual type QualifiedName: android.app and also not find solution for: Type3
+No match for actual type SimpleName: android and also not find solution for: Type4
+Cannot find matching typeVariable for: Application
+Did not find solution for node: Application with type Type2
+Did not find solution for node: Android28 with type Type1
+Did not find solution for node: Android28 with type Type1
+Cannot find matching typeVariable for: instance
+Did not find solution for node: instance with type Type1
+Cannot find matching typeVariable for: instance
+Cannot find matching typeVariable for: private static Android28 instance;
+
+Cannot find matching typeVariable for: public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Cannot find matching typeVariable for: Android28
+Cannot find matching typeVariable for: public Android28(){
+  instance=this;
+}
+
+Cannot find matching typeVariable for: public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Did not find solution for node: instance=this with type Type1
+Did not find solution for node: instance with type Type1
+Did not find solution for node: this with type Type1
+For node: Context expected fqn: android.content.Context with type: Type6 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type6 got: android.content.Context
+Cannot find matching typeVariable for: getContext
+Cannot find matching typeVariable for: public static Context getContext(){
+  return instance;
+}
+
+Cannot find matching typeVariable for: public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Cannot find matching typeVariable for: package androidExamples;
+import android.content.Context;
+public class Android28 extends android.app.Application {
+  private static Android28 instance;
+  public Android28(){
+    instance=this;
+  }
+  public static Context getContext(){
+    return instance;
+  }
+}
+
+Did not find solution for node: instance with type Type1
+{Checked=13, Analyzed=2, Unsolved=11, Incorrect=0, Correct=2}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+android.=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+Total stats
+{Checked=13, Analyzed=2, Unsolved=11, Incorrect=0, Correct=2}
+=Assignment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=SimpleName: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+android.=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+,Assignment,0,1,0,0,1
+,SimpleName,0,4,0,0,4
+,SimpleType,0,1,0,0,1
+,ThisExpression,0,1,0,0,1
+,VariableDeclarationFragment,0,1,0,0,1
+android.,QualifiedName,0,1,0,0,1
+android.,SimpleName,1,2,1,0,1
+android.,SimpleType,1,2,1,0,1

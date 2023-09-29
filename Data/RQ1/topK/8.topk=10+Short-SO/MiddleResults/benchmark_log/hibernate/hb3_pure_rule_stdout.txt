@@ -1,0 +1,208 @@
+12:39:41.006 [main] INFO snr.h - Building CompilationUnit takes 534 ms
+12:39:41.148 [main] INFO snr.e - Compilation takes 137 ms
+Serializable cannot be resolved to a type
+Before cannot be resolved to a type
+Configuration cannot be resolved to a type
+Configuration cannot be resolved to a type
+Finding class definition name: Configuration isfull? false fields: [] methods: [<init>, configure] argument sizes: [0, 0]
+Adding candidates [org.hibernate.cfg.Configuration] to Type5
+Return without setting candidates for Type6
+Adding candidate void to Type3
+Return without setting candidates for Type7
+Finding class definition name: Before isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.junit.Before, org.junit.Before] to Type4
+Return without setting candidates for Type8
+Finding class definition name: Serializable isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.Serializable, java.io.Serializable] to Type2
+12:39:41.283 [main] INFO snr.G - Loading initial candidates takes 35 ms.
+Before TypeVariable: Type3, Candidates: 1
+   0. simple name: void
+   1. subtype: Type6
+   2. full name: void
+[void]
+Before TypeVariable: Type5, Candidates: 1
+   0. method: Type6 <init>();
+   1. subtype: Type7
+   2. simple name: Configuration
+   3. method: Type8 configure();
+[org.hibernate.cfg.Configuration]
+Before TypeVariable: Type2, Candidates: 2
+   0. simple name: Serializable
+[java.io.Serializable, java.io.Serializable]
+Before TypeVariable: Type4, Candidates: 2
+   0. annotation type;
+   1. simple name: Before
+[org.junit.Before, org.junit.Before]
+Before TypeVariable: Type6, Candidates: 0
+[]
+Before TypeVariable: Type7, Candidates: 0
+   0. subtype: Type8
+[]
+Before TypeVariable: Type8, Candidates: 0
+[]
+12:39:41.287 [main] INFO snr.G - Populate candidates for type variable Type3
+12:39:41.287 [main] INFO snr.G - Populate candidates for type constraint full name: void
+12:39:41.287 [main] INFO snr.G - Populate candidates for type variable Type2
+12:39:41.287 [main] INFO snr.G - Populate candidates for type constraint simple name: Serializable
+12:39:41.287 [main] INFO snr.G - Populate candidates for type variable Type3
+12:39:41.287 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+12:39:41.287 [main] INFO snr.G - Populate candidates for type variable Type4
+12:39:41.287 [main] INFO snr.G - Populate candidates for type constraint simple name: Before
+12:39:41.288 [main] INFO snr.G - Populate candidates for type variable Type5
+12:39:41.288 [main] INFO snr.G - Populate candidates for type constraint simple name: Configuration
+12:39:41.288 [main] INFO snr.G - Populate candidates for type variable Type5
+12:39:41.288 [main] INFO snr.G - Populate candidates for type constraint method: Type8 configure();
+Processing method constraint method: Type8 configure(); on Type5
+Current solution for c Type5 is uninit ? false [org.hibernate.cfg.Configuration]
+Current solution for r Type8 is uninit ? false []
+Looking at method: public Lorg/hibernate/cfg/Configuration; configure()
+updated solution for c Type5 [org.hibernate.cfg.Configuration]
+updated solution for r Type8 [org.hibernate.cfg.Configuration]
+12:39:41.290 [main] INFO snr.G - Populate candidates for type variable Type5
+12:39:41.290 [main] INFO snr.G - Populate candidates for type constraint method: Type6 <init>();
+Processing method constraint method: Type6 <init>(); on Type5
+Current solution for c Type5 is uninit ? false [org.hibernate.cfg.Configuration]
+Current solution for r Type6 is uninit ? false []
+Looking at method: public V <init>()
+updated solution for c Type5 [org.hibernate.cfg.Configuration]
+updated solution for r Type6 [void]
+12:39:41.290 [main] INFO snr.G - Populate candidates for type variable Type3
+12:39:41.290 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+12:39:41.290 [main] INFO snr.G - Populate candidates for type variable Type5
+12:39:41.290 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+12:39:41.290 [main] INFO snr.G - Populate candidates for type variable Type7
+12:39:41.290 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+12:39:41.290 [main] INFO snr.G - Populate candidates for type variable Type4
+12:39:41.290 [main] INFO snr.G - Populate candidates for type constraint annotation type;
+After TypeVariable: Type3, Candidates: 1
+   0. simple name: void
+   1. subtype: Type6
+   2. full name: void
+[void]
+After TypeVariable: Type5, Candidates: 1
+   0. method: Type6 <init>();
+   1. subtype: Type7
+   2. simple name: Configuration
+   3. method: Type8 configure();
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type6, Candidates: 1
+[void]
+After TypeVariable: Type7, Candidates: 1
+   0. subtype: Type8
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type8, Candidates: 1
+[org.hibernate.cfg.Configuration]
+After TypeVariable: Type2, Candidates: 2
+   0. simple name: Serializable
+[java.io.Serializable, java.io.Serializable]
+After TypeVariable: Type4, Candidates: 2
+   0. annotation type;
+   1. simple name: Before
+[org.junit.Before, org.junit.Before]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	org.hibernate.cfg.Configuration	Configuration
+	jar:junit-4.3.jar:1:org.junit.Before	org.junit.Before	Before
+	openjdk:jdk:1.8.0:java.io.Serializable	java.io.Serializable	Serializable
+	jar:junit-4.11.jar:1:org.junit.Before	org.junit.Before	Before
+	jar:android-13.jar:1:java.io.Serializable	java.io.Serializable	Serializable
+Printing: jclasssuper.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:java.io.Serializable
+	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:android-13.jar:1:java.io.Serializable
+	jar:android-13.jar:1:java.io.Serializable	openjdk:jdk:1.8.0:java.io.Serializable
+	openjdk:jdk:1.8.0:java.io.Serializable	jar:android-13.jar:1:java.io.Serializable
+	jar:junit-4.11.jar:1:org.junit.Before	jar:junit-4.3.jar:1:org.junit.Before
+	jar:junit-4.3.jar:1:org.junit.Before	jar:junit-4.11.jar:1:org.junit.Before
+Printing: jfqlname.facts
+	Type3	void
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+Printing: candidate.facts
+	Type6	openjdk:jdk:1.8.0:void
+	Type3	openjdk:jdk:1.8.0:void
+	Type5	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+	Type4	jar:junit-4.11.jar:1:org.junit.Before
+	Type2	jar:android-13.jar:1:java.io.Serializable
+	Type2	openjdk:jdk:1.8.0:java.io.Serializable
+	Type4	jar:junit-4.3.jar:1:org.junit.Before
+	Type8	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+	Type7	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration
+Printing: jmethod_dependency.facts
+	1	Type5	Type8	configure
+	0	Type5	Type6	<init>
+Printing: jsimplename.facts
+	Type3	void
+	Type4	Before
+	Type2	Serializable
+	Type5	Configuration
+Printing: jmethod.facts
+	0	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	openjdk:jdk:1.8.0:void	<init>	0
+	1	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	jar:hibernate-3.5.3.jar:1:org.hibernate.cfg.Configuration	configure	0
+Printing: jsupertype_dependency.facts
+	Type8	Type7
+	Type6	Type3
+	Type7	Type5
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+Printing: jmethod_param_dependency.facts
+All artifact rank: [jar:android-13.jar:1, jar:hibernate-3.5.3.jar:1, jar:junit-4.11.jar:1, jar:junit-4.3.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type3 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> org.junit.Before
+Added artifact: jar:junit-4.11.jar:1
+Found Type2 -> java.io.Serializable
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type6 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type5 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type7 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Found Type8 -> org.hibernate.cfg.Configuration
+Added artifact: jar:hibernate-3.5.3.jar:1
+Solved...
+Quiting souffle
+Bind Type5 to org.hibernate.cfg.Configuration, dumping:
+Bind Type6 to void, dumping:
+Bind Type3 to void, dumping:
+Bind Type7 to org.hibernate.cfg.Configuration, dumping:
+Bind Type4 to org.junit.Before, dumping:
+Bind Type8 to org.hibernate.cfg.Configuration, dumping:
+Bind Type2 to java.io.Serializable, dumping:
+12:39:41.546 [main] INFO snr.k - Fixing Type2 with java.io.Serializable
+12:39:41.548 [main] INFO snr.k - Fixing Type4 with org.junit.Before
+12:39:41.548 [main] INFO snr.k - Fixing Type5 with org.hibernate.cfg.Configuration
+12:39:41.548 [main] INFO snr.k - Fixing Type5 with org.hibernate.cfg.Configuration
+12:39:41.607 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:junit-4.11.jar:1
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.hibernate;
+
+import org.hibernate.cfg.Configuration;
+import java.io.Serializable;
+import org.junit.Before;
+
+public class hb3 implements Serializable {
+	@Before
+	public void h1() {
+		Configuration cfg = new Configuration().configure();
+		Object sr = null;
+	}
+}
+12:39:41.608 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:39:41.662 [main] INFO snr.e - Compilation takes 53 ms

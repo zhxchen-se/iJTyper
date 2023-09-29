@@ -1,0 +1,1465 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_1.java
+Expect check=115
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_1
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Did not find solution for node: HibernateUserDAO with type Type1
+Did not find solution for node: UserDAO with type Type2
+Did not find solution for node: UserDAO with type Type2
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: sessionFactory
+Cannot find matching typeVariable for: private SessionFactory sessionFactory;
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: HibernateUserDAO
+Cannot find matching typeVariable for: public HibernateUserDAO(){
+  AnnotationConfiguration annotConf=new AnnotationConfiguration();
+  annotConf.addAnnotatedClass(User.class);
+  annotConf.configure();
+  sessionFactory=annotConf.buildSessionFactory();
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+Cannot find matching typeVariable for: annotConf=new AnnotationConfiguration()
+For node: annotConf=new AnnotationConfiguration() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: annotConf expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: new AnnotationConfiguration() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: AnnotationConfiguration expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+For node: annotConf.addAnnotatedClass(User.class) expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type29 got: org.hibernate.cfg.AnnotationConfiguration
+For node: annotConf expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+Cannot find matching typeVariable for: addAnnotatedClass
+For node: addAnnotatedClass expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type29 got: org.hibernate.cfg.AnnotationConfiguration
+For node: User.class expected fqn: java.lang.Class<library.model.User> with type: Type28 got: java.lang.Class
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+For node: annotConf.configure() expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type32 got: org.hibernate.cfg.AnnotationConfiguration
+For node: annotConf expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type32 got: org.hibernate.cfg.AnnotationConfiguration
+For node: sessionFactory=annotConf.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+For node: annotConf.buildSessionFactory() expected fqn: org.hibernate.SessionFactory with type: Type34 got: org.hibernate.SessionFactory
+For node: annotConf expected fqn: org.hibernate.cfg.AnnotationConfiguration with type: Type26 got: org.hibernate.cfg.AnnotationConfiguration
+Cannot find matching typeVariable for: buildSessionFactory
+For node: buildSessionFactory expected fqn: org.hibernate.SessionFactory with type: Type34 got: org.hibernate.SessionFactory
+For node: void expected fqn: void with type: Type6 got: void
+Cannot find matching typeVariable for: store
+Cannot find matching typeVariable for: public void store(User user){
+  Session session=sessionFactory.openSession();
+  Transaction tx=session.getTransaction();
+  try {
+    tx.begin();
+    session.saveOrUpdate(user);
+    tx.commit();
+  }
+ catch (  RuntimeException e) {
+    tx.rollback();
+    throw e;
+  }
+ finally {
+    session.close();
+  }
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: User user
+Did not find solution for node: User user with type Type4
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+Did not find solution for node: user with type Type4
+For node: Session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+For node: Session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+Cannot find matching typeVariable for: session=sessionFactory.openSession()
+For node: session=sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+For node: session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+For node: sessionFactory.openSession() expected fqn: org.hibernate.Session with type: Type37 got: org.hibernate.Session
+For node: sessionFactory expected fqn: org.hibernate.SessionFactory with type: Type25 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: openSession
+For node: openSession expected fqn: org.hibernate.Session with type: Type37 got: org.hibernate.Session
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: tx=session.getTransaction()
+For node: tx=session.getTransaction() expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+For node: tx expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+For node: session.getTransaction() expected fqn: org.hibernate.Transaction with type: Type40 got: org.hibernate.Transaction
+For node: session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+Cannot find matching typeVariable for: getTransaction
+For node: getTransaction expected fqn: org.hibernate.Transaction with type: Type40 got: org.hibernate.Transaction
+For node: tx.begin() expected fqn: void with type: Type42 got: void
+For node: tx expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: begin
+For node: begin expected fqn: void with type: Type42 got: void
+For node: session.saveOrUpdate(user) expected fqn: void with type: Type44 got: void
+For node: session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+Cannot find matching typeVariable for: saveOrUpdate
+For node: saveOrUpdate expected fqn: void with type: Type44 got: void
+Did not find solution for node: user with type Type4
+For node: tx.commit() expected fqn: void with type: Type47 got: void
+For node: tx expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: commit
+For node: commit expected fqn: void with type: Type47 got: void
+Cannot find matching typeVariable for: RuntimeException e
+For node: RuntimeException e expected fqn: java.lang.RuntimeException with type: Type49 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type49 got: java.lang.RuntimeException
+For node: RuntimeException expected fqn: java.lang.RuntimeException with type: Type49 got: java.lang.RuntimeException
+For node: e expected fqn: java.lang.RuntimeException with type: Type49 got: java.lang.RuntimeException
+For node: tx.rollback() expected fqn: void with type: Type50 got: void
+For node: tx expected fqn: org.hibernate.Transaction with type: Type39 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: rollback
+For node: rollback expected fqn: void with type: Type50 got: void
+Cannot find matching typeVariable for: e
+Cannot find matching typeVariable for: throw e;
+
+Cannot find matching typeVariable for: {
+  tx.rollback();
+  throw e;
+}
+
+Cannot find matching typeVariable for: catch (RuntimeException e) {
+  tx.rollback();
+  throw e;
+}
+
+Cannot find matching typeVariable for: try {
+  tx.begin();
+  session.saveOrUpdate(user);
+  tx.commit();
+}
+ catch (RuntimeException e) {
+  tx.rollback();
+  throw e;
+}
+ finally {
+  session.close();
+}
+
+Cannot find matching typeVariable for: {
+  Session session=sessionFactory.openSession();
+  Transaction tx=session.getTransaction();
+  try {
+    tx.begin();
+    session.saveOrUpdate(user);
+    tx.commit();
+  }
+ catch (  RuntimeException e) {
+    tx.rollback();
+    throw e;
+  }
+ finally {
+    session.close();
+  }
+}
+
+Cannot find matching typeVariable for: public void store(User user){
+  Session session=sessionFactory.openSession();
+  Transaction tx=session.getTransaction();
+  try {
+    tx.begin();
+    session.saveOrUpdate(user);
+    tx.commit();
+  }
+ catch (  RuntimeException e) {
+    tx.rollback();
+    throw e;
+  }
+ finally {
+    session.close();
+  }
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+For node: session.close() expected fqn: void with type: Type52 got: java.sql.Connection
+For node: session expected fqn: org.hibernate.Session with type: Type36 got: org.hibernate.Session
+Cannot find matching typeVariable for: close
+For node: close expected fqn: void with type: Type52 got: java.sql.Connection
+For node: @Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+Cannot find matching typeVariable for: getUser
+Cannot find matching typeVariable for: @Override public User getUser(int arg0){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: int arg0
+For node: int arg0 expected fqn: int with type: Type7 got: int
+For node: int expected fqn: int with type: Type7 got: int
+For node: arg0 expected fqn: int with type: Type7 got: int
+Did not find solution for node: null with type Type55
+For node: @Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+Cannot find matching typeVariable for: getUserByFirstLastName
+Cannot find matching typeVariable for: @Override public User getUserByFirstLastName(String arg0,String arg1){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String arg0
+For node: String arg0 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: arg0 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+Cannot find matching typeVariable for: String arg1
+For node: String arg1 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: arg1 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+Did not find solution for node: null with type Type57
+For node: @Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+Cannot find matching typeVariable for: getUserByUsername
+Cannot find matching typeVariable for: @Override public User getUserByUsername(String arg0){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String arg0
+For node: String arg0 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type56 got: java.lang.String
+For node: arg0 expected fqn: java.lang.String with type: Type56 got: java.lang.String
+Did not find solution for node: null with type Type58
+For node: @Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type54 got: java.lang.Override
+For node: int expected fqn: int with type: Type7 got: int
+Cannot find matching typeVariable for: saveUser
+Cannot find matching typeVariable for: @Override public int saveUser(User arg0){
+  return 0;
+}
+
+Cannot find matching typeVariable for: public class HibernateUserDAO implements UserDAO {
+  private SessionFactory sessionFactory;
+  public HibernateUserDAO(){
+    AnnotationConfiguration annotConf=new AnnotationConfiguration();
+    annotConf.addAnnotatedClass(User.class);
+    annotConf.configure();
+    sessionFactory=annotConf.buildSessionFactory();
+  }
+  public void store(  User user){
+    Session session=sessionFactory.openSession();
+    Transaction tx=session.getTransaction();
+    try {
+      tx.begin();
+      session.saveOrUpdate(user);
+      tx.commit();
+    }
+ catch (    RuntimeException e) {
+      tx.rollback();
+      throw e;
+    }
+ finally {
+      session.close();
+    }
+  }
+  @Override public User getUser(  int arg0){
+    return null;
+  }
+  @Override public User getUserByFirstLastName(  String arg0,  String arg1){
+    return null;
+  }
+  @Override public User getUserByUsername(  String arg0){
+    return null;
+  }
+  @Override public int saveUser(  User arg0){
+    return 0;
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+import library.dao.UserDAO;
+import library.model.User;
+public class hibernate_class_1 {
+public class HibernateUserDAO implements UserDAO {
+    private SessionFactory sessionFactory;
+    public HibernateUserDAO(){
+      AnnotationConfiguration annotConf=new AnnotationConfiguration();
+      annotConf.addAnnotatedClass(User.class);
+      annotConf.configure();
+      sessionFactory=annotConf.buildSessionFactory();
+    }
+    public void store(    User user){
+      Session session=sessionFactory.openSession();
+      Transaction tx=session.getTransaction();
+      try {
+        tx.begin();
+        session.saveOrUpdate(user);
+        tx.commit();
+      }
+ catch (      RuntimeException e) {
+        tx.rollback();
+        throw e;
+      }
+ finally {
+        session.close();
+      }
+    }
+    @Override public User getUser(    int arg0){
+      return null;
+    }
+    @Override public User getUserByFirstLastName(    String arg0,    String arg1){
+      return null;
+    }
+    @Override public User getUserByUsername(    String arg0){
+      return null;
+    }
+    @Override public int saveUser(    User arg0){
+      return 0;
+    }
+  }
+}
+
+Cannot find matching typeVariable for: User arg0
+Did not find solution for node: User arg0 with type Type4
+Did not find solution for node: User with type Type4
+Did not find solution for node: User with type Type4
+Did not find solution for node: arg0 with type Type4
+For node: 0 expected fqn: int with type: Type59 got: byte
+{Checked=104, Analyzed=81, Unsolved=23, Incorrect=4, Correct=77}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+null=NullLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+Total stats
+{Checked=104, Analyzed=81, Unsolved=23, Incorrect=4, Correct=77}
+=SimpleName: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+=SimpleType: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+int=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleName: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+java=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SingleVariableDeclaration: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=TypeLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+null=NullLiteral: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=SimpleName: {Checked=24, Analyzed=24, Unsolved=0, Incorrect=0, Correct=24}
+org.hibernate.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.hibernate.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=1, Correct=4}
+,SimpleName,0,11,0,0,11
+,SimpleType,0,7,0,0,7
+,SingleVariableDeclaration,0,2,0,0,2
+int,NumberLiteral,1,1,0,1,0
+int,PrimitiveType,2,2,2,0,0
+int,SimpleName,1,1,1,0,0
+int,SingleVariableDeclaration,1,1,1,0,0
+java,MarkerAnnotation,4,4,4,0,0
+java,SimpleName,12,12,12,0,0
+java,SimpleType,4,4,4,0,0
+java,SingleVariableDeclaration,4,4,4,0,0
+java,TypeLiteral,1,1,0,1,0
+null,NullLiteral,0,3,0,0,3
+org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,ClassInstanceCreation,1,1,1,0,0
+org.hibernate.,MethodInvocation,5,5,5,0,0
+org.hibernate.,SimpleName,24,24,24,0,0
+org.hibernate.,SimpleType,5,5,5,0,0
+org.hibernate.,VariableDeclarationFragment,4,4,4,0,0
+void,MethodInvocation,5,5,4,1,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,5,5,4,1,0

@@ -1,0 +1,105 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt11.java
+Expect check=19
+Cannot find matching typeVariable for: public class gt11 {
+  public static void h1(){
+    Logger logger=Logger.getLogger("NameOfYourLogger");
+    logger.log(Level.SEVERE,"this message should get logged");
+  }
+}
+
+Cannot find matching typeVariable for: gt11
+Cannot find matching typeVariable for: public class gt11 {
+  public static void h1(){
+    Logger logger=Logger.getLogger("NameOfYourLogger");
+    logger.log(Level.SEVERE,"this message should get logged");
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.lang.reflect.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class gt11 {
+  public static void h1(){
+    Logger logger=Logger.getLogger("NameOfYourLogger");
+    logger.log(Level.SEVERE,"this message should get logged");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  Logger logger=Logger.getLogger("NameOfYourLogger");
+  logger.log(Level.SEVERE,"this message should get logged");
+}
+
+Cannot find matching typeVariable for: public class gt11 {
+  public static void h1(){
+    Logger logger=Logger.getLogger("NameOfYourLogger");
+    logger.log(Level.SEVERE,"this message should get logged");
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.lang.reflect.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class gt11 {
+  public static void h1(){
+    Logger logger=Logger.getLogger("NameOfYourLogger");
+    logger.log(Level.SEVERE,"this message should get logged");
+  }
+}
+
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: logger=Logger.getLogger("NameOfYourLogger")
+For node: logger=Logger.getLogger("NameOfYourLogger") expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: Logger.getLogger("NameOfYourLogger") expected fqn: java.util.logging.Logger with type: Type5 got: java.util.logging.Logger
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: getLogger
+For node: getLogger expected fqn: java.util.logging.Logger with type: Type5 got: java.util.logging.Logger
+For node: "NameOfYourLogger" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: logger.log(Level.SEVERE,"this message should get logged") expected fqn: void with type: Type10 got: void
+For node: logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: log
+For node: log expected fqn: void with type: Type10 got: void
+Cannot find matching typeVariable for: Level.SEVERE
+For node: Level.SEVERE expected fqn: java.util.logging.Level with type: Type10 got: void
+For node: Level expected fqn: java.util.logging.Level with type: Type8 got: java.util.logging.Level
+For node: SEVERE expected fqn: java.util.logging.Level with type: Type9 got: java.util.logging.Level
+For node: "this message should get logged" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+{Checked=16, Analyzed=16, Unsolved=0, Incorrect=1, Correct=15}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=16, Analyzed=16, Unsolved=0, Incorrect=1, Correct=15}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,1,1,1,0,0
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,7,7,7,0,0
+java,SimpleType,1,1,1,0,0
+java,StringLiteral,2,2,2,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

@@ -1,0 +1,164 @@
+12:32:06.363 [main] INFO snr.h - Building CompilationUnit takes 433 ms
+12:32:06.464 [main] INFO snr.e - Compilation takes 99 ms
+android cannot be resolved to a type
+Context cannot be resolved to a type
+Finding class definition name: Context isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [com.sun.xml.internal.bind.CycleRecoverable$Context, javax.naming.Context, com.google.gwt.dev.jjs.ast.Context, org.omg.CORBA.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, com.google.gwt.resources.css.ast.Context, org.jaxen.Context, com.google.gwt.dev.js.rhino.Context, org.hibernate.jdbc.JDBCContext$Context, android.content.Context, org.hibernate.transaction.TransactionFactory$Context] to Type6
+Finding class definition name: Android28 isfull? true fields: [instance] methods: [] argument sizes: []
+Adding candidates [] to Type1
+12:32:06.560 [main] INFO snr.G - Cannot find class definition for Android28 with full name: true, with fields: [instance], with methods: [], and argument sizes:[]
+12:32:06.560 [main] INFO snr.G - Cannot load candidates for Type1.
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+Finding class definition name: android/app/Application isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [android.app.Application] to Type2
+Finding class definition name: android isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [] to Type4
+12:32:06.563 [main] INFO snr.G - Cannot find class definition for android with full name: false, with fields: [], with methods: [], and argument sizes:[]
+12:32:06.563 [main] INFO snr.G - Cannot load candidates for Type4.
+   0. simple name: android
+12:32:06.563 [main] INFO snr.G - Loading initial candidates takes 21 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. simple name: Application
+   1. full name: android.app.Application
+[android.app.Application]
+Before TypeVariable: Type6, Candidates: 11
+   0. simple name: Context
+   1. subtype: Type1
+[com.google.gwt.resources.css.ast.Context, com.google.gwt.dev.js.rhino.Context, javax.naming.Context, android.content.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, org.omg.CORBA.Context, com.google.gwt.dev.jjs.ast.Context, org.hibernate.transaction.TransactionFactory$Context, com.sun.xml.internal.bind.CycleRecoverable$Context, org.hibernate.jdbc.JDBCContext$Context, org.jaxen.Context]
+Before TypeVariable: Type1, Candidates: 0 declared
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+[]
+Before TypeVariable: Type4, Candidates: 0
+   0. simple name: android
+[]
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type1
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint full name: Android28
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type2
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint full name: android.app.Application
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type1
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint simple name: Android28
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type2
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint simple name: Application
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type4
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint simple name: android
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type6
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint simple name: Context
+12:32:06.568 [main] INFO snr.G - Populate candidates for type variable Type1
+12:32:06.568 [main] INFO snr.G - Populate candidates for type constraint field: Type1 instance;
+12:32:06.569 [main] INFO snr.G - Populate candidates for type variable Type6
+12:32:06.569 [main] INFO snr.G - Populate candidates for type constraint subtype: Type1
+12:32:06.569 [main] INFO snr.G - Populate candidates for type variable Type1
+12:32:06.569 [main] INFO snr.G - Populate candidates for type constraint extends: Type2
+After TypeVariable: Type2, Candidates: 1
+   0. simple name: Application
+   1. full name: android.app.Application
+[android.app.Application]
+After TypeVariable: Type1, Candidates: 11 declared
+   0. simple name: Android28
+   1. full name: Android28
+   2. field: Type1 instance;
+   3. extends: Type2
+[com.google.gwt.resources.css.ast.Context, com.google.gwt.dev.js.rhino.Context, javax.naming.Context, android.content.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, org.omg.CORBA.Context, com.google.gwt.dev.jjs.ast.Context, org.hibernate.transaction.TransactionFactory$Context, com.sun.xml.internal.bind.CycleRecoverable$Context, org.hibernate.jdbc.JDBCContext$Context, org.jaxen.Context]
+After TypeVariable: Type6, Candidates: 11
+   0. simple name: Context
+   1. subtype: Type1
+[com.google.gwt.resources.css.ast.Context, com.google.gwt.dev.js.rhino.Context, javax.naming.Context, android.content.Context, com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context, org.omg.CORBA.Context, com.google.gwt.dev.jjs.ast.Context, org.hibernate.transaction.TransactionFactory$Context, com.sun.xml.internal.bind.CycleRecoverable$Context, org.hibernate.jdbc.JDBCContext$Context, org.jaxen.Context]
+After TypeVariable: Type4, Candidates: 0
+   0. simple name: android
+[]
+Printing: jclass.facts
+	jar:android-13.jar:1:android.app.Application	android.app.Application	Application
+	openjdk:jdk:1.8.0:com.sun.xml.internal.bind.CycleRecoverable$Context	com.sun.xml.internal.bind.CycleRecoverable$Context	Context
+	jar:gwt-user.jar:1:com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context	com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context	Context
+	jar:gwt-user.jar:1:com.google.gwt.resources.css.ast.Context	com.google.gwt.resources.css.ast.Context	Context
+	jar:android-13.jar:1:android.content.Context	android.content.Context	Context
+	jar:gwt-user.jar:1:com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context	com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context	RpcCommandVisitor$Context
+	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.js.rhino.Context	com.google.gwt.dev.js.rhino.Context	Context
+	jar:hibernate-3.5.3.jar:1:org.hibernate.transaction.TransactionFactory$Context	org.hibernate.transaction.TransactionFactory$Context	TransactionFactory$Context
+	jar:hibernate-3.5.3.jar:1:org.hibernate.transaction.TransactionFactory$Context	org.hibernate.transaction.TransactionFactory$Context	Context
+	openjdk:jdk:1.8.0:org.omg.CORBA.Context	org.omg.CORBA.Context	Context
+	openjdk:jdk:1.8.0:com.sun.xml.internal.bind.CycleRecoverable$Context	com.sun.xml.internal.bind.CycleRecoverable$Context	CycleRecoverable$Context
+	jar:dom4j-1.4.jar:1:org.jaxen.Context	org.jaxen.Context	Context
+	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.jjs.ast.Context	com.google.gwt.dev.jjs.ast.Context	Context
+	jar:hibernate-3.5.3.jar:1:org.hibernate.jdbc.JDBCContext$Context	org.hibernate.jdbc.JDBCContext$Context	JDBCContext$Context
+	jar:hibernate-3.5.3.jar:1:org.hibernate.jdbc.JDBCContext$Context	org.hibernate.jdbc.JDBCContext$Context	Context
+	openjdk:jdk:1.8.0:javax.naming.Context	javax.naming.Context	Context
+Printing: jclasssuper.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.jdbc.JDBCContext$Context	jar:hibernate-3.5.3.jar:1:org.hibernate.transaction.TransactionFactory$Context
+	jar:android-13.jar:1:android.app.Application	jar:android-13.jar:1:android.content.Context
+Printing: jfqlname.facts
+	Type2	android.app.Application
+	Type1	Android28
+Printing: type.facts
+	Type2
+	Type4
+	Type6
+	Type1
+Printing: candidate.facts
+	Type6	jar:gwt-user.jar:1:com.google.gwt.rpc.client.ast.RpcCommandVisitor$Context
+	Type6	openjdk:jdk:1.8.0:org.omg.CORBA.Context
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.jdbc.JDBCContext$Context
+	Type2	jar:android-13.jar:1:android.app.Application
+	Type6	jar:gwt-user.jar:1:com.google.gwt.resources.css.ast.Context
+	Type6	openjdk:jdk:1.8.0:com.sun.xml.internal.bind.CycleRecoverable$Context
+	Type6	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.jjs.ast.Context
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.transaction.TransactionFactory$Context
+	Type6	jar:android-13.jar:1:android.content.Context
+	Type6	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.js.rhino.Context
+	Type6	jar:dom4j-1.4.jar:1:org.jaxen.Context
+	Type6	openjdk:jdk:1.8.0:javax.naming.Context
+Printing: jmethod_dependency.facts
+Printing: jsimplename.facts
+	Type6	Context
+	Type4	android
+	Type1	Android28
+	Type2	Application
+Printing: jmethod.facts
+Printing: jsupertype_dependency.facts
+	Type1	Type6
+	Type1	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+Printing: jmethod_param_dependency.facts
+All artifact rank: [openjdk:jdk:1.8.0, jar:gwt-dev-2.9.0.jar:1, jar:gwt-user.jar:1, jar:hibernate-3.5.3.jar:1, jar:android-13.jar:1, jar:dom4j-1.4.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type6 -> javax.naming.Context
+Added artifact: openjdk:jdk:1.8.0
+Found Type2 -> android.app.Application
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type6 to javax.naming.Context, dumping:
+Bind Type2 to android.app.Application, dumping:
+12:32:06.743 [main] WARN snr.k - Failed to solve type 'Type4' for android
+12:32:06.743 [main] INFO snr.k - Fixing Type6 with javax.naming.Context
+12:32:06.778 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:32:06.780 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+12:32:06.780 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:32:06.780 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package androidExamples;
+
+import javax.naming.Context;
+
+public class Android28 extends android.app.Application {
+
+	private static Android28 instance;
+
+	public Android28() {
+		instance = this;
+	}
+
+	public static Context getContext() {
+		return instance;
+	}
+
+}
+12:32:06.780 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:32:06.801 [main] INFO snr.e - Compilation takes 20 ms

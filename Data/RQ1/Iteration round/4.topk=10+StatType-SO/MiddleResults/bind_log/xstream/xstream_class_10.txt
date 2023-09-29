@@ -1,0 +1,224 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_10.java
+Expect check=49
+Cannot find matching typeVariable for: public class xstream_class_10 {
+  private String generateResponse(  final XStream xStream){
+    StringWriter writer=new StringWriter();
+    xStream.marshal(this,new PrettyPrintWriter(writer){
+      @Override public void addAttribute(      final String key,      final String value){
+        if (!key.equals("class")) {
+          super.addAttribute(key,value);
+        }
+      }
+    }
+);
+    return writer.toString();
+  }
+}
+
+Did not find solution for node: xstream_class_10 with type Type1
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Cannot find matching typeVariable for: generateResponse
+Cannot find matching typeVariable for: private String generateResponse(final XStream xStream){
+  StringWriter writer=new StringWriter();
+  xStream.marshal(this,new PrettyPrintWriter(writer){
+    @Override public void addAttribute(    final String key,    final String value){
+      if (!key.equals("class")) {
+        super.addAttribute(key,value);
+      }
+    }
+  }
+);
+  return writer.toString();
+}
+
+Cannot find matching typeVariable for: public class xstream_class_10 {
+  private String generateResponse(  final XStream xStream){
+    StringWriter writer=new StringWriter();
+    xStream.marshal(this,new PrettyPrintWriter(writer){
+      @Override public void addAttribute(      final String key,      final String value){
+        if (!key.equals("class")) {
+          super.addAttribute(key,value);
+        }
+      }
+    }
+);
+    return writer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: import java.io.StringWriter;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
+public class xstream_class_10 {
+  private String generateResponse(  final XStream xStream){
+    StringWriter writer=new StringWriter();
+    xStream.marshal(this,new PrettyPrintWriter(writer){
+      @Override public void addAttribute(      final String key,      final String value){
+        if (!key.equals("class")) {
+          super.addAttribute(key,value);
+        }
+      }
+    }
+);
+    return writer.toString();
+  }
+}
+
+Cannot find matching typeVariable for: final XStream xStream
+For node: final XStream xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type4 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type4 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type4 got: com.thoughtworks.xstream.XStream
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type4 got: com.thoughtworks.xstream.XStream
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Cannot find matching typeVariable for: writer=new StringWriter()
+For node: writer=new StringWriter() expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: new StringWriter() expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: StringWriter expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+For node: xStream.marshal(this,new PrettyPrintWriter(writer){
+  @Override public void addAttribute(  final String key,  final String value){
+    if (!key.equals("class")) {
+      super.addAttribute(key,value);
+    }
+  }
+}
+) expected fqn: void with type: Type21 got: void
+For node: xStream expected fqn: com.thoughtworks.xstream.XStream with type: Type4 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: marshal
+For node: marshal expected fqn: void with type: Type21 got: void
+Did not find solution for node: this with type Type1
+For node: new PrettyPrintWriter(writer){
+  @Override public void addAttribute(  final String key,  final String value){
+    if (!key.equals("class")) {
+      super.addAttribute(key,value);
+    }
+  }
+}
+ expected fqn:  with type: Type7 got: com.thoughtworks.xstream.io.xml.PrettyPrintWriter
+For node: PrettyPrintWriter expected fqn: com.thoughtworks.xstream.io.xml.PrettyPrintWriter with type: Type7 got: com.thoughtworks.xstream.io.xml.PrettyPrintWriter
+For node: PrettyPrintWriter expected fqn: com.thoughtworks.xstream.io.xml.PrettyPrintWriter with type: Type7 got: com.thoughtworks.xstream.io.xml.PrettyPrintWriter
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Cannot find matching typeVariable for: {
+  @Override public void addAttribute(  final String key,  final String value){
+    if (!key.equals("class")) {
+      super.addAttribute(key,value);
+    }
+  }
+}
+
+For node: @Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type8 got: java.lang.Override
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: addAttribute
+Cannot find matching typeVariable for: @Override public void addAttribute(final String key,final String value){
+  if (!key.equals("class")) {
+    super.addAttribute(key,value);
+  }
+}
+
+Cannot find matching typeVariable for: {
+  @Override public void addAttribute(  final String key,  final String value){
+    if (!key.equals("class")) {
+      super.addAttribute(key,value);
+    }
+  }
+}
+
+For node: addAttribute expected fqn: void with type: Type7 got: com.thoughtworks.xstream.io.xml.PrettyPrintWriter
+Cannot find matching typeVariable for: final String key
+Did not find solution for node: final String key with type Type3
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Did not find solution for node: key with type Type3
+Cannot find matching typeVariable for: final String value
+Did not find solution for node: final String value with type Type3
+Did not find solution for node: String with type Type3
+Did not find solution for node: String with type Type3
+Did not find solution for node: value with type Type3
+Did not find solution for node: !key.equals("class") with type Type10
+Did not find solution for node: key.equals("class") with type Type10
+Did not find solution for node: key with type Type3
+Cannot find matching typeVariable for: equals
+Did not find solution for node: equals with type Type10
+For node: "class" expected fqn: java.lang.String with type: Type9 got: java.lang.String
+For node: super.addAttribute(key,value) expected fqn: void with type: Type15 got: void
+Cannot find matching typeVariable for: addAttribute
+For node: addAttribute expected fqn: void with type: Type15 got: void
+Did not find solution for node: key with type Type3
+Did not find solution for node: value with type Type3
+Did not find solution for node: writer.toString() with type Type25
+For node: writer expected fqn: java.io.StringWriter with type: Type5 got: java.io.StringWriter
+Cannot find matching typeVariable for: toString
+Did not find solution for node: toString with type Type25
+{Checked=46, Analyzed=26, Unsolved=20, Incorrect=2, Correct=24}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=15, Analyzed=6, Unsolved=9, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+void=SuperMethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=46, Analyzed=26, Unsolved=20, Incorrect=2, Correct=24}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+=ThisExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrefixExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=15, Analyzed=6, Unsolved=9, Incorrect=0, Correct=6}
+java=SimpleType: {Checked=5, Analyzed=2, Unsolved=3, Incorrect=0, Correct=2}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=1, Correct=2}
+void=SuperMethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,ClassInstanceCreation,1,1,0,1,0
+,SimpleName,0,1,0,0,1
+,ThisExpression,0,1,0,0,1
+boolean,MethodInvocation,0,1,0,0,1
+boolean,PrefixExpression,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
+com.thoughtworks.xstream.,SimpleType,2,2,2,0,0
+com.thoughtworks.xstream.,SingleVariableDeclaration,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,MarkerAnnotation,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,6,15,6,0,9
+java,SimpleType,2,5,2,0,3
+java,SingleVariableDeclaration,0,2,0,0,2
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,2,1,0
+void,SuperMethodInvocation,1,1,1,0,0

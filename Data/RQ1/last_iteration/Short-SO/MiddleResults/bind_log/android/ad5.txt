@@ -1,0 +1,110 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad5.java
+Expect check=21
+Cannot find matching typeVariable for: public class ad5 {
+  public static void h1(){
+    Bundle args=new Bundle();
+    args.putInt("someInt",328);
+    args.putString("someString","jackson");
+  }
+}
+
+Cannot find matching typeVariable for: ad5
+Cannot find matching typeVariable for: public class ad5 {
+  public static void h1(){
+    Bundle args=new Bundle();
+    args.putInt("someInt",328);
+    args.putString("someString","jackson");
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.os.Build;
+import android.os.Bundle;
+public class ad5 {
+  public static void h1(){
+    Bundle args=new Bundle();
+    args.putInt("someInt",328);
+    args.putString("someString","jackson");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  Bundle args=new Bundle();
+  args.putInt("someInt",328);
+  args.putString("someString","jackson");
+}
+
+Cannot find matching typeVariable for: public class ad5 {
+  public static void h1(){
+    Bundle args=new Bundle();
+    args.putInt("someInt",328);
+    args.putString("someString","jackson");
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.os.Build;
+import android.os.Bundle;
+public class ad5 {
+  public static void h1(){
+    Bundle args=new Bundle();
+    args.putInt("someInt",328);
+    args.putString("someString","jackson");
+  }
+}
+
+For node: Bundle expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: Bundle expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+Cannot find matching typeVariable for: args=new Bundle()
+For node: args=new Bundle() expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: args expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: new Bundle() expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: Bundle expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: Bundle expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+For node: args.putInt("someInt",328) expected fqn: void with type: Type7 got: void
+For node: args expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+Cannot find matching typeVariable for: putInt
+For node: putInt expected fqn: void with type: Type7 got: void
+For node: "someInt" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: 328 expected fqn: int with type: Type6 got: short
+For node: args.putString("someString","jackson") expected fqn: void with type: Type11 got: void
+For node: args expected fqn: android.os.Bundle with type: Type3 got: android.os.Bundle
+Cannot find matching typeVariable for: putString
+For node: putString expected fqn: void with type: Type11 got: void
+For node: "someString" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "jackson" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+{Checked=18, Analyzed=18, Unsolved=0, Incorrect=1, Correct=17}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=18, Analyzed=18, Unsolved=0, Incorrect=1, Correct=17}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=NumberLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,SimpleName,5,5,5,0,0
+android.,SimpleType,2,2,2,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+int,NumberLiteral,1,1,0,1,0
+java,StringLiteral,3,3,3,0,0
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

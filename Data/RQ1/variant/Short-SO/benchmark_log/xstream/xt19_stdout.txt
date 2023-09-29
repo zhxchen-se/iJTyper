@@ -1,0 +1,236 @@
+09:08:39.772 [main] INFO snr.h - Building CompilationUnit takes 701 ms
+09:08:39.921 [main] INFO snr.e - Compilation takes 144 ms
+List cannot be resolved to a type
+ArrayList cannot be resolved to a type
+List cannot be resolved to a type
+ArrayList cannot be resolved to a type
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type3
+Return without setting candidates for Type10
+Finding class definition name: List isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.util.List, java.util.List] to Type2
+Return without setting candidates for Type8
+Return without setting candidates for Type4=Type2<Type3>
+Return without setting candidates for Type6=Type5<Type3>
+Adding candidate void to Type7
+Finding class definition name: ArrayList isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [java.util.ArrayList, java.util.ArrayList] to Type5
+Return without setting candidates for Type9
+09:08:40.710 [main] INFO snr.G - Loading initial candidates takes 659 ms.
+Before TypeVariable: Type7, Candidates: 1
+   0. subtype: Type10
+   1. full name: void
+   2. simple name: void
+[void]
+Before TypeVariable: Type2, Candidates: 2
+   0. parameterized: Type4=Type2<Type3>
+   1. simple name: List
+[java.util.List, java.util.List]
+Before TypeVariable: Type3, Candidates: 2
+   0. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type5, Candidates: 2
+   0. method: Type9 <init>();
+   1. simple name: ArrayList
+   2. parameterized: Type6=Type5<Type3>
+[java.util.ArrayList, java.util.ArrayList]
+Before TypeVariable: Type4=Type2<Type3>, Candidates: 0
+   0. subtype: Type6=Type5<Type3>
+   1. subtype: Type6=Type5<Type3>
+[]
+Before TypeVariable: Type6=Type5<Type3>, Candidates: 0
+   0. method: Type10 <init>();
+[]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type7
+   1. subtype: Type9
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+[]
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type7
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint full name: void
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type2
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint simple name: List
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type3
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type5
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint simple name: ArrayList
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type7
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+09:08:40.720 [main] INFO snr.G - Populate candidates for type variable Type5
+09:08:40.720 [main] INFO snr.G - Populate candidates for type constraint method: Type9 <init>();
+Processing method constraint method: Type9 <init>(); on Type5
+Current solution for c Type5 is uninit ? false [java.util.ArrayList, java.util.ArrayList]
+Current solution for r Type9 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type5 [java.util.ArrayList, java.util.ArrayList]
+updated solution for r Type9 [void]
+09:08:40.723 [main] INFO snr.G - Populate candidates for type variable Type6=Type5<Type3>
+09:08:40.723 [main] INFO snr.G - Populate candidates for type constraint method: Type10 <init>();
+Processing method constraint method: Type10 <init>(); on Type6=Type5<Type3>
+09:08:40.723 [main] INFO snr.G - Populate candidates for type variable Type2
+09:08:40.723 [main] INFO snr.G - Populate candidates for type constraint parameterized: Type4=Type2<Type3>
+09:08:40.724 [main] INFO snr.G - Populate candidates for type variable Type5
+09:08:40.724 [main] INFO snr.G - Populate candidates for type constraint parameterized: Type6=Type5<Type3>
+09:08:40.725 [main] INFO snr.G - Populate candidates for type variable Type4=Type2<Type3>
+09:08:40.725 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6=Type5<Type3>
+09:08:40.773 [main] INFO snr.G - Populate candidates for type variable Type4=Type2<Type3>
+09:08:40.773 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6=Type5<Type3>
+09:08:40.773 [main] INFO snr.G - Populate candidates for type variable Type7
+09:08:40.773 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+09:08:40.773 [main] INFO snr.G - Populate candidates for type variable Type8
+09:08:40.773 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+09:08:40.773 [main] INFO snr.G - Populate candidates for type variable Type8
+09:08:40.773 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+After TypeVariable: Type7, Candidates: 1
+   0. subtype: Type10
+   1. full name: void
+   2. simple name: void
+[void]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type7
+   1. subtype: Type9
+[void]
+After TypeVariable: Type9, Candidates: 1
+[void]
+After TypeVariable: Type10, Candidates: 1
+[void]
+After TypeVariable: Type2, Candidates: 2
+   0. parameterized: Type4=Type2<Type3>
+   1. simple name: List
+[java.util.List, java.util.List]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type5, Candidates: 2
+   0. method: Type9 <init>();
+   1. simple name: ArrayList
+   2. parameterized: Type6=Type5<Type3>
+[java.util.ArrayList, java.util.ArrayList]
+After TypeVariable: Type4=Type2<Type3>, Candidates: 0
+   0. subtype: Type6=Type5<Type3>
+   1. subtype: Type6=Type5<Type3>
+[]
+After TypeVariable: Type6=Type5<Type3>, Candidates: 0
+   0. method: Type10 <init>();
+[]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.util.List	java.util.List	List
+	openjdk:jdk:1.8.0:java.util.ArrayList	java.util.ArrayList	ArrayList
+	jar:android-13.jar:1:java.util.ArrayList	java.util.ArrayList	ArrayList
+	openjdk:jdk:1.8.0:java.util.List	java.util.List	List
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:java.util.ArrayList	openjdk:jdk:1.8.0:java.util.List
+	jar:android-13.jar:1:java.util.ArrayList	jar:android-13.jar:1:java.util.List
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.ArrayList	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.ArrayList	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.ArrayList	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.util.ArrayList	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.util.ArrayList	openjdk:jdk:1.8.0:java.util.ArrayList
+	openjdk:jdk:1.8.0:java.util.ArrayList	jar:android-13.jar:1:java.util.ArrayList
+	jar:android-13.jar:1:java.util.List	openjdk:jdk:1.8.0:java.util.List
+	openjdk:jdk:1.8.0:java.util.List	jar:android-13.jar:1:java.util.List
+Printing: jfqlname.facts
+	Type7	void
+Printing: type.facts
+	Type2
+	Type3
+	Type5
+	Type4=Type2<Type3>
+	Type7
+	Type8
+	Type9
+	Type10
+	Type6=Type5<Type3>
+Printing: candidate.facts
+	Type7	openjdk:jdk:1.8.0:void
+	Type2	jar:android-13.jar:1:java.util.List
+	Type5	jar:android-13.jar:1:java.util.ArrayList
+	Type9	openjdk:jdk:1.8.0:void
+	Type8	openjdk:jdk:1.8.0:void
+	Type10	openjdk:jdk:1.8.0:void
+	Type3	openjdk:jdk:1.8.0:java.lang.String
+	Type5	openjdk:jdk:1.8.0:java.util.ArrayList
+	Type2	openjdk:jdk:1.8.0:java.util.List
+	Type3	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_dependency.facts
+	0	Type6=Type5<Type3>	Type10	<init>
+	2	Type5	Type9	<init>
+Printing: jsimplename.facts
+	Type7	void
+	Type3	String
+	Type2	List
+	Type5	ArrayList
+Printing: jmethod.facts
+	0	openjdk:jdk:1.8.0:java.util.ArrayList	openjdk:jdk:1.8.0:void	<init>	0
+	1	jar:android-13.jar:1:java.util.ArrayList	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type9	Type8
+	Type7	Type8
+	Type10	Type7
+	Type6=Type5<Type3>	Type4=Type2<Type3>
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+Printing: jmethod_param_dependency.facts
+All artifact rank: [jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type3 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type2 -> java.util.List
+Added artifact: jar:android-13.jar:1
+Found Type8 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type5 -> java.util.ArrayList
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type3 to java.lang.String, dumping:
+Bind Type10 to void, dumping:
+Bind Type2 to java.util.List, dumping:
+Bind Type8 to void, dumping:
+Bind Type7 to void, dumping:
+Bind Type5 to java.util.ArrayList, dumping:
+Bind Type9 to void, dumping:
+09:08:41.120 [main] INFO snr.k - Fixing Type2 with java.util.List
+09:08:41.121 [main] INFO snr.k - Fixing Type5 with java.util.ArrayList
+09:08:41.121 [main] INFO snr.k - Fixing Type2 with java.util.List
+09:08:41.122 [main] INFO snr.k - Fixing Type5 with java.util.ArrayList
+09:08:41.178 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+09:08:41.180 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:android-13.jar:1
+09:08:41.180 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+09:08:41.180 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.xstream;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class xt19 {
+	public List<String> tags = new ArrayList<String>();
+	public List<String> notags = new ArrayList<String>();
+
+}
+09:08:41.180 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+09:08:41.229 [main] INFO snr.e - Compilation takes 48 ms

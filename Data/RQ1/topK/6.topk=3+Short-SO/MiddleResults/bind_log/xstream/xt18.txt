@@ -1,0 +1,71 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt18.java
+Expect check=18
+Cannot find matching typeVariable for: public class xt18 {
+  public static void h1(){
+  }
+  XPathFactory xPathFactory=XPathFactory.newInstance();
+  XPath xpath=xPathFactory.newXPath();
+}
+
+Did not find solution for node: xt18 with type Type1
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+}
+
+Cannot find matching typeVariable for: public class xt18 {
+  public static void h1(){
+  }
+  XPathFactory xPathFactory=XPathFactory.newInstance();
+  XPath xpath=xPathFactory.newXPath();
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
+public class xt18 {
+  public static void h1(){
+  }
+  XPathFactory xPathFactory=XPathFactory.newInstance();
+  XPath xpath=xPathFactory.newXPath();
+}
+
+For node: XPathFactory expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+For node: XPathFactory expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+Cannot find matching typeVariable for: xPathFactory=XPathFactory.newInstance()
+For node: xPathFactory=XPathFactory.newInstance() expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+For node: xPathFactory expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+For node: XPathFactory.newInstance() expected fqn: javax.xml.xpath.XPathFactory with type: Type5 got: javax.xml.xpath.XPathFactory
+For node: XPathFactory expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+Cannot find matching typeVariable for: newInstance
+For node: newInstance expected fqn: javax.xml.xpath.XPathFactory with type: Type5 got: javax.xml.xpath.XPathFactory
+For node: XPath expected fqn: javax.xml.xpath.XPath with type: Type4 got: javax.xml.xpath.XPath
+For node: XPath expected fqn: javax.xml.xpath.XPath with type: Type4 got: javax.xml.xpath.XPath
+Cannot find matching typeVariable for: xpath=xPathFactory.newXPath()
+For node: xpath=xPathFactory.newXPath() expected fqn: javax.xml.xpath.XPath with type: Type4 got: javax.xml.xpath.XPath
+For node: xpath expected fqn: javax.xml.xpath.XPath with type: Type4 got: javax.xml.xpath.XPath
+For node: xPathFactory.newXPath() expected fqn: javax.xml.xpath.XPath with type: Type7 got: javax.xml.xpath.XPath
+For node: xPathFactory expected fqn: javax.xml.xpath.XPathFactory with type: Type3 got: javax.xml.xpath.XPathFactory
+Cannot find matching typeVariable for: newXPath
+For node: newXPath expected fqn: javax.xml.xpath.XPath with type: Type7 got: javax.xml.xpath.XPath
+{Checked=16, Analyzed=15, Unsolved=1, Incorrect=0, Correct=15}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=16, Analyzed=15, Unsolved=1, Incorrect=0, Correct=15}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,8,9,8,0,1
+java,SimpleType,2,2,2,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

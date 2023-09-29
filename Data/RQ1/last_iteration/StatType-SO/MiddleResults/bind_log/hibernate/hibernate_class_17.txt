@@ -1,0 +1,945 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hibernate_class_17.java
+Expect check=175
+Cannot find matching typeVariable for: public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: hibernate_class_17
+Cannot find matching typeVariable for: public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import javax.naming.NamingException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.ShardedConfiguration;
+import org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter;
+import org.hibernate.shards.cfg.ShardConfiguration;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.ShardStrategyImpl;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.access.ShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.resolution.ShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+import org.hibernate.shards.strategy.selection.ShardSelectionStrategy;
+public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class SessionFactoryImpl {
+  private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+  private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+  private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+  public SessionFactory createSessionFactory() throws NamingException {
+    Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+    prototypeConfig.addResource(SHARDED_TABLE);
+    List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+    shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+    shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+    ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+    ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+    return shardedConfig.buildShardedSessionFactory();
+  }
+  private ShardStrategyFactory buildShardStrategyFactory(){
+    ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+      public ShardStrategy newShardStrategy1(      List<ShardId> shardIds){
+        RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+        ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+        ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+        ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+        return new ShardStrategyImpl(pss,prs,pas);
+      }
+      @Override public ShardStrategy newShardStrategy(      List<ShardId> arg0){
+        return null;
+      }
+    }
+;
+    return shardStrategyFactory;
+  }
+  private ShardConfiguration buildShardConfig(  String configFile){
+    Configuration config=new Configuration().configure(configFile);
+    return new ConfigurationToShardConfigurationAdapter(config);
+  }
+}
+
+Did not find solution for node: SessionFactoryImpl with type Type2
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml"
+For node: SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: SHARD_CFG_0 expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "/com/hibshards/config/shard0.hibernate.cfg.xml" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml"
+For node: SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: SHARD_CFG_1 expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "/com/hibshards/config/shard1.hibernate.cfg.xml" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Cannot find matching typeVariable for: SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml"
+For node: SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml" expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: SHARDED_TABLE expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: "com/hibshards/orm/weather.hbm.xml" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+For node: SessionFactory expected fqn: org.hibernate.SessionFactory with type: Type6 got: org.hibernate.SessionFactory
+Cannot find matching typeVariable for: createSessionFactory
+Cannot find matching typeVariable for: public SessionFactory createSessionFactory() throws NamingException {
+  Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+  prototypeConfig.addResource(SHARDED_TABLE);
+  List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+  shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+  shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+  ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+  ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+  return shardedConfig.buildShardedSessionFactory();
+}
+
+Cannot find matching typeVariable for: public class SessionFactoryImpl {
+  private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+  private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+  private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+  public SessionFactory createSessionFactory() throws NamingException {
+    Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+    prototypeConfig.addResource(SHARDED_TABLE);
+    List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+    shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+    shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+    ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+    ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+    return shardedConfig.buildShardedSessionFactory();
+  }
+  private ShardStrategyFactory buildShardStrategyFactory(){
+    ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+      public ShardStrategy newShardStrategy1(      List<ShardId> shardIds){
+        RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+        ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+        ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+        ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+        return new ShardStrategyImpl(pss,prs,pas);
+      }
+      @Override public ShardStrategy newShardStrategy(      List<ShardId> arg0){
+        return null;
+      }
+    }
+;
+    return shardStrategyFactory;
+  }
+  private ShardConfiguration buildShardConfig(  String configFile){
+    Configuration config=new Configuration().configure(configFile);
+    return new ConfigurationToShardConfigurationAdapter(config);
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import javax.naming.NamingException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.ShardedConfiguration;
+import org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter;
+import org.hibernate.shards.cfg.ShardConfiguration;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.ShardStrategyImpl;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.access.ShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.resolution.ShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+import org.hibernate.shards.strategy.selection.ShardSelectionStrategy;
+public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+For node: NamingException expected fqn: javax.naming.NamingException with type: Type9 got: javax.naming.NamingException
+For node: NamingException expected fqn: javax.naming.NamingException with type: Type9 got: javax.naming.NamingException
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: prototypeConfig=new Configuration().configure(SHARD_CFG_0)
+For node: prototypeConfig=new Configuration().configure(SHARD_CFG_0) expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: prototypeConfig expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: new Configuration().configure(SHARD_CFG_0) expected fqn: org.hibernate.cfg.Configuration with type: Type13 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type13 got: org.hibernate.cfg.Configuration
+For node: SHARD_CFG_0 expected fqn: java.lang.String with type: Type7 got: java.lang.String
+For node: prototypeConfig.addResource(SHARDED_TABLE) expected fqn: org.hibernate.cfg.Configuration with type: Type16 got: org.hibernate.cfg.Configuration
+For node: prototypeConfig expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: addResource
+For node: addResource expected fqn: org.hibernate.cfg.Configuration with type: Type16 got: org.hibernate.cfg.Configuration
+For node: SHARDED_TABLE expected fqn: java.lang.String with type: Type7 got: java.lang.String
+Did not find solution for node: List<ShardConfiguration> with type Type20=Type19<Type3>
+For node: List expected fqn: java.util.List<org.hibernate.shards.cfg.ShardConfiguration> with type: Type19 got: java.util.List
+For node: List expected fqn: java.util.List<org.hibernate.shards.cfg.ShardConfiguration> with type: Type19 got: java.util.List
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: shardConfigs=new ArrayList<ShardConfiguration>()
+Did not find solution for node: shardConfigs=new ArrayList<ShardConfiguration>() with type Type20=Type19<Type3>
+Did not find solution for node: shardConfigs with type Type20=Type19<Type3>
+Did not find solution for node: new ArrayList<ShardConfiguration>() with type Type22=Type21<Type3>
+Did not find solution for node: ArrayList<ShardConfiguration> with type Type22=Type21<Type3>
+For node: ArrayList expected fqn: java.util.ArrayList<org.hibernate.shards.cfg.ShardConfiguration> with type: Type21 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<org.hibernate.shards.cfg.ShardConfiguration> with type: Type21 got: java.util.ArrayList
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Did not find solution for node: shardConfigs.add(buildShardConfig(SHARD_CFG_0)) with type Type26
+Did not find solution for node: shardConfigs with type Type20=Type19<Type3>
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type26
+For node: buildShardConfig(SHARD_CFG_0) expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: buildShardConfig
+For node: buildShardConfig expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: SHARD_CFG_0
+For node: SHARD_CFG_0 expected fqn: java.lang.String with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Did not find solution for node: shardConfigs.add(buildShardConfig(SHARD_CFG_1)) with type Type31
+Did not find solution for node: shardConfigs with type Type20=Type19<Type3>
+Cannot find matching typeVariable for: add
+Did not find solution for node: add with type Type31
+For node: buildShardConfig(SHARD_CFG_1) expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: buildShardConfig
+For node: buildShardConfig expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: SHARD_CFG_1
+For node: SHARD_CFG_1 expected fqn: java.lang.String with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: shardStrategyFactory=buildShardStrategyFactory()
+For node: shardStrategyFactory=buildShardStrategyFactory() expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: shardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: buildShardStrategyFactory() expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: buildShardStrategyFactory
+For node: buildShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardedConfiguration expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: ShardedConfiguration expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+Cannot find matching typeVariable for: shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory)
+For node: shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory) expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: shardedConfig expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory) expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: ShardedConfiguration expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: ShardedConfiguration expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+For node: prototypeConfig expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Did not find solution for node: shardConfigs with type Type20=Type19<Type3>
+For node: shardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: shardedConfig.buildShardedSessionFactory() expected fqn: org.hibernate.shards.session.ShardedSessionFactory with type: Type37 got: org.hibernate.SessionFactory
+For node: shardedConfig expected fqn: org.hibernate.shards.ShardedConfiguration with type: Type32 got: org.hibernate.shards.ShardedConfiguration
+Cannot find matching typeVariable for: buildShardedSessionFactory
+For node: buildShardedSessionFactory expected fqn: org.hibernate.shards.session.ShardedSessionFactory with type: Type37 got: org.hibernate.SessionFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: buildShardStrategyFactory
+Cannot find matching typeVariable for: private ShardStrategyFactory buildShardStrategyFactory(){
+  ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+    public ShardStrategy newShardStrategy1(    List<ShardId> shardIds){
+      RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+      ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+      ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+      ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+      return new ShardStrategyImpl(pss,prs,pas);
+    }
+    @Override public ShardStrategy newShardStrategy(    List<ShardId> arg0){
+      return null;
+    }
+  }
+;
+  return shardStrategyFactory;
+}
+
+Cannot find matching typeVariable for: public class SessionFactoryImpl {
+  private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+  private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+  private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+  public SessionFactory createSessionFactory() throws NamingException {
+    Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+    prototypeConfig.addResource(SHARDED_TABLE);
+    List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+    shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+    shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+    ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+    ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+    return shardedConfig.buildShardedSessionFactory();
+  }
+  private ShardStrategyFactory buildShardStrategyFactory(){
+    ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+      public ShardStrategy newShardStrategy1(      List<ShardId> shardIds){
+        RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+        ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+        ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+        ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+        return new ShardStrategyImpl(pss,prs,pas);
+      }
+      @Override public ShardStrategy newShardStrategy(      List<ShardId> arg0){
+        return null;
+      }
+    }
+;
+    return shardStrategyFactory;
+  }
+  private ShardConfiguration buildShardConfig(  String configFile){
+    Configuration config=new Configuration().configure(configFile);
+    return new ConfigurationToShardConfigurationAdapter(config);
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import javax.naming.NamingException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.ShardedConfiguration;
+import org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter;
+import org.hibernate.shards.cfg.ShardConfiguration;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.ShardStrategyImpl;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.access.ShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.resolution.ShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+import org.hibernate.shards.strategy.selection.ShardSelectionStrategy;
+public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: shardStrategyFactory=new ShardStrategyFactory(){
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+
+For node: shardStrategyFactory=new ShardStrategyFactory(){
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+ expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: shardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: new ShardStrategyFactory(){
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+ expected fqn:  with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: {
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+
+Did not find solution for node: ShardStrategy with type Type4
+Did not find solution for node: ShardStrategy with type Type4
+Cannot find matching typeVariable for: newShardStrategy1
+Cannot find matching typeVariable for: public ShardStrategy newShardStrategy1(List<ShardId> shardIds){
+  RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+  ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+  ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+  ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+  return new ShardStrategyImpl(pss,prs,pas);
+}
+
+Cannot find matching typeVariable for: {
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+
+For node: newShardStrategy1 expected fqn: org.hibernate.shards.strategy.ShardStrategy with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: List<ShardId> shardIds
+Did not find solution for node: List<ShardId> shardIds with type Type40=Type19<Type39>
+Did not find solution for node: List<ShardId> with type Type40=Type19<Type39>
+For node: List expected fqn: java.util.List<org.hibernate.shards.ShardId> with type: Type19 got: java.util.List
+For node: List expected fqn: java.util.List<org.hibernate.shards.ShardId> with type: Type19 got: java.util.List
+Did not find solution for node: ShardId with type Type39
+Did not find solution for node: ShardId with type Type39
+Did not find solution for node: shardIds with type Type40=Type19<Type39>
+Did not find solution for node: RoundRobinShardLoadBalancer with type Type41
+Did not find solution for node: RoundRobinShardLoadBalancer with type Type41
+Cannot find matching typeVariable for: loadBalancer=new RoundRobinShardLoadBalancer(shardIds)
+Did not find solution for node: loadBalancer=new RoundRobinShardLoadBalancer(shardIds) with type Type41
+Did not find solution for node: loadBalancer with type Type41
+Did not find solution for node: new RoundRobinShardLoadBalancer(shardIds) with type Type41
+Did not find solution for node: RoundRobinShardLoadBalancer with type Type41
+Did not find solution for node: RoundRobinShardLoadBalancer with type Type41
+Did not find solution for node: shardIds with type Type40=Type19<Type39>
+Did not find solution for node: ShardSelectionStrategy with type Type44
+Did not find solution for node: ShardSelectionStrategy with type Type44
+Cannot find matching typeVariable for: pss=new RoundRobinShardSelectionStrategy(loadBalancer)
+Did not find solution for node: pss=new RoundRobinShardSelectionStrategy(loadBalancer) with type Type44
+Did not find solution for node: pss with type Type44
+Did not find solution for node: new RoundRobinShardSelectionStrategy(loadBalancer) with type Type45
+Did not find solution for node: RoundRobinShardSelectionStrategy with type Type45
+Did not find solution for node: RoundRobinShardSelectionStrategy with type Type45
+Did not find solution for node: loadBalancer with type Type41
+Did not find solution for node: ShardResolutionStrategy with type Type48
+Did not find solution for node: ShardResolutionStrategy with type Type48
+Cannot find matching typeVariable for: prs=new AllShardsShardResolutionStrategy(shardIds)
+Did not find solution for node: prs=new AllShardsShardResolutionStrategy(shardIds) with type Type48
+Did not find solution for node: prs with type Type48
+Did not find solution for node: new AllShardsShardResolutionStrategy(shardIds) with type Type49
+Did not find solution for node: AllShardsShardResolutionStrategy with type Type49
+Did not find solution for node: AllShardsShardResolutionStrategy with type Type49
+Did not find solution for node: shardIds with type Type40=Type19<Type39>
+Did not find solution for node: ShardAccessStrategy with type Type52
+Did not find solution for node: ShardAccessStrategy with type Type52
+Cannot find matching typeVariable for: pas=new SequentialShardAccessStrategy()
+Did not find solution for node: pas=new SequentialShardAccessStrategy() with type Type52
+Did not find solution for node: pas with type Type52
+Did not find solution for node: new SequentialShardAccessStrategy() with type Type53
+Did not find solution for node: SequentialShardAccessStrategy with type Type53
+Did not find solution for node: SequentialShardAccessStrategy with type Type53
+Did not find solution for node: new ShardStrategyImpl(pss,prs,pas) with type Type55
+Did not find solution for node: ShardStrategyImpl with type Type55
+Did not find solution for node: ShardStrategyImpl with type Type55
+Did not find solution for node: pss with type Type44
+Did not find solution for node: prs with type Type48
+Did not find solution for node: pas with type Type52
+For node: @Override expected fqn: java.lang.Override with type: Type60 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type60 got: java.lang.Override
+Did not find solution for node: ShardStrategy with type Type4
+Did not find solution for node: ShardStrategy with type Type4
+Cannot find matching typeVariable for: newShardStrategy
+Cannot find matching typeVariable for: @Override public ShardStrategy newShardStrategy(List<ShardId> arg0){
+  return null;
+}
+
+Cannot find matching typeVariable for: {
+  public ShardStrategy newShardStrategy1(  List<ShardId> shardIds){
+    RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+    ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+    ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+    ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+    return new ShardStrategyImpl(pss,prs,pas);
+  }
+  @Override public ShardStrategy newShardStrategy(  List<ShardId> arg0){
+    return null;
+  }
+}
+
+For node: newShardStrategy expected fqn: org.hibernate.shards.strategy.ShardStrategy with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+Cannot find matching typeVariable for: List<ShardId> arg0
+Did not find solution for node: List<ShardId> arg0 with type Type40=Type19<Type39>
+Did not find solution for node: List<ShardId> with type Type40=Type19<Type39>
+For node: List expected fqn: java.util.List<org.hibernate.shards.ShardId> with type: Type19 got: java.util.List
+For node: List expected fqn: java.util.List<org.hibernate.shards.ShardId> with type: Type19 got: java.util.List
+Did not find solution for node: ShardId with type Type39
+Did not find solution for node: ShardId with type Type39
+Did not find solution for node: arg0 with type Type40=Type19<Type39>
+Did not find solution for node: null with type Type61
+For node: shardStrategyFactory expected fqn: org.hibernate.shards.strategy.ShardStrategyFactory with type: Type5 got: org.hibernate.shards.strategy.ShardStrategyFactory
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+For node: ShardConfiguration expected fqn: org.hibernate.shards.cfg.ShardConfiguration with type: Type3 got: org.hibernate.shards.cfg.ShardConfiguration
+Cannot find matching typeVariable for: buildShardConfig
+Cannot find matching typeVariable for: private ShardConfiguration buildShardConfig(String configFile){
+  Configuration config=new Configuration().configure(configFile);
+  return new ConfigurationToShardConfigurationAdapter(config);
+}
+
+Cannot find matching typeVariable for: public class SessionFactoryImpl {
+  private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+  private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+  private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+  public SessionFactory createSessionFactory() throws NamingException {
+    Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+    prototypeConfig.addResource(SHARDED_TABLE);
+    List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+    shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+    shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+    ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+    ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+    return shardedConfig.buildShardedSessionFactory();
+  }
+  private ShardStrategyFactory buildShardStrategyFactory(){
+    ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+      public ShardStrategy newShardStrategy1(      List<ShardId> shardIds){
+        RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+        ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+        ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+        ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+        return new ShardStrategyImpl(pss,prs,pas);
+      }
+      @Override public ShardStrategy newShardStrategy(      List<ShardId> arg0){
+        return null;
+      }
+    }
+;
+    return shardStrategyFactory;
+  }
+  private ShardConfiguration buildShardConfig(  String configFile){
+    Configuration config=new Configuration().configure(configFile);
+    return new ConfigurationToShardConfigurationAdapter(config);
+  }
+}
+
+Cannot find matching typeVariable for: public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import java.util.ArrayList;
+import java.util.List;
+import javax.naming.NamingException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.shards.ShardId;
+import org.hibernate.shards.ShardedConfiguration;
+import org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter;
+import org.hibernate.shards.cfg.ShardConfiguration;
+import org.hibernate.shards.loadbalance.RoundRobinShardLoadBalancer;
+import org.hibernate.shards.strategy.ShardStrategy;
+import org.hibernate.shards.strategy.ShardStrategyFactory;
+import org.hibernate.shards.strategy.ShardStrategyImpl;
+import org.hibernate.shards.strategy.access.SequentialShardAccessStrategy;
+import org.hibernate.shards.strategy.access.ShardAccessStrategy;
+import org.hibernate.shards.strategy.resolution.AllShardsShardResolutionStrategy;
+import org.hibernate.shards.strategy.resolution.ShardResolutionStrategy;
+import org.hibernate.shards.strategy.selection.RoundRobinShardSelectionStrategy;
+import org.hibernate.shards.strategy.selection.ShardSelectionStrategy;
+public class hibernate_class_17 {
+public class SessionFactoryImpl {
+    private static final String SHARD_CFG_0="/com/hibshards/config/shard0.hibernate.cfg.xml";
+    private static final String SHARD_CFG_1="/com/hibshards/config/shard1.hibernate.cfg.xml";
+    private static final String SHARDED_TABLE="com/hibshards/orm/weather.hbm.xml";
+    public SessionFactory createSessionFactory() throws NamingException {
+      Configuration prototypeConfig=new Configuration().configure(SHARD_CFG_0);
+      prototypeConfig.addResource(SHARDED_TABLE);
+      List<ShardConfiguration> shardConfigs=new ArrayList<ShardConfiguration>();
+      shardConfigs.add(buildShardConfig(SHARD_CFG_0));
+      shardConfigs.add(buildShardConfig(SHARD_CFG_1));
+      ShardStrategyFactory shardStrategyFactory=buildShardStrategyFactory();
+      ShardedConfiguration shardedConfig=new ShardedConfiguration(prototypeConfig,shardConfigs,shardStrategyFactory);
+      return shardedConfig.buildShardedSessionFactory();
+    }
+    private ShardStrategyFactory buildShardStrategyFactory(){
+      ShardStrategyFactory shardStrategyFactory=new ShardStrategyFactory(){
+        public ShardStrategy newShardStrategy1(        List<ShardId> shardIds){
+          RoundRobinShardLoadBalancer loadBalancer=new RoundRobinShardLoadBalancer(shardIds);
+          ShardSelectionStrategy pss=new RoundRobinShardSelectionStrategy(loadBalancer);
+          ShardResolutionStrategy prs=new AllShardsShardResolutionStrategy(shardIds);
+          ShardAccessStrategy pas=new SequentialShardAccessStrategy();
+          return new ShardStrategyImpl(pss,prs,pas);
+        }
+        @Override public ShardStrategy newShardStrategy(        List<ShardId> arg0){
+          return null;
+        }
+      }
+;
+      return shardStrategyFactory;
+    }
+    private ShardConfiguration buildShardConfig(    String configFile){
+      Configuration config=new Configuration().configure(configFile);
+      return new ConfigurationToShardConfigurationAdapter(config);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String configFile
+For node: String configFile expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: configFile expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: config=new Configuration().configure(configFile)
+For node: config=new Configuration().configure(configFile) expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: new Configuration().configure(configFile) expected fqn: org.hibernate.cfg.Configuration with type: Type63 got: org.hibernate.cfg.Configuration
+For node: new Configuration() expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+For node: Configuration expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+Cannot find matching typeVariable for: configure
+For node: configure expected fqn: org.hibernate.cfg.Configuration with type: Type63 got: org.hibernate.cfg.Configuration
+For node: configFile expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: new ConfigurationToShardConfigurationAdapter(config) expected fqn: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter with type: Type66 got: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter
+For node: ConfigurationToShardConfigurationAdapter expected fqn: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter with type: Type66 got: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter
+For node: ConfigurationToShardConfigurationAdapter expected fqn: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter with type: Type66 got: org.hibernate.shards.cfg.ConfigurationToShardConfigurationAdapter
+For node: config expected fqn: org.hibernate.cfg.Configuration with type: Type10 got: org.hibernate.cfg.Configuration
+{Checked=168, Analyzed=103, Unsolved=65, Incorrect=15, Correct=88}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=27, Analyzed=19, Unsolved=8, Incorrect=6, Correct=13}
+java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=4, Correct=5}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+org.hibernate.=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=1, Correct=6}
+org.hibernate.=SimpleName: {Checked=56, Analyzed=35, Unsolved=21, Incorrect=3, Correct=32}
+org.hibernate.=SimpleType: {Checked=28, Analyzed=15, Unsolved=13, Incorrect=0, Correct=15}
+org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=5, Unsolved=4, Incorrect=0, Correct=5}
+Total stats
+{Checked=168, Analyzed=103, Unsolved=65, Incorrect=15, Correct=88}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=27, Analyzed=19, Unsolved=8, Incorrect=6, Correct=13}
+java=SimpleType: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=4, Correct=5}
+java=SingleVariableDeclaration: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=ClassInstanceCreation: {Checked=9, Analyzed=4, Unsolved=5, Incorrect=0, Correct=4}
+org.hibernate.=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=1, Correct=6}
+org.hibernate.=SimpleName: {Checked=56, Analyzed=35, Unsolved=21, Incorrect=3, Correct=32}
+org.hibernate.=SimpleType: {Checked=28, Analyzed=15, Unsolved=13, Incorrect=0, Correct=15}
+org.hibernate.=VariableDeclarationFragment: {Checked=9, Analyzed=5, Unsolved=4, Incorrect=0, Correct=5}
+,ClassInstanceCreation,1,1,0,1,0
+,SimpleName,0,1,0,0,1
+boolean,MethodInvocation,0,2,0,0,2
+boolean,SimpleName,0,2,0,0,2
+java,ClassInstanceCreation,0,1,0,0,1
+java,MarkerAnnotation,1,1,1,0,0
+java,ParameterizedType,0,4,0,0,4
+java,SimpleName,19,27,13,6,8
+java,SimpleType,9,9,5,4,0
+java,SingleVariableDeclaration,1,3,1,0,2
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,3,4,3,0,1
+null,NullLiteral,0,1,0,0,1
+org.hibernate.,ClassInstanceCreation,4,9,4,0,5
+org.hibernate.,MethodInvocation,7,7,6,1,0
+org.hibernate.,SimpleName,35,56,32,3,21
+org.hibernate.,SimpleType,15,28,15,0,13
+org.hibernate.,VariableDeclarationFragment,5,9,5,0,4

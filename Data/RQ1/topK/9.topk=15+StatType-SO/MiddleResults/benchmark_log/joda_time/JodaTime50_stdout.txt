@@ -1,0 +1,406 @@
+23:51:19.418 [main] INFO snr.h - Building CompilationUnit takes 583 ms
+23:51:19.579 [main] INFO snr.e - Compilation takes 156 ms
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+Return without setting candidates for Type11
+Return without setting candidates for Type18
+Return without setting candidates for Type15
+Finding class definition name: null isfull? false fields: [] methods: [getMaximumValue] argument sizes: [0]
+Adding candidates [org.joda.time.DateTime$Property, org.joda.time.field.AbstractReadableInstantFieldProperty] to Type16
+Finding class definition name: DateTime isfull? false fields: [] methods: [dayOfMonth, <init>] argument sizes: [0, 7]
+Adding candidates [org.joda.time.DateTime] to Type6
+Adding candidate byte to Type7
+Return without setting candidates for Type13
+Return without setting candidates for Type8
+Adding candidate int to Type2
+Return without setting candidates for Type14
+Return without setting candidates for Type17
+Return without setting candidates for Type9
+Return without setting candidates for Type10
+Return without setting candidates for Type19
+Return without setting candidates for Type12
+Adding candidate void to Type3
+23:51:22.153 [main] INFO snr.G - Loading initial candidates takes 2440 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. simple name: int
+   1. full name: int
+   2. subtype: Type18
+[int]
+Before TypeVariable: Type3, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type15
+[void]
+Before TypeVariable: Type6, Candidates: 1
+   0. method: Type17 dayOfMonth();
+   1. method: Type15 <init>(Type8,Type9,Type10,Type11,Type12,Type13,Type14);
+   2. simple name: DateTime
+[org.joda.time.DateTime]
+Before TypeVariable: Type7, Candidates: 1
+   0. simple name: byte
+   1. full name: byte
+[byte]
+Before TypeVariable: Type16, Candidates: 2
+   0. method: Type19 getMaximumValue();
+   1. subtype: Type17
+[org.joda.time.DateTime$Property, org.joda.time.field.AbstractReadableInstantFieldProperty]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type2
+[]
+Before TypeVariable: Type9, Candidates: 0
+   0. subtype: Type2
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type15, Candidates: 0
+[]
+Before TypeVariable: Type17, Candidates: 0
+[]
+Before TypeVariable: Type18, Candidates: 0
+   0. subtype: Type19
+[]
+Before TypeVariable: Type19, Candidates: 0
+[]
+23:51:22.161 [main] INFO snr.G - Populate candidates for type variable Type2
+23:51:22.161 [main] INFO snr.G - Populate candidates for type constraint full name: int
+23:51:22.161 [main] INFO snr.G - Populate candidates for type variable Type3
+23:51:22.161 [main] INFO snr.G - Populate candidates for type constraint full name: void
+23:51:22.161 [main] INFO snr.G - Populate candidates for type variable Type7
+23:51:22.161 [main] INFO snr.G - Populate candidates for type constraint full name: byte
+23:51:22.162 [main] INFO snr.G - Populate candidates for type variable Type2
+23:51:22.162 [main] INFO snr.G - Populate candidates for type constraint simple name: int
+23:51:22.162 [main] INFO snr.G - Populate candidates for type variable Type3
+23:51:22.162 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+23:51:22.162 [main] INFO snr.G - Populate candidates for type variable Type6
+23:51:22.162 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTime
+23:51:22.162 [main] INFO snr.G - Populate candidates for type variable Type7
+23:51:22.162 [main] INFO snr.G - Populate candidates for type constraint simple name: byte
+23:51:22.162 [main] INFO snr.G - Populate candidates for type variable Type6
+23:51:22.162 [main] INFO snr.G - Populate candidates for type constraint method: Type15 <init>(Type8,Type9,Type10,Type11,Type12,Type13,Type14);
+Processing method constraint method: Type15 <init>(Type8,Type9,Type10,Type11,Type12,Type13,Type14); on Type6
+Current solution for c Type6 is uninit ? false [org.joda.time.DateTime]
+Current solution for r Type15 is uninit ? false []
+Current solution for p0 Type8 is uninit ? false []
+Current solution for p1 Type9 is uninit ? false []
+Current solution for p2 Type10 is uninit ? false []
+Current solution for p3 Type11 is uninit ? false []
+Current solution for p4 Type12 is uninit ? false []
+Current solution for p5 Type13 is uninit ? false []
+Current solution for p6 Type14 is uninit ? false []
+Looking at method: public V <init>(IIIIIII)
+Looking at method: public V <init>(IIIIIILorg/joda/time/Chronology;)
+Looking at method: public V <init>(IIIIIILorg/joda/time/DateTimeZone;)
+updated solution for c Type6 [org.joda.time.DateTime]
+updated solution for r Type15 [void]
+updated solution for p0 Type8 [int]
+updated solution for p1 Type9 [int]
+updated solution for p2 Type10 [int]
+updated solution for p3 Type11 [int]
+updated solution for p4 Type12 [int]
+updated solution for p5 Type13 [int]
+updated solution for p6 Type14 [int, org.joda.time.Chronology, org.joda.time.DateTimeZone]
+23:51:22.169 [main] INFO snr.G - Populate candidates for type variable Type6
+23:51:22.169 [main] INFO snr.G - Populate candidates for type constraint method: Type17 dayOfMonth();
+Processing method constraint method: Type17 dayOfMonth(); on Type6
+Current solution for c Type6 is uninit ? false [org.joda.time.DateTime]
+Current solution for r Type17 is uninit ? false []
+Looking at method: public Lorg/joda/time/DateTime$Property; dayOfMonth()
+updated solution for c Type6 [org.joda.time.DateTime]
+updated solution for r Type17 [org.joda.time.DateTime$Property]
+23:51:22.170 [main] INFO snr.G - Populate candidates for type variable Type16
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint method: Type19 getMaximumValue();
+Processing method constraint method: Type19 getMaximumValue(); on Type16
+Current solution for c Type16 is uninit ? false [org.joda.time.DateTime$Property, org.joda.time.field.AbstractReadableInstantFieldProperty]
+Current solution for r Type19 is uninit ? false []
+Looking at method: public I getMaximumValue()
+Looking at method: public I getMaximumValue()
+updated solution for c Type16 [org.joda.time.DateTime$Property, org.joda.time.field.AbstractReadableInstantFieldProperty]
+updated solution for r Type19 [int]
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type2
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type3
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type8
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type2
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type9
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type2
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type10
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type11
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type12
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type13
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type14
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type16
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+23:51:22.171 [main] INFO snr.G - Populate candidates for type variable Type18
+23:51:22.171 [main] INFO snr.G - Populate candidates for type constraint subtype: Type19
+After TypeVariable: Type2, Candidates: 1
+   0. simple name: int
+   1. full name: int
+   2. subtype: Type18
+[int]
+After TypeVariable: Type3, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type15
+[void]
+After TypeVariable: Type6, Candidates: 1
+   0. method: Type17 dayOfMonth();
+   1. method: Type15 <init>(Type8,Type9,Type10,Type11,Type12,Type13,Type14);
+   2. simple name: DateTime
+[org.joda.time.DateTime]
+After TypeVariable: Type7, Candidates: 1
+   0. simple name: byte
+   1. full name: byte
+[byte]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type2
+[int]
+After TypeVariable: Type9, Candidates: 1
+   0. subtype: Type2
+[int]
+After TypeVariable: Type10, Candidates: 1
+   0. subtype: Type7
+[int]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type7
+[int]
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type7
+[int]
+After TypeVariable: Type13, Candidates: 1
+   0. subtype: Type7
+[int]
+After TypeVariable: Type14, Candidates: 1
+   0. subtype: Type7
+[int]
+After TypeVariable: Type15, Candidates: 1
+[void]
+After TypeVariable: Type17, Candidates: 1
+[org.joda.time.DateTime$Property]
+After TypeVariable: Type18, Candidates: 1
+   0. subtype: Type19
+[int]
+After TypeVariable: Type19, Candidates: 1
+[int]
+After TypeVariable: Type16, Candidates: 2
+   0. method: Type19 getMaximumValue();
+   1. subtype: Type17
+[org.joda.time.DateTime$Property, org.joda.time.field.AbstractReadableInstantFieldProperty]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property	org.joda.time.DateTime$Property	Property
+	jar:joda-time-2.0.jar:1:org.joda.time.field.AbstractReadableInstantFieldProperty	org.joda.time.field.AbstractReadableInstantFieldProperty	AbstractReadableInstantFieldProperty
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	org.joda.time.DateTimeZone	DateTimeZone
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property	org.joda.time.DateTime$Property	DateTime$Property
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	org.joda.time.DateTime	DateTime
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	org.joda.time.Chronology	Chronology
+	openjdk:jdk:1.8.0:byte	byte	byte
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:int
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property	jar:joda-time-2.0.jar:1:org.joda.time.field.AbstractReadableInstantFieldProperty
+Printing: jfqlname.facts
+	Type3	void
+	Type7	byte
+	Type2	int
+Printing: type.facts
+	Type2
+	Type3
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type15
+	Type16
+	Type10
+	Type11
+	Type12
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type11	openjdk:jdk:1.8.0:int
+	Type12	openjdk:jdk:1.8.0:int
+	Type10	openjdk:jdk:1.8.0:int
+	Type3	openjdk:jdk:1.8.0:void
+	Type13	openjdk:jdk:1.8.0:int
+	Type14	openjdk:jdk:1.8.0:int
+	Type8	openjdk:jdk:1.8.0:int
+	Type17	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property
+	Type9	openjdk:jdk:1.8.0:int
+	Type2	openjdk:jdk:1.8.0:int
+	Type15	openjdk:jdk:1.8.0:void
+	Type6	jar:joda-time-2.0.jar:1:org.joda.time.DateTime
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property
+	Type19	openjdk:jdk:1.8.0:int
+	Type18	openjdk:jdk:1.8.0:int
+	Type7	openjdk:jdk:1.8.0:byte
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.field.AbstractReadableInstantFieldProperty
+Printing: jmethod_dependency.facts
+	0	Type6	Type15	<init>
+	3	Type6	Type17	dayOfMonth
+	2	Type16	Type19	getMaximumValue
+Printing: jsimplename.facts
+	Type3	void
+	Type7	byte
+	Type6	DateTime
+	Type2	int
+Printing: jmethod.facts
+	2	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+	6	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property	openjdk:jdk:1.8.0:int	getMaximumValue	0
+	8	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	jar:joda-time-2.0.jar:1:org.joda.time.DateTime$Property	dayOfMonth	0
+	0	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+	7	jar:joda-time-2.0.jar:1:org.joda.time.field.AbstractReadableInstantFieldProperty	openjdk:jdk:1.8.0:int	getMaximumValue	0
+	1	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+Printing: jsupertype_dependency.facts
+	Type19	Type18
+	Type18	Type2
+	Type2	Type8
+	Type2	Type9
+	Type7	Type10
+	Type7	Type12
+	Type7	Type11
+	Type15	Type3
+	Type7	Type14
+	Type7	Type13
+	Type17	Type16
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	2	0	openjdk:jdk:1.8.0:int
+	2	1	openjdk:jdk:1.8.0:int
+	2	2	openjdk:jdk:1.8.0:int
+	2	3	openjdk:jdk:1.8.0:int
+	2	4	openjdk:jdk:1.8.0:int
+	2	5	openjdk:jdk:1.8.0:int
+	2	6	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	0	0	openjdk:jdk:1.8.0:int
+	0	1	openjdk:jdk:1.8.0:int
+	0	2	openjdk:jdk:1.8.0:int
+	0	3	openjdk:jdk:1.8.0:int
+	0	4	openjdk:jdk:1.8.0:int
+	0	5	openjdk:jdk:1.8.0:int
+	0	6	openjdk:jdk:1.8.0:int
+	1	0	openjdk:jdk:1.8.0:int
+	1	1	openjdk:jdk:1.8.0:int
+	1	2	openjdk:jdk:1.8.0:int
+	1	3	openjdk:jdk:1.8.0:int
+	1	4	openjdk:jdk:1.8.0:int
+	1	5	openjdk:jdk:1.8.0:int
+	1	6	jar:joda-time-2.0.jar:1:org.joda.time.Chronology
+Printing: jmethod_param_dependency.facts
+	0	0	Type8
+	0	1	Type9
+	0	2	Type10
+	0	3	Type11
+	0	4	Type12
+	0	5	Type13
+	0	6	Type14
+All artifact rank: [jar:joda-time-2.0.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type14 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type3 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> byte
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type15 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type6 -> org.joda.time.DateTime
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type12 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type11 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type10 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type9 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type2 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type18 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type19 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type16 -> org.joda.time.DateTime$Property
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Found Type17 -> org.joda.time.DateTime$Property
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Quiting souffle
+Bind Type11 to int, dumping:
+Bind Type18 to int, dumping:
+Bind Type15 to void, dumping:
+Bind Type16 to org.joda.time.DateTime$Property, dumping:
+Bind Type6 to org.joda.time.DateTime, dumping:
+Bind Type7 to byte, dumping:
+Bind Type13 to int, dumping:
+Bind Type2 to int, dumping:
+Bind Type8 to int, dumping:
+Bind Type14 to int, dumping:
+Bind Type10 to int, dumping:
+Bind Type9 to int, dumping:
+Bind Type19 to int, dumping:
+Bind Type17 to org.joda.time.DateTime$Property, dumping:
+Bind Type12 to int, dumping:
+Bind Type3 to void, dumping:
+23:51:22.542 [main] INFO snr.k - Fixing Type6 with org.joda.time.DateTime
+23:51:22.543 [main] INFO snr.k - Fixing Type6 with org.joda.time.DateTime
+23:51:22.592 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+23:51:22.593 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+23:51:22.594 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+23:51:22.594 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package jodatime;
+//id = 3772945
+
+import org.joda.time.DateTime;
+
+public class JodaTime50 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	//days of a month
+	public static int daysOfMonth(int year, int month) {
+		DateTime dateTime = new DateTime(year, month, 14, 12, 0, 0, 000);
+		return dateTime.dayOfMonth().getMaximumValue();
+	}
+}
+23:51:22.594 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+23:51:22.635 [main] INFO snr.e - Compilation takes 41 ms

@@ -1,0 +1,113 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt10.java
+Expect check=24
+Cannot find matching typeVariable for: public class gt10 {
+  public void onModuleLoad(){
+    HorizontalSplitPanel split=new HorizontalSplitPanel();
+    DecoratorPanel dp=new DecoratorPanel();
+    RootPanel.get().add(dp);
+  }
+}
+
+Cannot find matching typeVariable for: gt10
+Cannot find matching typeVariable for: public class gt10 {
+  public void onModuleLoad(){
+    HorizontalSplitPanel split=new HorizontalSplitPanel();
+    DecoratorPanel dp=new DecoratorPanel();
+    RootPanel.get().add(dp);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.user.client.ui.DecoratorPanel;
+import com.google.gwt.user.client.ui.HorizontalSplitPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+public class gt10 {
+  public void onModuleLoad(){
+    HorizontalSplitPanel split=new HorizontalSplitPanel();
+    DecoratorPanel dp=new DecoratorPanel();
+    RootPanel.get().add(dp);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onModuleLoad
+Cannot find matching typeVariable for: public void onModuleLoad(){
+  HorizontalSplitPanel split=new HorizontalSplitPanel();
+  DecoratorPanel dp=new DecoratorPanel();
+  RootPanel.get().add(dp);
+}
+
+Cannot find matching typeVariable for: public class gt10 {
+  public void onModuleLoad(){
+    HorizontalSplitPanel split=new HorizontalSplitPanel();
+    DecoratorPanel dp=new DecoratorPanel();
+    RootPanel.get().add(dp);
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import com.google.gwt.user.client.ui.DecoratorPanel;
+import com.google.gwt.user.client.ui.HorizontalSplitPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+public class gt10 {
+  public void onModuleLoad(){
+    HorizontalSplitPanel split=new HorizontalSplitPanel();
+    DecoratorPanel dp=new DecoratorPanel();
+    RootPanel.get().add(dp);
+  }
+}
+
+For node: HorizontalSplitPanel expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: HorizontalSplitPanel expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+Cannot find matching typeVariable for: split=new HorizontalSplitPanel()
+For node: split=new HorizontalSplitPanel() expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: split expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: new HorizontalSplitPanel() expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: HorizontalSplitPanel expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: HorizontalSplitPanel expected fqn: com.google.gwt.user.client.ui.HorizontalSplitPanel with type: Type3 got: com.google.gwt.user.client.ui.HorizontalSplitPanel
+For node: DecoratorPanel expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: DecoratorPanel expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+Cannot find matching typeVariable for: dp=new DecoratorPanel()
+For node: dp=new DecoratorPanel() expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: dp expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: new DecoratorPanel() expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: DecoratorPanel expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: DecoratorPanel expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+For node: RootPanel.get().add(dp) expected fqn: void with type: Type10 got: void
+For node: RootPanel.get() expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type8 got: com.google.gwt.user.client.ui.Panel
+For node: RootPanel expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type7 got: com.google.gwt.user.client.ui.RootPanel
+Cannot find matching typeVariable for: get
+For node: get expected fqn: com.google.gwt.user.client.ui.RootPanel with type: Type8 got: com.google.gwt.user.client.ui.Panel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type10 got: void
+For node: dp expected fqn: com.google.gwt.user.client.ui.DecoratorPanel with type: Type5 got: com.google.gwt.user.client.ui.DecoratorPanel
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=2, Correct=19}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=1, Correct=8}
+gwt.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=21, Analyzed=21, Unsolved=0, Incorrect=2, Correct=19}
+gwt.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=1, Correct=8}
+gwt.=SimpleType: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.,ClassInstanceCreation,2,2,2,0,0
+gwt.,MethodInvocation,1,1,0,1,0
+gwt.,SimpleName,9,9,8,1,0
+gwt.,SimpleType,4,4,4,0,0
+gwt.,VariableDeclarationFragment,2,2,2,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

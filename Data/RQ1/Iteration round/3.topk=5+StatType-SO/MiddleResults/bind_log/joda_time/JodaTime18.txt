@@ -1,0 +1,115 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime18.java
+Expect check=61
+Cannot find matching typeVariable for: public class JodaTime18 {
+  private static final DateTimeZone LOCAL_TZ=DateTimeZone.getDefault();
+  private static final DateTimeFormatter YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER=new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1).toFormatter().withZone(LOCAL_TZ);
+}
+
+Did not find solution for node: JodaTime18 with type Type1
+Did not find solution for node: DateTimeZone with type Type2
+Did not find solution for node: DateTimeZone with type Type2
+Cannot find matching typeVariable for: LOCAL_TZ=DateTimeZone.getDefault()
+Did not find solution for node: LOCAL_TZ=DateTimeZone.getDefault() with type Type2
+Did not find solution for node: LOCAL_TZ with type Type2
+Did not find solution for node: DateTimeZone.getDefault() with type Type4
+Did not find solution for node: DateTimeZone with type Type2
+Cannot find matching typeVariable for: getDefault
+Did not find solution for node: getDefault with type Type4
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type3 got: java.time.format.DateTimeFormatter
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type3 got: java.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER=new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1).toFormatter().withZone(LOCAL_TZ)
+For node: YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER=new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1).toFormatter().withZone(LOCAL_TZ) expected fqn: org.joda.time.format.DateTimeFormatter with type: Type3 got: java.time.format.DateTimeFormatter
+For node: YEAR_MONTH_DAY_HOUR_MINUTE_SECOND_MILLIS_FORMATTER expected fqn: org.joda.time.format.DateTimeFormatter with type: Type3 got: java.time.format.DateTimeFormatter
+For node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1).toFormatter().withZone(LOCAL_TZ) expected fqn: org.joda.time.format.DateTimeFormatter with type: Type53 got: java.time.format.DateTimeFormatter
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1).toFormatter() with type Type51
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.').appendMillisOfDay(1) with type Type48
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1).appendLiteral('.') with type Type45
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':').appendSecondOfDay(1) with type Type42
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1).appendLiteral(':') with type Type39
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':').appendMinuteOfDay(1) with type Type36
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2).appendLiteral(':') with type Type33
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ').appendHourOfDay(2) with type Type30
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1).appendLiteral(' ') with type Type27
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-').appendDayOfMonth(1) with type Type24
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1).appendLiteral('-') with type Type21
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-').appendMonthOfYear(1) with type Type18
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4).appendLiteral('-') with type Type15
+Did not find solution for node: new DateTimeFormatterBuilder().appendYear(4,4) with type Type10
+For node: new DateTimeFormatterBuilder() expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type6 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: DateTimeFormatterBuilder expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type6 got: org.joda.time.format.DateTimeFormatterBuilder
+For node: DateTimeFormatterBuilder expected fqn: org.joda.time.format.DateTimeFormatterBuilder with type: Type6 got: org.joda.time.format.DateTimeFormatterBuilder
+Cannot find matching typeVariable for: appendYear
+Did not find solution for node: appendYear with type Type10
+For node: 4 expected fqn: int with type: Type9 got: byte
+For node: 4 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type15
+For node: '-' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendMonthOfYear
+Did not find solution for node: appendMonthOfYear with type Type18
+For node: 1 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type21
+For node: '-' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendDayOfMonth
+Did not find solution for node: appendDayOfMonth with type Type24
+For node: 1 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type27
+For node: ' ' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendHourOfDay
+Did not find solution for node: appendHourOfDay with type Type30
+For node: 2 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type33
+For node: ':' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendMinuteOfDay
+Did not find solution for node: appendMinuteOfDay with type Type36
+For node: 1 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type39
+For node: ':' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendSecondOfDay
+Did not find solution for node: appendSecondOfDay with type Type42
+For node: 1 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: appendLiteral
+Did not find solution for node: appendLiteral with type Type45
+For node: '.' expected fqn: char with type: Type14 got: char
+Cannot find matching typeVariable for: appendMillisOfDay
+Did not find solution for node: appendMillisOfDay with type Type48
+For node: 1 expected fqn: int with type: Type9 got: byte
+Cannot find matching typeVariable for: toFormatter
+Did not find solution for node: toFormatter with type Type51
+Cannot find matching typeVariable for: withZone
+For node: withZone expected fqn: org.joda.time.format.DateTimeFormatter with type: Type53 got: java.time.format.DateTimeFormatter
+Did not find solution for node: LOCAL_TZ with type Type2
+{Checked=60, Analyzed=23, Unsolved=37, Incorrect=14, Correct=9}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+char=CharacterLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+int=NumberLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=16, Analyzed=1, Unsolved=15, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=23, Analyzed=4, Unsolved=19, Incorrect=3, Correct=1}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=1, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+Total stats
+{Checked=60, Analyzed=23, Unsolved=37, Incorrect=14, Correct=9}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+char=CharacterLiteral: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+int=NumberLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=8, Correct=0}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=16, Analyzed=1, Unsolved=15, Incorrect=1, Correct=0}
+org.joda.time.=SimpleName: {Checked=23, Analyzed=4, Unsolved=19, Incorrect=3, Correct=1}
+org.joda.time.=SimpleType: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=1, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=1, Correct=0}
+,SimpleName,0,1,0,0,1
+char,CharacterLiteral,6,6,6,0,0
+int,NumberLiteral,8,8,0,8,0
+org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,MethodInvocation,1,16,0,1,15
+org.joda.time.,SimpleName,4,23,1,3,19
+org.joda.time.,SimpleType,2,3,1,1,1
+org.joda.time.,VariableDeclarationFragment,1,2,0,1,1

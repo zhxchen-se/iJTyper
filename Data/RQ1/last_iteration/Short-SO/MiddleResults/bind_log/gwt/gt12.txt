@@ -1,0 +1,66 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt12.java
+Exception repair: java.lang.IllegalStateException: Cannot find def in env for K
+java.lang.IllegalStateException: Cannot find def in env for K
+	at snr.W.a(Unknown Source)
+	at snr.W.a(Unknown Source)
+	at snr.W.a(Unknown Source)
+	at snr.W.a(Unknown Source)
+	at snr.D.a(Unknown Source)
+	at snr.J.a(Unknown Source)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:546)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:505)
+	at snr.J.m(Unknown Source)
+	at snr.J.a(Unknown Source)
+	at snr.J.a(Unknown Source)
+	at snr.au.c(Unknown Source)
+	at snr.W.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.G.a(Unknown Source)
+	at snr.aj.a(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=12
+{Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+boolean=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+gwt.=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=StringLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean,MethodInvocation,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+gwt.,SimpleName,0,1,0,0,1
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,0,2,0,0,2
+java,StringLiteral,0,2,0,0,2
+java,TypeDeclaration,0,1,0,0,1
+null,NullLiteral,0,1,0,0,1
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,1,0,0,1

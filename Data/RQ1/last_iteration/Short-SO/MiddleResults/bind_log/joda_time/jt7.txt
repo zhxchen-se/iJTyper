@@ -1,0 +1,105 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt7.java
+Expect check=17
+Cannot find matching typeVariable for: public class jt7 {
+  public static void h1(){
+    Calendar calendar1=Calendar.getInstance();
+    long milliseconds1=calendar1.getTimeInMillis();
+  }
+}
+
+Cannot find matching typeVariable for: jt7
+Cannot find matching typeVariable for: public class jt7 {
+  public static void h1(){
+    Calendar calendar1=Calendar.getInstance();
+    long milliseconds1=calendar1.getTimeInMillis();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import java.util.Calendar;
+import java.util.Date;
+public class jt7 {
+  public static void h1(){
+    Calendar calendar1=Calendar.getInstance();
+    long milliseconds1=calendar1.getTimeInMillis();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  Calendar calendar1=Calendar.getInstance();
+  long milliseconds1=calendar1.getTimeInMillis();
+}
+
+Cannot find matching typeVariable for: public class jt7 {
+  public static void h1(){
+    Calendar calendar1=Calendar.getInstance();
+    long milliseconds1=calendar1.getTimeInMillis();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import java.util.Calendar;
+import java.util.Date;
+public class jt7 {
+  public static void h1(){
+    Calendar calendar1=Calendar.getInstance();
+    long milliseconds1=calendar1.getTimeInMillis();
+  }
+}
+
+For node: Calendar expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+For node: Calendar expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+Cannot find matching typeVariable for: calendar1=Calendar.getInstance()
+For node: calendar1=Calendar.getInstance() expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+For node: calendar1 expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+For node: Calendar.getInstance() expected fqn: java.util.Calendar with type: Type4 got: java.util.Calendar
+For node: Calendar expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+Cannot find matching typeVariable for: getInstance
+For node: getInstance expected fqn: java.util.Calendar with type: Type4 got: java.util.Calendar
+For node: long expected fqn: long with type: Type6 got: long
+Cannot find matching typeVariable for: milliseconds1=calendar1.getTimeInMillis()
+For node: milliseconds1=calendar1.getTimeInMillis() expected fqn: long with type: Type6 got: long
+For node: milliseconds1 expected fqn: long with type: Type6 got: long
+For node: calendar1.getTimeInMillis() expected fqn: long with type: Type7 got: long
+For node: calendar1 expected fqn: java.util.Calendar with type: Type3 got: java.util.Calendar
+Cannot find matching typeVariable for: getTimeInMillis
+For node: getTimeInMillis expected fqn: long with type: Type7 got: long
+{Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,1,1,1,0,0
+java,SimpleName,5,5,5,0,0
+java,SimpleType,1,1,1,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+long,MethodInvocation,1,1,1,0,0
+long,PrimitiveType,1,1,1,0,0
+long,SimpleName,2,2,2,0,0
+long,VariableDeclarationFragment,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0

@@ -1,0 +1,273 @@
+12:23:33.648 [main] INFO snr.h - Building CompilationUnit takes 511 ms
+12:23:33.806 [main] INFO snr.e - Compilation takes 154 ms
+Type cannot be resolved to a type
+Class is a raw type. References to generic type Class<T> should be parameterized
+HibernateException cannot be resolved to a type
+Type cannot be resolved to a type
+Hibernate cannot be resolved
+Class is a raw type. References to generic type Class<T> should be parameterized
+Return without setting candidates for Type9
+Return without setting candidates for Type11
+Finding class definition name: HibernateException isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.hibernate.HibernateException] to Type4
+Finding class definition name: Hibernate isfull? false fields: [] methods: [entity] argument sizes: [1]
+Adding candidates [org.hibernate.Hibernate] to Type8
+Return without setting candidates for Type10
+Return without setting candidates for Type7
+Return without setting candidates for Type6
+Finding class definition name: String isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type5
+Finding class definition name: Type isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, java.lang.reflect.Type, org.hibernate.type.Type] to Type2
+Finding class definition name: Class isfull? false fields: [] methods: [getName] argument sizes: [0]
+Adding candidates [] to Type3
+12:23:34.451 [main] INFO snr.G - Cannot find class definition for Class with full name: false, with fields: [], with methods: [getName], and argument sizes:[0]
+12:23:34.451 [main] INFO snr.G - Cannot load candidates for Type3.
+   0. simple name: Class
+   1. method: Type7 getName();
+12:23:34.455 [main] INFO snr.G - Loading initial candidates takes 539 ms.
+Before TypeVariable: Type4, Candidates: 1
+   0. simple name: HibernateException
+[org.hibernate.HibernateException]
+Before TypeVariable: Type8, Candidates: 1
+   0. method: Type11 entity(Type10);
+   1. simple name: Hibernate
+[org.hibernate.Hibernate]
+Before TypeVariable: Type5, Candidates: 2
+   0. subtype: Type6
+   1. simple name: String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type2, Candidates: 4
+   0. simple name: Type
+[java.lang.reflect.Type, java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, org.hibernate.type.Type]
+Before TypeVariable: Type3, Candidates: 0
+   0. simple name: Class
+   1. method: Type7 getName();
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type9, Candidates: 0
+   0. subtype: Type2
+   1. subtype: Type11
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type11, Candidates: 0
+[]
+12:23:34.465 [main] INFO snr.G - Populate candidates for type variable Type2
+12:23:34.465 [main] INFO snr.G - Populate candidates for type constraint simple name: Type
+12:23:34.465 [main] INFO snr.G - Populate candidates for type variable Type3
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint simple name: Class
+12:23:34.466 [main] INFO snr.G - Populate candidates for type variable Type4
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint simple name: HibernateException
+12:23:34.466 [main] INFO snr.G - Populate candidates for type variable Type5
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+12:23:34.466 [main] INFO snr.G - Populate candidates for type variable Type8
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint simple name: Hibernate
+12:23:34.466 [main] INFO snr.G - Populate candidates for type variable Type3
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint method: Type7 getName();
+Processing method constraint method: Type7 getName(); on Type3
+12:23:34.466 [main] INFO snr.G - Populate candidates for type variable Type8
+12:23:34.466 [main] INFO snr.G - Populate candidates for type constraint method: Type11 entity(Type10);
+Processing method constraint method: Type11 entity(Type10); on Type8
+Current solution for c Type8 is uninit ? false [org.hibernate.Hibernate]
+Current solution for r Type11 is uninit ? false []
+Current solution for p0 Type10 is uninit ? false []
+Looking at method: public static Lorg/hibernate/type/Type; entity(Ljava/lang/Class;)
+Looking at method: public static Lorg/hibernate/type/Type; entity(Ljava/lang/String;)
+updated solution for c Type8 [org.hibernate.Hibernate]
+updated solution for r Type11 [org.hibernate.type.Type]
+updated solution for p0 Type10 [java.lang.Class, java.lang.String]
+12:23:34.483 [main] INFO snr.G - Populate candidates for type variable Type5
+12:23:34.484 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+12:23:34.484 [main] INFO snr.G - Populate candidates for type variable Type6
+12:23:34.484 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+12:23:34.484 [main] INFO snr.G - Populate candidates for type variable Type9
+12:23:34.484 [main] INFO snr.G - Populate candidates for type constraint subtype: Type2
+12:23:34.484 [main] INFO snr.G - Populate candidates for type variable Type9
+12:23:34.484 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+12:23:34.490 [main] INFO snr.G - Populate candidates for type variable Type10
+12:23:34.490 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+After TypeVariable: Type4, Candidates: 1
+   0. simple name: HibernateException
+[org.hibernate.HibernateException]
+After TypeVariable: Type8, Candidates: 1
+   0. method: Type11 entity(Type10);
+   1. simple name: Hibernate
+[org.hibernate.Hibernate]
+After TypeVariable: Type9, Candidates: 1
+   0. subtype: Type2
+   1. subtype: Type11
+[org.hibernate.type.Type]
+After TypeVariable: Type11, Candidates: 1
+[org.hibernate.type.Type]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: Class
+   1. method: Type7 getName();
+[java.lang.Class, java.lang.String]
+After TypeVariable: Type5, Candidates: 2
+   0. subtype: Type6
+   1. simple name: String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type6, Candidates: 2
+   0. subtype: Type7
+[java.lang.String, java.lang.String]
+After TypeVariable: Type7, Candidates: 2
+[java.lang.String, java.lang.String]
+After TypeVariable: Type10, Candidates: 2
+   0. subtype: Type3
+[java.lang.Class, java.lang.String]
+After TypeVariable: Type2, Candidates: 4
+   0. simple name: Type
+[java.lang.reflect.Type, java.lang.reflect.Type, java.lang.ProcessBuilder$Redirect$Type, org.hibernate.type.Type]
+Printing: jclass.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate	org.hibernate.Hibernate	Hibernate
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.reflect.Type	java.lang.reflect.Type	Type
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	java.lang.ProcessBuilder$Redirect$Type	ProcessBuilder$Redirect$Type
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	java.lang.reflect.Type	Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	org.hibernate.type.Type	Type
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	java.lang.ProcessBuilder$Redirect$Type	Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.HibernateException	org.hibernate.HibernateException	HibernateException
+	jar:android-13.jar:1:java.lang.Class	java.lang.Class	Class
+Printing: jclasssuper.facts
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate	openjdk:jdk:1.8.0:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	jar:android-13.jar:1:java.lang.String
+	jar:hibernate-3.5.3.jar:1:org.hibernate.HibernateException	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.reflect.Type
+	jar:hibernate-3.5.3.jar:1:org.hibernate.HibernateException	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.reflect.Type
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	openjdk:jdk:1.8.0:java.lang.reflect.Type
+	jar:android-13.jar:1:java.lang.reflect.Type	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.reflect.Type	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.Class	jar:android-13.jar:1:java.lang.reflect.Type
+Printing: jfqlname.facts
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type10
+	Type11
+Printing: candidate.facts
+	Type11	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type10	jar:android-13.jar:1:java.lang.String
+	Type4	jar:hibernate-3.5.3.jar:1:org.hibernate.HibernateException
+	Type10	jar:android-13.jar:1:java.lang.Class
+	Type2	openjdk:jdk:1.8.0:java.lang.ProcessBuilder$Redirect$Type
+	Type7	openjdk:jdk:1.8.0:java.lang.String
+	Type6	openjdk:jdk:1.8.0:java.lang.String
+	Type3	jar:android-13.jar:1:java.lang.Class
+	Type8	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type9	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type7	jar:android-13.jar:1:java.lang.String
+	Type2	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type
+	Type5	jar:android-13.jar:1:java.lang.String
+	Type5	openjdk:jdk:1.8.0:java.lang.String
+	Type3	jar:android-13.jar:1:java.lang.String
+	Type2	jar:android-13.jar:1:java.lang.reflect.Type
+	Type2	openjdk:jdk:1.8.0:java.lang.reflect.Type
+Printing: jmethod_dependency.facts
+	0	Type8	Type11	entity
+	3	Type3	Type7	getName
+Printing: jsimplename.facts
+	Type2	Type
+	Type8	Hibernate
+	Type4	HibernateException
+	Type5	String
+	Type3	Class
+Printing: jmethod.facts
+	6	jar:android-13.jar:1:java.lang.Class	jar:android-13.jar:1:java.lang.String	getName	0
+	0	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	entity	1
+	1	jar:hibernate-3.5.3.jar:1:org.hibernate.Hibernate	jar:hibernate-3.5.3.jar:1:org.hibernate.type.Type	entity	1
+Printing: jsupertype_dependency.facts
+	Type7	Type6
+	Type2	Type9
+	Type6	Type5
+	Type11	Type9
+	Type3	Type10
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	0	0	jar:android-13.jar:1:java.lang.Class
+	1	0	jar:android-13.jar:1:java.lang.String
+Printing: jmethod_param_dependency.facts
+	0	0	Type10
+All artifact rank: [jar:hibernate-3.5.3.jar:1, openjdk:jdk:1.8.0, jar:android-13.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type9 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type4 -> org.hibernate.HibernateException
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type10 -> java.lang.Class
+Added artifact: jar:android-13.jar:1
+Found Type5 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type11 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type6 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type2 -> org.hibernate.type.Type
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type3 -> java.lang.Class
+Added artifact: jar:android-13.jar:1
+Solved...
+Found Type8 -> org.hibernate.Hibernate
+Added artifact: jar:hibernate-3.5.3.jar:1
+Found Type7 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type9 to org.hibernate.type.Type, dumping:
+Bind Type11 to org.hibernate.type.Type, dumping:
+Bind Type4 to org.hibernate.HibernateException, dumping:
+Bind Type8 to org.hibernate.Hibernate, dumping:
+Bind Type10 to java.lang.Class, dumping:
+Bind Type5 to java.lang.String, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type7 to java.lang.String, dumping:
+Bind Type2 to org.hibernate.type.Type, dumping:
+Bind Type3 to java.lang.Class, dumping:
+12:23:34.741 [main] INFO snr.k - Fixing Type2 with org.hibernate.type.Type
+12:23:34.742 [main] INFO snr.k - Fixing Type4 with org.hibernate.HibernateException
+12:23:34.742 [main] INFO snr.k - Fixing Type2 with org.hibernate.type.Type
+12:23:34.742 [main] INFO snr.k - Fixing Type8 with org.hibernate.Hibernate
+12:23:34.786 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+12:23:34.788 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:hibernate-3.5.3.jar:1
+12:23:34.788 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:23:34.788 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.hibernate;
+
+import org.hibernate.type.Type;
+import org.hibernate.Hibernate;
+import org.hibernate.HibernateException;
+
+public class hb13 {
+	private Type h1(Class clazz) throws HibernateException {
+		String typename = clazz.getName();
+		return (Type) Hibernate.entity(clazz);
+	}
+}
+12:23:34.788 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+12:23:34.828 [main] INFO snr.e - Compilation takes 39 ms

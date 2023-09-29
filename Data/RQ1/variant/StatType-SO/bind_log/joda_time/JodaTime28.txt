@@ -1,0 +1,199 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime28.java
+Expect check=56
+Cannot find matching typeVariable for: public class JodaTime28 {
+  public static void main(  String[] args){
+    DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+    DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+    DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+    List<LocalDate> dates=new ArrayList<LocalDate>();
+    int days=Days.daysBetween(startDate,endDate).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime28
+Cannot find matching typeVariable for: public class JodaTime28 {
+  public static void main(  String[] args){
+    DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+    DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+    DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+    List<LocalDate> dates=new ArrayList<LocalDate>();
+    int days=Days.daysBetween(startDate,endDate).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.ArrayList;
+import java.util.List;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime28 {
+  public static void main(  String[] args){
+    DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+    DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+    DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+    List<LocalDate> dates=new ArrayList<LocalDate>();
+    int days=Days.daysBetween(startDate,endDate).getDays();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+  DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+  DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+  List<LocalDate> dates=new ArrayList<LocalDate>();
+  int days=Days.daysBetween(startDate,endDate).getDays();
+}
+
+Cannot find matching typeVariable for: public class JodaTime28 {
+  public static void main(  String[] args){
+    DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+    DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+    DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+    List<LocalDate> dates=new ArrayList<LocalDate>();
+    int days=Days.daysBetween(startDate,endDate).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.ArrayList;
+import java.util.List;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.LocalDate;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime28 {
+  public static void main(  String[] args){
+    DateTimeFormatter dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy");
+    DateTime startDate=dateFromatter.parseDateTime("01/02/2012");
+    DateTime endDate=dateFromatter.parseDateTime("01/31/2012");
+    List<LocalDate> dates=new ArrayList<LocalDate>();
+    int days=Days.daysBetween(startDate,endDate).getDays();
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy")
+For node: dateFromatter=DateTimeFormat.forPattern("MM/dd/yyyy") expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: dateFromatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormat.forPattern("MM/dd/yyyy") expected fqn: org.joda.time.format.DateTimeFormatter with type: Type8 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormat expected fqn: org.joda.time.format.DateTimeFormat with type: Type7 got: org.joda.time.format.DateTimeFormat
+Cannot find matching typeVariable for: forPattern
+For node: forPattern expected fqn: org.joda.time.format.DateTimeFormatter with type: Type8 got: org.joda.time.format.DateTimeFormatter
+For node: "MM/dd/yyyy" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: DateTime with type Type11
+Did not find solution for node: DateTime with type Type11
+Cannot find matching typeVariable for: startDate=dateFromatter.parseDateTime("01/02/2012")
+Did not find solution for node: startDate=dateFromatter.parseDateTime("01/02/2012") with type Type11
+Did not find solution for node: startDate with type Type11
+For node: dateFromatter.parseDateTime("01/02/2012") expected fqn: org.joda.time.DateTime with type: Type12 got: org.joda.time.DateTime
+For node: dateFromatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: parseDateTime
+For node: parseDateTime expected fqn: org.joda.time.DateTime with type: Type12 got: org.joda.time.DateTime
+For node: "01/02/2012" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: DateTime with type Type11
+Did not find solution for node: DateTime with type Type11
+Cannot find matching typeVariable for: endDate=dateFromatter.parseDateTime("01/31/2012")
+Did not find solution for node: endDate=dateFromatter.parseDateTime("01/31/2012") with type Type11
+Did not find solution for node: endDate with type Type11
+For node: dateFromatter.parseDateTime("01/31/2012") expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: dateFromatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: parseDateTime
+For node: parseDateTime expected fqn: org.joda.time.DateTime with type: Type14 got: org.joda.time.DateTime
+For node: "01/31/2012" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Did not find solution for node: List<LocalDate> with type Type17=Type15<Type16>
+For node: List expected fqn: java.util.List<org.joda.time.LocalDate> with type: Type15 got: java.util.List
+For node: List expected fqn: java.util.List<org.joda.time.LocalDate> with type: Type15 got: java.util.List
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type16 got: java.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type16 got: java.time.LocalDate
+Cannot find matching typeVariable for: dates=new ArrayList<LocalDate>()
+Did not find solution for node: dates=new ArrayList<LocalDate>() with type Type17=Type15<Type16>
+Did not find solution for node: dates with type Type17=Type15<Type16>
+Did not find solution for node: new ArrayList<LocalDate>() with type Type19=Type18<Type16>
+Did not find solution for node: ArrayList<LocalDate> with type Type19=Type18<Type16>
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.LocalDate> with type: Type18 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<org.joda.time.LocalDate> with type: Type18 got: java.util.ArrayList
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type16 got: java.time.LocalDate
+For node: LocalDate expected fqn: org.joda.time.LocalDate with type: Type16 got: java.time.LocalDate
+For node: int expected fqn: int with type: Type23 got: int
+Cannot find matching typeVariable for: days=Days.daysBetween(startDate,endDate).getDays()
+For node: days=Days.daysBetween(startDate,endDate).getDays() expected fqn: int with type: Type23 got: int
+For node: days expected fqn: int with type: Type23 got: int
+For node: Days.daysBetween(startDate,endDate).getDays() expected fqn: int with type: Type29 got: int
+Did not find solution for node: Days.daysBetween(startDate,endDate) with type Type25
+Did not find solution for node: Days with type Type24
+Cannot find matching typeVariable for: daysBetween
+Did not find solution for node: daysBetween with type Type25
+Did not find solution for node: startDate with type Type11
+Did not find solution for node: endDate with type Type11
+Cannot find matching typeVariable for: getDays
+For node: getDays expected fqn: int with type: Type29 got: int
+{Checked=53, Analyzed=35, Unsolved=18, Incorrect=8, Correct=27}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=2, Correct=2}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=10, Unsolved=8, Incorrect=2, Correct=8}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=2, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=53, Analyzed=35, Unsolved=18, Incorrect=8, Correct=27}
+int=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=2, Correct=2}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=2, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=MethodInvocation: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=18, Analyzed=10, Unsolved=8, Incorrect=2, Correct=8}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=2, Correct=1}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=1, Unsolved=2, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+int,MethodInvocation,1,1,1,0,0
+int,PrimitiveType,1,1,1,0,0
+int,SimpleName,2,2,2,0,0
+int,VariableDeclarationFragment,1,1,1,0,0
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,0,1,0,0,1
+java,ParameterizedType,0,2,0,0,2
+java,SimpleName,4,5,2,2,1
+java,SimpleType,3,3,1,2,0
+java,SingleVariableDeclaration,1,1,1,0,0
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,0,1,0,0,1
+org.joda.time.,MethodInvocation,3,4,3,0,1
+org.joda.time.,SimpleName,10,18,8,2,8
+org.joda.time.,SimpleType,3,5,1,2,2
+org.joda.time.,VariableDeclarationFragment,1,3,1,0,2
+void,PrimitiveType,1,1,1,0,0

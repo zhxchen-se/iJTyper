@@ -1,0 +1,329 @@
+21:59:33.538 [main] INFO snr.h - Building CompilationUnit takes 534 ms
+21:59:33.674 [main] INFO snr.e - Compilation takes 132 ms
+ByteArrayOutputStream cannot be resolved to a type
+ByteArrayOutputStream cannot be resolved to a type
+Node cannot be resolved to a type
+Source cannot be resolved to a type
+DOMSource cannot be resolved to a type
+Return without setting candidates for Type10
+Finding class definition name: Node isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.apache.commons.collections.map.StaticBucketMap$Node, com.sun.org.apache.bcel.internal.classfile.Node, org.apache.commons.collections.bidimap.TreeBidiMap$Node, org.w3c.dom.Node, com.google.gwt.dev.js.rhino.Node, org.w3c.dom.Node, com.google.gwt.dom.client.Node, javax.xml.soap.Node, com.google.gson.internal.LinkedTreeMap$Node, java.util.concurrent.ConcurrentHashMap$Node, java.util.concurrent.ConcurrentSkipListMap$Node, org.eclipse.jdt.internal.core.nd.util.PathMap$Node, java.util.HashMap$Node, com.google.gwt.xml.client.Node, org.eclipse.jdt.internal.core.Region$Node, org.dom4j.Node, org.apache.commons.collections.list.AbstractLinkedList$Node, com.sun.corba.se.impl.orbutil.graph.Node, org.hibernate.hql.ast.tree.Node, java.util.stream.Node, org.apache.commons.collections.StaticBucketMap$Node, com.google.gwt.xml.client.Node, com.sun.org.apache.xalan.internal.xsltc.runtime.Node, org.apache.commons.collections.DoubleOrderedMap$Node, org.hibernate.sql.ordering.antlr.Node] to Type5
+Adding candidate void to Type2
+Finding class definition name: Source isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [com.google.gwt.dev.javac.testing.Source, com.google.gwt.resources.client.ClientBundle$Source, javax.xml.transform.Source, javax.xml.transform.Source] to Type7
+Finding class definition name: DOMSource isfull? false fields: [] methods: [<init>] argument sizes: [1]
+Adding candidates [javax.xml.transform.dom.DOMSource, javax.xml.transform.dom.DOMSource] to Type8
+Return without setting candidates for Type4
+Return without setting candidates for Type6
+Return without setting candidates for Type9
+Finding class definition name: ByteArrayOutputStream isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [java.io.ByteArrayOutputStream, java.io.ByteArrayOutputStream, org.apache.commons.io.output.ByteArrayOutputStream] to Type3
+21:59:33.986 [main] INFO snr.G - Loading initial candidates takes 199 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. subtype: Type10
+   2. subtype: Type4
+   3. simple name: void
+[void]
+Before TypeVariable: Type8, Candidates: 2
+   0. method: Type10 <init>(Type9);
+   1. simple name: DOMSource
+[javax.xml.transform.dom.DOMSource, javax.xml.transform.dom.DOMSource]
+Before TypeVariable: Type3, Candidates: 3
+   0. method: Type4 <init>();
+   1. simple name: ByteArrayOutputStream
+[java.io.ByteArrayOutputStream, org.apache.commons.io.output.ByteArrayOutputStream, java.io.ByteArrayOutputStream]
+Before TypeVariable: Type7, Candidates: 4
+   0. simple name: Source
+   1. subtype: Type8
+[javax.xml.transform.Source, com.google.gwt.dev.javac.testing.Source, com.google.gwt.resources.client.ClientBundle$Source, javax.xml.transform.Source]
+Before TypeVariable: Type5, Candidates: 25
+   0. subtype: Type6
+   1. simple name: Node
+[javax.xml.soap.Node, org.hibernate.hql.ast.tree.Node, org.apache.commons.collections.map.StaticBucketMap$Node, java.util.concurrent.ConcurrentHashMap$Node, com.sun.org.apache.xalan.internal.xsltc.runtime.Node, com.google.gwt.dev.js.rhino.Node, org.apache.commons.collections.StaticBucketMap$Node, org.hibernate.sql.ordering.antlr.Node, org.apache.commons.collections.DoubleOrderedMap$Node, com.google.gwt.dom.client.Node, com.sun.corba.se.impl.orbutil.graph.Node, com.google.gwt.xml.client.Node, org.apache.commons.collections.bidimap.TreeBidiMap$Node, org.apache.commons.collections.list.AbstractLinkedList$Node, org.dom4j.Node, java.util.stream.Node, com.sun.org.apache.bcel.internal.classfile.Node, com.google.gwt.xml.client.Node, org.eclipse.jdt.internal.core.Region$Node, org.w3c.dom.Node, com.google.gson.internal.LinkedTreeMap$Node, java.util.concurrent.ConcurrentSkipListMap$Node, org.eclipse.jdt.internal.core.nd.util.PathMap$Node, java.util.HashMap$Node, org.w3c.dom.Node]
+Before TypeVariable: Type4, Candidates: 0
+[]
+Before TypeVariable: Type6, Candidates: 0
+[]
+Before TypeVariable: Type9, Candidates: 0
+   0. subtype: Type5
+[]
+Before TypeVariable: Type10, Candidates: 0
+[]
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type2
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint full name: void
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type2
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type3
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint simple name: ByteArrayOutputStream
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type5
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint simple name: Node
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type7
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint simple name: Source
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type8
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint simple name: DOMSource
+21:59:33.991 [main] INFO snr.G - Populate candidates for type variable Type3
+21:59:33.991 [main] INFO snr.G - Populate candidates for type constraint method: Type4 <init>();
+Processing method constraint method: Type4 <init>(); on Type3
+Current solution for c Type3 is uninit ? false [java.io.ByteArrayOutputStream, org.apache.commons.io.output.ByteArrayOutputStream, java.io.ByteArrayOutputStream]
+Current solution for r Type4 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type3 [java.io.ByteArrayOutputStream, org.apache.commons.io.output.ByteArrayOutputStream, java.io.ByteArrayOutputStream]
+updated solution for r Type4 [void]
+21:59:33.993 [main] INFO snr.G - Populate candidates for type variable Type8
+21:59:33.993 [main] INFO snr.G - Populate candidates for type constraint method: Type10 <init>(Type9);
+Processing method constraint method: Type10 <init>(Type9); on Type8
+Current solution for c Type8 is uninit ? false [javax.xml.transform.dom.DOMSource, javax.xml.transform.dom.DOMSource]
+Current solution for r Type10 is uninit ? false []
+Current solution for p0 Type9 is uninit ? false []
+Looking at method: public V <init>(Lorg/w3c/dom/Node;)
+Looking at method: public V <init>(Lorg/w3c/dom/Node;)
+updated solution for c Type8 [javax.xml.transform.dom.DOMSource, javax.xml.transform.dom.DOMSource]
+updated solution for r Type10 [void]
+updated solution for p0 Type9 [org.w3c.dom.Node, org.w3c.dom.Node]
+21:59:33.993 [main] INFO snr.G - Populate candidates for type variable Type2
+21:59:33.993 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+21:59:33.994 [main] INFO snr.G - Populate candidates for type variable Type2
+21:59:33.994 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+21:59:33.994 [main] INFO snr.G - Populate candidates for type variable Type5
+21:59:33.994 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+21:59:33.994 [main] INFO snr.G - Populate candidates for type variable Type7
+21:59:33.994 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+21:59:33.996 [main] INFO snr.G - Populate candidates for type variable Type9
+21:59:33.996 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+21:59:33.996 [main] INFO snr.W - Unable to resolve TypeRef: Lantlr/CommonAST;
+After TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. subtype: Type10
+   2. subtype: Type4
+   3. simple name: void
+[void]
+After TypeVariable: Type4, Candidates: 1
+[void]
+After TypeVariable: Type10, Candidates: 1
+[void]
+After TypeVariable: Type7, Candidates: 2
+   0. simple name: Source
+   1. subtype: Type8
+[javax.xml.transform.Source, javax.xml.transform.Source]
+After TypeVariable: Type8, Candidates: 2
+   0. method: Type10 <init>(Type9);
+   1. simple name: DOMSource
+[javax.xml.transform.dom.DOMSource, javax.xml.transform.dom.DOMSource]
+After TypeVariable: Type9, Candidates: 2
+   0. subtype: Type5
+[org.w3c.dom.Node, org.w3c.dom.Node]
+After TypeVariable: Type3, Candidates: 3
+   0. method: Type4 <init>();
+   1. simple name: ByteArrayOutputStream
+[java.io.ByteArrayOutputStream, org.apache.commons.io.output.ByteArrayOutputStream, java.io.ByteArrayOutputStream]
+After TypeVariable: Type5, Candidates: 3
+   0. subtype: Type6
+   1. simple name: Node
+[javax.xml.soap.Node, org.w3c.dom.Node, org.w3c.dom.Node]
+After TypeVariable: Type6, Candidates: 25
+[javax.xml.soap.Node, org.hibernate.hql.ast.tree.Node, org.apache.commons.collections.map.StaticBucketMap$Node, java.util.concurrent.ConcurrentHashMap$Node, com.sun.org.apache.xalan.internal.xsltc.runtime.Node, com.google.gwt.dev.js.rhino.Node, org.apache.commons.collections.StaticBucketMap$Node, org.hibernate.sql.ordering.antlr.Node, org.apache.commons.collections.DoubleOrderedMap$Node, com.google.gwt.dom.client.Node, com.sun.corba.se.impl.orbutil.graph.Node, com.google.gwt.xml.client.Node, org.apache.commons.collections.bidimap.TreeBidiMap$Node, org.apache.commons.collections.list.AbstractLinkedList$Node, org.dom4j.Node, java.util.stream.Node, com.sun.org.apache.bcel.internal.classfile.Node, com.google.gwt.xml.client.Node, org.eclipse.jdt.internal.core.Region$Node, org.w3c.dom.Node, com.google.gson.internal.LinkedTreeMap$Node, java.util.concurrent.ConcurrentSkipListMap$Node, org.eclipse.jdt.internal.core.nd.util.PathMap$Node, java.util.HashMap$Node, org.w3c.dom.Node]
+21:59:34.017 [main] INFO snr.W - Unable to resolve TypeRef: Lorg/apache/commons/io/output/AbstractByteArrayOutputStream;
+Printing: jclass.facts
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.DoubleOrderedMap$Node	org.apache.commons.collections.DoubleOrderedMap$Node	DoubleOrderedMap$Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.list.AbstractLinkedList$Node	org.apache.commons.collections.list.AbstractLinkedList$Node	Node
+	jar:android-13.jar:1:java.io.ByteArrayOutputStream	java.io.ByteArrayOutputStream	ByteArrayOutputStream
+	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource	javax.xml.transform.dom.DOMSource	DOMSource
+	jar:gwt-user.jar:1:com.google.gwt.xml.client.Node	com.google.gwt.xml.client.Node	Node
+	jar:gwt-user.jar:1:com.google.gwt.dom.client.Node	com.google.gwt.dom.client.Node	Node
+	jar:hibernate-3.5.3.jar:1:org.hibernate.hql.ast.tree.Node	org.hibernate.hql.ast.tree.Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.StaticBucketMap$Node	org.apache.commons.collections.StaticBucketMap$Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.bidimap.TreeBidiMap$Node	org.apache.commons.collections.bidimap.TreeBidiMap$Node	Node
+	jar:gson-2.2.4.jar:1:com.google.gson.internal.LinkedTreeMap$Node	com.google.gson.internal.LinkedTreeMap$Node	Node
+	openjdk:jdk:1.8.0:java.util.HashMap$Node	java.util.HashMap$Node	Node
+	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource	javax.xml.transform.dom.DOMSource	DOMSource
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.map.StaticBucketMap$Node	org.apache.commons.collections.map.StaticBucketMap$Node	StaticBucketMap$Node
+	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.nd.util.PathMap$Node	org.eclipse.jdt.internal.core.nd.util.PathMap$Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.map.StaticBucketMap$Node	org.apache.commons.collections.map.StaticBucketMap$Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.StaticBucketMap$Node	org.apache.commons.collections.StaticBucketMap$Node	StaticBucketMap$Node
+	jar:hibernate-3.5.3.jar:1:org.hibernate.sql.ordering.antlr.Node	org.hibernate.sql.ordering.antlr.Node	Node
+	openjdk:jdk:1.8.0:java.util.stream.Node	java.util.stream.Node	Node
+	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.Region$Node	org.eclipse.jdt.internal.core.Region$Node	Node
+	openjdk:jdk:1.8.0:javax.xml.soap.Node	javax.xml.soap.Node	Node
+	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentSkipListMap$Node	java.util.concurrent.ConcurrentSkipListMap$Node	ConcurrentSkipListMap$Node
+	openjdk:jdk:1.8.0:org.w3c.dom.Node	org.w3c.dom.Node	Node
+	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentHashMap$Node	java.util.concurrent.ConcurrentHashMap$Node	ConcurrentHashMap$Node
+	openjdk:jdk:1.8.0:void	void	void
+	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.nd.util.PathMap$Node	org.eclipse.jdt.internal.core.nd.util.PathMap$Node	PathMap$Node
+	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.Region$Node	org.eclipse.jdt.internal.core.Region$Node	Region$Node
+	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentHashMap$Node	java.util.concurrent.ConcurrentHashMap$Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.bidimap.TreeBidiMap$Node	org.apache.commons.collections.bidimap.TreeBidiMap$Node	TreeBidiMap$Node
+	jar:gson-2.2.4.jar:1:com.google.gson.internal.LinkedTreeMap$Node	com.google.gson.internal.LinkedTreeMap$Node	LinkedTreeMap$Node
+	openjdk:jdk:1.8.0:java.io.ByteArrayOutputStream	java.io.ByteArrayOutputStream	ByteArrayOutputStream
+	openjdk:jdk:1.8.0:com.sun.org.apache.xalan.internal.xsltc.runtime.Node	com.sun.org.apache.xalan.internal.xsltc.runtime.Node	Node
+	jar:dom4j-1.4.jar:1:org.dom4j.Node	org.dom4j.Node	Node
+	openjdk:jdk:1.8.0:javax.xml.transform.Source	javax.xml.transform.Source	Source
+	openjdk:jdk:1.8.0:com.sun.corba.se.impl.orbutil.graph.Node	com.sun.corba.se.impl.orbutil.graph.Node	Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.DoubleOrderedMap$Node	org.apache.commons.collections.DoubleOrderedMap$Node	Node
+	openjdk:jdk:1.8.0:com.sun.org.apache.bcel.internal.classfile.Node	com.sun.org.apache.bcel.internal.classfile.Node	Node
+	jar:android-13.jar:1:org.w3c.dom.Node	org.w3c.dom.Node	Node
+	jar:android-13.jar:1:javax.xml.transform.Source	javax.xml.transform.Source	Source
+	jar:commons-io-2.4.jar:1:org.apache.commons.io.output.ByteArrayOutputStream	org.apache.commons.io.output.ByteArrayOutputStream	ByteArrayOutputStream
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.xml.client.Node	com.google.gwt.xml.client.Node	Node
+	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentSkipListMap$Node	java.util.concurrent.ConcurrentSkipListMap$Node	Node
+	openjdk:jdk:1.8.0:java.util.HashMap$Node	java.util.HashMap$Node	HashMap$Node
+	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.list.AbstractLinkedList$Node	org.apache.commons.collections.list.AbstractLinkedList$Node	AbstractLinkedList$Node
+	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.js.rhino.Node	com.google.gwt.dev.js.rhino.Node	Node
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource	openjdk:jdk:1.8.0:javax.xml.transform.Source
+	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource	jar:android-13.jar:1:javax.xml.transform.Source
+	openjdk:jdk:1.8.0:org.w3c.dom.Node	jar:android-13.jar:1:org.w3c.dom.Node
+	jar:android-13.jar:1:org.w3c.dom.Node	openjdk:jdk:1.8.0:org.w3c.dom.Node
+	jar:android-13.jar:1:javax.xml.transform.Source	openjdk:jdk:1.8.0:javax.xml.transform.Source
+	openjdk:jdk:1.8.0:javax.xml.transform.Source	jar:android-13.jar:1:javax.xml.transform.Source
+	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.xml.client.Node	jar:gwt-user.jar:1:com.google.gwt.xml.client.Node
+	jar:gwt-user.jar:1:com.google.gwt.xml.client.Node	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.xml.client.Node
+	openjdk:jdk:1.8.0:javax.xml.soap.Node	jar:android-13.jar:1:org.w3c.dom.Node
+	jar:android-13.jar:1:java.io.ByteArrayOutputStream	openjdk:jdk:1.8.0:java.io.ByteArrayOutputStream
+	openjdk:jdk:1.8.0:java.io.ByteArrayOutputStream	jar:android-13.jar:1:java.io.ByteArrayOutputStream
+	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource	jar:android-13.jar:1:javax.xml.transform.Source
+	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource	openjdk:jdk:1.8.0:javax.xml.transform.Source
+	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource
+	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource
+	openjdk:jdk:1.8.0:javax.xml.soap.Node	openjdk:jdk:1.8.0:org.w3c.dom.Node
+Printing: jfqlname.facts
+	Type2	void
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type10
+Printing: candidate.facts
+	Type6	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.nd.util.PathMap$Node
+	Type9	openjdk:jdk:1.8.0:org.w3c.dom.Node
+	Type6	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.StaticBucketMap$Node
+	Type6	openjdk:jdk:1.8.0:org.w3c.dom.Node
+	Type3	jar:android-13.jar:1:java.io.ByteArrayOutputStream
+	Type6	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentHashMap$Node
+	Type6	openjdk:jdk:1.8.0:java.util.concurrent.ConcurrentSkipListMap$Node
+	Type5	openjdk:jdk:1.8.0:org.w3c.dom.Node
+	Type2	openjdk:jdk:1.8.0:void
+	Type6	openjdk:jdk:1.8.0:com.sun.corba.se.impl.orbutil.graph.Node
+	Type6	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.bidimap.TreeBidiMap$Node
+	Type4	openjdk:jdk:1.8.0:void
+	Type10	openjdk:jdk:1.8.0:void
+	Type5	jar:android-13.jar:1:org.w3c.dom.Node
+	Type6	jar:gwt-user.jar:1:com.google.gwt.dom.client.Node
+	Type9	jar:android-13.jar:1:org.w3c.dom.Node
+	Type3	jar:commons-io-2.4.jar:1:org.apache.commons.io.output.ByteArrayOutputStream
+	Type6	jar:android-13.jar:1:org.w3c.dom.Node
+	Type7	jar:android-13.jar:1:javax.xml.transform.Source
+	Type6	openjdk:jdk:1.8.0:java.util.HashMap$Node
+	Type6	openjdk:jdk:1.8.0:java.util.stream.Node
+	Type6	jar:gwt-dev-2.9.0.jar:1:com.google.gwt.dev.js.rhino.Node
+	Type3	openjdk:jdk:1.8.0:java.io.ByteArrayOutputStream
+	Type5	openjdk:jdk:1.8.0:javax.xml.soap.Node
+	Type8	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource
+	Type6	jar:gwt-dev-2.9.0.jar:1:org.eclipse.jdt.internal.core.Region$Node
+	Type6	openjdk:jdk:1.8.0:javax.xml.soap.Node
+	Type6	jar:dom4j-1.4.jar:1:org.dom4j.Node
+	Type6	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.map.StaticBucketMap$Node
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.sql.ordering.antlr.Node
+	Type8	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource
+	Type6	openjdk:jdk:1.8.0:com.sun.org.apache.xalan.internal.xsltc.runtime.Node
+	Type6	openjdk:jdk:1.8.0:com.sun.org.apache.bcel.internal.classfile.Node
+	Type6	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.DoubleOrderedMap$Node
+	Type6	jar:gson-2.2.4.jar:1:com.google.gson.internal.LinkedTreeMap$Node
+	Type6	jar:gwt-servlet-1.4.62.jar:1:com.google.gwt.xml.client.Node
+	Type6	jar:commons-collections-3.2.1.jar:1:org.apache.commons.collections.list.AbstractLinkedList$Node
+	Type6	jar:hibernate-3.5.3.jar:1:org.hibernate.hql.ast.tree.Node
+	Type6	jar:gwt-user.jar:1:com.google.gwt.xml.client.Node
+	Type7	openjdk:jdk:1.8.0:javax.xml.transform.Source
+Printing: jmethod_dependency.facts
+	0	Type8	Type10	<init>
+	2	Type3	Type4	<init>
+Printing: jsimplename.facts
+	Type2	void
+	Type5	Node
+	Type8	DOMSource
+	Type3	ByteArrayOutputStream
+	Type7	Source
+Printing: jmethod.facts
+	5	jar:commons-io-2.4.jar:1:org.apache.commons.io.output.ByteArrayOutputStream	openjdk:jdk:1.8.0:void	<init>	0
+	1	jar:android-13.jar:1:javax.xml.transform.dom.DOMSource	openjdk:jdk:1.8.0:void	<init>	1
+	0	openjdk:jdk:1.8.0:javax.xml.transform.dom.DOMSource	openjdk:jdk:1.8.0:void	<init>	1
+	4	openjdk:jdk:1.8.0:java.io.ByteArrayOutputStream	openjdk:jdk:1.8.0:void	<init>	0
+	6	jar:android-13.jar:1:java.io.ByteArrayOutputStream	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type4	Type2
+	Type8	Type7
+	Type5	Type9
+	Type6	Type5
+	Type10	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	jar:android-13.jar:1:org.w3c.dom.Node
+	0	0	openjdk:jdk:1.8.0:org.w3c.dom.Node
+Printing: jmethod_param_dependency.facts
+	0	0	Type9
+All artifact rank: [openjdk:jdk:1.8.0, jar:android-13.jar:1, jar:commons-io-2.4.jar:1, jar:commons-collections-3.2.1.jar:1, jar:dom4j-1.4.jar:1, jar:gson-2.2.4.jar:1, jar:gwt-dev-2.9.0.jar:1, jar:gwt-servlet-1.4.62.jar:1, jar:gwt-user.jar:1, jar:hibernate-3.5.3.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type7 -> javax.xml.transform.Source
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> org.w3c.dom.Node
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type5 -> org.w3c.dom.Node
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> javax.xml.transform.dom.DOMSource
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type6 -> org.w3c.dom.Node
+Added artifact: openjdk:jdk:1.8.0
+Found Type3 -> java.io.ByteArrayOutputStream
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type10 to void, dumping:
+Bind Type5 to org.w3c.dom.Node, dumping:
+Bind Type2 to void, dumping:
+Bind Type7 to javax.xml.transform.Source, dumping:
+Bind Type8 to javax.xml.transform.dom.DOMSource, dumping:
+Bind Type4 to void, dumping:
+Bind Type9 to org.w3c.dom.Node, dumping:
+Bind Type6 to org.w3c.dom.Node, dumping:
+Bind Type3 to java.io.ByteArrayOutputStream, dumping:
+21:59:34.179 [main] INFO snr.k - Fixing Type3 with java.io.ByteArrayOutputStream
+21:59:34.179 [main] INFO snr.k - Fixing Type3 with java.io.ByteArrayOutputStream
+21:59:34.180 [main] INFO snr.k - Fixing Type5 with org.w3c.dom.Node
+21:59:34.180 [main] INFO snr.k - Fixing Type7 with javax.xml.transform.Source
+21:59:34.180 [main] INFO snr.k - Fixing Type8 with javax.xml.transform.dom.DOMSource
+21:59:34.226 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+21:59:34.228 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+21:59:34.228 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+21:59:34.228 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.xstream;
+
+import org.w3c.dom.Node;
+import java.io.ByteArrayOutputStream;
+import javax.xml.transform.Source;
+import javax.xml.transform.dom.DOMSource;
+
+public class xt11 {
+	public static void h1() {
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+		Node doc = null;
+		Source xmlSource = new DOMSource(doc);
+	}
+}
+21:59:34.228 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+21:59:34.265 [main] INFO snr.e - Compilation takes 37 ms

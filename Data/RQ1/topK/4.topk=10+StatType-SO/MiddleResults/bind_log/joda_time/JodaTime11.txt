@@ -1,0 +1,194 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime11.java
+Expect check=45
+Cannot find matching typeVariable for: public class JodaTime11 {
+  public static void main(  String[] args){
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+    System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+    try {
+      System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime11
+Cannot find matching typeVariable for: public class JodaTime11 {
+  public static void main(  String[] args){
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+    System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+    try {
+      System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime11 {
+  public static void main(  String[] args){
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+    System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+    try {
+      System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+  System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+  try {
+    System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+  }
+ catch (  ParseException e) {
+    e.printStackTrace();
+  }
+}
+
+Cannot find matching typeVariable for: public class JodaTime11 {
+  public static void main(  String[] args){
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+    System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+    try {
+      System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+public class JodaTime11 {
+  public static void main(  String[] args){
+    DateTimeFormatter dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy");
+    System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010"));
+    try {
+      System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010"));
+    }
+ catch (    ParseException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+Did not find solution for node: DateTimeFormatter with type Type5
+Did not find solution for node: DateTimeFormatter with type Type5
+Cannot find matching typeVariable for: dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy")
+Did not find solution for node: dtf=DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy") with type Type5
+Did not find solution for node: dtf with type Type5
+Did not find solution for node: DateTimeFormat.forPattern("EEE MMM dd HH:mm:ss z yyyy") with type Type8
+Did not find solution for node: DateTimeFormat with type Type7
+Cannot find matching typeVariable for: forPattern
+Did not find solution for node: forPattern with type Type8
+For node: "EEE MMM dd HH:mm:ss z yyyy" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: System.out.println(dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010")) expected fqn: void with type: Type16 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type16 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type16 got: void
+Did not find solution for node: dtf.parseDateTime("Fri Nov 11 12:13:14 JST 2010") with type Type11
+Did not find solution for node: dtf with type Type5
+Cannot find matching typeVariable for: parseDateTime
+Did not find solution for node: parseDateTime with type Type11
+For node: "Fri Nov 11 12:13:14 JST 2010" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: System.out.println(new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010")) expected fqn: void with type: Type25 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type25 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type25 got: void
+Did not find solution for node: new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy").parse("Fri Nov 11 12:13:14 JST 2010") with type Type22
+For node: new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy") expected fqn: java.text.SimpleDateFormat with type: Type19 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type19 got: java.text.SimpleDateFormat
+For node: SimpleDateFormat expected fqn: java.text.SimpleDateFormat with type: Type19 got: java.text.SimpleDateFormat
+For node: "EEE MMM dd HH:mm:ss z yyyy" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: parse
+Did not find solution for node: parse with type Type22
+For node: "Fri Nov 11 12:13:14 JST 2010" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: ParseException e
+For node: ParseException e expected fqn: java.text.ParseException with type: Type28 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type28 got: java.text.ParseException
+For node: ParseException expected fqn: java.text.ParseException with type: Type28 got: java.text.ParseException
+For node: e expected fqn: java.text.ParseException with type: Type28 got: java.text.ParseException
+For node: e.printStackTrace() expected fqn: void with type: Type29 got: void
+For node: e expected fqn: java.text.ParseException with type: Type28 got: java.text.ParseException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type29 got: void
+{Checked=42, Analyzed=30, Unsolved=12, Incorrect=2, Correct=28}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+Total stats
+{Checked=42, Analyzed=30, Unsolved=12, Incorrect=2, Correct=28}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=10, Unsolved=1, Incorrect=0, Correct=10}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.joda.time.=MethodInvocation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.joda.time.=SimpleName: {Checked=6, Analyzed=0, Unsolved=6, Incorrect=0, Correct=0}
+org.joda.time.=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.joda.time.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,MethodInvocation,0,1,0,0,1
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,10,11,10,0,1
+java,SimpleType,3,3,3,0,0
+java,SingleVariableDeclaration,2,2,2,0,0
+java,StringLiteral,4,4,4,0,0
+org.joda.time.,MethodInvocation,0,2,0,0,2
+org.joda.time.,SimpleName,0,6,0,0,6
+org.joda.time.,SimpleType,0,1,0,0,1
+org.joda.time.,VariableDeclarationFragment,0,1,0,0,1
+void,MethodInvocation,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,3,3,3,0,0

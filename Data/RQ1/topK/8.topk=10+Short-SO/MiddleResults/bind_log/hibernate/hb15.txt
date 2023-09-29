@@ -1,0 +1,124 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb15.java
+Expect check=25
+Cannot find matching typeVariable for: public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+Did not find solution for node: hb15 with type Type1
+Cannot find matching typeVariable for: GlobalConfigScope
+Cannot find matching typeVariable for: GlobalConfigScope
+Cannot find matching typeVariable for: public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import java.util.Set;
+public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+For node: Object expected fqn: java.lang.Object with type: Type2 got: java.lang.Object
+For node: Object expected fqn: java.lang.Object with type: Type2 got: java.lang.Object
+Cannot find matching typeVariable for: Type
+For node: Type expected fqn: java.lang.Object with type: Type2 got: java.lang.Object
+Cannot find matching typeVariable for: Type
+Cannot find matching typeVariable for: private static Object Type;
+
+Cannot find matching typeVariable for: public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import java.util.Set;
+public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+Did not find solution for node: @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) with type Type8
+Did not find solution for node: OneToMany with type Type8
+Cannot find matching typeVariable for: cascade
+Cannot find matching typeVariable for: cascade=CascadeType.ALL
+Did not find solution for node: cascade with type Type8
+For node: CascadeType.ALL expected fqn: javax.persistence.CascadeType with type: Type10 got: org.hibernate.annotations.CascadeType
+For node: CascadeType expected fqn: javax.persistence.CascadeType with type: Type9 got: org.hibernate.annotations.CascadeType
+For node: ALL expected fqn: javax.persistence.CascadeType with type: Type10 got: org.hibernate.annotations.CascadeType
+Cannot find matching typeVariable for: mappedBy
+Cannot find matching typeVariable for: mappedBy="globalConfig"
+Did not find solution for node: mappedBy with type Type8
+For node: "globalConfig" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+Cannot find matching typeVariable for: orphanRemoval
+Cannot find matching typeVariable for: orphanRemoval=true
+Did not find solution for node: orphanRemoval with type Type8
+For node: true expected fqn: boolean with type: Type7 got: boolean
+For node: Set<GlobalConfigScope> expected fqn: java.util.Set<GlobalConfigScope> with type: Type5=Type3<Type4> got: java.util.Set<java.lang.Object>
+For node: Set expected fqn: java.util.Set<GlobalConfigScope> with type: Type3 got: java.util.Set
+For node: Set expected fqn: java.util.Set<GlobalConfigScope> with type: Type3 got: java.util.Set
+For node: GlobalConfigScope expected fqn: GlobalConfigScope with type: Type4 got: java.lang.Object
+For node: GlobalConfigScope expected fqn: GlobalConfigScope with type: Type4 got: java.lang.Object
+Cannot find matching typeVariable for: gcScopeSet
+For node: gcScopeSet expected fqn: java.util.Set<GlobalConfigScope> with type: Type5=Type3<Type4> got: java.util.Set<java.lang.Object>
+Cannot find matching typeVariable for: gcScopeSet
+Cannot find matching typeVariable for: @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+
+Cannot find matching typeVariable for: public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
+import java.util.Set;
+public class hb15<GlobalConfigScope> {
+  private static Object Type;
+  @OneToMany(cascade=CascadeType.ALL,mappedBy="globalConfig",orphanRemoval=true) private Set<GlobalConfigScope> gcScopeSet;
+}
+
+{Checked=20, Analyzed=14, Unsolved=6, Incorrect=9, Correct=5}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=NormalAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=3, Correct=1}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+Total stats
+{Checked=20, Analyzed=14, Unsolved=6, Incorrect=9, Correct=5}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=NormalAnnotation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=QualifiedName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+java=SimpleName: {Checked=8, Analyzed=4, Unsolved=4, Incorrect=3, Correct=1}
+java=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=1, Correct=1}
+,SimpleName,1,1,0,1,0
+,SimpleType,1,1,0,1,0
+boolean,BooleanLiteral,1,1,1,0,0
+boolean,SimpleName,0,1,0,0,1
+java,NormalAnnotation,0,1,0,0,1
+java,ParameterizedType,1,1,0,1,0
+java,QualifiedName,1,1,0,1,0
+java,SimpleName,4,8,1,3,4
+java,SimpleType,2,2,1,1,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,1,1,0

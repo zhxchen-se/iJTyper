@@ -1,0 +1,326 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_10.java
+Expect check=80
+Cannot find matching typeVariable for: public class gwt_class_10 {
+  public void main(){
+    final FormPanel form=new FormPanel();
+    VerticalPanel holder=new VerticalPanel();
+    holder.add(new Label("User ID"));
+    TextBox nameTextBox=new TextBox();
+    nameTextBox.setName("userid");
+    holder.add(nameTextBox);
+    Button submitButton=new Button("Submit");
+    holder.add(submitButton);
+    form.add(holder);
+    submitButton.addClickListener(new ClickListener(){
+      public void onClick1(      Widget sender){
+        form.submit();
+      }
+      @Override public void onClick(      Widget sender){
+      }
+    }
+);
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_10
+Cannot find matching typeVariable for: public class gwt_class_10 {
+  public void main(){
+    final FormPanel form=new FormPanel();
+    VerticalPanel holder=new VerticalPanel();
+    holder.add(new Label("User ID"));
+    TextBox nameTextBox=new TextBox();
+    nameTextBox.setName("userid");
+    holder.add(nameTextBox);
+    Button submitButton=new Button("Submit");
+    holder.add(submitButton);
+    form.add(holder);
+    submitButton.addClickListener(new ClickListener(){
+      public void onClick1(      Widget sender){
+        form.submit();
+      }
+      @Override public void onClick(      Widget sender){
+      }
+    }
+);
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.ClickListener;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_10 {
+  public void main(){
+    final FormPanel form=new FormPanel();
+    VerticalPanel holder=new VerticalPanel();
+    holder.add(new Label("User ID"));
+    TextBox nameTextBox=new TextBox();
+    nameTextBox.setName("userid");
+    holder.add(nameTextBox);
+    Button submitButton=new Button("Submit");
+    holder.add(submitButton);
+    form.add(holder);
+    submitButton.addClickListener(new ClickListener(){
+      public void onClick1(      Widget sender){
+        form.submit();
+      }
+      @Override public void onClick(      Widget sender){
+      }
+    }
+);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public void main(){
+  final FormPanel form=new FormPanel();
+  VerticalPanel holder=new VerticalPanel();
+  holder.add(new Label("User ID"));
+  TextBox nameTextBox=new TextBox();
+  nameTextBox.setName("userid");
+  holder.add(nameTextBox);
+  Button submitButton=new Button("Submit");
+  holder.add(submitButton);
+  form.add(holder);
+  submitButton.addClickListener(new ClickListener(){
+    public void onClick1(    Widget sender){
+      form.submit();
+    }
+    @Override public void onClick(    Widget sender){
+    }
+  }
+);
+}
+
+Cannot find matching typeVariable for: public class gwt_class_10 {
+  public void main(){
+    final FormPanel form=new FormPanel();
+    VerticalPanel holder=new VerticalPanel();
+    holder.add(new Label("User ID"));
+    TextBox nameTextBox=new TextBox();
+    nameTextBox.setName("userid");
+    holder.add(nameTextBox);
+    Button submitButton=new Button("Submit");
+    holder.add(submitButton);
+    form.add(holder);
+    submitButton.addClickListener(new ClickListener(){
+      public void onClick1(      Widget sender){
+        form.submit();
+      }
+      @Override public void onClick(      Widget sender){
+      }
+    }
+);
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.ClickListener;
+import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_10 {
+  public void main(){
+    final FormPanel form=new FormPanel();
+    VerticalPanel holder=new VerticalPanel();
+    holder.add(new Label("User ID"));
+    TextBox nameTextBox=new TextBox();
+    nameTextBox.setName("userid");
+    holder.add(nameTextBox);
+    Button submitButton=new Button("Submit");
+    holder.add(submitButton);
+    form.add(holder);
+    submitButton.addClickListener(new ClickListener(){
+      public void onClick1(      Widget sender){
+        form.submit();
+      }
+      @Override public void onClick(      Widget sender){
+      }
+    }
+);
+  }
+}
+
+For node: FormPanel expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: FormPanel expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+Cannot find matching typeVariable for: form=new FormPanel()
+For node: form=new FormPanel() expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: form expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: new FormPanel() expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: FormPanel expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: FormPanel expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: holder=new VerticalPanel()
+For node: holder=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: holder expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: holder.add(new Label("User ID")) expected fqn: void with type: Type11 got: void
+For node: holder expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type11 got: void
+For node: new Label("User ID") expected fqn: com.google.gwt.user.client.ui.Label with type: Type7 got: com.google.gwt.user.client.ui.Label
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type7 got: com.google.gwt.user.client.ui.Label
+For node: Label expected fqn: com.google.gwt.user.client.ui.Label with type: Type7 got: com.google.gwt.user.client.ui.Label
+For node: "User ID" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+Cannot find matching typeVariable for: nameTextBox=new TextBox()
+For node: nameTextBox=new TextBox() expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: nameTextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: new TextBox() expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: TextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: nameTextBox.setName("userid") expected fqn: void with type: Type16 got: void
+For node: nameTextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+Cannot find matching typeVariable for: setName
+For node: setName expected fqn: void with type: Type16 got: void
+For node: "userid" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: holder.add(nameTextBox) expected fqn: void with type: Type19 got: void
+For node: holder expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type19 got: void
+For node: nameTextBox expected fqn: com.google.gwt.user.client.ui.TextBox with type: Type14 got: com.google.gwt.user.client.ui.TextBox
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: submitButton=new Button("Submit")
+For node: submitButton=new Button("Submit") expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: submitButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: new Button("Submit") expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: "Submit" expected fqn: java.lang.String with type: Type8 got: java.lang.String
+For node: holder.add(submitButton) expected fqn: void with type: Type25 got: void
+For node: holder expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type25 got: void
+For node: submitButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+For node: form.add(holder) expected fqn: void with type: Type28 got: void
+For node: form expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type28 got: void
+For node: holder expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type5 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: submitButton.addClickListener(new ClickListener(){
+  public void onClick1(  Widget sender){
+    form.submit();
+  }
+  @Override public void onClick(  Widget sender){
+  }
+}
+) expected fqn: void with type: Type37 got: void
+For node: submitButton expected fqn: com.google.gwt.user.client.ui.Button with type: Type22 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: addClickListener
+For node: addClickListener expected fqn: void with type: Type37 got: void
+For node: new ClickListener(){
+  public void onClick1(  Widget sender){
+    form.submit();
+  }
+  @Override public void onClick(  Widget sender){
+  }
+}
+ expected fqn:  with type: Type31 got: com.google.gwt.user.client.ui.ClickListener
+For node: ClickListener expected fqn: com.google.gwt.user.client.ui.ClickListener with type: Type31 got: com.google.gwt.user.client.ui.ClickListener
+For node: ClickListener expected fqn: com.google.gwt.user.client.ui.ClickListener with type: Type31 got: com.google.gwt.user.client.ui.ClickListener
+Cannot find matching typeVariable for: {
+  public void onClick1(  Widget sender){
+    form.submit();
+  }
+  @Override public void onClick(  Widget sender){
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onClick1
+Cannot find matching typeVariable for: public void onClick1(Widget sender){
+  form.submit();
+}
+
+Cannot find matching typeVariable for: {
+  public void onClick1(  Widget sender){
+    form.submit();
+  }
+  @Override public void onClick(  Widget sender){
+  }
+}
+
+For node: onClick1 expected fqn: void with type: Type31 got: com.google.gwt.user.client.ui.ClickListener
+Cannot find matching typeVariable for: Widget sender
+For node: Widget sender expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: sender expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: form.submit() expected fqn: void with type: Type33 got: void
+For node: form expected fqn: com.google.gwt.user.client.ui.FormPanel with type: Type3 got: com.google.gwt.user.client.ui.FormPanel
+Cannot find matching typeVariable for: submit
+For node: submit expected fqn: void with type: Type33 got: void
+For node: @Override expected fqn: java.lang.Override with type: Type35 got: java.lang.Override
+For node: Override expected fqn: java.lang.Override with type: Type35 got: java.lang.Override
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onClick
+Cannot find matching typeVariable for: @Override public void onClick(Widget sender){
+}
+
+Cannot find matching typeVariable for: {
+  public void onClick1(  Widget sender){
+    form.submit();
+  }
+  @Override public void onClick(  Widget sender){
+  }
+}
+
+For node: onClick expected fqn: void with type: Type31 got: com.google.gwt.user.client.ui.ClickListener
+Cannot find matching typeVariable for: Widget sender
+For node: Widget sender expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+For node: sender expected fqn: com.google.gwt.user.client.ui.Widget with type: Type32 got: com.google.gwt.user.client.ui.Widget
+{Checked=76, Analyzed=76, Unsolved=0, Incorrect=3, Correct=73}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=SimpleName: {Checked=28, Analyzed=28, Unsolved=0, Incorrect=0, Correct=28}
+gwt.=SimpleType: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=2, Correct=7}
+Total stats
+{Checked=76, Analyzed=76, Unsolved=0, Incorrect=3, Correct=73}
+=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+gwt.=ClassInstanceCreation: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+gwt.=SimpleName: {Checked=28, Analyzed=28, Unsolved=0, Incorrect=0, Correct=28}
+gwt.=SimpleType: {Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+gwt.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=MarkerAnnotation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+void=PrimitiveType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=SimpleName: {Checked=9, Analyzed=9, Unsolved=0, Incorrect=2, Correct=7}
+,ClassInstanceCreation,1,1,0,1,0
+gwt.,ClassInstanceCreation,5,5,5,0,0
+gwt.,SimpleName,28,28,28,0,0
+gwt.,SimpleType,12,12,12,0,0
+gwt.,SingleVariableDeclaration,2,2,2,0,0
+gwt.,VariableDeclarationFragment,4,4,4,0,0
+java,MarkerAnnotation,1,1,1,0,0
+java,SimpleName,1,1,1,0,0
+java,StringLiteral,3,3,3,0,0
+void,MethodInvocation,7,7,7,0,0
+void,PrimitiveType,3,3,3,0,0
+void,SimpleName,9,9,7,2,0

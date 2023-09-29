@@ -1,0 +1,207 @@
+04:19:22.830 [main] INFO snr.h - Building CompilationUnit takes 436 ms
+04:19:22.934 [main] INFO snr.e - Compilation takes 101 ms
+JettisonMappedXmlDriver cannot be resolved to a type
+JettisonMappedXmlDriver cannot be resolved to a type
+XStream cannot be resolved to a type
+XStream cannot be resolved to a type
+Return without setting candidates for Type7
+Return without setting candidates for Type6
+Finding class definition name: JettisonMappedXmlDriver isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver] to Type3
+Adding candidate void to Type2
+Return without setting candidates for Type4
+Finding class definition name: XStream isfull? false fields: [] methods: [<init>] argument sizes: [1]
+Adding candidates [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream] to Type5
+04:19:23.059 [main] INFO snr.G - Loading initial candidates takes 47 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. subtype: Type4
+   1. simple name: void
+   2. full name: void
+   3. subtype: Type7
+[void]
+Before TypeVariable: Type3, Candidates: 2
+   0. simple name: JettisonMappedXmlDriver
+   1. method: Type4 <init>();
+[com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: XStream
+   1. method: Type7 <init>(Type6);
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Before TypeVariable: Type4, Candidates: 0
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+04:19:23.063 [main] INFO snr.G - Populate candidates for type variable Type2
+04:19:23.063 [main] INFO snr.G - Populate candidates for type constraint full name: void
+04:19:23.063 [main] INFO snr.G - Populate candidates for type variable Type2
+04:19:23.063 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+04:19:23.063 [main] INFO snr.G - Populate candidates for type variable Type3
+04:19:23.063 [main] INFO snr.G - Populate candidates for type constraint simple name: JettisonMappedXmlDriver
+04:19:23.063 [main] INFO snr.G - Populate candidates for type variable Type5
+04:19:23.063 [main] INFO snr.G - Populate candidates for type constraint simple name: XStream
+04:19:23.063 [main] INFO snr.G - Populate candidates for type variable Type3
+04:19:23.063 [main] INFO snr.G - Populate candidates for type constraint method: Type4 <init>();
+Processing method constraint method: Type4 <init>(); on Type3
+Current solution for c Type3 is uninit ? false [com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver]
+Current solution for r Type4 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type3 [com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver]
+updated solution for r Type4 [void]
+04:19:23.065 [main] INFO snr.G - Populate candidates for type variable Type5
+04:19:23.065 [main] INFO snr.G - Populate candidates for type constraint method: Type7 <init>(Type6);
+Processing method constraint method: Type7 <init>(Type6); on Type5
+Current solution for c Type5 is uninit ? false [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Current solution for r Type7 is uninit ? false []
+Current solution for p0 Type6 is uninit ? false []
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/converters/reflection/ReflectionProvider;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/io/HierarchicalStreamDriver;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/converters/reflection/ReflectionProvider;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/io/HierarchicalStreamDriver;)
+updated solution for c Type5 [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+updated solution for r Type7 [void]
+updated solution for p0 Type6 [com.thoughtworks.xstream.converters.reflection.ReflectionProvider, com.thoughtworks.xstream.converters.reflection.ReflectionProvider, com.thoughtworks.xstream.io.HierarchicalStreamDriver, com.thoughtworks.xstream.io.HierarchicalStreamDriver]
+04:19:23.067 [main] INFO snr.G - Populate candidates for type variable Type2
+04:19:23.067 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+04:19:23.068 [main] INFO snr.G - Populate candidates for type variable Type2
+04:19:23.068 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+04:19:23.068 [main] INFO snr.G - Populate candidates for type variable Type6
+04:19:23.068 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+After TypeVariable: Type2, Candidates: 1
+   0. subtype: Type4
+   1. simple name: void
+   2. full name: void
+   3. subtype: Type7
+[void]
+After TypeVariable: Type4, Candidates: 1
+[void]
+After TypeVariable: Type7, Candidates: 1
+[void]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: JettisonMappedXmlDriver
+   1. method: Type4 <init>();
+[com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: XStream
+   1. method: Type7 <init>(Type6);
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+After TypeVariable: Type6, Candidates: 2
+   0. subtype: Type3
+[com.thoughtworks.xstream.io.HierarchicalStreamDriver, com.thoughtworks.xstream.io.HierarchicalStreamDriver]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	com.thoughtworks.xstream.io.HierarchicalStreamDriver	HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	com.thoughtworks.xstream.io.HierarchicalStreamDriver	HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	com.thoughtworks.xstream.converters.reflection.ReflectionProvider	ReflectionProvider
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	JettisonMappedXmlDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	com.thoughtworks.xstream.converters.reflection.ReflectionProvider	ReflectionProvider
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	JettisonMappedXmlDriver
+Printing: jclasssuper.facts
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+Printing: jfqlname.facts
+	Type2	void
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+Printing: candidate.facts
+	Type7	openjdk:jdk:1.8.0:void
+	Type3	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+	Type5	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	Type2	openjdk:jdk:1.8.0:void
+	Type6	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	Type4	openjdk:jdk:1.8.0:void
+	Type5	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	Type6	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	Type3	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+Printing: jmethod_dependency.facts
+	2	Type3	Type4	<init>
+	0	Type5	Type7	<init>
+Printing: jsimplename.facts
+	Type2	void
+	Type5	XStream
+	Type3	JettisonMappedXmlDriver
+Printing: jmethod.facts
+	1	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	8	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	openjdk:jdk:1.8.0:void	<init>	0
+	3	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	9	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver	openjdk:jdk:1.8.0:void	<init>	0
+	2	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+Printing: jsupertype_dependency.facts
+	Type4	Type2
+	Type7	Type2
+	Type3	Type6
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	3	0	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	0	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	2	0	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+Printing: jmethod_param_dependency.facts
+	0	0	Type6
+All artifact rank: [jar:com.thoughtworks.xstream.jar:1, jar:xstream-1.4.4.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type6 -> com.thoughtworks.xstream.io.HierarchicalStreamDriver
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type7 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type3 -> com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type4 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type5 -> com.thoughtworks.xstream.XStream
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Solved...
+Quiting souffle
+Bind Type7 to void, dumping:
+Bind Type6 to com.thoughtworks.xstream.io.HierarchicalStreamDriver, dumping:
+Bind Type3 to com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver, dumping:
+Bind Type2 to void, dumping:
+Bind Type4 to void, dumping:
+Bind Type5 to com.thoughtworks.xstream.XStream, dumping:
+04:19:23.239 [main] INFO snr.k - Fixing Type3 with com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+04:19:23.240 [main] INFO snr.k - Fixing Type3 with com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver
+04:19:23.240 [main] INFO snr.k - Fixing Type5 with com.thoughtworks.xstream.XStream
+04:19:23.240 [main] INFO snr.k - Fixing Type5 with com.thoughtworks.xstream.XStream
+04:19:23.282 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+04:19:23.283 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:com.thoughtworks.xstream.jar:1
+04:19:23.284 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+04:19:23.284 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.xstream;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+
+public class xt6 {
+	public static void h1() {
+		JettisonMappedXmlDriver xmlDriver = new JettisonMappedXmlDriver();
+		XStream xstream = new XStream(xmlDriver);
+	}
+}
+04:19:23.284 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+04:19:23.319 [main] INFO snr.e - Compilation takes 35 ms

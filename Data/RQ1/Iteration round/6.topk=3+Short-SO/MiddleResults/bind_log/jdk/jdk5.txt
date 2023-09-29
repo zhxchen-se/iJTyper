@@ -1,0 +1,122 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jdk5.java
+Expect check=31
+Cannot find matching typeVariable for: public class jdk5 {
+  public static void f1() throws MalformedURLException {
+    File jar=new File("");
+    URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+  }
+}
+
+Cannot find matching typeVariable for: jdk5
+Cannot find matching typeVariable for: public class jdk5 {
+  public static void f1() throws MalformedURLException {
+    File jar=new File("");
+    URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
+public class jdk5 {
+  public static void f1() throws MalformedURLException {
+    File jar=new File("");
+    URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: f1
+Cannot find matching typeVariable for: public static void f1() throws MalformedURLException {
+  File jar=new File("");
+  URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+}
+
+Cannot find matching typeVariable for: public class jdk5 {
+  public static void f1() throws MalformedURLException {
+    File jar=new File("");
+    URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+  }
+}
+
+Cannot find matching typeVariable for: package java.jdk;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
+public class jdk5 {
+  public static void f1() throws MalformedURLException {
+    File jar=new File("");
+    URLClassLoader loader=new URLClassLoader(new URL[]{jar.toURI().toURL()});
+  }
+}
+
+For node: MalformedURLException expected fqn: java.net.MalformedURLException with type: Type3 got: java.net.MalformedURLException
+For node: MalformedURLException expected fqn: java.net.MalformedURLException with type: Type3 got: java.net.MalformedURLException
+For node: File expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type4 got: java.io.File
+Cannot find matching typeVariable for: jar=new File("")
+For node: jar=new File("") expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: jar expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: new File("") expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: File expected fqn: java.io.File with type: Type4 got: java.io.File
+For node: "" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: URLClassLoader expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: URLClassLoader expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+Cannot find matching typeVariable for: loader=new URLClassLoader(new URL[]{jar.toURI().toURL()})
+For node: loader=new URLClassLoader(new URL[]{jar.toURI().toURL()}) expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: loader expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: new URLClassLoader(new URL[]{jar.toURI().toURL()}) expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: URLClassLoader expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: URLClassLoader expected fqn: java.net.URLClassLoader with type: Type8 got: java.net.URLClassLoader
+For node: new URL[]{jar.toURI().toURL()} expected fqn: java.net.URL[] with type: Type10 got: java.net.URL[]
+For node: URL[] expected fqn: java.net.URL[] with type: Type10 got: java.net.URL[]
+For node: URL expected fqn: java.net.URL with type: Type9 got: java.net.URL
+For node: URL expected fqn: java.net.URL with type: Type9 got: java.net.URL
+Did not find solution for node: {jar.toURI().toURL()} with type Type15
+For node: jar.toURI().toURL() expected fqn: java.net.URL with type: Type13 got: java.net.URL
+For node: jar.toURI() expected fqn: java.net.URI with type: Type11 got: java.net.URI
+For node: jar expected fqn: java.io.File with type: Type4 got: java.io.File
+Cannot find matching typeVariable for: toURI
+For node: toURI expected fqn: java.net.URI with type: Type11 got: java.net.URI
+Cannot find matching typeVariable for: toURL
+For node: toURL expected fqn: java.net.URL with type: Type13 got: java.net.URL
+{Checked=28, Analyzed=27, Unsolved=1, Incorrect=0, Correct=27}
+java=ArrayCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=28, Analyzed=27, Unsolved=1, Incorrect=0, Correct=27}
+java=ArrayCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ArrayInitializer: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=SimpleType: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java=StringLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,ArrayCreation,1,1,1,0,0
+java,ArrayInitializer,0,1,0,0,1
+java,ArrayType,1,1,1,0,0
+java,ClassInstanceCreation,2,2,2,0,0
+java,MethodInvocation,2,2,2,0,0
+java,SimpleName,11,11,11,0,0
+java,SimpleType,6,6,6,0,0
+java,StringLiteral,1,1,1,0,0
+java,VariableDeclarationFragment,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

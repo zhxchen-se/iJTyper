@@ -1,0 +1,428 @@
+10:20:29.179 [main] INFO snr.h - Building CompilationUnit takes 521 ms
+10:20:29.304 [main] INFO snr.e - Compilation takes 121 ms
+DateTimeZone cannot be resolved to a type
+DateTimeZone cannot be resolved
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+DateTime cannot be resolved to a type
+Return without setting candidates for Type15
+Return without setting candidates for Type7
+Finding class definition name: DateTime isfull? false fields: [] methods: [<init>] argument sizes: [7]
+Adding candidates [org.joda.time.DateTime] to Type8
+Return without setting candidates for Type18
+Adding candidate byte to Type10
+Adding candidate short to Type9
+Finding class definition name: DateTimeZone isfull? false fields: [] methods: [forID] argument sizes: [1]
+Adding candidates [org.joda.time.DateTimeZone] to Type3
+Return without setting candidates for Type11
+Return without setting candidates for Type5
+Return without setting candidates for Type17
+Return without setting candidates for Type12
+Return without setting candidates for Type6
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type4
+Return without setting candidates for Type13
+Return without setting candidates for Type14
+Return without setting candidates for Type16
+Adding candidate void to Type2
+10:20:31.258 [main] INFO snr.G - Loading initial candidates takes 1868 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. subtype: Type18
+   1. full name: void
+   2. simple name: void
+[void]
+Before TypeVariable: Type3, Candidates: 1
+   0. simple name: DateTimeZone
+   1. subtype: Type5
+   2. method: Type7 forID(Type6);
+[org.joda.time.DateTimeZone]
+Before TypeVariable: Type8, Candidates: 1
+   0. simple name: DateTime
+   1. method: Type18 <init>(Type11,Type12,Type13,Type14,Type15,Type16,Type17);
+[org.joda.time.DateTime]
+Before TypeVariable: Type9, Candidates: 1
+   0. simple name: short
+   1. full name: short
+[short]
+Before TypeVariable: Type10, Candidates: 1
+   0. full name: byte
+   1. simple name: byte
+[byte]
+Before TypeVariable: Type4, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type5, Candidates: 0
+   0. subtype: Type7
+[]
+Before TypeVariable: Type6, Candidates: 0
+   0. subtype: Type4
+[]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type9
+[]
+Before TypeVariable: Type12, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type15, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type10
+[]
+Before TypeVariable: Type17, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type18, Candidates: 0
+[]
+10:20:31.274 [main] INFO snr.G - Populate candidates for type variable Type2
+10:20:31.274 [main] INFO snr.G - Populate candidates for type constraint full name: void
+10:20:31.274 [main] INFO snr.G - Populate candidates for type variable Type4
+10:20:31.274 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type9
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint full name: short
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type10
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint full name: byte
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type2
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type3
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTimeZone
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type4
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type8
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: DateTime
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type9
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: short
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type10
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint simple name: byte
+10:20:31.275 [main] INFO snr.G - Populate candidates for type variable Type3
+10:20:31.275 [main] INFO snr.G - Populate candidates for type constraint method: Type7 forID(Type6);
+Processing method constraint method: Type7 forID(Type6); on Type3
+Current solution for c Type3 is uninit ? false [org.joda.time.DateTimeZone]
+Current solution for r Type7 is uninit ? false []
+Current solution for p0 Type6 is uninit ? false []
+Looking at method: public static Lorg/joda/time/DateTimeZone; forID(Ljava/lang/String;)
+updated solution for c Type3 [org.joda.time.DateTimeZone]
+updated solution for r Type7 [org.joda.time.DateTimeZone]
+updated solution for p0 Type6 [java.lang.String]
+10:20:31.280 [main] INFO snr.G - Populate candidates for type variable Type8
+10:20:31.281 [main] INFO snr.G - Populate candidates for type constraint method: Type18 <init>(Type11,Type12,Type13,Type14,Type15,Type16,Type17);
+Processing method constraint method: Type18 <init>(Type11,Type12,Type13,Type14,Type15,Type16,Type17); on Type8
+Current solution for c Type8 is uninit ? false [org.joda.time.DateTime]
+Current solution for r Type18 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Current solution for p1 Type12 is uninit ? false []
+Current solution for p2 Type13 is uninit ? false []
+Current solution for p3 Type14 is uninit ? false []
+Current solution for p4 Type15 is uninit ? false []
+Current solution for p5 Type16 is uninit ? false []
+Current solution for p6 Type17 is uninit ? false []
+Looking at method: public V <init>(IIIIIII)
+Looking at method: public V <init>(IIIIIILorg/joda/time/Chronology;)
+Looking at method: public V <init>(IIIIIILorg/joda/time/DateTimeZone;)
+updated solution for c Type8 [org.joda.time.DateTime]
+updated solution for r Type18 [void]
+updated solution for p0 Type11 [int]
+updated solution for p1 Type12 [int]
+updated solution for p2 Type13 [int]
+updated solution for p3 Type14 [int]
+updated solution for p4 Type15 [int]
+updated solution for p5 Type16 [int]
+updated solution for p6 Type17 [int, org.joda.time.Chronology, org.joda.time.DateTimeZone]
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type2
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type18
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type3
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type5
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type6
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type11
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type12
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type13
+10:20:31.283 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+10:20:31.283 [main] INFO snr.G - Populate candidates for type variable Type14
+10:20:31.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+10:20:31.284 [main] INFO snr.G - Populate candidates for type variable Type15
+10:20:31.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+10:20:31.284 [main] INFO snr.G - Populate candidates for type variable Type16
+10:20:31.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+10:20:31.284 [main] INFO snr.G - Populate candidates for type variable Type17
+10:20:31.284 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+After TypeVariable: Type2, Candidates: 1
+   0. subtype: Type18
+   1. full name: void
+   2. simple name: void
+[void]
+After TypeVariable: Type3, Candidates: 1
+   0. simple name: DateTimeZone
+   1. subtype: Type5
+   2. method: Type7 forID(Type6);
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type5, Candidates: 1
+   0. subtype: Type7
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type6, Candidates: 1
+   0. subtype: Type4
+[java.lang.String]
+After TypeVariable: Type7, Candidates: 1
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type8, Candidates: 1
+   0. simple name: DateTime
+   1. method: Type18 <init>(Type11,Type12,Type13,Type14,Type15,Type16,Type17);
+[org.joda.time.DateTime]
+After TypeVariable: Type9, Candidates: 1
+   0. simple name: short
+   1. full name: short
+[short]
+After TypeVariable: Type10, Candidates: 1
+   0. full name: byte
+   1. simple name: byte
+[byte]
+After TypeVariable: Type11, Candidates: 1
+   0. subtype: Type9
+[int]
+After TypeVariable: Type12, Candidates: 1
+   0. subtype: Type10
+[int]
+After TypeVariable: Type13, Candidates: 1
+   0. subtype: Type10
+[int]
+After TypeVariable: Type14, Candidates: 1
+   0. subtype: Type10
+[int]
+After TypeVariable: Type15, Candidates: 1
+   0. subtype: Type10
+[int]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type10
+[int]
+After TypeVariable: Type17, Candidates: 1
+   0. subtype: Type3
+[org.joda.time.DateTimeZone]
+After TypeVariable: Type18, Candidates: 1
+[void]
+After TypeVariable: Type4, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:int	int	int
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	org.joda.time.DateTimeZone	DateTimeZone
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	org.joda.time.DateTime	DateTime
+	openjdk:jdk:1.8.0:short	short	short
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	org.joda.time.Chronology	Chronology
+	openjdk:jdk:1.8.0:byte	byte	byte
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:int	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:int	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:short	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:short	openjdk:jdk:1.8.0:int
+	openjdk:jdk:1.8.0:short	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:int
+	openjdk:jdk:1.8.0:byte	jar:android-13.jar:1:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:byte	openjdk:jdk:1.8.0:short
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:java.lang.String
+	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	jar:android-13.jar:1:java.lang.String
+Printing: jfqlname.facts
+	Type2	void
+	Type4	java.lang.String
+	Type10	byte
+	Type9	short
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type15
+	Type16
+	Type10
+	Type11
+	Type12
+	Type17
+	Type18
+Printing: candidate.facts
+	Type11	openjdk:jdk:1.8.0:int
+	Type12	openjdk:jdk:1.8.0:int
+	Type15	openjdk:jdk:1.8.0:int
+	Type16	openjdk:jdk:1.8.0:int
+	Type2	openjdk:jdk:1.8.0:void
+	Type13	openjdk:jdk:1.8.0:int
+	Type14	openjdk:jdk:1.8.0:int
+	Type17	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type6	jar:android-13.jar:1:java.lang.String
+	Type4	jar:android-13.jar:1:java.lang.String
+	Type9	openjdk:jdk:1.8.0:short
+	Type4	openjdk:jdk:1.8.0:java.lang.String
+	Type18	openjdk:jdk:1.8.0:void
+	Type10	openjdk:jdk:1.8.0:byte
+	Type8	jar:joda-time-2.0.jar:1:org.joda.time.DateTime
+	Type7	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type3	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	Type5	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+Printing: jmethod_dependency.facts
+	1	Type3	Type7	forID
+	0	Type8	Type18	<init>
+Printing: jsimplename.facts
+	Type2	void
+	Type8	DateTime
+	Type4	String
+	Type10	byte
+	Type9	short
+	Type3	DateTimeZone
+Printing: jmethod.facts
+	2	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+	3	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone	forID	1
+	0	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+	1	jar:joda-time-2.0.jar:1:org.joda.time.DateTime	openjdk:jdk:1.8.0:void	<init>	7
+Printing: jsupertype_dependency.facts
+	Type10	Type12
+	Type5	Type3
+	Type10	Type14
+	Type10	Type13
+	Type18	Type2
+	Type3	Type17
+	Type7	Type5
+	Type10	Type16
+	Type4	Type6
+	Type10	Type15
+	Type9	Type11
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	2	0	openjdk:jdk:1.8.0:int
+	2	1	openjdk:jdk:1.8.0:int
+	2	2	openjdk:jdk:1.8.0:int
+	2	3	openjdk:jdk:1.8.0:int
+	2	4	openjdk:jdk:1.8.0:int
+	2	5	openjdk:jdk:1.8.0:int
+	2	6	jar:joda-time-2.0.jar:1:org.joda.time.DateTimeZone
+	3	0	jar:android-13.jar:1:java.lang.String
+	0	0	openjdk:jdk:1.8.0:int
+	0	1	openjdk:jdk:1.8.0:int
+	0	2	openjdk:jdk:1.8.0:int
+	0	3	openjdk:jdk:1.8.0:int
+	0	4	openjdk:jdk:1.8.0:int
+	0	5	openjdk:jdk:1.8.0:int
+	0	6	openjdk:jdk:1.8.0:int
+	1	0	openjdk:jdk:1.8.0:int
+	1	1	openjdk:jdk:1.8.0:int
+	1	2	openjdk:jdk:1.8.0:int
+	1	3	openjdk:jdk:1.8.0:int
+	1	4	openjdk:jdk:1.8.0:int
+	1	5	openjdk:jdk:1.8.0:int
+	1	6	jar:joda-time-2.0.jar:1:org.joda.time.Chronology
+Printing: jmethod_param_dependency.facts
+	1	0	Type6
+	0	0	Type11
+	0	1	Type12
+	0	2	Type13
+	0	3	Type14
+	0	4	Type15
+	0	5	Type16
+	0	6	Type17
+All artifact rank: [jar:joda-time-2.0.jar:1, jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type17 -> org.joda.time.DateTimeZone
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type6 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type18 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type16 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type15 -> int
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> org.joda.time.DateTime
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type10 -> byte
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type14 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type13 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type12 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type11 -> int
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type9 -> short
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type15 to int, dumping:
+Bind Type8 to org.joda.time.DateTime, dumping:
+Bind Type18 to void, dumping:
+Bind Type10 to byte, dumping:
+Bind Type9 to short, dumping:
+Bind Type11 to int, dumping:
+Bind Type17 to org.joda.time.DateTimeZone, dumping:
+Bind Type12 to int, dumping:
+Bind Type6 to java.lang.String, dumping:
+Bind Type4 to java.lang.String, dumping:
+Bind Type14 to int, dumping:
+Bind Type13 to int, dumping:
+Bind Type16 to int, dumping:
+Bind Type2 to void, dumping:
+10:20:31.559 [main] WARN snr.k - Failed to solve type 'Type3' for DateTimeZone
+10:20:31.560 [main] WARN snr.k - Failed to solve type 'Type3' for DateTimeZone
+10:20:31.560 [main] INFO snr.k - Fixing Type8 with org.joda.time.DateTime
+10:20:31.561 [main] INFO snr.k - Fixing Type8 with org.joda.time.DateTime
+10:20:31.561 [main] INFO snr.k - Fixing Type8 with org.joda.time.DateTime
+10:20:31.561 [main] INFO snr.k - Fixing Type8 with org.joda.time.DateTime
+10:20:31.601 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+10:20:31.603 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+10:20:31.603 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+10:20:31.603 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.joda_time;
+
+import org.joda.time.DateTime;
+
+public class jt11 {
+	public static void h1() {
+		DateTimeZone BRAZIL = DateTimeZone.forID("America/Sao_Paulo");
+		DateTime start = new DateTime(2013, 10, 20, 5, 0, 0, BRAZIL);
+		DateTime end = new DateTime(2013, 10, 21, 13, 0, 0, BRAZIL);
+	}
+}
+10:20:31.603 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+10:20:31.637 [main] INFO snr.e - Compilation takes 34 ms

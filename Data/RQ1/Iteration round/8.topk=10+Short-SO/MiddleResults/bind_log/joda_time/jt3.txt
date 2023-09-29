@@ -1,0 +1,115 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt3.java
+Expect check=28
+Cannot find matching typeVariable for: public class jt3 {
+  public static void f1(){
+    LocalDateTime java8LocalDateTime=LocalDateTime.now();
+    ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+    Instant java8Instant=java8ZonedDateTime.toInstant();
+  }
+}
+
+Cannot find matching typeVariable for: jt3
+Cannot find matching typeVariable for: public class jt3 {
+  public static void f1(){
+    LocalDateTime java8LocalDateTime=LocalDateTime.now();
+    ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+    Instant java8Instant=java8ZonedDateTime.toInstant();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+public class jt3 {
+  public static void f1(){
+    LocalDateTime java8LocalDateTime=LocalDateTime.now();
+    ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+    Instant java8Instant=java8ZonedDateTime.toInstant();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: f1
+Cannot find matching typeVariable for: public static void f1(){
+  LocalDateTime java8LocalDateTime=LocalDateTime.now();
+  ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+  Instant java8Instant=java8ZonedDateTime.toInstant();
+}
+
+Cannot find matching typeVariable for: public class jt3 {
+  public static void f1(){
+    LocalDateTime java8LocalDateTime=LocalDateTime.now();
+    ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+    Instant java8Instant=java8ZonedDateTime.toInstant();
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.DateTime;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+public class jt3 {
+  public static void f1(){
+    LocalDateTime java8LocalDateTime=LocalDateTime.now();
+    ZonedDateTime java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault());
+    Instant java8Instant=java8ZonedDateTime.toInstant();
+  }
+}
+
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: java8LocalDateTime=LocalDateTime.now()
+For node: java8LocalDateTime=LocalDateTime.now() expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+For node: java8LocalDateTime expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+For node: LocalDateTime.now() expected fqn: java.time.LocalDateTime with type: Type4 got: java.time.LocalDateTime
+For node: LocalDateTime expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: now
+For node: now expected fqn: java.time.LocalDateTime with type: Type4 got: java.time.LocalDateTime
+For node: ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type6 got: java.time.ZonedDateTime
+For node: ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type6 got: java.time.ZonedDateTime
+Cannot find matching typeVariable for: java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault())
+For node: java8ZonedDateTime=java8LocalDateTime.atZone(ZoneId.systemDefault()) expected fqn: java.time.ZonedDateTime with type: Type6 got: java.time.ZonedDateTime
+For node: java8ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type6 got: java.time.ZonedDateTime
+For node: java8LocalDateTime.atZone(ZoneId.systemDefault()) expected fqn: java.time.ZonedDateTime with type: Type10 got: java.time.ZonedDateTime
+For node: java8LocalDateTime expected fqn: java.time.LocalDateTime with type: Type3 got: java.time.LocalDateTime
+Cannot find matching typeVariable for: atZone
+For node: atZone expected fqn: java.time.ZonedDateTime with type: Type10 got: java.time.ZonedDateTime
+For node: ZoneId.systemDefault() expected fqn: java.time.ZoneId with type: Type8 got: java.time.ZoneId
+For node: ZoneId expected fqn: java.time.ZoneId with type: Type7 got: java.time.ZoneId
+Cannot find matching typeVariable for: systemDefault
+For node: systemDefault expected fqn: java.time.ZoneId with type: Type8 got: java.time.ZoneId
+For node: Instant expected fqn: java.time.Instant with type: Type13 got: java.time.Instant
+For node: Instant expected fqn: java.time.Instant with type: Type13 got: java.time.Instant
+Cannot find matching typeVariable for: java8Instant=java8ZonedDateTime.toInstant()
+For node: java8Instant=java8ZonedDateTime.toInstant() expected fqn: java.time.Instant with type: Type13 got: java.time.Instant
+For node: java8Instant expected fqn: java.time.Instant with type: Type13 got: java.time.Instant
+For node: java8ZonedDateTime.toInstant() expected fqn: java.time.Instant with type: Type14 got: java.time.Instant
+For node: java8ZonedDateTime expected fqn: java.time.ZonedDateTime with type: Type6 got: java.time.ZonedDateTime
+Cannot find matching typeVariable for: toInstant
+For node: toInstant expected fqn: java.time.Instant with type: Type14 got: java.time.Instant
+{Checked=25, Analyzed=25, Unsolved=0, Incorrect=0, Correct=25}
+java=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=25, Analyzed=25, Unsolved=0, Incorrect=0, Correct=25}
+java=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=SimpleName: {Checked=14, Analyzed=14, Unsolved=0, Incorrect=0, Correct=14}
+java=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,4,4,4,0,0
+java,SimpleName,14,14,14,0,0
+java,SimpleType,3,3,3,0,0
+java,VariableDeclarationFragment,3,3,3,0,0
+void,PrimitiveType,1,1,1,0,0

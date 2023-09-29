@@ -1,0 +1,57 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt19.java
+Expect check=28
+Cannot find matching typeVariable for: public class xt19 {
+  public List<String> tags=new ArrayList<String>();
+  public List<String> notags=new ArrayList<String>();
+}
+
+Did not find solution for node: xt19 with type Type1
+Did not find solution for node: List<String> with type Type4=Type2<Type3>
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type2 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type2 got: java.util.List
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: tags=new ArrayList<String>()
+Did not find solution for node: tags=new ArrayList<String>() with type Type4=Type2<Type3>
+Did not find solution for node: tags with type Type4=Type2<Type3>
+Did not find solution for node: new ArrayList<String>() with type Type6=Type5<Type3>
+Did not find solution for node: ArrayList<String> with type Type6=Type5<Type3>
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.String> with type: Type5 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.String> with type: Type5 got: java.util.ArrayList
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Did not find solution for node: List<String> with type Type4=Type2<Type3>
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type2 got: java.util.List
+For node: List expected fqn: java.util.List<java.lang.String> with type: Type2 got: java.util.List
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+Cannot find matching typeVariable for: notags=new ArrayList<String>()
+Did not find solution for node: notags=new ArrayList<String>() with type Type4=Type2<Type3>
+Did not find solution for node: notags with type Type4=Type2<Type3>
+Did not find solution for node: new ArrayList<String>() with type Type6=Type5<Type3>
+Did not find solution for node: ArrayList<String> with type Type6=Type5<Type3>
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.String> with type: Type5 got: java.util.ArrayList
+For node: ArrayList expected fqn: java.util.ArrayList<java.lang.String> with type: Type5 got: java.util.ArrayList
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+{Checked=27, Analyzed=16, Unsolved=11, Incorrect=8, Correct=8}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=4, Correct=4}
+java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=4, Correct=4}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+Total stats
+{Checked=27, Analyzed=16, Unsolved=11, Incorrect=8, Correct=8}
+java=ClassInstanceCreation: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=ParameterizedType: {Checked=4, Analyzed=0, Unsolved=4, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=11, Analyzed=8, Unsolved=3, Incorrect=4, Correct=4}
+java=SimpleType: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=4, Correct=4}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java,ClassInstanceCreation,0,2,0,0,2
+java,ParameterizedType,0,4,0,0,4
+java,SimpleName,8,11,4,4,3
+java,SimpleType,8,8,4,4,0
+java,VariableDeclarationFragment,0,2,0,0,2

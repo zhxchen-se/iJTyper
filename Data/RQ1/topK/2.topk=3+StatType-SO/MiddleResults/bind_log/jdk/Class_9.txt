@@ -1,0 +1,705 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/Class_9.java
+Expect check=109
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Did not find solution for node: Class_9 with type Type1
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: DATABASE_DRIVER="com.mysql.jdbc.Driver"
+For node: DATABASE_DRIVER="com.mysql.jdbc.Driver" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: DATABASE_DRIVER expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "com.mysql.jdbc.Driver" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: DATABASE_URL="jdbc:mysql://localhost:3306/database_name"
+For node: DATABASE_URL="jdbc:mysql://localhost:3306/database_name" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: DATABASE_URL expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "jdbc:mysql://localhost:3306/database_name" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: USERNAME="root"
+For node: USERNAME="root" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: USERNAME expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "root" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: PASSWORD=""
+For node: PASSWORD="" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: PASSWORD expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type5 got: java.lang.String
+Cannot find matching typeVariable for: MAX_POOL="250"
+For node: MAX_POOL="250" expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: MAX_POOL expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: "250" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: Connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: Connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Cannot find matching typeVariable for: connection
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Cannot find matching typeVariable for: connection
+Cannot find matching typeVariable for: private Connection connection;
+
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.sql.Connection;
+import java.util.Properties;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: properties
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: properties
+Cannot find matching typeVariable for: private Properties properties;
+
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.sql.Connection;
+import java.util.Properties;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: getProperties
+Cannot find matching typeVariable for: private Properties getProperties(){
+  if (properties == null) {
+    properties=new Properties();
+    properties.setProperty("user",USERNAME);
+    properties.setProperty("password",PASSWORD);
+    properties.setProperty("MaxPooledStatements",MAX_POOL);
+  }
+  return properties;
+}
+
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.sql.Connection;
+import java.util.Properties;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+For node: properties == null expected fqn: boolean with type: Type8 got: boolean
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Did not find solution for node: null with type Type7
+For node: properties=new Properties() expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: new Properties() expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: Properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: properties.setProperty("user",USERNAME) expected fqn: java.lang.Object with type: Type10 got: java.lang.Object
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: setProperty
+For node: setProperty expected fqn: java.lang.Object with type: Type10 got: java.lang.Object
+For node: "user" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: USERNAME expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: properties.setProperty("password",PASSWORD) expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: setProperty
+For node: setProperty expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: "password" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: PASSWORD expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: properties.setProperty("MaxPooledStatements",MAX_POOL) expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: setProperty
+For node: setProperty expected fqn: java.lang.Object with type: Type13 got: java.lang.Object
+For node: "MaxPooledStatements" expected fqn: java.lang.String with type: Type6 got: java.lang.String
+For node: MAX_POOL expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: properties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+For node: Connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: Connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Cannot find matching typeVariable for: connect
+Cannot find matching typeVariable for: public Connection connect(){
+  if (connection == null) {
+    try {
+      Class.forName(DATABASE_DRIVER);
+      connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+    }
+ catch (    ClassNotFoundException|SQLException e) {
+      e.printStackTrace();
+    }
+  }
+  return connection;
+}
+
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.sql.Connection;
+import java.util.Properties;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+For node: connection == null expected fqn: boolean with type: Type8 got: boolean
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Did not find solution for node: null with type Type14
+For node: Class.forName(DATABASE_DRIVER) expected fqn: java.lang.Class<> with type: Type16 got: java.lang.Class
+For node: Class expected fqn: java.lang.Class with type: Type15 got: java.lang.Class
+Cannot find matching typeVariable for: forName
+For node: forName expected fqn: java.lang.Class<?> with type: Type16 got: java.lang.Class
+For node: DATABASE_DRIVER expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: connection=DriverManager.getConnection(DATABASE_URL,getProperties()) expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: DriverManager.getConnection(DATABASE_URL,getProperties()) expected fqn: java.sql.Connection with type: Type20 got: java.sql.Connection
+For node: DriverManager expected fqn: java.sql.DriverManager with type: Type19 got: java.sql.DriverManager
+Cannot find matching typeVariable for: getConnection
+For node: getConnection expected fqn: java.sql.Connection with type: Type20 got: java.sql.Connection
+For node: DATABASE_URL expected fqn: java.lang.String with type: Type5 got: java.lang.String
+For node: getProperties() expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: getProperties
+For node: getProperties expected fqn: java.util.Properties with type: Type3 got: java.util.Properties
+Cannot find matching typeVariable for: ClassNotFoundException|SQLException e
+Did not find solution for node: ClassNotFoundException|SQLException e with type Type26
+Did not find solution for node: ClassNotFoundException|SQLException with type Type26
+For node: ClassNotFoundException expected fqn: java.lang.ClassNotFoundException with type: Type24 got: java.lang.ClassNotFoundException
+For node: ClassNotFoundException expected fqn: java.lang.ClassNotFoundException with type: Type24 got: java.lang.ClassNotFoundException
+For node: SQLException expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+For node: SQLException expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+Did not find solution for node: e with type Type26
+Did not find solution for node: e.printStackTrace() with type Type27
+Did not find solution for node: e with type Type26
+Cannot find matching typeVariable for: printStackTrace
+Did not find solution for node: printStackTrace with type Type27
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: disconnect
+Cannot find matching typeVariable for: public void disconnect(){
+  if (connection != null) {
+    try {
+      connection.close();
+      connection=null;
+    }
+ catch (    SQLException e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+Cannot find matching typeVariable for: public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+Cannot find matching typeVariable for: package Class_;
+import java.sql.Connection;
+import java.util.Properties;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class Class_9 {
+  private static final String DATABASE_DRIVER="com.mysql.jdbc.Driver";
+  private static final String DATABASE_URL="jdbc:mysql://localhost:3306/database_name";
+  private static final String USERNAME="root";
+  private static final String PASSWORD="";
+  private static final String MAX_POOL="250";
+  private Connection connection;
+  private Properties properties;
+  private Properties getProperties(){
+    if (properties == null) {
+      properties=new Properties();
+      properties.setProperty("user",USERNAME);
+      properties.setProperty("password",PASSWORD);
+      properties.setProperty("MaxPooledStatements",MAX_POOL);
+    }
+    return properties;
+  }
+  public Connection connect(){
+    if (connection == null) {
+      try {
+        Class.forName(DATABASE_DRIVER);
+        connection=DriverManager.getConnection(DATABASE_URL,getProperties());
+      }
+ catch (      ClassNotFoundException|SQLException e) {
+        e.printStackTrace();
+      }
+    }
+    return connection;
+  }
+  public void disconnect(){
+    if (connection != null) {
+      try {
+        connection.close();
+        connection=null;
+      }
+ catch (      SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+}
+
+For node: connection != null expected fqn: boolean with type: Type8 got: boolean
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Did not find solution for node: null with type Type29
+For node: connection.close() expected fqn: void with type: Type30 got: void
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+Cannot find matching typeVariable for: close
+For node: close expected fqn: void with type: Type30 got: void
+For node: connection=null expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: connection expected fqn: java.sql.Connection with type: Type4 got: java.sql.Connection
+For node: null expected fqn: null with type: Type32 got: java.sql.Connection
+Cannot find matching typeVariable for: SQLException e
+For node: SQLException e expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+For node: SQLException expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+For node: SQLException expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+For node: e expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+For node: e.printStackTrace() expected fqn: void with type: Type33 got: void
+For node: e expected fqn: java.sql.SQLException with type: Type25 got: java.sql.SQLException
+Cannot find matching typeVariable for: printStackTrace
+For node: printStackTrace expected fqn: void with type: Type33 got: void
+{Checked=103, Analyzed=93, Unsolved=10, Incorrect=3, Correct=90}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=Assignment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=1, Correct=5}
+java=SimpleName: {Checked=47, Analyzed=45, Unsolved=2, Incorrect=1, Correct=44}
+java=SimpleType: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=UnionType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+null=NullLiteral: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+Total stats
+{Checked=103, Analyzed=93, Unsolved=10, Incorrect=3, Correct=90}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=Assignment: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=1, Correct=5}
+java=SimpleName: {Checked=47, Analyzed=45, Unsolved=2, Incorrect=1, Correct=44}
+java=SimpleType: {Checked=13, Analyzed=13, Unsolved=0, Incorrect=0, Correct=13}
+java=SingleVariableDeclaration: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=8, Analyzed=8, Unsolved=0, Incorrect=0, Correct=8}
+java=UnionType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=7, Analyzed=7, Unsolved=0, Incorrect=0, Correct=7}
+null=NullLiteral: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=1, Correct=0}
+void=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+,SimpleName,0,1,0,0,1
+boolean,InfixExpression,3,3,3,0,0
+java,Assignment,3,3,3,0,0
+java,ClassInstanceCreation,1,1,1,0,0
+java,MethodInvocation,6,6,5,1,0
+java,SimpleName,45,47,44,1,2
+java,SimpleType,13,13,13,0,0
+java,SingleVariableDeclaration,1,2,1,0,1
+java,StringLiteral,8,8,8,0,0
+java,UnionType,0,1,0,0,1
+java,VariableDeclarationFragment,7,7,7,0,0
+null,NullLiteral,1,4,0,1,3
+void,MethodInvocation,2,3,2,0,1
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,3,2,0,1

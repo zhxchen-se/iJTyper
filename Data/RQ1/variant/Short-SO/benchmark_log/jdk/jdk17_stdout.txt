@@ -1,0 +1,330 @@
+08:34:56.613 [main] INFO snr.h - Building CompilationUnit takes 676 ms
+08:34:56.761 [main] INFO snr.e - Compilation takes 143 ms
+InputStream cannot be resolved to a type
+IOException cannot be resolved to a type
+Reader cannot be resolved to a type
+InputStreamReader cannot be resolved to a type
+InputStream cannot be resolved to a type
+StandardCharsets cannot be resolved to a variable
+Finding class definition name: IOException isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.IOException, java.io.IOException] to Type4
+Finding class definition name: StandardCharsets isfull? false fields: [UTF_8] methods: [] argument sizes: []
+Adding candidates [java.nio.charset.StandardCharsets] to Type11
+Return without setting candidates for Type14
+Adding candidate void to Type2
+Return without setting candidates for Type15
+Finding class definition name: Reader isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.Reader, java.io.Reader] to Type9
+Finding class definition name: InputStreamReader isfull? false fields: [] methods: [<init>] argument sizes: [2]
+Adding candidates [java.io.InputStreamReader, java.io.InputStreamReader] to Type10
+Return without setting candidates for Type12
+Finding class definition name: InputStream isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [java.io.InputStream, java.io.InputStream] to Type3
+Return without setting candidates for Type13
+08:34:59.518 [main] INFO snr.G - Loading initial candidates takes 2604 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. subtype: Type15
+   1. simple name: void
+   2. full name: void
+[void]
+Before TypeVariable: Type11, Candidates: 1
+   0. field: Type12 UTF_8;
+   1. simple name: StandardCharsets
+[java.nio.charset.StandardCharsets]
+Before TypeVariable: Type3, Candidates: 2
+   0. simple name: InputStream
+[java.io.InputStream, java.io.InputStream]
+Before TypeVariable: Type4, Candidates: 2
+   0. simple name: IOException
+[java.io.IOException, java.io.IOException]
+Before TypeVariable: Type9, Candidates: 2
+   0. simple name: Reader
+   1. subtype: Type10
+[java.io.Reader, java.io.Reader]
+Before TypeVariable: Type10, Candidates: 2
+   0. method: Type15 <init>(Type13,Type14);
+   1. simple name: InputStreamReader
+[java.io.InputStreamReader, java.io.InputStreamReader]
+Before TypeVariable: Type12, Candidates: 0
+[]
+Before TypeVariable: Type13, Candidates: 0
+   0. subtype: Type3
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type12
+[]
+Before TypeVariable: Type15, Candidates: 0
+[]
+08:34:59.523 [main] INFO snr.G - Populate candidates for type variable Type2
+08:34:59.523 [main] INFO snr.G - Populate candidates for type constraint full name: void
+08:34:59.523 [main] INFO snr.G - Populate candidates for type variable Type2
+08:34:59.523 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+08:34:59.523 [main] INFO snr.G - Populate candidates for type variable Type3
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint simple name: InputStream
+08:34:59.524 [main] INFO snr.G - Populate candidates for type variable Type4
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint simple name: IOException
+08:34:59.524 [main] INFO snr.G - Populate candidates for type variable Type9
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint simple name: Reader
+08:34:59.524 [main] INFO snr.G - Populate candidates for type variable Type10
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint simple name: InputStreamReader
+08:34:59.524 [main] INFO snr.G - Populate candidates for type variable Type11
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint simple name: StandardCharsets
+08:34:59.524 [main] INFO snr.G - Populate candidates for type variable Type11
+08:34:59.524 [main] INFO snr.G - Populate candidates for type constraint field: Type12 UTF_8;
+08:34:59.527 [main] INFO snr.G - Populate candidates for type variable Type10
+08:34:59.528 [main] INFO snr.G - Populate candidates for type constraint method: Type15 <init>(Type13,Type14);
+Processing method constraint method: Type15 <init>(Type13,Type14); on Type10
+Current solution for c Type10 is uninit ? false [java.io.InputStreamReader, java.io.InputStreamReader]
+Current solution for r Type15 is uninit ? false []
+Current solution for p0 Type13 is uninit ? false []
+Current solution for p1 Type14 is uninit ? false []
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/nio/charset/CharsetDecoder;)
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/lang/String;)
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/nio/charset/CharsetDecoder;)
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)
+Looking at method: public V <init>(Ljava/io/InputStream;Ljava/lang/String;)
+updated solution for c Type10 [java.io.InputStreamReader, java.io.InputStreamReader]
+updated solution for r Type15 [void]
+updated solution for p0 Type13 [java.io.InputStream, java.io.InputStream]
+updated solution for p1 Type14 [java.nio.charset.Charset, java.nio.charset.CharsetDecoder, java.lang.String, java.nio.charset.CharsetDecoder, java.lang.String, java.nio.charset.Charset]
+08:34:59.543 [main] INFO snr.G - Populate candidates for type variable Type2
+08:34:59.543 [main] INFO snr.G - Populate candidates for type constraint subtype: Type15
+08:34:59.543 [main] INFO snr.G - Populate candidates for type variable Type9
+08:34:59.543 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+08:34:59.545 [main] INFO snr.G - Populate candidates for type variable Type13
+08:34:59.545 [main] INFO snr.G - Populate candidates for type constraint subtype: Type3
+08:34:59.545 [main] INFO snr.G - Populate candidates for type variable Type14
+08:34:59.545 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+After TypeVariable: Type2, Candidates: 1
+   0. subtype: Type15
+   1. simple name: void
+   2. full name: void
+[void]
+After TypeVariable: Type11, Candidates: 1
+   0. field: Type12 UTF_8;
+   1. simple name: StandardCharsets
+[java.nio.charset.StandardCharsets]
+After TypeVariable: Type12, Candidates: 1
+[java.nio.charset.Charset]
+After TypeVariable: Type15, Candidates: 1
+[void]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: InputStream
+[java.io.InputStream, java.io.InputStream]
+After TypeVariable: Type4, Candidates: 2
+   0. simple name: IOException
+[java.io.IOException, java.io.IOException]
+After TypeVariable: Type9, Candidates: 2
+   0. simple name: Reader
+   1. subtype: Type10
+[java.io.Reader, java.io.Reader]
+After TypeVariable: Type10, Candidates: 2
+   0. method: Type15 <init>(Type13,Type14);
+   1. simple name: InputStreamReader
+[java.io.InputStreamReader, java.io.InputStreamReader]
+After TypeVariable: Type13, Candidates: 2
+   0. subtype: Type3
+[java.io.InputStream, java.io.InputStream]
+After TypeVariable: Type14, Candidates: 4
+   0. subtype: Type12
+[java.nio.charset.Charset, java.lang.String, java.lang.String, java.nio.charset.Charset]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	java.io.InputStreamReader	InputStreamReader
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder	java.nio.charset.CharsetDecoder	CharsetDecoder
+	openjdk:jdk:1.8.0:java.io.InputStream	java.io.InputStream	InputStream
+	openjdk:jdk:1.8.0:java.nio.charset.StandardCharsets	java.nio.charset.StandardCharsets	StandardCharsets
+	jar:android-13.jar:1:java.nio.charset.CharsetDecoder	java.nio.charset.CharsetDecoder	CharsetDecoder
+	jar:android-13.jar:1:java.io.IOException	java.io.IOException	IOException
+	openjdk:jdk:1.8.0:java.io.IOException	java.io.IOException	IOException
+	jar:android-13.jar:1:java.io.InputStreamReader	java.io.InputStreamReader	InputStreamReader
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:android-13.jar:1:java.nio.charset.Charset	java.nio.charset.Charset	Charset
+	openjdk:jdk:1.8.0:java.io.Reader	java.io.Reader	Reader
+	openjdk:jdk:1.8.0:java.nio.charset.Charset	java.nio.charset.Charset	Charset
+	jar:android-13.jar:1:java.io.Reader	java.io.Reader	Reader
+	jar:android-13.jar:1:java.io.InputStream	java.io.InputStream	InputStream
+Printing: jclasssuper.facts
+	openjdk:jdk:1.8.0:java.io.InputStream	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Reader	openjdk:jdk:1.8.0:java.io.Reader
+	openjdk:jdk:1.8.0:java.io.Reader	jar:android-13.jar:1:java.io.Reader
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.Reader	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.Reader	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.Reader	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.Reader	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.InputStreamReader	jar:android-13.jar:1:java.io.Reader
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:java.io.Reader
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.io.InputStreamReader	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	jar:android-13.jar:1:java.io.Reader
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	openjdk:jdk:1.8.0:java.io.Reader
+	jar:android-13.jar:1:java.nio.charset.Charset	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.nio.charset.CharsetDecoder	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder
+	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder	jar:android-13.jar:1:java.nio.charset.CharsetDecoder
+	jar:android-13.jar:1:java.nio.charset.Charset	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:java.io.InputStreamReader
+	openjdk:jdk:1.8.0:java.io.InputStreamReader	jar:android-13.jar:1:java.io.InputStreamReader
+	jar:android-13.jar:1:java.io.InputStream	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.nio.charset.StandardCharsets	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.io.IOException	jar:android-13.jar:1:java.io.IOException
+	jar:android-13.jar:1:java.io.IOException	openjdk:jdk:1.8.0:java.io.IOException
+	jar:android-13.jar:1:java.io.InputStream	openjdk:jdk:1.8.0:java.io.InputStream
+	openjdk:jdk:1.8.0:java.nio.charset.StandardCharsets	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.io.InputStream	jar:android-13.jar:1:java.io.InputStream
+	jar:android-13.jar:1:java.io.InputStream	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.io.IOException	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.nio.charset.Charset	openjdk:jdk:1.8.0:java.nio.charset.Charset
+	openjdk:jdk:1.8.0:java.nio.charset.Charset	jar:android-13.jar:1:java.nio.charset.Charset
+	jar:android-13.jar:1:java.io.IOException	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.nio.charset.CharsetDecoder	openjdk:jdk:1.8.0:java.lang.String
+	jar:android-13.jar:1:java.nio.charset.CharsetDecoder	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.nio.charset.Charset	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.nio.charset.Charset	openjdk:jdk:1.8.0:java.lang.String
+	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type2	void
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type9
+	Type13
+	Type14
+	Type15
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type11	openjdk:jdk:1.8.0:java.nio.charset.StandardCharsets
+	Type4	jar:android-13.jar:1:java.io.IOException
+	Type14	openjdk:jdk:1.8.0:java.lang.String
+	Type2	openjdk:jdk:1.8.0:void
+	Type13	jar:android-13.jar:1:java.io.InputStream
+	Type4	openjdk:jdk:1.8.0:java.io.IOException
+	Type14	jar:android-13.jar:1:java.lang.String
+	Type13	openjdk:jdk:1.8.0:java.io.InputStream
+	Type10	jar:android-13.jar:1:java.io.InputStreamReader
+	Type3	jar:android-13.jar:1:java.io.InputStream
+	Type9	openjdk:jdk:1.8.0:java.io.Reader
+	Type9	jar:android-13.jar:1:java.io.Reader
+	Type3	openjdk:jdk:1.8.0:java.io.InputStream
+	Type15	openjdk:jdk:1.8.0:void
+	Type10	openjdk:jdk:1.8.0:java.io.InputStreamReader
+	Type12	openjdk:jdk:1.8.0:java.nio.charset.Charset
+	Type14	openjdk:jdk:1.8.0:java.nio.charset.Charset
+	Type14	jar:android-13.jar:1:java.nio.charset.Charset
+Printing: jmethod_dependency.facts
+	0	Type10	Type15	<init>
+Printing: jsimplename.facts
+	Type2	void
+	Type3	InputStream
+	Type11	StandardCharsets
+	Type4	IOException
+	Type10	InputStreamReader
+	Type9	Reader
+Printing: jmethod.facts
+	0	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+	5	openjdk:jdk:1.8.0:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+	2	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+	3	openjdk:jdk:1.8.0:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+	4	openjdk:jdk:1.8.0:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+	1	jar:android-13.jar:1:java.io.InputStreamReader	openjdk:jdk:1.8.0:void	<init>	2
+Printing: jsupertype_dependency.facts
+	Type12	Type14
+	Type3	Type13
+	Type15	Type2
+	Type10	Type9
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	0	0	jar:android-13.jar:1:java.io.InputStream
+	0	1	jar:android-13.jar:1:java.nio.charset.CharsetDecoder
+	5	0	openjdk:jdk:1.8.0:java.io.InputStream
+	5	1	openjdk:jdk:1.8.0:java.lang.String
+	2	0	jar:android-13.jar:1:java.io.InputStream
+	2	1	jar:android-13.jar:1:java.lang.String
+	3	0	openjdk:jdk:1.8.0:java.io.InputStream
+	3	1	openjdk:jdk:1.8.0:java.nio.charset.CharsetDecoder
+	4	0	openjdk:jdk:1.8.0:java.io.InputStream
+	4	1	openjdk:jdk:1.8.0:java.nio.charset.Charset
+	1	0	jar:android-13.jar:1:java.io.InputStream
+	1	1	jar:android-13.jar:1:java.nio.charset.Charset
+Printing: jmethod_param_dependency.facts
+	0	0	Type13
+	0	1	Type14
+All artifact rank: [openjdk:jdk:1.8.0, jar:android-13.jar:1]
+Updated selected artifacts []
+Solved...
+Found Type4 -> java.io.IOException
+Added artifact: openjdk:jdk:1.8.0
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type14 -> java.lang.String
+Added artifact: openjdk:jdk:1.8.0
+Found Type11 -> java.nio.charset.StandardCharsets
+Added artifact: openjdk:jdk:1.8.0
+Found Type9 -> java.io.Reader
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type15 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type10 -> java.io.InputStreamReader
+Added artifact: openjdk:jdk:1.8.0
+Found Type12 -> java.nio.charset.Charset
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> java.io.InputStream
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type3 -> java.io.InputStream
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Quiting souffle
+Bind Type4 to java.io.IOException, dumping:
+Bind Type2 to void, dumping:
+Bind Type14 to java.lang.String, dumping:
+Bind Type11 to java.nio.charset.StandardCharsets, dumping:
+Bind Type15 to void, dumping:
+Bind Type9 to java.io.Reader, dumping:
+Bind Type10 to java.io.InputStreamReader, dumping:
+Bind Type12 to java.nio.charset.Charset, dumping:
+Bind Type13 to java.io.InputStream, dumping:
+Bind Type3 to java.io.InputStream, dumping:
+08:34:59.827 [main] INFO snr.k - Fixing Type3 with java.io.InputStream
+08:34:59.829 [main] INFO snr.k - Fixing Type4 with java.io.IOException
+08:34:59.829 [main] INFO snr.k - Fixing Type9 with java.io.Reader
+08:34:59.829 [main] INFO snr.k - Fixing Type10 with java.io.InputStreamReader
+08:34:59.829 [main] INFO snr.k - Fixing Type11 with java.nio.charset.StandardCharsets
+08:34:59.892 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+08:34:59.894 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+08:34:59.894 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+08:34:59.894 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.jdk;
+
+import java.nio.charset.StandardCharsets;
+import java.io.Reader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class jdk17 {
+	private static InputStream stream;
+
+	public static void h1() throws IOException {
+		int bufferSize = 1024;
+		char[] buffer = new char[bufferSize];
+		Reader in = new InputStreamReader(stream, StandardCharsets.UTF_8);
+	}
+}
+08:34:59.894 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+08:34:59.960 [main] INFO snr.e - Compilation takes 66 ms

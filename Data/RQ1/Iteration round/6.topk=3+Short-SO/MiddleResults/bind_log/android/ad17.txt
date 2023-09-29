@@ -1,0 +1,70 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad17.java
+Expect check=15
+Cannot find matching typeVariable for: public class ad17 {
+  TextView tv=new TextView(getContext());
+  private Context getContext(){
+    return null;
+  }
+}
+
+Did not find solution for node: ad17 with type Type1
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+Cannot find matching typeVariable for: tv=new TextView(getContext())
+For node: tv=new TextView(getContext()) expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: tv expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: new TextView(getContext()) expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: TextView expected fqn: android.widget.TextView with type: Type3 got: android.widget.TextView
+For node: getContext() expected fqn: android.content.Context with type: Type2 got: android.content.Context
+Cannot find matching typeVariable for: getContext
+For node: getContext expected fqn: android.content.Context with type: Type2 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type2 got: android.content.Context
+For node: Context expected fqn: android.content.Context with type: Type2 got: android.content.Context
+Cannot find matching typeVariable for: getContext
+Cannot find matching typeVariable for: private Context getContext(){
+  return null;
+}
+
+Cannot find matching typeVariable for: public class ad17 {
+  TextView tv=new TextView(getContext());
+  private Context getContext(){
+    return null;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.content.Context;
+import android.widget.TextView;
+public class ad17 {
+  TextView tv=new TextView(getContext());
+  private Context getContext(){
+    return null;
+  }
+}
+
+For node: null expected fqn: null with type: Type7 got: android.content.Context
+{Checked=13, Analyzed=12, Unsolved=1, Incorrect=1, Correct=11}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+Total stats
+{Checked=13, Analyzed=12, Unsolved=1, Incorrect=1, Correct=11}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=SimpleName: {Checked=6, Analyzed=5, Unsolved=1, Incorrect=0, Correct=5}
+android.=SimpleType: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+null=NullLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=1, Correct=0}
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,MethodInvocation,1,1,1,0,0
+android.,SimpleName,5,6,5,0,1
+android.,SimpleType,3,3,3,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+null,NullLiteral,1,1,0,1,0

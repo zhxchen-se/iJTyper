@@ -1,0 +1,115 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt15.java
+Expect check=30
+Cannot find matching typeVariable for: public class jt15 {
+  public static void h1(  long timestamp1,  long timestamp2){
+    Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+    Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+  }
+}
+
+Cannot find matching typeVariable for: jt15
+Cannot find matching typeVariable for: public class jt15 {
+  public static void h1(  long timestamp1,  long timestamp2){
+    Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+    Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import java.util.Calendar;
+import java.util.TimeZone;
+public class jt15 {
+  public static void h1(  long timestamp1,  long timestamp2){
+    Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+    Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(long timestamp1,long timestamp2){
+  Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+  Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+}
+
+Cannot find matching typeVariable for: public class jt15 {
+  public static void h1(  long timestamp1,  long timestamp2){
+    Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+    Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import java.util.Calendar;
+import java.util.TimeZone;
+public class jt15 {
+  public static void h1(  long timestamp1,  long timestamp2){
+    Calendar startDate=Calendar.getInstance(TimeZone.getDefault());
+    Calendar endDate=Calendar.getInstance(TimeZone.getDefault());
+  }
+}
+
+Cannot find matching typeVariable for: long timestamp1
+For node: long timestamp1 expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+For node: timestamp1 expected fqn: long with type: Type3 got: long
+Cannot find matching typeVariable for: long timestamp2
+For node: long timestamp2 expected fqn: long with type: Type3 got: long
+For node: long expected fqn: long with type: Type3 got: long
+For node: timestamp2 expected fqn: long with type: Type3 got: long
+Did not find solution for node: Calendar with type Type4
+Did not find solution for node: Calendar with type Type4
+Cannot find matching typeVariable for: startDate=Calendar.getInstance(TimeZone.getDefault())
+Did not find solution for node: startDate=Calendar.getInstance(TimeZone.getDefault()) with type Type4
+Did not find solution for node: startDate with type Type4
+Did not find solution for node: Calendar.getInstance(TimeZone.getDefault()) with type Type8
+Did not find solution for node: Calendar with type Type4
+Cannot find matching typeVariable for: getInstance
+Did not find solution for node: getInstance with type Type8
+Did not find solution for node: TimeZone.getDefault() with type Type6
+For node: TimeZone expected fqn: java.util.TimeZone with type: Type5 got: java.util.TimeZone
+Cannot find matching typeVariable for: getDefault
+Did not find solution for node: getDefault with type Type6
+Did not find solution for node: Calendar with type Type4
+Did not find solution for node: Calendar with type Type4
+Cannot find matching typeVariable for: endDate=Calendar.getInstance(TimeZone.getDefault())
+Did not find solution for node: endDate=Calendar.getInstance(TimeZone.getDefault()) with type Type4
+Did not find solution for node: endDate with type Type4
+Did not find solution for node: Calendar.getInstance(TimeZone.getDefault()) with type Type11
+Did not find solution for node: Calendar with type Type4
+Cannot find matching typeVariable for: getInstance
+Did not find solution for node: getInstance with type Type11
+For node: TimeZone.getDefault() expected fqn: java.util.TimeZone with type: Type7 got: java.util.TimeZone
+For node: TimeZone expected fqn: java.util.TimeZone with type: Type5 got: java.util.TimeZone
+Cannot find matching typeVariable for: getDefault
+For node: getDefault expected fqn: java.util.TimeZone with type: Type7 got: java.util.TimeZone
+{Checked=27, Analyzed=11, Unsolved=16, Incorrect=0, Correct=11}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=12, Analyzed=3, Unsolved=9, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+long=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=27, Analyzed=11, Unsolved=16, Incorrect=0, Correct=11}
+java=MethodInvocation: {Checked=4, Analyzed=1, Unsolved=3, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=12, Analyzed=3, Unsolved=9, Incorrect=0, Correct=3}
+java=SimpleType: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+long=PrimitiveType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+long=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java,MethodInvocation,1,4,1,0,3
+java,SimpleName,3,12,3,0,9
+java,SimpleType,0,2,0,0,2
+java,VariableDeclarationFragment,0,2,0,0,2
+long,PrimitiveType,2,2,2,0,0
+long,SimpleName,2,2,2,0,0
+long,SingleVariableDeclaration,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0

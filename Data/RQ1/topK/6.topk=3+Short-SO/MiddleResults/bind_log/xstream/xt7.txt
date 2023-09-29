@@ -1,0 +1,94 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xt7.java
+Expect check=15
+Cannot find matching typeVariable for: public class xt7 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.autodetectAnnotations(true);
+  }
+}
+
+Cannot find matching typeVariable for: xt7
+Cannot find matching typeVariable for: public class xt7 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.autodetectAnnotations(true);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import javax.swing.text.Position;
+public class xt7 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.autodetectAnnotations(true);
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  XStream xstream=new XStream();
+  xstream.autodetectAnnotations(true);
+}
+
+Cannot find matching typeVariable for: public class xt7 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.autodetectAnnotations(true);
+  }
+}
+
+Cannot find matching typeVariable for: package java.xstream;
+import com.thoughtworks.xstream.XStream;
+import javax.swing.text.Position;
+public class xt7 {
+  public static void h1(){
+    XStream xstream=new XStream();
+    xstream.autodetectAnnotations(true);
+  }
+}
+
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream=new XStream()
+For node: xstream=new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: new XStream() expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+For node: xstream.autodetectAnnotations(true) expected fqn: void with type: Type6 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type3 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: autodetectAnnotations
+For node: autodetectAnnotations expected fqn: void with type: Type6 got: void
+For node: true expected fqn: boolean with type: Type5 got: boolean
+{Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=12, Analyzed=12, Unsolved=0, Incorrect=0, Correct=12}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+com.thoughtworks.xstream.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean,BooleanLiteral,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,4,4,4,0,0
+com.thoughtworks.xstream.,SimpleType,2,2,2,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

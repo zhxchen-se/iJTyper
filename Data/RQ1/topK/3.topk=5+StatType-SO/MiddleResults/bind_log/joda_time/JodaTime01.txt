@@ -1,0 +1,283 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/JodaTime01.java
+Expect check=94
+Cannot find matching typeVariable for: public class JodaTime01 {
+  public static void main(  String[] args){
+    DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+    TimeZone timeZone=TimeZone.getDefault();
+    System.out.println(timeZone.getID());
+    System.out.println(timeZone.getDisplayName());
+    DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+    System.out.println(defaultTimeZone.getID());
+    System.out.println(defaultTimeZone.getName(0L));
+    DateTime currentTime=new DateTime();
+    DateTimeZone currentZone=currentTime.getZone();
+    System.out.println(currentZone.getID());
+    System.out.println(currentZone.getName(0L));
+  }
+}
+
+Cannot find matching typeVariable for: JodaTime01
+Cannot find matching typeVariable for: public class JodaTime01 {
+  public static void main(  String[] args){
+    DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+    TimeZone timeZone=TimeZone.getDefault();
+    System.out.println(timeZone.getID());
+    System.out.println(timeZone.getDisplayName());
+    DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+    System.out.println(defaultTimeZone.getID());
+    System.out.println(defaultTimeZone.getName(0L));
+    DateTime currentTime=new DateTime();
+    DateTimeZone currentZone=currentTime.getZone();
+    System.out.println(currentZone.getID());
+    System.out.println(currentZone.getName(0L));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.TimeZone;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.ISODateTimeFormat;
+public class JodaTime01 {
+  public static void main(  String[] args){
+    DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+    TimeZone timeZone=TimeZone.getDefault();
+    System.out.println(timeZone.getID());
+    System.out.println(timeZone.getDisplayName());
+    DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+    System.out.println(defaultTimeZone.getID());
+    System.out.println(defaultTimeZone.getName(0L));
+    DateTime currentTime=new DateTime();
+    DateTimeZone currentZone=currentTime.getZone();
+    System.out.println(currentZone.getID());
+    System.out.println(currentZone.getName(0L));
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: main
+Cannot find matching typeVariable for: public static void main(String[] args){
+  DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+  TimeZone timeZone=TimeZone.getDefault();
+  System.out.println(timeZone.getID());
+  System.out.println(timeZone.getDisplayName());
+  DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+  System.out.println(defaultTimeZone.getID());
+  System.out.println(defaultTimeZone.getName(0L));
+  DateTime currentTime=new DateTime();
+  DateTimeZone currentZone=currentTime.getZone();
+  System.out.println(currentZone.getID());
+  System.out.println(currentZone.getName(0L));
+}
+
+Cannot find matching typeVariable for: public class JodaTime01 {
+  public static void main(  String[] args){
+    DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+    TimeZone timeZone=TimeZone.getDefault();
+    System.out.println(timeZone.getID());
+    System.out.println(timeZone.getDisplayName());
+    DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+    System.out.println(defaultTimeZone.getID());
+    System.out.println(defaultTimeZone.getName(0L));
+    DateTime currentTime=new DateTime();
+    DateTimeZone currentZone=currentTime.getZone();
+    System.out.println(currentZone.getID());
+    System.out.println(currentZone.getName(0L));
+  }
+}
+
+Cannot find matching typeVariable for: package jodatime;
+import java.util.TimeZone;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.ISODateTimeFormat;
+public class JodaTime01 {
+  public static void main(  String[] args){
+    DateTimeFormatter timeParser=ISODateTimeFormat.timeParser();
+    TimeZone timeZone=TimeZone.getDefault();
+    System.out.println(timeZone.getID());
+    System.out.println(timeZone.getDisplayName());
+    DateTimeZone defaultTimeZone=DateTimeZone.getDefault();
+    System.out.println(defaultTimeZone.getID());
+    System.out.println(defaultTimeZone.getName(0L));
+    DateTime currentTime=new DateTime();
+    DateTimeZone currentZone=currentTime.getZone();
+    System.out.println(currentZone.getID());
+    System.out.println(currentZone.getName(0L));
+  }
+}
+
+Cannot find matching typeVariable for: String[] args
+For node: String[] args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String[] expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: String expected fqn: java.lang.String with type: Type3 got: java.lang.String
+For node: args expected fqn: java.lang.String[] with type: Type4 got: java.lang.String[]
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: DateTimeFormatter expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+Cannot find matching typeVariable for: timeParser=ISODateTimeFormat.timeParser()
+For node: timeParser=ISODateTimeFormat.timeParser() expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: timeParser expected fqn: org.joda.time.format.DateTimeFormatter with type: Type5 got: org.joda.time.format.DateTimeFormatter
+For node: ISODateTimeFormat.timeParser() expected fqn: org.joda.time.format.DateTimeFormatter with type: Type7 got: org.joda.time.format.DateTimeFormatter
+For node: ISODateTimeFormat expected fqn: org.joda.time.format.ISODateTimeFormat with type: Type6 got: org.joda.time.format.ISODateTimeFormat
+Cannot find matching typeVariable for: timeParser
+For node: timeParser expected fqn: org.joda.time.format.DateTimeFormatter with type: Type7 got: org.joda.time.format.DateTimeFormatter
+Did not find solution for node: TimeZone with type Type9
+Did not find solution for node: TimeZone with type Type9
+Cannot find matching typeVariable for: timeZone=TimeZone.getDefault()
+Did not find solution for node: timeZone=TimeZone.getDefault() with type Type9
+Did not find solution for node: timeZone with type Type9
+Did not find solution for node: TimeZone.getDefault() with type Type10
+Did not find solution for node: TimeZone with type Type9
+Cannot find matching typeVariable for: getDefault
+Did not find solution for node: getDefault with type Type10
+For node: System.out.println(timeZone.getID()) expected fqn: void with type: Type16 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type16 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type16 got: void
+Did not find solution for node: timeZone.getID() with type Type12
+Did not find solution for node: timeZone with type Type9
+Cannot find matching typeVariable for: getID
+Did not find solution for node: getID with type Type12
+For node: System.out.println(timeZone.getDisplayName()) expected fqn: void with type: Type21 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type21 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type21 got: void
+Did not find solution for node: timeZone.getDisplayName() with type Type19
+Did not find solution for node: timeZone with type Type9
+Cannot find matching typeVariable for: getDisplayName
+Did not find solution for node: getDisplayName with type Type19
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: defaultTimeZone=DateTimeZone.getDefault()
+For node: defaultTimeZone=DateTimeZone.getDefault() expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: defaultTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: DateTimeZone.getDefault() expected fqn: org.joda.time.DateTimeZone with type: Type25 got: org.joda.time.DateTimeZone
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: getDefault
+For node: getDefault expected fqn: org.joda.time.DateTimeZone with type: Type25 got: org.joda.time.DateTimeZone
+For node: System.out.println(defaultTimeZone.getID()) expected fqn: void with type: Type29 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type29 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type29 got: void
+Did not find solution for node: defaultTimeZone.getID() with type Type27
+For node: defaultTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: getID
+Did not find solution for node: getID with type Type27
+For node: System.out.println(defaultTimeZone.getName(0L)) expected fqn: void with type: Type36 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type36 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type36 got: void
+Did not find solution for node: defaultTimeZone.getName(0L) with type Type33
+For node: defaultTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: getName
+Did not find solution for node: getName with type Type33
+For node: 0L expected fqn: long with type: Type32 got: long
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: currentTime=new DateTime()
+For node: currentTime=new DateTime() expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: currentTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: new DateTime() expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: DateTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: DateTimeZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: currentZone=currentTime.getZone()
+For node: currentZone=currentTime.getZone() expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: currentZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+For node: currentTime.getZone() expected fqn: org.joda.time.DateTimeZone with type: Type41 got: org.joda.time.DateTimeZone
+For node: currentTime expected fqn: org.joda.time.DateTime with type: Type39 got: org.joda.time.DateTime
+Cannot find matching typeVariable for: getZone
+For node: getZone expected fqn: org.joda.time.DateTimeZone with type: Type41 got: org.joda.time.DateTimeZone
+For node: System.out.println(currentZone.getID()) expected fqn: void with type: Type43 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type43 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type43 got: void
+For node: currentZone.getID() expected fqn: java.lang.String with type: Type28 got: java.lang.String
+For node: currentZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: getID
+For node: getID expected fqn: java.lang.String with type: Type28 got: java.lang.String
+For node: System.out.println(currentZone.getName(0L)) expected fqn: void with type: Type46 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type46 got: void
+For node: System expected fqn: java.lang.System with type: Type14 got: java.lang.System
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type46 got: void
+For node: currentZone.getName(0L) expected fqn: java.lang.String with type: Type35 got: java.lang.String
+For node: currentZone expected fqn: org.joda.time.DateTimeZone with type: Type24 got: org.joda.time.DateTimeZone
+Cannot find matching typeVariable for: getName
+For node: getName expected fqn: java.lang.String with type: Type35 got: java.lang.String
+For node: 0L expected fqn: long with type: Type32 got: long
+{Checked=91, Analyzed=74, Unsolved=17, Incorrect=6, Correct=68}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+java=SimpleName: {Checked=26, Analyzed=16, Unsolved=10, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+Total stats
+{Checked=91, Analyzed=74, Unsolved=17, Incorrect=6, Correct=68}
+java=ArrayType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=MethodInvocation: {Checked=7, Analyzed=2, Unsolved=5, Incorrect=0, Correct=2}
+java=QualifiedName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=6, Correct=0}
+java=SimpleName: {Checked=26, Analyzed=16, Unsolved=10, Incorrect=0, Correct=16}
+java=SimpleType: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+java=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+long=NumberLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+org.joda.time.=SimpleName: {Checked=19, Analyzed=19, Unsolved=0, Incorrect=0, Correct=19}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+org.joda.time.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=MethodInvocation: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=6, Analyzed=6, Unsolved=0, Incorrect=0, Correct=6}
+java,ArrayType,1,1,1,0,0
+java,MethodInvocation,2,7,2,0,5
+java,QualifiedName,6,6,0,6,0
+java,SimpleName,16,26,16,0,10
+java,SimpleType,1,2,1,0,1
+java,SingleVariableDeclaration,1,1,1,0,0
+java,VariableDeclarationFragment,0,1,0,0,1
+long,NumberLiteral,2,2,2,0,0
+org.joda.time.,ClassInstanceCreation,1,1,1,0,0
+org.joda.time.,MethodInvocation,3,3,3,0,0
+org.joda.time.,SimpleName,19,19,19,0,0
+org.joda.time.,SimpleType,5,5,5,0,0
+org.joda.time.,VariableDeclarationFragment,4,4,4,0,0
+void,MethodInvocation,6,6,6,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,6,6,6,0,0

@@ -1,0 +1,494 @@
+13:31:49.474 [main] INFO snr.h - Building CompilationUnit takes 435 ms
+13:31:49.590 [main] INFO snr.e - Compilation takes 113 ms
+Instant cannot be resolved to a type
+Instant cannot be resolved to a type
+Date cannot be resolved to a type
+Interval cannot be resolved to a type
+Interval cannot be resolved to a type
+ReadableInstant cannot be resolved to a type
+Interval cannot be resolved to a type
+Interval cannot be resolved to a type
+ReadableInstant cannot be resolved to a type
+Finding class definition name: Interval isfull? false fields: [] methods: [overlaps, <init>] argument sizes: [1, 2]
+Adding candidates [org.joda.time.Interval] to Type12
+Return without setting candidates for Type9
+Adding candidate void to Type2
+Return without setting candidates for Type14
+Return without setting candidates for Type17
+Return without setting candidates for Type20
+Finding class definition name: Date isfull? false fields: [] methods: [<init>, getTime] argument sizes: [0, 0]
+Adding candidates [java.util.Date, java.util.Date] to Type6
+Return without setting candidates for Type21
+Return without setting candidates for Type8
+Return without setting candidates for Type7
+Return without setting candidates for Type18
+Return without setting candidates for Type15
+Adding candidate boolean to Type19
+Return without setting candidates for Type16
+Return without setting candidates for Type10
+Finding class definition name: Instant isfull? false fields: [] methods: [<init>] argument sizes: [1]
+Adding candidates [org.joda.time.Instant] to Type5
+Return without setting candidates for Type22
+Return without setting candidates for Type11
+Finding class definition name: ReadableInstant isfull? false fields: [] methods: [] argument sizes: []
+Adding candidates [org.joda.time.ReadableInstant] to Type13
+13:31:49.862 [main] INFO snr.G - Loading initial candidates takes 190 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type11
+   3. subtype: Type17
+   4. subtype: Type7
+[void]
+Before TypeVariable: Type5, Candidates: 1
+   0. method: Type11 <init>(Type10);
+   1. simple name: Instant
+[org.joda.time.Instant]
+Before TypeVariable: Type12, Candidates: 1
+   0. simple name: Interval
+   1. method: Type17 <init>(Type15,Type16);
+   2. method: Type22 overlaps(Type21);
+[org.joda.time.Interval]
+Before TypeVariable: Type13, Candidates: 1
+   0. simple name: ReadableInstant
+[org.joda.time.ReadableInstant]
+Before TypeVariable: Type19, Candidates: 1
+   0. simple name: boolean
+   1. full name: boolean
+   2. subtype: Type20
+[boolean]
+Before TypeVariable: Type6, Candidates: 2
+   0. method: Type9 getTime();
+   1. method: Type7 <init>();
+   2. simple name: Date
+[java.util.Date, java.util.Date]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type9
+[]
+Before TypeVariable: Type9, Candidates: 0
+[]
+Before TypeVariable: Type10, Candidates: 0
+   0. subtype: Type8
+[]
+Before TypeVariable: Type11, Candidates: 0
+[]
+Before TypeVariable: Type14, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type15, Candidates: 0
+   0. subtype: Type5
+[]
+Before TypeVariable: Type16, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type17, Candidates: 0
+[]
+Before TypeVariable: Type18, Candidates: 0
+   0. subtype: Type13
+[]
+Before TypeVariable: Type20, Candidates: 0
+   0. subtype: Type22
+[]
+Before TypeVariable: Type21, Candidates: 0
+   0. subtype: Type12
+[]
+Before TypeVariable: Type22, Candidates: 0
+[]
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type2
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint full name: void
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type19
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint full name: boolean
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type2
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type5
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: Instant
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type6
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: Date
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type12
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: Interval
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type13
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: ReadableInstant
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type19
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint simple name: boolean
+13:31:49.870 [main] INFO snr.G - Populate candidates for type variable Type5
+13:31:49.870 [main] INFO snr.G - Populate candidates for type constraint method: Type11 <init>(Type10);
+Processing method constraint method: Type11 <init>(Type10); on Type5
+Current solution for c Type5 is uninit ? false [org.joda.time.Instant]
+Current solution for r Type11 is uninit ? false []
+Current solution for p0 Type10 is uninit ? false []
+Looking at method: public V <init>(J)
+Looking at method: public V <init>(Ljava/lang/Object;)
+updated solution for c Type5 [org.joda.time.Instant]
+updated solution for r Type11 [void]
+updated solution for p0 Type10 [long, java.lang.Object]
+13:31:49.872 [main] INFO snr.G - Populate candidates for type variable Type6
+13:31:49.872 [main] INFO snr.G - Populate candidates for type constraint method: Type9 getTime();
+Processing method constraint method: Type9 getTime(); on Type6
+Current solution for c Type6 is uninit ? false [java.util.Date, java.util.Date]
+Current solution for r Type9 is uninit ? false []
+Looking at method: public J getTime()
+Looking at method: public J getTime()
+updated solution for c Type6 [java.util.Date, java.util.Date]
+updated solution for r Type9 [long]
+13:31:49.872 [main] INFO snr.G - Populate candidates for type variable Type6
+13:31:49.872 [main] INFO snr.G - Populate candidates for type constraint method: Type7 <init>();
+Processing method constraint method: Type7 <init>(); on Type6
+Current solution for c Type6 is uninit ? false [java.util.Date, java.util.Date]
+Current solution for r Type7 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type6 [java.util.Date, java.util.Date]
+updated solution for r Type7 [void]
+13:31:49.872 [main] INFO snr.G - Populate candidates for type variable Type12
+13:31:49.872 [main] INFO snr.G - Populate candidates for type constraint method: Type17 <init>(Type15,Type16);
+Processing method constraint method: Type17 <init>(Type15,Type16); on Type12
+Current solution for c Type12 is uninit ? false [org.joda.time.Interval]
+Current solution for r Type17 is uninit ? false []
+Current solution for p0 Type15 is uninit ? false []
+Current solution for p1 Type16 is uninit ? false []
+Looking at method: public V <init>(Lorg/joda/time/ReadablePeriod;Lorg/joda/time/ReadableInstant;)
+Looking at method: public V <init>(Lorg/joda/time/ReadableInstant;Lorg/joda/time/ReadablePeriod;)
+Looking at method: public V <init>(Lorg/joda/time/ReadableDuration;Lorg/joda/time/ReadableInstant;)
+Looking at method: public V <init>(Lorg/joda/time/ReadableInstant;Lorg/joda/time/ReadableDuration;)
+Looking at method: public V <init>(JJ)
+Looking at method: public V <init>(Ljava/lang/Object;Lorg/joda/time/Chronology;)
+Looking at method: public V <init>(Lorg/joda/time/ReadableInstant;Lorg/joda/time/ReadableInstant;)
+updated solution for c Type12 [org.joda.time.Interval]
+updated solution for r Type17 [void]
+updated solution for p0 Type15 [org.joda.time.ReadableDuration, org.joda.time.ReadableInstant, org.joda.time.ReadablePeriod, long, java.lang.Object]
+updated solution for p1 Type16 [org.joda.time.Chronology, org.joda.time.ReadableDuration, org.joda.time.ReadableInstant, org.joda.time.ReadablePeriod, long]
+13:31:49.874 [main] INFO snr.G - Populate candidates for type variable Type12
+13:31:49.874 [main] INFO snr.G - Populate candidates for type constraint method: Type22 overlaps(Type21);
+Processing method constraint method: Type22 overlaps(Type21); on Type12
+Current solution for c Type12 is uninit ? false [org.joda.time.Interval]
+Current solution for r Type22 is uninit ? false []
+Current solution for p0 Type21 is uninit ? false []
+Looking at method: public Z overlaps(Lorg/joda/time/ReadableInterval;)
+updated solution for c Type12 [org.joda.time.Interval]
+updated solution for r Type22 [boolean]
+updated solution for p0 Type21 [org.joda.time.ReadableInterval]
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type2
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type2
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type11
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type2
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type17
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type8
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type9
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type10
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type8
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type14
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+13:31:49.875 [main] INFO snr.G - Populate candidates for type variable Type15
+13:31:49.875 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+13:31:49.876 [main] INFO snr.G - Populate candidates for type variable Type16
+13:31:49.876 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+13:31:49.876 [main] INFO snr.G - Populate candidates for type variable Type18
+13:31:49.876 [main] INFO snr.G - Populate candidates for type constraint subtype: Type13
+13:31:49.877 [main] INFO snr.G - Populate candidates for type variable Type19
+13:31:49.877 [main] INFO snr.G - Populate candidates for type constraint subtype: Type20
+13:31:49.877 [main] INFO snr.G - Populate candidates for type variable Type20
+13:31:49.877 [main] INFO snr.G - Populate candidates for type constraint subtype: Type22
+13:31:49.877 [main] INFO snr.G - Populate candidates for type variable Type21
+13:31:49.877 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+After TypeVariable: Type2, Candidates: 1
+   0. full name: void
+   1. simple name: void
+   2. subtype: Type11
+   3. subtype: Type17
+   4. subtype: Type7
+[void]
+After TypeVariable: Type5, Candidates: 1
+   0. method: Type11 <init>(Type10);
+   1. simple name: Instant
+[org.joda.time.Instant]
+After TypeVariable: Type7, Candidates: 1
+[void]
+After TypeVariable: Type9, Candidates: 1
+[long]
+After TypeVariable: Type11, Candidates: 1
+[void]
+After TypeVariable: Type12, Candidates: 1
+   0. simple name: Interval
+   1. method: Type17 <init>(Type15,Type16);
+   2. method: Type22 overlaps(Type21);
+[org.joda.time.Interval]
+After TypeVariable: Type13, Candidates: 1
+   0. simple name: ReadableInstant
+[org.joda.time.ReadableInstant]
+After TypeVariable: Type14, Candidates: 1
+   0. subtype: Type13
+[org.joda.time.ReadableInstant]
+After TypeVariable: Type16, Candidates: 1
+   0. subtype: Type13
+[org.joda.time.ReadableInstant]
+After TypeVariable: Type17, Candidates: 1
+[void]
+After TypeVariable: Type18, Candidates: 1
+   0. subtype: Type13
+[org.joda.time.ReadableInstant]
+After TypeVariable: Type19, Candidates: 1
+   0. simple name: boolean
+   1. full name: boolean
+   2. subtype: Type20
+[boolean]
+After TypeVariable: Type20, Candidates: 1
+   0. subtype: Type22
+[boolean]
+After TypeVariable: Type21, Candidates: 1
+   0. subtype: Type12
+[org.joda.time.ReadableInterval]
+After TypeVariable: Type22, Candidates: 1
+[boolean]
+After TypeVariable: Type6, Candidates: 2
+   0. method: Type9 getTime();
+   1. method: Type7 <init>();
+   2. simple name: Date
+[java.util.Date, java.util.Date]
+After TypeVariable: Type8, Candidates: 2
+   0. subtype: Type9
+[long, java.lang.Object]
+After TypeVariable: Type10, Candidates: 2
+   0. subtype: Type8
+[long, java.lang.Object]
+After TypeVariable: Type15, Candidates: 2
+   0. subtype: Type5
+[org.joda.time.ReadableInstant, java.lang.Object]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadablePeriod	org.joda.time.ReadablePeriod	ReadablePeriod
+	jar:android-13.jar:1:java.util.Date	java.util.Date	Date
+	jar:joda-time-2.0.jar:1:org.joda.time.Instant	org.joda.time.Instant	Instant
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableDuration	org.joda.time.ReadableDuration	ReadableDuration
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant	org.joda.time.ReadableInstant	ReadableInstant
+	openjdk:jdk:1.8.0:java.util.Date	java.util.Date	Date
+	jar:joda-time-2.0.jar:1:org.joda.time.Interval	org.joda.time.Interval	Interval
+	openjdk:jdk:1.8.0:java.lang.Object	java.lang.Object	Object
+	openjdk:jdk:1.8.0:boolean	boolean	boolean
+	openjdk:jdk:1.8.0:long	long	long
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	org.joda.time.Chronology	Chronology
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInterval	org.joda.time.ReadableInterval	ReadableInterval
+Printing: jclasssuper.facts
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant	openjdk:jdk:1.8.0:java.lang.Object
+	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadablePeriod	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:java.lang.Object
+	openjdk:jdk:1.8.0:java.util.Date	jar:android-13.jar:1:java.util.Date
+	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:java.util.Date
+	openjdk:jdk:1.8.0:java.util.Date	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInterval	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.Instant	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	jar:joda-time-2.0.jar:1:org.joda.time.Instant	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.ReadableDuration	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.Chronology	openjdk:jdk:1.8.0:java.lang.Object
+	jar:joda-time-2.0.jar:1:org.joda.time.Interval	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInterval
+Printing: jfqlname.facts
+	Type2	void
+	Type19	boolean
+Printing: type.facts
+	Type2
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type13
+	Type14
+	Type15
+	Type16
+	Type20
+	Type21
+	Type10
+	Type22
+	Type11
+	Type12
+	Type17
+	Type18
+	Type19
+Printing: candidate.facts
+	Type7	openjdk:jdk:1.8.0:void
+	Type2	openjdk:jdk:1.8.0:void
+	Type6	openjdk:jdk:1.8.0:java.util.Date
+	Type5	jar:joda-time-2.0.jar:1:org.joda.time.Instant
+	Type18	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	Type11	openjdk:jdk:1.8.0:void
+	Type21	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInterval
+	Type22	openjdk:jdk:1.8.0:boolean
+	Type20	openjdk:jdk:1.8.0:boolean
+	Type8	openjdk:jdk:1.8.0:long
+	Type12	jar:joda-time-2.0.jar:1:org.joda.time.Interval
+	Type9	openjdk:jdk:1.8.0:long
+	Type17	openjdk:jdk:1.8.0:void
+	Type6	jar:android-13.jar:1:java.util.Date
+	Type8	openjdk:jdk:1.8.0:java.lang.Object
+	Type19	openjdk:jdk:1.8.0:boolean
+	Type15	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	Type15	openjdk:jdk:1.8.0:java.lang.Object
+	Type16	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	Type13	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	Type14	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	Type10	openjdk:jdk:1.8.0:long
+	Type10	openjdk:jdk:1.8.0:java.lang.Object
+Printing: jmethod_dependency.facts
+	0	Type12	Type17	<init>
+	2	Type6	Type9	getTime
+	6	Type6	Type7	<init>
+	1	Type12	Type22	overlaps
+	10	Type5	Type11	<init>
+Printing: jsimplename.facts
+	Type12	Interval
+	Type2	void
+	Type5	Instant
+	Type19	boolean
+	Type6	Date
+	Type13	ReadableInstant
+Printing: jmethod.facts
+	4	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	5	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	8	openjdk:jdk:1.8.0:java.util.Date	openjdk:jdk:1.8.0:long	getTime	0
+	9	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:long	getTime	0
+	6	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	0	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	3	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	7	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:boolean	overlaps	1
+	38	jar:joda-time-2.0.jar:1:org.joda.time.Instant	openjdk:jdk:1.8.0:void	<init>	1
+	1	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	39	jar:joda-time-2.0.jar:1:org.joda.time.Instant	openjdk:jdk:1.8.0:void	<init>	1
+	2	jar:joda-time-2.0.jar:1:org.joda.time.Interval	openjdk:jdk:1.8.0:void	<init>	2
+	20	openjdk:jdk:1.8.0:java.util.Date	openjdk:jdk:1.8.0:void	<init>	0
+	21	jar:android-13.jar:1:java.util.Date	openjdk:jdk:1.8.0:void	<init>	0
+Printing: jsupertype_dependency.facts
+	Type9	Type8
+	Type13	Type14
+	Type12	Type21
+	Type22	Type20
+	Type13	Type16
+	Type17	Type2
+	Type7	Type2
+	Type5	Type15
+	Type20	Type19
+	Type8	Type10
+	Type13	Type18
+	Type11	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	4	0	openjdk:jdk:1.8.0:long
+	4	1	openjdk:jdk:1.8.0:long
+	5	0	openjdk:jdk:1.8.0:java.lang.Object
+	5	1	jar:joda-time-2.0.jar:1:org.joda.time.Chronology
+	6	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	6	1	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	0	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadablePeriod
+	0	1	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	3	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	3	1	jar:joda-time-2.0.jar:1:org.joda.time.ReadableDuration
+	7	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInterval
+	38	0	openjdk:jdk:1.8.0:long
+	1	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+	1	1	jar:joda-time-2.0.jar:1:org.joda.time.ReadablePeriod
+	39	0	openjdk:jdk:1.8.0:java.lang.Object
+	2	0	jar:joda-time-2.0.jar:1:org.joda.time.ReadableDuration
+	2	1	jar:joda-time-2.0.jar:1:org.joda.time.ReadableInstant
+Printing: jmethod_param_dependency.facts
+	0	0	Type15
+	0	1	Type16
+	1	0	Type21
+	10	0	Type10
+All artifact rank: [jar:joda-time-2.0.jar:1, jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type21 -> org.joda.time.ReadableInterval
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type18 -> org.joda.time.ReadableInstant
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type19 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type14 -> org.joda.time.ReadableInstant
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type16 -> org.joda.time.ReadableInstant
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type10 -> long
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type12 -> org.joda.time.Interval
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type17 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type20 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type8 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type7 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type15 -> org.joda.time.ReadableInstant
+Added artifact: jar:joda-time-2.0.jar:1
+Found Type11 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type22 -> boolean
+Added artifact: openjdk:jdk:1.8.0
+Found Type13 -> org.joda.time.ReadableInstant
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Found Type9 -> long
+Added artifact: openjdk:jdk:1.8.0
+Found Type6 -> java.util.Date
+Added artifact: openjdk:jdk:1.8.0
+Found Type5 -> org.joda.time.Instant
+Added artifact: jar:joda-time-2.0.jar:1
+Solved...
+Quiting souffle
+Bind Type12 to org.joda.time.Interval, dumping:
+Bind Type9 to long, dumping:
+Bind Type2 to void, dumping:
+Bind Type14 to org.joda.time.ReadableInstant, dumping:
+Bind Type17 to void, dumping:
+Bind Type20 to boolean, dumping:
+Bind Type21 to org.joda.time.ReadableInterval, dumping:
+Bind Type8 to long, dumping:
+Bind Type6 to java.util.Date, dumping:
+Bind Type18 to org.joda.time.ReadableInstant, dumping:
+Bind Type7 to void, dumping:
+Bind Type19 to boolean, dumping:
+Bind Type15 to org.joda.time.ReadableInstant, dumping:
+Bind Type16 to org.joda.time.ReadableInstant, dumping:
+Bind Type10 to long, dumping:
+Bind Type11 to void, dumping:
+Bind Type22 to boolean, dumping:
+Bind Type5 to org.joda.time.Instant, dumping:
+Bind Type13 to org.joda.time.ReadableInstant, dumping:
+13:31:50.066 [main] INFO snr.k - Fixing Type5 with org.joda.time.Instant
+13:31:50.067 [main] INFO snr.k - Fixing Type5 with org.joda.time.Instant
+13:31:50.067 [main] INFO snr.k - Fixing Type6 with java.util.Date
+13:31:50.067 [main] INFO snr.k - Fixing Type12 with org.joda.time.Interval
+13:31:50.067 [main] INFO snr.k - Fixing Type12 with org.joda.time.Interval
+13:31:50.067 [main] INFO snr.k - Fixing Type13 with org.joda.time.ReadableInstant
+13:31:50.068 [main] INFO snr.k - Fixing Type12 with org.joda.time.Interval
+13:31:50.068 [main] INFO snr.k - Fixing Type12 with org.joda.time.Interval
+13:31:50.068 [main] INFO snr.k - Fixing Type13 with org.joda.time.ReadableInstant
+13:31:50.114 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+13:31:50.116 [main] INFO org.javelus.snr.compile.SnRBuilder - openjdk:jdk:1.8.0
+13:31:50.116 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:joda-time-2.0.jar:1
+13:31:50.116 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+13:31:50.116 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package jodatime;
+
+import org.joda.time.Instant;
+import java.util.Date;
+import org.joda.time.Interval;
+import org.joda.time.ReadableInstant;
+
+//ID = 7471775
+public class JodaTime19 {
+	public static void main(String[] args) {
+		Instant now = new Instant(new Date().getTime());
+		Interval i2 = new Interval(now, (ReadableInstant) null);
+		Interval i1 = new Interval(now, (ReadableInstant) null);
+		boolean overlapping = i2.overlaps(i1);
+	}
+}
+13:31:50.116 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+13:31:50.151 [main] INFO snr.e - Compilation takes 35 ms

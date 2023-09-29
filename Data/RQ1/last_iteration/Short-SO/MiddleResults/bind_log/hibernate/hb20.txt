@@ -1,0 +1,143 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb20.java
+Expect check=26
+Cannot find matching typeVariable for: public class hb20 {
+  private static HibernateUtil HibernateUtils;
+  public static void h1(){
+    Transaction tx=null;
+    FragmentManager session=null;
+    tx=(Transaction)session.beginTransaction();
+  }
+}
+
+Did not find solution for node: hb20 with type Type1
+For node: HibernateUtil expected fqn: net.sf.gilead.core.hibernate.HibernateUtil with type: Type3 got: net.sf.gilead.core.hibernate.HibernateUtil
+For node: HibernateUtil expected fqn: net.sf.gilead.core.hibernate.HibernateUtil with type: Type3 got: net.sf.gilead.core.hibernate.HibernateUtil
+Cannot find matching typeVariable for: HibernateUtils
+For node: HibernateUtils expected fqn: net.sf.gilead.core.hibernate.HibernateUtil with type: Type3 got: net.sf.gilead.core.hibernate.HibernateUtil
+Cannot find matching typeVariable for: HibernateUtils
+Cannot find matching typeVariable for: private static HibernateUtil HibernateUtils;
+
+Cannot find matching typeVariable for: public class hb20 {
+  private static HibernateUtil HibernateUtils;
+  public static void h1(){
+    Transaction tx=null;
+    FragmentManager session=null;
+    tx=(Transaction)session.beginTransaction();
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import android.app.FragmentManager;
+import net.sf.gilead.core.hibernate.HibernateUtil;
+import org.hibernate.Transaction;
+public class hb20 {
+  private static HibernateUtil HibernateUtils;
+  public static void h1(){
+    Transaction tx=null;
+    FragmentManager session=null;
+    tx=(Transaction)session.beginTransaction();
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: h1
+Cannot find matching typeVariable for: public static void h1(){
+  Transaction tx=null;
+  FragmentManager session=null;
+  tx=(Transaction)session.beginTransaction();
+}
+
+Cannot find matching typeVariable for: public class hb20 {
+  private static HibernateUtil HibernateUtils;
+  public static void h1(){
+    Transaction tx=null;
+    FragmentManager session=null;
+    tx=(Transaction)session.beginTransaction();
+  }
+}
+
+Cannot find matching typeVariable for: package java.hibernate;
+import android.app.FragmentManager;
+import net.sf.gilead.core.hibernate.HibernateUtil;
+import org.hibernate.Transaction;
+public class hb20 {
+  private static HibernateUtil HibernateUtils;
+  public static void h1(){
+    Transaction tx=null;
+    FragmentManager session=null;
+    tx=(Transaction)session.beginTransaction();
+  }
+}
+
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+Cannot find matching typeVariable for: tx=null
+For node: tx=null expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: tx expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: null expected fqn: null with type: Type5 got: org.hibernate.Transaction
+For node: FragmentManager expected fqn: android.app.FragmentManager with type: Type6 got: android.app.FragmentManager
+For node: FragmentManager expected fqn: android.app.FragmentManager with type: Type6 got: android.app.FragmentManager
+Cannot find matching typeVariable for: session=null
+For node: session=null expected fqn: android.app.FragmentManager with type: Type6 got: android.app.FragmentManager
+For node: session expected fqn: android.app.FragmentManager with type: Type6 got: android.app.FragmentManager
+For node: null expected fqn: null with type: Type7 got: android.app.FragmentManager
+For node: tx=(Transaction)session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: tx expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: (Transaction)session.beginTransaction() expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+For node: Transaction expected fqn: org.hibernate.Transaction with type: Type4 got: org.hibernate.Transaction
+Did not find solution for node: session.beginTransaction() with type Type8
+For node: session expected fqn: android.app.FragmentManager with type: Type6 got: android.app.FragmentManager
+Cannot find matching typeVariable for: beginTransaction
+Did not find solution for node: beginTransaction with type Type8
+{Checked=23, Analyzed=20, Unsolved=3, Incorrect=2, Correct=18}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=23, Analyzed=20, Unsolved=3, Incorrect=2, Correct=18}
+=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=4, Analyzed=3, Unsolved=1, Incorrect=0, Correct=3}
+android.=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+org.hibernate.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.hibernate.=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+org.hibernate.=SimpleType: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+,SimpleName,1,1,1,0,0
+,SimpleType,1,1,1,0,0
+,VariableDeclarationFragment,1,1,1,0,0
+android.,MethodInvocation,0,1,0,0,1
+android.,SimpleName,3,4,3,0,1
+android.,SimpleType,1,1,1,0,0
+android.,VariableDeclarationFragment,1,1,1,0,0
+java,SimpleName,0,1,0,0,1
+null,NullLiteral,2,2,0,2,0
+org.hibernate.,Assignment,1,1,1,0,0
+org.hibernate.,CastExpression,1,1,1,0,0
+org.hibernate.,SimpleName,4,4,4,0,0
+org.hibernate.,SimpleType,2,2,2,0,0
+org.hibernate.,VariableDeclarationFragment,1,1,1,0,0
+void,PrimitiveType,1,1,1,0,0

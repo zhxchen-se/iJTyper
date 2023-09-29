@@ -1,0 +1,102 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/hb17.java
+Exception repair: java.lang.UnsupportedOperationException: TypeFactory could not be a valid type name or a variable name.
+java.lang.UnsupportedOperationException: TypeFactory could not be a valid type name or a variable name.
+	at snr.o.a(Unknown Source)
+	at snr.a.a(Unknown Source)
+	at snr.a.endVisit(Unknown Source)
+	at org.eclipse.jdt.core.dom.MethodInvocation.accept0(MethodInvocation.java:230)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.CastExpression.accept0(CastExpression.java:155)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.VariableDeclarationFragment.accept0(VariableDeclarationFragment.java:238)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.VariableDeclarationStatement.accept0(VariableDeclarationStatement.java:254)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:128)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChild(ASTNode.java:3019)
+	at org.eclipse.jdt.core.dom.MethodDeclaration.accept0(MethodDeclaration.java:698)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.TypeDeclaration.accept0(TypeDeclaration.java:447)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at org.eclipse.jdt.core.dom.ASTNode.acceptChildren(ASTNode.java:3042)
+	at org.eclipse.jdt.core.dom.CompilationUnit.accept0(CompilationUnit.java:258)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2971)
+	at snr.a.<init>(Unknown Source)
+	at snr.k.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at org.javelus.snr.compile.SnRBuilder.a(Unknown Source)
+	at snr.aQ.a(Unknown Source)
+	at org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT.main(Unknown Source)
+Expect check=36
+{Checked=36, Analyzed=0, Unsolved=36, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InstanceofExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.apache.=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.apache.=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.apache.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+Total stats
+{Checked=36, Analyzed=0, Unsolved=36, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+boolean=InstanceofExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=SimpleName: {Checked=5, Analyzed=0, Unsolved=5, Incorrect=0, Correct=0}
+java=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=TypeDeclaration: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+null=NullLiteral: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+org.apache.=SimpleName: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.apache.=SimpleType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.apache.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=CastExpression: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+org.hibernate.=SimpleName: {Checked=7, Analyzed=0, Unsolved=7, Incorrect=0, Correct=0}
+org.hibernate.=SimpleType: {Checked=3, Analyzed=0, Unsolved=3, Incorrect=0, Correct=0}
+org.hibernate.=VariableDeclarationFragment: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=PrimitiveType: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean,InfixExpression,0,2,0,0,2
+boolean,InstanceofExpression,0,1,0,0,1
+boolean,PrimitiveType,0,1,0,0,1
+boolean,SimpleName,0,1,0,0,1
+boolean,VariableDeclarationFragment,0,1,0,0,1
+java,MethodInvocation,0,1,0,0,1
+java,SimpleName,0,5,0,0,5
+java,SimpleType,0,1,0,0,1
+java,TypeDeclaration,0,1,0,0,1
+java,VariableDeclarationFragment,0,1,0,0,1
+null,NullLiteral,0,2,0,0,2
+org.apache.,SimpleName,0,3,0,0,3
+org.apache.,SimpleType,0,1,0,0,1
+org.apache.,VariableDeclarationFragment,0,1,0,0,1
+org.hibernate.,CastExpression,0,1,0,0,1
+org.hibernate.,SimpleName,0,7,0,0,7
+org.hibernate.,SimpleType,0,3,0,0,3
+org.hibernate.,VariableDeclarationFragment,0,1,0,0,1
+void,PrimitiveType,0,1,0,0,1
+void,SimpleName,0,1,0,0,1

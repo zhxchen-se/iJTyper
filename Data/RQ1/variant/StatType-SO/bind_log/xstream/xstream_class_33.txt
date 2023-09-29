@@ -1,0 +1,327 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/xstream_class_33.java
+Expect check=105
+Cannot find matching typeVariable for: public class xstream_class_33 {
+  private static XStream xstream;
+  public static XStream getXStream(){
+    if (xstream == null) {
+      xstream=new XStream(new DomDriver());
+      xstream.alias("ActionMessage",ActionMessage.class);
+      xstream.alias("MessageHeader",MessageHeader.class);
+      xstream.alias("MessageBody",MessageBody.class);
+      xstream.alias("RemotingMessage",RemotingMessage.class);
+      xstream.alias("CommandMessage",CommandMessage.class);
+      xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+      xstream.alias("ErrorMessage",ErrorMessage.class);
+      xstream.alias("ASObject",ASObject.class);
+      xstream.alias("AsyncMessage",AsyncMessage.class);
+      xstream.alias("DSC",CommandMessageExt.class);
+      xstream.alias("DSK",AcknowledgeMessageExt.class);
+      Mapper mapper=xstream.getMapper();
+    }
+    return xstream;
+  }
+}
+
+Did not find solution for node: xstream_class_33 with type Type1
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: xstream
+Cannot find matching typeVariable for: private static XStream xstream;
+
+Cannot find matching typeVariable for: public class xstream_class_33 {
+  private static XStream xstream;
+  public static XStream getXStream(){
+    if (xstream == null) {
+      xstream=new XStream(new DomDriver());
+      xstream.alias("ActionMessage",ActionMessage.class);
+      xstream.alias("MessageHeader",MessageHeader.class);
+      xstream.alias("MessageBody",MessageBody.class);
+      xstream.alias("RemotingMessage",RemotingMessage.class);
+      xstream.alias("CommandMessage",CommandMessage.class);
+      xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+      xstream.alias("ErrorMessage",ErrorMessage.class);
+      xstream.alias("ASObject",ASObject.class);
+      xstream.alias("AsyncMessage",AsyncMessage.class);
+      xstream.alias("DSC",CommandMessageExt.class);
+      xstream.alias("DSK",AcknowledgeMessageExt.class);
+      Mapper mapper=xstream.getMapper();
+    }
+    return xstream;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.mapper.Mapper;
+import flex.messaging.io.amf.ASObject;
+import flex.messaging.io.amf.ActionMessage;
+import flex.messaging.io.amf.MessageBody;
+import flex.messaging.io.amf.MessageHeader;
+import flex.messaging.messages.AcknowledgeMessage;
+import flex.messaging.messages.AcknowledgeMessageExt;
+import flex.messaging.messages.AsyncMessage;
+import flex.messaging.messages.CommandMessage;
+import flex.messaging.messages.CommandMessageExt;
+import flex.messaging.messages.ErrorMessage;
+import flex.messaging.messages.RemotingMessage;
+public class xstream_class_33 {
+  private static XStream xstream;
+  public static XStream getXStream(){
+    if (xstream == null) {
+      xstream=new XStream(new DomDriver());
+      xstream.alias("ActionMessage",ActionMessage.class);
+      xstream.alias("MessageHeader",MessageHeader.class);
+      xstream.alias("MessageBody",MessageBody.class);
+      xstream.alias("RemotingMessage",RemotingMessage.class);
+      xstream.alias("CommandMessage",CommandMessage.class);
+      xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+      xstream.alias("ErrorMessage",ErrorMessage.class);
+      xstream.alias("ASObject",ASObject.class);
+      xstream.alias("AsyncMessage",AsyncMessage.class);
+      xstream.alias("DSC",CommandMessageExt.class);
+      xstream.alias("DSK",AcknowledgeMessageExt.class);
+      Mapper mapper=xstream.getMapper();
+    }
+    return xstream;
+  }
+}
+
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: getXStream
+Cannot find matching typeVariable for: public static XStream getXStream(){
+  if (xstream == null) {
+    xstream=new XStream(new DomDriver());
+    xstream.alias("ActionMessage",ActionMessage.class);
+    xstream.alias("MessageHeader",MessageHeader.class);
+    xstream.alias("MessageBody",MessageBody.class);
+    xstream.alias("RemotingMessage",RemotingMessage.class);
+    xstream.alias("CommandMessage",CommandMessage.class);
+    xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+    xstream.alias("ErrorMessage",ErrorMessage.class);
+    xstream.alias("ASObject",ASObject.class);
+    xstream.alias("AsyncMessage",AsyncMessage.class);
+    xstream.alias("DSC",CommandMessageExt.class);
+    xstream.alias("DSK",AcknowledgeMessageExt.class);
+    Mapper mapper=xstream.getMapper();
+  }
+  return xstream;
+}
+
+Cannot find matching typeVariable for: public class xstream_class_33 {
+  private static XStream xstream;
+  public static XStream getXStream(){
+    if (xstream == null) {
+      xstream=new XStream(new DomDriver());
+      xstream.alias("ActionMessage",ActionMessage.class);
+      xstream.alias("MessageHeader",MessageHeader.class);
+      xstream.alias("MessageBody",MessageBody.class);
+      xstream.alias("RemotingMessage",RemotingMessage.class);
+      xstream.alias("CommandMessage",CommandMessage.class);
+      xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+      xstream.alias("ErrorMessage",ErrorMessage.class);
+      xstream.alias("ASObject",ASObject.class);
+      xstream.alias("AsyncMessage",AsyncMessage.class);
+      xstream.alias("DSC",CommandMessageExt.class);
+      xstream.alias("DSK",AcknowledgeMessageExt.class);
+      Mapper mapper=xstream.getMapper();
+    }
+    return xstream;
+  }
+}
+
+Cannot find matching typeVariable for: import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import com.thoughtworks.xstream.mapper.Mapper;
+import flex.messaging.io.amf.ASObject;
+import flex.messaging.io.amf.ActionMessage;
+import flex.messaging.io.amf.MessageBody;
+import flex.messaging.io.amf.MessageHeader;
+import flex.messaging.messages.AcknowledgeMessage;
+import flex.messaging.messages.AcknowledgeMessageExt;
+import flex.messaging.messages.AsyncMessage;
+import flex.messaging.messages.CommandMessage;
+import flex.messaging.messages.CommandMessageExt;
+import flex.messaging.messages.ErrorMessage;
+import flex.messaging.messages.RemotingMessage;
+public class xstream_class_33 {
+  private static XStream xstream;
+  public static XStream getXStream(){
+    if (xstream == null) {
+      xstream=new XStream(new DomDriver());
+      xstream.alias("ActionMessage",ActionMessage.class);
+      xstream.alias("MessageHeader",MessageHeader.class);
+      xstream.alias("MessageBody",MessageBody.class);
+      xstream.alias("RemotingMessage",RemotingMessage.class);
+      xstream.alias("CommandMessage",CommandMessage.class);
+      xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class);
+      xstream.alias("ErrorMessage",ErrorMessage.class);
+      xstream.alias("ASObject",ASObject.class);
+      xstream.alias("AsyncMessage",AsyncMessage.class);
+      xstream.alias("DSC",CommandMessageExt.class);
+      xstream.alias("DSK",AcknowledgeMessageExt.class);
+      Mapper mapper=xstream.getMapper();
+    }
+    return xstream;
+  }
+}
+
+For node: xstream == null expected fqn: boolean with type: Type4 got: boolean
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Did not find solution for node: null with type Type3
+For node: xstream=new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: new XStream(new DomDriver()) expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: XStream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+For node: new DomDriver() expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type5 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type5 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: DomDriver expected fqn: com.thoughtworks.xstream.io.xml.DomDriver with type: Type5 got: com.thoughtworks.xstream.io.xml.DomDriver
+For node: xstream.alias("ActionMessage",ActionMessage.class) expected fqn: void with type: Type13 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type13 got: void
+For node: "ActionMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: ActionMessage.class expected fqn: java.lang.Class<flex.messaging.io.amf.ActionMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: ActionMessage with type Type11
+Did not find solution for node: ActionMessage with type Type11
+For node: xstream.alias("MessageHeader",MessageHeader.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "MessageHeader" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: MessageHeader.class expected fqn: java.lang.Class<flex.messaging.io.amf.MessageHeader> with type: Type12 got: java.lang.Class
+Did not find solution for node: MessageHeader with type Type17
+Did not find solution for node: MessageHeader with type Type17
+For node: xstream.alias("MessageBody",MessageBody.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "MessageBody" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: MessageBody.class expected fqn: java.lang.Class<flex.messaging.io.amf.MessageBody> with type: Type12 got: java.lang.Class
+Did not find solution for node: MessageBody with type Type18
+Did not find solution for node: MessageBody with type Type18
+For node: xstream.alias("RemotingMessage",RemotingMessage.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "RemotingMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: RemotingMessage.class expected fqn: java.lang.Class<flex.messaging.messages.RemotingMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: RemotingMessage with type Type19
+Did not find solution for node: RemotingMessage with type Type19
+For node: xstream.alias("CommandMessage",CommandMessage.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "CommandMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: CommandMessage.class expected fqn: java.lang.Class<flex.messaging.messages.CommandMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: CommandMessage with type Type20
+Did not find solution for node: CommandMessage with type Type20
+For node: xstream.alias("AcknowledgeMessage",AcknowledgeMessage.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "AcknowledgeMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: AcknowledgeMessage.class expected fqn: java.lang.Class<flex.messaging.messages.AcknowledgeMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: AcknowledgeMessage with type Type21
+Did not find solution for node: AcknowledgeMessage with type Type21
+For node: xstream.alias("ErrorMessage",ErrorMessage.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "ErrorMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: ErrorMessage.class expected fqn: java.lang.Class<flex.messaging.messages.ErrorMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: ErrorMessage with type Type22
+Did not find solution for node: ErrorMessage with type Type22
+For node: xstream.alias("ASObject",ASObject.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "ASObject" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: ASObject.class expected fqn: java.lang.Class<flex.messaging.io.amf.ASObject> with type: Type12 got: java.lang.Class
+Did not find solution for node: ASObject with type Type23
+Did not find solution for node: ASObject with type Type23
+For node: xstream.alias("AsyncMessage",AsyncMessage.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "AsyncMessage" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: AsyncMessage.class expected fqn: java.lang.Class<flex.messaging.messages.AsyncMessage> with type: Type12 got: java.lang.Class
+Did not find solution for node: AsyncMessage with type Type24
+Did not find solution for node: AsyncMessage with type Type24
+For node: xstream.alias("DSC",CommandMessageExt.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "DSC" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: CommandMessageExt.class expected fqn: java.lang.Class<flex.messaging.messages.CommandMessageExt> with type: Type12 got: java.lang.Class
+Did not find solution for node: CommandMessageExt with type Type25
+Did not find solution for node: CommandMessageExt with type Type25
+For node: xstream.alias("DSK",AcknowledgeMessageExt.class) expected fqn: void with type: Type16 got: void
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: alias
+For node: alias expected fqn: void with type: Type16 got: void
+For node: "DSK" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: AcknowledgeMessageExt.class expected fqn: java.lang.Class<flex.messaging.messages.AcknowledgeMessageExt> with type: Type12 got: java.lang.Class
+Did not find solution for node: AcknowledgeMessageExt with type Type26
+Did not find solution for node: AcknowledgeMessageExt with type Type26
+For node: Mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: Mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+Cannot find matching typeVariable for: mapper=xstream.getMapper()
+For node: mapper=xstream.getMapper() expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: mapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type27 got: com.thoughtworks.xstream.mapper.Mapper
+For node: xstream.getMapper() expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type28 got: com.thoughtworks.xstream.mapper.Mapper
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+Cannot find matching typeVariable for: getMapper
+For node: getMapper expected fqn: com.thoughtworks.xstream.mapper.Mapper with type: Type28 got: com.thoughtworks.xstream.mapper.Mapper
+For node: xstream expected fqn: com.thoughtworks.xstream.XStream with type: Type2 got: com.thoughtworks.xstream.XStream
+{Checked=102, Analyzed=78, Unsolved=24, Incorrect=11, Correct=67}
+=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+=SimpleType: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=TypeLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=11, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+void=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+Total stats
+{Checked=102, Analyzed=78, Unsolved=24, Incorrect=11, Correct=67}
+=SimpleName: {Checked=12, Analyzed=0, Unsolved=12, Incorrect=0, Correct=0}
+=SimpleType: {Checked=11, Analyzed=0, Unsolved=11, Incorrect=0, Correct=0}
+boolean=InfixExpression: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=Assignment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=ClassInstanceCreation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+com.thoughtworks.xstream.=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+com.thoughtworks.xstream.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+com.thoughtworks.xstream.=SimpleType: {Checked=5, Analyzed=5, Unsolved=0, Incorrect=0, Correct=5}
+com.thoughtworks.xstream.=VariableDeclarationFragment: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java=StringLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+java=TypeLiteral: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=11, Correct=0}
+null=NullLiteral: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+void=MethodInvocation: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+void=SimpleName: {Checked=11, Analyzed=11, Unsolved=0, Incorrect=0, Correct=11}
+,SimpleName,0,12,0,0,12
+,SimpleType,0,11,0,0,11
+boolean,InfixExpression,1,1,1,0,0
+com.thoughtworks.xstream.,Assignment,1,1,1,0,0
+com.thoughtworks.xstream.,ClassInstanceCreation,2,2,2,0,0
+com.thoughtworks.xstream.,MethodInvocation,1,1,1,0,0
+com.thoughtworks.xstream.,SimpleName,22,22,22,0,0
+com.thoughtworks.xstream.,SimpleType,5,5,5,0,0
+com.thoughtworks.xstream.,VariableDeclarationFragment,2,2,2,0,0
+java,StringLiteral,11,11,11,0,0
+java,TypeLiteral,11,11,0,11,0
+null,NullLiteral,0,1,0,0,1
+void,MethodInvocation,11,11,11,0,0
+void,SimpleName,11,11,11,0,0

@@ -1,0 +1,150 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/ad10.java
+Expect check=40
+Cannot find matching typeVariable for: public class ad10 {
+  public Bitmap screenShot(  View view){
+    Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    view.draw(canvas);
+    return bitmap;
+  }
+}
+
+Cannot find matching typeVariable for: ad10
+Cannot find matching typeVariable for: public class ad10 {
+  public Bitmap screenShot(  View view){
+    Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    view.draw(canvas);
+    return bitmap;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.view.View;
+public class ad10 {
+  public Bitmap screenShot(  View view){
+    Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    view.draw(canvas);
+    return bitmap;
+  }
+}
+
+Did not find solution for node: Bitmap with type Type2
+Did not find solution for node: Bitmap with type Type2
+Cannot find matching typeVariable for: screenShot
+Cannot find matching typeVariable for: public Bitmap screenShot(View view){
+  Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+  Canvas canvas=new Canvas(bitmap);
+  view.draw(canvas);
+  return bitmap;
+}
+
+Cannot find matching typeVariable for: public class ad10 {
+  public Bitmap screenShot(  View view){
+    Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    view.draw(canvas);
+    return bitmap;
+  }
+}
+
+Cannot find matching typeVariable for: package java.android;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.view.View;
+public class ad10 {
+  public Bitmap screenShot(  View view){
+    Bitmap bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888);
+    Canvas canvas=new Canvas(bitmap);
+    view.draw(canvas);
+    return bitmap;
+  }
+}
+
+Cannot find matching typeVariable for: View view
+For node: View view expected fqn: android.view.View with type: Type3 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type3 got: android.view.View
+For node: View expected fqn: android.view.View with type: Type3 got: android.view.View
+For node: view expected fqn: android.view.View with type: Type3 got: android.view.View
+Did not find solution for node: Bitmap with type Type2
+Did not find solution for node: Bitmap with type Type2
+Cannot find matching typeVariable for: bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888)
+Did not find solution for node: bitmap=Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888) with type Type2
+Did not find solution for node: bitmap with type Type2
+Did not find solution for node: Bitmap.createBitmap(view.getWidth(),view.getHeight(),Bitmap.Config.ARGB_8888) with type Type10
+Did not find solution for node: Bitmap with type Type2
+Cannot find matching typeVariable for: createBitmap
+Did not find solution for node: createBitmap with type Type10
+For node: view.getWidth() expected fqn: int with type: Type4 got: int
+For node: view expected fqn: android.view.View with type: Type3 got: android.view.View
+Cannot find matching typeVariable for: getWidth
+For node: getWidth expected fqn: int with type: Type4 got: int
+For node: view.getHeight() expected fqn: int with type: Type6 got: int
+For node: view expected fqn: android.view.View with type: Type3 got: android.view.View
+Cannot find matching typeVariable for: getHeight
+For node: getHeight expected fqn: int with type: Type6 got: int
+Cannot find matching typeVariable for: Bitmap.Config.ARGB_8888
+Did not find solution for node: Bitmap.Config.ARGB_8888 with type Type10
+Cannot find matching typeVariable for: Bitmap.Config
+Cannot find matching typeVariable for: Bitmap.Config.ARGB_8888
+Did not find solution for node: Bitmap.Config with type Type10
+Did not find solution for node: Bitmap with type Type2
+For node: Config expected fqn: android.graphics.Bitmap.Config with type: Type8 got: android.graphics.Bitmap$Config
+For node: ARGB_8888 expected fqn: android.graphics.Bitmap.Config with type: Type9 got: android.graphics.Bitmap$Config
+For node: Canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+For node: Canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+Cannot find matching typeVariable for: canvas=new Canvas(bitmap)
+For node: canvas=new Canvas(bitmap) expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+For node: canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+For node: new Canvas(bitmap) expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+For node: Canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+For node: Canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+Did not find solution for node: bitmap with type Type2
+For node: view.draw(canvas) expected fqn: void with type: Type19 got: void
+For node: view expected fqn: android.view.View with type: Type3 got: android.view.View
+Cannot find matching typeVariable for: draw
+For node: draw expected fqn: void with type: Type19 got: void
+For node: canvas expected fqn: android.graphics.Canvas with type: Type15 got: android.graphics.Canvas
+Did not find solution for node: bitmap with type Type2
+{Checked=37, Analyzed=23, Unsolved=14, Incorrect=2, Correct=21}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=19, Analyzed=11, Unsolved=8, Incorrect=2, Correct=9}
+android.=SimpleType: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+Total stats
+{Checked=37, Analyzed=23, Unsolved=14, Incorrect=2, Correct=21}
+android.=ClassInstanceCreation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=MethodInvocation: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+android.=QualifiedName: {Checked=2, Analyzed=0, Unsolved=2, Incorrect=0, Correct=0}
+android.=SimpleName: {Checked=19, Analyzed=11, Unsolved=8, Incorrect=2, Correct=9}
+android.=SimpleType: {Checked=5, Analyzed=3, Unsolved=2, Incorrect=0, Correct=3}
+android.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.=VariableDeclarationFragment: {Checked=2, Analyzed=1, Unsolved=1, Incorrect=0, Correct=1}
+int=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+int=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+android.,ClassInstanceCreation,1,1,1,0,0
+android.,MethodInvocation,0,1,0,0,1
+android.,QualifiedName,0,2,0,0,2
+android.,SimpleName,11,19,9,2,8
+android.,SimpleType,3,5,3,0,2
+android.,SingleVariableDeclaration,1,1,1,0,0
+android.,VariableDeclarationFragment,1,2,1,0,1
+int,MethodInvocation,2,2,2,0,0
+int,SimpleName,2,2,2,0,0
+void,MethodInvocation,1,1,1,0,0
+void,SimpleName,1,1,1,0,0

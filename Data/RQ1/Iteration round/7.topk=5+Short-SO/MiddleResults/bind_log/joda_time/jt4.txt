@@ -1,0 +1,139 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/jt4.java
+Expect check=39
+Cannot find matching typeVariable for: public class jt4 {
+  public static boolean isLonger(  Period p1,  Period p2){
+    Instant now=Instant.now();
+    Duration d1=p1.toDurationTo(now);
+    Duration d2=p2.toDurationTo(now);
+    return d1.isLongerThan(d2);
+  }
+}
+
+Cannot find matching typeVariable for: jt4
+Cannot find matching typeVariable for: public class jt4 {
+  public static boolean isLonger(  Period p1,  Period p2){
+    Instant now=Instant.now();
+    Duration d1=p1.toDurationTo(now);
+    Duration d2=p2.toDurationTo(now);
+    return d1.isLongerThan(d2);
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.Duration;
+import org.joda.time.Instant;
+import org.joda.time.Period;
+public class jt4 {
+  public static boolean isLonger(  Period p1,  Period p2){
+    Instant now=Instant.now();
+    Duration d1=p1.toDurationTo(now);
+    Duration d2=p2.toDurationTo(now);
+    return d1.isLongerThan(d2);
+  }
+}
+
+For node: boolean expected fqn: boolean with type: Type2 got: boolean
+Cannot find matching typeVariable for: isLonger
+Cannot find matching typeVariable for: public static boolean isLonger(Period p1,Period p2){
+  Instant now=Instant.now();
+  Duration d1=p1.toDurationTo(now);
+  Duration d2=p2.toDurationTo(now);
+  return d1.isLongerThan(d2);
+}
+
+Cannot find matching typeVariable for: public class jt4 {
+  public static boolean isLonger(  Period p1,  Period p2){
+    Instant now=Instant.now();
+    Duration d1=p1.toDurationTo(now);
+    Duration d2=p2.toDurationTo(now);
+    return d1.isLongerThan(d2);
+  }
+}
+
+Cannot find matching typeVariable for: package java.joda_time;
+import org.joda.time.Duration;
+import org.joda.time.Instant;
+import org.joda.time.Period;
+public class jt4 {
+  public static boolean isLonger(  Period p1,  Period p2){
+    Instant now=Instant.now();
+    Duration d1=p1.toDurationTo(now);
+    Duration d2=p2.toDurationTo(now);
+    return d1.isLongerThan(d2);
+  }
+}
+
+Cannot find matching typeVariable for: Period p1
+For node: Period p1 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: p1 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+Cannot find matching typeVariable for: Period p2
+For node: Period p2 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: Period expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+For node: p2 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+Did not find solution for node: Instant with type Type4
+Did not find solution for node: Instant with type Type4
+Cannot find matching typeVariable for: now=Instant.now()
+Did not find solution for node: now=Instant.now() with type Type4
+Did not find solution for node: now with type Type4
+Did not find solution for node: Instant.now() with type Type5
+Did not find solution for node: Instant with type Type4
+Cannot find matching typeVariable for: now
+Did not find solution for node: now with type Type5
+For node: Duration expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: Duration expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+Cannot find matching typeVariable for: d1=p1.toDurationTo(now)
+For node: d1=p1.toDurationTo(now) expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: d1 expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: p1.toDurationTo(now) expected fqn: org.joda.time.Duration with type: Type8 got: org.joda.time.Duration
+For node: p1 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+Cannot find matching typeVariable for: toDurationTo
+For node: toDurationTo expected fqn: org.joda.time.Duration with type: Type8 got: org.joda.time.Duration
+Did not find solution for node: now with type Type4
+For node: Duration expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: Duration expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+Cannot find matching typeVariable for: d2=p2.toDurationTo(now)
+For node: d2=p2.toDurationTo(now) expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: d2 expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+For node: p2.toDurationTo(now) expected fqn: org.joda.time.Duration with type: Type10 got: org.joda.time.Duration
+For node: p2 expected fqn: org.joda.time.Period with type: Type3 got: org.joda.time.Period
+Cannot find matching typeVariable for: toDurationTo
+For node: toDurationTo expected fqn: org.joda.time.Duration with type: Type10 got: org.joda.time.Duration
+Did not find solution for node: now with type Type4
+For node: d1.isLongerThan(d2) expected fqn: boolean with type: Type11 got: boolean
+For node: d1 expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+Cannot find matching typeVariable for: isLongerThan
+For node: isLongerThan expected fqn: boolean with type: Type11 got: boolean
+For node: d2 expected fqn: org.joda.time.Duration with type: Type7 got: org.joda.time.Duration
+{Checked=36, Analyzed=27, Unsolved=9, Incorrect=0, Correct=27}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=20, Analyzed=14, Unsolved=6, Incorrect=0, Correct=14}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+Total stats
+{Checked=36, Analyzed=27, Unsolved=9, Incorrect=0, Correct=27}
+boolean=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+boolean=SimpleName: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+org.joda.time.=MethodInvocation: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+org.joda.time.=SimpleName: {Checked=20, Analyzed=14, Unsolved=6, Incorrect=0, Correct=14}
+org.joda.time.=SimpleType: {Checked=5, Analyzed=4, Unsolved=1, Incorrect=0, Correct=4}
+org.joda.time.=SingleVariableDeclaration: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+org.joda.time.=VariableDeclarationFragment: {Checked=3, Analyzed=2, Unsolved=1, Incorrect=0, Correct=2}
+boolean,MethodInvocation,1,1,1,0,0
+boolean,PrimitiveType,1,1,1,0,0
+boolean,SimpleName,1,1,1,0,0
+org.joda.time.,MethodInvocation,2,3,2,0,1
+org.joda.time.,SimpleName,14,20,14,0,6
+org.joda.time.,SimpleType,4,5,4,0,1
+org.joda.time.,SingleVariableDeclaration,2,2,2,0,0
+org.joda.time.,VariableDeclarationFragment,2,3,2,0,1

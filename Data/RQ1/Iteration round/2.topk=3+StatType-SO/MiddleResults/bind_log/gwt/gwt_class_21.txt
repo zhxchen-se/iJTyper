@@ -1,0 +1,228 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gwt_class_21.java
+Expect check=58
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: gwt_class_21
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: private static class PopUpPanel extends PopupPanel {
+  Button connect=new Button("Connect");
+  Button delete=new Button("Delete");
+  Button detail=new Button("Detail");
+  public PopUpPanel(  final Widget widget){
+    super(true);
+    VerticalPanel vp=new VerticalPanel();
+    vp.add(connect);
+    vp.add(delete);
+    vp.add(detail);
+    setWidget(vp);
+  }
+}
+
+Did not find solution for node: PopUpPanel with type Type1
+For node: PopupPanel expected fqn: com.google.gwt.user.client.ui.PopupPanel with type: Type2 got: com.google.gwt.user.client.ui.PopupPanel
+For node: PopupPanel expected fqn: com.google.gwt.user.client.ui.PopupPanel with type: Type2 got: com.google.gwt.user.client.ui.PopupPanel
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: connect=new Button("Connect")
+For node: connect=new Button("Connect") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: connect expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: new Button("Connect") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: "Connect" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: delete=new Button("Delete")
+For node: delete=new Button("Delete") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: delete expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: new Button("Delete") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: "Delete" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+Cannot find matching typeVariable for: detail=new Button("Detail")
+For node: detail=new Button("Detail") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: detail expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: new Button("Detail") expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: Button expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: "Detail" expected fqn: java.lang.String with type: Type10 got: java.lang.String
+Cannot find matching typeVariable for: PopUpPanel
+Cannot find matching typeVariable for: public PopUpPanel(final Widget widget){
+  super(true);
+  VerticalPanel vp=new VerticalPanel();
+  vp.add(connect);
+  vp.add(delete);
+  vp.add(detail);
+  setWidget(vp);
+}
+
+Cannot find matching typeVariable for: private static class PopUpPanel extends PopupPanel {
+  Button connect=new Button("Connect");
+  Button delete=new Button("Delete");
+  Button detail=new Button("Detail");
+  public PopUpPanel(  final Widget widget){
+    super(true);
+    VerticalPanel vp=new VerticalPanel();
+    vp.add(connect);
+    vp.add(delete);
+    vp.add(detail);
+    setWidget(vp);
+  }
+}
+
+Cannot find matching typeVariable for: public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+public class gwt_class_21 {
+private static class PopUpPanel extends PopupPanel {
+    Button connect=new Button("Connect");
+    Button delete=new Button("Delete");
+    Button detail=new Button("Detail");
+    public PopUpPanel(    final Widget widget){
+      super(true);
+      VerticalPanel vp=new VerticalPanel();
+      vp.add(connect);
+      vp.add(delete);
+      vp.add(detail);
+      setWidget(vp);
+    }
+  }
+}
+
+Cannot find matching typeVariable for: final Widget widget
+For node: final Widget widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: Widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: widget expected fqn: com.google.gwt.user.client.ui.Widget with type: Type14 got: com.google.gwt.user.client.ui.Widget
+For node: true expected fqn: boolean with type: Type15 got: boolean
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: vp=new VerticalPanel()
+For node: vp=new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: new VerticalPanel() expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: VerticalPanel expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+For node: vp.add(connect) expected fqn: void with type: Type20 got: void
+For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type20 got: void
+For node: connect expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: vp.add(delete) expected fqn: void with type: Type22 got: void
+For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type22 got: void
+For node: delete expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: vp.add(detail) expected fqn: void with type: Type22 got: void
+For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+Cannot find matching typeVariable for: add
+For node: add expected fqn: void with type: Type22 got: void
+For node: detail expected fqn: com.google.gwt.user.client.ui.Button with type: Type9 got: com.google.gwt.user.client.ui.Button
+For node: setWidget(vp) expected fqn: void with type: Type23 got: void
+Cannot find matching typeVariable for: setWidget
+For node: setWidget expected fqn: void with type: Type23 got: void
+For node: vp expected fqn: com.google.gwt.user.client.ui.VerticalPanel with type: Type18 got: com.google.gwt.user.client.ui.VerticalPanel
+{Checked=54, Analyzed=53, Unsolved=1, Incorrect=0, Correct=53}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+gwt.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+Total stats
+{Checked=54, Analyzed=53, Unsolved=1, Incorrect=0, Correct=53}
+=SimpleName: {Checked=1, Analyzed=0, Unsolved=1, Incorrect=0, Correct=0}
+boolean=BooleanLiteral: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=ClassInstanceCreation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+gwt.=SimpleName: {Checked=22, Analyzed=22, Unsolved=0, Incorrect=0, Correct=22}
+gwt.=SimpleType: {Checked=10, Analyzed=10, Unsolved=0, Incorrect=0, Correct=10}
+gwt.=SingleVariableDeclaration: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+gwt.=VariableDeclarationFragment: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+void=MethodInvocation: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+void=SimpleName: {Checked=4, Analyzed=4, Unsolved=0, Incorrect=0, Correct=4}
+,SimpleName,0,1,0,0,1
+boolean,BooleanLiteral,1,1,1,0,0
+gwt.,ClassInstanceCreation,4,4,4,0,0
+gwt.,SimpleName,22,22,22,0,0
+gwt.,SimpleType,10,10,10,0,0
+gwt.,SingleVariableDeclaration,1,1,1,0,0
+gwt.,VariableDeclarationFragment,4,4,4,0,0
+java,StringLiteral,3,3,3,0,0
+void,MethodInvocation,4,4,4,0,0
+void,SimpleName,4,4,4,0,0

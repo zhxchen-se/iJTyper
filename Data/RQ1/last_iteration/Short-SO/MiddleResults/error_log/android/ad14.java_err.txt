@@ -1,0 +1,14 @@
+Error processing file ad14.java: division by zero
+Traceback (most recent call last):
+  File "framework.py", line 254, in run_lib
+    result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,build_kb_with_extension,StartFromRule,log_feed_back_flag,Maximum_iter_round)
+  File "framework.py", line 99, in iterative_execute_one_snippet
+    dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,topK,rule_node_pred_dict)
+  File "/iJTyper/ours/deeplearning.py", line 218, in DL_predict_with_Rule_info
+    DL.Metric(lib)
+  File "/iJTyper/Baseline/Prompt_tune/ASE_prompt_tuning/PromptInference/Practicality/predDictData_line.py", line 415, in __init__
+    self.scorePrint()
+  File "/iJTyper/Baseline/Prompt_tune/ASE_prompt_tuning/PromptInference/Practicality/predDictData_line.py", line 508, in scorePrint
+    Mean_recall_score = sum(metric_dict['recall_li'])/len(metric_dict['recall_li'])
+ZeroDivisionError: division by zero
+

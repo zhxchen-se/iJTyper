@@ -1,0 +1,378 @@
+15:15:58.780 [main] INFO snr.h - Building CompilationUnit takes 559 ms
+15:15:58.928 [main] INFO snr.e - Compilation takes 144 ms
+XStream cannot be resolved to a type
+XStream cannot be resolved to a type
+DomDriver cannot be resolved to a type
+NoNameCoder cannot be resolved to a type
+Adding candidate void to Type2
+Finding class definition name: XStream isfull? false fields: [] methods: [<init>] argument sizes: [1]
+Adding candidates [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream] to Type3
+Return without setting candidates for Type8
+Return without setting candidates for Type7
+Return without setting candidates for Type11
+Return without setting candidates for Type10
+Finding class definition name: DomDriver isfull? false fields: [] methods: [<init>] argument sizes: [2]
+Adding candidates [com.thoughtworks.xstream.io.xml.DomDriver, com.thoughtworks.xstream.io.xml.DomDriver] to Type4
+Finding class definition name: java/lang/String isfull? true fields: [] methods: [] argument sizes: []
+Adding candidates [java.lang.String, java.lang.String] to Type5
+Finding class definition name: NoNameCoder isfull? false fields: [] methods: [<init>] argument sizes: [0]
+Adding candidates [com.thoughtworks.xstream.io.naming.NoNameCoder, com.thoughtworks.xstream.io.naming.NoNameCoder] to Type6
+Return without setting candidates for Type9
+Return without setting candidates for Type12
+15:16:05.551 [main] INFO snr.G - Loading initial candidates takes 6514 ms.
+Before TypeVariable: Type2, Candidates: 1
+   0. subtype: Type10
+   1. full name: void
+   2. subtype: Type7
+   3. simple name: void
+   4. subtype: Type12
+[void]
+Before TypeVariable: Type3, Candidates: 2
+   0. simple name: XStream
+   1. method: Type12 <init>(Type11);
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Before TypeVariable: Type4, Candidates: 2
+   0. method: Type10 <init>(Type8,Type9);
+   1. simple name: DomDriver
+[com.thoughtworks.xstream.io.xml.DomDriver, com.thoughtworks.xstream.io.xml.DomDriver]
+Before TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+Before TypeVariable: Type6, Candidates: 2
+   0. method: Type7 <init>();
+   1. simple name: NoNameCoder
+[com.thoughtworks.xstream.io.naming.NoNameCoder, com.thoughtworks.xstream.io.naming.NoNameCoder]
+Before TypeVariable: Type7, Candidates: 0
+[]
+Before TypeVariable: Type8, Candidates: 0
+   0. subtype: Type5
+[]
+Before TypeVariable: Type9, Candidates: 0
+   0. subtype: Type6
+[]
+Before TypeVariable: Type10, Candidates: 0
+[]
+Before TypeVariable: Type11, Candidates: 0
+   0. subtype: Type4
+[]
+Before TypeVariable: Type12, Candidates: 0
+[]
+15:16:05.558 [main] INFO snr.G - Populate candidates for type variable Type2
+15:16:05.558 [main] INFO snr.G - Populate candidates for type constraint full name: void
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type5
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint full name: java.lang.String
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type2
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint simple name: void
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type3
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint simple name: XStream
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type4
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint simple name: DomDriver
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type5
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint simple name: String
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type6
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint simple name: NoNameCoder
+15:16:05.559 [main] INFO snr.G - Populate candidates for type variable Type3
+15:16:05.559 [main] INFO snr.G - Populate candidates for type constraint method: Type12 <init>(Type11);
+Processing method constraint method: Type12 <init>(Type11); on Type3
+Current solution for c Type3 is uninit ? false [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+Current solution for r Type12 is uninit ? false []
+Current solution for p0 Type11 is uninit ? false []
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/converters/reflection/ReflectionProvider;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/io/HierarchicalStreamDriver;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/converters/reflection/ReflectionProvider;)
+Looking at method: public V <init>(Lcom/thoughtworks/xstream/io/HierarchicalStreamDriver;)
+updated solution for c Type3 [com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+updated solution for r Type12 [void]
+updated solution for p0 Type11 [com.thoughtworks.xstream.converters.reflection.ReflectionProvider, com.thoughtworks.xstream.converters.reflection.ReflectionProvider, com.thoughtworks.xstream.io.HierarchicalStreamDriver, com.thoughtworks.xstream.io.HierarchicalStreamDriver]
+15:16:05.567 [main] INFO snr.G - Populate candidates for type variable Type4
+15:16:05.567 [main] INFO snr.G - Populate candidates for type constraint method: Type10 <init>(Type8,Type9);
+Processing method constraint method: Type10 <init>(Type8,Type9); on Type4
+Current solution for c Type4 is uninit ? false [com.thoughtworks.xstream.io.xml.DomDriver, com.thoughtworks.xstream.io.xml.DomDriver]
+Current solution for r Type10 is uninit ? false []
+Current solution for p0 Type8 is uninit ? false []
+Current solution for p1 Type9 is uninit ? false []
+Looking at method: public V <init>(Ljava/lang/String;Lcom/thoughtworks/xstream/io/naming/NameCoder;)
+Looking at method: public V <init>(Ljava/lang/String;Lcom/thoughtworks/xstream/io/xml/XmlFriendlyReplacer;)
+Looking at method: public V <init>(Ljava/lang/String;Lcom/thoughtworks/xstream/io/naming/NameCoder;)
+Looking at method: public V <init>(Ljava/lang/String;Lcom/thoughtworks/xstream/io/xml/XmlFriendlyReplacer;)
+updated solution for c Type4 [com.thoughtworks.xstream.io.xml.DomDriver, com.thoughtworks.xstream.io.xml.DomDriver]
+updated solution for r Type10 [void]
+updated solution for p0 Type8 [java.lang.String]
+updated solution for p1 Type9 [com.thoughtworks.xstream.io.naming.NameCoder, com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer, com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer, com.thoughtworks.xstream.io.naming.NameCoder]
+15:16:05.574 [main] INFO snr.G - Populate candidates for type variable Type6
+15:16:05.574 [main] INFO snr.G - Populate candidates for type constraint method: Type7 <init>();
+Processing method constraint method: Type7 <init>(); on Type6
+Current solution for c Type6 is uninit ? false [com.thoughtworks.xstream.io.naming.NoNameCoder, com.thoughtworks.xstream.io.naming.NoNameCoder]
+Current solution for r Type7 is uninit ? false []
+Looking at method: public V <init>()
+Looking at method: public V <init>()
+updated solution for c Type6 [com.thoughtworks.xstream.io.naming.NoNameCoder, com.thoughtworks.xstream.io.naming.NoNameCoder]
+updated solution for r Type7 [void]
+15:16:05.575 [main] INFO snr.G - Populate candidates for type variable Type2
+15:16:05.575 [main] INFO snr.G - Populate candidates for type constraint subtype: Type7
+15:16:05.575 [main] INFO snr.G - Populate candidates for type variable Type2
+15:16:05.575 [main] INFO snr.G - Populate candidates for type constraint subtype: Type10
+15:16:05.575 [main] INFO snr.G - Populate candidates for type variable Type2
+15:16:05.575 [main] INFO snr.G - Populate candidates for type constraint subtype: Type12
+15:16:05.575 [main] INFO snr.G - Populate candidates for type variable Type8
+15:16:05.575 [main] INFO snr.G - Populate candidates for type constraint subtype: Type5
+15:16:05.575 [main] INFO snr.G - Populate candidates for type variable Type9
+15:16:05.575 [main] INFO snr.G - Populate candidates for type constraint subtype: Type6
+15:16:05.579 [main] INFO snr.G - Populate candidates for type variable Type11
+15:16:05.579 [main] INFO snr.G - Populate candidates for type constraint subtype: Type4
+After TypeVariable: Type2, Candidates: 1
+   0. subtype: Type10
+   1. full name: void
+   2. subtype: Type7
+   3. simple name: void
+   4. subtype: Type12
+[void]
+After TypeVariable: Type7, Candidates: 1
+[void]
+After TypeVariable: Type8, Candidates: 1
+   0. subtype: Type5
+[java.lang.String]
+After TypeVariable: Type10, Candidates: 1
+[void]
+After TypeVariable: Type12, Candidates: 1
+[void]
+After TypeVariable: Type3, Candidates: 2
+   0. simple name: XStream
+   1. method: Type12 <init>(Type11);
+[com.thoughtworks.xstream.XStream, com.thoughtworks.xstream.XStream]
+After TypeVariable: Type4, Candidates: 2
+   0. method: Type10 <init>(Type8,Type9);
+   1. simple name: DomDriver
+[com.thoughtworks.xstream.io.xml.DomDriver, com.thoughtworks.xstream.io.xml.DomDriver]
+After TypeVariable: Type5, Candidates: 2
+   0. simple name: String
+   1. full name: java.lang.String
+[java.lang.String, java.lang.String]
+After TypeVariable: Type6, Candidates: 2
+   0. method: Type7 <init>();
+   1. simple name: NoNameCoder
+[com.thoughtworks.xstream.io.naming.NoNameCoder, com.thoughtworks.xstream.io.naming.NoNameCoder]
+After TypeVariable: Type9, Candidates: 2
+   0. subtype: Type6
+[com.thoughtworks.xstream.io.naming.NameCoder, com.thoughtworks.xstream.io.naming.NameCoder]
+After TypeVariable: Type11, Candidates: 2
+   0. subtype: Type4
+[com.thoughtworks.xstream.io.HierarchicalStreamDriver, com.thoughtworks.xstream.io.HierarchicalStreamDriver]
+Printing: jclass.facts
+	openjdk:jdk:1.8.0:void	void	void
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	com.thoughtworks.xstream.io.HierarchicalStreamDriver	HierarchicalStreamDriver
+	jar:android-13.jar:1:java.lang.String	java.lang.String	String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	com.thoughtworks.xstream.io.naming.NoNameCoder	NoNameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	com.thoughtworks.xstream.io.naming.NameCoder	NameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	com.thoughtworks.xstream.converters.reflection.ReflectionProvider	ReflectionProvider
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	XmlFriendlyReplacer
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	com.thoughtworks.xstream.converters.reflection.ReflectionProvider	ReflectionProvider
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	com.thoughtworks.xstream.io.naming.NameCoder	NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	XmlFriendlyReplacer
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	openjdk:jdk:1.8.0:java.lang.String	java.lang.String	String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	com.thoughtworks.xstream.io.xml.DomDriver	DomDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	com.thoughtworks.xstream.io.HierarchicalStreamDriver	HierarchicalStreamDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	com.thoughtworks.xstream.io.xml.DomDriver	DomDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	com.thoughtworks.xstream.XStream	XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	com.thoughtworks.xstream.io.naming.NoNameCoder	NoNameCoder
+Printing: jclasssuper.facts
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	openjdk:jdk:1.8.0:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:android-13.jar:1:java.lang.String
+	openjdk:jdk:1.8.0:void	openjdk:jdk:1.8.0:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	openjdk:jdk:1.8.0:java.lang.String	jar:android-13.jar:1:java.lang.String
+	jar:android-13.jar:1:java.lang.String	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	openjdk:jdk:1.8.0:void	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver	jar:android-13.jar:1:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	openjdk:jdk:1.8.0:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	openjdk:jdk:1.8.0:java.lang.String
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer
+	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer	jar:android-13.jar:1:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:java.lang.String
+	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider	openjdk:jdk:1.8.0:java.lang.String
+Printing: jfqlname.facts
+	Type2	void
+	Type5	java.lang.String
+Printing: type.facts
+	Type2
+	Type3
+	Type4
+	Type5
+	Type6
+	Type7
+	Type8
+	Type9
+	Type10
+	Type11
+	Type12
+Printing: candidate.facts
+	Type3	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream
+	Type7	openjdk:jdk:1.8.0:void
+	Type2	openjdk:jdk:1.8.0:void
+	Type3	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream
+	Type9	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	Type8	jar:android-13.jar:1:java.lang.String
+	Type10	openjdk:jdk:1.8.0:void
+	Type4	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver
+	Type12	openjdk:jdk:1.8.0:void
+	Type11	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	Type5	jar:android-13.jar:1:java.lang.String
+	Type5	openjdk:jdk:1.8.0:java.lang.String
+	Type9	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	Type4	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver
+	Type6	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder
+	Type11	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	Type6	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder
+Printing: jmethod_dependency.facts
+	1	Type4	Type10	<init>
+	0	Type3	Type12	<init>
+	2	Type6	Type7	<init>
+Printing: jsimplename.facts
+	Type4	DomDriver
+	Type2	void
+	Type3	XStream
+	Type5	String
+	Type6	NoNameCoder
+Printing: jmethod.facts
+	1	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	8	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	openjdk:jdk:1.8.0:void	<init>	0
+	6	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:void	<init>	2
+	3	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	5	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:void	<init>	2
+	9	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NoNameCoder	openjdk:jdk:1.8.0:void	<init>	0
+	4	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:void	<init>	2
+	2	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.XStream	openjdk:jdk:1.8.0:void	<init>	1
+	7	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.DomDriver	openjdk:jdk:1.8.0:void	<init>	2
+Printing: jsupertype_dependency.facts
+	Type6	Type9
+	Type7	Type2
+	Type5	Type8
+	Type4	Type11
+	Type10	Type2
+	Type12	Type2
+Printing: jfullname.facts
+Printing: jmethod_param.facts
+	1	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	6	0	jar:android-13.jar:1:java.lang.String
+	6	1	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	3	0	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.HierarchicalStreamDriver
+	0	0	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	5	0	jar:android-13.jar:1:java.lang.String
+	5	1	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer
+	4	0	jar:android-13.jar:1:java.lang.String
+	4	1	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.io.naming.NameCoder
+	2	0	jar:xstream-1.4.4.jar:1:com.thoughtworks.xstream.converters.reflection.ReflectionProvider
+	7	0	jar:android-13.jar:1:java.lang.String
+	7	1	jar:com.thoughtworks.xstream.jar:1:com.thoughtworks.xstream.io.xml.XmlFriendlyReplacer
+Printing: jmethod_param_dependency.facts
+	1	0	Type8
+	1	1	Type9
+	0	0	Type11
+All artifact rank: [jar:com.thoughtworks.xstream.jar:1, jar:xstream-1.4.4.jar:1, jar:android-13.jar:1, openjdk:jdk:1.8.0]
+Updated selected artifacts []
+Solved...
+Found Type2 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type11 -> com.thoughtworks.xstream.io.HierarchicalStreamDriver
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type9 -> com.thoughtworks.xstream.io.naming.NameCoder
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Solved...
+Found Type8 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Found Type7 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type10 -> void
+Added artifact: openjdk:jdk:1.8.0
+Found Type4 -> com.thoughtworks.xstream.io.xml.DomDriver
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type6 -> com.thoughtworks.xstream.io.naming.NoNameCoder
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type12 -> void
+Added artifact: openjdk:jdk:1.8.0
+Solved...
+Found Type3 -> com.thoughtworks.xstream.XStream
+Added artifact: jar:com.thoughtworks.xstream.jar:1
+Found Type5 -> java.lang.String
+Added artifact: jar:android-13.jar:1
+Solved...
+Quiting souffle
+Bind Type2 to void, dumping:
+Bind Type8 to java.lang.String, dumping:
+Bind Type3 to com.thoughtworks.xstream.XStream, dumping:
+Bind Type7 to void, dumping:
+Bind Type11 to com.thoughtworks.xstream.io.HierarchicalStreamDriver, dumping:
+Bind Type10 to void, dumping:
+Bind Type4 to com.thoughtworks.xstream.io.xml.DomDriver, dumping:
+Bind Type5 to java.lang.String, dumping:
+Bind Type9 to com.thoughtworks.xstream.io.naming.NameCoder, dumping:
+Bind Type6 to com.thoughtworks.xstream.io.naming.NoNameCoder, dumping:
+Bind Type12 to void, dumping:
+15:16:05.814 [main] INFO snr.k - Fixing Type3 with com.thoughtworks.xstream.XStream
+15:16:05.815 [main] INFO snr.k - Fixing Type3 with com.thoughtworks.xstream.XStream
+15:16:05.815 [main] INFO snr.k - Fixing Type4 with com.thoughtworks.xstream.io.xml.DomDriver
+15:16:05.815 [main] INFO snr.k - Fixing Type6 with com.thoughtworks.xstream.io.naming.NoNameCoder
+15:16:05.866 [main] INFO org.javelus.snr.compile.SnRBuilder - Added libraries
+15:16:05.868 [main] INFO org.javelus.snr.compile.SnRBuilder - jar:com.thoughtworks.xstream.jar:1
+15:16:05.868 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+15:16:05.868 [main] INFO org.javelus.snr.compile.SnRBuilder - 
+package java.xstream;
+
+import com.thoughtworks.xstream.io.naming.NoNameCoder;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+public class xt2 {
+	public static void h1() {
+		XStream xstream = new XStream(new DomDriver("UTF_8", new NoNameCoder()));
+	}
+}
+15:16:05.868 [main] INFO org.javelus.snr.compile.SnRBuilder - /*************************************************/
+15:16:05.909 [main] INFO snr.e - Compilation takes 40 ms
