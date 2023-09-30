@@ -33,7 +33,7 @@ def write_time_info(snippet_file_name,lib,all_queryapipool_time,all_insert_resul
     if not os.path.exists(time_folder):
         os.makedirs(time_folder)
     csv_time_path = os.path.abspath(os.path.join(time_folder,f"{lib}_time_info.csv"))
-    print(f'debug35:csv_time_path = {csv_time_path}')
+    # print(f'debug35:csv_time_path = {csv_time_path}')
 
     time_info = [snippet_file_name, all_queryapipool_time, all_insert_results_time, kb_reduction_time,all_benchmark_time, all_binding_time,rule_time,dl_time, all_combine_time,snippet_time]
     if not os.path.exists(csv_time_path):
@@ -95,13 +95,13 @@ def iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK,build_kb_wi
             dl_node_pred_dict,dl_node_truth_dict = DL_predict_with_Rule_info(snippet_file_name,dataset,lib,topK,rule_node_pred_dict)
             dl_time += time.time()-dl_start_time
 
-            print(f'debug93:iter{iter_round},dl_node_pred:{dl_node_pred_dict}')
-            print(f'debug94:iter{iter_round},rule_node_pred:{rule_node_pred_dict}')
+            # print(f'debug93:iter{iter_round},dl_node_pred:{dl_node_pred_dict}')
+            # print(f'debug94:iter{iter_round},rule_node_pred:{rule_node_pred_dict}')
             result = Result(dl_node_pred_dict,dl_node_truth_dict,rule_node_pred_dict,rule_node_truth_dict,snippet_file_name,lib)
             
             combine_start_time = time.time()
             if last_result:
-                result.combine_ans(Result()) #TODO
+                result.combine_ans(last_result) 
             else:
                 result.combine_ans(Result())
             all_combine_time += time.time()-combine_start_time
@@ -312,13 +312,13 @@ if __name__ == '__main__':
     # lib = 'jdk'    
     dataset = 'StatType-SO'
     # dataset = 'Short-SO'
-    # snippet_file_name = 'gwt_class_28.java'
-    # lib = 'gwt'
+    snippet_file_name = 'gwt_class_28.java'
+    lib = 'gwt'
     # reset_database()
     # result,iter_round= execute_baseline_only_combine_ans(snippet_file_name,dataset,lib,topK=3)
     
-    # result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 15)
-    # result.show_csv()
+    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 10)
+    result.show_csv()
     # reset_database() 
     # dl_node_pred_dict,_ = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK=1,True)
     # print(f'debug314:{dl_node_pred_dict}\n')
@@ -328,25 +328,20 @@ if __name__ == '__main__':
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
 
    
-    libs = ["gwt"]
-    error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
-    open(error_log_file, "w").close() # clear log
-    for lib in libs:
-        try:
-            reset_database() # run pure baseline combine ans
-            run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=15)
-        except Exception as e:
-            with open(error_log_file, "a") as error_log:
-                error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
-                error_log.write(error_msg+ '\n')
-                error_log.write(traceback.format_exc())  # stack info
-                error_log.write("\n")
+    # libs = ["gwt"]
+    # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
+    # open(error_log_file, "w").close() # clear log
+    # for lib in libs:
+    #     try:
+    #         reset_database() # run pure baseline combine ans
+    #         run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=10)
+    #     except Exception as e:
+    #         with open(error_log_file, "a") as error_log:
+    #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
+    #             error_log.write(error_msg+ '\n')
+    #             error_log.write(traceback.format_exc())  # stack info
+    #             error_log.write("\n")
 
-
-    # start_time = time.time()
-    # end_time = time.time()
-    # run_time = end_time - start_time
-    # print(f'Rule运行总耗时:{run_time}')
 
 
     os.chdir(tmp_dir)
