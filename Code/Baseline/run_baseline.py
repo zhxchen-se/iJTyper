@@ -229,6 +229,8 @@ def pure_rule_execute_make_benchmark(file_name,lib):
     '''
     output_folder = os.path.abspath(os.path.join(os.getcwd(),"../","../","ours","MiddleResults","benchmark_log",lib))
     # run_baseline.clear_folder(output_folder)
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
     output_path = os.path.join(output_folder,file_name)
     output_path = output_path.replace('.java','_pure_rule_stdout.txt')
     with open(os.devnull, 'w') as devnull: 
@@ -285,7 +287,8 @@ def Rule_predict_one_snippet(file_name,dataset,lib): #Predicting for a single co
 
     # copy code from dataset
     DL.boolean(f'./SnR/src/test/resources/snippets/so')
-    source_folder = os.path.abspath(f'../Datasets/{dataset}/{lib}')
+    # source_folder = os.path.abspath(f'../Datasets/{dataset}/{lib}')
+    source_folder = os.path.abspath(f'../ours/code_snippet')
     target_folder = os.path.abspath(f'./SnR/src/test/resources/snippets/so')
     source_file_path = os.path.join(source_folder, file_name)
     target_file_path = os.path.join(target_folder, file_name)

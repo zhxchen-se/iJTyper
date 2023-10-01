@@ -338,7 +338,7 @@ def main():
     parser = argparse.ArgumentParser(description='iJTyper')
     parser.add_argument('--topk', type=int, default=3, help='Top-K value (default: 3)')
     parser.add_argument('--iter', type=int, default=10, help='Maximum iteration rounds for one snippet (default: 10)')
-    parser.add_argument('--gpu', type=int, default=0, help='Using GPU number (default: 0)')
+    parser.add_argument('--gpu', type=int, default=0, help='GPU index (default: 0)')
     args = parser.parse_args()
 
     Set_GPU(args.gpu)
@@ -354,7 +354,7 @@ def main():
         result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=args.topk,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = args.iter)
         result.show_csv()
         add_comment_to_code(snippet_file_name,result.total_node_pred_dict)
-        
+
     redirect_stdout_to_console()
     print(f"Output code snippets have been saved to {os.path.abspath(os.path.join(os.getcwd(),'output'))}")
     print(f"Log has been saved to {os.path.abspath(os.path.join(os.getcwd(),'log','output.log'))}")
