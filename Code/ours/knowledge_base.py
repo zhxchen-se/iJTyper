@@ -232,19 +232,19 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select id,artifactid from mvn_artifact where artifactid like '%{jar}%'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
 
     def query_method_fuzzy(self,str):
         cur = self.conn.cursor()
-        # if str.__contains__('<') or str.__contains__('>'): #处理泛型
+        # if str.__contains__('<') or str.__contains__('>'): 
         #     sql = f"select * from mvn_method where signature like '%{str}%'"
         # else:
         sql = f"select * from mvn_method where name like '%{str}%'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -253,7 +253,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_method where name ='{str}' "
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -265,7 +265,7 @@ class DB:
         # else:
         sql = f"select * from mvn_class where name like '%{str}%'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -274,7 +274,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_class where name = '{str}'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -286,7 +286,7 @@ class DB:
         # else:
         sql = f"select * from mvn_field where name like '%{str}%'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -295,7 +295,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_field where name = '{str}'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -304,7 +304,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_interface where interface like '%{str}%'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -313,7 +313,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_interface where interface = '{str}'"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -322,7 +322,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from {table}"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -469,7 +469,7 @@ class DB:
         # for classid in ClassId_list:
         #     res = self.query_three_tables_by_classid(classid)
         #     for r in res:
-        #         # r[0]是表名,r[1]是查询结果
+        #         
         #         if(len(r[1]) > 0):
         #             for x in r[1]:
         #                 results[r[0]].append(x) 
@@ -517,7 +517,7 @@ class DB:
         # for classid in param_classid_list:
         #     res = self.query_three_tables_by_classid(classid)
         #     for r in res:
-        #         # r[0]是表名,r[1]是查询结果
+        #         
         #         if(len(r[1]) > 0):
         #             for x in r[1]:
         #                 results[r[0]].append(x) 
@@ -533,7 +533,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_field where class_id = {classid}"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
@@ -542,7 +542,7 @@ class DB:
         cur = self.conn.cursor()
         sql = f"select * from mvn_interface where class_id = {classid}"
         cur.execute(sql)
-        # 获取查询结果
+        
         results = cur.fetchall()
         cur.close()
         return results
