@@ -22,7 +22,7 @@ def extract_typeinfo_from_log(log_path):
         for line in f:
             match = re.search(r"Unable to resolve TypeRef: L(.+);", line)
             if match:
-                #如果是泛型，那么只取泛型前面的部分
+              
                 match_str = match.group(1)
                 match_str = match_str.split('<')[0]
                 types.append(match_str)
@@ -84,6 +84,8 @@ def execute_make_binding(file_name,lib):
     '''
     output_folder = os.path.abspath(os.path.join(os.getcwd(),"../","../","ours","MiddleResults","bind_log",lib))
     # run_baseline.clear_folder(output_folder)
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
     output_path = os.path.join(output_folder,file_name)
     output_path = output_path.replace('.java','.txt')
     # with open(output_path, 'w') as outputfile:
@@ -176,7 +178,8 @@ def Rule_predict_with_DL_info(file_name,dataset,lib,dl_node_pred_dict,build_kb_w
 
     # 1.copy code from dataset
     run_baseline.DL.boolean(f'./SnR/src/test/resources/snippets/so')
-    source_folder = os.path.abspath(f'../Datasets/{dataset}/{lib}')
+    # source_folder = os.path.abspath(f'../Datasets/{dataset}/{lib}')
+    source_folder = os.path.abspath(f'../ours/code_snippet')
     target_folder = os.path.abspath(f'./SnR/src/test/resources/snippets/so')
     source_file_path = os.path.join(source_folder, file_name)
     target_file_path = os.path.join(target_folder, file_name)

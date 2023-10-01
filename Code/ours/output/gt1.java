@@ -1,0 +1,17 @@
+/*
+	Logger: java.util.logging.Logger
+	Level: java.util.logging.Level
+*/
+package java.gwt;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class gt1 {
+    public void onModuleLoad()
+    {
+        Logger logger = Logger.getLogger("Test1.java");
+        logger.log(Level.INFO, "ash: starting onModuleLoad (1)");
+        System.out.println( "ash: starting onModuleLoad (2)" );
+    }
+}

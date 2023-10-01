@@ -4,8 +4,9 @@ import sys
 import csv
 import time
 import torch 
-import traceback
 import signal
+import argparse
+import traceback
 from contextlib import contextmanager
 import subprocess
 from tqdm import tqdm
@@ -302,46 +303,67 @@ def run_lib(dataset,lib,topK,build_kb_with_extension=True,StartFromRule=True,log
 
     os.chdir(tmp_dir)
 
-    
 
-if __name__ == '__main__':
+def add_comment_to_code(java_file_name,total_node_pred_dict):
+    java_file_path = os.path.abspath(os.path.join(os.getcwd(),'code_snippet',java_file_name))
+    with open(java_file_path, 'r') as java_file:
+        java_code = java_file.read()
+
+    comment_lines = []
+    for java_class, fqn in total_node_pred_dict.items():
+        comment_lines.append(f'\t{java_class}: {fqn}')
+    
+    comment_block = '\n'.join(comment_lines)
+    java_code_with_comments = f'/*\n{comment_block}\n*/\n{java_code}'
+
+    output_path = os.path.abspath(os.path.join(os.getcwd(),'output',java_file_name))
+
+    with open(output_path, 'w') as java_file:
+        java_file.write(java_code_with_comments)
+    
+    print(f'Output code snippet has been saved to {output_path}')
+
+
+def redirect_stdout_to_log():
+    log_path = os.path.abspath(os.path.join(os.getcwd(),'log','output.log'))
+    log_stream = open(log_path, "w")
+    sys.stdout = log_stream
+
+def redirect_stdout_to_console():
+    sys.stdout = sys.__stdout__
+
+
+def main():
     tmp_dir = os.getcwd()
+    parser = argparse.ArgumentParser(description='iJTyper')
+    parser.add_argument('--topk', type=int, default=3, help='Top-K value (default: 3)')
+    parser.add_argument('--iter', type=int, default=10, help='Maximum iteration rounds for one snippet (default: 10)')
+    parser.add_argument('--gpu', type=int, default=0, help='Using GPU number (default: 0)')
+    args = parser.parse_args()
 
-    Set_GPU(2)
-    # snippet_file_name = 'Class_2.java'  
-    # lib = 'jdk'    
-    dataset = 'StatType-SO'
-    # dataset = 'Short-SO'
-    snippet_file_name = 'gwt_class_28.java'
-    lib = 'gwt'
-    # reset_database()
-    # result,iter_round= execute_baseline_only_combine_ans(snippet_file_name,dataset,lib,topK=3)
+    Set_GPU(args.gpu)
+    # # snippet_file_name = 'Class_2.java'  
+    # # lib = 'jdk'    
+    # # dataset = 'StatType-SO'
+    dataset = 'mydataset'
+    file_list = os.listdir('./code_snippet/')
+    lib = 'mylib'
     
-    result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = 10)
-    result.show_csv()
-    # reset_database() 
-    # dl_node_pred_dict,_ = run_baseline.DL_predict_one_snippet(snippet_file_name,dataset,lib,topK=1,True)
-    # print(f'debug314:{dl_node_pred_dict}\n')
-    # print(Rule_predict_with_DL_info(snippet_file_name,dataset,lib,dl_node_pred_dict,True,True))
-    
-
+    redirect_stdout_to_log()
+    for snippet_file_name in tqdm(file_list, desc="Processing",leave=True, dynamic_ncols=True):
+        result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=args.topk,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = args.iter)
+        result.show_csv()
+        add_comment_to_code(snippet_file_name,result.total_node_pred_dict)
+        
+    redirect_stdout_to_console()
+    print(f"Output code snippets have been saved to {os.path.abspath(os.path.join(os.getcwd(),'output'))}")
+    print(f"Log has been saved to {os.path.abspath(os.path.join(os.getcwd(),'log','output.log'))}")
+    # print(result.total_node_pred_dict)
+    # print(result.total_node_truth_dict)
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]
-
-   
-    # libs = ["gwt"]
-    # error_log_file = os.path.abspath(os.path.join(tmp_dir,"run_lib_error_log.txt"))
-    # open(error_log_file, "w").close() # clear log
-    # for lib in libs:
-    #     try:
-    #         reset_database() # run pure baseline combine ans
-    #         run_lib(dataset,lib,topK=3,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round=10)
-    #     except Exception as e:
-    #         with open(error_log_file, "a") as error_log:
-    #             error_msg = f"Error occurred for library '{lib}': {str(e)}\n"
-    #             error_log.write(error_msg+ '\n')
-    #             error_log.write(traceback.format_exc())  # stack info
-    #             error_log.write("\n")
-
-
-
     os.chdir(tmp_dir)
+
+
+    
+if __name__ == '__main__':
+    main()

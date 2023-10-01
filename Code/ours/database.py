@@ -105,7 +105,7 @@ class DB:
 
 
 
-    def copy_large_results_to_four_tables(self,results):
+    def copy_large_results_to_four_tables(self,tables):
         print('Reseting knowledgebase...')
         #set global variable
         cursor = self.conn.cursor()
@@ -116,15 +116,14 @@ class DB:
         cursor.execute("SET SESSION MYISAM_SORT_BUFFER_SIZE=1073741824")
         cursor.execute("SET GLOBAL KEY_BUFFER_SIZE=1073741824")
         processes = []
-        for table_name, entry_list in results.items():
-            if entry_list:
-                cursor.execute(f"ALTER TABLE {table_name} DISABLE KEYS")
-                self.conn.commit()
-                # cursor.execute(f"ALTER TABLE {table_name} ENGINE=MyISAM")
+        for table_name in tables:
+            cursor.execute(f"ALTER TABLE {table_name} DISABLE KEYS")
+            self.conn.commit()
+            # cursor.execute(f"ALTER TABLE {table_name} ENGINE=MyISAM")
 
-                process = multiprocessing.Process(target=self.insert_entrylist_to_table, args=(table_name, entry_list))
-                processes.append(process)
-                process.start()
+            process = multiprocessing.Process(target=self.insert_entrylist_to_table, args=(table_name,))
+            processes.append(process)
+            process.start()
 
         for process in processes:
             process.join()
@@ -132,7 +131,7 @@ class DB:
         cursor.execute('set unique_checks=1')
         cursor.execute("SET foreign_key_checks = 1")
         cursor.execute("SET SQL_LOG_BIN = 1")
-        for table_name in results:
+        for table_name in tables:
             cursor.execute(f"ALTER TABLE {table_name} ENABLE KEYS")
             # cursor.execute(f"ALTER TABLE {table_name} ENGINE=InnoDB")
 
@@ -184,7 +183,7 @@ class DB:
 
 
 
-    def insert_entrylist_to_table(self,table_name,entry_list):
+    def insert_entrylist_to_table(self,table_name):
         start_time = time.time()
         if self.isComplete:
             connection = mysql.connector.connect(
@@ -628,31 +627,32 @@ def reset_database():
     db = DB(isComplete = False)
     db.clear_four_tables()
     tables = ['mvn_class', 'mvn_field', 'mvn_interface', 'mvn_method']
-    results = {}
-    for table in tables:
-        results[table] = complete_db.query_all_entries_in_table(table)
+    # results = {}
+    # for table in tables:
+    #     results[table] = complete_db.query_all_entries_in_table(table)
 
-    db.copy_large_results_to_four_tables(results)
+    db.copy_large_results_to_four_tables(tables)
 
     end_time = time.time()
-    print(f'reset time:{end_time-start_time}')
+    # print(f'reset time:{end_time-start_time}')
     db.close()
 
+def reset_all_database():
+    start_time = time.time()
+    complete_db = DB(isComplete = True)
+    db = DB(isComplete = False)
+    db.clear_four_tables()
+    tables = ['mvn_class', 'mvn_field', 'mvn_interface', 'mvn_method','mvn_artifact']
+    # results = {}
+    # for table in tables:
+    #     results[table] = complete_db.query_all_entries_in_table(table)
+
+    db.copy_large_results_to_four_tables(tables)
+
+    end_time = time.time()
+    # print(f'reset time:{end_time-start_time}')
+    db.close()
 
 if __name__ == '__main__':
-    # start_time = time.time()
-    # db = DB(isComplete = False)
-    # db.kill_binding_query_thread()
-    # db.clear_four_tables()
-    # sql_file = "./backup.sql"
-    # db.reset(sql_file)
-    # db.close()
-
-    # end_time = time.time()
-    # print(f'重置耗时：{end_time-start_time}')
-        
-    reset_database()
-
-    # complete_database = DB(isComplete=True)
-    # print(complete_database.query_apipool(['java.util.date','RESULT_OK']))
-    # print(complete_database.check_if_entry_exists_in_four_tables('val$core'))
+    # reset_database()
+    reset_all_database()

@@ -24,7 +24,7 @@ class Result:
 
         self.snippet_file_name = snippet_file_name
         self.lib = lib
-        self.csv_result = [(snippet_file_name,""),("Node","DL_pred","DL_truth","DL_correct","Rule_pred","Rule_truth","Rule_correct","Total_correct")]
+        self.csv_result = [(snippet_file_name,""),("Node","Statistical_pred","Statistical_truth","Statistical_correct","Constraint_pred","Constraint_truth","Constraint_correct","iJTyper_correct")]
 
 
 
@@ -165,8 +165,8 @@ class Result:
         rule_precision = round(self.rule_correct/self.rule_checked,4) if self.rule_checked>0 else 0
         total_precision = round(self.total_correct/self.total_checked,4) if self.total_checked>0 else 0
 
-        pred_line = (f"dl_correct:{self.dl_correct}",f"dl_accuracy:{dl_precision}","",f"rule_correct:{self.rule_correct}",f"rule_checked:{self.rule_checked}",f"rule_accuracy:{rule_precision}",f"rule_recall:{rule_recall}")
-        total_line = (f"checked:{self.total_checked}",f"total correct:{self.total_correct}",f"total accuracy:{total_precision}")
+        pred_line = (f"statistical_correct:{self.dl_correct}",f"statistical_accuracy:{dl_precision}","",f"constraint_correct:{self.rule_correct}",f"constraint_checked:{self.rule_checked}",f"constraint_accuracy:{rule_precision}",f"constraint_recall:{rule_recall}")
+        total_line = (f"checked:{self.total_checked}",f"iJTyper correct:{self.total_correct}",f"iJTyper recall:{total_precision}")
         self.csv_result = self.csv_result +[pred_line,total_line]
         
         return self.total_node_pred_dict,self.total_node_truth_dict
