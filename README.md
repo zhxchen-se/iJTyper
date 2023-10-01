@@ -13,7 +13,8 @@ iJTyper
 │   ├── RQ1
 │   ├── RQ2
 │   └── RQ3
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ## Setting up iJTyper
