@@ -9,7 +9,7 @@ iJTyper
 │   ├── Datasets
 │   └── ours
 ├── Data
-│   ├── Discussion_time
+│   ├── Discussion
 │   ├── RQ1
 │   ├── RQ2
 │   └── RQ3
