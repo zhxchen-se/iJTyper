@@ -276,6 +276,7 @@ class Result:
             for row in self.csv_result:
                 csvwriter.writerow(row)
         print(f"csv file has been saved to {csv_path}")
+        return csv_path
         
 
 def extract_info_from_lib_csv(dataset,lib): # evaluate csv_file/{lib}/{snippet_name}.csv

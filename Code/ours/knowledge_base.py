@@ -637,7 +637,7 @@ def reset_database():
     # print(f'reset time:{end_time-start_time}')
     db.close()
 
-def reset_all_database():
+def reset_all_knowledge_base():
     start_time = time.time()
     complete_db = DB(isComplete = True)
     db = DB(isComplete = False)
@@ -655,4 +655,4 @@ def reset_all_database():
 
 if __name__ == '__main__':
     # reset_database()
-    reset_all_database()
+    reset_all_knowledge_base()

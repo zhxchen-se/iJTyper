@@ -8,7 +8,7 @@ import torch
 import subprocess
 import torch.nn.functional as F
 from tqdm import tqdm
-from database import DB
+from knowledge_base import DB
 from transformers import RobertaTokenizer, RobertaForMaskedLM
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))

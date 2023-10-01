@@ -1,0 +1,117 @@
+echo package -Dmaven.test.skip=True
+package -Dmaven.test.skip=True
+echo 'java ${java_d_options} -cp ./target/snr-server-0.0.1-SNAPSHOT.jar:lib/*:target/lib/* org.javelus.snr.toy.CompareBindingAnalysisAndEclipseJDT "${snr_snippets_folder}" "${snr_library_external}" true false' | ./benchmark/set_env.bash
+Processing snippet: /iJTyper/Code/Baseline/SnR/benchmark/../src/test/resources/snippets/so/gt1.java
+Expect check=25
+Cannot find matching typeVariable for: public class gt1 {
+  public void onModuleLoad(){
+    Logger logger=Logger.getLogger("Test1.java");
+    logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+    System.out.println("ash: starting onModuleLoad (2)");
+  }
+}
+
+Cannot find matching typeVariable for: gt1
+Cannot find matching typeVariable for: public class gt1 {
+  public void onModuleLoad(){
+    Logger logger=Logger.getLogger("Test1.java");
+    logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+    System.out.println("ash: starting onModuleLoad (2)");
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class gt1 {
+  public void onModuleLoad(){
+    Logger logger=Logger.getLogger("Test1.java");
+    logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+    System.out.println("ash: starting onModuleLoad (2)");
+  }
+}
+
+For node: void expected fqn: void with type: Type2 got: void
+Cannot find matching typeVariable for: onModuleLoad
+Cannot find matching typeVariable for: public void onModuleLoad(){
+  Logger logger=Logger.getLogger("Test1.java");
+  logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+  System.out.println("ash: starting onModuleLoad (2)");
+}
+
+Cannot find matching typeVariable for: public class gt1 {
+  public void onModuleLoad(){
+    Logger logger=Logger.getLogger("Test1.java");
+    logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+    System.out.println("ash: starting onModuleLoad (2)");
+  }
+}
+
+Cannot find matching typeVariable for: package java.gwt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class gt1 {
+  public void onModuleLoad(){
+    Logger logger=Logger.getLogger("Test1.java");
+    logger.log(Level.INFO,"ash: starting onModuleLoad (1)");
+    System.out.println("ash: starting onModuleLoad (2)");
+  }
+}
+
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: logger=Logger.getLogger("Test1.java")
+For node: logger=Logger.getLogger("Test1.java") expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+For node: Logger.getLogger("Test1.java") expected fqn: java.util.logging.Logger with type: Type5 got: java.util.logging.Logger
+For node: Logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: getLogger
+For node: getLogger expected fqn: java.util.logging.Logger with type: Type5 got: java.util.logging.Logger
+For node: "Test1.java" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: logger.log(Level.INFO,"ash: starting onModuleLoad (1)") expected fqn: void with type: Type10 got: void
+For node: logger expected fqn: java.util.logging.Logger with type: Type3 got: java.util.logging.Logger
+Cannot find matching typeVariable for: log
+For node: log expected fqn: void with type: Type10 got: void
+Cannot find matching typeVariable for: Level.INFO
+For node: Level.INFO expected fqn: java.util.logging.Level with type: Type10 got: void
+For node: Level expected fqn: java.util.logging.Level with type: Type8 got: java.util.logging.Level
+For node: INFO expected fqn: java.util.logging.Level with type: Type9 got: java.util.logging.Level
+For node: "ash: starting onModuleLoad (1)" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+For node: System.out.println("ash: starting onModuleLoad (2)") expected fqn: void with type: Type16 got: void
+Cannot find matching typeVariable for: System.out
+For node: System.out expected fqn: java.io.PrintStream with type: Type16 got: void
+Did not find solution for node: System with type Type14
+For node: out expected fqn: java.io.PrintStream with type: Type15 got: java.io.PrintStream
+Cannot find matching typeVariable for: println
+For node: println expected fqn: void with type: Type16 got: void
+For node: "ash: starting onModuleLoad (2)" expected fqn: java.lang.String with type: Type4 got: java.lang.String
+{Checked=22, Analyzed=21, Unsolved=1, Incorrect=2, Correct=19}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+Total stats
+{Checked=22, Analyzed=21, Unsolved=1, Incorrect=2, Correct=19}
+java=MethodInvocation: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=QualifiedName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=2, Correct=0}
+java=SimpleName: {Checked=9, Analyzed=8, Unsolved=1, Incorrect=0, Correct=8}
+java=SimpleType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+java=StringLiteral: {Checked=3, Analyzed=3, Unsolved=0, Incorrect=0, Correct=3}
+java=VariableDeclarationFragment: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=MethodInvocation: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+void=PrimitiveType: {Checked=1, Analyzed=1, Unsolved=0, Incorrect=0, Correct=1}
+void=SimpleName: {Checked=2, Analyzed=2, Unsolved=0, Incorrect=0, Correct=2}
+java,MethodInvocation,1,1,1,0,0
+java,QualifiedName,2,2,0,2,0
+java,SimpleName,8,9,8,0,1
+java,SimpleType,1,1,1,0,0
+java,StringLiteral,3,3,3,0,0
+java,VariableDeclarationFragment,1,1,1,0,0
+void,MethodInvocation,2,2,2,0,0
+void,PrimitiveType,1,1,1,0,0
+void,SimpleName,2,2,2,0,0

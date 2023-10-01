@@ -3,6 +3,7 @@ import re
 import sys
 import csv
 import time
+import shutil
 import torch 
 import signal
 import argparse
@@ -10,10 +11,10 @@ import traceback
 from contextlib import contextmanager
 import subprocess
 from tqdm import tqdm
-from database import DB,reset_database
+from knowledge_base import DB,reset_database
 from result_evaluation import Result
-from rule import *
-from deeplearning import *
+from constraint_based import *
+from statistically_based import *
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))
 from Baseline import run_baseline
@@ -350,14 +351,23 @@ def main():
     lib = 'mylib'
     
     redirect_stdout_to_log()
+    csv_paths = []
     for snippet_file_name in tqdm(file_list, desc="Processing",leave=True, dynamic_ncols=True):
         result,_ = iterative_execute_one_snippet(snippet_file_name,dataset,lib,topK=args.topk,build_kb_with_extension=True,StartFromRule=True,log_feed_back_flag=True,Maximum_iter_round = args.iter)
-        result.show_csv()
+        csv_paths.append(result.show_csv())
         add_comment_to_code(snippet_file_name,result.total_node_pred_dict)
+
+    csv_folder = os.path.abspath(os.path.join(os.getcwd(),'csv'))
+    shutil.rmtree(csv_folder)
+    os.makedirs(csv_folder)
+    for path in csv_paths:
+        target_path = os.path.abspath(os.path.join(csv_folder,os.path.basename(path)))
+        p = subprocess.Popen(['cp',path,target_path])
 
     redirect_stdout_to_console()
     print(f"Output code snippets have been saved to {os.path.abspath(os.path.join(os.getcwd(),'output'))}")
     print(f"Log has been saved to {os.path.abspath(os.path.join(os.getcwd(),'log','output.log'))}")
+    print(f"The evaluation result has been saved to {os.path.abspath(os.path.join(os.getcwd(),'csv'))}")
     # print(result.total_node_pred_dict)
     # print(result.total_node_truth_dict)
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]

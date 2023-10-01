@@ -4,7 +4,7 @@ import sys
 import time
 import torch 
 import subprocess
-from database import DB
+from knowledge_base import DB
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))
 from Baseline import run_baseline

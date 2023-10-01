@@ -1,3 +1,11 @@
+/*
+	BodyElement: com.google.gwt.dom.client.BodyElement
+	ArrayList: java.util.ArrayList
+	new ArrayList(): java.util.ArrayList
+	Document: com.google.gwt.dom.client.Document
+	Element: com.google.gwt.user.client.Element
+	DOM: com.google.gwt.user.client.DOM
+*/
 
 //ID = 3954392
 import java.util.ArrayList;

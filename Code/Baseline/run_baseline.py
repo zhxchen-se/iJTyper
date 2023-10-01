@@ -10,8 +10,8 @@ import Prompt_tune.ASE_prompt_tuning.PromptInference.Practicality.predDictData_l
 from collections import OrderedDict
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../ours")))
-from ours.database import DB
-from ours.rule import extract_typeinfo_from_log,handle_unsupported_exception,add_text_to_file
+from ours.knowledge_base import DB
+from ours.constraint_based import extract_typeinfo_from_log,handle_unsupported_exception,add_text_to_file
 def copy_file(source_path,target_path):
     p = subprocess.Popen(['cp', source_path, target_path])
     if p.poll() is None:
