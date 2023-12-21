@@ -47,7 +47,7 @@ optional arguments:
   --iter ITER  Maximum iteration rounds for one snippet (default: 10)
   --gpu GPU    GPU index (default: 0)
 ```
-4. See the output snippet with inferred FQNs in [~/iJTyper/Code/ours/output](./Code/ours/output/); The output csv file is in [~/iJTyper/Code/ours/csv](./Code/ours/csv/)
+1. See the output snippet with inferred FQNs in [~/iJTyper/Code/ours/output](./Code/ours/output/); 
  
 ## Baselines
 ### MLMTyper

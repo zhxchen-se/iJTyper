@@ -357,17 +357,9 @@ def main():
         csv_paths.append(result.show_csv())
         add_comment_to_code(snippet_file_name,result.total_node_pred_dict)
 
-    csv_folder = os.path.abspath(os.path.join(os.getcwd(),'csv'))
-    shutil.rmtree(csv_folder)
-    os.makedirs(csv_folder)
-    for path in csv_paths:
-        target_path = os.path.abspath(os.path.join(csv_folder,os.path.basename(path)))
-        p = subprocess.Popen(['cp',path,target_path])
 
     redirect_stdout_to_console()
     print(f"Output code snippets have been saved to {os.path.abspath(os.path.join(os.getcwd(),'output'))}")
-    print(f"Log has been saved to {os.path.abspath(os.path.join(os.getcwd(),'log','output.log'))}")
-    print(f"The evaluation result has been saved to {os.path.abspath(os.path.join(os.getcwd(),'csv'))}")
     # print(result.total_node_pred_dict)
     # print(result.total_node_truth_dict)
     # libs = ["android","gwt","hibernate","joda_time","jdk","xstream"]

@@ -66,8 +66,8 @@ class Result:
                 if node in self.rule_node_truth_dict:
                     rule_truth = self.rule_node_truth_dict[node]
                 
-                if dl_truth == "-" and rule_truth == "-":
-                    continue
+                # if dl_truth == "-" and rule_truth == "-":
+                #     continue
 
                 #update checked number
                 if dl_pred != "-":
@@ -113,8 +113,8 @@ class Result:
                         if token in self.rule_node_truth_dict:
                             rule_truth = self.rule_node_truth_dict[token]
                         
-                        if dl_truth == "-" and rule_truth == "-":
-                            continue
+                        # if dl_truth == "-" and rule_truth == "-":
+                        #     continue
                         
                         #update checked number
                         if dl_pred != "-":

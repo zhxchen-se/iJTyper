@@ -505,7 +505,7 @@ class Metric():
                 Total_FQN = Total_FQN+len(temp_label)
 
         # Mean_score = {k: sum(v) / len(v) for k, v in metric_dict.items()}
-        Mean_recall_score = sum(metric_dict['recall_li'])/len(metric_dict['recall_li']) 
+        Mean_recall_score = sum(metric_dict['recall_li'])/len(metric_dict['recall_li']) if len(metric_dict['recall_li'])>0 else 0 
         print(f'Average_F1-Score:',f'recall:{Mean_recall_score:.4f}',f'Total_FQN:{Total_FQN}')
 
 
