@@ -18,8 +18,7 @@ from statistically_based import *
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../Baseline")))
 from Baseline import run_baseline
-err_files = ['gwt_class_17.java','Android12.java','Android15.java','Android20.java','Android22.java','Android24.java','Android29.java','Android31.java','Android33.java','Android41.java','Android42.java','Android45.java','Android49.java',
-            'gwt_class_2.java','gwt_class_25.java','gwt_class_26.java','gwt_class_33.java','gwt_class_34.java','hibernate_class_2.java','hibernate_class_6.java','hibernate_class_11.java','hibernate_class_13.java','hibernate_class_14.java','hibernate_class_27.java','hibernate_class_31.java','hibernate_class_32.java','hibernate_class_35.java','hibernate_class_41.java','hibernate_class_44.java','hibernate_class_46.java','hibernate_class_47.java','Class_6.java','Class_8.java','JodaTime16.java','xstream_class_7.java','xstream_class_15.java','xstream_class_22.java','xstream_class_28.java','xstream_class_29.java','xstream_class_31.java','xstream_class_34.java']
+
 def Set_GPU(gpu_index):
     if torch.cuda.is_available():
         print("CUDA is available!")
@@ -243,12 +242,10 @@ def run_lib(dataset,lib,topK,build_kb_with_extension=True,StartFromRule=True,log
 
     iter_round_dict = {} # count file_name--iter_round
     for file_name in tqdm(file_names, desc="Processing",leave=True, dynamic_ncols=True):
-        if file_name == 'gwt_class_17.java' or file_name in err_files:
-            continue
         try:
             with time_limit(360): # if subprocess timeout, unable to track
                 result,iter_round = iterative_execute_one_snippet(file_name,dataset,lib,topK,build_kb_with_extension,StartFromRule,log_feed_back_flag,Maximum_iter_round)
-                # result,iter_round= execute_baseline_only_combine_ans(file_name,dataset,lib,topK) #TODO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                # result,iter_round= execute_baseline_only_combine_ans(file_name,dataset,lib,topK) 
             result.show_csv() # save file_name.csv
             iter_round_dict[file_name] = iter_round # count iter_round
             all_results.extend(result.csv_result)
