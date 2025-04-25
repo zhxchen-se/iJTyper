@@ -155,8 +155,7 @@ class Eval_GPT():
         return [gpt_file_correct,gpt_checked,truth_checked]
 
     def chat_all_libs(self, dataset, base_path):
-        # prompt_path = os.path.abspath(os.path.join(os.getcwd(),'Prompts',dataset))
-        prompt_path = os.path.abspath(os.path.join("/iJTyper/Code/Datasets", dataset))
+        prompt_path = os.path.abspath(os.path.join(os.getcwd(),'Prompts',dataset))
         libs = ['android','gwt','hibernate','jdk','joda_time','xstream']
         error_log_file = os.path.abspath(os.path.join(os.getcwd(),"error_log.txt"))
         time_log_file = os.path.abspath(os.path.join(os.getcwd(), f"{dataset}_chatgpt_time.json"))
