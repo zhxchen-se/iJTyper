@@ -18,7 +18,14 @@ iJTyper
 ```
 
 ## Setting up iJTyper
-<!-- Docker is strongly recommanded to help you ease the process of setting up iJTyper. You can access it in Google Drive. If you still want to set up iJTyper on your own, please follow the instructions below. -->
+### Docker
+Docker is strongly recommanded to help you ease the process of setting up iJTyper. You can access it through:
+```bash
+docker pull zhxchense/api_resolution:v5.0.0
+```
+
+### Manual Installation
+If you still want to set up iJTyper on your own, please follow the instructions below.
 1. Environment to be satisfied
 
     - JDK8
